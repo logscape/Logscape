@@ -1,0 +1,114 @@
+<Bundle name="vs-log" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+    <releaseDate>@timestamp@</releaseDate>
+    <installDate>@timestamp@</installDate>
+    <buildId>@buildId@-@timestamp@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <workingDirectory>.</workingDirectory>
+  <services>
+  	<Service>
+		<name>LogSpace</name>
+		<priority>100</priority>
+		<dependencies>vs-log-1.0:AggSpace</dependencies>
+		<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+		<fork>true</fork>
+		<background>true</background>
+		<pauseSeconds>1</pauseSeconds>
+		<instanceCount>-1</instanceCount>
+		<script>
+			<![CDATA[
+				import com.liquidlabs.log.space.LogSpaceImpl
+				import com.liquidlabs.orm.ORMapperFactory
+				import com.liquidlabs.log.space.LogSpace
+				println "\n************************** Starting LogSpace **************************"
+
+				String heap="-Xmx" + System.getProperty("logspace.heap", "150M")
+				String logfile = "-Dlog4j.filename=work/logspace.log"
+				if (Boolean.getBoolean("logspace.debug")) {
+					processMaker.java "-cp:system-bundles/vs-log-1.0:.:system-bundles/boot/*/*.jar:system-bundles/reports-1.0/lib/reports.jar:system-bundles/reports-1.0/lib/*:lib/*.jar:lib/*;lib" ,  "com.liquidlabs.log.space.LogSpaceImpl", "-Dlog4j.configuration=system-bundles/vs-log-1.0/log4j.properties", "-Dlookup.url=" + lookupSpaceAddress,"-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId, "-Xms32M",heap,"-XX:MaxPermSize=128m", "-Xdebug","-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8992",logfile
+				} else if (Boolean.getBoolean("logspace.jmx")) {
+					processMaker.java "-cp:system-bundles/vs-log-1.0:.:system-bundles/boot/*/*.jar:system-bundles/reports-1.0/lib/reports.jar:system-bundles/reports-1.0/lib/*:lib/*.jar:lib/*;lib" ,  "com.liquidlabs.log.space.LogSpaceImpl", "-Dlog4j.configuration=system-bundles/vs-log-1.0/log4j.properties", "-Dlookup.url=" + lookupSpaceAddress,"-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId, "-Xms32M",heap,"-XX:MaxPermSize=128m","-XX:+HeapDumpOnOutOfMemoryError",  "-Dcom.sun.management.jmxremote.port=8996","-Dcom.sun.management.jmxremote.ssl=false", "-Dcom.sun.management.jmxremote.authenticate=false",logfile
+				} else {
+	        		processMaker.java "-cp:system-bundles/vs-log-1.0:.:system-bundles/boot/*/*.jar:system-bundles/reports-1.0/lib/reports.jar:system-bundles/reports-1.0/lib/*:lib/*.jar:lib/*;lib" ,  "com.liquidlabs.log.space.LogSpaceImpl", "-Dlog4j.configuration=system-bundles/vs-log-1.0/log4j.properties", "-Dlookup.url=" + lookupSpaceAddress,"-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId, "-Xms32M",heap, "-XX:MaxPermSize=128m","-XX:+HeapDumpOnOutOfMemoryError", "-XX:MaxPermSize=128m","-XX:+HeapDumpOnOutOfMemoryError","-XX:+UseConcMarkSweepGC","-XX:+UseCompressedOops",logfile
+				}
+
+			]]>
+		</script>
+	</Service>
+ 	<Service>
+		<name>AggSpace</name>
+		<priority>100</priority>
+      	<dependencies></dependencies>
+
+		<!-- use contains cause could run against LogManagement -->
+		<resourceSelection>type containsAny 'Management,Failover' AND id equals 3</resourceSelection>
+		<fork>true</fork>
+		<background>false</background>
+		<pauseSeconds>0</pauseSeconds>
+		<!-- grow shrink according to total agentCount - use 5.1% means 5% and at least 1 instance -->
+		<!-- it has problems on Failover though*** -->
+        <!-- <instanceCount>5.1%</instanceCount> -->
+		<instanceCount>100</instanceCount>
+		<costPerUnit>5</costPerUnit>
+		<script>
+			<![CDATA[
+				import com.liquidlabs.log.space.AggSpaceImpl
+				import com.liquidlabs.orm.ORMapperFactory
+				import com.liquidlabs.log.space.AggSpace
+				println "\n************************** Starting AggSpace **************************"
+				String heap="-Xmx" + System.getProperty("aggspace.heap", "128M")
+                String logfile = "-Dlog4j.filename=aggspace.log"
+
+				if (Boolean.getBoolean("agg.jmx")) {
+		        		processMaker.java "-cp:.:system-bundles/vs-log-1.0:.:system-bundles/boot/*/*.jar" ,  "com.liquidlabs.log.space.AggSpaceImpl", "-Dlog4j.configuration=../../system-bundles/vs-log-1.0/log4j.properties", "-Dlookup.url=" + lookupSpaceAddress,"-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId,heap,"-Dvspace.drop.notify.event.on.overload=true","-Dlog4j.filename=aggspace.log","-XX:MaxPermSize=128m","-XX:+HeapDumpOnOutOfMemoryError","-XX:+UseConcMarkSweepGC","-XX:+UseCompressedOops","-Dcom.sun.management.jmxremote.port=8999","-Dcom.sun.management.jmxremote.ssl=false","-Dcom.sun.management.jmxremote.authenticate=false",logfile
+        		} else	if (Boolean.getBoolean("agg.debug")) {
+        		  		processMaker.java "-cp:.:system-bundles/vs-log-1.0:.:system-bundles/boot/*/*.jar" ,  "com.liquidlabs.log.space.AggSpaceImpl", "-Dlog4j.configuration=../../system-bundles/vs-log-1.0/log4j.properties", "-Dlookup.url=" + lookupSpaceAddress,"-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId,heap,"-Dvspace.drop.notify.event.on.overload=true","-Dlog4j.filename=aggspace.log","-XX:MaxPermSize=128m","-XX:+HeapDumpOnOutOfMemoryError","-XX:+UseConcMarkSweepGC","-XX:+UseCompressedOops","-Xdebug","-Xrunjdwp:transport=dt_socket,address=8992,server=y,suspend=n",logfile
+				} else {
+	        		processMaker.java "-cp:.:system-bundles/vs-log-1.0:.:system-bundles/boot/*/*.jar" ,  "com.liquidlabs.log.space.AggSpaceImpl", "-Dlog4j.configuration=../../system-bundles/vs-log-1.0/log4j.properties", "-Dlookup.url=" + lookupSpaceAddress,"-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId,heap,"-Dvspace.drop.notify.event.on.overload=true","-Dlog4j.filename=aggspace.log","-XX:MaxPermSize=128m","-XX:+HeapDumpOnOutOfMemoryError","-XX:+UseConcMarkSweepGC","-XX:+UseCompressedOops",logfile
+        		}
+
+			]]>
+		</script>
+	</Service>
+<!-- 	<Service>
+      	<name>SLAEventWirer</name>
+	  	<priority>10</priority>
+		<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+      	<fork>false</fork>
+      	<background>true</background>
+		<pauseSeconds>0</pauseSeconds>
+		<dependencies>vs-log-1.0:LogSpace</dependencies>
+		<instanceCount>2</instanceCount>
+      	<script>
+      		<![CDATA[
+				import com.liquidlabs.log.*
+				import com.liquidlabs.log.space.*
+				import com.liquidlabs.log.sla.SLAEventWirer
+				import com.liquidlabs.vso.lookup.AddressEventListener
+				import com.liquidlabs.common.net.*
+				import java.util.concurrent.TimeUnit
+
+				addresses = lookupSpace.getServiceAddresses(LogSpace.NAME,"");
+
+				if (addresses == null) throw new RuntimeException("Failed to find LogSpace:" + LogSpace.NAME);
+
+				AddressEventListener listener = new AddressEventListener(LogSpace.NAME,"SLAEventWirer");
+				logSpace = proxyFactory.getRemoteService(LogSpace.NAME, LogSpace.class, addresses, listener);
+
+				aggSpace = AggSpaceImpl.getRemoteService("SLAEventWirerStartup", lookupSpace, proxyFactory);
+
+				URI address = proxyFactory.getAddress();
+				lookupSpace.registerUpdateListener(listener.getId(), listener, LogSpace.NAME, LogSpace.NAME + "-" +address.getHost() + "-" + address.getPort(), "LogScript", group, false);
+
+				service = new SLAEventWirer(lookupSpace, logSpace, proxyFactory, aggSpace);
+				scheduledFuture = scheduler.scheduleWithFixedDelay(service, 1, 1, TimeUnit.MINUTES);
+				serviceManager.registerFuture(scheduledFuture);
+			]]>
+		</script>
+    </Service>
+    -->
+  </services>
+</Bundle>

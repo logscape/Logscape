@@ -1,0 +1,23 @@
+#filter_widget.widget_size(style='display:none; height:100%; text-align:center' widget-width='2' widget-height='1' data-minx="1" data-miny="1")
+    .editWidget.editBlock
+        .cModalDialog
+            div
+                .cModalDialogHeader
+                    .fa.fa-filter
+                    label.titleLabel#filterSettings(style="display:inline;font-size:26px;") Filter Settings
+                    hr(style="margin:10px")
+                    br
+                .span12
+                    .span11.actionBlock.flatBlue2.padActionBlock
+                        .span6
+                            p#filterTileColor Tile Color&nbsp;&nbsp;
+                            i.icon-black.fa.fa-th
+                        .span3
+                            input#tileColor.simple_color
+                .span12
+                .cModalDialogClose
+                    a.cModalDialogA.closeEdit
+                        i.icon-white.fa.fa-check
+                        ! &nbsp;Okay
+    br
+    input#inputWorkspace(type="search" placeHolder="enter text to filter" style="width:80%" title="Enter one or more comma separated values and press [Enter] Note: Reads URL param 'filter=xxx,yyy'")

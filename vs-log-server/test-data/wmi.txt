@@ -1,0 +1,52 @@
+20110927170531.000000^M
+Category=12544^M
+CategoryString=Logon^M
+ComputerName=SEA2WNDC02.r-u-i.com^M
+EventCode=4624^M
+EventIdentifier=4624^M
+EventType=4^M
+Logfile=Security^M
+RecordNumber=689781685^M
+SourceName=Microsoft-Windows-Security-Auditing^M
+TimeGenerated=20110927210531.114699-000^M
+TimeWritten=20110927210531.114699-000^M
+Type=Audit Success^M
+User=NULL^M
+wmi_type=WinEventLog:Security^M
+Message=An account was successfully logged on.^M^M
+^M^M
+Subject:^M^M
+        Security ID:            S-1-0-0^M^M
+        Account Name:           -^M^M
+        Account Domain:         -^M^M
+        Logon ID:               0x0^M^M
+^M^M
+Logon Type:                     3^M^M
+^M^M
+New Logon:^M^M
+        Security ID:            S-1-5-21-182935634-564219513-359291519-11805^M^M
+        Account Name:           RU018AA$^M^M
+        Account Domain:         SEATTLE^M^M
+        Logon ID:               0xf3e1b239^M^M
+        Logon GUID:             {709FA770-C7DB-E7B9-9B19-9970DAC3D268}^M^M
+^M^M
+Process Information:^M^M
+        Process ID:             0x0^M^M
+        Process Name:           -^M^M
+^M^M
+Network Information:^M^M
+        Workstation Name:       ^M^M
+        Source Network Address: 10.1.18.51^M^M
+        Source Port:            1459^M^M
+^M^M
+Detailed Authentication Information:^M^M
+        Logon Process:          Kerberos^M^M
+        Authentication Package: Kerberos^M^M
+        Transited Services:     -^M^M
+        Package Name (NTLM only):       -^M^M
+        Key Length:             0^M^M
+^M^M
+This event is generated when a logon session is created. It is generated on the computer that was accessed.^M^M
+^M^M
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.^M^M
+^M^M

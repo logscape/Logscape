@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Logscape</title>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style type="text/css">
+        html, body {
+        }
+        body {
+            padding-top: 40px;
+        }
+        .container {
+            width: 460px;
+        }
+
+        .container > .content {
+            background-color: rgba( 0, 0, 0, .4);
+            padding: 20px;
+            margin: 0 -20px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+            box-shadow: 0 1px 2px rgba(0,0,0,.15);
+        }
+
+        .login-form {
+            margin-left: 65px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+</header>
+
+<script src="js/jquery.js"></script> i
+<script src="js/bootstrap.min.js"></script>
+
+<body class="desktopGradBlue" style='height:900px;width:99%;padding-top:100px;overflow:hidden;'>
+    <div class="container">
+        <div class="row content"  >
+            <tr>
+                <td><h3 style="color:white">Loading services, please wait...</h3></td><td></td>
+            </tr>
+        </div>
+        <div style="padding-left:180px;padding-top:100px;">
+            <i class="fa fa-square-o fa-spin fa-3x" style="color:white;"></i>
+        </div>
+
+    </div>
+    <script language="javascript">
+        console.log("Redirecting....")
+       // self.location='/play'
+        function checkBackEnd() {
+            var url = "/play/?Workspace=Home"
+            $.ajax({
+                type: 'GET',
+                url: url + "?now=" + Math.random(),
+                success: function() {
+                    console.log("Redirecting Success....")
+                    window.location.assign(url)
+                },
+                error: function() {
+                    console.log("Still waiting....")
+                    setTimeout(function() {
+                        checkBackEnd()
+                    }, 5000);
+
+                }
+            });
+        }
+        checkBackEnd()
+    </script></body>
+
+</body>
+</html>

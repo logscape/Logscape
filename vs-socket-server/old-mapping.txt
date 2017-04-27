@@ -1,0 +1,23 @@
+#type-key,#timestamp,#mline=t/f,#flush a NL after receiving lines,# log-line-match-expression (beware of white space!)
+MSWinEventLog,	timestamp=true,mline=false,appendNL=false,(*)\s+MSWinEventLog\s+*\s+(*)
+ASA-session,	timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND ASA-session
+ASA-vpn,		timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND ASA-vpn
+ASA-ip,			timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND ASA-ip
+ASA-auth,		timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND ASA-auth
+ASA-ssl,		timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND ASA-ssl
+ASA-config,		timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND ASA-config
+ASA-bridge,		timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND ASA-bridge
+ASA,		timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND ASA-\d+
+FWSM,		timestamp=true,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND FWSM-\d+-\d+
+SEC,		timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+.\d+) AND SEC-(\d+)-(*)
+PIX,		timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) AND PIX-(w)
+MARS,		timestamp=true,mline=false,appendNL=false,hostId=\"(*)\" AND app_name=\"(*)\" AND mars_category="
+MSWinWMILog,	timestamp=false,mline=true,appendNL=\n_EOL_\n,20[1-9][1-9][0-1][0-9][0-3][0-9][0-2][0-3][0-5][0-9][0-5][0-9]\.000000.*
+FWALL,          timestamp=false,mline=false,appendNL=false,(\d+\.\d+\.\d+\.\d+) id=firewall
+splunk-cooked,	timestamp=false,mline=true,appendNL=false,splunk-cooked
+Audit,			timestamp=true,mline=false,appendNL=false,Audit:[timestamp=
+SYMANTEC,			timestamp=false,mline=false,appendNL=false,SymantecServer (*):
+OSSEC-alert,	timestamp=false,mline=true,appendNL=true,** Alert
+OSSEC-alert_st,	timestamp=false,mline=true,appendNL=false,Server: AND ID:  AND Name: AND IP:
+http,	timestamp=false,mline=true,appendNL=true,HTTP
+netscreen,	timestamp=false,mline=false,appendNL=false,(NetScreen OR Netscreen) AND device_id

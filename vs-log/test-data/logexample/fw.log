@@ -1,0 +1,15 @@
+num;date;time;orig;type;action;alert;i/f_name;i/f_dir;product;log_sys_message;src;dst;proto;rule;service;s_port;xlatesrc;xlatedst;NAT_rulenum;NAT_addtnl_rulenum;xlatedport;xlatesport;user;resource;reason;cat_server;dstname;SOAP Method;category;message_info;ICMP;ICMP Type;ICMP Code;res_action;TCP sequence verifier;Connection state;Packet origin;TCP flags;attack;cpmad;URL filter pattern detected;srcname;message;ip_id;ip_len;ip_offset;fragments_dropped;during_sec
+1;5Oct2005;00:22:22;192.168.175.161;log;accept;;eth4;inbound;VPN-1 & FireWall-1;;203.66.92.168;147.237.71.2;tcp;37;smtp;36600;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+2;5Oct2005;00:24:24;192.168.175.161;log;accept;;eth3;outbound;VPN-1 & FireWall-1;;64.37.246.2;65.54.179.198;tcp;;http;35832;147.237.70.11;;273;0;;35832;;;;;;;;;;;;;;;;;;;;;;;;;;
+3;5Oct2005;00:26:26;192.168.175.161;log;accept;;daemon;outbound;VPN-1 & FireWall-1;;222.178.5.234;65.54.179.198;tcp;22;http;35832;;;;;;;;http://65.54.179.198:80/ThirdPartyCookieCheck.srf?tpc=654202078&lc=1033;;;;;;;;;;;;;;;;;;;;;;;;
+4;5Oct2005;00:28:28;192.168.175.161;log;accept;;eth3;inbound;VPN-1 & FireWall-1;;218.248.255.131;147.237.71.1;udp;2;domain-udp;55969;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+5;5Oct2005;00:30:30;192.168.175.161;log;accept;;eth0;inbound;VPN-1 & FireWall-1;;216.187.103.170;192.118.82.151;tcp;12;http;3564;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+6;5Oct2005;00:32:32;192.168.175.161;log;accept;;eth3;inbound;VPN-1 & FireWall-1;;222.89.192.150;147.237.71.1;udp;2;domain-udp;18155;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+7;5Oct2005;00:34:34;192.168.175.161;log;accept;;daemon;outbound;VPN-1 & FireWall-1;;61.129.15.84;65.54.179.198;tcp;22;http;35832;;;;;;;;http://65.54.179.198:80/ThirdPartyCookieCheck.srf?tpc=654202078&lc=1033;Content Security Server has modified and approved the requested resource;;;;;;;;;;;;;;;;;;;;;;;
+8;5Oct2005;00:36:36;192.168.175.161;log;accept;;eth3;inbound;VPN-1 & FireWall-1;;218.73.95.253;147.237.72.193;tcp;19;http;62883;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+9;5Oct2005;00:38:38;192.168.175.62;log;accept;;eth0;inbound;VPN-1 & FireWall-1;;147.237.71.21;65.54.183.198;tcp;12;http;14719;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+10;5Oct2005;00:40:40;192.168.175.62;log;accept;;eth1;inbound;VPN-1 & FireWall-1;;216.187.103.170;213.199.144.151;udp;3;domain-udp;domain-udp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+11;5Oct2005;00:42:42;192.168.175.62;log;accept;;eth1;inbound;VPN-1 & FireWall-1;;194.90.9.29;212.27.32.130;udp;3;domain-udp;domain-udp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+12;5Oct2005;00:44:44;192.168.175.62;log;accept;;eth3;inbound;VPN-1 & FireWall-1;;147.237.73.11;147.237.72.129;tcp;19;http;1582;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+13;5Oct2005;00:46:46;192.168.175.62;log;accept;;eth1;inbound;VPN-1 & FireWall-1;;82.225.44.232;212.187.244.4;udp;3;domain-udp;domain-udp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+14;5Oct2005;00:48:48;192.168.175.62;log;accept;;daemon;outbound;VPN-1 & FireWall-1;;69.159.201.47;147.237.72.98;tcp;18;http;48220;;;;;;;;http://147.237.72.98:80/Ifat/Clips/Rtl/XMLMode/ListRSS.asp;Content Security Server has modified and approved the requested resource;;;;;;;;;;;;;;;;;;;;;;;

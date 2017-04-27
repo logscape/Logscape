@@ -1,0 +1,31 @@
+#value_widget.widget_size(style='display:none;  height:100%; text-align:center' widget-width='2' widget-height='1' data-minx="1" data-miny="1")
+    .editWidget.editBlock
+        .cModalDialog
+            div
+                .cModalDialogHeader.coloredBG
+                    .fa.fa-quote-left.coloredText
+                    label.titleLabel.coloredText#valueTitle(style="display:inline;font-size:26px;") Value
+                    hr.borderColor(style="margin:10px")
+                    br
+                .span12.coloredBG
+                    .span11.actionBlock.flatBlue3.padActionBlock.coloredBG
+                        .span6
+                            p.coloredText#valueTile Tile Colour
+                            i.icon-black.fa.fa-th.coloredText
+                        .span3
+                            input.coloredText.coloredInputBG#tileColor.simple_color
+                .span11.coloredBG.coloredBorder(style="padding:15px;border-style:solid;border-top-style:none;border-width:1px; border-color:#EEE;background:white;border-bottom:none !important;")
+                    label#valueTitleSearch Search
+                    .row.span12.searchDiv(style="padding-top:1px;")
+                        input.coloredText.coloredInputBG.input-xxlarge.span11.searchInput#searchString(style="height:28px; margin-bottom:0px;margin-top:1px;width:95%;" name="xLInput3" size="100" type="text")
+                .span11.coloredBG.coloredBorder(style="padding:15px;border-style:solid;border-top-style:none;border-width:1px; border-color:#EEE;background:white;border-top:none !important;")
+                    label.coloredText#valuePresoTitle Presentation Script
+                    .row.span11(style="padding-top:1px;")
+                        pre#editor(style="height:110px")
+                .cModalDialogClose.coloredBG
+                    a.cModalDialogA.closeEdit
+                        i.icon-white.fa.fa-check.coloredText
+                        label.coloredText.titleLabel#valueOkay(style="display:inline") Okay
+
+    br
+    #valueData(style='margin:5px;') ...

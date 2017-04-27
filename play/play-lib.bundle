@@ -1,0 +1,12 @@
+<Bundle name="play-lib" version="1.0" system="true">
+	<status>UNINSTALLED</status>
+	<releaseDate>@timestamp@</releaseDate>
+	<installDate>@timestamp@</installDate>
+	<buildId>@buildId@</buildId>
+	<classification>PROD</classification>
+	<businessArea>N/A</businessArea>
+	<businessClassification>Admin</businessClassification>
+	<owner>info@logscape.com</owner>
+	<workingDirectory>.</workingDirectory>
+	<services />
+</Bundle>

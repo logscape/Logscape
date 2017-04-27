@@ -1,0 +1,41 @@
+Jul  9 00:30:00 alteredcarbon newsyslog[48332]: logfile turned over
+Jul  9 00:30:23 alteredcarbon mDNSResponder[22]: ERROR: mDNSPlatformWriteTCP - send Broken pipe
+Jul  9 00:30:23 alteredcarbon mDNSResponder[22]: tcpConnectionCallback: error writing
+Jul  9 00:30:23 alteredcarbon mDNSResponder[22]: ERROR: mDNSPlatformWriteTCP - send Broken pipe
+Jul  9 00:30:23 alteredcarbon mDNSResponder[22]: tcpConnectionCallback: error writing
+Jul  9 00:37:24 alteredcarbon mDNSResponder[22]: Update Canon\032MP610\032series._ipp._tcp.neil\.avery.members.mac.com. refused
+Jul  9 00:37:24 alteredcarbon mDNSResponder[22]: hndlRecordUpdateReply: Registration of record Canon\032MP610\032series._ipp._tcp.neil\.avery.members.mac.com. type 33 failed with error -65553
+Jul  9 00:37:57 alteredcarbon mDNSResponder[22]: Update Canon\032MP610\032series._ipp._tcp.neil\.avery.members.mac.com. refused
+Jul  9 00:37:57 alteredcarbon mDNSResponder[22]: hndlRecordUpdateReply: Registration of record Canon\032MP610\032series._ipp._tcp.neil\.avery.members.mac.com. type 33 failed with error -65553
+Jul  9 00:38:51 alteredcarbon sandboxd[48349]: Google Chrome He(48348) deny mach-lookup com.apple.windowserver.session
+Jul  9 00:39:03 alteredcarbon mDNSResponder[22]: Update Canon\032MP610\032series._ipp._tcp.neil\.avery.members.mac.com. refused
+Jul  9 00:39:03 alteredcarbon mDNSResponder[22]: hndlRecordUpdateReply: Registration of record Canon\032MP610\032series._ipp._tcp.neil\.avery.members.mac.com. type 33 failed with error -65553
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny mach-lookup com.apple.pasteboard.1
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Users/neil/Library/Preferences/ByHost/com.apple.HIToolbox.32D54BF0-784B-5C5C-95FC-A343F68136B0.plist
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Library/Preferences/com.apple.HIToolbox.plist
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny mach-lookup com.apple.pasteboard.1
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /private/var/folders/3q/3qZVr9J1F-4Ppr3LAK0b1E+++TI/-Caches-/com.apple.IntlDataCache.le
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /System/Library/Caches/com.apple.IntlDataCache.le
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /private/var/folders/3q/3qZVr9J1F-4Ppr3LAK0b1E+++TI/-Caches-/com.apple.IntlDataCache.le
+Jul  9 00:39:22: --- last message repeated 1 time ---
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny mach-lookup com.apple.pasteboard.1
+Jul  9 00:39:22: --- last message repeated 19 times ---
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /System/Library/Keyboard Layouts
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /System/Library/Input Methods
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Library/Keyboard Layouts
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Users/neil/Library/Keyboard Layouts
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Library/Input Methods
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Users/neil/Library/Input Methods
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Library/QuickTime/DivX Decoder.component
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder
+Jul  9 00:39:22: --- last message repeated 1 time ---
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny mach-lookup com.apple.system.logger
+Jul  9 00:39:22: --- last message repeated 1 time ---
+Jul  9 00:39:22 alteredcarbon [0x0-0xd64d64].com.google.Chrome[46274]: 2010-07-09 00:39:22.492 Google Chrome Helper[48348:207] Error loading /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder:  dlopen(/Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder, 262): no suitable image found.  Did find:
+Jul  9 00:39:22 alteredcarbon [0x0-0xd64d64].com.google.Chrome[46274]:  /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder: open() failed with errno=1
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny mach-lookup com.apple.system.logger
+Jul  9 00:39:22: --- last message repeated 1 time ---
+Jul  9 00:39:22 alteredcarbon sandboxd[48350]: Google Chrome He(48348) deny file-read-data /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder
+Jul  9 00:39:22 alteredcarbon [0x0-0xd64d64].com.google.Chrome[46274]: 2010-07-09 00:39:22.495 Google Chrome Helper[48348:207] Error loading /Library/QuickTime/DivX Decoder.

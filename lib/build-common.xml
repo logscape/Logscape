@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="build-common">
+
+    <property file="build.properties" />
+    <property name="dist" location="dist" />
+    <property name="build" location="build" />
+    <property name="classes" location="${build}/classes" />
+    <property name="test.classes" location="${build}/test-classes" />
+    <property name="test.reports" location="${build}/test-reports" />
+    <property name="lib" location="../lib/lib" />
+    <property name="test.src" location="test" />
+
+    <tstamp>
+        <format property="timestamp" pattern="dd-MMM-yy-HHmm" />
+    </tstamp>
+    <tstamp>
+        <format property="timestamp1" pattern="MMdd" />
+    </tstamp>
+
+    <property name="version.id" value="community-3.41"/>
+    <property name="build.id" value="Logscape-${version.id}_b${timestamp1}"/>
+
+
+    <!-- used in all bundles -->
+    <filter token="versionId" value="${version.id}"/>
+    <filter token="buildId" value="${build.id}" />
+    <filter token="timestamp" value="${timestamp}" />
+
+    <macrodef name="zipdir">
+        <attribute name="destfile"/>
+        <attribute name="sourcedir"/>
+        <sequential>
+            <echo>Building zip: @{destfile}</echo>
+            <exec executable="zip" dir="@{sourcedir}">
+                <arg value="-qR"/>
+                <arg value="@{destfile}"/>
+                <arg value="*"/>
+                <arg value="-x *.svn* "/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+
+    <target name="clean">
+        <delete dir="${dist}" failonerror="false"/>
+        <delete dir="${build}" failonerror="false"/>
+        <delete dir="work" failonerror="false"/>
+        <delete dir="." includes="*.log*" quiet="true" failonerror="false"/>
+        <delete dir="." includes="*.log" failonerror="false"/>
+        <delete dir="." includes="junit*.properties" failonerror="false"/>
+    </target>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${dist}" />
+        <mkdir dir="${build}" />
+        <mkdir dir="${classes}" />
+        <mkdir dir="${test.classes}" />
+        <mkdir dir="${test.reports}" />
+    </target>
+
+    <target name="tcTest" depends="init,compile,test"/>
+    <path id="run.classpath">
+        <pathelement path="${classes}" />
+    </path>
+    <path id="test.classpath">
+        <pathelement path="${test.classes}" />
+    </path>
+
+    <path id="default.classpath">
+        <fileset dir="${lib}">
+            <include name="**/*.jar" />
+            <exclude name="**/je-3.3.87.jar" />
+
+        </fileset>
+    </path>
+
+    <target name="compile" depends="init">
+        <mkdir dir="lib"></mkdir>
+        <javac srcdir="src" destdir="${classes}" debug="true" target="1.7" source="1.7" fork="true">
+            <classpath>
+                <path refid="compile.classpath" />
+            </classpath>
+        </javac>
+        <copy file="src/log4j.properties" todir="${classes}" failonerror="false"/>
+    </target>
+
+    <target name="compile.tests">
+        <mkdir dir="test"></mkdir>
+        <javac srcdir="${test.src}" destdir="${test.classes}" target="1.7" source="1.7" debug="false" fork="true">
+            <classpath>
+                <path refid="compile.classpath" />
+                <path refid="run.classpath" />
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="run">
+        <java fork="true" classname="${main.class}">
+            <jvmarg line="-Xms128M -Xmx256M" />
+            <!-- jvmarg line="-Dsun.java2d.opengl=true" / -->
+            <jvmarg line="-Dsubstancelaf.useDecorations" />
+            <classpath>
+                <path refid="compile.classpath" />
+                <path refid="run.classpath" />
+            </classpath>
+        </java>
+    </target>
+
+    <target name="test" depends="compile.tests">
+        <property name="dir" value="./"/>
+        <ant target="testOnly" />
+    </target>
+
+
+    <target name="testOnly" depends="compile.tests">
+        <echo>Test Started at ${now}</echo>
+        <echo>Test directory ${dir}</echo>
+        <junit dir="${dir}" fork="true" forkMode="perTest"     printsummary="yes" haltonfailure="no" failureproperty="something.failed">
+            <jvmarg line="-Xmx1024M -Dtest.mode=true" />
+            <sysproperty key="log4j.filename" value="build/test.log" />
+            <sysproperty key="kv.env" value="build/TEST_KV_INDEX" />
+            <sysproperty key="test.mode" value="true" />
+            <batchtest todir="${test.reports}" >
+                <fileset dir="${test.classes}">
+                    <include name="**/*Test.class" />
+                    <exclude name="**/*SpaceBaseFunctionalTest.class" />
+                </fileset>
+            </batchtest>
+            <formatter type="xml" />
+            <classpath refid="test.classpath" />
+            <classpath refid="run.classpath" />
+            <classpath refid="compile.classpath" />
+            <classpath refid="default.classpath" />
+        </junit>
+
+        <junitreport todir="${test.reports}">
+            <fileset dir="${test.reports}">
+                <include name="TEST-*.xml" />
+            </fileset>
+            <report format="frames" todir="${test.reports}" />
+        </junitreport>
+        <!--		<fail if="something.failed"/> -->
+    </target>
+
+    <target name="dist-no-deps">
+        <jar destfile="${dist}/${artifact}.jar" compress="true"  >
+            <fileset dir="${classes}" includes="**/*" />
+        </jar>
+    </target>
+
+    <target name="dist" depends="clean,init,compile">
+        <jar destfile="${dist}/${artifact}.jar" compress="true"  >
+            <fileset dir="${classes}" includes="**/*" />
+        </jar>
+    </target>
+
+</project>

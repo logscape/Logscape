@@ -1,0 +1,155 @@
+#facinata-li-ds-proto.active{
+    display:inline-block !important;
+}
+#facinata-li-ds-proto{
+    display:none !important;
+}
+
+.eventview-popup {
+    width:640px;
+}
+.eventview-popup .key-col {
+    width: 20%;
+}
+.eventview-popup .value-col {
+    width: 55%;
+}
+
+.eventview-popup .stats-col {
+    width: 20%;
+}
+.eventview-popup .ops-col {
+    width: 3%;
+}
+
+.eventview-popup .active{
+    display:table;
+}
+.eventview-popup table {
+    width: 100%;
+    margin-left: 15px;
+    table-layout: fixed;
+    white-space: nowrap;
+    display:none;
+}
+
+.eventview-popup td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.eventview-popup > .kv-title-div {
+    padding-right:5px;
+    padding-top:3px;
+}
+.eventview-popup > .kv-title-div > a {
+    float:right;
+    display:inline;
+}
+.eventview-popup > .kv-title-div > p {
+    padding-left:5px;
+    padding-top:3px;
+    display:inline;
+}
+.eventview-popup > div {
+    padding-left:5px;
+}
+.eventview-popup > div > .kv-pairing {
+    padding-top:4px;
+    padding-left:25px;
+}
+.eventview-popup > div > .kv-pairing > div {
+    display:inline;
+}
+.eventview-popup > div > table > tbody > tr > td > .kv-pairing-key {
+    color:#AAAAAF;
+    padding-left:25px;
+    width:150px;
+}
+
+.eventview-popup > div > table > tbody > tr > td > .kv-pairing-value > span{
+    width:530px;
+}
+
+.eventview-popup > div > table > tbody > tr > td > .kv-pairing-operators {
+    width:30px;
+}
+
+.kv-chart {
+    height: 10px;
+    width: 80px;
+    display: inline-flex;
+}
+.kv-chart-stats {
+    width: 130px;
+}
+
+.kv-chart-stats > span {
+    padding-left: 7px;
+}
+.eventview-popup > div > table > tbody > tr > td > .kv-pairing-operators > i {
+    margin-right:5px;
+
+}
+
+
+.kv-chart .echart {
+    height: 10px;
+    display: inline-block;
+    margin-right: 1px;
+}
+.kv-chart .ec1 {
+    background-color: #5F5F5F;
+}
+.kv-chart .active {
+    background-color: #0771A7 !important;
+}
+.kv-chart .ec2 {
+    background-color: #777;
+}
+.kv-chart .ec3 {
+    background-color: #999;
+}
+.kv-chart .ec4 {
+    background-color: #CACACA;
+}
+.kv-chart .ec5 {
+    background-color: #EEE;
+}
+
+.kv-chart .ec6 {
+    background-color: #B9B9B9;
+}
+
+.kv-chart .ec7{
+    background-color: #333333;
+}
+
+.eventview-popup > center > a{
+    color: #08C;
+    padding-left:5px;
+}
+
+.drop-content > .eventFacetEntry > div{
+    padding-bottom: 5px;
+}
+
+a > i.fa-link{
+    color:#B5B5C5
+}
+
+a.active > i.fa-link {
+    color:rgb(4, 111, 185);
+}
+
+a > i#facet-function-button {
+    padding-left:5px;
+}
+
+.drop{
+    z-index: 999
+}
+
+a#licenseMessage{
+    color:rgb(255,255,255);
+}

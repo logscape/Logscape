@@ -1,0 +1,51 @@
+2010-06-03 09:34:22,297 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] ERROR org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/odc-dashboard-dev] - Error loading WebappClassLoader
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+ ----------> Parent Classloader:
+ org.apache.catalina.loader.StandardClassLoader@1f02b85
+ com.rbs.odc.dashboard.server.OdcStandaloneServlet
+ java.lang.ClassNotFoundException: com.rbs.odc.dashboard.server.OdcStandaloneServlet
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1363)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1209)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1068)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:966)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:3956)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4230)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:760)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:740)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:544)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:831)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:720)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:490)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1217)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:293)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:120)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1306)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1570)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1579)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1559)
+	at java.lang.Thread.run(Thread.java:619)
+2010-06-03 09:34:22,298 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] ERROR org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/odc-dashboard-dev] - Servlet /odc-dashboard-dev threw load() exception
+ java.lang.ClassNotFoundException: com.rbs.odc.dashboard.server.OdcStandaloneServlet
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1363)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1209)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1068)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:966)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:3956)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4230)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:760)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:740)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:544)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:831)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:720)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:490)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1217)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:293)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:120)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1306)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1570)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1579)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1559)
+	at java.lang.Thread.run(Thread.java:619)
+2010-06-03 09:34:22,300 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] ERROR

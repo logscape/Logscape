@@ -1,0 +1,44 @@
+#jmx_attribute_widget.widget_size(style='display:none; height:95%; padding-top:10px; text-align:center' widget-width='2' widget-height='2' data-minx="1" data-miny="1")
+    .editWidget.editBlock
+        .cModalDialog
+            div
+                .cModalDialogHeader
+                    .fa.fa-sort-numeric-desc.coloredText
+                    p.coloredText#jmxAttributeTitle JMX Attribute Settings
+                    hr.borderColor(style="margin:10px")
+                    br
+                .span12.popoutColor
+                    .span11.actionBlock.flatBlue1.padActionBlock.popoutColor
+                        .span3
+                            p.coloredText#jmxAttributeUrl Url:
+                            i.coloredText.icon-black.fa.fa-th
+                        .span9
+                            input.span11#url(placeholder="HOST:PORT OR service:jmx:rmi://localhost:8989/jndi/rmi://localhost:8989/jmxrmi" title="HOST:PORT OR service:jmx:rmi://localhost:8989/jndi/rmi://localhost:8989/jmxrmi")
+                    .span11.actionBlock.flatBlue2.padActionBlock.popoutColor
+                        .span3
+                            p.coloredText#jmxAttributeBean Bean:
+                            i.coloredText.icon-black.fa.fa-th
+                        .span9
+                            input.span11#bean(placeholder="com.XXX.YYY:Service=Accounts" title="com.XXX.YYY:Service=Accounts")
+                    .span11.actionBlock.flatBlue3.padActionBlock.popoutColor
+                        .span3
+                            p.coloredText#jmxAttributeAttribute Attribute:
+                            i.coloredText.icon-black.fa.fa-th
+                        .span9
+                            input.span11#attribute(placeholder="load" title="load")
+                    .span11.actionBlock.flatBlue4.padActionBlock.popoutColor
+                        .span3
+                            p.coloredText#jmxAttributeRunOnSearch Run On Search?:
+                            i.coloredText.icon-black.fa.fa-th
+                        .span9
+                            .flatCheckboxThree(style="margin-left:20px;margin-top:-5px;")
+                                input.legendControl#autoUpdate(type="checkbox" value="1"  name="")
+                                label(for="autoUpdate")
+
+                .cModalDialogClose
+                    a.cModalDialogA.closeEdit
+                        i.icon-white.fa.fa-check
+                        p#jmxAttributeOkay &nbsp;Okay
+
+    h4#fullName Name
+    h4#value Value

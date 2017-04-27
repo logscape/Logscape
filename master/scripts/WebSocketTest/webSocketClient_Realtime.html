@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebSocket Streaming Example</title>
+    <script type="text/javascript" src="smoothie.js"></script>
+  </head>
+  <body>
+
+    <h1>Streaming CPU Data</h1>
+
+    <canvas id="smoothieCanvas" width="600" height="100"></canvas>
+	<h2>Raw Data from the WebSocket</h2>
+    <div id="wsAddress"></div>
+	<div id="output"></div>
+
+<!DOCTYPE html>
+<meta charset="utf-8"/>  
+<title>Connection and Raw Data</title>
+
+<!-- CONFIGURE the WebSocket here -->
+<script language="javascript" type="text/javascript">
+
+		// SMOOTHIE STUFF
+		// Random data
+      	var line1 = new TimeSeries();
+
+      var smoothie = new SmoothieChart({ grid: { strokeStyle: 'rgb(125, 0, 0)', fillStyle: 'rgb(60, 0, 0)', lineWidth: 1, millisPerLine: 250, verticalSections: 6 } });
+      smoothie.addTimeSeries(line1, { strokeStyle: 'rgb(0, 255, 0)', fillStyle: 'rgba(0, 255, 0, 0.4)', lineWidth: 3 });
+
+      smoothie.streamTo(document.getElementById("smoothieCanvas"), 1000);
+
+
+
+	// DONE
+
+	var wsUri = "ws://54.74.68.162:20000/";
+	var output;
+    document.getElementById("output").innerHTML = wsUri
+
+
+	var added = 0;
+	var connected = false
+	var handle = null
+
+
+	function init() {
+    	output = document.getElementById("output");
+    	// keep trying to connect
+    	handle = setInterval(testWebSocket, 1000);
+
+	}
+	function testWebSocket() {
+	    websocket = new WebSocket(wsUri);
+    	websocket.onopen = function (evt) {
+        // stop trying when it works
+        clearInterval(handle)
+        onOpen(evt)
+
+    };
+    websocket.onclose = function (evt) {
+        onClose(evt)
+    };
+    websocket.onmessage = function (evt) {
+        onMessage(evt)
+    };
+    websocket.onerror = function (evt) {
+        onError(evt)
+        connected = false
+    };
+}
+function onOpen(evt) {
+    writeToScreen("CONNECTED");
+    connected = true
+}
+function onClose(evt) {
+    writeToScreen("DISCONNECTED");
+}
+function onMessage(evt) {
+    if (added++ > 0 && added % 10 == 0) {
+        document.getElementById("output").innerHTML = ''
+    }
+    writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data + '</span>');
+    var data = eval(evt.data)[0]
+    line1.append(data.TIME, data.CPU);
+}
+function onError(evt) {
+    document.getElementById("output").innerHTML = ''
+    writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data + " [Retrying]  " + wsUri + " : "  + new Date());
+}
+function doSend(message) {
+    writeToScreen("SENT: " + message);
+    websocket.send(message);
+}
+function writeToScreen(message) {
+    var pre = document.createElement("p");
+    pre.style.wordWrap = "break-word";
+    pre.innerHTML = message;
+    output.appendChild(pre);
+}
+window.addEventListener("load", init, false);  </script>  
+
+
+
+ </body>
+</html>
+
+
+
+
+
+

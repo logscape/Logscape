@@ -1,0 +1,37 @@
+.tab-pane#tab-alert-triggers.coloredText
+    .accordion-group.coloredBorder
+        .accordion-heading
+            a.accordion-toggle#alertingTriggerSource(data-toggle="collapse" data-parent="#alert-triggers"  title="The search-data to feed triggers") Trigger Source
+            .accordion-body
+                .accordion-inner.coloredBorder
+                    form#numericTriggerForm.form-horizontal
+                        .control-group
+                            label.control-label#alertingSearch Search
+                            .controls
+                                select#searchNames
+
+    span#alertingTriggerCon Trigger Conditions
+    br
+    .accordion.span10#alert-triggers(style="margin-left:0px")
+        .accordion-group.coloredBorder
+            .accordion-heading
+                a.accordion-toggle#alertingNumeric(data-toggle="collapse" data-parent="#alert-triggers" href="#collapseNumericTrigger" title="Raw events received") Numeric
+
+            .accordion-body.collapse#collapseNumericTrigger
+                .accordion-inner.coloredBorder
+                    =render("/includes/alerts/numeric.jade")
+
+        .accordion-group.coloredBorder
+            .accordion-heading
+                a.accordion-toggle#alertingExpression(data-toggle="collapse" data-parent="#alert-triggers" href="#collapseExpressionTrigger" title="Histogram based threshold using search filters A.gt() A.lt()") Expression
+
+            .accordion-body.collapse#collapseExpressionTrigger
+                .accordion-inner.coloredBorder
+                    =render("/includes/alerts/expression.jade")
+
+        .accordion-group.coloredBorder
+            .accordion-heading
+                a.accordion-toggle#alertingCorrelation(data-toggle="collapse" data-parent="#alert-triggers" href="#collapseCorrelationTrigger" title="Sliding window collection of real-time data") Correlation
+            .accordion-body.collapse#collapseCorrelationTrigger
+                .accordion-inner.coloredBorder
+                    =render("/includes/alerts/correlation.jade")

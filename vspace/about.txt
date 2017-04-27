@@ -1,0 +1,50 @@
+	
+ * Replicated Space implementation supporting hybrid space/cache functionality.
+ 
+ * Peer discover based on multicasting - can be extended to support other types
+ 
+ * String key, String value only support
+ 
+ * Intended for highly transient data of sizes < 4K
+ 
+ * Supports template (m)get operations to retrieve based upon template/properties
+     - space.get(key) OR space.readMultiple(",,C,<:7")
+      
+ * Value content is enriched using "," delimiters to support template retrieval
+ 
+ * Template based readMultiple supports string.equals, contains, >=, >, <, <= (numeric and date incl)
+     - space.readMultiple(",,>:100");
+     
+ * Update via template support string, numeric operations.
+   -  concat:SomeValue, prepend:SomeValue, replace:SomeValue, +=:someValue, *=, /=. -=  
+	 - space.updateMultiple(",,contains:uk,", ",,,+=100");
+	
+ * notification events/trigger based alert/callback (running off of local)
+	
+ * remote client/dynamic proxy/notifications
+	
+ * support multiple templates being submitted
+ 
+	// space executor/bulk updater/incl expirey of actions and content (TimeToLive-timeunit) (local only - dont replicate state)
+	// runner is stored in space as runner_$id_10-javaclass=XXX,args=new String[] { }
+	// space sweeper scans the space and then schedules runners - if they are removed
+	// from the space then the get descheduled/by throwing an internal exception
+	
+	// multi process performance test
+	// support for master/worker pattern through notification/callback events...
+	// see workflow thingy
+	
+	// simple dumb client gui that readonly/notifies of updates
+	
+	// order results by template item, also allow "order(limit=10, 20000-$value):" order(a-z):
+	
+	
+	// support xml and name lookup mapping by using a key_pattern 
+	// - i.e. tr_1 -> starts with "tr_" =  trade pk 1,  xmlTemplate = name = tr 
+	// <trade id=$0>
+	//	 <lookup>$book_$1</lookup>
+	//   <notional>$3</notional>
+	//   <maturity>$4</maturity>
+	// </trade>
+	
+	// add date filter/rule matcher

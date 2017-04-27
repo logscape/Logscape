@@ -1,0 +1,416 @@
+.content-controller {
+    background: #303946;
+    height: 30px;
+}
+
+
+.explorerSidePanel {
+    background:#333;height:100%px;
+}
+.explorerMainPanel {
+    background:#333;height:100%;
+}
+.ex_css-treeview input + label + ul {
+    display: none;
+}
+.ex_css-treeview input:checked + label + ul {
+    display: block;
+}
+.ex_css-treeview input {
+    position: absolute;
+    opacity: 0;
+}
+
+.ex-tabs > li.active > a,
+.ex-tabs > li.active > a:hover,
+.ex-tabs > li.active > a:focus {
+   background: #333;
+   color: white;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 0px;
+}
+.ex-tabs {
+    background:#222
+}
+div.editor .ace_search{
+    border-radius:5px 0px 0px 5px;
+    border-color:#414F63;
+}
+
+div.editor .ace_search input{
+    border-color:#414F63;
+}
+
+div.editor .ace_search,
+div.editor .ace_search button,
+div.editor .ace_search span{
+      background-color: #445;
+      border: 1px solid #556;
+      color: white;
+}
+
+div.editor .ace_search input{
+    color: white;
+    background-color: #242A34;
+}
+.ex_css-treeview ul,
+.ex_css-treeview li {
+    padding: 0  !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 15 !important;
+    margin-bottom: 20 !important;
+
+    list-style: none !important;
+}
+
+.ex_css-treeview input {
+    position: absolute !important;
+    opacity: 0 !important;
+}
+
+.ex_css-treeview {
+    font: normal 14px "Segoe UI", Arial, Sans-serif !important;
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
+.ex_css-treeview a {
+    color: #FFF !important;
+    text-decoration: none !important;
+}
+
+.ex_css-treeview a:hover {
+    text-decoration: underline !important;
+}
+
+.ex_css-treeview input + label + ul {
+    margin: 0 0 0 8px !important;
+}
+
+.ex_css-treeview input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+
+.ex_css-treeview label,
+.ex_css-treeview label::before {
+    cursor: pointer !important;
+}
+
+.ex_css-treeview input:disabled + label {
+    cursor: default !important;
+    opacity: .6 !important;
+}
+
+.ex_css-treeview input[checked=checked]:not(:disabled) ~ ul {
+    display: block !important;
+}
+
+.ex_css-treeview label.file {
+    background-image: url("");
+}
+
+
+.ex_css-treeview label,
+.ex_css-treeview label::before {
+    /*background: url("/play/images/tree-icons.png") no-repeat;*/
+}
+
+.ex_css-treeview label,
+.ex_css-treeview a,
+.ex_css-treeview label::before {
+    display: inline-block !important;
+    height: 16px !important;
+    line-height: 16px !important;
+    vertical-align: middle !important;
+}
+
+.ex_css-treeview label {
+    background-position: 18px 0 !important;
+}
+
+.ex_css-treeview label::before {
+    content: "" !important;
+    /*width: 16px !important;;
+    margin: 0 22px 0 0 !important;*/
+    vertical-align: middle !important;
+    background-position: 0 -32px !important;
+}
+
+.ex_css-treeview input:checked + label::before {
+    background-position: 0 -16px !important;
+}
+
+
+
+/* Solely for explorer page */
+
+#explore .sidebar-nav {
+    background-color:#21252B;
+    height:100% !important;
+}
+
+#explore {
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:50px;
+    right:0px;
+    overflow: hidden;
+}
+
+#explore ul.nav.nav-tabs.ex-tabs {
+    background-color:#21252B;
+    margin-top:15px;
+    height:39px;
+    margin-bottom:0px;
+    border-bottom-color:#191C21;
+}
+
+#explore ::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+#explore ::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#explore ::-webkit-scrollbar-thumb
+{
+  background: #508EC5;
+}
+
+#explorer div#explorer {
+    background-color:#282C34;
+}
+
+#explore .row-fluid {
+    background-color:#21252B;
+    height:100%;
+}
+
+#explore .tab-content {
+    background-color:#282C34;
+    border-style:solid;
+    border-top-style:none;
+    border-width:1px;
+    border-color:#191C21;
+    height:100%;
+    margin-right:25px;
+    margin-bottom:30px;
+}
+
+#explore li.active>a{
+    background-color:#2B2E36;
+    border-style:solid;
+    border-bottom-style:none;
+    border-width:1px;
+    border-color:#191C21;
+}
+
+#explore div.sidebar-nav>div.span12{
+    margin-top:15px;
+}
+#explore ul.nav > li {
+    text-align:center;
+    min-width:10%;
+}
+#explore ul.nav > li > a {
+    color:rgba(157, 165, 180, 0.6);
+}
+
+#explore ul.nav > li.active > a {
+    color:#9da5b4;
+}
+
+#explore ol {
+    margin:0px;
+    list-style-type: none;
+}
+
+#explore ol > li {
+    color:#9da5b4;
+    line-height: 1.42857143;
+    margin-left:3px;
+    counter-increment: customlistcounter;
+}
+
+
+#explore ol > li:before {
+    content: counter(customlistcounter) " ";
+    float: left;
+    width: 1em;
+}
+
+#explore ol:first-child {
+    margin-top:4px;
+    counter-reset: customlistcounter;
+}
+
+#explore ol > li > p {
+    margin:0 0 2px;
+}
+
+#explore .span12 > input#hosts, input#recentFilter, input#dynamicFieldFilter {
+    background-color: #242A34;
+    border:1px solid #3C414C;
+    color:white;
+}
+
+input#recentFilter, input#dynamicFieldFilter{
+    background-color: #2E2D2D !important;
+}
+
+#explore .ace_editor {
+    border-style:none;
+    width:100%;
+    height: calc(100% - 33px);
+}
+
+#explore div#WelcomeTab {
+    color:#9DA5B4;
+    width:100%
+    max-width:580px;
+    min-width:300px;
+    margin:auto;
+    padding:3em 2em;
+    font-size: 1.25em;
+    line-height: 1.4;
+    font-family: 'Consolas', 'Inconsolata', 'Monaco', 'Courier New', 'Courier' !important;
+    text-align:center;
+
+}
+
+#tail { 
+    margin-top:3px;
+    margin-bottom:3px;
+   /* background-color:#3A495F;*/
+    border:none;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+    font-size:12px;
+}
+
+#explore .isTailing{
+    background-color:#369F63 !important; 
+}
+
+#explore div#WelcomeTab h1{
+    font-size: 1.4em;
+    text-align:center;
+    line-height:1.3;
+    margin:1em 0;
+    font-family: inherit;
+    font-weight:500 !important;
+}
+
+#explore ul.nav-tabs li.active > a{
+    border-top: 2px solid #43A0F2;
+    border-left:0px;
+    border-right:0px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border-bottom: 0;
+    box-shadow: 1px -3px 4px -3px rgba(0, 0, 0, 0.08);
+    border-left: 0px
+    border-right: 0px;
+   /* position: static;*/
+}
+
+.ex_css-treeview a:last-child {
+    padding-bottom:7px;
+}
+
+#explore div#WelcomeTab ol {
+       display: inline-block;
+       margin-left: auto;
+       margin-right: auto;
+       width:500px;
+       list-style-position: inside;
+}
+
+#explore ul.nav-tabs > li{
+    display:inline;
+    
+    padding-bottom:0px;
+    padding-top:0px;
+}
+
+#explore #filetree label i.fa.fa-folder {
+    padding-left:5px;
+}
+
+#explore #filetree{
+    overflow-x:auto;
+}
+
+#explore div.tab-content div.tab-pane {
+    height:calc(100%);
+}
+
+#explore div.ace_content {
+    background-color: #282C34;
+}
+
+#explore div.ace_gutter {
+    background: #303946;
+}
+
+#explore div.ace_active-line, #explore div.ace_gutter-active-line{
+    background-color:#2B4E95;
+}
+
+#explore i.fa-times {
+    float:right;
+    padding-top:5px;
+    padding-left:3px;
+}
+
+#explore .nav > li > a:hover {
+    background-color:#2B2E36;
+    border-color:#419CEB #419CEB #419CEB;
+}
+
+#explore ul.ui-autocomplete {
+    background-color: #323B4C !important;
+    background-image:none;
+    border-color: #142342;
+    color:white;
+}
+
+#explore ul.ui-autocomplete a {
+    color:white;
+}
+
+#explore ul.ui-autocomplete a.ui-state-focus {
+    color:white;
+    background:none;
+}
+
+div.ui-dialog.ui-widget {
+    background:none;
+    background-color:#303946;
+    color:white !important;
+}
+
+div.ui-widget-content{
+    color:white !important;
+}
+
+div.ui-widget-content a {
+    color:#0088cc !important;
+}
+
+div.ui-widget-header { 
+    background-color:#313841;
+    color:white;
+    background:none;
+    border:none;
+}

@@ -1,0 +1,23 @@
+#clock_widget.widget_size(style='display:none; background:rgb(104, 154, 215); height:100%; text-align:center' widget-width='2' widget-height='1' data-minx="1" data-miny="1")
+    .editWidget.editBlock
+        .cModalDialog
+            div
+                .cModalDialogHeader
+                    .fa.fa-clock-o
+                    label.titleLabel#clockTitle(style="display:inline;font-size:26px;")
+                    hr(style="margin:10px")
+                    br
+                .span12
+                    .span11.actionBlock.flatBlue3.padActionBlock
+                        .span6
+                            p#clockTile
+                            i.icon-black.fa.fa-th
+                        .span3
+                            input#tileColor.simple_color
+                .cModalDialogClose
+                    a.cModalDialogA.closeEdit
+                        i.icon-white.fa.fa-check
+                        label.titleLabel#clockOkay(style="display:inline") Okay
+    br
+    h3#date(style='color:white;margin:5px;') Date
+    h2#time(style='color:white;margin:5px') Time

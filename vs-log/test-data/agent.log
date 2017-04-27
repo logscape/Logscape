@@ -1,0 +1,102 @@
+2008-11-11 17:02:19,538 INFO main (UDPServer.java:230)	 - mcast://225.0.0.0:6000/[] Adding Peer:mcast://225.0.0.0:6000
+2008-11-11 17:02:19,542 INFO main (MulticastDiscovery.java:53)	 - MulticastDiscovery -8224184706970019453 address[] filters{} Discovery Starting with freq:5
+2008-11-11 17:02:19,684 INFO nioserverstcp://mobius.local:12005 (NIOReactor.java:63)	 - starting
+2008-11-11 17:02:20,806 DEBUG main (SpaceServiceImpl.java:180)	 - Using AdminSpace:[stcp://mobius.local:15010/_startTime=1226386908203] ProxyAddress [stcp://mobius.local:12005/_startTime=1226386939526]
+2008-11-11 17:02:20,837 DEBUG main (SpaceServiceImpl.java:180)	 - Using AdminSpace:[stcp://mobius.local:11100/_startTime=1226386902953] ProxyAddress [stcp://mobius.local:12005/_startTime=1226386939526]
+2008-11-11 17:02:21,060 INFO main (ResourceAgentImpl.java:99)	 - starting... /Users/damian/vscape-install/vscape1
+2008-11-11 17:02:21,337 INFO main (ResourceAgentImpl.java:395)	 - boot-1.0 has been deployed
+2008-11-11 17:02:21,367 INFO main (ResourceAgentImpl.java:395)	 - dashboard-1.0 has been deployed
+2008-11-11 17:02:21,470 INFO main (ResourceAgentImpl.java:395)	 - replicator-1.0 has been deployed
+2008-11-11 17:02:21,536 INFO main (ResourceAgentImpl.java:395)	 - vs-admin-1.0 has been deployed
+2008-11-11 17:02:21,561 INFO main (ResourceAgentImpl.java:395)	 - vs-log-1.0 has been deployed
+2008-11-11 17:02:21,577 INFO main (ResourceAgentImpl.java:395)	 - vs-util-1.0 has been deployed
+2008-11-11 17:02:21,578 INFO main (ResourceAgentImpl.java:108)	 - Registering WorkListener:mobius.local-12005
+2008-11-11 17:02:21,583 INFO main (Resource.java:45)	 - RESOURCE mobius.local-12005-0: Registering ResourceId:mobius.local-12005-0
+2008-11-11 17:02:21,715 INFO main (Resource.java:45)	 - RESOURCE mobius.local-12005-1: Registering ResourceId:mobius.local-12005-1
+2008-11-11 17:02:21,794 INFO Pool[0]ResourceAgent-2--3-2 (ResourceAgentImpl.java:222)	 - AGENT Starting: mobius.local-12005-0:vs-log-1.0:LogTailer background: true workDir:.
+2008-11-11 17:02:21,874 INFO main (Resource.java:45)	 - RESOURCE mobius.local-12005-2: Registering ResourceId:mobius.local-12005-2
+2008-11-11 17:02:21,927 INFO main (Resource.java:45)	 - RESOURCE mobius.local-12005-3: Registering ResourceId:mobius.local-12005-3
+2008-11-11 17:02:24,801 INFO Pool[0]ResourceAgent-2--3-2 (ResourceAgentImpl.java:278)	 - WORK ASSIGNMENT ID = mobius.local-12005-0:vs-log-1.0:LogTailer
+2008-11-11 17:02:24,801 INFO Pool[0]ResourceAgent-2--3-2 (ResourceAgentImpl.java:290)	 - WORK_ID was: now:,mobius.local-12005-0:vs-log-1.0:LogTailer
+2008-11-11 17:02:24,889 INFO Pool[0]ResourceAgent-2--3-4 (ResourceAgentImpl.java:222)	 - AGENT Starting: mobius.local-12005-0:replicator-1.0:UploadService background: true workDir:/Users/damian/vscape-install/vscapeLU/system-bundles/replicator-1.0
+2008-11-11 17:02:25,099 INFO pool-1-thread-2 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:66.000000
+2008-11-11 17:02:25,118 INFO pool-1-thread-2 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:7 USED:2 AVAIL:242
+2008-11-11 17:02:27,258 INFO Pool[0]ResourceAgent-2--3-1 (FilteredLogService.java:63)	 - DLOGGER Starting FilteredLogService
+2008-11-11 17:02:27,501 DEBUG Pool[0]ResourceAgent-2--3-1 (FilteredLogService.java:202)	 - ***** Adding File: /Users/damian/vscape-install/vscape1/./agent.log
+2008-11-11 17:02:27,516 INFO Pool[0]ResourceAgent-2--3-1 (FilteredLogService.java:79)	 - DLOGGER Started 
+2008-11-11 17:02:29,895 INFO Pool[0]ResourceAgent-2--3-4 (ResourceAgentImpl.java:278)	 - WORK ASSIGNMENT ID = mobius.local-12005-0:replicator-1.0:UploadService
+2008-11-11 17:02:29,896 INFO Pool[0]ResourceAgent-2--3-4 (ResourceAgentImpl.java:290)	 - WORK_ID was:,mobius.local-12005-0:vs-log-1.0:LogTailer now:,mobius.local-12005-0:vs-log-1.0:LogTailer,mobius.local-12005-0:replicator-1.0:UploadService
+2008-11-11 17:02:29,984 DEBUG Pool[0]ResourceAgent-2--3-2 (SpaceServiceImpl.java:180)	 - Using AdminSpace:[stcp://mobius.local:11005/_startTime=1226386917072] ProxyAddress [stcp://mobius.local:12005/_startTime=1226386939526]
+2008-11-11 17:02:30,084 DEBUG Pool[0]ResourceAgent-2--3-2 (SpaceServiceImpl.java:180)	 - Using AdminSpace:[stcp://mobius.local:1025/_startTime=1226386921660] ProxyAddress [stcp://mobius.local:12005/_startTime=1226386939526]
+2008-11-11 17:02:40,012 INFO pool-1-thread-16 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:65.000000
+2008-11-11 17:02:40,013 INFO pool-1-thread-16 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:9 AVAIL:235
+2008-11-11 17:02:55,045 INFO pool-1-thread-12 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:70.000000
+2008-11-11 17:02:55,046 INFO pool-1-thread-12 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:13 AVAIL:231
+2008-11-11 17:03:10,004 INFO pool-1-thread-17 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:35.000000
+2008-11-11 17:03:10,005 INFO pool-1-thread-17 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:18 AVAIL:227
+2008-11-11 17:03:19,520 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [0] Pool[0]ResourceAgent-2-  SHRINK coreSize[5] active[0]
+2008-11-11 17:03:19,666 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [1] Pool[1]Response-5-  SHRINK coreSize[3] active[0]
+2008-11-11 17:03:25,003 INFO pool-1-thread-3 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:25.000000
+2008-11-11 17:03:25,004 INFO pool-1-thread-3 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:13 AVAIL:232
+2008-11-11 17:03:27,403 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [2] Pool[2]DLogReplayHandler-7-  SHRINK coreSize[3] active[0]
+2008-11-11 17:03:40,018 INFO pool-1-thread-2 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:29.000000
+2008-11-11 17:03:40,019 INFO pool-1-thread-2 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:17 AVAIL:227
+2008-11-11 17:03:55,002 INFO pool-1-thread-8 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:25.000000
+2008-11-11 17:03:55,003 INFO pool-1-thread-8 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:12 AVAIL:233
+2008-11-11 17:04:10,001 INFO pool-1-thread-2 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:49.000000
+2008-11-11 17:04:10,002 INFO pool-1-thread-2 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:16 AVAIL:228
+2008-11-11 17:04:19,517 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [0] Pool[0]ResourceAgent-2-  SHRINK coreSize[5] active[0]
+2008-11-11 17:04:19,666 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [1] Pool[1]Response-5-  SHRINK coreSize[3] active[0]
+2008-11-11 17:04:25,005 INFO pool-1-thread-19 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:28.000000
+2008-11-11 17:04:25,006 INFO pool-1-thread-19 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:11 AVAIL:233
+2008-11-11 17:04:27,400 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [2] Pool[2]DLogReplayHandler-7-  SHRINK coreSize[3] active[0]
+2008-11-11 17:04:27,888 INFO Pool[2]DLogReplayHandler-7--8-1 (FilteredLogService.java:320)	 - DLOGGER SEARCH [.*AGENT (.+)-\d+ MEM.+AVAIL:(\d+), .*AGENT (.+) CPU:(\d).*] [A3.4 - Agent MEM/CPUTue Nov 11 17:04:27 GMT+1000 2008]:
+2008-11-11 17:04:27,903 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:264)	 - LOGSEARCHER - Search Start time adjusted from 3:04:27 PM EST to 5:02:30 PM EST
+2008-11-11 17:04:27,931 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:280)	 - LOGSEARCHER - found 27 lines between 5:02:30 PM EST and 5:04:27 PM EST file /Users/damian/vscape-install/vscape1/agent.log agent.log
+2008-11-11 17:04:27,945 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:172)	 - LOGSEARCHER - Request Queries [.*AGENT (.+)-\d+ MEM.+AVAIL:(\d+), .*AGENT (.+) CPU:(\d).*]. Modified After 11/11/08 5:02 PM. Time of first line is 11/11/08 5:02 PM. Last line is 11/11/08 5:04 PM
+2008-11-11 17:04:28,198 INFO Pool[2]DLogReplayHandler-7--8-1 (Bucket.java:128)	 - LOGSEARCHER - Bucket From 17:02:27:636 - +1000 to 17:04:27:636 - +1000 pattern .*AGENT (.+)-\d+ MEM.+AVAIL:(\d+) hitCount 8 Functions[com.liquidlabs.log.search.functions.Average@7e6536b7] Results[avail]
+2008-11-11 17:04:28,273 INFO Pool[2]DLogReplayHandler-7--8-1 (Bucket.java:128)	 - LOGSEARCHER - Bucket From 17:02:27:636 - +1000 to 17:04:27:636 - +1000 pattern .*AGENT (.+) CPU:(\d).* hitCount 8 Functions[com.liquidlabs.log.search.functions.Average@6b681dea] Results[cpu]
+2008-11-11 17:04:28,305 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:172)	 - LOGSEARCHER - Search complete
+2008-11-11 17:04:28,306 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:317)	 - Return point 3 events:2 event Time:11/11/08 3:04 PM
+2008-11-11 17:04:28,306 INFO Pool[2]DLogReplayHandler-7--8-1 (FilteredLogService.java:266)	 - DLOGGER REPLAY [.*AGENT (.+)-\d+ MEM.+AVAIL:(\d+), .*AGENT (.+) CPU:(\d).*] [A3.4 - Agent MEM/CPUTue Nov 11 17:04:27 GMT+1000 2008]:
+2008-11-11 17:04:28,308 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:172)	 - LOGSEARCHER - Scanning /Users/damian/vscape-install/vscape1/./agent.log with patterns [.*AGENT (.+)-\d+ MEM.+AVAIL:(\d+), .*AGENT (.+) CPU:(\d).*]. Times between (inclusive) 11/11/08 3:04 PM and 11/11/08 5:04 PM
+2008-11-11 17:04:28,315 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:172)	 - LOGSEARCHER - Found 8 lines matching pattern .*AGENT (.+)-\d+ MEM.+AVAIL:(\d+)
+2008-11-11 17:04:28,343 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:172)	 - LOGSEARCHER - Found 8 lines matching pattern .*AGENT (.+) CPU:(\d).*
+2008-11-11 17:04:28,344 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:02:40,012 INFO pool-1-thread-16 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:65.000000 that should match query .*AGENT (.+) CPU:(\d).*
+2008-11-11 17:04:28,412 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:02:40,013 INFO pool-1-thread-16 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:9 AVAIL:235 that should match query .*AGENT (.+)-\d+ MEM.+AVAIL:(\d+)
+2008-11-11 17:04:28,503 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:02:55,045 INFO pool-1-thread-12 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:70.000000 that should match query .*AGENT (.+) CPU:(\d).*
+2008-11-11 17:04:28,534 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:02:55,046 INFO pool-1-thread-12 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:13 AVAIL:231 that should match query .*AGENT (.+)-\d+ MEM.+AVAIL:(\d+)
+2008-11-11 17:04:28,590 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:03:10,004 INFO pool-1-thread-17 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:35.000000 that should match query .*AGENT (.+) CPU:(\d).*
+2008-11-11 17:04:28,621 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:03:10,005 INFO pool-1-thread-17 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:18 AVAIL:227 that should match query .*AGENT (.+)-\d+ MEM.+AVAIL:(\d+)
+2008-11-11 17:04:28,637 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:03:25,003 INFO pool-1-thread-3 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:25.000000 that should match query .*AGENT (.+) CPU:(\d).*
+2008-11-11 17:04:28,668 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:03:25,004 INFO pool-1-thread-3 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:13 AVAIL:232 that should match query .*AGENT (.+)-\d+ MEM.+AVAIL:(\d+)
+2008-11-11 17:04:28,688 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:03:40,018 INFO pool-1-thread-2 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:29.000000 that should match query .*AGENT (.+) CPU:(\d).*
+2008-11-11 17:04:28,711 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:158)	 - Sending 2008-11-11 17:03:40,019 INFO pool-1-thread-2 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:17 AVAIL:227 that should match query .*AGENT (.+)-\d+ MEM.+AVAIL:(\d+)
+2008-11-11 17:04:28,782 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:128)	 - LOGSEARCHER - Sent 5 events for query .*AGENT (.+)-\d+ MEM.+AVAIL:(\d+)
+2008-11-11 17:04:28,782 INFO Pool[2]DLogReplayHandler-7--8-1 (LogFileScanner.java:128)	 - LOGSEARCHER - Sent 5 events for query .*AGENT (.+) CPU:(\d).*
+2008-11-11 17:04:28,783 INFO Pool[2]DLogReplayHandler-7--8-1 (FilteredLogService.java:280)	 - DLOGGER Done REPLAY [.*AGENT (.+)-\d+ MEM.+AVAIL:(\d+), .*AGENT (.+) CPU:(\d).*] [A3.4 - Agent MEM/CPUTue Nov 11 17:04:27 GMT+1000 2008] elapsedMs[477]
+2008-11-11 17:04:28,783 INFO Pool[2]DLogReplayHandler-7--8-1 (FilteredLogService.java:343)	 - DLOGGER Done SEARCH [.*AGENT (.+)-\d+ MEM.+AVAIL:(\d+), .*AGENT (.+) CPU:(\d).*] SubId[A3.4 - Agent MEM/CPUTue Nov 11 17:04:27 GMT+1000 2008]: elapsedMs[895]
+2008-11-11 17:04:40,020 INFO pool-1-thread-17 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:25.000000
+2008-11-11 17:04:40,021 INFO pool-1-thread-17 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:16 AVAIL:228
+2008-11-11 17:04:55,026 INFO pool-1-thread-14 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:29.000000
+2008-11-11 17:04:55,027 INFO pool-1-thread-14 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:11 AVAIL:234
+2008-11-11 17:05:10,001 INFO pool-1-thread-2 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:21.000000
+2008-11-11 17:05:10,002 INFO pool-1-thread-2 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:15 AVAIL:229
+2008-11-11 17:05:19,517 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [0] Pool[0]ResourceAgent-2-  SHRINK coreSize[5] active[0]
+2008-11-11 17:05:19,666 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [1] Pool[1]Response-5-  SHRINK coreSize[3] active[0]
+2008-11-11 17:05:24,997 INFO pool-1-thread-18 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:31.000000
+2008-11-11 17:05:24,998 INFO pool-1-thread-18 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:10 AVAIL:235
+2008-11-11 17:05:27,408 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [2] Pool[2]DLogReplayHandler-7-  SHRINK coreSize[3] active[0]
+2008-11-11 17:05:40,003 INFO pool-1-thread-5 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:25.000000
+2008-11-11 17:05:40,005 INFO pool-1-thread-5 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:14 AVAIL:230
+2008-11-11 17:05:55,008 INFO pool-1-thread-16 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:49.000000
+2008-11-11 17:05:55,009 INFO pool-1-thread-16 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:18 AVAIL:227
+2008-11-11 17:06:10,000 INFO pool-1-thread-19 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:22.000000
+2008-11-11 17:06:10,000 INFO pool-1-thread-19 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:13 AVAIL:231
+2008-11-11 17:06:19,517 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [0] Pool[0]ResourceAgent-2-  SHRINK coreSize[5] active[0]
+2008-11-11 17:06:19,665 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [1] Pool[1]Response-5-  SHRINK coreSize[3] active[0]
+2008-11-11 17:06:25,012 INFO pool-1-thread-13 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:22.000000
+2008-11-11 17:06:25,023 INFO pool-1-thread-13 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:17 AVAIL:227
+2008-11-11 17:06:27,400 INFO dynPoolTMon-sched-1-1 (DynamicThreadPool.java:97)	 - DYN_TPOOL [2] Pool[2]DLogReplayHandler-7-  SHRINK coreSize[3] active[0]
+2008-11-11 17:06:40,002 INFO pool-1-thread-14 (Resource.java:170)	 - AGENT mobius.local-12005 CPU:44.000000
+2008-11-11 17:06:40,003 INFO pool-1-thread-14 (Resource.java:171)	 - AGENT mobius.local-12005-0 MEM MB MAX:245 COMMITED:34 USED:12 AVAIL:232

@@ -1,0 +1,35 @@
+<project default="dist" name="vso" basedir=".">
+	
+	<property name="artifact" value="vso"/>
+	<property name="dep3" value="common"/>
+	<property name="dep4" value="transport"/>
+	<property name="dep1" value="vspace"/>
+	<property name="dep2" value="vs-orm"/>
+	<property name="dep5" value="boot"/>
+	<property name="dir" value="."/>
+		
+	
+	<import file="../lib/build-common.xml"/>
+	
+	<path id="compile.classpath">
+		<path refid="default.classpath"/>
+		<fileset dir="../${dep1}/dist" includes="*.jar"/>
+		<fileset dir="../${dep2}/dist" includes="*.jar"/>
+		<fileset dir="../${dep3}/dist" includes="*.jar"/>
+		<fileset dir="../${dep4}/dist" includes="*.jar"/>
+		<fileset dir="../${dep5}/dist" includes="*.jar"/>
+	</path>
+	
+	<target name="install" depends="dist"/>
+	
+	<target name="dist" depends="init, compile, compile.tests">
+		<jar destfile="${dist}/${artifact}.jar" compress="true">
+			<fileset dir="${classes}" includes="**/*" />
+		</jar>
+		<jar destfile="${dist}/test-${artifact}.jar" compress="true">
+			<fileset dir="${test.classes}" includes="**/*" />
+		</jar>
+	</target>
+
+</project>
+

@@ -1,0 +1,49 @@
+<Bundle name="dashboard" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <workingDirectory>.</workingDirectory>
+  <services>
+	<Service>
+			<name>Dashboard</name>
+			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<priority>10</priority>
+			<fork>true</fork>
+			<instanceCount>-1</instanceCount>
+			<background>true</background>
+			<pauseSeconds>3</pauseSeconds>
+			<dependencies></dependencies>
+			<script>
+				<![CDATA[
+
+    	System.out.println("*****************************************************************************")
+    	System.out.println("**************************   Starting Dashboard **************************")
+    	System.out.println("**************************                      ************************** ")
+
+		int port = new NetworkUtils().determinePort(Integer.getInteger("web.app.port", 8080));
+		String proxied = System.getProperty("proxy.tailers", "true")
+    	System.out.println("***    http://" + hostname + ":" + port + " **********")
+    	System.out.println("*****************************************************************************")
+
+		System.setProperty("upload.base.dir", "downloads")
+		String dashboardHeap="-Xmx" + System.getProperty("dashboard.heap", "256M")
+		String dashboardOffHeap="-XX:MaxDirectMemorySize=" + System.getProperty("dashboard.off.heap", "128M")
+
+		if (Boolean.getBoolean("dashboard.debug")) {
+			processMaker.java "-cp:.:system-bundles/dashboard-1.0:.:system-bundles/dashboard-1.0/lib/*:lib/*", "-XX:CompileCommand=exclude,jregex/Pretokenizer,next",  "com.liquidlabs.dashboard.server.JettyMain", "-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId,  "-Dlookup.url=" + lookupSpaceAddress, dashboardHeap, dashboardOffHeap, new Integer(port).toString(), "downloads/root.war", proxied, "-Dlog4j.configuration=../../system-bundles/dashboard-1.0/log4j.properties", "-XX:+HeapDumpOnOutOfMemoryError","-XX:MaxPermSize=256m", "-Dversion.id=@versionId@", "-Xdebug","-Xrunjdwp:transport=dt_socket,address=8998,server=y,suspend=n"
+		} else if (Boolean.getBoolean("dashboard.jmx")) {
+	        processMaker.java  "-cp:.:system-bundles/dashboard-1.0:.:system-bundles/dashboard-1.0/lib/*:lib/*", "-XX:CompileCommand=exclude,jregex/Pretokenizer,next",  "com.liquidlabs.dashboard.server.JettyMain", "-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId,  "-Dlookup.url=" + lookupSpaceAddress, dashboardHeap, dashboardOffHeap, new Integer(port).toString(), "downloads/root.war", proxied, "-Dlog4j.configuration=../../system-bundles/dashboard-1.0/log4j.properties", "-XX:+HeapDumpOnOutOfMemoryError","-XX:MaxPermSize=256m", "-Dversion.id=@versionId@", "-Dcom.sun.management.jmxremote.port=8998","-Dcom.sun.management.jmxremote.ssl=false", "-Dcom.sun.management.jmxremote.authenticate=false"
+		} else {
+    	    processMaker.java "-cp:.:system-bundles/dashboard-1.0:.:system-bundles/dashboard-1.0/lib/*:lib/*", "-XX:CompileCommand=exclude,jregex/Pretokenizer,next",  "com.liquidlabs.dashboard.server.JettyMain", "-Dvs.agent.address=" + ResourceAgent, "-Dvs.agent.id=" + resourceId,  "-Dlookup.url=" + lookupSpaceAddress, dashboardHeap, dashboardOffHeap, new Integer(port).toString(), "downloads/root.war", proxied, "-Dlog4j.configuration=../../system-bundles/dashboard-1.0/log4j.properties", "-XX:+HeapDumpOnOutOfMemoryError","-XX:MaxPermSize=256m", "-Dbuild.id=@buildId@-@timestamp@","-Dversion.id=@versionId@"
+        }
+
+	]]>
+			</script>
+		</Service>
+  </services>
+</Bundle>

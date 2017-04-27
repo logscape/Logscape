@@ -1,0 +1,168 @@
+.tab-pane#tabs-ds
+    .row-fluid
+        .titleBlock
+            span.configTitle.headerColor#datasourcesTitle Data Source
+            .alert.alert-info.gettingStarted
+                a#datasourcesGettingStarted(href="http://logscape.github.io/ds.html" target="_blank") Getting Started
+                a.fa.fa-question-circle.fa-lg.btn-link.play-icon(href="http://logscape.com/redir/config.htm" target="_blank")
+    br
+    .control-group.u.borderColor(style="width:40%")
+        span.lead#datasourcesTag
+            ! Tag:
+        span.lead.dsTag(type="text"  title="Enter tags which can be used to reference this source, i.e. 'app1, dev, dc1'")
+
+    .tabbable
+        ul.nav.nav-tabs.borderColor
+            li.active
+                a.borderColor.navColor.textColor#datasourcesGeneral(href="#tab-general" data-toggle="tab") General
+            li
+                a.borderColor.navColor.textColor#datasourcesAdvanced(href="#tab-advanced" data-toggle="tab")	Advanced
+            li
+                a.borderColor.navColor.textColor#datasourcesTimeExtractionTester(href="#time-extraction-tester" data-toggle="tab")    Time Extraction Tester
+        .tab-content
+            .tab-pane.active#tab-general
+                span#basicDsMessages
+                form.span8#basicDataSource.form-horizontal
+                    = render("/layouts/basic_ds_form.jade")
+
+            .tab-pane#tab-advanced
+                .span10
+                    .span4.alert#datasourcesEnableRoll(title="When a file is rolled, try and automatically where it rolled to")
+                    ! &nbsp;
+                    input#rollEnabled(type="checkbox" )
+                    /
+                        select
+                            option#1    YES
+                            option#2    NO
+                .span10(style='margin-left:0px')
+                    .span4.alert#datasourcesFieldDiscovery
+                        a(href='http://logscape.com/redir/ds-fieldDiscovery.htm' target="_blank" title="Automatic pattern-based discovery of KeyValue pairs, i.e. CPU:99 (save will automatically drive re-indexing)")
+                    ! &nbsp;
+                    input#discoveryEnabled(type="checkbox" )
+                    /
+                        select
+                            option#1    YES
+                            option#2    NO
+
+                .span10(style='margin-left:0px')
+                    .span4.alert#datasourcesGrokitDiscovery
+                        a(href='http://logscape.com/redir/ds-fieldDiscovery.htm' target="_blank" title="Automatic pattern-based discovery using the downloads/grokit.properties file, i.e. email, url, etc (save will automatically drive re-indexing)")
+                    ! &nbsp;
+                    input#grokItEnabled(type="checkbox" )
+                    /
+                        select
+                            option#1    YES
+                            option#2    NO
+
+                .span10(style='margin-left:0px')
+                    .span4.alert#datasourcesSystemTime
+                        a(href='http://logscape.com/redir/ds-systemFields.htm' target="_blank" title="Automatically add 'DayOfWeek, Date, Hour, Minute fields for time based analysis (save will automatically drive re-indexing)")
+                    ! &nbsp;
+                    input#systemFieldsEnabled(type="checkbox" )
+                    /
+                        select
+                            option#1    YES
+                            option#2    NO
+
+                .span10(style='margin-left:0px')
+                    .span4.alert.alert-success#datasourcesLineBreaking(title="Provides a timestamp based method for detecting multi-line events -Automatically applied when left at Default")
+                    ! &nbsp;
+
+                    select#breakRuleSelector(title="Provides a timestamp based method for detecting multi-line events -Automatically applied when left at Default, Explicit is used to break on lines starting with characters, i.e. Explicit:### i.e. Explicit:<")
+                        option#brDefault(value='Default') Default
+                        option#brSingleLine(value='SingleLine') SingleLine
+                        option#brYear(value='Year') Year
+                        option#brMonth(value='Month') Month
+                        option#brMonthNumeric(value='MonthNumeric') MonthNumeric
+                        option#brDayNumeric(value='DayNumeric') DayNumeric
+                        option#brExplicit(value='Explicit:') Explicit
+                    input#breakRule(type="text" disabled title="Explicit parameter used to specify the char sequence to handle multiple line events and break against. i.e. collect lines until ### i.e. Explicit:<2 OR Explicit:###")
+                    br
+                .span10(style='margin-left:0px')
+                    .span4.alert.alert-success#datasourcesTimeFormatDetection(title="In some cases timeformat discovery doesnt work. Use the TimeExtraction Tester to determining the format and enter the explicit format here.") Override TimeFormat Detection?
+                    ! &nbsp;
+                    input.dsTime(type="text" placeHolder="yyyy-MM-dd HH:mm:ss,SSS" title="In some cases timeformat discovery doesnt work. Use the TimeExtraction Tester to determining the format and enter the explicit format here: yyyy-MM-dd HH:mm:ss,SSS")
+            .tab-pane#time-extraction-tester
+                .span10(style='margin-left:0px')
+                    .span3.alert.alert-success#datasourcesInputLine
+                    ! &nbsp;
+                    input.span8#testTimeInputSample(type="text" placeHolder="Sample Text Data" title="Sample test to extract")
+                .span10(style='margin-left:0px')
+                    .span3.alert.alert-success#datasourcesDateTimeFormat
+                    ! &nbsp;
+                    input.span7#testTimeFormat(type="text" placeHolder="yyyy-MM-dd HH:mm:ss,SSS" title="yyyy-MM-dd HH:mm:ss,SSS")
+                    button.btn.btn-primary.fa.fa-folder-o#testTimeSubmit#usersTest( title='Execute Test')  &nbsp; Test
+                    a(href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html" target="_blank") Valid Time Formats
+                .span10(style='margin-left:0px')
+                    .span3.alert.alert-success#datasourceTestResults
+                    ! &nbsp;
+                    textArea.span9#testTimeResults(rows=10 title="Results")
+
+
+    button.btn.btn-primary.fa.fa-check.addDataSource#datasourcesSave(type="submit")
+    button.btn.btn-success.fa.fa-search#searchThisSource#datasourcesSearchSource
+    button.btn.btn-primary.fa.fa-folder-o#newDS#datasourcesNew(title='Create new DataSource')
+    button.btn.btn-primary.fa.fa-copy#cloneDS#datasourcesClone(title='Copy the selected DataSource')  &nbsp; Clone
+    br
+    br
+    span.lead.text-left#datasourcesActive
+
+    .span4.alert#indexingDS(style='display:none;float:right;padding:2px;margin-top:0px;margin-bottom:2px;margin-right:10px;')
+        .fa.fa-repeat.fa-spin
+        ! ReIndexing.....
+    table.table.table-hover.table-condensed.table-bordered.coloredBorder.coloredTable#dsTable
+        thead
+            tr
+                th 	Id
+                th#datasourcesTagg
+                th#datasourcesHosts
+                th#datasourcesDirectoryy
+                th#datasourcesFile
+                th#datasourcesVolume
+                th#datasourcesAction
+    .modal.hide.fade#browseDataSource(style="display:none")
+        .modal-body.span12
+            .span11
+            .span11
+                label.span2.coloredText Host:
+                input.span9.coloredText.coloredInputBG#hostSelector(type="text")
+            .span11
+                label Dir:
+                .css-treeview.span12(style='height:220px;width:480px;overflow:auto;')
+                    ul
+                        li
+                        /
+                            input(type="checkbox" id="item-0")
+                            label.loadDir(for="item-0") /
+                            ul
+                                li
+                                    input(type="checkbox" id="item-0-0")
+                                    label.loadDir(for="item-0-0") Volumes
+                                    ul
+                                        li
+                                            input(type="checkbox" id="item-0-0-0")
+                                            label.loadDir(for="item-0-0-0") Media
+                                            ul
+                                                li
+                                                    a(href="./") file.log
+                                                li
+                                                    a(href="./") file2.log
+                                        li
+                                            a(href="./") another.log
+                                        li
+                                            a(href="./") stuff.log
+                                        li
+                                            a(href="./") thing.log
+            .span11
+                label.span2.coloredText Path:
+                input.span9.coloredText.coloredInputBG#dirPath(type='text')
+
+        .modal-footer
+            a.btn#ok(href='#') Okay
+            a.btn#close(href='#') Cancel
+        ul#DIR_PROTO(style='display:none')
+            li
+                input(type="checkbox" id="item-0-0-0" checked="checked")
+                label.loadDir(for="item-0-0-0") Media
+
+

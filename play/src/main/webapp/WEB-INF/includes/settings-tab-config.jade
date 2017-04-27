@@ -1,0 +1,36 @@
+.tab-pane#tabs-config
+    .titleBlock
+        span.configTitle.headerColor#backupTitle(style="display:inline-block;font-size: 31.5px;") Manage Configuration (Import/Export)
+        .alert.alert-info.gettingStarted
+            a#backupGettingStarted(href="http://logscape.github.io/deploy-backup.html" target="_blank") Getting Started
+            a.fa.fa-question-circle.fa-lg.btn-link.play-icon(href="http://logscape.com/redir/config.htm" target="_blank")
+
+    br
+    .alert#backupBlurb This page allows you to capture or restore configuration using an external file. Merge will import all data where there are no name clashes, Overwrite will overwrite all local data with the contens of the imported config.
+    .row-fluid.cell-padded.rounded-medium.spacing-wide.span11.coloredBorder.coloredText.popoutColor
+        .span1
+            span.lead.text-left#backupImport Import
+
+        .span4
+            span#backupMerge Merge
+            input#merge(type="file" )
+        .span4
+            span#backupOverwrite Overwrite
+            input#overwrite(type="file" )
+        .span11
+            #progress_report
+                #progress_report_name
+                #progress_report_status(style="font-style: italic;")
+                #progress_report_bar_container(style="width: 90%; height: 5px;")
+                    #progress_report_bar(style="background-color: blue; width: 0; height: 100%;")
+
+    .row-fluid.cell-padded.rounded-medium.spacing-wide.span11.coloredBorder.coloredText.popoutColor
+        .span1
+            span.lead.text-left#backupExport Export
+        .span8
+            button.btn.span3.button#backupDownload(href='#') Download
+            span#agentsFilter
+                | &nbsp; Filter:
+            input.coloredInputBG.coloredBorder.coloredText#filter(type="text" placeHolder="Workspace:Unix" title="Enter sets of KEY:VALUE where KEY is the Type of config and VALUE represents a substring match. i.e. DataSource:* DataSource:log4j DataType:log4j Workspace:Windows Search:Windows Alert:EOD")
+
+

@@ -1,0 +1,30 @@
+<Bundle name="simpleApp1" version="0.01">
+  <status>UNINSTALLED</status>
+  <services>
+    <Service>
+      <bundleServiceName>simpleApp1:ORM</bundleServiceName>
+      <bundleName>simpleApp1</bundleName>
+      <name>ORM</name>
+      <lookupVariable>ORM:udp://${resourceAddress}/space/client</lookupVariable>
+      <resourceSelection>mflops &gt; 99</resourceSelection>
+      <script>
+def command = """java -jar vs-orm-exe.jar -partition:simpleApp1"""
+def proc = command.execute()                 // Call *execute* on the string
+proc.waitFor()                               // Wait for the command to finish
+		</script>
+      <instanceCount>1</instanceCount>
+    </Service>
+    <Service>
+      <bundleServiceName>simpleApp1:worker</bundleServiceName>
+      <bundleName>simpleApp1</bundleName>
+      <name>worker</name>
+      <resourceSelection>mflops &gt; 99</resourceSelection>
+	  <script>
+def command = """java -jar vs-flow-worker-exe.jar -partition:simpleApp1 -orm:udp://${ORM}/space/client """
+def proc = command.execute()
+proc.waitFor()
+	  </script>
+      <instanceCount>2</instanceCount>
+    </Service>
+  </services>
+</Bundle>

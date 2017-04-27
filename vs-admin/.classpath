@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vso"/>
+	<classpathentry kind="lib" path="lib/apacheds-bootstrap-extract-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-bootstrap-partition-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-core-1.5.5.jar" sourcepath="D:/dev/apacheds-sources-1.5.5/apacheds_1.5.5/core/src/main/java"/>
+	<classpathentry kind="lib" path="lib/apacheds-core-avl-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-core-constants-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-core-entry-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-core-jndi-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-core-shared-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-jdbm-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-jdbm-store-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-noarch-installer-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-protocol-changepw-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-protocol-dns-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-protocol-ldap-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-protocol-ntp-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-protocol-shared-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-schema-bootstrap-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-schema-extras-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-schema-registries-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-server-jndi-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-utils-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/bootstrapper.jar"/>
+	<classpathentry kind="lib" path="lib/mina-core-2.0.0-M6.jar"/>
+	<classpathentry kind="lib" path="lib/wrapper.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl-2.9.1.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-tools.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-xdbm-base-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-xdbm-search-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/apacheds-xdbm-tools-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk15-140.jar"/>
+	<classpathentry kind="lib" path="lib/shared-ldap-0.9.15.jar"/>
+	<classpathentry kind="lib" path="lib/shared-ldap-constants-0.9.15.jar"/>
+	<classpathentry kind="lib" path="lib/shared-cursor-0.9.15.jar"/>
+	<classpathentry kind="lib" path="lib/shared-asn1-0.9.15.jar"/>
+	<classpathentry kind="lib" path="lib/shared-asn1-codec-0.9.15.jar"/>
+	<classpathentry kind="lib" path="lib/jcl-over-slf4j-1.6.4.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.6.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,11 @@
+vmargs=-Xms256M -Xmx1024M -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -Xrs -XX:+AggressiveOpts -XX:+UseFastAccessorMethods -Xmx128M -XX:CompileThreshold=2 
+#vmargs=-Xms256M -Xmx1024M -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -Xrs 
+
+
+sysprops=-DLOGSCAPE -Dvso.base.port=11000 -Dvso.boot.lookup.replication.port=15000 -Dvso.lookup.peers=stcp://localhost:15000,stcp://localhost:25000 -Dvso.resource.type=Whatever -Dlog4j.configuration=./agent-log4j.properties -Dweb.app.port=8080 -Dfile.encoding=ISO-8859-1 -Dvso.zone=LOGSCAPE1
+
+mainclass=com.liquidlabs.vso.VSOMain
+sys-bundles=system-bundles
+deploy=test-data/downloads
+pre-cp=foo.jar
+post-cp=blah.jar

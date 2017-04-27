@@ -1,0 +1,48 @@
+** Alert 1300400980.1556779: - windows,
+2011 Mar 17 18:29:40 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18149 (level 3) -> 'Windows User Logoff.'
+Src IP: (none)
+User: rdaw
+WinEvtLog: Security: AUDIT_SUCCESS(4634): Microsoft-Windows-Security-Auditing: rdaw: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was logged off. Subject:  Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1131  Account$
+
+** Alert 1300400980.1557486: - windows,authentication_success,
+2011 Mar 17 18:29:40 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18107 (level 3) -> 'Windows Logon Success.'
+Src IP: (none)
+User: tnianios
+WinEvtLog: Security: AUDIT_SUCCESS(4624): Microsoft-Windows-Security-Auditing: tnianios: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was successfully logged on. Subject:  Security ID:  S-1-0-0  Account Name:  -  Account Doma$
+
+** Alert 1300400980.1558608: - windows,
+2011 Mar 17 18:29:40 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18149 (level 3) -> 'Windows User Logoff.'
+Src IP: (none)
+User: tnianios
+WinEvtLog: Security: AUDIT_SUCCESS(4634): Microsoft-Windows-Security-Auditing: tnianios: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was logged off. Subject:  Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1126  Acc$
+
+** Alert 1300401167.1559327: - windows,authentication_success,
+2011 Mar 17 18:32:47 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18107 (level 3) -> 'Windows Logon Success.'
+Src IP: (none)
+User: rdaw
+WinEvtLog: Security: AUDIT_SUCCESS(4624): Microsoft-Windows-Security-Auditing: rdaw: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was successfully logged on. Subject:  Security ID:  S-1-0-0  Account Name:  -  Account Domain: $
+
+** Alert 1300401179.1560438: - windows,
+2011 Mar 17 18:32:59 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18149 (level 3) -> 'Windows User Logoff.'
+Src IP: (none)
+User: rdaw
+WinEvtLog: Security: AUDIT_SUCCESS(4634): Microsoft-Windows-Security-Auditing: rdaw: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was logged off. Subject:  Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1131  Account$
+
+** Alert 1300401197.1561145: - syslog,sshd,authentication_success,
+2011 Mar 17 18:33:17 CLONWLLOGC1->/var/log/auth.log
+Rule: 5715 (level 3) -> 'SSHD authentication success.'
+Src IP: 192.168.1.2
+User: root
+Mar 17 18:33:16 CLONWLLOGC1 sshd[27127]: Accepted password for root from 192.168.1.2 port 65197 ssh2
+
+** Alert 1300401197.1561452: - pam,syslog,authentication_success,
+2011 Mar 17 18:33:17 CLONWLLOGC1->/var/log/auth.log
+Rule: 5501 (level 3) -> 'Login session opened.'
+Src IP: (none)
+User: (none)
+Mar 17 18:33:16 CLONWLLOGC1 sshd[27127]: pam_unix(sshd:session): session opened for user root by (uid=0)

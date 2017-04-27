@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sla consumerClass="com.liquidlabs.flow.sla.FlowConsumer">
+	<variable name="GridName" value="@app.name@@cg.name@" />
+	<variable name="MasterPort" value="@cg.port@" />
+
+	<!-- OVERRIDE for a time period-->
+	<timePeriod start="08:30" end="09:30" isOneOff="true">
+		<rule maxResources="650" priority="8">
+			<evaluator>
+				<![CDATA[
+
+					if (eodPercentComplete < 51 && currentTime > getTime("01:00")) {
+						logger.warn("RAISE_ALERT - Current EODWorkLoad is behind, completed:" + eodPercentComplete + " and is behind schedule");
+					}
+					log.info("@app.name@@cg.name@ - ADD OVERRIDE SLA ***** engineCount " + engineCount + " q:"+ queueLength + " idle:" + idleEngines + " busy:" + busyEngines)
+				
+					if (engineCount < 9)	return new Add("mflops > 10", 20);
+					]]>
+			</evaluator>
+		</rule>
+	</timePeriod>
+	<!-- OVERRIDE for a time period-->
+	<timePeriod start="18:00" end="21:30">
+		<rule maxResources="300" priority="11">
+			<evaluator>
+				<![CDATA[
+					log.info("@app.name@@cg.name@ - ADD OVERRIDE SLA ***** engineCount " + engineCount + " q:"+ queueLength + " idle:" + idleEngines + " busy:" + busyEngines)
+				
+					if (engineCount < 9)	return new Add("mflops > 10", 20);
+					]]>
+			</evaluator>
+		</rule>
+	</timePeriod>
+	
+	<timePeriod start="00:00" end="23:40">
+		<rule maxResources="5" priority="9">
+			<evaluator>
+				<![CDATA[
+					log.info("@app.name@@cg.name@ - <5 ***** engineCount " + engineCount + " q:"+ queueLength + " idle:" + idleEngines + " busy:" + busyEngines)
+				
+					if (queueLength > 10 || engineCount < 5)
+						return new Add("mflops > 10", 2);
+					if (queueLength == 0 && idleEngines > 10)
+						return new Remove("mflops > 10", 1) 
+					]]>
+			</evaluator>
+		</rule>
+		<rule maxResources="100" priority="8">
+			<evaluator>
+					<![CDATA[
+					log.info("@app.name@@cg.name@ - <10 ***** engineCount " + engineCount + " q:"+ queueLength + " idle:" + idleEngines + " busy:" + busyEngines)
+					if (queueLength > 15)
+						return new Add("mflops > 10", 10)
+					else  if (queueLength < 5 && idleEngines > 8)
+						return new Remove("mflops > 10", 6) 
+					]]>
+			</evaluator>
+		</rule>
+		<rule maxResources="500" priority="7">
+				<evaluator>
+				<![CDATA[
+					log.info("@app.name@@cg.name@ - <999 ***** engineCount " + engineCount + " q:"+ queueLength + " idle:" + idleEngines + " busy:" + busyEngines)
+					if (queueLength > 600)
+						return new Add("mflops > 10", 20)
+					if (queueLength > 500)
+						return new Add("mflops > 10", 10)
+					if (queueLength > 400)
+						return new Add("mflops > 10", 5)
+					if (queueLength > 100)
+						return new Add("mflops > 10", 3)
+
+					if (queueLength < 100 && idleEngines > 3)
+						return new Remove("mflops > 10", 3) 
+					if (queueLength < 1000 && idleEngines > 5)
+						return new Remove("mflops > 10", 5) 
+					if (queueLength < 1000 && idleEngines > 10)
+						return new Remove("mflops > 10", 5) 
+
+					if (queueLength < 1000 && idleEngines > 20 && busyEngines == 0)
+						return new Remove("mflops > 10", (int)(idleEngines - 12)) 
+				]]>
+			</evaluator>
+		</rule>
+	</timePeriod>
+	<timePeriod maxResources="50" start="23:40" end="23:59" priority="10">
+		<rule>
+			<evaluator>
+					<![CDATA[
+			log.info("@app.name@@cg.name@ ***** engineCount " + engineCount)
+			if (queueLength > 3 || engineCount < 3)
+					return new Add("mflops > 50", 1)
+				else  if (queueLength == 0 && idleEngines > 4)
+					return new Remove("mflops > 10", 1)
+			    ]]>
+			</evaluator>
+		</rule>
+	</timePeriod>
+</sla>

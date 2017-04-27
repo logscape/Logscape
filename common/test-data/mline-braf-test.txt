@@ -1,0 +1,83 @@
+2016-10-13 23:22:19,202 WARN tailer-lease-29-4 (dw.DWLineStore) LINE 1 Transaction Failed - Exception occured in worker:com.liquidlabs.log.dw.ArchiveOldFilesTxn@b79515
+java.lang.RuntimeException: Failed to construct BucketedData
+ at com.liquidlabs.log.dw.BucketedDataLinesProxy.convertProxy(BucketedDataLinesProxy.java:61)
+ at com.liquidlabs.log.dw.BucketedDataLinesProxy.convertProxy(BucketedDataLinesProxy.java:12)
+ at com.sleepycat.persist.impl.ProxiedFormat.newInstance(ProxiedFormat.java:95)
+ at com.sleepycat.persist.impl.RecordInput.readObject(RecordInput.java:175)
+ at com.sleepycat.persist.impl.ReflectionAccessor$ObjectAccess.read(ReflectionAccessor.java:407)
+ at com.sleepycat.persist.impl.ReflectionAccessor.readNonKeyFields(ReflectionAccessor.java:286)
+ at com.sleepycat.persist.impl.ComplexFormat.readObject(ComplexFormat.java:521)
+ 10- at com.sleepycat.persist.impl.PersistEntityBinding.readEntity(PersistEntityBinding.java:95)
+ at com.sleepycat.persist.impl.PersistEntityBinding.entryToObjectInternal(PersistEntityBinding.java:65)
+ at com.sleepycat.persist.impl.PersistEntityBinding.entryToObject(PersistEntityBinding.java:52)
+ at com.sleepycat.persist.PrimaryIndex.get(PrimaryIndex.java:592)
+ at com.sleepycat.persist.PrimaryIndex.get(PrimaryIndex.java:579)
+ at com.liquidlabs.log.dw.ArchiveOldFilesTxn.doWork(ArchiveOldFilesTxn.java:30)
+ at com.sleepycat.collections.TransactionRunner.run(TransactionRunner.java:268)
+ at com.liquidlabs.log.dw.DWLineStoreImpl.runTxn(DWLineStoreImpl.java:205)
+ at com.liquidlabs.log.dw.DWLineStoreImpl.archiveOldFiles(DWLineStoreImpl.java:106)
+ at com.liquidlabs.log.dw.DWLineStoreImpl$1.run(DWLineStoreImpl.java:52)
+ 20-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+ at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:317)
+ at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:150)
+ at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$101(ScheduledThreadPoolExecutor.java:98)
+ at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.runPeriodic(ScheduledThreadPoolExecutor.java:181)
+ at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:205)
+ at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+ at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+ at java.lang.Thread.run(Thread.java:619)
+Caused by: java.io.IOException
+ 30- at org.jboss.serial.persister.RegularObjectPersister.readSlotWithMethod(RegularObjectPersister.java:107)
+ at org.jboss.serial.persister.RegularObjectPersister.defaultRead(RegularObjectPersister.java:269)
+ at org.jboss.serial.persister.RegularObjectPersister.readData(RegularObjectPersister.java:241)
+ at org.jboss.serial.objectmetamodel.ObjectDescriptorFactory.readObjectDescriptionFromStreaming(ObjectDescriptorFactory.java:412)
+ at org.jboss.serial.objectmetamodel.ObjectDescriptorFactory.objectFromDescription(ObjectDescriptorFactory.java:82)
+ at org.jboss.serial.objectmetamodel.DataContainer$DataContainerDirectInput.readObject(DataContainer.java:643)
+ at com.liquidlabs.log.dw.BucketDataLines.readExternal(BucketDataLines.java:80)
+ at org.jboss.serial.persister.ExternalizePersister.readData(ExternalizePersister.java:72)
+ at org.jboss.serial.objectmetamodel.ObjectDescriptorFactory.readObjectDescriptionFromStreaming(ObjectDescriptorFactory.java:412)
+ at org.jboss.serial.objectmetamodel.ObjectDescriptorFactory.objectFromDescription(ObjectDescriptorFactory.java:82)
+ 40- at org.jboss.serial.objectmetamodel.DataContainer$DataContainerDirectInput.readObject(DataContainer.java:643)
+ at org.jboss.serial.io.JBossObjectInputStream.readObjectOverride(JBossObjectInputStream.java:163)
+ at java.io.ObjectInputStream.readObject(ObjectInputStream.java:345)
+ at com.liquidlabs.transport.serialization.Convertor.deserialize(Convertor.java:538)
+ at com.liquidlabs.transport.serialization.Convertor.deserializeAndDecompressLZ(Convertor.java:575)
+ at com.liquidlabs.log.dw.BucketedDataLinesProxy.decompress(BucketedDataLinesProxy.java:87)
+ at com.liquidlabs.log.dw.BucketedDataLinesProxy.convertProxy(BucketedDataLinesProxy.java:42)
+ ... 25 more
+Caused by: java.lang.reflect.InvocationTargetException
+ at sun.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+ 50- at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+ at java.lang.reflect.Method.invoke(Method.java:597)
+ at org.jboss.serial.persister.RegularObjectPersister.readSlotWithMethod(RegularObjectPersister.java:103)
+ ... 41 more
+Caused by: java.lang.NegativeArraySizeException
+ at com.liquidlabs.log.dw.Line.readExternal(Line.java:36)
+ at org.jboss.serial.persister.ExternalizePersister.readData(ExternalizePersister.java:72)
+ at org.jboss.serial.objectmetamodel.ObjectDescriptorFactory.readObjectDescriptionFromStreaming(ObjectDescriptorFactory.java:412)
+ at org.jboss.serial.objectmetamodel.ObjectDescriptorFactory.objectFromDescription(ObjectDescriptorFactory.java:82)
+ at org.jboss.serial.objectmetamodel.DataContainer$DataContainerDirectInput.readObject(DataContainer.java:643)
+ 60- at org.jboss.serial.persister.ObjectInputStreamProxy.readObjectOverride(ObjectInputStreamProxy.java:68)
+ at java.io.ObjectInputStream.readObject(ObjectInputStream.java:345)
+ at java.util.ArrayList.readObject(ArrayList.java:593)
+ ... 45 more
+2016-10-13 23:22:19,202 INFO tailer-lease-29-4 (dw.DWLineStore) LINE-2 ArchiveOLDFiles:0
+2016-10-13 23:22:19,452 INFO New_I/O_server_worker_#1-3 (proxy.ProxyClient) LINE-3 SyncEndpoints id:LogSpace address:stcp://11.163.62.42:11031?serviceName=LogSpace&host=LONMS02003/_startTime=13-Oct-10_17-22-11&udp=0
+2016-10-13 23:22:19,467 INFO New_I/O_server_worker_#1-3 (proxy.ProxyClient) LINE-4 SyncEndpoints id:WorkAllocator address:stcp://11.163.62.42:11005?serviceName=WorkAllocator&host=LONMS02003/_startTime=13-Oct-10_17-21-48&udp=0
+2016-10-13 23:22:19,639 INFO New_I/O_server_worker_#1-3 (proxy.ProxyClient) LINE-5 SyncEndpoints id:DeploymentService address:stcp://11.163.62.42:11009?serviceName=DeploymentService&host=LONMS02003/_startTime=13-Oct-10_17-21-53&udp=0
+2016-10-13 23:22:19,686 INFO New_I/O_server_worker_#1-3 (proxy.ProxyClient) LINE-6 SyncEndpoints id:AggSpace address:stcp://11.163.62.42:11039?serviceName=AggSpace&host=LONMS02003/_startTime=13-Oct-10_17-22-30&udp=0,stcp://11.163.62.42:11040?serviceName=AggSpace&host=LONMS02003/_startTime=13-Oct-10_17-23-30&udp=0
+2016-10-13 23:22:19,717 INFO New_I/O_server_worker_#1-3 (proxy.ProxyClient) LINE-7 SyncEndpoints id:ReplicationService address:stcp://11.163.62.42:11060?serviceName=ReplicationService&host=LONMS02003/_startTime=13-Oct-10_17-22-00&udp=0
+2016-10-13 23:22:19,780 INFO New_I/O_server_worker_#1-3 (proxy.ProxyClient) LINE-8 SyncEndpoints id:ResourceSpace address:stcp://11.163.62.42:11001?serviceName=ResourceSpace&host=LONMS02003/_startTime=13-Oct-10_17-21-45&udp=0
+2016-10-13 23:22:19,780 DEBUG [pool-2-thread-2] LINE-9 GDSEventService          - Processing event: <gds-event>
+  <seq-num>3813614</seq-num>
+  <type>TRADE</type>
+  <source>ab_tran</source>
+  <tran-num>1917536103</tran-num>
+  <ins-num>1366684703</ins-num>
+  <timestamp>20090311183518403</timestamp>
+  <action>UPDATE</action>
+</gds-event>
+2016-10-13 23:23:01,104 INFO agent-sched-12-1 (agent.ResourceAgent) LINE-10 AGENT LONMS02897-11050 CPU:0 DiskFree:38512 SwapFree:4095
+2016-10-13 23:23:01,104 INFO agent-sched-12-1 (agent.ResourceAgent) LINE-11 AGENT LONMS02897-11050-0 MEM MB MAX:498 COMMITED:89 USED:73 AVAIL:425 SysMemFree:2047 TimeDelta:225
+2016-10-13 23:23:16,919 INFO tailer-lease-29-1 (log.LogStatsRecorderUpdater) LINE-12 LogStats: agentId:LONMS02897-11050-0 host:LONMS02897 indexedFileCount:34 currentLiveFiles:21 dataIndexedMB:103 dataIndexedTodayMB:103 dataIndexedYesterdayMB:0
+2016-10-13 23:24:01,069 INFO agent-sched-12-1 (agent.ResourceAgent) LINE-13 AGENT LONMS02897-11050 CPU:0 DiskFree:38512 SwapFree:4095 LAST LINE

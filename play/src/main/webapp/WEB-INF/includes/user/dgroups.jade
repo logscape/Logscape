@@ -1,0 +1,51 @@
+.tab-pane#tab-user-dgroups
+    form#adminSysInfoForm.form-horizontal.span10
+        .control-group
+            label.control-label#usersDataGroup(for="inputTag") Data Group (Team)
+            .controls
+                input#name.widthNinety(type="text" placeHolder="devUsers")
+
+            label.control-label#usersChildren(for="inputFileMask") Children
+            .controls
+                input#children.widthNinety(type="text" placeHolder="group1,group2")
+
+            label.control-label#usersEnabled(for="inputFileMask") Enabled
+            .controls
+                input#enabled(type="checkbox")
+
+            .row
+
+            label.control-label#usersDatasources DataSources
+            .row
+
+
+
+            label.control-label#usersIncludes(for="inputDirectory") Includes
+            .controls
+                input#includes.widthNinety(type="text" placeHolder="tag:dev,tag:dev2")
+
+            label.control-label#usersExludes(for="inputFileMask") Excludes
+            .controls
+                input#excludes.widthNinety(type="text" placeHolder="tag:sys1")
+
+            label.control-label#usersHostFilter(for="resourceGroup" title="Either  1) hosts:star,UBU,server 2) Group - group:userHosts ") (Optional) HostFilter or ResourceGroup
+            .controls
+                input#resourceGroup.widthNinety(type="text" placeHolder="Either  1) hosts:star,UBU,server 2) Group - group:userHosts ")
+
+
+        .control-group
+            .controls
+                button.btn#teamSave Save
+                button.btn#teamNew New
+                button.btn#teamDelete Delete
+                button.btn#teamEvaluate(title="Evaluate parent child relationships") Evaluate
+    .row-fluid.span10
+        table.table.coloredTable.coloredBorder#dGroupTable
+            thead
+                tr
+                    th#usersDataGroup    Data Group
+                    th#usersChildren    Children
+                    th#usersEnabled    Enabled
+                    th#usersIncludes    Includes
+                    th#usersExcludes    Excludes
+                    th#usersResourceGroup    Resource Group

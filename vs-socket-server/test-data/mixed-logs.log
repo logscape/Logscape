@@ -1,0 +1,792 @@
+20110927170531.000000^M
+Category=12544^M
+CategoryString=Logon^M
+ComputerName=SEA2WNDC02.r-u-i.com^M
+EventCode=4624^M
+EventIdentifier=4624^M
+EventType=4^M
+Logfile=Security^M
+RecordNumber=689781685^M
+SourceName=Microsoft-Windows-Security-Auditing^M
+TimeGenerated=20110927210531.114699-000^M
+TimeWritten=20110927210531.114699-000^M
+Type=Audit Success^M
+User=NULL^M
+wmi_type=WinEventLog:Security^M
+Message=An account was successfully logged on.^M^M
+^M^M
+Subject:^M^M
+        Security ID:            S-1-0-0^M^M
+        Account Name:           -^M^M
+        Account Domain:         -^M^M
+        Logon ID:               0x0^M^M
+^M^M
+Logon Type:                     3^M^M
+^M^M
+New Logon:^M^M
+        Security ID:            S-1-5-21-182935634-564219513-359291519-11805^M^M
+        Account Name:           RU018AA$^M^M
+        Account Domain:         SEATTLE^M^M
+        Logon ID:               0xf3e1b239^M^M
+        Logon GUID:             {709FA770-C7DB-E7B9-9B19-9970DAC3D268}^M^M
+^M^M
+Process Information:^M^M
+        Process ID:             0x0^M^M
+        Process Name:           -^M^M
+^M^M
+Network Information:^M^M
+        Workstation Name:       ^M^M
+        Source Network Address: 10.1.18.51^M^M
+        Source Port:            1459^M^M
+^M^M
+Detailed Authentication Information:^M^M
+        Logon Process:          Kerberos^M^M
+        Authentication Package: Kerberos^M^M
+        Transited Services:     -^M^M
+        Package Name (NTLM only):       -^M^M
+        Key Length:             0^M^M
+^M^M
+This event is generated when a logon session is created. It is generated on the computer that was accessed.^M^M
+^M^M
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.^M^M
+^M^M
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.162/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.3.100/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.3.100/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+20110926235931.000000
+Category=12810
+CategoryString=Filtering Platform Connection
+ComputerName=sea2wnweb04.r-u-i.com
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=102105309
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=20110927035931.028867-000
+TimeWritten=20110927035931.028867-000
+Type=Audit Success
+User=NULL
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+
+
+Application Information:
+
+	Process ID:		1748
+
+	Application Name:	\device\harddiskvolume2\program files (x86)\microsoft sql server\mssql.1\mssql\binn\sqlservr.exe
+
+
+
+Network Information:
+
+	Direction:		Inbound
+
+	Source Address:		10.10.240.62
+
+	Source Port:		55472
+
+	Destination Address:	10.1.50.50
+
+	Destination Port:		4504
+
+	Protocol:		6
+
+
+
+Filter Information:
+
+	Filter Run-Time ID:	0
+
+	Layer Name:		Receive/Accept
+
+	Layer Run-Time ID:	44
+18-Feb-11 00:00:01 Feb 18 00:00:44 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302014: Teardown TCP connection 26402840 for public:192.168.3.116/60983 to DB:192.168.5.120/3306 duration 0:00:00 bytes 74 TCP FINs
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20282	Fri Feb 18 00:00:27 2011	4634	Microsoft-Windows-Security-Auditing	CLONWWADDC1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was logged off.    Subject:   Security ID:  S-1-5-18   Account Name:  CLONWWADDC1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc8f7b7    Logon Type:   3    This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.	20120 
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20283	Fri Feb 18 00:00:27 2011	4672	Microsoft-Windows-Security-Auditing	CLONWWADDC1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		Special privileges assigned to new logon.    Subject:   Security ID:  S-1-5-18   Account Name:  CLONWWADDC1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc8fea0    Privileges:  SeSecurityPrivilege     SeBackupPrivilege     SeRestorePrivilege     SeTakeOwnershipPrivilege     SeDebugPrivilege     SeSystemEnvironmentPrivilege     SeLoadDriverPrivilege     SeImpersonatePrivilege     SeEnableDelegationPrivilege	20121 
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20284	Fri Feb 18 00:00:27 2011	4624	Microsoft-Windows-Security-Auditing	CLONWWADDC1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was successfully logged on.    Subject:   Security ID:  S-1-0-0   Account Name:  -   Account Domain:  -   Logon ID:  0x0    Logon Type:   3    New Logon:   Security ID:  S-1-5-18   Account Name:  CLONWWADDC1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc8fea0   Logon GUID:  {B829350E-BE4B-C7C3-C816-B72D41E7D046}    Process Information:   Process ID:  0x0   Process Name:  -    Network Information:   Workstation Name:    Source Network Address: fe80::e0b3:f2c4:a963:2c09   Source Port:  53913    Detailed Authentication Information:   Logon Process:  Kerberos   Authentication Package: Kerberos   Transited Services: -   Package Name (NTLM only): -   Key Length:  0    This event is generated when a logon session is created. It is generated on the computer that was accessed.    The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.    The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).    The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.    The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.    The authentication information fields provide detailed information about this specific logon request.   - Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.   - Transited services indicate which intermediate services have participated in this logon request.   - Package name indicates which sub-protocol was used among the NTLM protocols.   - Key length indicates the length of the generated session key. This wil
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20285	Fri Feb 18 00:00:27 2011	4634	Microsoft-Windows-Security-Auditing	CLONWWADDC1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was logged off.    Subject:   Security ID:  S-1-5-18   Account Name:  CLONWWADDC1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc8fea0    Logon Type:   3    This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.	20123 
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20286	Fri Feb 18 00:00:27 2011	4672	Microsoft-Windows-Security-Auditing	CLONWWADDC1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		Special privileges assigned to new logon.    Subject:   Security ID:  S-1-5-18   Account Name:  CLONWWADDC1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc8ff11    Privileges:  SeSecurityPrivilege     SeBackupPrivilege     SeRestorePrivilege     SeTakeOwnershipPrivilege     SeDebugPrivilege     SeSystemEnvironmentPrivilege     SeLoadDriverPrivilege     SeImpersonatePrivilege     SeEnableDelegationPrivilege	20124 
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20287	Fri Feb 18 00:00:27 2011	4624	Microsoft-Windows-Security-Auditing	CLONWWADDC1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was successfully logged on.    Subject:   Security ID:  S-1-0-0   Account Name:  -   Account Domain:  -   Logon ID:  0x0    Logon Type:   3    New Logon:   Security ID:  S-1-5-18   Account Name:  CLONWWADDC1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc8ff11   Logon GUID:  {B829350E-BE4B-C7C3-C816-B72D41E7D046}    Process Information:   Process ID:  0x0   Process Name:  -    Network Information:   Workstation Name:    Source Network Address: fe80::e0b3:f2c4:a963:2c09   Source Port:  53914    Detailed Authentication Information:   Logon Process:  Kerberos   Authentication Package: Kerberos   Transited Services: -   Package Name (NTLM only): -   Key Length:  0    This event is generated when a logon session is created. It is generated on the computer that was accessed.    The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.    The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).    The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.    The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.    The authentication information fields provide detailed information about this specific logon request.   - Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.   - Transited services indicate which intermediate services have participated in this logon request.   - Package name indicates which sub-protocol was used among the NTLM protocols.   - Key length indicates the length of the generated session key. This wil
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20288	Fri Feb 18 00:00:27 2011	4634	Microsoft-Windows-Security-Auditing	CLONWWADDC1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was logged off.    Subject:   Security ID:  S-1-5-18   Account Name:  CLONWWADDC1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc8ff11    Logon Type:   3    This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.	20126 
+ Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/5940 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/5940 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.82/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.82/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+ Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.2.112/5944 gaddr 192.168.4.61/0 laddr 192.168.4.61/0
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.2.112/5944 gaddr 192.168.4.61/0 laddr 192.168.4.61/0
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.3/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.3/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-2-106006: Deny inbound UDP from 192.168.1.251/161 to 192.168.0.4/61093 on interface LAN
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.162/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.162/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.3.100/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.3.100/0 gaddr 192.168.2.112/5944 laddr 192.168.2.112/5944
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4112 to outside:67.110.177.172/17551
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302013: Built outbound TCP connection 26402852 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4112 (67.110.177.172/17551)
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4113 to outside:67.110.177.172/45261
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302013: Built outbound TCP connection 26402853 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4113 (67.110.177.172/45261)
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4082 to outside:67.110.177.172/4538 duration 0:00:30
+ Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4083 to outside:67.110.177.172/65181 duration 0:00:30
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4084 to outside:67.110.177.172/33078 duration 0:00:30
+18-Feb-11 00:00:01 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4114 to outside:67.110.177.172/20133
+18-Feb-11 00:00:02 Feb 18 00:00:45 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302013: Built outbound TCP connection 26402854 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4114 (67.110.177.172/20133)
+18-Feb-11 00:00:02 Feb 18 00:00:46 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4085 to outside:67.110.177.172/38158 duration 0:00:30
+ Feb 18 00:00:46 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4086 to outside:67.110.177.172/10602 duration 0:00:30
+18-Feb-11 00:00:02 Feb 18 00:00:46 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4087 to outside:67.110.177.172/57736 duration 0:00:30
+18-Feb-11 00:00:02 Feb 18 00:00:46 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4088 to outside:67.110.177.172/49592 duration 0:00:30
+18-Feb-11 00:00:02 Feb 18 00:00:46 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302014: Teardown TCP connection 26402852 for outside:193.201.96.11/443 to LAN:192.168.1.25/4112 duration 0:00:00 bytes 3774 TCP FINs
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:07 EST: %ASA-session-6-302014: Teardown TCP connection 26402853 for outside:193.201.96.11/443 to LAN:192.168.1.25/4113 duration 0:00:01 bytes 1813 TCP FINs
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built inbound TCP connection 26402855 for public:192.168.3.100/26837 (192.168.3.100/26837) to LAN:192.168.1.150/88 (192.168.1.150/88)
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302014: Teardown TCP connection 26402855 for public:192.168.3.100/26837 to LAN:192.168.1.150/88 duration 0:00:00 bytes 3059 TCP FINs
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302014: Teardown TCP connection 26402854 for outside:193.201.96.11/443 to LAN:192.168.1.25/4114 duration 0:00:01 bytes 6788 TCP FINs
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built inbound TCP connection 26402856 for public:192.168.3.121/60893 (192.168.3.121/60893) to members:192.168.2.254/3306 (192.168.2.254/3306)
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402857 for members:192.168.2.254/48313 (192.168.2.254/48313) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402857 for members:192.168.2.254/48313 to LAN:192.168.1.150/53 duration 0:00:00 bytes 186
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4089 to outside:67.110.177.172/13758 duration 0:00:30
+ Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402858 for public:192.168.3.121/46634 (192.168.3.121/46634) to LAN:192.168.1.150/53 (192.168.1.150/53)
+ Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4090 to outside:67.110.177.172/53960 duration 0:00:30
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402858 for public:192.168.3.121/46634 to LAN:192.168.1.150/53 duration 0:00:00 bytes 147
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402859 for public:192.168.3.121/38735 (192.168.3.121/38735) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:02 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402859 for public:192.168.3.121/38735 to LAN:192.168.1.150/53 duration 0:00:00 bytes 96
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built outbound TCP connection 26402860 for outside:209.90.66.147/443 (209.90.66.147/443) to public:192.168.3.121/34830 (67.110.177.176/34830)
+ Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4115 to outside:67.110.177.172/28058
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built outbound TCP connection 26402861 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4115 (67.110.177.172/28058)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4116 to outside:67.110.177.172/29773
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built outbound TCP connection 26402862 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4116 (67.110.177.172/29773)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4117 to outside:67.110.177.172/35514
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built outbound TCP connection 26402863 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4117 (67.110.177.172/35514)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4118 to outside:67.110.177.172/16747
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built outbound TCP connection 26402864 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4118 (67.110.177.172/16747)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4119 to outside:67.110.177.172/59071
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built outbound TCP connection 26402865 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4119 (67.110.177.172/59071)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4120 to outside:67.110.177.172/20212
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302013: Built outbound TCP connection 26402866 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4120 (67.110.177.172/20212)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.163/0 gaddr 192.168.2.112/5942 laddr 192.168.2.112/5942
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/5942 gaddr 192.168.1.101/0 laddr 192.168.1.101/0
+ Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/5942 gaddr 192.168.1.101/0 laddr 192.168.1.101/0
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.163/0 gaddr 192.168.2.112/5942 laddr 192.168.2.112/5942
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/5942 gaddr 192.168.4.3/0 laddr 192.168.4.3/0
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/5942 gaddr 192.168.4.3/0 laddr 192.168.4.3/0
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 65.216.251.167/0 gaddr 67.110.177.172/17190 laddr 192.168.2.112/5942
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 65.216.251.167/0 gaddr 67.110.177.172/17190 laddr 192.168.2.112/5942
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302014: Teardown TCP connection 26402860 for outside:209.90.66.147/443 to public:192.168.3.121/34830 duration 0:00:00 bytes 2443 TCP Reset-I
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402867 for public:192.168.3.121/39518 (192.168.3.121/39518) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402868 for public:192.168.3.121/55899 (192.168.3.121/55899) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402867 for public:192.168.3.121/39518 to LAN:192.168.1.150/53 duration 0:00:00 bytes 115
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402868 for public:192.168.3.121/55899 to LAN:192.168.1.150/53 duration 0:00:00 bytes 86
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402869 for public:192.168.3.121/40055 (192.168.3.121/40055) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402870 for public:192.168.3.121/41989 (192.168.3.121/41989) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402869 for public:192.168.3.121/40055 to LAN:192.168.1.150/53 duration 0:00:00 bytes 115
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402870 for public:192.168.3.121/41989 to LAN:192.168.1.150/53 duration 0:00:00 bytes 86
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402871 for public:192.168.3.121/60625 (192.168.3.121/60625) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402872 for public:192.168.3.121/51512 (192.168.3.121/51512) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402871 for public:192.168.3.121/60625 to LAN:192.168.1.150/53 duration 0:00:00 bytes 124
+18-Feb-11 00:00:03 Feb 18 00:00:47 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402872 for public:192.168.3.121/51512 to LAN:192.168.1.150/53 duration 0:00:00 bytes 82
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.2/0 gaddr 192.168.2.112/5946 laddr 192.168.2.112/5946
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402874 for public:192.168.3.121/36803 (192.168.3.121/36803) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402874 for public:192.168.3.121/36803 to LAN:192.168.1.150/53 duration 0:00:00 bytes 139
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402875 for public:192.168.3.121/52850 (192.168.3.121/52850) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402875 for public:192.168.3.121/52850 to LAN:192.168.1.150/53 duration 0:00:00 bytes 192
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402876 for public:192.168.3.121/54403 (192.168.3.121/54403) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402877 for public:192.168.3.121/44269 (192.168.3.121/44269) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402876 for public:192.168.3.121/54403 to LAN:192.168.1.150/53 duration 0:00:00 bytes 139
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402877 for public:192.168.3.121/44269 to LAN:192.168.1.150/53 duration 0:00:00 bytes 96
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402878 for public:192.168.3.121/52127 (192.168.3.121/52127) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402879 for public:192.168.3.121/54381 (192.168.3.121/54381) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402878 for public:192.168.3.121/52127 to LAN:192.168.1.150/53 duration 0:00:00 bytes 152
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402879 for public:192.168.3.121/54381 to LAN:192.168.1.150/53 duration 0:00:00 bytes 152
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402880 for public:192.168.3.121/36503 (192.168.3.121/36503) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.2/0 gaddr 192.168.2.112/5946 laddr 192.168.2.112/5946
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302015: Built inbound UDP connection 26402882 for public:192.168.3.121/46077 (192.168.3.121/46077) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402880 for public:192.168.3.121/36503 to LAN:192.168.1.150/53 duration 0:00:00 bytes 139
+18-Feb-11 00:00:03 Feb 18 00:00:48 192.168.3.1 :Feb 17 23:30:11 EST: %ASA-session-6-302016: Teardown UDP connection 26402882 for public:192.168.3.121/46077 to LAN:192.168.1.150/53 duration 0:00:00 bytes 96
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.196/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.3.154/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.3.154/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.254.90/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.254.90/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.212/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+ Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.3.151/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.3.151/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:58 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.212/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:58 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.254.84/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:51 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:58 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.254.84/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302013: Built inbound TCP connection 26403310 for public:192.168.3.121/60898 (192.168.3.121/60898) to members:192.168.2.254/3306 (192.168.2.254/3306)
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302015: Built inbound UDP connection 26403311 for members:192.168.2.254/39648 (192.168.2.254/39648) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302016: Teardown UDP connection 26403311 for members:192.168.2.254/39648 to LAN:192.168.1.150/53 duration 0:00:00 bytes 186
+ Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.114/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.114/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+ Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.101/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.101/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+ Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.254.83/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.254.83/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302013: Built inbound TCP connection 26403312 for members:192.168.2.248/59256 (192.168.2.248/59256) to DB:192.168.5.120/3306 (192.168.5.120/3306)
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713061: Group = 12.161.2.84, IP = 12.161.2.84, Rejecting IPSec tunnel: no matching crypto map entry for remote proxy 172.16.100.208/255.255.255.240/0/0 local proxy 192.168.0.0/255.255.0.0/0/0 on interface outside
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713902: Group = 12.161.2.84, IP = 12.161.2.84, QM FSM error (P2 struct &0xd91c41b8, mess id 0x858e2fd2)!
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713902: Group = 12.161.2.84, IP = 12.161.2.84, Removing peer from correlator table failed, no match!
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302015: Built inbound UDP connection 26403313 for members:192.168.2.5/54245 (192.168.2.5/54245) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302014: Teardown TCP connection 26403312 for members:192.168.2.248/59256 to DB:192.168.5.120/3306 duration 0:00:00 bytes 201 TCP FINs
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302013: Built outbound TCP connection 26403314 for public:192.168.3.100/25 (192.168.3.100/25) to members:192.168.2.5/37150 (192.168.2.5/37150)
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302016: Teardown UDP connection 26403313 for members:192.168.2.5/54245 to LAN:192.168.1.150/53 duration 0:00:00 bytes 427
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.226/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-2-106006: Deny inbound UDP from 192.168.1.251/161 to 192.168.0.4/61093 on interface LAN
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.226/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.22/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.22/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.18/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.18/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:35 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.102/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4132 to outside:67.110.177.172/39259 duration 0:00:30
+ Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.102/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.227/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4133 to outside:67.110.177.172/21055 duration 0:00:30
+ Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4134 to outside:67.110.177.172/64822 duration 0:00:30
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.227/0 gaddr 192.168.2.112/5986 laddr 192.168.2.112/5986
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4163 to outside:67.110.177.172/11446
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302013: Built outbound TCP connection 26403315 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4163 (67.110.177.172/11446)
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4164 to outside:67.110.177.172/45537
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302013: Built outbound TCP connection 26403316 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4164 (67.110.177.172/45537)
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4165 to outside:67.110.177.172/44311
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302013: Built outbound TCP connection 26403317 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4165 (67.110.177.172/44311)
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713061: Group = 67.152.23.155, IP = 67.152.23.155, Rejecting IPSec tunnel: no matching crypto map entry for remote proxy 172.16.100.224/255.255.255.240/0/0 local proxy 192.168.0.0/255.255.0.0/0/0 on interface outside
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713902: Group = 67.152.23.155, IP = 67.152.23.155, QM FSM error (P2 struct &0xd93812e0, mess id 0x3b99da5c)!
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713902: Group = 67.152.23.155, IP = 67.152.23.155, Removing peer from correlator table failed, no match!
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302014: Teardown TCP connection 26403314 for public:192.168.3.100/25 to members:192.168.2.5/37150 duration 0:00:00 bytes 1128 TCP FINs
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.228/0 gaddr 192.168.2.112/5990 laddr 192.168.2.112/5990
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-305011: Built dynamic ICMP translation from members:192.168.2.112/5990 to outside:67.110.177.172/19530
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 207.252.131.9/0 gaddr 67.110.177.172/19530 laddr 192.168.2.112/5990
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.228/0 gaddr 192.168.2.112/5990 laddr 192.168.2.112/5990
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 68.165.144.91/0 gaddr 67.110.177.172/19530 laddr 192.168.2.112/5990
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 207.252.131.9/0 gaddr 67.110.177.172/19530 laddr 192.168.2.112/5990
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713061: Group = 12.30.249.63, IP = 12.30.249.63, Rejecting IPSec tunnel: no matching crypto map entry for remote proxy 172.16.100.192/255.255.255.240/0/0 local proxy 192.168.0.0/255.255.0.0/0/0 on interface outside
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713902: Group = 12.30.249.63, IP = 12.30.249.63, QM FSM error (P2 struct &0xd93302b8, mess id 0x241e61fc)!
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-vpn-3-713902: Group = 12.30.249.63, IP = 12.30.249.63, Removing peer from correlator table failed, no match!
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 65.217.172.165/0 gaddr 67.110.177.172/19530 laddr 192.168.2.112/5990
+18-Feb-11 00:00:51 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.2.112/5990 gaddr 192.168.4.51/0 laddr 192.168.4.51/0
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.2.112/5990 gaddr 192.168.4.51/0 laddr 192.168.4.51/0
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 65.217.172.165/0 gaddr 67.110.177.172/19530 laddr 192.168.2.112/5990
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 68.165.144.91/0 gaddr 67.110.177.172/19530 laddr 192.168.2.112/5990
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.145/0 gaddr 67.110.177.172/19530 laddr 192.168.2.112/5990
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.21/0 gaddr 192.168.2.112/5990 laddr 192.168.2.112/5990
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.21/0 gaddr 192.168.2.112/5990 laddr 192.168.2.112/5990
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.145/0 gaddr 67.110.177.172/19530 laddr 192.168.2.112/5990
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.130/0 gaddr 192.168.2.112/5990 laddr 192.168.2.112/5990
+18-Feb-11 00:00:52 Feb 18 00:01:36 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.130/0 gaddr 192.168.2.112/5990 laddr 192.168.2.112/5990
+18-Feb-11 00:00:52 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-302014: Teardown TCP connection 26403316 for outside:193.201.96.11/443 to LAN:192.168.1.25/4164 duration 0:00:00 bytes 1813 TCP FINs
+18-Feb-11 00:00:52 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:30:59 EST: %ASA-session-6-305012: Teardown dynamic ICMP translation from members:192.168.2.112/5963 to outside:67.110.177.172/18099 duration 0:00:30
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 00:00:52 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302014: Teardown TCP connection 26403315 for outside:193.201.96.11/443 to LAN:192.168.1.25/4163 duration 0:00:01 bytes 6788 TCP FINs
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302014: Teardown TCP connection 26403317 for outside:193.201.96.11/443 to LAN:192.168.1.25/4165 duration 0:00:01 bytes 3774 TCP FINs
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4135 to outside:67.110.177.172/47043 duration 0:00:30
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4136 to outside:67.110.177.172/17485 duration 0:00:30
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4137 to outside:67.110.177.172/59372 duration 0:00:30
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4138 to outside:67.110.177.172/49095 duration 0:00:30
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4139 to outside:67.110.177.172/35677 duration 0:00:30
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4140 to outside:67.110.177.172/52942 duration 0:00:30
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4166 to outside:67.110.177.172/3037
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302013: Built outbound TCP connection 26403334 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4166 (67.110.177.172/3037)
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4167 to outside:67.110.177.172/43556
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302013: Built outbound TCP connection 26403335 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4167 (67.110.177.172/43556)
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4168 to outside:67.110.177.172/24016
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302013: Built outbound TCP connection 26403336 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4168 (67.110.177.172/24016)
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4169 to outside:67.110.177.172/36751
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302013: Built outbound TCP connection 26403337 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4169 (67.110.177.172/36751)
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4170 to outside:67.110.177.172/50842
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302013: Built outbound TCP connection 26403338 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4170 (67.110.177.172/50842)
+ Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4171 to outside:67.110.177.172/41634
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302013: Built outbound TCP connection 26403339 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4171 (67.110.177.172/41634)
+18-Feb-11 00:00:53 Feb 18 00:01:37 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-2-106001: Inbound TCP connection denied from 187.23.22.253/6620 to 208.177.110.22/3389 flags SYN  on interface outside
+ Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 00:00:53 Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+ Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:01 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.196/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+
+ Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.2.112/5992 gaddr 192.168.4.53/0 laddr 192.168.4.53/0
+18-Feb-11 00:00:54 Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.2.112/5992 gaddr 192.168.4.53/0 laddr 192.168.4.53/0
+ Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.2.112/5992 gaddr 192.168.4.52/0 laddr 192.168.4.52/0
+18-Feb-11 00:00:54 Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.2.112/5992 gaddr 192.168.4.52/0 laddr 192.168.4.52/0
+18-Feb-11 00:00:54 Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.114/0 gaddr 192.168.2.112/5992 laddr 192.168.2.112/5992
+18-Feb-11 00:00:54 Feb 18 00:01:38 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.114/0 gaddr 192.168.2.112/5992 laddr 192.168.2.112/5992
+18-Feb-11 00:00:54 Feb 18 00:01:39 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302014: Teardown TCP connection 26403335 for outside:193.201.96.11/443 to LAN:192.168.1.25/4167 duration 0:00:01 bytes 5455 TCP FINs
+ Feb 18 00:01:39 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-vpn-4-402116: IPSEC: Received an ESP packet (SPI= 0x13E7CD77, sequence number= 0x8AA) from 207.207.230.54 (user= 207.207.230.54) to 67.110.177.172.  The decapsulated inner packet doesn't match the negotiated policy in the SA.  The packet specifies its destination as 67.110.177.172, its source as 192.168.253.21, and its protocol as 1.  The SA specifies its local proxy as 192.168.2.0/255.255.255.0/0/0 and its remote_proxy as 172.16.100.16/255.255.255.240/0/0.
+18-Feb-11 00:00:54 Feb 18 00:01:39 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-ip-3-313001: Denied ICMP type=8, code=0 from 192.168.253.21 on interface outside
+18-Feb-11 00:00:54 Feb 18 00:01:39 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302014: Teardown TCP connection 26403337 for outside:193.201.96.11/443 to LAN:192.168.1.25/4169 duration 0:00:01 bytes 2608 TCP FINs
+18-Feb-11 00:00:55 Feb 18 00:01:39 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302014: Teardown TCP connection 26403338 for outside:193.201.96.11/443 to LAN:192.168.1.25/4170 duration 0:00:01 bytes 1871 TCP FINs
+18-Feb-11 00:00:55 Feb 18 00:01:39 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-ip-3-313001: Denied ICMP type=8, code=0 from 65.217.172.165 on interface outside
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20305	Fri Feb 18 00:01:23 2011	4624	Microsoft-Windows-Security-Auditing	ANONYMOUS LOGON	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was successfully logged on.    Subject:   Security ID:  S-1-0-0   Account Name:  -   Account Domain:  -   Logon ID:  0x0    Logon Type:   3    New Logon:   Security ID:  S-1-5-7   Account Name:  ANONYMOUS LOGON   Account Domain:  NT AUTHORITY   Logon ID:  0xc906ab   Logon GUID:  {00000000-0000-0000-0000-000000000000}    Process Information:   Process ID:  0x0   Process Name:  -    Network Information:   Workstation Name: GUN   Source Network Address: 192.168.0.4   Source Port:  64994    Detailed Authentication Information:   Logon Process:  NtLmSsp    Authentication Package: NTLM   Transited Services: -   Package Name (NTLM only): NTLM V1   Key Length:  128    This event is generated when a logon session is created. It is generated on the computer that was accessed.    The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.    The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).    The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.    The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.    The authentication information fields provide detailed information about this specific logon request.   - Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.   - Transited services indicate which intermediate services have participated in this logon request.   - Package name indicates which sub-protocol was used among the NTLM protocols.   - Key length indicates the length of the generated session key. This will b
+18-Feb-11 00:00:55 Feb 18 00:01:40 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-session-6-302015: Built outbound UDP connection 26403355 for public:192.168.3.242/514 (192.168.3.242/514) to LAN:192.168.1.150/56732 (192.168.1.150/56732)
+ Feb 18 00:01:40 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-vpn-6-602303: IPSEC: An outbound LAN-to-LAN SA (SPI= 0xAACE7283) between 67.110.177.172 and 199.164.21.5 (user= 199.164.21.5) has been created.
+ Feb 18 00:01:40 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-vpn-5-713049: Group = 199.164.21.5, IP = 199.164.21.5, Security negotiation complete for LAN-to-LAN Group (199.164.21.5)  Responder, Inbound SPI = 0x572ba17d, Outbound SPI = 0xaace7283
+ Feb 18 00:01:40 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-vpn-6-602303: IPSEC: An inbound LAN-to-LAN SA (SPI= 0x572BA17D) between 67.110.177.172 and 199.164.21.5 (user= 199.164.21.5) has been created.
+18-Feb-11 00:00:55 Feb 18 00:01:40 192.168.3.1 :Feb 17 23:31:02 EST: %ASA-vpn-5-713120: Group = 199.164.21.5, IP = 199.164.21.5, PHASE 2 COMPLETED (msgid=4c8fdb88)
+18-Feb-11 00:01:17 Feb 18 00:02:01 192.168.3.1 :Feb 17 23:31:25 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.227/0 gaddr 192.168.2.112/6012 laddr 192.168.2.112/6012
+18-Feb-11 00:01:17 Feb 18 00:02:01 192.168.3.1 :Feb 17 23:31:25 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.210/0 gaddr 192.168.2.112/6012 laddr 192.168.2.112/6012
+18-Feb-11 00:01:17 Feb 18 00:02:01 192.168.3.1 :Feb 17 23:31:25 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.210/0 gaddr 192.168.2.112/6012 laddr 192.168.2.112/6012
+18-Feb-11 00:01:17 Feb 18 00:02:01 192.168.3.1 :Feb 17 23:31:25 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.99/0 gaddr 192.168.2.112/6012 laddr 192.168.2.112/6012
+18-Feb-11 00:01:17 Feb 18 00:02:01 192.168.3.1 :Feb 17 23:31:25 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.99/0 gaddr 192.168.2.112/6012 laddr 192.168.2.112/6012
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20310	Fri Feb 18 00:01:44 2011	4672	Microsoft-Windows-Security-Auditing	CLONWWMAIL1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		Special privileges assigned to new logon.    Subject:   Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1104   Account Name:  CLONWWMAIL1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc9081c    Privileges:  SeSecurityPrivilege	20148 
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20311	Fri Feb 18 00:01:44 2011	4624	Microsoft-Windows-Security-Auditing	CLONWWMAIL1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was successfully logged on.    Subject:   Security ID:  S-1-0-0   Account Name:  -   Account Domain:  -   Logon ID:  0x0    Logon Type:   3    New Logon:   Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1104   Account Name:  CLONWWMAIL1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc9081c   Logon GUID:  {85097889-846D-6E30-A898-C683DF542245}    Process Information:   Process ID:  0x0   Process Name:  -    Network Information:   Workstation Name:    Source Network Address: 192.168.3.100   Source Port:  26849    Detailed Authentication Information:   Logon Process:  Kerberos   Authentication Package: Kerberos   Transited Services: -   Package Name (NTLM only): -   Key Length:  0    This event is generated when a logon session is created. It is generated on the computer that was accessed.    The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.    The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).    The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.    The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.    The authentication information fields provide detailed information about this specific logon request.   - Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.   - Transited services indicate which intermediate services have participated in this logon request.   - Package name indicates which sub-protocol was used among the NTLM protocols.   - Key length indicates the length of the gener
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	20312	Fri Feb 18 00:01:44 2011	4634	Microsoft-Windows-Security-Auditing	CLONWWMAIL1$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was logged off.    Subject:   Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1104   Account Name:  CLONWWMAIL1$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xc9081c    Logon Type:   3    This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.	20150
+18-Feb-11 00:01:18 Feb 18 00:02:02 192.168.3.1 :Feb 17 23:31:25 EST: %ASA-session-6-302014: Teardown TCP connection 26403554 for outside:193.201.96.11/443 to LAN:192.168.1.25/4191 duration 0:00:00 bytes 2741 TCP FINs
+18-Feb-11 00:01:18 Feb 18 00:02:02 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302014: Teardown TCP connection 26403565 for outside:193.201.96.11/443 to LAN:192.168.1.25/4192 duration 0:00:00 bytes 3059 TCP FINs
+ Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.98/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:18 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.98/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:18 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 216.44.54.7/0 gaddr 67.110.177.172/46484 laddr 192.168.2.112/6010
+ Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 216.44.54.7/0 gaddr 67.110.177.172/46484 laddr 192.168.2.112/6010
+18-Feb-11 00:01:18 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.118/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+ Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.118/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:18 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.211/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+ Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.211/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:18 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.67/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:18 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:26 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.66/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:18 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.194/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+ Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.194/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:18 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.67/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:19 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.66/0 gaddr 192.168.2.112/6010 laddr 192.168.2.112/6010
+18-Feb-11 00:01:19 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.196/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+18-Feb-11 00:01:19 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302013: Built inbound TCP connection 26403577 for public:192.168.3.117/34260 (192.168.3.117/34260) to DB:192.168.5.120/3306 (192.168.5.120/3306)
+18-Feb-11 00:01:19 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302014: Teardown TCP connection 26403521 for outside:209.90.66.147/443 to public:192.168.3.121/34841 duration 0:00:05 bytes 2443 TCP FINs
+18-Feb-11 00:01:19 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.254.90/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+18-Feb-11 00:01:19 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302014: Teardown TCP connection 26403577 for public:192.168.3.117/34260 to DB:192.168.5.120/3306 duration 0:00:00 bytes 7285 TCP FINs
+18-Feb-11 00:01:19 Feb 18 00:02:03 192.168.3.1 :Feb 17 23:31:27 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.254.90/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+18-Feb-11 00:01:22 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302014: Teardown TCP connection 26403619 for outside:193.201.96.11/443 to LAN:192.168.1.25/4194 duration 0:00:01 bytes 1813 TCP FINs
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302014: Teardown TCP connection 26403621 for outside:193.201.96.11/443 to LAN:192.168.1.25/4195 duration 0:00:01 bytes 6788 TCP FINs
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302014: Teardown TCP connection 26403368 for public:192.168.3.121/60902 to members:192.168.2.254/3306 duration 0:00:24 bytes 24751 TCP FINs
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.196/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-vpn-3-713061: Group = 12.161.2.84, IP = 12.161.2.84, Rejecting IPSec tunnel: no matching crypto map entry for remote proxy 172.16.100.208/255.255.255.240/0/0 local proxy 192.168.0.0/255.255.0.0/0/0 on interface outside
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-vpn-3-713902: Group = 12.161.2.84, IP = 12.161.2.84, QM FSM error (P2 struct &0xd91c41b8, mess id 0x49caaf17)!
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-vpn-3-713902: Group = 12.161.2.84, IP = 12.161.2.84, Removing peer from correlator table failed, no match!
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4166 to outside:67.110.177.172/3037 duration 0:00:30
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.254.90/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.254.90/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.196/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302014: Teardown TCP connection 26403409 for public:192.168.3.121/60904 to members:192.168.2.254/3306 duration 0:00:20 bytes 23188 TCP FINs
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4167 to outside:67.110.177.172/43556 duration 0:00:30
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4168 to outside:67.110.177.172/24016 duration 0:00:30
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4169 to outside:67.110.177.172/36751 duration 0:00:30
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4170 to outside:67.110.177.172/50842 duration 0:00:30
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305012: Teardown dynamic TCP translation from LAN:192.168.1.25/4171 to outside:67.110.177.172/41634 duration 0:00:30
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.154/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.154/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4196 to outside:67.110.177.172/15073
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302013: Built outbound TCP connection 26403648 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4196 (67.110.177.172/15073)
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.212/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.212/0 gaddr 192.168.2.112/6015 laddr 192.168.2.112/6015
+ Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4197 to outside:67.110.177.172/39675
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302013: Built outbound TCP connection 26403649 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4197 (67.110.177.172/39675)
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-305011: Built dynamic TCP translation from LAN:192.168.1.25/4198 to outside:67.110.177.172/49915
+18-Feb-11 00:01:23 Feb 18 00:02:07 192.168.3.1 :Feb 17 23:31:31 EST: %ASA-session-6-302013: Built outbound TCP connection 26403650 for outside:193.201.96.11/443 (193.201.96.11/443) to LAN:192.168.1.25/4198 (67.110.177.172/49915)
+18-Feb-11 11:19:30 Feb 18 11:20:17 192.168.3.1 :Feb 18 10:49:39 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.2.112/10738 gaddr 192.168.1.101/0 laddr 192.168.1.101/0
+18-Feb-11 11:19:30 Feb 18 11:20:17 192.168.3.1 :Feb 18 10:49:39 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.163/0 gaddr 192.168.2.112/10738 laddr 192.168.2.112/10738
+18-Feb-11 11:19:30 Feb 18 11:20:17 192.168.3.1 :Feb 18 10:49:39 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.163/0 gaddr 192.168.2.112/10738 laddr 192.168.2.112/10738
+18-Feb-11 11:19:30 Feb 18 11:20:17 192.168.3.1 :Feb 18 10:49:39 EST: %ASA-session-6-302015: Built inbound UDP connection 26788743 for members:192.168.2.254/57497 (192.168.2.254/57497) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 11:19:30 Feb 18 11:20:17 192.168.3.1 :Feb 18 10:49:39 EST: %ASA-session-6-302016: Teardown UDP connection 26788743 for members:192.168.2.254/57497 to LAN:192.168.1.150/53 duration 0:00:00 bytes 186
+20110926235931.000000
+Category=12810
+CategoryString=Filtering Platform Connection
+ComputerName=sea2wnweb04.r-u-i.com
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=102105314
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=20110927035931.712977-000
+TimeWritten=20110927035931.712977-000
+Type=Audit Success
+User=NULL
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+
+
+Application Information:
+
+	Process ID:		4
+
+	Application Name:	System
+
+
+
+Network Information:
+
+	Direction:		Inbound
+
+	Source Address:		10.10.240.255
+
+	Source Port:		138
+
+	Destination Address:	10.10.240.14
+
+	Destination Port:		138
+
+	Protocol:		17
+
+
+
+Filter Information:
+
+	Filter Run-Time ID:	65933
+
+	Layer Name:		Receive/Accept
+
+	Layer Run-Time ID:	44
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	27421	Fri Feb 18 11:20:00 2011	4624	Microsoft-Windows-Security-Auditing	CLONWWNOSC5$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was successfully logged on.    Subject:   Security ID:  S-1-0-0   Account Name:  -   Account Domain:  -   Logon ID:  0x0    Logon Type:   3    New Logon:   Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1356   Account Name:  CLONWWNOSC5$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xdad740   Logon GUID:  {79F20393-8839-B6F2-949A-835E13EBDEB0}    Process Information:   Process ID:  0x0   Process Name:  -    Network Information:   Workstation Name:    Source Network Address: 192.168.1.6   Source Port:  56041    Detailed Authentication Information:   Logon Process:  Kerberos   Authentication Package: Kerberos   Transited Services: -   Package Name (NTLM only): -   Key Length:  0    This event is generated when a logon session is created. It is generated on the computer that was accessed.    The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.    The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).    The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.    The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.    The authentication information fields provide detailed information about this specific logon request.   - Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.   - Transited services indicate which intermediate services have participated in this logon request.   - Package name indicates which sub-protocol was used among the NTLM protocols.   - Key length indicates the length of the generat
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	27422	Fri Feb 18 11:20:00 2011	4769	Microsoft-Windows-Security-Auditing	CLONWWNOSC5$@CLONE-SYSTEMS.COM	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		A Kerberos service ticket was requested.    Account Information:   Account Name:  CLONWWNOSC5$@CLONE-SYSTEMS.COM   Account Domain:  CLONE-SYSTEMS.COM   Logon GUID:  {C9F225EC-EB20-1266-E1D8-70E6663AAC5D}    Service Information:   Service Name:  CLONWWNOSC5$   Service ID:  S-1-5-21-2650515781-1991746861-2225058118-1356    Network Information:   Client Address:  ::ffff:192.168.1.6   Client Port:  56042    Additional Information:   Ticket Options:  0x40810000   Ticket Encryption Type: 0x12   Failure Code:  0x0   Transited Services: -    This event is generated every time access is requested to a resource such as a computer or a Windows service.  The service name indicates the resource to which access was requested.    This event can be correlated with Windows logon events by comparing the Logon GUID fields in each event.  The logon event occurs on the machine that was accessed, which is often a different machine than the domain controller which issued the service ticket.    Ticket options, encryption types, and failure codes are defined in RFC 4120.	27208 
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	27423	Fri Feb 18 11:20:00 2011	4624	Microsoft-Windows-Security-Auditing	CLONWWNOSC5$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was successfully logged on.    Subject:   Security ID:  S-1-0-0   Account Name:  -   Account Domain:  -   Logon ID:  0x0    Logon Type:   3    New Logon:   Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1356   Account Name:  CLONWWNOSC5$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xdad759   Logon GUID:  {AE63B67C-2577-CB44-003A-9A38BC8480B1}    Process Information:   Process ID:  0x0   Process Name:  -    Network Information:   Workstation Name:    Source Network Address: 192.168.1.6   Source Port:  56043    Detailed Authentication Information:   Logon Process:  Kerberos   Authentication Package: Kerberos   Transited Services: -   Package Name (NTLM only): -   Key Length:  0    This event is generated when a logon session is created. It is generated on the computer that was accessed.    The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.    The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).    The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.    The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.    The authentication information fields provide detailed information about this specific logon request.   - Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.   - Transited services indicate which intermediate services have participated in this logon request.   - Package name indicates which sub-protocol was used among the NTLM protocols.   - Key length indicates the length of the generat
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	27424	Fri Feb 18 11:20:00 2011	4624	Microsoft-Windows-Security-Auditing	CLONWWNOSC5$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was successfully logged on.    Subject:   Security ID:  S-1-0-0   Account Name:  -   Account Domain:  -   Logon ID:  0x0    Logon Type:   3    New Logon:   Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1356   Account Name:  CLONWWNOSC5$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xdad765   Logon GUID:  {A26F6752-9E70-068A-F3EC-CB94D40E9628}    Process Information:   Process ID:  0x0   Process Name:  -    Network Information:   Workstation Name:    Source Network Address: 192.168.1.6   Source Port:  56045    Detailed Authentication Information:   Logon Process:  Kerberos   Authentication Package: Kerberos   Transited Services: -   Package Name (NTLM only): -   Key Length:  0    This event is generated when a logon session is created. It is generated on the computer that was accessed.    The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.    The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).    The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.    The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.    The authentication information fields provide detailed information about this specific logon request.   - Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.   - Transited services indicate which intermediate services have participated in this logon request.   - Package name indicates which sub-protocol was used among the NTLM protocols.   - Key length indicates the length of the generat
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	27425	Fri Feb 18 11:20:00 2011	4634	Microsoft-Windows-Security-Auditing	CLONWWNOSC5$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was logged off.    Subject:   Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1356   Account Name:  CLONWWNOSC5$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xdad759    Logon Type:   3    This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.	27211
+18-Feb-11 11:19:30 Feb 18 11:20:18 192.168.3.1 :Feb 18 10:49:40 EST: %ASA-session-6-302014: Teardown TCP connection 26788535 for public:192.168.3.102/80 to LAN:192.168.1.3/54513 duration 0:00:24 bytes 28506 TCP FINs
+18-Feb-11 11:19:31 Feb 18 11:20:18 192.168.3.1 :Feb 18 10:49:40 EST: %ASA-session-2-106006: Deny inbound UDP from 192.168.1.251/161 to 192.168.0.4/61093 on interface LAN
+20110926235931.000000
+Category=12810
+CategoryString=Filtering Platform Connection
+ComputerName=sea2wnweb04.r-u-i.com
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=102105313
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=20110927035931.671931-000
+TimeWritten=20110927035931.671931-000
+Type=Audit Success
+User=NULL
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+
+
+Application Information:
+
+	Process ID:		1748
+
+	Application Name:	\device\harddiskvolume2\program files (x86)\microsoft sql server\mssql.1\mssql\binn\sqlservr.exe
+
+
+
+Network Information:
+
+	Direction:		Inbound
+
+	Source Address:		10.10.240.62
+
+	Source Port:		55472
+
+	Destination Address:	10.1.75.50
+
+	Destination Port:		4021
+
+	Protocol:		6
+
+
+
+Filter Information:
+
+	Filter Run-Time ID:	0
+
+	Layer Name:		Receive/Accept
+
+	Layer Run-Time ID:	44
+20110926235931.000000
+Category=12810
+CategoryString=Filtering Platform Connection
+ComputerName=sea2wnweb04.r-u-i.com
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=102105312
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=20110927035931.397309-000
+TimeWritten=20110927035931.397309-000
+Type=Audit Success
+User=NULL
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+
+
+Application Information:
+
+	Process ID:		1748
+
+	Application Name:	\device\harddiskvolume2\program files (x86)\microsoft sql server\mssql.1\mssql\binn\sqlservr.exe
+
+
+
+Network Information:
+
+	Direction:		Inbound
+
+	Source Address:		10.10.240.62
+
+	Source Port:		55472
+
+	Destination Address:	10.1.6.50
+
+	Destination Port:		1131
+
+	Protocol:		6
+
+
+
+Filter Information:
+
+	Filter Run-Time ID:	0
+
+	Layer Name:		Receive/Accept
+
+	Layer Run-Time ID:	44
+ Feb 18 11:20:18 192.168.3.1 :Feb 18 10:49:40 EST: %ASA-vpn-4-402116: IPSEC: Received an ESP packet (SPI= 0x902B89FB, sequence number= 0x349) from 65.217.172.165 (user= 65.217.172.165) to 67.110.177.172.  The decapsulated inner packet doesn't match the negotiated policy in the SA.  The packet specifies its destination as 67.110.177.172, its source as 65.217.172.165, and its protocol as 1.  The SA specifies its local proxy as 192.168.2.0/255.255.255.0/0/0 and its remote_proxy as 172.16.100.112/255.255.255.240/0/0.
+18-Feb-11 11:19:31 Feb 18 11:20:18 192.168.3.1 :Feb 18 10:49:40 EST: %ASA-ip-3-313001: Denied ICMP type=8, code=0 from 65.217.172.165 on interface outside
+ Feb 18 11:20:18 192.168.3.1 :Feb 18 10:49:40 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 11:19:32 Feb 18 11:20:18 192.168.3.1 :Feb 18 10:49:40 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+ Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/10736 gaddr 192.168.4.3/0 laddr 192.168.4.3/0
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/10736 gaddr 192.168.4.3/0 laddr 192.168.4.3/0
+ Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 65.216.251.167/0 gaddr 67.110.177.172/6859 laddr 192.168.2.112/10736
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 65.216.251.167/0 gaddr 67.110.177.172/6859 laddr 192.168.2.112/10736
+20110926235931.000000
+Category=12810
+CategoryString=Filtering Platform Connection
+ComputerName=sea2wnweb04.r-u-i.com
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=102105311
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=20110927035931.325966-000
+TimeWritten=20110927035931.325966-000
+Type=Audit Success
+User=NULL
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+
+
+Application Information:
+
+	Process ID:		1748
+
+	Application Name:	\device\harddiskvolume2\program files (x86)\microsoft sql server\mssql.1\mssql\binn\sqlservr.exe
+
+
+
+Network Information:
+
+	Direction:		Inbound
+
+	Source Address:		10.10.240.62
+
+	Source Port:		55472
+
+	Destination Address:	10.1.54.50
+
+	Destination Port:		4356
+
+	Protocol:		6
+
+
+
+Filter Information:
+
+	Filter Run-Time ID:	0
+
+	Layer Name:		Receive/Accept
+
+	Layer Run-Time ID:	44
+ Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+ Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/10736 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/10736 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.3/0 gaddr 192.168.2.112/10740 laddr 192.168.2.112/10740
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.3/0 gaddr 192.168.2.112/10740 laddr 192.168.2.112/10740
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.2/0 gaddr 192.168.2.112/10740 laddr 192.168.2.112/10740
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.2/0 gaddr 192.168.2.112/10740 laddr 192.168.2.112/10740
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.19/0 gaddr 192.168.2.112/10740 laddr 192.168.2.112/10740
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.19/0 gaddr 192.168.2.112/10740 laddr 192.168.2.112/10740
+ Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.2.112/10740 gaddr 192.168.4.62/0 laddr 192.168.4.62/0
+18-Feb-11 11:19:32 Feb 18 11:20:19 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.2.112/10740 gaddr 192.168.4.62/0 laddr 192.168.4.62/0
+18-Feb-11 11:19:32 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.82/0 gaddr 192.168.2.112/10740 laddr 192.168.2.112/10740
+18-Feb-11 11:19:32 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 172.16.100.82/0 gaddr 192.168.2.112/10740 laddr 192.168.2.112/10740
+18-Feb-11 11:19:32 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built inbound ICMP connection for faddr 192.168.2.112/10740 gaddr 192.168.4.61/0 laddr 192.168.4.61/0
+18-Feb-11 11:19:32 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 192.168.2.112/10740 gaddr 192.168.4.61/0 laddr 192.168.4.61/0
+ CLONWWADDC1.clone-systems.com	MSWinEventLog	1	Security	27426	Fri Feb 18 11:20:02 2011	4634	Microsoft-Windows-Security-Auditing	CLONWWNOSC5$	N/A	Success Audit	CLONWWADDC1.clone-systems.com	None		An account was logged off.    Subject:   Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1356   Account Name:  CLONWWNOSC5$   Account Domain:  CLONE-SYSTEMS   Logon ID:  0xdad740    Logon Type:   3    This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.	27212
+18-Feb-11 11:19:32 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-vpn-4-402116: IPSEC: Received an ESP packet (SPI= 0x3FCBE487, sequence number= 0x24) from 207.207.230.54 (user= 207.207.230.54) to 67.110.177.172.  The decapsulated inner packet doesn't match the negotiated policy in the SA.  The packet specifies its destination as 67.110.177.172, its source as 192.168.253.21, and its protocol as 1.  The SA specifies its local proxy as 192.168.1.0/255.255.255.0/0/0 and its remote_proxy as 172.16.100.16/255.255.255.240/0/0.
+18-Feb-11 11:19:32 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-ip-3-313001: Denied ICMP type=8, code=0 from 192.168.253.21 on interface outside
+18-Feb-11 11:19:33 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-ip-3-313001: Denied ICMP type=8, code=0 from 192.168.253.21 on interface outside
+ Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302015: Built inbound UDP connection 26788761 for management:192.168.4.61/58085 (192.168.4.61/58085) to LAN:192.168.1.150/53 (192.168.1.150/53)
+18-Feb-11 11:19:33 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302015: Built inbound UDP connection 26788762 for management:192.168.4.61/52961 (192.168.4.61/52961) to LAN:192.168.1.150/53 (192.168.1.150/53)
+20110926235931.000000
+Category=12810
+CategoryString=Filtering Platform Connection
+ComputerName=sea2wnweb04.r-u-i.com
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=102105310
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=20110927035931.297625-000
+TimeWritten=20110927035931.297625-000
+Type=Audit Success
+User=NULL
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+
+
+Application Information:
+
+	Process ID:		1748
+
+	Application Name:	\device\harddiskvolume2\program files (x86)\microsoft sql server\mssql.1\mssql\binn\sqlservr.exe
+
+
+
+Network Information:
+
+	Direction:		Inbound
+
+	Source Address:		10.10.240.62
+
+	Source Port:		55472
+
+	Destination Address:	10.1.3.52
+
+	Destination Port:		3843
+
+	Protocol:		6
+
+
+
+Filter Information:
+
+	Filter Run-Time ID:	0
+
+	Layer Name:		Receive/Accept
+
+	Layer Run-Time ID:	44
+20110926235931.000000
+Category=12810
+CategoryString=Filtering Platform Connection
+ComputerName=sea2wnweb04.r-u-i.com
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=102105309
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=20110927035931.028867-000
+TimeWritten=20110927035931.028867-000
+Type=Audit Success
+User=NULL
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+
+
+Application Information:
+
+	Process ID:		1748
+
+	Application Name:	\device\harddiskvolume2\program files (x86)\microsoft sql server\mssql.1\mssql\binn\sqlservr.exe
+
+
+
+Network Information:
+
+	Direction:		Inbound
+
+	Source Address:		10.10.240.62
+
+	Source Port:		55472
+
+	Destination Address:	10.1.50.50
+
+	Destination Port:		4504
+
+	Protocol:		6
+
+
+
+Filter Information:
+
+	Filter Run-Time ID:	0
+
+	Layer Name:		Receive/Accept
+
+	Layer Run-Time ID:	44
+ Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302015: Built inbound UDP connection 26788763 for management:192.168.4.61/56377 (192.168.4.61/56377) to LAN:192.168.1.150/53 (192.168.1.150/53)
+ Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302016: Teardown UDP connection 26788761 for management:192.168.4.61/58085 to LAN:192.168.1.150/53 duration 0:00:00 bytes 141
+18-Feb-11 11:19:33 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302015: Built inbound UDP connection 26788764 for management:192.168.4.61/42657 (192.168.4.61/42657) to LAN:192.168.1.150/389 (192.168.1.150/389)
+18-Feb-11 11:19:33 Feb 18 11:20:20 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302016: Teardown UDP connection 26788762 for management:192.168.4.61/52961 to LAN:192.168.1.150/53 duration 0:00:00 bytes 141
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302016: Teardown UDP connection 26788763 for management:192.168.4.61/56377 to LAN:192.168.1.150/53 duration 0:00:00 bytes 110
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302013: Built inbound TCP connection 26788765 for public:192.168.3.114/44710 (192.168.3.114/44710) to DB:192.168.5.120/3306 (192.168.5.120/3306)
+20110926235930.000000
+Category=12810
+CategoryString=Filtering Platform Connection
+ComputerName=sea2wnweb04.r-u-i.com
+EventCode=5156
+EventIdentifier=5156
+EventType=4
+Logfile=Security
+RecordNumber=102105308
+SourceName=Microsoft-Windows-Security-Auditing
+TimeGenerated=20110927035930.897909-000
+TimeWritten=20110927035930.897909-000
+Type=Audit Success
+User=NULL
+wmi_type=WinEventLog:Security
+Message=The Windows Filtering Platform has permitted a connection.
+
+
+
+Application Information:
+
+	Process ID:		1748
+
+	Application Name:	\device\harddiskvolume2\program files (x86)\microsoft sql server\mssql.1\mssql\binn\sqlservr.exe
+
+
+
+Network Information:
+
+	Direction:		Inbound
+
+	Source Address:		10.10.240.62
+
+	Source Port:		55472
+
+	Destination Address:	10.1.55.52
+
+	Destination Port:		4751
+
+	Protocol:		6
+
+
+
+Filter Information:
+
+	Filter Run-Time ID:	0
+
+	Layer Name:		Receive/Accept
+
+	Layer Run-Time ID:	44
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302014: Teardown TCP connection 26788765 for public:192.168.3.114/44710 to DB:192.168.5.120/3306 duration 0:00:00 bytes 7170 TCP FINs
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302014: Teardown TCP connection 26788673 for outside:123.64.193.79/3971 to public:192.168.3.100/25 duration 0:00:13 bytes 9398 TCP FINs
+ Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.100/6 gaddr 192.168.1.150/0 laddr 192.168.1.150/0
+ Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.162/0 gaddr 192.168.2.112/10738 laddr 192.168.2.112/10738
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 172.16.100.162/0 gaddr 192.168.2.112/10738 laddr 192.168.2.112/10738
+ Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.100/0 gaddr 192.168.2.112/10738 laddr 192.168.2.112/10738
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.3.100/0 gaddr 192.168.2.112/10738 laddr 192.168.2.112/10738
+ Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/10738 gaddr 192.168.1.101/0 laddr 192.168.1.101/0
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-session-6-302021: Teardown ICMP connection for faddr 192.168.2.112/10738 gaddr 192.168.1.101/0 laddr 192.168.1.101/0
+18-Feb-11 11:19:34 Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-vpn-3-713061: Group = 12.161.2.84, IP = 12.161.2.84, Rejecting IPSec tunnel: no matching crypto map entry for remote proxy 172.16.100.208/255.255.255.240/0/0 local proxy 192.168.0.0/255.255.0.0/0/0 on interface outside
+ Feb 18 11:20:21 192.168.3.1 :Feb 18 10:49:41 EST: %ASA-vpn-3-713902: Group = 12.161.2.84, IP = 12.161.2.84, QM FSM error (P2 struct &0xd92b2a88, mess id 0x25cf3f33)!
+

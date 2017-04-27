@@ -1,0 +1,24 @@
+.tab-pane.active#tab-alert-general
+    form#addAlert.form-horizontal
+        .control-group
+            label.control-label#alertingSchedule(for="alertSchedule" title="Cron Scheduling") Schedule
+            .controls
+                input#alertSchedule(type="text" placeHolder="* * * * *")
+                ! &nbsp;
+                .controlscron.display-inline
+                    select#cronexamples
+                ! &nbsp;
+                a#alertingSyntaxHelp(href="http://logscape.com/redir/alert-schedule.htm" target="_blank") Syntax Help
+        .control-group
+            label.control-label#alertingRealTime(for="alertRealTime") Real Time
+            .controls
+                input#alertRealTime(type="checkBox")
+        .control-group
+            label.control-label#alertingDatagroup(for="datagroups") Data Group
+            .controls
+                select#datagroups
+
+        .control-group
+            label.control-label#alertingEnabled(for="alertEnabled") Enabled
+            .controls
+                input#alertEnabled(type="checkBox" checked="checked")

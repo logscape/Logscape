@@ -1,0 +1,41 @@
+<Bundle name="vs-syslog-server" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <services>
+  	<Service>
+		<name>SysLogServer</name>
+		<priority>100</priority>
+		<!-- prefer to run on a syslogServer type first - Combine with an Agent by setting the type to be SysLogServerAgent or SysLogServerTailer -->
+		<resourceSelection>type containsAny 'SysLogServer,Management,IndexStore'</resourceSelection>
+		<fork>true</fork>
+		<background>true</background>
+		<pauseSeconds>0</pauseSeconds>
+      	<instanceCount>-1</instanceCount>
+		<costPerUnit>10</costPerUnit>
+		<script>
+			<![CDATA[
+				try {
+					println "\n************************** Starting SysLogServer **************************"
+					String serverRoot = System.getProperty("syslog.root","../../work/SysLogServer_SERVER_");
+					String tcpport = System.getProperty("syslog.tcp.port", "1468");
+					String udpport = System.getProperty("syslog.udp.port", "1514");
+					if (Boolean.getBoolean("syslog.debug")) {
+                        processMaker.java "-cp:../../system-bundles/vs-syslog-server-1.0:../../system-bundles/vs-syslog-server-1.0/lib/*", "com.liquidlabs.syslog4vscape.SysLogServer", tcpport, udpport, serverRoot, lookupSpaceAddress, hostname, zone,  "-Dlog4j.debug=false", "-Xms32M", "-Xmx256M", "-Dlog4j.filename=syslogserver.log","-Xdebug","-Xrunjdwp:transport=dt_socket,address=8992,server=y,suspend=n"
+					} else {
+					    processMaker.java "-cp:../../system-bundles/vs-syslog-server-1.0:../../system-bundles/vs-syslog-server-1.0/lib/*", "com.liquidlabs.syslog4vscape.SysLogServer", tcpport, udpport, serverRoot, lookupSpaceAddress, hostname, zone,  "-Dlog4j.debug=false", "-Xms32M", "-Xmx256M", "-Dlog4j.filename=syslogserver.log"
+					}
+				} catch (Throwable t) {
+					t.printStackTrace();
+					throw new RuntimeException("Failed to start LogServer:" + t.getMessage(), t);
+				}
+			]]>      
+		</script>
+	</Service>
+  </services>
+</Bundle>

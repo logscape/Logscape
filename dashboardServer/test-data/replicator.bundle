@@ -1,0 +1,64 @@
+<Bundle name="replicator" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <services>
+  	<Service>
+		<name>ReplicationService</name>
+		<priority>100</priority>
+		<resourceSelection>customProperties contains "ServiceType=System"</resourceSelection>
+		<fork>false</fork>
+		<background>true</background>
+		<pauseSeconds>1</pauseSeconds>
+		<script>
+			<![CDATA[
+			System.out.println("*****************************************************************************")
+    		System.out.println("**********************  STARTING Replication  *******************************")
+			
+				import com.liquidlabs.replicator.service.ReplicationService
+				import com.liquidlabs.replicator.service.ReplicationServiceImpl
+				import com.liquidlabs.vso.SpaceServiceImpl
+				import com.liquidlabs.orm.ORMapperFactory
+				replication = new ReplicationServiceImpl(new SpaceServiceImpl(lookupSpace, new ORMapperFactory(1000, ReplicationService.NAME), ReplicationService.NAME, executor))
+				replication.start()
+			]]>      
+		</script>
+      <instanceCount>1</instanceCount>
+	</Service>
+    <Service>
+      	<name>UploadService</name>
+	  	<priority>10</priority>
+	  	<dependencies>replicator-1.0:ReplicationService</dependencies>
+		<resourceSelection>customProperties notContains "ServiceType=System" and workId notContains "replicator-1.0:DownloadService"</resourceSelection>
+      	<fork>false</fork>
+      	<background>true</background>
+		<pauseSeconds>5</pauseSeconds>
+      	<script>
+      		<![CDATA[
+				import com.liquidlabs.replicator.service.UploadService
+				import com.liquidlabs.replicator.download.BundleDeployDownloadListener
+				
+				int port = 3000 + profileId;				
+				UploadService.run(lookupSpace, proxyFactory, "downloads", BundleDeployDownloadListener.create(thisAgent, lookupSpace, proxyFactory, "deployed-bundles"), port);
+			]]>
+		</script>
+		<instanceCount>3</instanceCount>
+    </Service>
+	<Service>
+      	<name>DownloadService</name>
+	  	<priority>10</priority>
+	  	<dependencies>replicator-1.0:UploadService,replicator-1.0:ReplicationService</dependencies>
+		<resourceSelection>customProperties notContains "ServiceType=System" and workId notContains "replicator-1.0:UploadService"</resourceSelection>
+      	<fork>false</fork>
+      	<background>true</background>
+		<pauseSeconds>1</pauseSeconds>
+      	<script>
+      		<![CDATA[
+				import com.liquidlabs.replicator.service.DownloadService
+				import com.liquidlabs.replicator.download.BundleDeployDownloadListener
+				
+				DownloadService.run(lookupSpace, proxyFactory, "downloads", BundleDeployDownloadListener.create(thisAgent, lookupSpace, proxyFactory, "deployed-bundles"))
+			]]>
+		</script>
+		<instanceCount>-1</instanceCount>
+    </Service>
+ </services>
+</Bundle>

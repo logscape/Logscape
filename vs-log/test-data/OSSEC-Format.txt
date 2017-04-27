@@ -1,0 +1,96 @@
+** Alert 1305900039.2537233: - windows,
+2011 May 20 10:00:39 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  64749  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900047.2537946: - windows,authentication_success,
+2011 May 20 10:00:47 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18107 (level 3) -> 'Windows Logon Success.'
+Src IP: (none)
+User: tnianios
+WinEvtLog: Security: AUDIT_SUCCESS(4624): Microsoft-Windows-Security-Auditing: tnianios: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was successfully logged on. Subject:  Security ID:  S-1-0-0  Account Name:  -  Account Domain:  -  Logon ID:  0x0  Logon Type:   3  New Logon:  Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1126  Account Name:  tnianios  Account Domain:  CLONE-SYSTEMS  Logon ID:  0xd9e5163  Logon GUID:  {A7C67A57-B2A3-ACD1-ED8E-BE84C67C0923}  Process Information:  Process ID:  0x0  Process Name:  -  Network Information:  Workstation Name:   Source Network Address: 192.168.1.2  Source Port:  60306  Detailed Authentication Information:  Logon Process:  Kerberos  Authentication Package: Kerberos  Transited Services: -  Package Name (NTLM only): -  Key Length:  0  This event is generated when a logon session is created. It is generated on the computer that was accessed. 
+** Alert 1305900047.2539067: - windows,
+2011 May 20 10:00:47 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  56494  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900047.2539780: - windows,
+2011 May 20 10:00:47 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18149 (level 3) -> 'Windows User Logoff.'
+Src IP: (none)
+User: tnianios
+WinEvtLog: Security: AUDIT_SUCCESS(4634): Microsoft-Windows-Security-Auditing: tnianios: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was logged off. Subject:  Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1126  Account Name:  tnianios  Account Domain:  CLONE-SYSTEMS  Logon ID:  0xd9e5163  Logon Type:   3  This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer."  4646,1
+** Alert 1305900059.2540498: - windows,
+2011 May 20 10:00:59 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  58571  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900067.2541211: - windows,
+2011 May 20 10:01:07 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  61340  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900071.2541924: - windows,
+2011 May 20 10:01:11 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  60932  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900071.2542637: - windows,authentication_success,
+2011 May 20 10:01:11 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18107 (level 3) -> 'Windows Logon Success.'
+Src IP: (none)
+User: gnianios
+WinEvtLog: Security: AUDIT_SUCCESS(4624): Microsoft-Windows-Security-Auditing: gnianios: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was successfully logged on. Subject:  Security ID:  S-1-0-0  Account Name:  -  Account Domain:  -  Logon ID:  0x0  Logon Type:   3  New Logon:  Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1128  Account Name:  gnianios  Account Domain:  CLONE-SYSTEMS  Logon ID:  0xd9e64c5  Logon GUID:  {00000000-0000-0000-0000-000000000000}  Process Information:  Process ID:  0x0  Process Name:  -  Network Information:  Workstation Name: GPC  Source Network Address: 192.168.0.10  Source Port:  54008  Detailed Authentication Information:  Logon Process:  NtLmSsp   Authentication Package: NTLM  Transited Services: -  Package Name (NTLM only): NTLM V2  Key Length:  128  This event is generated when a logon session is created. It is generated on the computer that was accessed. 
+** Alert 1305900075.2543766: mail  - windows,
+2011 May 20 10:01:15 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18153 (level 10) -> 'Multiple Windows audit failure events.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  61186  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  60932  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  61340  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  58571  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  56494  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  64749  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  53193  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900079.2547646: - windows,
+2011 May 20 10:01:19 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  61286  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900083.2548359: - windows,
+2011 May 20 10:01:23 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18149 (level 3) -> 'Windows User Logoff.'
+Src IP: (none)
+User: rdaw
+WinEvtLog: Security: AUDIT_SUCCESS(4634): Microsoft-Windows-Security-Auditing: rdaw: CLONE-SYSTEMS: CLONWWMAIL1.clone-systems.com: An account was logged off. Subject:  Security ID:  S-1-5-21-2650515781-1991746861-2225058118-1131  Account Name:  rdaw  Account Domain:  CLONE-SYSTEMS  Logon ID:  0xd93cfe3  Logon Type:   8  This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer."  4646,1
+** Alert 1305900092.2549065: - windows,
+2011 May 20 10:01:32 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  65495  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900124.2549778: - windows,
+2011 May 20 10:02:04 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  53044  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900144.2550491: - windows,
+2011 May 20 10:02:24 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  51896  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36
+** Alert 1305900148.2551204: - windows,
+2011 May 20 10:02:28 (CLONWWMAIL1) 192.168.3.100->WinEvtLog
+Rule: 18105 (level 4) -> 'Windows audit failure event.'
+Src IP: (none)
+User: (no user)
+WinEvtLog: Security: AUDIT_FAILURE(5159): Microsoft-Windows-Security-Auditing: (no user): no domain: CLONWWMAIL1.clone-systems.com: The Windows Filtering Platform has blocked a bind to a local port. Application Information:  Process ID:  4424  Application Name: \device\harddiskvolume1\program files\microsoft\exchange server\v14\bin\edgetransport.exe  Network Information:  Source Address:  0.0.0.0  Source Port:  64958  Protocol:  17  Filter Information:  Filter Run-Time ID: 0  Layer Name:  %%14608  Layer Run-Time ID: 36

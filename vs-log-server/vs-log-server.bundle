@@ -1,0 +1,97 @@
+<Bundle name="vs-log-server" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <services>
+  	<Service>
+		<name>LogServer</name>
+		<priority>100</priority>
+		<!-- prefer to run on a logServer type first -->
+		<resourceSelection>type containsAny 'IndexStore,LogServer,Management,Failover'</resourceSelection>
+		<fork>true</fork>
+		<background>true</background>
+		<pauseSeconds>1</pauseSeconds>
+      	<instanceCount>-1</instanceCount>
+		<costPerUnit>10</costPerUnit>
+		<script>
+			<![CDATA[
+				
+			
+			
+				println "\n************************** Starting LogServer/IndexStore **************************"
+				try {
+					String logServerROOT = com.liquidlabs.log.LogProperties.getLogServerRoot();
+					String serverRoot = System.getProperty("log.server.root",logServerROOT);
+
+					if (Boolean.getBoolean("logserver.debug")) {
+					    processMaker.java "-cp:system-bundles/vs-log-server-1.0/lib/*", "com.liquidlabs.logserver.LogServerImpl", "11090", lookupSpaceAddress, serverRoot, "-Xms32M", "-Xmx256M", "-Dlog4j.filename=../../work/logserver.log","-Xdebug","-Xrunjdwp:transport=dt_socket,address=8995,server=y,suspend=n", "-Dcom.sun.management.jmxremote.port=18996","-Dcom.sun.management.jmxremote.ssl=false", "-Dcom.sun.management.jmxremote.authenticate=false"
+                    } else {
+                        processMaker.java "-cp:system-bundles/vs-log-server-1.0/lib/*", "com.liquidlabs.logserver.LogServerImpl", "11090", lookupSpaceAddress, serverRoot, "-Xms32M", "-Xmx256M", "-Dlog4j.filename=../../work/logserver.log";
+                    }
+				} catch (Throwable t) {
+					t.printStackTrace();
+					throw new RuntimeException("Failed to start LogServer:" + t.getMessage(), t);
+				}
+			]]>      
+		</script>
+	</Service>
+   <Service>
+      	<name>LogForwarder</name>
+	  	<priority>10</priority>	
+		<resourceSelection>type contains 'Forwarder'</resourceSelection>
+      	<fork>false</fork>
+      	<background>true</background>
+		<pauseSeconds>120</pauseSeconds>
+      	<dependencies>vs-log-server-1.0:LogServer</dependencies>
+		<instanceCount>-1</instanceCount>
+		<costPerUnit>2</costPerUnit>      	
+      	<script>
+       		<![CDATA[
+				import com.liquidlabs.logserver.*
+				import com.liquidlabs.log.*
+				import com.liquidlabs.common.monitor.*
+				import com.liquidlabs.log.reader.*
+				import com.liquidlabs.log.space.*
+				import com.liquidlabs.log.index.*
+				import com.liquidlabs.log.indexer.*
+				import com.liquidlabs.common.concurrent.*
+				import com.liquidlabs.transport.proxy.*
+				import org.joda.time.DateTime;
+
+				try {
+					println "************************** Starting Forwarder **************************"
+
+					indexer = Indexers.get();
+
+					logSpace = LogSpaceImpl.getRemoteService("ForwarderScript", lookupSpace, proxyFactory);
+					aggSpace = AggSpaceImpl.getRemoteService("ForwarderScript", lookupSpace, proxyFactory);
+					logServer = LogServerImpl.getRemoteService("ForwarderScript", lookupSpace, proxyFactory);
+					logReaderFactory = new LogReaderFactoryForForwarders(logServer, proxyFactory, indexer);
+	
+					// AggSpace is not needed on the forwarder - 
+					int tailerThreads = LogProperties.getTailerThreads();
+
+					scheduler = ExecutorService.newScheduledThreadPool(tailerThreads, "Ftailer", Thread.NORM_PRIORITY);
+
+					service = new AgentLogServiceImpl(logSpace, aggSpace, scheduler, proxyFactory, indexer, resourceId, logReaderFactory, exceptionHandler, lookupSpace);
+					serviceManager.registerLifeCycleObject(service)
+					service.start()
+	
+					logAgentAdmin = new AgentLogServiceAdminImpl(proxyFactory, indexer, new LoggingEventMonitor());
+					
+				} catch (Throwable t) {
+					t.printStackTrace();
+					println "************************** Failed to start LogForwarder, ex:" + t.getMessage();
+					throw new RuntimeException("Failed to start Forwarder:" + t.getMessage(), t); 
+				}
+
+			]]>
+		</script>
+    </Service>
+  </services>
+</Bundle>

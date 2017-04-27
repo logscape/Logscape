@@ -1,0 +1,57 @@
+.row-fluid
+    .hiddenPanel(style="width:5px;display:none")
+        a.fa.fa-step-forward#configureShow(href="#" style="float:left;padding:5px;")
+
+    .span2.darkSidePanel.configurePanel(style='margin-left:0px;')
+        .retract(style="margin-top:5px;padding-top:5px;float:right;padding-right:5px;")
+            a.fa.fa-step-backward#configureHide(href="#" style="float:left;color:grey;")
+        ul.nav.nav-list#facets_container
+            li.facet-header#configHeader(style='margin-top:8px;color:white;') Configure
+            li.divider
+
+
+        ul#tabs.configureNav.nav.nav-pills.nav-stacked(data-tabs="tabs")
+            li.active.Team_Administrator_Role
+                .facetMicroDiv.facetHoverColour &nbsp;
+                i.fa.fa-signal.white
+                a#adminTab(href="#tabs-sys" data-toggle="tab")	        System
+            li.Team_Administrator_Role
+                .facetMicroDiv.facetHoverColour &nbsp;
+                i.fa.fa-cloud.white
+                a#dsTab.loadLangs(href="#tabs-ds" data-toggle="tab")    	    Data Sources
+            li.System_Administrator_Role
+                .facetMicroDiv.facetHoverColour &nbsp;
+                i.fa.fa-cube.white
+                a#dtTab.loadLangs(href="#tabs-dt" data-toggle="tab")            Data Types
+            li.System_Administrator_Role
+                .facetMicroDiv.facetHoverColour &nbsp;
+                i.fa.fa-cogs.white
+                a#deployTab.loadLangs(href="#tabs-deploy" data-toggle="tab") Deployment
+            li.System_Administrator_Role
+                .facetMicroDiv.facetHoverColour &nbsp;
+                i.fa.fa-sitemap.white
+                a#agentsTab.loadLangs(href="#tabs-agents" data-toggle="tab")       Agents
+            li.System_Administrator_Role
+                .facetMicroDiv.facetHoverColour &nbsp;
+                i.fa.fa-users.white
+                a#usersTab.loadLangs(href="#tabs-users"  data-toggle="tab")	    Users
+            li.System_Administrator_Role
+                .facetMicroDiv.facetHoverColour &nbsp;
+                i.fa.fa-database.white
+                a#configTab.loadLangs(href="#tabs-config"  data-toggle="tab")        Backup
+            li.Team_Administrator_Role
+                .facetMicroDiv.facetHoverColour &nbsp;
+                i.fa.fa-bell-o.white
+                a#alertsTab.loadLangs(href="#tabs-alerts"  data-toggle="tab")        Alerting
+
+
+    .span10(style='margin-left: 10px;')
+        .tab-content#settings-tabs
+            =render("/includes/settings-tab-sys.jade")
+            =render("/includes/settings-tab-datasource.jade")
+            =render("/includes/settings-tab-datatype.jade")
+            =render("/includes/settings-tab-agents.jade")
+            =render("/includes/settings-tab-deploy.jade")
+            =render("/includes/settings-tab-users.jade")
+            =render("/includes/settings-tab-config.jade")
+            =render("/includes/settings-tab-alerts.jade")

@@ -1,0 +1,49 @@
+#jmx_operation_widget.widget_size(style='display:none; height:95%; padding-top:10px; text-align:center' widget-width='2' widget-height='2' data-minx="2" data-miny="1")
+    .editWidget.editBlock
+        .cModalDialog
+            div
+                .cModalDialogHeader
+                    .fa.coloredText.fa-sort-amount-desc(style="display:inline;")
+                    p.coloredText#jmxOperationTitle
+                    hr.borderColor(style="margin:5px")
+                    br
+                .span12
+                    .span11.actionBlock.flatBlue1.padActionBlock.popoutColor
+                        .span3.popoutColor.popoutColor
+                            p#jmxOperationUrl.coloredText
+                            i.icon-black.fa.fa-th.coloredText(style="display:inline;")
+                        .span9.popoutColor
+                            input.span11.coloredInputBG.coloredText.coloredBorder#url(placeholder="HOST:PORT OR service:jmx:rmi://localhost:8989/jndi/rmi://localhost:8989/jmxrmi" title="HOST:PORT OR service:jmx:rmi://localhost:8989/jndi/rmi://localhost:8989/jmxrmi")
+                    .span11.actionBlock.flatBlue2.padActionBlock.popoutColor
+                        .span3.popoutColor
+                            p.coloredText#jmxOperationMbean
+                            i.coloredText.icon-black.fa.fa-th(style="display:inline;")
+                        .span9.popoutColor
+                            input.span11#bean(placeholder="com.XXX.YYY:Service=Accounts" title="com.XXX.YYY:Service=Accounts")
+                    .span11.actionBlock.flatBlue3.padActionBlock.popoutColor
+                        .span3.popoutColor
+                            p.coloredText#jmxOperationOperation
+                            i.coloredText.icon-black.fa.fa-th(style="display:inline;")
+                        .span9.popoutColor
+                            input.span11#operation(placeholder="listUsers" title="listUsers")
+                    .span11.actionBlock.flatBlue4.padActionBlock.popoutColor
+                        .span3.popoutColor
+                            p.coloredText#jmxOperationRunOnSearch
+                            i.coloredText.icon-black.fa.fa-th(style="display:inline;")
+                        .span9.popoutColor
+                            .flatCheckboxThree(style="margin-left:20px;margin-top:-5px;")
+                                input.legendControl.coloredText#autoUpdate(type="checkbox" value="1"  name="")
+                                label(for="autoUpdate")
+
+
+                .cModalDialogClose
+                    a.cModalDialogA.closeEdit
+                        i.icon-white.fa.fa-check(style="display:inline;")
+                        p#jmxOperationOkay
+
+    h4#fullName Name
+    .controls.span12
+        .params.span6
+        a.span3.btn#invoke Invoke
+    .row-fluid(style="overflow:auto;height:80%")
+        p#response(style="text-align:left;padding:5px;")

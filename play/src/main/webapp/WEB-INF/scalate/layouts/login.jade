@@ -1,0 +1,42 @@
+-@ val body: String
+-@ val title: String = "Logscape, Search it! "
+-@ val isLicensed: Boolean = com.liquidlabs.services.ServicesLookup.isLicensed
+!!!
+html
+    head
+        title= title
+        meta(content="ie=edge" http-equiv="X-UA-Compatible")
+        link(href={uri("/css/bootstrap.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/bootstrap-responsive.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/font-awesome.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/main.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/images/favicon2.ico")} rel="shortcut icon" type="image/png")
+        script(src={uri("/javascripts/libs/jquery/jquery.js")} type="text/javascript")
+        script(src={uri("/javascripts/lang.js?1999")} type="text/javascript")
+        script(src={uri("/javascripts/login.js?1999")} type="text/javascript")
+        :css
+            body {
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .push {height: 5px;}
+            footer {
+                padding: 0 10px 0 10px;
+                border-top: 1px;
+                background-color: white;
+            }
+
+    body.headLine
+        - if(!isLicensed)
+            .span12.ontop
+                center
+                    a#loginlicenseMessage(href="http://logscape.com/index.html#pricing" style="color:grey" target="_blank") Visit logscape.com for the enterprise edition
+            .row.loginbanner
+            
+
+        .container.maxWidthDiv.fade.in.span12(style='height:900px;width:99%;padding-top:100px;overflow:hidden;')
+            !~~ body
+
+

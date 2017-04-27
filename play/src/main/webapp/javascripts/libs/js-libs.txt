@@ -1,0 +1,89 @@
+.:
+total 48
+drwxr-xr-x+ 1 Neiil None     0 Jul 10  2013 bootstrap
+drwxr-xr-x+ 1 Neiil None     0 Jan 24 09:24 d3
+-rwxr-xr-x+ 1 Neiil None  9526 Nov  1 21:23 detect-zoom.js
+-rwxr-xr-x+ 1 Neiil None 19267 May  4  2013 dragtable.js
+drwxr-xr-x+ 1 Neiil None     0 Mar 18 16:53 jquery
+-rw-r--r--+ 1 Neiil None     0 Apr  2 19:45 js-libs.txt
+drwxr-xr-x+ 1 Neiil None     0 Dec  7 12:05 nvd3
+drwxr-xr-x+ 1 Neiil None     0 Feb 20  2013 popbox
+drwxr-xr-x+ 1 Neiil None     0 Feb 20  2013 require
+drwxr-xr-x+ 1 Neiil None     0 Feb 24 19:50 rickshaw
+drwxr-xr-x+ 1 Neiil None     0 Sep 20  2013 test
+drwxr-xr-x+ 1 Neiil None     0 Feb 20  2013 underscore
+
+./bootstrap:
+total 232
+-rwxr-xr-x+ 1 Neiil None 20992 Jul 10  2013 bootbox.js
+-rwxr-xr-x+ 1 Neiil None 56478 Feb 20  2013 bootstrap.js
+-rwxr-xr-x+ 1 Neiil None 25750 Feb 20  2013 bootstrap.min.js
+-rwxr-xr-x+ 1 Neiil None  3328 Feb 20  2013 bootstrap-affix.js
+-rwxr-xr-x+ 1 Neiil None  2369 Feb 20  2013 bootstrap-alert.js
+-rwxr-xr-x+ 1 Neiil None  2681 Feb 20  2013 bootstrap-button.js
+-rwxr-xr-x+ 1 Neiil None  5208 Feb 20  2013 bootstrap-carousel.js
+-rwxr-xr-x+ 1 Neiil None  4461 Feb 20  2013 bootstrap-collapse.js
+-rwxr-xr-x+ 1 Neiil None 30005 Jul  5  2013 bootstrap-datetimepicker.min.js
+-rwxr-xr-x+ 1 Neiil None  3963 Feb 20  2013 bootstrap-dropdown.js
+-rwxr-xr-x+ 1 Neiil None  6424 Feb 20  2013 bootstrap-modal.js
+-rwxr-xr-x+ 1 Neiil None  2993 Feb 20  2013 bootstrap-popover.js
+-rwxr-xr-x+ 1 Neiil None  4401 Feb 20  2013 bootstrap-scrollspy.js
+-rwxr-xr-x+ 1 Neiil None  7607 Mar 28  2013 bootstrap-select.min.js
+-rwxr-xr-x+ 1 Neiil None  3351 Feb 20  2013 bootstrap-tab.js
+-rwxr-xr-x+ 1 Neiil None  7998 Feb 20  2013 bootstrap-tooltip.js
+-rwxr-xr-x+ 1 Neiil None  1756 Feb 20  2013 bootstrap-transition.js
+-rwxr-xr-x+ 1 Neiil None  7787 Feb 20  2013 bootstrap-typeahead.js
+-rwxr-xr-x+ 1 Neiil None  7439 Feb 20  2013 bootstrapx-clickover.js
+
+./d3:
+total 292
+-rwxr-xr-x+ 1 Neiil None 146804 Jan 24 09:24 d3.v3.js
+-rwxr-xr-x+ 1 Neiil None 142511 Dec  7 12:05 datamaps.world.min.js
+-rwxr-xr-x+ 1 Neiil None   5716 Dec  7 12:05 topojson.v1.min.js
+
+./jquery:
+total 1356
+-rwxr-xr-x+ 1 Neiil None  10363 May  4  2013 dataTables.colReorder.min.js
+-rwxr-xr-x+ 1 Neiil None  21492 Jun 12  2013 debiki-utterscroll.js
+-rwxr-xr-x+ 1 Neiil None 377587 Nov 18 20:15 jquery.dataTables.js
+-rwxr-xr-x+ 1 Neiil None   2404 Mar 28  2013 jquery.doubleScroll.js
+-rwxr-xr-x+ 1 Neiil None   7016 Jul  5  2013 jquery.gracefulWebSocket.js
+-rwxr-xr-x+ 1 Neiil None 109129 Nov  6 20:21 jquery.gridster.with-extras.js
+-rwxr-xr-x+ 1 Neiil None  10967 Mar 18 16:53 jquery.html5_upload.js
+-rwxr-xr-x+ 1 Neiil None  24891 Mar 18 16:53 jquery.jeditable.js
+-rwxr-xr-x+ 1 Neiil None  92791 Feb 20  2013 jquery.js
+-rwxr-xr-x+ 1 Neiil None   2177 Feb 20  2013 jquery.json-2.3.min.js
+-rwxr-xr-x+ 1 Neiil None  15495 Jul 31  2013 jquery.kinetic.js
+-rwxr-xr-x+ 1 Neiil None   7340 Feb  1 12:31 jquery.mousewheel.js
+-rwxr-xr-x+ 1 Neiil None   5583 Jun 21  2013 jquery.simple-color.min.js
+-rwxr-xr-x+ 1 Neiil None 122900 Feb 20  2013 jquery.sparkline.js
+-rwxr-xr-x+ 1 Neiil None   1261 Feb 20  2013 jquery.websocket-0.0.1.js
+-rwxr-xr-x+ 1 Neiil None   3361 Jun 12  2013 jquery-scrollable.js
+-rwxr-xr-x+ 1 Neiil None 450111 Nov 13 21:35 jquery-ui-1.9.2.custom.js
+-rwxr-xr-x+ 1 Neiil None  64697 Feb 20  2013 jquery-ui-timepicker-addon.js
+-rwxr-xr-x+ 1 Neiil None  22328 Apr 21  2013 nanoScroller.js
+
+./nvd3:
+total 544
+-rwxr-xr-x+ 1 Neiil None 553215 Dec  7 12:05 nv.d3.js
+
+./popbox:
+total 8
+-rwxr-xr-x+ 1 Neiil None 1605 Feb 20  2013 popbox.js
+-rwxr-xr-x+ 1 Neiil None  856 Feb 20  2013 popbox.min.js
+
+./require:
+total 0
+
+./rickshaw:
+total 88
+-rwxr-xr-x+ 1 Neiil None 88327 Feb 24 19:50 rickshaw.js
+
+./test:
+total 25
+-rwxr-xr-x+ 1 Neiil None   110 Sep 20  2013 html5.js
+-rwxr-xr-x+ 1 Neiil None 21662 Sep 20  2013 jasmine-jquery.js
+
+./underscore:
+total 16
+-rwxr-xr-x+ 1 Neiil None 13432 Feb 20  2013 underscore-min.js

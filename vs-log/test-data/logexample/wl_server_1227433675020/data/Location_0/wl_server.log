@@ -1,0 +1,125 @@
+####<Nov 13, 2008 12:00:38 PM IST> <Notice> <Security> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402438755> <BEA-090082> <Security initializing using security realm myrealm.> 
+####<Nov 13, 2008 12:00:53 PM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Main Thread> <<WLS Kernel>> <> <> <1205402453677> <BEA-000365> <Server state changed to STANDBY> 
+####<Nov 13, 2008 12:00:53 PM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Main Thread> <<WLS Kernel>> <> <> <1205402453677> <BEA-000365> <Server state changed to STARTING> 
+####<Nov 13, 2008 12:01:11 PM IST> <Warning> <EJB> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402471974> <BEA-010202> <Call-by-reference is not enabled for the EJB 'ReviewManagerBean'. The server will have better performance if it is enabled. To enable call-by-reference, set the enable-call-by-reference element to True in the weblogic-ejb-jar.xml deployment descriptor for this EJB.> 
+####<Nov 13, 2008 12:01:12 PM IST> <Warning> <EJB> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402472068> <BEA-010202> <Call-by-reference is not enabled for the EJB 'ReviewListenerBean'. The server will have better performance if it is enabled. To enable call-by-reference, set the enable-call-by-reference element to True in the weblogic-ejb-jar.xml deployment descriptor for this EJB.> 
+####<Nov 13, 2008 12:01:42 PM IST> <Notice> <Log Management> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402502568> <BEA-170027> <The server initialized the domain log broadcaster successfully. Log messages will now be broadcasted to the domain log.> 
+####<Nov 13, 2008 12:01:42 PM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Main Thread> <<WLS Kernel>> <> <> <1205402502912> <BEA-000365> <Server state changed to ADMIN> 
+####<Nov 13, 2008 12:01:42 PM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Main Thread> <<WLS Kernel>> <> <> <1205402502912> <BEA-000365> <Server state changed to RESUMING> 
+####<Nov 13, 2008 12:01:43 PM IST> <Notice> <Security> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402503630> <BEA-090171> <Loading the identity certificate and private key stored under the alias DemoIdentity from the jks keystore file C:\bea\WLSERV~1.0\server\lib\DemoIdentity.jks.> 
+####<Nov 13, 2008 12:01:43 PM IST> <Notice> <Security> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402503943> <BEA-090169> <Loading trusted certificates from the jks keystore file C:\bea\WLSERV~1.0\server\lib\DemoTrust.jks.> 
+####<Nov 13, 2008 12:01:43 PM IST> <Notice> <Security> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402503958> <BEA-090169> <Loading trusted certificates from the jks keystore file C:\bea\JROCKI~1\jre\lib\security\cacerts.> 
+####<Nov 13, 2008 12:01:44 PM IST> <Notice> <Server> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402504224> <BEA-002613> <Channel "DefaultSecure" is now listening on 10.0.0.61:7002 for protocols iiops, t3s, ldaps, https.> 
+####<Nov 13, 2008 12:01:44 PM IST> <Notice> <Server> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402504224> <BEA-002613> <Channel "Default" is now listening on 10.0.0.61:7001 for protocols iiop, t3, ldap, snmp, http.> 
+####<Nov 13, 2008 12:01:44 PM IST> <Notice> <Server> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402504224> <BEA-002613> <Channel "Default[1]" is now listening on 127.0.0.1:7001 for protocols iiop, t3, ldap, snmp, http.> 
+####<Nov 13, 2008 12:01:44 PM IST> <Notice> <Server> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402504224> <BEA-002613> <Channel "DefaultSecure[1]" is now listening on 127.0.0.1:7002 for protocols iiops, t3s, ldaps, https.> 
+####<Nov 13, 2008 12:01:44 PM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205402504224> <BEA-000331> <Started WebLogic Admin Server "examplesServer" for domain "wl_server" running in Development Mode> 
+####<Nov 13, 2008 12:01:44 PM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Main Thread> <<WLS Kernel>> <> <> <1205402504912> <BEA-000365> <Server state changed to RUNNING> 
+####<Nov 13, 2008 12:01:44 PM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Main Thread> <<WLS Kernel>> <> <> <1205402504912> <BEA-000360> <Server started in RUNNING mode> 
+####<Nov 13, 2008 12:29:42 PM IST> <Error> <WebLogicServer> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205404182896> <BEA-000337> <[STUCK] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)' has been busy for "653" seconds working on the request "Http Request: /logeye/tools/addresses/verifyAccount.jsp", which is more than the configured time (StuckThreadMaxTime) of "600" seconds. Stack trace:
+Thread-16 "[STUCK] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=1, DAEMON> {
+    -- Waiting for notification on: com.sshtools.j2ssh.transport.SshMessageStore@13486e1[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    java.lang.Object.wait(Native Method)
+    com.sshtools.j2ssh.transport.SshMessageStore.getMessage(Unknown Source)
+    ^-- Lock released while waiting: com.sshtools.j2ssh.transport.SshMessageStore@13486e1[fat lock]
+    com.sshtools.j2ssh.connection.ChannelInputStream.collectNextMessage(Unknown Source)
+    com.sshtools.j2ssh.connection.ChannelInputStream.block(Unknown Source)
+    com.sshtools.j2ssh.connection.ChannelInputStream.read(Unknown Source)
+    sun.nio.cs.StreamDecoder$CharsetSD.readBytes(StreamDecoder.java:411)
+    sun.nio.cs.StreamDecoder$CharsetSD.implRead(StreamDecoder.java:453)
+    sun.nio.cs.StreamDecoder.read(StreamDecoder.java:183)
+    ^-- Holding lock: java.io.InputStreamReader@134d472[recursive lock]
+    java.io.InputStreamReader.read(InputStreamReader.java:167)
+    java.io.BufferedReader.fill(BufferedReader.java:136)
+    java.io.BufferedReader.readLine(BufferedReader.java:299)
+    ^-- Holding lock: java.io.InputStreamReader@134d472[thin lock]
+    java.io.BufferedReader.readLine(BufferedReader.java:362)
+    xpolog.eye.media.telsh.TelShManager.updateLessVersion(TelShManager.java:1217)
+    xpolog.eye.media.telsh.TelShManager.connect(TelShManager.java:249)
+    ^-- Holding lock: xpolog.eye.media.telsh.TelShManager@13684e6[thin lock]
+    xpolog.eye.media.AbstractMedia.verify(AbstractMedia.java:108)
+    xpolog.eye.media.telsh.TelShManager.verify(TelShManager.java:548)
+    jsp_servlet._tools._addresses.__verifyaccount._jspService(__verifyaccount.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:226)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:124)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:283)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:175)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3370)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(Unknown Source)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2117)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2023)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1359)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:200)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:172)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+> 
+####<Nov 13, 2008 12:30:42 PM IST> <Error> <WebLogicServer> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205404242912> <BEA-000337> <[STUCK] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)' has been busy for "713" seconds working on the request "Http Request: /logeye/tools/addresses/verifyAccount.jsp", which is more than the configured time (StuckThreadMaxTime) of "600" seconds. Stack trace:
+Thread-16 "[STUCK] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=1, DAEMON> {
+    -- Waiting for notification on: com.sshtools.j2ssh.transport.SshMessageStore@13486e1[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    java.lang.Object.wait(Native Method)
+    com.sshtools.j2ssh.transport.SshMessageStore.getMessage(Unknown Source)
+    ^-- Lock released while waiting: com.sshtools.j2ssh.transport.SshMessageStore@13486e1[fat lock]
+    com.sshtools.j2ssh.connection.ChannelInputStream.collectNextMessage(Unknown Source)
+    com.sshtools.j2ssh.connection.ChannelInputStream.block(Unknown Source)
+    com.sshtools.j2ssh.connection.ChannelInputStream.read(Unknown Source)
+    sun.nio.cs.StreamDecoder$CharsetSD.readBytes(StreamDecoder.java:411)
+    sun.nio.cs.StreamDecoder$CharsetSD.implRead(StreamDecoder.java:453)
+    sun.nio.cs.StreamDecoder.read(StreamDecoder.java:183)
+    ^-- Holding lock: java.io.InputStreamReader@134d472[recursive lock]
+    java.io.InputStreamReader.read(InputStreamReader.java:167)
+    java.io.BufferedReader.fill(BufferedReader.java:136)
+    java.io.BufferedReader.readLine(BufferedReader.java:299)
+    ^-- Holding lock: java.io.InputStreamReader@134d472[thin lock]
+    java.io.BufferedReader.readLine(BufferedReader.java:362)
+    xpolog.eye.media.telsh.TelShManager.updateLessVersion(TelShManager.java:1217)
+    xpolog.eye.media.telsh.TelShManager.connect(TelShManager.java:249)
+    ^-- Holding lock: xpolog.eye.media.telsh.TelShManager@13684e6[thin lock]
+    xpolog.eye.media.AbstractMedia.verify(AbstractMedia.java:108)
+    xpolog.eye.media.telsh.TelShManager.verify(TelShManager.java:548)
+    jsp_servlet._tools._addresses.__verifyaccount._jspService(__verifyaccount.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:226)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:124)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:283)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:175)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3370)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(Unknown Source)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2117)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2023)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1359)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:200)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:172)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+> 
+####<Nov 13, 2008 2:53:33 PM IST> <Error> <HTTP> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <> <1205412813443> <BEA-101214> <Included resource or file "/logeye/logic/widgets/xtree/jsp/treeIncluder.jsp" not found from requested resource "/logeye/logic/detection/detectionGate.jsp".> 
+####<Nov 13, 2008 2:53:40 PM IST> <Error> <HTTP> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <> <1205412820912> <BEA-101214> <Included resource or file "/logeye/logic/widgets/xtree/jsp/treeIncluder.jsp" not found from requested resource "/logeye/logic/detection/detectionGate.jsp".> 
+####<Nov 13, 2008 4:00:15 PM IST> <Error> <HTTP> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <> <1205416815693> <BEA-101214> <Included resource or file "/logeye/logic/widgets/xtree/jsp/treeIncluder.jsp" not found from requested resource "/logeye/logic/detection/detectionGate.jsp".> 
+####<Nov 13, 2008 4:10:12 PM IST> <Error> <HTTP> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <> <1205417412927> <BEA-101214> <Included resource or file "/logeye/logic/widgets/xtree/jsp/treeIncluder.jsp" not found from requested resource "/logeye/logic/detection/detectionGate.jsp".> 
+####<Nov 13, 2008 4:10:36 PM IST> <Error> <HTTP> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <> <1205417436099> <BEA-101214> <Included resource or file "/logeye/logic/widgets/xtree/jsp/treeIncluder.jsp" not found from requested resource "/logeye/logic/detection/detectionGate.jsp".> 
+####<Nov 13, 2008 4:14:28 PM IST> <Error> <HTTP> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <> <1205417668427> <BEA-101214> <Included resource or file "/logeye/logic/widgets/xtree/jsp/treeIncluder.jsp" not found from requested resource "/logeye/logic/detection/detectionGate.jsp".> 
+####<Nov 13, 2008 4:16:57 PM IST> <Error> <HTTP> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <> <1205417817490> <BEA-101214> <Included resource or file "/logeye/logic/widgets/xtree/jsp/treeIncluder.jsp" not found from requested resource "/logeye/logic/detection/detectionGate.jsp".> 
+####<Nov 13, 2008 5:00:28 PM IST> <Notice> <HTTP> <serverwin> <examplesServer> <[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205420428068> <BEA-101350> <Web application(s) /logeye of module logeye.war of application logeye has 3 pending session(s) respectively.> 
+####<Nov 13, 2008 5:00:28 PM IST> <Notice> <HTTP> <serverwin> <examplesServer> <[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205420428084> <BEA-101351> <Server has detected pending sessions while gracefully transitioning webapp module logeye.war of application logeye from running to admin mode. Server will wait for pending sessions to either become invalidated or timed out. The current timeout value is 3,600 seconds. To terminate sessions immediately, use the -force option.> 
+####<Nov 13, 2008 5:00:28 PM IST> <Notice> <HTTP> <serverwin> <examplesServer> <[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205420428084> <BEA-101354> <Web application(s) /logeye of module logeye.war of application logeye still have pending sessions after 0 minutes of initiating transition from running to admin mode. Waiting for pending sessions to finish.> 
+####<Nov 13, 2008 5:00:58 PM IST> <Notice> <HTTP> <serverwin> <examplesServer> <[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205420458099> <BEA-101354> <Web application(s) /logeye of module logeye.war of application logeye still have pending sessions after 0 minutes of initiating transition from running to admin mode. Waiting for pending sessions to finish.> 
+####<Nov 13, 2008 5:01:28 PM IST> <Notice> <HTTP> <serverwin> <examplesServer> <[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205420488099> <BEA-101354> <Web application(s) /logeye of module logeye.war of application logeye still have pending sessions after 1 minutes of initiating transition from running to admin mode. Waiting for pending sessions to finish.> 
+####<Nov 13, 2008 5:01:45 PM IST> <Notice> <HTTP> <serverwin> <examplesServer> <[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1205420505068> <BEA-101357> <A force graceful production to admin mode transition is initiated. The webapp module logeye.war of application logeye is ready to go into admin mode.> 
+####<Nov 13, 2008 5:04:02 PM IST> <Warning> <netuix> <serverwin> <examplesServer> <[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'> <weblogic> <> <> <1205420642099> <BEA-423420> <Redirect is executed in begin or refresh action. Redirect url is /console/console.portal?_nfpb=true&_pageLabel=WebAppApplicationOverviewPage&WebAppApplicationOverviewPortlethandle=com.bea.console.handles.AppDeploymentHandle%28%22com.bea%3AName%3Dlogeye%2CType%3DAppDeployment%22%29.> 
+####<Nov 16, 2008 9:35:31 AM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Thread-1> <<WLS Kernel>> <> <> <1205652931054> <BEA-000388> <JVM called WLS shutdown hook. The server will force shutdown now> 
+####<Nov 16, 2008 9:35:31 AM IST> <Alert> <WebLogicServer> <serverwin> <examplesServer> <Thread-1> <<WLS Kernel>> <> <> <1205652931054> <BEA-000396> <Server shutdown has been requested by <WLS Kernel>> 
+####<Nov 16, 2008 9:35:31 AM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Thread-1> <<WLS Kernel>> <> <> <1205652931117> <BEA-000365> <Server state changed to FORCE_SUSPENDING> 
+####<Nov 16, 2008 9:35:31 AM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Thread-1> <<WLS Kernel>> <> <> <1205652931446> <BEA-000365> <Server state changed to ADMIN> 
+####<Nov 16, 2008 9:35:31 AM IST> <Notice> <WebLogicServer> <serverwin> <examplesServer> <Thread-1> <<WLS Kernel>> <> <> <1205652931446> <BEA-000365> <Server state changed to FORCE_SHUTTING_DOWN> 
+####<Nov 16, 2008 9:35:31 AM IST> <Notice> <Server> <serverwin> <examplesServer> <DynamicListenThread[Default]> <<WLS Kernel>> <> <> <1205652931555> <BEA-002607> <Channel "Default" listening on 10.0.0.61:7001 was shutdown.> 
+####<Nov 16, 2008 9:35:31 AM IST> <Notice> <Server> <serverwin> <examplesServer> <DynamicSSLListenThread[DefaultSecure]> <<WLS Kernel>> <> <> <1205652931555> <BEA-002607> <Channel "DefaultSecure" listening on 10.0.0.61:7002 was shutdown.> 
+####<Nov 16, 2008 9:35:31 AM IST> <Notice> <Server> <serverwin> <examplesServer> <DynamicListenThread[Default[1]]> <<WLS Kernel>> <> <> <1205652931555> <BEA-002607> <Channel "Default[1]" listening on 127.0.0.1:7001 was shutdown.> 
+####<Nov 16, 2008 9:35:31 AM IST> <Notice> <Server> <serverwin> <examplesServer> <DynamicSSLListenThread[DefaultSecure[1]]> <<WLS Kernel>> <> <> <1205652931555> <BEA-002607> <Channel "DefaultSecure[1]" listening on 127.0.0.1:7002 was shutdown.> 

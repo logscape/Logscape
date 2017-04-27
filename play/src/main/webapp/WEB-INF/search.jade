@@ -1,0 +1,216 @@
+.row-fluid(style="")
+    .span2#sideNav.darkSidePanel
+        .sidebar-nav(style="padding-top:0px; ")
+            / .retract(style="margin-top:5px;padding-top:5px;padding-right:5px;float:right;")
+            /    a.fa.fa-step-backward#facinataHide(href="#" style="float:left;color:grey;")
+
+            ul.nav.nav-tabs
+                li.active.facetTab(style="width:50%;text-align: center;")
+                    a#searchFields(href="#tab-fields" data-toggle="tab") Fields
+
+                li.sourcesTab.dont-print(style="width:50%;text-align: center;")
+                    a#tab-search-ds-show#searchDatasource(href="#tab-search-sources" data-toggle="tab")    Sources
+            .tab-content
+                .tab-pane#tab-fields
+                    ul.nav.nav-list#facets_container
+                        li.facet-header(id="basicIDD")
+                            span#dataTypeLabel DataType: basic&nbsp;
+                            section.autoRunSection.dont-print(title="Toggle Search AutoRun")
+                                input#autoRunCheck(type="checkbox" checked)
+                                label(for="autoRunCheck")
+                        li
+                            input.dark-filter.search-query.facet-filter.dont-print#dynamicFieldFilter(type="text" placeholder="Filter")
+
+                .tab-pane.dont-print#tab-search-sources(style='overflow:hidden;')
+                    li
+                        input.dark-filter.search-query.facet-filter.dont-print#recentFilter(type="text" placeholder="Filter")
+                    br
+                    a.white#tagsClick(href="#")
+                        i.fa.fa-minus-square-o.white
+                        |  Tags
+                    ul.nav.nav-list.nav-collapsible#facets_ds_container.active
+                    br
+                    a.white#hostsClick(href="#")
+                        i.fa.fa-minus-square-o.white
+                        |  Hosts
+                    ul.nav.nav-list.nav-collapsible#facets_host_container.active
+                    br
+                    a.white#typesClick(href="#")
+                        i.fa.fa-minus-square-o.white
+                        |  Types
+                    ul.nav.nav-list.nav-collapsible#facets_type_container.active
+
+    .content.span10#mainSearchPage(style="margin-left:14px")
+        #showNav(style="padding-top:5px;float:left;display:none")
+            a.fa.fa-step-forward#facinataShow(href="#" style="float:left;color:grey;padding-right:5px")
+
+        .row-fluid
+            .titleBlock(style="margin:3px;padding-left:0px;padding-top:5px;")
+                span.editSearchTitle#searchTitle(style="display:inline;font-size: 31.5px;") New Search
+                .dont-print(style="display:inline;")
+                    a#openSearch.fa.fa-folder-open.no-link-uline(href='#' style="display: inline-block;font-size: 14px" title='Open')
+                    a#newSearch.fa.fa-file.no-link-uline(href='#' style="display: inline-block;font-size: 14px" title='New')
+                    a#searchieSaveSearch.fa.fa-check.no-link-uline(href='#' style="display: none;font-size: 14px" title='Save')
+                    a#deleteSearch.fa.fa-trash-o.no-link-uline(href='#' style="display: none;font-size: 14px" title='Delete')
+                    a#printSearch.fa.fa-print.no-link-uline(href='#' style="display: inline-block;font-size: 14px" title='Print')
+                    .alert.alert-info(style="display:inline-block;width:150px;padding:2px;padding-left:5px;")
+                        a#searchGettingStarted(href="http://logscape.com/redir/search.htm" target="_blank") Getting Started
+                        a.fa.fa-question-circle.fa-lg.btn-link.play-icon(href="http://logscape.com/redir/search.htm" target="_blank" title="Cheat Sheet")
+                        a.fa.fa-film.fa-lg.btn.btn-link.play-icon(href="http://logscape.com/redir/search-video.htm" target="_blank" title="Guided Tour")
+
+
+
+        .row-fluid.span12#searchRow(style="margin:0px;")
+            .row.span8.firstRow#searchDiv(style="padding-top:1px;")
+                a#addSearchRow.fa.fa-plus-circle.coloredText.no-link-uline.btn.btn-link.searchAddRemove(href="#" title='Add another search entry')
+                .input-append.span11(style="margin-left:1px;")
+                    input.input-xxlarge.span11.searchInput.coloredInputBG.coloredText.coloredBorder#searchString(style="height:28px; margin-bottom:0px;margin-top:1px;width:95%;" name="xLInput3" size="100" type="text")
+                    button.btn.chart-button.chart-selector-button#chartStyle(type="button")
+                        img.chartIcon(src="images/chart-types/stacked.png")
+
+
+
+            =render("/widgets/controller.jade")
+        .row-fluid(style="margin-top:1px;display:inline-block;")
+            .aresult.span4#result_count(style="color:grey;") Results displayed below
+            .span3#sourcesPopup
+                a(href="")
+        .row-fluid
+            #chart_container
+                #theChart(style="height: 150px;")
+                    #chart_stuff.row-fluid
+                        #chart.span12
+        .clearfix
+        #eventWidget(style="padding-top:20px; margin-left: 0px;")
+            #events.coloredTable.coloredText(style='margin-left: 0px;')
+                .btn-group.btn-group-horizontal#eventLayoutStyle(style='float: left;position:relative')
+                    button.btn.active#structuredMode(type="button" title="Structured View")
+                        i.fa.fa-th
+                    button.btn#fieldsMode(type="button" title="Field View")
+                        i.fa.fa-table
+                    button.btn#rawMode(type="button" title="Raw View")
+                        i.fa.fa-th-list
+                    a#exportToCSV(href="#" style="font-size:12px;vertical-align: bottom;") &nbsp;CSV
+                .eventTableOuter(style="overflow-x:auto;overflow-y:hidden")
+
+=render("/layouts/search_result.jade")
+li.facetEntry#facinata-li-proto(style="display:none;width:100%;")
+    #facinata-div-proto(style="display:inline-block;width:100%;")
+        span.facetRow(style="display:inline-block;width:100%;white-space: nowrap;")
+            .facetMicroDiv.facetHoverColour &nbsp;
+            a#fieldEdit.facetName(style="html:true;display:inline;" rel="clickover"  data-content="one" data-original-title="PROTO" href="#") Nothing
+            .facetControls.facetHideShowHover
+                a.facetToggleChart.fa.fa-signal(href="#analytic" style='float:right;color:lightgrey;padding-top:4px;' title='Analyze')
+                a.facetToggleField.fa.fa-edit(href="#table" style='float:right; color:lightgrey;padding-top:4px;' title='Add/Remove from table')
+
+
+
+/ li#facinata-ds-proto(style="display:inline-block;width:100%;")
+li#facinata-li-ds-proto(style="display:none;width:100%;")
+    #facinata-ds-div-proto(style="display:inline-block;width:100%;")
+        span.facetRow(style="display:inline-block;width:100%;")
+            .facetMicroDiv.facetHoverColour &nbsp;
+            a#dsEdit.facetName(style="html:true;display:inline;" rel="clickover"  data-content="one" data-original-title="PROTO" href="#") Source
+
+
+
+#searchRowProto.searchRowItem(style="display:none;width:100%")
+    a.removeSearch.fa.fa-minus-circle.btn.btn-link.no-link-uline.searchAddRemove(href="#" title='Remove this search entry')
+    .input-append.span11(style="margin-left:1px;")
+        input.searchInputProto.input-xxlarge.span7.coloredInputBG.coloredText.coloredBorder(style="height:28px; margin-bottom:0px; width:95%;" name="xLInput3" size="100" type="text")
+        button.btn.chart-selector-button.chart-button-more#chartStyle(type="button")
+            img(width="20" height="20" src="images/chart-types/stacked.png")
+
+#chartSelectorTableProto(style="display:none;font-size:12px;")
+    table.table.table-condensed.coloredBG.coloredBorder.coloredText(style="font-size:12px;")
+        tbody.coloredBG
+            tr
+                td
+                    a.chartSelect(href="#map") GeoMap
+                td
+                    img.chartIcon(src="images/chart-types/map.png")
+            tr
+                td
+                    a.chartSelect(href="#stacked") Stacked
+                td
+                    img.chartIcon(src="images/chart-types/stacked.png")
+            tr
+                td
+                    a.chartSelect(href="#c3" data="c3.line") C3 Line
+                td
+                    img.chartIcon(src="images/chart-types/line.png")
+            tr
+                td
+                    a.chartSelect(href="#cluster") Cluster
+                td
+                    img.chartIcon(src="images/chart-types/cluster.png")
+            tr
+                td
+                    a.chartSelect(href="#area") Area
+                td
+                    img.chartIcon(src="images/chart-types/area.png")
+            tr
+                td
+                    a.chartSelect(href="#stream") Stream
+                td
+                    img.chartIcon(src="images/chart-types/stream.png")
+            tr
+                td
+                    a.chartSelect(href="#line") Line
+                td
+                    img.chartIcon(src="images/chart-types/line.png")
+            tr
+                td
+                    a.chartSelect(href="#line-connect") Line-connect
+                td
+                    img.chartIcon(src="images/chart-types/line-connect.png")
+            tr
+                td
+                    a.chartSelect(href="#line-zero") Line-zero
+                td
+                    img.chartIcon(src="images/chart-types/line-zero.png")
+            tr
+                td
+                    a.chartSelect(href="#scatter") Scatter
+                td
+                    img(width="24" height="24" src="images/chart-types/scatter.png")
+            tr
+                td
+                    a.chartSelect(href="#table") Table
+                td
+                    img(width="24" height="24" src="images/chart-types/table.png")
+            tr
+                td
+                    a.chartSelect(href="#pie") Pie
+                td
+                    img.chartIcon(src="images/chart-types/pie.png")
+            tr
+                td
+                    a.chartSelect(href="#d3pie") D3Pie
+                td
+                    img.chartIcon(src="images/chart-types/d3pie.png")
+            tr
+                td
+                    a.chartSelect(href="#spark") Spark
+                td
+                    img.chartIcon(src="images/chart-types/spark.png")
+            tr
+                td
+                    a.chartSelect(href="#100%") 100%
+                td
+                    img.chartIcon(src="images/chart-types/100pc.png")
+
+#FACINATA_EXPLORER_PROTO(style="display:none;")
+    .span12
+        label.span2 Filter:
+        input.span8#exploreFilter(type="text")
+    .span12(style="overflow:auto;height:280px;margin-left:-15px;width:1100px;")
+        table.table.table-hover.table-condensed.table-bordered#urlTable
+            thead
+
+                tr
+                    th Host
+                    th Path
+                    th Hits
+                    th Size (MB)
+                    th Type

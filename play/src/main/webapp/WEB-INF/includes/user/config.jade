@@ -1,0 +1,60 @@
+.tab-pane.active#tab-user-config
+    form#adminSysInfoForm.form-horizontal
+        .control-group
+            label.control-label#usersUsername(for="inputTag") Username
+            .controls
+                input#name.widthNinety(type="text" placeHolder="joe.blogs")
+        .control-group
+            label.control-label#usersRole(for="read-perm" title="Search and Workspace separation between Groups are only supported where a VALID_LICENSE key is installed") Role
+            .controls
+                select#role(title="Search and Workspace separation between Groups are only supported where a VALID_LICENSE key is installed")
+                    option#1    Read_Only_User
+                    option#2    Read_Write_User
+                    option#3    Team_Administrator
+                    option#4    System_Administrator
+
+        .control-group
+            label.control-label#usersTeam(for="inputFileMask" title="Data permissions/visiblity") Team
+            .controls
+                select#dataGroup
+                    option#1    logscape-logs
+                    option#2    logscape-audit
+
+        .control-group
+            label.control-label#usersEmail(for="inputDirectory") Email
+            .controls
+                input#email.widthNinety(type="text" placeHolder="joe@blogs.com")
+        .control-group
+            label.control-label#usersPassword(for="inputFileMask") Password
+            .controls
+                input#password.widthNinety(type="password" placeHolder="****")
+        .control-group(style="display:none")
+            label.control-label(for="read-perm") Permissions
+            .controls
+                input#read-perm(type="checkbox" name="Read" value="1") &nbsp;Read
+                input#write-perm(type="checkbox" name="Write" value="2") &nbsp;Write
+                input#configure-perm(type="checkbox" name="Configure" value="4") &nbsp;Configure
+
+        .control-group(style="display:none")
+            label.control-label(for="inputFileMask") Application Access
+            .controls
+                input#applications.widthNinety(type="text" placeHolder="*")
+        .control-group(style="display:none")
+            label.control-label(for="inputFileMask") Default Reporting Logo (png)
+            .controls
+                input#logo.widthNinety(type="text" placeHolder="./system-bundles/dashboard-1.0/logo.png")
+        .control-group
+            .controls
+                button.btn#usersSave Save
+                button.btn#usersNew New
+                button.btn#usersDelete Delete
+
+    .row-fluid.span10
+        table.table.table-hover.table-condensed.table-bordered.coloredTable.coloredBorder#userTable
+            thead
+                tr
+                    th#usersUsernameField
+                    th#usersEmailField
+                    th#usersTeamField
+                    th#usersRoleField
+                    th#usersModified

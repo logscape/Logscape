@@ -1,0 +1,44 @@
+.control-group
+    label.control-label#datasourcesDirectory(for="inputDirectory" title="The path of directories to search, i.e. '/var/log/**/myApp/work,/var/log2/*,!AppExcludeThis'") Directory
+    .controls
+        .span10
+            .span8
+                input.dsDir.span12.coloredBorder(type="text" placeHolder="/opt/app/" title="The path of directories to search, i.e. '/var/log/**/myApp/work,/var/log2/*,!AppExcludeThis'")
+            .span2
+                button.btn.btn-success#datasourcesBrowse Browse
+
+.control-group
+    label.control-label#datasourcesFileMask(for="inputFileMask" title="Set of filemasks to monitor, i.e. '*.log*,*.txt,!exclude' - including roll targets") File Mask
+    .controls
+        .span10
+            input.dsFile.span8.coloredBorder(type="text" placeHolder="*.log" title="Set of filemasks to monitor, i.e. '*.log*,*.txt,!exclude'")
+.control-group
+    label.control-label#datasourcesExpires(for="inputTag" title="Duration in days to import and continue monitoring files") Expires (days)
+    .controls
+        .span10
+            input.dsTTL.span8.coloredBorder(type="text" placeHolder="Maximum age of data (days)")
+.control-group
+    label.control-label#datasourcesArchiving(for="inputTag" title="Optional: Rules around data retention periods and final action. i.e. 1,5,Delete will REMOVE from Forwarder after 1 day, REMOVE from Indexer/IndexStore after 5 days") Archiving Rules
+    .controls
+        .span10
+            input.span2.dsArchiveF.coloredBorder(type="number" placeHolder="2" title="Forwarder: Delete files after 'n' days. Minimum Value of 2 required. 0 days to disable.")
+            input.span2.dsArchiveI.coloredBorder(type="number" placeHolder="7" title="Indexer/IndexStore: Execute [action] after 'n' days. Minimum Value of 2 required. 0 days to disable.")
+            select.span4.dsArchiveR(title="Indexer/IndexStore: The [action] applied after 'n' days." style="margin-left:10px;")
+                option#1    None
+                option#2    Snappy_Compress
+                option#3    Gzip_Compress
+                option#3    Lz4_Compress
+                option#4    Delete
+            span#datasourceOptionalSpan
+                ! (BFM)
+
+
+.control-group
+    label.control-label#datasourcesHostFilter(for="inputTag" title="Comma delimited list of host-substrings or group:xxx Note:ResourceGroups are defined on the Agents page ") Host filter (optional)
+    .controls
+        .span10
+            input.dsHost.span8.coloredBorder(type="text" placeHolder="optional hostname or ResourceGroup (i.e. group:Linux)" title="Comma delimited list of host-substrings or group:xxx Note:ResourceGroups are defined on the Agents page")
+    .controls
+        .control-group
+        .control-group
+        .control-group

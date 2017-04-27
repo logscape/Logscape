@@ -1,0 +1,62 @@
+.row-fluid(style="overflow:hidden;padding-top:10px;")
+    .titleBlock.span7(style="margin:3px;font-size: 31.5px;padding-left:10px;")
+        span.headerColor.editWorkspaceTitle(style="font-size: 31.5px;") New Workspace
+        .dont-print(style="display:inline")
+            a#enableEditWorkspace.fa.fa-edit.no-link-uline(href="#" style="display:none;font-size: 14px" title="Edit Workspace")
+            a#openWorkspace.fa.fa-folder-open.no-link-uline(href='#' style="display: inline-block;font-size: 14px" title='Open Workspace')
+            a#printWorkspace.fa.fa-print.no-link-uline(href='#' style="display: inline-block;font-size: 14px" title='Print')
+            .alert.alert-info(style="display:inline-block;width:150px;padding:2px;padding-left:5px;font-size: 14px; margin-bottom:2px;")
+                a#wsGetStarted(href="http://logscape.com/redir/workspaces.htm" target="_blank") Getting Started
+                a.fa.fa-question-circle.btn-link.play-icon(href="http://logscape.com/redir/workspaces.htm" target="_blank" title="Cheat Sheet")
+                a.fa.fa-film.btn.btn-link.play-icon(href="http://logscape.com/redir/workspace-video.htm" target="_blank" title="Guided Tour")
+            input.coloredBorder.coloredText.coloredInputBG#wsFilter(type="search" placeHolder="\uf0b0 Filter" title="Enter text to filter the workspace and press [Enter] Note: Reads URL param 'filter=xxx,yyy'" style="margin-top: 5px !important;margin-bottom: 0px !important;")
+
+
+    = render("/includes/controller-ws.jade")
+
+
+
+#workspaceControls.row-fluid(style='text-decoration: none; display:none; padding-left:10px;')
+    button.btn.btn-success#saveWorkspace Save
+    button.btn.btn-danger#cancelWorkspaceEdit Cancel
+    a#newWorkspace.fa.fa-file.fa-lg.no-link-uline(style='padding:2px;' href='#' title='New Workspace')
+    a#deleteWorkspace.fa.fa-trash-o.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Delete Workspace')
+    a#newWorkspaceText.fa.fa-file-text.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Add Editable HTML Block')
+    a#newWorkspaceChart.fa.fa-signal.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Add Search/Chart')
+    a#newWorkspaceClock.fa.fa-clock-o.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Add Clock')
+    a#newWorkspaceEvents.fa.fa-table.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Add Log Events')
+    a#newWorkspaceValue.fa.fa-quote-left.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Add Single Value Widget')
+    a#newWorkspaceFilter.fa.fa-filter.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Add Workspace Filter')
+    a#newWorkspaceJmxAttribute.fa.fa-sort-numeric-desc.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Add Jmx Attribute')
+    a#newWorkspaceJmxOperation.fa.fa-sort-amount-desc.fa-lg.no-link-uline(style='padding:2px;' href='#' title='Add Jmx Operation')
+
+    .PROTOS(style="display:none;")
+        li#workspace-item.widget(data-row="2" data-col="2" data-sizex="2" data-sizey="2" style="padding-left:10px'")
+            .editArea
+                .editControls.handle.hoverDiv
+                    .editControls2(style='float:right;padding-right: 5px;')
+                        a.no-link-uline.fa.fa-cog#configureWidget(title='Configure')
+                        a.no-link-uline.fa.fa-times#removeWidget(title='Remove')
+                    a.no-link-uline.fa.fa-arrows.handle#moveWidget(title='Move' style='width:20px !important;padding-top:3px;')
+
+
+        .gridster.layouts_grid#workspace-proto(style="display:none;")
+            ul
+.row-fluid
+    #workspace_container.span12(style="margin:0px;padding:10px;overflow:hidden;")
+    .modal.hide.fade.coloredBG.coloredText.coloredTable#openWorkspaceModal
+        .modal-body
+        .modal-footer
+            a.btn#close(href='#') Close
+
+
+
+
+= render("/widgets/text.jade")
+= render("/widgets/chart.jade")
+= render("/widgets/clock.jade")
+= render("/widgets/value.jade")
+= render("/widgets/event.jade")
+= render("/widgets/jmx/attributes.jade")
+= render("/widgets/jmx/operation.jade")
+= render("/widgets/filter.jade")

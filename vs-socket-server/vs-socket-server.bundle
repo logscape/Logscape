@@ -1,0 +1,42 @@
+<Bundle name="vs-log-server" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <services>
+  	<Service>
+		<name>SocketServer</name>
+		<priority>100</priority>
+		<resourceSelection>type containsAny  'SocketServer,Management,Failover,IndexStore'</resourceSelection>
+		<fork>true</fork>
+		<background>true</background>
+		<pauseSeconds>0</pauseSeconds>
+      	<instanceCount>-1</instanceCount>
+		<costPerUnit>10</costPerUnit>
+		<script>
+			<![CDATA[
+				try {
+					String port = System.getProperty("socket.server.port", "9991");
+					println "\n************************** Starting SocketServer **************************"
+					println "\n************************** Port:" + port
+					String protocol = System.getProperty("socket.server.protocol", "raw");
+					String serverRoot = System.getProperty("socket.server.root", "../../work/SocketServer_SERVER_");
+
+                    if (Boolean.getBoolean("socketserver.debug")) {
+                        processMaker.java "-cp:system-bundles/vs-log-server-1.0/lib/*", "com.liquidlabs.rawlogserver.RawLogServer",  port, serverRoot,  lookupSpaceAddress, hostname, zone, protocol, "-Dlog4j.debug=true", "-Xms32M", "-Xmx256M", "-Dlog4j.filename=../../work/socketserver.log", "-Xdebug","-Xrunjdwp:transport=dt_socket,address=8994,server=y,suspend=n"
+                    } else {
+                        processMaker.java "-cp:system-bundles/vs-log-server-1.0/lib/*", "com.liquidlabs.rawlogserver.RawLogServer",  port, serverRoot,  lookupSpaceAddress, hostname, zone, protocol, "-Dlog4j.debug=true", "-Xms32M", "-Xmx256M", "-Dlog4j.filename=../../work/socketserver.log";
+					}
+				} catch (Throwable t) {
+					t.printStackTrace();
+					throw new RuntimeException("Failed to start LogServer:" + t.getMessage(), t);
+				}
+			]]>      
+		</script>
+	</Service>
+  </services>
+</Bundle>

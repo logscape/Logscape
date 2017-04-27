@@ -1,0 +1,29 @@
+<Bundle name="someAppA" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <workingDirectory>.</workingDirectory>
+  <services>
+  	<Service>
+		<name>LogSpace</name>
+		<priority>100</priority>
+		<resourceSelection>customProperties contains "ServiceType=System"</resourceSelection>
+		<fork>false</fork>
+		<background>true</background>
+		<pauseSeconds>3</pauseSeconds>
+		<script>
+			<![CDATA[
+				import com.liquidlabs.log.space.LogSpaceImpl
+				import com.liquidlabs.orm.ORMapperFactory
+				import com.liquidlabs.vso.SpaceServiceImpl
+				import com.liquidlabs.log.space.LogSpace
+				print "\n************************** Starting LOG SPACE **************************"  
+				logSpace = new LogSpaceImpl(new SpaceServiceImpl(lookupSpace, new ORMapperFactory(10000, LogSpace.NAME, 5000), LogSpace.NAME, executor), ".*ERROR.*", ".*WARN.*")
+				logSpace.start()
+				logSpace.addWatch(".", ".*\\.log", true)
+				print "\n************************** LOG SPACE STARTED **************************"  
+			]]>      
+		</script>
+      <instanceCount>1</instanceCount>
+	</Service>
+
+  </services>
+</Bundle>

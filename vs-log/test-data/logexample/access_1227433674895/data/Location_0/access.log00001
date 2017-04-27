@@ -1,0 +1,8 @@
+10.0.0.61 - - [10/Nov/2008:09:50:01 +0300] "GET /index.jsp HTTP/1.1" 200 8306 
+10.0.0.61 - - [10/Nov/2008:09:50:08 +0300] "GET /ootb.css HTTP/1.1" 200 6114 
+10.0.0.61 - - [10/Nov/2008:09:50:08 +0300] "GET /images/splash_server_90_short.gif HTTP/1.1" 200 10659 
+10.0.0.61 - - [10/Nov/2008:09:50:08 +0300] "GET /images/spacer.gif HTTP/1.1" 200 49 
+10.0.0.61 - - [10/Nov/2008:09:50:08 +0300] "GET /images/title_line.gif HTTP/1.1" 200 79 
+10.0.0.61 - - [10/Nov/2008:09:50:08 +0300] "GET /images/splash_filler_short.gif HTTP/1.1" 200 182 
+10.0.0.61 - - [10/Nov/2008:09:50:08 +0300] "GET /images/bullet_arrow.gif HTTP/1.1" 200 84 
+10.0.0.61 - - [10/Nov/2008:09:50:08 +0300] "GET /images/button_bg.gif HTTP/1.1" 200 290 

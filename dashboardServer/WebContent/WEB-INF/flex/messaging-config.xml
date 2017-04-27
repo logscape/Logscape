@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="message-service" class="flex.messaging.services.MessageService">
+
+	<adapters>
+		<adapter-definition id="actionscript" class="flex.messaging.services.messaging.adapters.ActionScriptAdapter" default="true" />
+	</adapters>
+
+	<default-channels>
+		<channel ref="my-amf" />
+		<channel ref="my-amf-secure" />
+	</default-channels>
+
+	<!--- CHANGE THIS AND THE ONE IN flexDashboard/config-->
+	<destination id="histo-destPOLL">
+		<channels>
+			<!-- <channel ref="my-streaming-amf" /> -->
+			<channel ref="my-long-polling-amf" />
+			<channel ref="my-long-polling-amf-secure" />
+			
+		</channels>
+	</destination>
+	<destination id="histo-dest">
+		<channels>
+			<channel ref="my-streaming-amf" />
+			<channel ref="my-streaming-amf-secure"/>
+			<channel ref="my-long-polling-amf" />
+			<channel ref="my-long-polling-amf-secure" />
+
+			
+		</channels>
+	</destination>
+
+</service>

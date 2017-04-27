@@ -1,0 +1,35 @@
+
+
+.row-fluid(style="")
+    .tabbable.explorer-tabbable(role="tabpanel")
+        ul.nav.nav-tabs.ex-tabs(role="tablist" id="navTabs")
+            li(style="width:37px !important;min-width:0px;")
+                a#close-all(href="#close")
+                    | X
+            li.active(data-toggle="tooltip" title="Welcome to the File Explorer")
+                a#welcome-t(href="#welcome" data-toggle="tab")
+                    | Welcome
+
+
+    .tab-content
+        #welcome-c.tab-pane.active.white
+            div#WelcomeTab
+                <a style="float:left;" id="collapse" class="skip-control" title="Collapse" href="#" style="color:white;" onclick="var myTab = Logscape.Explore.Tabs(); myTab.toggle();">   <span class="icon-chevron-left icon-white"></span></a>&nbsp;
+                h1(style="display:inline;") File Explorer
+                hr(style=";color:rgba(157, 165, 180, 0.6);")
+                ol
+                    li
+                        p Select a host in the top left.
+                    li
+                        p Navigate the file tree.
+                    li
+                        p Select the file you'd like to browse.
+
+                br
+                br
+                h1 Searching the document
+                ol
+                    li
+                        p Hit CTRL+F
+                    li
+                        p Enter your search terms

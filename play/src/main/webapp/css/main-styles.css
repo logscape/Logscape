@@ -1,0 +1,43 @@
+.appNavStyle1 > .menu .nav{
+    margin-left:10px;
+}
+
+.appNavStyle1 > .menu > li {
+    padding-left:5px;
+}
+
+
+.appNavStyle1 > .nav.menu > li > a:hover {
+    text-decoration: none;
+    background-color: #FFF;
+    color:#8E4343;
+}
+
+
+.appNavStyle1 > .menu > li > a {
+    color:#333;
+    padding-left:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.appNavStyle1 > .menu > li:hover  {
+    color:#FFF;
+    background-color:#5783AE;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+}
+
+
+.appNavStyle1 > .menu > li.active {
+    color:#FFF;
+    background-color:#5783AE;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+}
+
+.appNavStyle1 > .menu > li.active > a  {
+    color:#333;
+    font-weight:600;
+    background-color:#FFF;
+}

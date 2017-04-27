@@ -1,0 +1,99 @@
+<Bundle name="boot" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@-@timestamp@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <workingDirectory>.</workingDirectory>
+	<services>
+		<Service>
+			<name>LookupSpace</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type containsAny 'Management,Failover' AND id equals 0</resourceSelection>
+			<fork>false</fork>
+			<background>false</background>
+			<script>
+				import com.liquidlabs.vso.lookup.LookupSpaceImpl
+				println "\n" + new Date().toString() + " ************************** Starting LookupSpace **************************"
+				LookupSpaceImpl.boot(VSOProperties.getLookupPort(), VSOProperties.getReplicationPort(), serviceManager);      
+		</script>
+			<instanceCount>100</instanceCount>
+		</Service>
+		<Service>
+			<name>ResourceSpace</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<script>
+				import com.liquidlabs.vso.resource.ResourceSpaceImpl
+				println "\n" + new Date().toString() + " ************************** Starting ResourceSpace **************************"
+				ResourceSpaceImpl.boot(lookupSpaceAddress);
+		</script>
+			<instanceCount>2</instanceCount>
+		</Service>
+		<Service>
+			<name>WorkAllocator</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<script>
+				import com.liquidlabs.vso.work.WorkAllocatorImpl
+				println "\n" + new Date().toString() + " ************************** Starting WorkAllocator **************************"
+				WorkAllocatorImpl.boot(lookupSpaceAddress);      
+		</script>
+			<instanceCount>2</instanceCount>
+		</Service>
+		<Service>
+			<name>BundleSpace</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<dependencies>boot-1.0:ResourceSpace,boot-1.0:WorkAllocator</dependencies>
+			<script>
+				import com.liquidlabs.vso.deployment.bundle.BundleSpaceImpl
+				println "\n" + new Date().toString() + " ************************** Starting BundleSpace **************************"
+				BundleSpaceImpl.boot(lookupSpaceAddress, thisAgent);      
+		</script>
+			<instanceCount>2</instanceCount>
+		</Service>
+		<Service>
+			<name>MonitorSpace</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<script>
+				import com.liquidlabs.vso.monitor.MonitorSpaceImpl
+				println "\n" + new Date().toString() + " ************************** Starting MonitorSpace **************************"
+				MonitorSpaceImpl.boot(lookupSpaceAddress);      
+			</script>
+			<instanceCount>2</instanceCount>
+		</Service>
+		<Service>
+			<name>DeploymentService</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<dependencies>boot-1.0:BundleSpace</dependencies>
+			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<script>
+				import com.liquidlabs.vso.deployment.BundleDeploymentService
+				println "\n" + new Date().toString() + " ************************** Starting DeploymentService **************************"
+				BundleDeploymentService.run(lookupSpaceAddress)      
+		</script>
+			<instanceCount>2</instanceCount>
+		</Service>
+	</services>
+</Bundle>

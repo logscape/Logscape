@@ -1,0 +1,28 @@
+2008-11-16 20:14:08 StandardContext[/balancer]org.apache.webapp.balancer.BalancerFilter: init(): ruleChain: [org.apache.webapp.balancer.RuleChain: [org.apache.webapp.balancer.rules.URLStringMatchRule: Target string: News / Redirect URL: http://www.cnn.com], [org.apache.webapp.balancer.rules.RequestParameterRule: Target param name: paramName / Target param value: paramValue / Redirect URL: http://www.yahoo.com], [org.apache.webapp.balancer.rules.AcceptEverythingRule: Redirect URL: http://jakarta.apache.org]]
+2008-11-16 20:14:09 StandardContext[/jsp-examples]ContextListener: contextInitialized()
+2008-11-16 20:14:09 StandardContext[/jsp-examples]SessionListener: contextInitialized()
+2008-11-16 20:14:10 StandardContext[/servlets-examples]ContextListener: contextInitialized()
+2008-11-16 20:14:10 StandardContext[/servlets-examples]SessionListener: contextInitialized()
+2008-11-16 21:58:18 org.apache.catalina.core.StandardHostValve@11b6a15: Exception Processing ErrorPage[errorCode=404, location=/errorHandler/error.jsp]
+ClientAbortException:  java.net.SocketException: Connection reset by peer: socket write error
+	at org.apache.coyote.tomcat5.OutputBuffer.doFlush(OutputBuffer.java:331)
+	at org.apache.coyote.tomcat5.OutputBuffer.flush(OutputBuffer.java:297)
+	at org.apache.coyote.tomcat5.CoyoteResponse.flushBuffer(CoyoteResponse.java:537)
+	at org.apache.coyote.tomcat5.CoyoteResponseFacade.flushBuffer(CoyoteResponseFacade.java:238)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:303)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:147)
+	at org.apache.catalina.core.StandardValveContext.invokeNext(StandardValveContext.java:104)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:118)
+	at org.apache.catalina.core.StandardValveContext.invokeNext(StandardValveContext.java:102)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:520)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.core.StandardValveContext.invokeNext(StandardValveContext.java:104)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:520)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:929)
+	at org.apache.coyote.tomcat5.CoyoteAdapter.service(CoyoteAdapter.java:160)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:799)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:705)
+	at org.apache.tomcat.util.net.TcpWorkerThread.runIt(PoolTcpEndpoint.java:577)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:683)
+	at java.lang.Thread.run(Thread.java:536)
+

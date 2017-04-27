@@ -1,0 +1,553 @@
+
+<project default="help" name="logscape" >
+
+    <property name="hostname" value="alteredcarbon.local" />
+
+    <property name="boot" location="../boot" />
+    <property name="lib" location="../lib" />
+    <property name="common" location="../common" />
+    <property name="transport" location="../transport" />
+    <property name="vspace" location="../vspace" />
+    <property name="vs-orm" location="../vs-orm" />
+    <property name="vso" location="../vso" />
+    <property name="vs-sim" location="../vs-sim" />
+    <property name="vs-log" location="../vs-log" />
+    <property name="vs-log-disco" location="../vs-log-disco" />
+    <property name="vs-log-server" location="../vs-log-server" />
+    <property name="saas-meter" location="../saas-meter" />
+    <property name="vs-socket-server" location="../vs-socket-server" />
+    <property name="vs-syslog-server" location="../vs-syslog-server" />
+    <property name="vs-util" location="../vs-util" />
+    <property name="vs-admin" location="../vs-admin" />
+    <property name="services" location="../services" />
+    <property name="dashboardServer" location="../dashboardServer" />
+    <property name="play" location="../play" />
+    <property name="print" location="../print" />
+    <property name="root" location="../root" />
+    <property name="replicator" location="../replicator" />
+    <property name="logscapeApps" location="../logscapeApps" />
+
+    <property name="dist" location="dist" />
+    <property name="build" location="build" />
+    <property name="classes" location="${build}/classes" />
+    <property name="vscape-tmp" location="${build}/${ant.project.name}" />
+    <property name="buildlib" location="${vscape-tmp}/lib" />
+    <property name="system-bundles" location="${vscape-tmp}/system-bundles" />
+    <property name="deployed-bundles" location="${vscape-tmp}/deployed-bundles" />
+
+    <import file="../lib/build-common.xml" />
+
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="../lib/lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+
+    <tstamp>
+        <format property="timestamp" pattern="dd-MMM-yy HH:mm:ss" />
+    </tstamp>
+
+    <target name="init">
+        <echo>Building ${build.id}</echo>
+        <mkdir dir="${dist}" />
+        <mkdir dir="${build}" />
+        <mkdir dir="tmp" />
+        <mkdir dir="${vscape-tmp}" />
+        <mkdir dir="${buildlib}" />
+        <mkdir dir="${system-bundles}" />
+        <mkdir dir="${deployed-bundles}" />
+
+    </target>
+
+    <target name="cleanAll" depends="clean">
+        <ant inheritAll="false" dir="${lib}" target="clean" />
+        <ant inheritAll="false" dir="${common}" target="clean" />
+        <ant inheritAll="false" dir="${boot}" target="clean" />
+        <ant inheritAll="false" dir="${transport}" target="clean" />
+        <ant inheritAll="false" dir="${vspace}" target="clean" />
+        <ant inheritAll="false" dir="${vs-orm}" target="clean" />
+        <ant inheritAll="false" dir="${vso}" target="clean" />
+        <ant inheritAll="false" dir="${vs-log}" target="clean" />
+        <ant inheritAll="false" dir="${vs-log-disco}" target="clean" />
+        <ant inheritAll="false" dir="${vs-log-server}" target="clean" />
+        <ant inheritAll="false" dir="${saas-meter}" target="clean" />
+        <ant inheritAll="false" dir="${vs-socket-server}" target="clean" />
+        <ant inheritAll="false" dir="${vs-syslog-server}" target="clean" />
+        <ant inheritAll="false" dir="${vs-util}" target="clean" />
+        <ant inheritAll="false" dir="${vs-admin}" target="clean" />
+        <ant inheritAll="false" dir="${services}" target="clean" />
+        <ant inheritAll="false" dir="${dashboardServer}" target="clean" />
+        <ant inheritAll="false" dir="${replicator}" target="clean" />
+    </target>
+
+
+
+    <target name="buildJars" depends="init">
+        <!-- build jars and bundles -->
+        <ant inheritAll="false" dir="${lib}" target="bundle" />
+        <ant inheritAll="false" dir="${boot}" target="dist" />
+        <ant inheritAll="false" dir="${common}" target="dist" />
+        <ant inheritAll="false" dir="${transport}" target="dist" />
+        <ant inheritAll="false" dir="${vspace}" target="dist" />
+        <ant inheritAll="false" dir="${vs-orm}" target="dist" />
+        <ant inheritAll="false" dir="${vso}" target="dist" />
+        <ant inheritAll="false" dir="${vs-admin}" target="bundle" />
+        <ant inheritAll="false" dir="${vs-log-disco}" target="dist" />
+        <ant inheritAll="false" dir="${vs-log}" target="bundle" />
+        <ant inheritAll="false" dir="${vs-log-server}" target="bundle" />
+        <ant inheritAll="false" dir="${saas-meter}" target="bundle" />
+        <ant inheritAll="false" dir="${vs-socket-server}" target="bundle" />
+        <ant inheritAll="false" dir="${vs-syslog-server}" target="bundle" />
+        <ant inheritAll="false" dir="${vs-util}" target="bundle" />
+        <ant inheritAll="false" dir="${replicator}" target="bundle" />
+        <ant inheritAll="false" dir="${services}" target="dist" />
+        <ant inheritAll="false" dir="${dashboardServer}" target="bundle" />
+
+        <ant inheritAll="false" dir="${play}" target="dist" />
+        <ant inheritAll="false" dir="${print}" target="dist" />
+        <ant inheritAll="false" dir="${root}" target="dist" />
+        <!--
+                <ant inheritAll="false" dir="${coherence}" target="bundle" />
+                <antcall target="doFlowStuff"></antcall>
+        -->
+    </target>
+    <target name="checkos">
+        <condition property="isWindows">
+            <os family="windows" />
+        </condition>
+
+        <condition property="isUnix">
+            <os family="unix" />
+        </condition>
+    </target>
+
+
+    <target name="dist" depends="cleanAll, dist.logscape">
+    </target>
+    <target name="dist.logscape" depends="checkos, buildJars">
+        <antcall target="copyRootFiles"/>
+        <antcall target="createBootBundles"/>
+        <antcall target="copyBundles"/>
+        <!--<antcall target="makeLogscapeApps"/> -->
+
+        <copy file="tmp/boot.zip" tofile="${vscape-tmp}/downloads/boot.zip" overwrite="true"/>
+        <copy file="scripts/setup.conf" todir="${vscape-tmp}/etc" overwrite="true"/>
+        <copy file="scripts/configure.bat" todir="${vscape-tmp}/scripts" overwrite="true"/>
+        <copy file="scripts/configure.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/applyConfig.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/applyConfig.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/dbDump.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/dbDump.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/serviceRunner.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/configure.groovy" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/networkCheck.groovy" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/networkCheck.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/networkCheck.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/networkList.groovy" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/networkList.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/networkList.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/diskBench.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/diskBench.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/recoverBundles.groovy" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/recoverBundles.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/recoverBundles.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/holding.html" todir="${vscape-tmp}/scripts" overwrite="true" />
+
+        <copy file="scripts/snappyCompress.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/snappyExpand.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/snappyCompress.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/snappyExpand.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+
+        <copy file="scripts/lz4Compress.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/lz4Expand.sh" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/lz4Compress.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+        <copy file="scripts/lz4Expand.bat" todir="${vscape-tmp}/scripts" overwrite="true" />
+
+
+        <copy todir="${vscape-tmp}/scripts/feed" verbose="true">
+            <fileset dir="scripts/feed/" includes="*"/>
+        </copy>
+
+
+        <copy file="${vso}/cpu.vbs" todir="${vscape-tmp}/scripts" />
+        <copy file="${boot}/renice.vbs" todir="${vscape-tmp}/scripts" />
+        <copy file="${boot}/renice.sh" todir="${vscape-tmp}/scripts" />
+
+
+        <copy todir="${vscape-tmp}/lib" verbose="true">
+            <fileset dir="../lib/lib" includes="*groovy-all-1.8.7.jar,*jdk7-introspector.jar"/>
+        </copy>
+
+        <copy todir="${vscape-tmp}/etc">
+            <fileset dir="ntWrapperJSL"/>
+        </copy>
+        <copy file="${boot}/boot.properties.template" tofile="${vscape-tmp}/boot.properties" overwrite="true"/>
+        <copy file="${vs-log-disco}/grokit.properties" todir="${vscape-tmp}/downloads" overwrite="true"/>
+
+        <copy todir="${vscape-tmp}/etc" verbose="true">
+            <fileset dir="licenses" includes="*"/>
+        </copy>
+        <copy todir="${vscape-tmp}/downloads" verbose="true">
+            <fileset dir="." includes="*.zip"/>
+        </copy>
+
+
+        <ant inheritAll="false" dir="${lib}" target="copyToMaster" />
+        <ant inheritAll="false" dir="${dashboardServer}" target="copyToMaster" />
+        <ant inheritAll="false" dir="${play}" target="copyToMaster" />
+        <ant inheritAll="false" dir="${print}" target="copyToMaster" />
+        <ant inheritAll="false" dir="${root}" target="copyToMaster" />
+
+        <antcall target="dist-perms"/>
+
+
+        <echo>Build completed at ${timestamp}</echo>
+
+        <ant inheritAll="false" target="copyDiskBench" />
+
+
+
+    </target>
+    <target name="copyDiskBench">
+
+        <!-- Build the disk bmarker-->
+
+        <copy todir="DISK_BENCH/lib" verbose="true">
+            <fileset dir="${vs-log}/dist" includes="*.jar"/>
+        </copy>
+        <copy todir="DISK_BENCH/lib" verbose="true">
+            <fileset dir="${common}/dist" includes="*.jar"/>
+        </copy>
+        <copy todir="DISK_BENCH/lib" verbose="true">
+            <fileset dir="${vso}/dist" includes="*.jar"/>
+        </copy>
+        <copy todir="DISK_BENCH/lib" verbose="true">
+            <fileset dir="${transport}/dist" includes="*.jar"/>
+        </copy>
+
+        <copy todir="DISK_BENCH/lib" verbose="true">
+            <fileset dir="${lib}/lib/elasticsearch-1.1.1" includes="*.jar"/>
+        </copy>
+
+
+    </target>
+
+
+    <!-- used to apply perms etc -->
+    <target name="dist-perms"  depends="checkos">
+        <chmod dir="${vscape-tmp}" perm="ugo+rx" includes="**/*.sh"/>
+        <chmod dir="${vscape-tmp}/scripts" perm="ugo+rx" includes="**/*.sh"/>
+
+        <if>
+            <equals arg1="${isWindows}" arg2="true"/>
+            <then>
+                <echo message="ENT Windows ZIP" />
+                <zip basedir="${build}" destfile="${dist}/${build.id}.zip"/>
+            </then>
+
+            <else>
+                <echo message="ENT Unix ZIP" />
+                <zipdir sourcedir="${build}" destfile="${dist}/${build.id}.zip" />
+            </else>
+        </if>
+    </target>
+
+
+    <target name="makeLogscapeApps">
+        <copy file="download.htm" tofile="${dist}/download.htm" filtering="true" overwrite="true" />
+        <zip destfile="${dist}/DemoApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/DemoApp-1.0" includes="**/**" ></fileset>
+        </zip>
+        <copy file="${logscapeApps}/repo/DemoApp-1.0-override.properties" todir="${dist}" />
+
+
+        <zip destfile="${dist}/OracleCoherenceApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/OracleCoherenceApp-1.0" includes="**/**" ></fileset>
+        </zip>
+        <copy file="${logscapeApps}/repo/OracleCoherenceApp-1.0-override.properties" todir="${dist}" />
+
+        <zip destfile="${dist}/WindowsApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/WindowsApp-1.0" includes="**/**" ></fileset>
+        </zip>
+        <copy file="${logscapeApps}/repo/WindowsApp-1.0-override.properties" todir="${dist}" />
+
+        <zip destfile="${dist}/UnixApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/UnixApp-1.0" includes="**/**" ></fileset>
+        </zip>
+        <copy file="${logscapeApps}/repo/UnixApp-1.0-override.properties" todir="${dist}" />
+
+        <zip destfile="${dist}/OSSECApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/OSSECApp-1.0" includes="**/**" ></fileset>
+        </zip>
+
+        <zip destfile="${dist}/ApacheWebLogsApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/ApacheWebLogsApp-1.0" includes="**/**" ></fileset>
+        </zip>
+        <zip destfile="${dist}/SquidCacheApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/SquidCacheApp-1.0" includes="**/**" ></fileset>
+        </zip>
+        <zip destfile="${dist}/CloneSystemsApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/CloneSystemsApp-1.0" includes="**/**" ></fileset>
+        </zip>
+
+        <zip destfile="${dist}/PushDiffusion4App-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/PushDiffusion4App-1.0" includes="**/**" ></fileset>
+        </zip>
+        <copy file="${logscapeApps}/repo/PushDiffusion4App-1.0-override.properties" todir="${dist}" />
+
+        <zip destfile="${dist}/MicrosoftHPCApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/MicrosoftHPCApp-1.0" includes="**/**" ></fileset>
+        </zip>
+        <copy file="${logscapeApps}/repo/MicrosoftHPCApp-1.0-override.properties" todir="${dist}" />
+
+        <copy file="${logscapeApps}/repo/DataSynapseApp-1.0.zip" todir="${dist}" />
+        <copy file="${logscapeApps}/repo/DataSynapseApp-1.0-override.properties" todir="${dist}" />
+
+        <zip destfile="${dist}/LogscapeMonitorApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/LogscapeMonitorApp-1.0" includes="**/**" ></fileset>
+        </zip>
+        <copy file="${logscapeApps}/repo/LogscapeMonitorApp-1.0-override.properties" todir="${dist}" />
+        <copy file="${logscapeApps}/repo/CiscoASAApp-1.0.zip" todir="${dist}" />
+        <copy file="${logscapeApps}/repo/CiscoFWSMApp-1.0.zip" todir="${dist}" />
+        <copy file="${logscapeApps}/repo/IISApp-1.0.zip" todir="${dist}" />
+        <copy file="${logscapeApps}/repo/MySQLApp-1.0.zip" todir="${dist}" />
+        <copy file="${logscapeApps}/repo/LampApp-1.0.zip" todir="${dist}" />
+
+        <zip destfile="${dist}/JavaApp-1.0.zip">
+            <fileset dir="${logscapeApps}/repo/JavaApp-1.0" includes="**/**" ></fileset>
+        </zip>
+
+        <copy file="${logscapeApps}/repo/JavaApp-1.0-override.properties" todir="${dist}" />
+
+    </target>
+    <target name="copyBundles">
+        <copy file="${vs-log}/dist/vs-log-1.0.zip" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-log}/dist/vs-log-indexer-1.0.zip" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-log}/logscape-home.config" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-log}/logscape-sources.config" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-log}/logscape-monitor.config" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-log-server}/dist/vs-log-server-1.0.zip" todir="${vscape-tmp}/downloads" />
+        <copy file="${saas-meter}/dist/saas-meter-1.0.zip" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-socket-server}/dist/vs-socket-server-1.0.zip" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-syslog-server}/dist/vs-syslog-server-1.0.zip" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-util}/dist/vs-util-1.0.zip" todir="${vscape-tmp}/downloads" />
+        <copy file="${vs-admin}/dist/vs-admin-1.0.zip" todir="${vscape-tmp}/downloads" />
+        <copy file="${dashboardServer}/dist/dashboard-1.0.zip" todir="${vscape-tmp}/downloads"/>
+        <copy file="${replicator}/dist/replicator-1.0.zip" todir="${vscape-tmp}/downloads" />
+    <!--
+        <copy file="../lib/lib/hawtio-default-2.0.0.war" tofile="${vscape-tmp}/downloads/hawtio-2.0.war"/>
+        -->
+        <copy file="../lib/lib/jolokia-jvm-1.3.2-agent.jar" tofile="${vscape-tmp}/downloads/jolokia-agent.jar"/>
+    </target>
+
+    <target name="copyRootFiles">
+        <copy file="${boot}/dist/boot.jar" todir="${vscape-tmp}" />
+        <copy file="scripts/boot.sh" todir="${vscape-tmp}" />
+        <copy file="${boot}/boot.properties" todir="${vscape-tmp}"/>
+
+        <copy file="readme.txt" todir="${vscape-tmp}"/>
+        <copy file="license.txt" todir="${vscape-tmp}" />
+        <copy file="scripts/logscape.sh" todir="${vscape-tmp}" />
+        <copy file="scripts/logscape.bat" todir="${vscape-tmp}" />
+        <copy file="scripts/unix_kill.sh" todir="${vscape-tmp}/scripts"/>
+        <copy file="${vso}/src/log4j.properties" todir="${vscape-tmp}"/>
+        <copy file="${vso}/src/agent-log4j.properties" todir="${vscape-tmp}"/>
+
+        <!--		<copy file="boot-ec2.sh" todir="${vscape-tmp}" /> -->
+        <copy file="scripts/boot.bat" todir="${vscape-tmp}" />
+
+        <mkdir dir="${vscape-tmp}/downloads"/>
+        <mkdir dir="${vscape-tmp}/lib"/>
+        <mkdir dir="${vscape-tmp}/pids"/>
+        <mkdir dir="${vscape-tmp}/space"/>
+
+        <!-- copy SSL stuff -->
+        <mkdir dir="${vscape-tmp}/ssl"/>
+        <copy file="${dashboardServer}/ssl/ssl.properties" todir="${vscape-tmp}/ssl" />
+        <copy file="${dashboardServer}/ssl/.keystore" todir="${vscape-tmp}/ssl" />
+        <copy file="${dashboardServer}/ssl/private.der" todir="${vscape-tmp}/ssl" />
+        <copy file="${dashboardServer}/ssl/private.pem" todir="${vscape-tmp}/ssl" />
+        <copy file="${dashboardServer}/ssl/public.key" todir="${vscape-tmp}/ssl" />
+
+        <copy file="${transport}/ssl/p2p.crt" todir="${vscape-tmp}/ssl" />
+        <copy file="${transport}/ssl/p2p.key" todir="${vscape-tmp}/ssl" />
+    </target>
+
+    <!-- create both the Enterprise (forked) and Solo (non-forked) boot bundles -->
+    <target name="createBootBundles" depends="createBootBundleBase">
+        <copy file="${vso}/src/boot-forked-1.0.bundle" todir="${build}/boot" overwrite="true" filtering="true"/>
+        <copy file="${vso}/src/boot-1.0.bundle" todir="${build}/boot" overwrite="true" filtering="true"/>
+        <zip basedir="${build}/boot" destfile="tmp/boot.zip" />
+        <delete dir="${build}/boot"/>
+
+    </target>
+    <target name="createBootBundleBase">
+        <mkdir dir="${build}/boot"/>
+        <mkdir dir="${build}/boot/lib"/>
+        <copy file="${common}/dist/common.jar" todir="${build}/boot/lib" />
+        <copy file="${transport}/dist/transport.jar" todir="${build}/boot/lib" />
+        <copy file="${vspace}/dist/vspace.jar" todir="${build}/boot/lib" />
+        <copy file="${vs-orm}/dist/vs-orm.jar" todir="${build}/boot/lib" />
+        <copy file="${vso}/dist/vso.jar" todir="${build}/boot/lib" />
+        <copy file="${services}/dist/services.jar" todir="${build}/boot/lib" />
+        <copy file="${play}/scalate-patch/scalate-patch.jar" todir="${build}/boot/lib" />
+        <copy file="${vso}/src/log4j.properties" todir="${build}/boot" overwrite="true" filtering="true"/>
+    </target>
+
+
+    <target name="srcjar">
+        <jar basedir="../" destfile="vscape-src.jar" includes="**/src/**/*.java"/>
+    </target>
+
+    <target name="testAll" depends="buildJars" >
+        <ant inheritAll="false" dir="${common}" target="testOnly">
+            <property name="dir" value="${common}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${boot}" target="testOnly">
+            <property name="dir" value="${boot}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${transport}" target="testOnly">
+            <property name="dir" value="${transport}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vspace}" target="testOnly">
+            <property name="dir" value="${vspace}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-orm}" target="testOnly">
+            <property name="dir" value="${vs-orm}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vso}" target="testOnly">
+            <property name="dir" value="${vso}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-log-disco}" target="testOnly">
+            <property name="dir" value="${vs-log-disco}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-log}" target="testOnly">
+            <property name="dir" value="${vs-log}"/>
+
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-log-server}" target="testOnly">
+            <property name="dir" value="${vs-log-server}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${saas-meter}" target="testOnly">
+            <property name="dir" value="${saas-meter}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-socket-server}" target="testOnly">
+            <property name="dir" value="${vs-socket-server}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-syslog-server}" target="testOnly">
+            <property name="dir" value="${vs-syslog-server}"/>
+        </ant>
+        <ant inheritAll="false" dir="${vs-util}" target="testOnly">
+            <property name="dir" value="${vs-util}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-admin}" target="testOnly">
+            <property name="dir" value="${vs-admin}"/>
+        </ant>
+        <ant inheritAll="false" dir="${replicator}" target="testOnly">
+            <property name="dir" value="${replicator}"/>
+        </ant>
+        <ant inheritAll="false" dir="${dashboardServer}" target="testOnly">
+            <property name="dir" value="${dashboardServer}"/>
+        </ant>
+
+        <echo>CALLING TEST_UI</echo>
+
+        <ant inheritAll="false" dir="${play}" target="testOnly">
+            <property name="dir" value="${play}"/>
+        </ant>
+        <ant inheritAll="false" dir="${print}" target="testOnly">
+            <property name="dir" value="${print}"/>
+        </ant>
+    </target>
+
+    <target name="testLOGSCAPE" depends="buildJars" >
+        <ant inheritAll="false" dir="${common}" target="testOnly">
+            <property name="dir" value="${common}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-log-disco}" target="testOnly">
+            <property name="dir" value="${vs-log-disco}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-log}" target="testOnly">
+            <property name="dir" value="${vs-log}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-log-server}" target="testOnly">
+            <property name="dir" value="${vs-log-server}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${saas-meter}" target="testOnly">
+            <property name="dir" value="${saas-meter}"/>
+        </ant>
+
+        <ant inheritAll="false" dir="${vs-socket-server}" target="testOnly">
+            <property name="dir" value="${vs-socket-server}"/>
+        </ant>
+
+        <echo>CALLING TEST_UI</echo>
+
+        <ant inheritAll="false" dir="${play}" target="testOnly">
+            <property name="dir" value="${play}"/>
+        </ant>
+        <ant inheritAll="false" dir="${print}" target="testOnly">
+            <property name="dir" value="${print}"/>
+        </ant>
+    </target>
+
+    <target name="cleanTestAll" depends="cleanAll, testAll" />
+    <target name="help">
+        <echo>Targets:</echo>
+        <echo> o cleanAll</echo>
+        <echo> o testAll</echo>
+        <echo> o dist (to clean and make all bundles, zip and exe's</echo>
+        <echo> o setupHaTest - for local HA deployment testing</echo>
+        <echo> o makeLogscapeApps - rebuilds LogScape Apps</echo>
+        <echo> o msi - cd to wixInstaller/logscape and run makeMsi-all.bat</echo>
+    </target>
+    <target name="setupHaTest" description="Creates a HA deployment and Agent - for testing LogScape HA" >
+
+        <delete dir="build/logscape/work" failonerror="false"/>
+
+        <echo>  ********** CREATING: Agent: 'Failover' in '${dist}/Failover'  ********** </echo>
+        <delete dir="${dist}/Failover/logscape/work" failonerror="false"/>
+        <unzip src="${dist}/${build.id}.zip" dest="${dist}/Failover" overwrite="true" />
+        <copy file="../boot/boot.properties.template" tofile="${dist}/Failover/logscape/boot.properties" verbose="true" overwrite="true" />
+        <replace file="${dist}/Failover/logscape/boot.properties" token="$${agentType}" value="Failover"/>
+        <replace file="${dist}/Failover/logscape/boot.properties" token="$${basePort}" value="13000"/>
+        <replace file="${dist}/Failover/logscape/boot.properties" token="$${replPort}" value="25000"/>
+        <replace file="${dist}/Failover/logscape/boot.properties" token="$${jmxPort}" value="9000"/>
+        <replace file="${dist}/Failover/logscape/boot.properties" token="$${webAppPort}" value="8090"/>
+
+
+        <copy file="../dashboardServer/ssl/ssl.properties.template" tofile="${dist}/Failover/logscape/ssl/ssl.properties" verbose="true" overwrite="true" />
+        <replace file="${dist}/Failover/logscape/ssl/ssl.properties" token="$${sslPort}" value="9443"/>
+
+        <!--
+            setup an agent0 instance
+            copy boot.properties.ha.agent to agent0 dir
+        -->
+        <echo>  ********** CREATING: Agent: 'agent-0' in ${dist}/agent-0  ********** </echo>
+        <delete dir="${dist}/agent-0" failonerror="false"/>
+        <unzip src="${dist}/${build.id}.zip" dest="${dist}/agent-0" overwrite="true" />
+        <copy file="../boot/boot.properties.template" tofile="${dist}/agent-0/logscape/boot.properties" verbose="true" overwrite="true" />
+        <replace file="${dist}/agent-0/logscape/boot.properties" token="$${agentType}" value="Agent"/>
+        <replace file="${dist}/agent-0/logscape/boot.properties" token="$${basePort}" value="18000"/>
+        <replace file="${dist}/agent-0/logscape/boot.properties" token="$${jmxPort}" value="9001"/>
+
+    </target>
+
+</project>
+

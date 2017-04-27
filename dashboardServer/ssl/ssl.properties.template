@@ -1,0 +1,8 @@
+port:${sslPort}
+maxIdleTime:30000
+keystore:ssl/.keystore
+password:ll4bs1234
+keyPassword:ll4bs1234
+truststore:ssl/.keystore
+trustPassword:ll4bs1234
+#certAlias:certificate-alias-to-use-where-multiple-exist

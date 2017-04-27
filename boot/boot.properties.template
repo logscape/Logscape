@@ -1,0 +1,59 @@
+vmargs=-Xms256M -Xmx756M -Xss256k -XX:+HeapDumpOnOutOfMemoryError -Xrs \
+ -XX:+UseFastAccessorMethods \
+ -XX:CompileCommand=exclude,jregex/Pretokenizer,next \
+ -XX:+UseConcMarkSweepGC \
+ -XX:+UseCompressedOops \
+ -Xbootclasspath/p:lib/jdk7-introspector.jar \
+ -Dcom.sun.management.jmxremote.port=18001 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false
+
+# -Xdebug -agentlib:jdwp=transport=dt_socket,address=18000,server=y,suspend=n
+
+# Verbose GC
+#-verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:work/gc.log
+
+# Roles = dev.Management, dev.Forwarder, dev.IndexStore, dev.Failover
+sysprops=-DLOGSCAPE -Dvso.base.port=11000 -Dagent.role=dev.Management -Dmax.hot.days=14 -Dweb.app.port=8080 -Dfile.encoding=UTF-8 -Djava.io.tmpdir=work/tmp
+
+auto-deploy=WindowsApp,UnixApp
+
+# Optional remote JVM introspection
+# 1. Get a copy of hawtio-default-2.0.0.war and place it into the downloads folder on the Manager
+# 2. Enable the following line on each agent to allow introspection (uncomment the line)
+# jolokia.agent=-javaagent:downloads/jolokia-agent.jar=port=11006,host=localhost
+# 3. Add the following manager.sysprop -Dhawtio.authenticationEnabled=false
+# 4. Bounce the manager and all relevant agents
+# 5. Access the main hawtio dashboard from http://MANAGER:8080/hawtio-2.0
+# 6. Connect to remote Agents using the port setting below
+
+# Sizing Guide [Optional = Larger heap config > 4GB]
+#
+# 1) - 16GB)
+#     vmargs = -Xms8G -Xmx8G -XX:MaxDirectMemorySize=512M
+#     sysprops = -Ddashboard.heap=512M  -Dlogspace.heap=512M -Daggspace.heap=512M
+#
+# 2) - 32GB)
+#     vmargs = -Xms16G -Xmx16G -XX:MaxDirectMemorySize=1G
+#     sysprops -Ddashboard.heap=4G -Dlogspace.heap=1G  -Daggspace.heap=2G
+
+
+# Remember - try and keep 25%-50% system memory available
+
+# Other Sysprops
+# Search/Index performance related: Values are automatically configured to the number of cores; you may want adjust them for performance configuration
+#  -Dlog.search.threads=4
+#  -Dlog.tailer.threads=4
+#  -Dlog.tailer.old.threads=4
+
+# Override the default time-zone. FORWARDER-NOTE: You will also need to removed an existing ManagerHost/work/LogServer_SERVER_/FORWARDER_HOST/datasource.properties file
+#  -Duser.timezone=EST
+
+
+
+mainclass=com.liquidlabs.vso.VSOMain
+sys-bundles=system-bundles
+deploy=downloads
+sharedConfig=downloads
+pre-cp=foo.jar
+post-cp=blah.jar
+# LOW or NORMAL process priority (applies to all platforms)
+#priority=LOW

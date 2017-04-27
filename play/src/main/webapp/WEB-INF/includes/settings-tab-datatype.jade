@@ -1,0 +1,188 @@
+.tab-pane#tabs-dt
+    .titleBlock
+        span.configTitle.headerColor#datatypesDatatype(style="display:inline-block;font-size: 31.5px;")
+        .alert.alert-info.gettingStarted
+            a#datatypesGettingStarted(href="http://logscape.github.io/types.html" target="_blank") Getting Started
+            a.fa.fa-question-circle.fa-lg.btn-link.play-icon(href="http://logscape.com/redir/config.htm" target="_blank")
+        a.saveDT.fa.fa-check.btn.btn-link.play-icon(style='padding:2px;' href='#' title='Save')
+        a#listDT.fa.fa-folder-open.btn.btn-link.play-icon(style='padding:2px;' href='#' title='Open')
+        a#newDT.fa.fa-file-o.btn.btn-link.play-icon(style='padding:2px;' href='#' title='New')
+        a#deleteDT.fa.fa-trash-o.btn.btn-link.play-icon(style='padding:2px;' href='#' title='Delete')
+
+    br
+    .control-group.u.borderColor(style="width:40%")
+        span.lead#datatypesName
+            ! Name:
+        span.lead#name(type="text"  title="Enter meaning sets of short-keywords for identifying this source. i.e. dev, app1, dc1")
+
+    .row-fluid
+        .mainAttributes.span12
+            span#datatypeDirTag
+                ! Dir / Tag
+            input.coloredText.coloredBorder.coloredInputBG#dir(type="text" placeHolder="**/DIR OR tag:syslog" title="Directory wildcard OR DataSource tag: tag:syslog,tag:sys")
+            span#datatypeFile
+                ! File
+            input.coloredText.coloredBorder.coloredInputBG#file(type="text" placeHolder="*.log" title="Filename wildcard: *.log")
+            span#datatypePriority
+                ! Priority
+            input.coloredText.coloredBorder.coloredInputBG#priority(type="text" placeHolder="100" style='width:50px;')
+    .row-fluid
+        .span12
+            span.span1
+                span#datatypesSample(title="Double space to delimit events") Sample
+                ! &nbsp;
+                a.btn.btn-warning.white#autoGen(href='#' title='AutoGenerate From Sample')
+                    span.fa.fa-cogs
+
+            textArea.coloredBorder.coloredText.coloredBorder.coloredInputBG.span9#sample(rows=10 style='width:90%' title="Double space to delimit events")
+    .row-fluid
+        .expression.span12
+            .span1
+                a#datatypesPattern(href="http://logscape.com/redir/type-expr.htm" target="_blank") Pattern
+            .span9(style='margin-left:0px;margin-right:5px;')
+                input.coloredText.coloredBorder.coloredInputBG#expression.span12(type="text" style='placeHolder="(*)";')
+            a.span2.btn.btn-info.fat-button#evaluate(href="#" style="margin:1px;")
+                i.fa.fa-reorder#datatypesBenchmark(title="Display 'expression' performance in EventsPerSec, how fast is my regexp!") &nbsp; Benchmark
+
+    .row-fluid
+        .span1
+        a.btn.btn-primary.fat-button#test(href="#" style='margin:3px;width:88%;margin-left:0px;')
+            i.fa.fa-arrow-down.fa-lg#datatypesTransform(title="Press 'Transform' to convert raw data into searchable Fields") &nbsp; Transform
+
+    .row-fluid
+        .span12
+            .span1
+                span#datatypesFields Fields
+                .boo
+                    a.btn.btn-primary#addField(href="#")
+                        i.fa.fa-plus
+            .span9(style='margin-left:0px;width:90%;overflow:scroll;height:300px;')
+                table.coloredTable.coloredBorder.coloredText.table.table-hover.table-condensed.table-bordered#fieldsTable(style='margin-left:0px;width:100%;')
+                    thead
+                        tr
+                            th Field-1
+                            th Field-2
+                            th Field-3
+                    tbody
+                        tr
+                            td -
+                            td -
+                            td -
+                            td -
+    .row-fluid
+        .span12
+            span.span1#datatypeControl Control
+            .span11(style='margin-left:0px;')
+                a.span2.btn.btn-primary.fat-button.saveDT#datatypesSave(href="#" style='margin-top:0em;height:36px;')
+                    i.fa.fa-check-circle &nbsp; Save
+                .span8.alert.alert-info#datatypesBlurb(style="margin-right:5px;margin-left:5px;") Press 'Transform' to convert raw data into searchable Fields. Using JSON? Click here.
+                a.span2.btn.btn-info.fat-button#viewOutput(href="#" style='margin-top:0em;margin:0px;height:36px;')
+                    i.fa.fa-reorder#datatypesPerformance(title='Display events per sec for Transforming/Parsing unstructured data into Fields') &nbsp; Performance
+    .modal.hide.fade#dataTypeResults
+        .modal-header
+            .button.close(data-dismiss='modal' aria-hidden='true') &times;
+            h3 Output
+        .modal-body
+        .modal-footer
+            a.btn#close(href='#') Close
+    .modal.hide.fade#editField(style="width:800px")
+        .modal-header
+            .button.close(data-dismiss='modal' aria-hidden='true') &times;
+            h3 Edit Field
+        .modal-body
+            form.form-horizontal
+                .control-group
+                    label.control-label FieldName
+
+                    .controls
+                        input.coloredBorder.coloredInputBG.coloredText#name(type="text" placeHolder="name" title="Represents the label used in the search i.e. server.count()")
+                        span#nameError(style="display:none; color:red")
+                            ! Please provide a unique name
+                    label.control-label(title="Provides the default analytic added/removed to the search when clicking on Stats") Function
+                    .controls
+                        select.coloredBorder.coloredInputBG.coloredText#function(title="Provides the default analytic added/removed to the search when clicking on Stats")
+                            option count()
+                            option count(_host)
+                            option count(_filename)
+                            option count(otherField)
+                            option avg()
+                            option avg(otherField)
+                            option avg(_host)
+                            option sum()
+                            option sum(otherField)
+                            option sum(_host)
+                            option max()
+                            option max(otherField)
+                            option max(_host)
+                            option min()
+                            option min(otherField)
+                            option min(_host)
+                            option countUnique()
+                        a(href='http://logscape.com/redir/type-func.htm' target="_blank") Learn more
+
+                    label.control-label(title='Display in the Events Table?') Visible
+                    .controls
+                        input#visible(type="checkbox" placeHolder="visible" title="Determines if the data appears in a table column below the search")
+
+                .control-group
+                    label.control-label(title='Collect Summary Statistics') Summary
+                    .controls
+                        input#summary(type="checkbox" placeHolder="collection summary stats" title="Determines if Summary statistics are collected and shown on the Search Summary")
+
+                .control-group
+                    label.control-label(title='Index and store results at Index-Time (performance)') Index
+                    .controls
+                        input#indexed(type="checkbox" placeHolder="collection summary stats" title="Determines if Data is indexed at Ingest time or Search time (re-index when changing this value)")
+
+                .control-group
+                    label.control-label(title='Derive synth-value from this source. Complete this where optional values occur in order to prevent script exceptions') Synth Source
+                    .controls
+                        input.coloredBorder.coloredInputBG.coloredText#srcField(type="text" placeHolder="msg" title="Derive synth-value from this source. Complete this where optional values occur in order to prevent script exceptions")
+
+                    label.control-label(title='The Expression or Calculation to determine the field value') Synth Expression
+                    .controls
+                        .span7
+                            textarea.coloredBorder.coloredInputBG.coloredText#synthExpr(type="text" placeHolder="synthExpression" title="Transforms, extracts or calculates values based upon other field inputs")
+                        .span5
+                            a(href='http://logscape.com/redir/type-synth-expr.htm' target="_blank") Learn more
+                            select.coloredBorder.coloredInputBG.coloredText#synthExprMacro(title="Templating" style="width:120px;")
+                                option(value="user:(*)" title="Use simplified expression to grab the first chunk of text") wildcard
+                                option(value=".*?user:(\\S+) .*" title="Use regex to grab the word after user") regex
+                                option(value="groovy-script: return 1" title="Execute groovy script to calculate value") groovy-script
+                                option(value="groovy-script: return geoipLookup.getLocation('217.20.25.200').countryCode" title="Execute groovy script to calculate value") groovy-geoip
+                                option(value="mvel: return data/(1024.0 * 1024)" title="Execute MVEL script to calculate value") mvel
+                                option(value="jep: field/(1024.0 * 1024.0)" title="Execute JEP 'single-line' math-script to calculate a value") jep
+                                option(value="substring,From,To" title="Extract part of another field-value using string delimiters or until end of line") substring-match
+                                option(value="lastsubstring,From,To" title="Extract part of another field-value using string delimiters or until end of line") lastsubstring-match
+                                option(value="split,\\|,2" title="Split sourcField by | and extract item 2, (escape chars \\n \\| \\s)")  split
+                                option(value="UserId" title="Literal values can be plugged in where a synthSource is not specified" ) string-const
+                                option(value="100.0" title="Literal values can be plugged in where a synthSource is not specified") string-number
+                .control-group
+                    label.control-label(title='Presentation information about this field - appears on charts') View
+                    .controls
+                        .span7
+                            textarea.coloredBorder.coloredInputBG.coloredText#desc(type="text" placeHolder="heatmap etc" title="Allows for Dashboard Level search linkage, heatmap and presentation changes on the output data")
+                        .span5
+                            a(href='http://logscape.com/redir/type-view.htm' target="_blank") Learn more
+                            select.coloredBorder.coloredInputBG.coloredText#descMacro(title="Templating" style="width:120px;")
+                                option(value="{ 'heatmap-enum': 'DEBUG:white,INFO:#95F7C3,WARN:#F3DA87,ERROR:#EAA261,FATAL:#E03930' - Change to double quotes }" title="Allows Table Cells to heat-map-render background based upon a Text value") heatmap-enum
+                                option(value="{ 'heatmap-numeric': '0-100'  - Change to double quotes }" title="Allows Table Cells to heat-map-render background based upon a Numeric value" ) heatmap-numeric
+
+        .modal-footer
+            a.btn#delete(href='#' style='float:left') Delete
+            a.btn#ok(href='#') Ok
+            a.btn#close(href='#') Close
+    .modal.hide.fade#openDTModal
+        .modal-header
+            .button.close(data-dismiss='modal' aria-hidden='true') &times;
+            h3 DataTypes
+        .modal-body
+            table.coloredTable#openDTTable
+                thead
+                    tr
+                        th
+        .modal-footer
+            a.btn#close(href='#' data-dismiss="modal" aria-hidden="true") Close
+
+
+

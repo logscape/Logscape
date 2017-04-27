@@ -1,0 +1,986 @@
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:32.810 Info: [Scheduler] Engine:LONMS02214-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:32.909 Info: [Scheduler] Engine:LONMS02214-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:35.895 Info: [Scheduler] Engine:LONMS02214-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:44.964 Info: [Scheduler] Engine:LONMS02214-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:48.183 Info: [Scheduler] Engine:LONMS01974-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:48.362 Info: [Scheduler] Engine:LONMS01974-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:48.439 Info: [Scheduler] Engine:LONMS01974-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:50.107 Info: [Scheduler] Engine:LONMS02002-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:50.372 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:53.451 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:53.714 Info: [Scheduler] Engine:LONMS02002-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:54.018 Info: [Scheduler] Engine:LONMS02340-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:54.511 Info: [Scheduler] Engine:LONMS02340-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:54.611 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:54.672 Info: [Scheduler] Engine:LONMS02340-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:57.966 Info: [Scheduler] Engine:LONMS02339-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:58.385 Info: [Scheduler] Engine:LONMS02339-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:58.470 Info: [Scheduler] Engine:LONMS02339-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:59.374 Info: [Scheduler] Engine:LONMS01977-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:59.451 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:59.537 Info: [Scheduler] Engine:LONMS01977-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:00.679 Info: [Scheduler] Engine:LONMS01975-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:00.934 Info: [Scheduler] Engine:LONMS01975-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:01.028 Info: [Scheduler] Engine:LONMS01975-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:01.816 Info: [Scheduler] Engine:LONMS02339-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:01.852 Info: [Scheduler] Engine:LONMS01976-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:02.189 Info: [Scheduler] Engine:LONMS01976-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:02.286 Info: [Scheduler] Engine:LONMS01976-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:02.853 Info: [Scheduler] Engine:LONMS01977-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.250 Info: [Scheduler] Engine:LONMS02216-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.409 Info: [Scheduler] Engine:LONMS01975-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.411 Info: [Scheduler] Engine:LONMS02216-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.470 Info: [Scheduler] Engine:LONMS02001-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.847 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:05.568 Info: [Scheduler] Engine:LONMS01976-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.501 Info: [Scheduler] Engine:LONMS02338-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.789 Info: [Scheduler] Engine:LONMS02216-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.794 Info: [Scheduler] Engine:LONMS02338-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.876 Info: [Scheduler] Engine:LONMS02001-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.889 Info: [Scheduler] Engine:LONMS02001-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.895 Info: [Scheduler] Engine:LONMS02338-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:08.004 Info: [Scheduler] Engine:LONMS02338-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:16.518 Info: [Scheduler] Engine:LONMS02216-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:05.733 Info: [Scheduler] Engine:LONMS02000-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:05.821 Info: [Scheduler] Engine:LONMS02000-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:05.931 Info: [Scheduler] Engine:LONMS02000-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:06.094 Info: [Scheduler] Engine:LONMS02000-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:48.619 Info: [Scheduler] Engine:LONMS02215-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:48.843 Info: [Scheduler] Engine:LONMS02215-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:51.976 Info: [Scheduler] Engine:LONMS02215-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:52.168 Info: [Scheduler] Engine:LONMS02215-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:11:01.496 Info: [Scheduler] Engine:LONMS02341-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:11:01.659 Info: [Scheduler] Engine:LONMS02341-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:11:04.604 Info: [Scheduler] Engine:LONMS02341-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:07.812 Info: [Scheduler] Engine:LONMS02341-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:07.993 Info: [Scheduler] Engine:LONMS02339-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:08.613 Info: [Scheduler] Engine:LONMS02338-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:08.668 Info: [Scheduler] Engine:LONMS01976-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.034 Info: [Scheduler] Engine:LONMS01974-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.064 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.109 Info: [Scheduler] Engine:LONMS01975-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.189 Info: [Scheduler] Engine:LONMS01977-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.200 Info: [Scheduler] Engine:LONMS01974-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.208 Info: [Scheduler] Engine:LONMS02215-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.236 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.252 Info: [Scheduler] Engine:LONMS02002-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.286 Info: [Scheduler] Engine:LONMS02216-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.292 Info: [Scheduler] Engine:LONMS02340-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.316 Info: [Scheduler] Engine:LONMS02338-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.318 Info: [Scheduler] Engine:LONMS02216-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.341 Info: [Scheduler] Engine:LONMS01974-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.343 Info: [Scheduler] Engine:LONMS02000-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.357 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.361 Info: [Scheduler] Engine:LONMS02214-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.393 Info: [Scheduler] Engine:LONMS01975-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.409 Info: [Scheduler] Engine:LONMS02002-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.411 Info: [Scheduler] Engine:LONMS02341-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.417 Info: [Scheduler] Engine:LONMS02000-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.431 Info: [Scheduler] Engine:LONMS01977-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.476 Info: [Scheduler] Engine:LONMS02215-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.503 Info: [Scheduler] Engine:LONMS02215-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.515 Info: [Scheduler] Engine:LONMS02214-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.542 Info: [Scheduler] Engine:LONMS01975-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.545 Info: [Scheduler] Engine:LONMS01974-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.545 Info: [Scheduler] Engine:LONMS01977-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.565 Info: [Scheduler] Engine:LONMS01976-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.609 Info: [Scheduler] Engine:LONMS01975-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.637 Info: [Scheduler] Engine:LONMS02000-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.658 Info: [Scheduler] Engine:LONMS02000-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.686 Info: [Scheduler] Engine:LONMS02339-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.688 Info: [Scheduler] Engine:LONMS02341-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.767 Info: [Scheduler] Engine:LONMS02339-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.807 Info: [Scheduler] Engine:LONMS02216-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.826 Info: [Scheduler] Engine:LONMS02214-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.836 Info: [Scheduler] Engine:LONMS02216-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.900 Info: [Scheduler] Engine:LONMS02340-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.907 Info: [Scheduler] Engine:LONMS02001-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.951 Info: [Scheduler] Engine:LONMS02001-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.980 Info: [Scheduler] Engine:LONMS02338-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.996 Info: [Scheduler] Engine:LONMS02215-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.030 Info: [Scheduler] Engine:LONMS02340-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.109 Info: [Scheduler] Engine:LONMS02001-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.177 Info: [Scheduler] Engine:LONMS01976-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.188 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.196 Info: [Scheduler] Engine:LONMS01976-2:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.207 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.226 Info: [Scheduler] Engine:LONMS02214-0:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.289 Info: [Scheduler] Engine:LONMS02338-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.355 Info: [Scheduler] Engine:LONMS02339-1:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.372 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:18:52.359 Info: [Scheduler] Engine:LONMS02688-1:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:31.204 Info: [Scheduler] Engine:LONMS02978-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:31.822 Info: [Scheduler] Engine:LONMS02216-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:31.854 Info: [Scheduler] Engine:LONMS02340-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:31.875 Info: [Scheduler] Engine:LONMS02976-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.244 Info: [Scheduler] Engine:LONMS02980-4:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.290 Info: [Scheduler] Engine:LONMS02879-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.351 Info: [Scheduler] Engine:LONMS05191-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.388 Info: [Scheduler] Engine:LONMS02983-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.437 Info: [Scheduler] Engine:LONMS02975-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.440 Info: [Scheduler] Engine:LONMS02877-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.545 Info: [Scheduler] Engine:LONMS02987-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.115 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.253 Info: [Scheduler] Engine:LONMS02871-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.333 Info: [Scheduler] Engine:LONMS05187-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.382 Info: [Scheduler] Engine:LONMS05191-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.480 Info: [Scheduler] Engine:LONMS02338-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.544 Info: [Scheduler] Engine:lonms02973-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.547 Info: [Scheduler] Engine:LONMS02981-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.585 Info: [Scheduler] Engine:LONMS01976-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.607 Info: [Scheduler] Engine:LONMS05072-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.636 Info: [Scheduler] Engine:LONMS02982-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.649 Info: [Scheduler] Engine:LONMS01976-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.915 Info: [Scheduler] Engine:LONMS02869-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.056 Info: [Scheduler] Engine:LONMS05085-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.160 Info: [Scheduler] Engine:LONMS05190-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.260 Info: [Scheduler] Engine:LONMS02866-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.638 Info: [Scheduler] Engine:LONMS05188-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.773 Info: [Scheduler] Engine:LONMS05082-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.898 Info: [Scheduler] Engine:LONMS02870-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:48.048 Info: [Scheduler] Engine:LONMS02865-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:48.254 Info: [Scheduler] Engine:LONMS02867-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:51.791 Info: [Scheduler] Engine:LONMS02216-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:51.889 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:52.420 Info: [Scheduler] Engine:LONMS02987-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:58.660 Info: [Scheduler] Engine:LONMS05079-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:59.700 Info: [Scheduler] Engine:LONMS05186-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:13.639 Info: [Scheduler] Engine:LONMS02000-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:49.470 Info: [Scheduler] Engine:LONMS05156-0:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:50.498 Info: [Scheduler] Engine:LONMS02688-2:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:54.501 Info: [Scheduler] Engine:LONMS02685-0:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:54.822 Info: [Scheduler] Engine:LONMS02596-1:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 11:21:51.445 Info: [Scheduler] Engine:LONMS02684-1:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-10.12.42.log:10/10/08 11:23:30.241 Info: [Scheduler] Engine:LONMS02980-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:02.715 Info: [Scheduler] Engine:LONMS05192-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:02.862 Info: [Scheduler] Engine:LONMS02983-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:03.621 Info: [Scheduler] Engine:LONMS02866-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:03.799 Info: [Scheduler] Engine:LONMS05081-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:03.890 Info: [Scheduler] Engine:LONMS05201-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:03.933 Info: [Scheduler] Engine:LONMS02983-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.098 Info: [Scheduler] Engine:LONMS02986-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.122 Info: [Scheduler] Engine:LONMS05082-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.124 Info: [Scheduler] Engine:LONMS02872-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.182 Info: [Scheduler] Engine:LONMS05189-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.192 Info: [Scheduler] Engine:LONMS01975-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.218 Info: [Scheduler] Engine:LONMS05187-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.289 Info: [Scheduler] Engine:LONMS02980-6:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.355 Info: [Scheduler] Engine:LONMS05197-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.609 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:06.828 Info: [Scheduler] Engine:lonms02977-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:06.886 Info: [Scheduler] Engine:LONMS05201-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.089 Info: [Scheduler] Engine:LONMS02976-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.159 Info: [Scheduler] Engine:LONMS05193-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.217 Info: [Scheduler] Engine:LONMS05187-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.295 Info: [Scheduler] Engine:LONMS02000-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.372 Info: [Scheduler] Engine:LONMS05200-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:15.382 Info: [Scheduler] Engine:LONMS02978-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:15.796 Info: [Scheduler] Engine:LONMS05078-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:16.798 Info: [Scheduler] Engine:LONMS05195-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:17.799 Info: [Scheduler] Engine:LONMS05197-5:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:18.656 Info: [Scheduler] Engine:LONMS05085-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.144 Info: [Scheduler] Engine:LONMS01975-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.211 Info: [Scheduler] Engine:LONMS02976-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.330 Info: [Scheduler] Engine:LONMS02338-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.580 Info: [Scheduler] Engine:LONMS05188-4:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.616 Info: [Scheduler] Engine:LONMS02988-4:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.950 Info: [Scheduler] Engine:LONMS02867-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:20.576 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:30.881 Info: [Scheduler] Engine:LONMS05201-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:35.015 Info: [Scheduler] Engine:lonms05194-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:51.279 Info: [Scheduler] Engine:LONMS05196-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:57:54.366 Info: [Scheduler] Engine:LONMS02685-2:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:14.055 Info: [Scheduler] Engine:LONMS02981-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:14.107 Info: [Scheduler] Engine:LONMS05189-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:14.588 Info: [Scheduler] Engine:LONMS02001-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:15.047 Info: [Scheduler] Engine:LONMS05070-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:16.049 Info: [Scheduler] Engine:LONMS05073-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.342 Info: [Scheduler] Engine:LONMS02872-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.411 Info: [Scheduler] Engine:LONMS02878-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.474 Info: [Scheduler] Engine:LONMS02876-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.708 Info: [Scheduler] Engine:LONMS02979-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.806 Info: [Scheduler] Engine:lonms02977-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.839 Info: [Scheduler] Engine:LONMS02988-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.030 Info: [Scheduler] Engine:LONMS05079-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.117 Info: [Scheduler] Engine:LONMS05080-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.313 Info: [Scheduler] Engine:LONMS02870-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.318 Info: [Scheduler] Engine:LONMS05197-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.380 Info: [Scheduler] Engine:LONMS05190-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.413 Info: [Scheduler] Engine:LONMS02975-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.658 Info: [Scheduler] Engine:LONMS02979-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.707 Info: [Scheduler] Engine:LONMS05076-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.855 Info: [Scheduler] Engine:LONMS05079-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.857 Info: [Scheduler] Engine:lonms02977-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.860 Info: [Scheduler] Engine:LONMS02984-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.901 Info: [Scheduler] Engine:LONMS02865-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.906 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:22.073 Info: [Scheduler] Engine:LONMS05077-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:22.198 Info: [Scheduler] Engine:lonms02973-4:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:33.021 Info: [Scheduler] Engine:LONMS05072-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:33.222 Info: [Scheduler] Engine:lonms02973-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:33.289 Info: [Scheduler] Engine:LONMS02986-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:33.293 Info: [Scheduler] Engine:LONMS05071-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:34.451 Info: [Scheduler] Engine:LONMS02980-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:34.668 Info: [Scheduler] Engine:LONMS02864-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:38.519 Info: [Scheduler] Engine:LONMS05078-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:38.633 Info: [Scheduler] Engine:LONMS05193-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:46.024 Info: [Scheduler] Engine:LONMS05079-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:46.427 Info: [Scheduler] Engine:lonms02977-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:59.543 Info: [Scheduler] Engine:LONMS05085-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:13:54.412 Info: [Scheduler] Engine:LONMS01736-2:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:17.248 Info: [Scheduler] Engine:LONMS02878-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:17.590 Info: [Scheduler] Engine:LONMS02979-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.197 Info: [Scheduler] Engine:lonms05194-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.303 Info: [Scheduler] Engine:LONMS02870-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.343 Info: [Scheduler] Engine:LONMS05196-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.456 Info: [Scheduler] Engine:LONMS05187-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.613 Info: [Scheduler] Engine:lonms02977-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.615 Info: [Scheduler] Engine:LONMS02976-5:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.757 Info: [Scheduler] Engine:LONMS05086-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.761 Info: [Scheduler] Engine:LONMS05071-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.791 Info: [Scheduler] Engine:LONMS05200-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.106 Info: [Scheduler] Engine:LONMS02876-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.590 Info: [Scheduler] Engine:LONMS05186-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.599 Info: [Scheduler] Engine:LONMS02979-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.604 Info: [Scheduler] Engine:LONMS02871-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.737 Info: [Scheduler] Engine:LONMS05188-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.879 Info: [Scheduler] Engine:LONMS05186-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.939 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.940 Info: [Scheduler] Engine:LONMS05087-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.018 Info: [Scheduler] Engine:LONMS02976-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.066 Info: [Scheduler] Engine:lonms05198-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.131 Info: [Scheduler] Engine:lonms05194-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.187 Info: [Scheduler] Engine:lonms05198-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.444 Info: [Scheduler] Engine:LONMS02978-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:29.537 Info: [Scheduler] Engine:LONMS05195-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:29.935 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:34.259 Info: [Scheduler] Engine:LONMS02878-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:34.320 Info: [Scheduler] Engine:LONMS05073-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:34.528 Info: [Scheduler] Engine:LONMS05186-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:34.767 Info: [Scheduler] Engine:LONMS02976-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:35.089 Info: [Scheduler] Engine:LONMS05072-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:35.124 Info: [Scheduler] Engine:LONMS05072-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:38.007 Info: [Scheduler] Engine:LONMS02974-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:38.240 Info: [Scheduler] Engine:LONMS02978-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:38.269 Info: [Scheduler] Engine:LONMS02870-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:38.390 Info: [Scheduler] Engine:LONMS05195-5:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:55.587 Info: [Scheduler] Engine:LONMS02001-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:35.265 Info: [Scheduler] Engine:LONMS05199-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:38.663 Info: [Scheduler] Engine:LONMS05192-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:38.743 Info: [Scheduler] Engine:LONMS05188-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:38.748 Info: [Scheduler] Engine:LONMS02979-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:38.918 Info: [Scheduler] Engine:LONMS02978-4:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.258 Info: [Scheduler] Engine:LONMS02978-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.391 Info: [Scheduler] Engine:LONMS05199-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.512 Info: [Scheduler] Engine:LONMS02864-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.903 Info: [Scheduler] Engine:LONMS02002-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.969 Info: [Scheduler] Engine:LONMS02985-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.985 Info: [Scheduler] Engine:LONMS02985-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:40.142 Info: [Scheduler] Engine:LONMS02981-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:40.202 Info: [Scheduler] Engine:LONMS05195-5:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:40.204 Info: [Scheduler] Engine:LONMS02978-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:40.357 Info: [Scheduler] Engine:LONMS02340-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.543 Info: [Scheduler] Engine:LONMS05081-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.716 Info: [Scheduler] Engine:LONMS02980-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.796 Info: [Scheduler] Engine:LONMS05087-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.883 Info: [Scheduler] Engine:LONMS02867-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.888 Info: [Scheduler] Engine:LONMS05193-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.084 Info: [Scheduler] Engine:LONMS01977-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.100 Info: [Scheduler] Engine:LONMS05199-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.104 Info: [Scheduler] Engine:LONMS05188-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.106 Info: [Scheduler] Engine:LONMS02868-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.267 Info: [Scheduler] Engine:LONMS02215-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.270 Info: [Scheduler] Engine:LONMS05071-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.272 Info: [Scheduler] Engine:LONMS02979-5:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.283 Info: [Scheduler] Engine:LONMS05084-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.458 Info: [Scheduler] Engine:LONMS02875-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:55.056 Info: [Scheduler] Engine:LONMS02876-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:55.546 Info: [Scheduler] Engine:LONMS02980-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:55.826 Info: [Scheduler] Engine:LONMS02985-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:59.877 Info: [Scheduler] Engine:LONMS05201-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:18:00.102 Info: [Scheduler] Engine:LONMS02976-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:11.270 Info: [Scheduler] Engine:LONMS02875-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:17.035 Info: [Scheduler] Engine:LONMS02339-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:17.118 Info: [Scheduler] Engine:LONMS05070-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:17.646 Info: [Scheduler] Engine:LONMS05040-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:49.767 Info: [Scheduler] Engine:LONMS02683-0:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:52.446 Info: [Scheduler] Engine:LONMS05155-1:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:19:00.897 Info: [Scheduler] Engine:LONMS05040-3:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.483 Info: [Scheduler] Engine:LONMS02864-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.505 Info: [Scheduler] Engine:LONMS05078-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.528 Info: [Scheduler] Engine:LONMS05076-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.601 Info: [Scheduler] Engine:LONMS05195-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.993 Info: [Scheduler] Engine:LONMS05193-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:17.152 Info: [Scheduler] Engine:LONMS02974-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:17.295 Info: [Scheduler] Engine:LONMS05199-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:17.307 Info: [Scheduler] Engine:LONMS02978-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:17.416 Info: [Scheduler] Engine:LONMS05190-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:20.513 Info: [Scheduler] Engine:LONMS02980-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:20.716 Info: [Scheduler] Engine:LONMS05201-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:20.760 Info: [Scheduler] Engine:LONMS05083-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:20.993 Info: [Scheduler] Engine:LONMS05080-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.067 Info: [Scheduler] Engine:LONMS05189-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.097 Info: [Scheduler] Engine:LONMS05084-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.178 Info: [Scheduler] Engine:LONMS02874-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.341 Info: [Scheduler] Engine:LONMS05190-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.353 Info: [Scheduler] Engine:LONMS02975-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.365 Info: [Scheduler] Engine:LONMS05199-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:28.865 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:28.931 Info: [Scheduler] Engine:LONMS02867-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:29.201 Info: [Scheduler] Engine:LONMS05196-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:29.328 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:29.330 Info: [Scheduler] Engine:LONMS02878-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:29.614 Info: [Scheduler] Engine:LONMS05201-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:32.553 Info: [Scheduler] Engine:LONMS02871-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:32.569 Info: [Scheduler] Engine:LONMS02980-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:37.547 Info: [Scheduler] Engine:LONMS05085-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:37.970 Info: [Scheduler] Engine:lonms02973-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:38.231 Info: [Scheduler] Engine:LONMS02975-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:44.105 Info: [Scheduler] Engine:LONMS05084-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:44.511 Info: [Scheduler] Engine:LONMS02980-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:44.605 Info: [Scheduler] Engine:LONMS02871-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:44.964 Info: [Scheduler] Engine:LONMS05193-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:53.899 Info: [Scheduler] Engine:LONMS02867-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:54.603 Info: [Scheduler] Engine:LONMS02598-3:Logoff:Restarting to load library qfx-gridservice
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:55.639 Info: [Scheduler] Engine:LONMS05192-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:21:52.003 Info: [Scheduler] Engine:LONMS05155-3:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:26:11.658 Info: [Scheduler] Engine:LONMS02598-3:Logoff:Did not pick up task assignment within expiration time
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:26:57.579 Info: [Scheduler] Engine:LONMS02687-3:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.101 Info: [Scheduler] Engine:LONMS05188-6:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.112 Info: [Scheduler] Engine:LONMS05189-5:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.124 Info: [Scheduler] Engine:LONMS05190-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.127 Info: [Scheduler] Engine:LONMS02974-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.133 Info: [Scheduler] Engine:LONMS02987-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.528 Info: [Scheduler] Engine:LONMS05078-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.653 Info: [Scheduler] Engine:LONMS05188-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.766 Info: [Scheduler] Engine:LONMS01974-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.778 Info: [Scheduler] Engine:LONMS02979-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.843 Info: [Scheduler] Engine:LONMS02984-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.094 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.096 Info: [Scheduler] Engine:LONMS02976-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.123 Info: [Scheduler] Engine:LONMS02974-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.151 Info: [Scheduler] Engine:LONMS02982-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.168 Info: [Scheduler] Engine:LONMS02982-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.205 Info: [Scheduler] Engine:LONMS02869-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.321 Info: [Scheduler] Engine:LONMS05196-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.340 Info: [Scheduler] Engine:LONMS05189-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.405 Info: [Scheduler] Engine:LONMS05077-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.435 Info: [Scheduler] Engine:LONMS05077-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:19.735 Info: [Scheduler] Engine:LONMS05086-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:19.921 Info: [Scheduler] Engine:LONMS01974-3:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.034 Info: [Scheduler] Engine:LONMS02974-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.079 Info: [Scheduler] Engine:LONMS02988-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.233 Info: [Scheduler] Engine:LONMS05196-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.383 Info: [Scheduler] Engine:LONMS05199-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.401 Info: [Scheduler] Engine:LONMS05190-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.477 Info: [Scheduler] Engine:LONMS05188-6:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.640 Info: [Scheduler] Engine:LONMS05201-6:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.730 Info: [Scheduler] Engine:LONMS05188-4:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:31.876 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:32.002 Info: [Scheduler] Engine:LONMS05072-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:32.075 Info: [Scheduler] Engine:lonms05194-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:42.696 Info: [Scheduler] Engine:LONMS05086-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:43.061 Info: [Scheduler] Engine:LONMS02974-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:43.256 Info: [Scheduler] Engine:LONMS05077-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:58.857 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:33.180 Info: [Scheduler] Engine:LONMS02878-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:33.449 Info: [Scheduler] Engine:LONMS02980-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:33.505 Info: [Scheduler] Engine:LONMS02877-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:33.519 Info: [Scheduler] Engine:LONMS05078-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:36.752 Info: [Scheduler] Engine:LONMS05192-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:37.248 Info: [Scheduler] Engine:LONMS02875-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:24.801 Info: [Scheduler] Engine:lonms02977-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:24.922 Info: [Scheduler] Engine:LONMS02982-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:25.158 Info: [Scheduler] Engine:lonms02973-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:25.164 Info: [Scheduler] Engine:lonms02973-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:25.219 Info: [Scheduler] Engine:LONMS05189-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:40.501 Info: [Scheduler] Engine:LONMS05078-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:20.755 Info: [Scheduler] Engine:LONMS01974-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:20.857 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:21.005 Info: [Scheduler] Engine:LONMS02976-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:21.545 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:24.514 Info: [Scheduler] Engine:LONMS05078-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:39.760 Info: [Scheduler] Engine:LONMS05086-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.308 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.415 Info: [Scheduler] Engine:LONMS05188-5:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.432 Info: [Scheduler] Engine:LONMS05081-2:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.434 Info: [Scheduler] Engine:LONMS02868-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.459 Info: [Scheduler] Engine:LONMS02875-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.462 Info: [Scheduler] Engine:LONMS05087-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:22.980 Info: [Scheduler] Engine:LONMS02339-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:23.157 Info: [Scheduler] Engine:LONMS02984-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:23.276 Info: [Scheduler] Engine:LONMS02987-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:23.279 Info: [Scheduler] Engine:LONMS05197-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:26.307 Info: [Scheduler] Engine:LONMS02872-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:26.519 Info: [Scheduler] Engine:LONMS02871-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:49.397 Info: [Scheduler] Engine:LONMS05078-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:49.595 Info: [Scheduler] Engine:LONMS05186-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:53.247 Info: [Scheduler] Engine:LONMS05196-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:53.314 Info: [Scheduler] Engine:LONMS05187-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:53.330 Info: [Scheduler] Engine:LONMS05197-5:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:53.510 Info: [Scheduler] Engine:LONMS02872-1:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:46.823 Info: [Scheduler] Engine:LONMS02686-2:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:52.012 Info: [Scheduler] Engine:LONMS05039-3:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:52.553 Info: [Scheduler] Engine:LONMS02686-3:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:56.086 Info: [Scheduler] Engine:LONMS01735-0:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:57.069 Info: [Scheduler] Engine:LONMS05038-3:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:04.730 Info: [Scheduler] Engine:LONMS05188-7:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:04.877 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:05.159 Info: [Scheduler] Engine:LONMS05077-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:05.477 Info: [Scheduler] Engine:LONMS05190-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:08.513 Info: [Scheduler] Engine:LONMS05186-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:20.202 Info: [Scheduler] Engine:LONMS02872-1:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:47.240 Info: [Scheduler] Engine:LONMS05187-4:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:47.316 Info: [Scheduler] Engine:LONMS05199-6:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:51.482 Info: [Scheduler] Engine:LONMS02866-3:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:52.153 Info: [Scheduler] Engine:LONMS05073-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:52.310 Info: [Scheduler] Engine:LONMS05188-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:54.064 Info: [Scheduler] Engine:LONMS02987-7:Logoff:Failed daemon notification
+grepLogoffBroker.txt:gridserver.log.10.10.2008-15.51.40.log:10/10/08 15:51:50.397 Info: [Scheduler] Engine:LONMS05040-0:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-15.51.40.log:10/10/08 15:51:54.627 Info: [Scheduler] Engine:LONMS01734-0:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-15.51.40.log:10/10/08 15:51:57.391 Info: [Scheduler] Engine:LONMS01737-0:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 18:41:45.649 Info: [Scheduler] Engine:LONMS05154-1:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.269 Info: [Scheduler] Engine:LONMS02214-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.359 Info: [Scheduler] Engine:LONMS02214-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.437 Info: [Scheduler] Engine:LONMS02214-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.499 Info: [Scheduler] Engine:LONMS02214-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.785 Info: [Scheduler] Engine:LONMS02002-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.882 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.943 Info: [Scheduler] Engine:LONMS02002-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:24.022 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:24.846 Info: [Scheduler] Engine:LONMS02340-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:24.922 Info: [Scheduler] Engine:LONMS02340-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:24.983 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.048 Info: [Scheduler] Engine:LONMS02340-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.323 Info: [Scheduler] Engine:LONMS02000-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.366 Info: [Scheduler] Engine:LONMS02000-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.461 Info: [Scheduler] Engine:LONMS02000-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.523 Info: [Scheduler] Engine:LONMS02000-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.668 Info: [Scheduler] Engine:LONMS02338-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.760 Info: [Scheduler] Engine:LONMS02338-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.779 Info: [Scheduler] Engine:LONMS01975-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.805 Info: [Scheduler] Engine:LONMS02338-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.862 Info: [Scheduler] Engine:LONMS01975-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.867 Info: [Scheduler] Engine:LONMS02338-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.279 Info: [Scheduler] Engine:LONMS01975-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.345 Info: [Scheduler] Engine:LONMS01975-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.431 Info: [Scheduler] Engine:LONMS02339-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.503 Info: [Scheduler] Engine:LONMS02339-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.566 Info: [Scheduler] Engine:LONMS02339-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.629 Info: [Scheduler] Engine:LONMS02339-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.726 Info: [Scheduler] Engine:LONMS02216-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.802 Info: [Scheduler] Engine:LONMS02216-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.868 Info: [Scheduler] Engine:LONMS02216-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.940 Info: [Scheduler] Engine:LONMS02216-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.984 Info: [Scheduler] Engine:LONMS02001-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.043 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.121 Info: [Scheduler] Engine:LONMS02001-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.176 Info: [Scheduler] Engine:LONMS01976-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.215 Info: [Scheduler] Engine:LONMS02001-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.481 Info: [Scheduler] Engine:LONMS01977-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.578 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.639 Info: [Scheduler] Engine:LONMS01977-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.717 Info: [Scheduler] Engine:LONMS01977-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:28.699 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:28.764 Info: [Scheduler] Engine:LONMS02341-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:28.857 Info: [Scheduler] Engine:LONMS02341-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:28.950 Info: [Scheduler] Engine:LONMS02341-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:30.051 Info: [Scheduler] Engine:LONMS01976-2:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:30.134 Info: [Scheduler] Engine:LONMS01976-1:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:30.225 Info: [Scheduler] Engine:LONMS01976-0:Logoff:Native daemon shut down the Engine
+grepLogoffBroker.txt:gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:19:23.657 Info: [Scheduler] Engine:LONMS02981-0:Logoff:Engine session removed because it re-logged in
+grepLogoffBroker.txt:gridserver.log.10.10.2008-20.19.10.log:10/10/08 21:13:45.962 Info: [Scheduler] Engine:LONMS05154-3:Logoff:Rerouted by the Engine Balancer
+grepLogoffBroker.txt:gridserver.log.10.10.2008-21.34.37.log:10/10/08 21:37:46.121 Info: [Scheduler] Engine:LONMS02685-3:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:32.810 Info: [Scheduler] Engine:LONMS02214-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:32.909 Info: [Scheduler] Engine:LONMS02214-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:35.895 Info: [Scheduler] Engine:LONMS02214-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:44.964 Info: [Scheduler] Engine:LONMS02214-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:48.183 Info: [Scheduler] Engine:LONMS01974-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:48.362 Info: [Scheduler] Engine:LONMS01974-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:48.439 Info: [Scheduler] Engine:LONMS01974-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:50.107 Info: [Scheduler] Engine:LONMS02002-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:50.372 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:53.451 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:53.714 Info: [Scheduler] Engine:LONMS02002-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:54.018 Info: [Scheduler] Engine:LONMS02340-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:54.511 Info: [Scheduler] Engine:LONMS02340-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:54.611 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:54.672 Info: [Scheduler] Engine:LONMS02340-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:57.966 Info: [Scheduler] Engine:LONMS02339-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:58.385 Info: [Scheduler] Engine:LONMS02339-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:58.470 Info: [Scheduler] Engine:LONMS02339-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:59.374 Info: [Scheduler] Engine:LONMS01977-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:59.451 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:09:59.537 Info: [Scheduler] Engine:LONMS01977-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:00.679 Info: [Scheduler] Engine:LONMS01975-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:00.934 Info: [Scheduler] Engine:LONMS01975-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:01.028 Info: [Scheduler] Engine:LONMS01975-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:01.816 Info: [Scheduler] Engine:LONMS02339-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:01.852 Info: [Scheduler] Engine:LONMS01976-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:02.189 Info: [Scheduler] Engine:LONMS01976-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:02.286 Info: [Scheduler] Engine:LONMS01976-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:02.853 Info: [Scheduler] Engine:LONMS01977-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.250 Info: [Scheduler] Engine:LONMS02216-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.409 Info: [Scheduler] Engine:LONMS01975-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.411 Info: [Scheduler] Engine:LONMS02216-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.470 Info: [Scheduler] Engine:LONMS02001-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:04.847 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:05.568 Info: [Scheduler] Engine:LONMS01976-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.501 Info: [Scheduler] Engine:LONMS02338-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.789 Info: [Scheduler] Engine:LONMS02216-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.794 Info: [Scheduler] Engine:LONMS02338-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.876 Info: [Scheduler] Engine:LONMS02001-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.889 Info: [Scheduler] Engine:LONMS02001-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:07.895 Info: [Scheduler] Engine:LONMS02338-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:08.004 Info: [Scheduler] Engine:LONMS02338-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.09.2008-20.09.42.log:10/10/08 03:10:16.518 Info: [Scheduler] Engine:LONMS02216-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:05.733 Info: [Scheduler] Engine:LONMS02000-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:05.821 Info: [Scheduler] Engine:LONMS02000-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:05.931 Info: [Scheduler] Engine:LONMS02000-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:06.094 Info: [Scheduler] Engine:LONMS02000-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:48.619 Info: [Scheduler] Engine:LONMS02215-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:48.843 Info: [Scheduler] Engine:LONMS02215-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:51.976 Info: [Scheduler] Engine:LONMS02215-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:10:52.168 Info: [Scheduler] Engine:LONMS02215-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:11:01.496 Info: [Scheduler] Engine:LONMS02341-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:11:01.659 Info: [Scheduler] Engine:LONMS02341-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-08.08.22.log:10/10/08 08:11:04.604 Info: [Scheduler] Engine:LONMS02341-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:07.812 Info: [Scheduler] Engine:LONMS02341-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:07.993 Info: [Scheduler] Engine:LONMS02339-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:08.613 Info: [Scheduler] Engine:LONMS02338-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:08.668 Info: [Scheduler] Engine:LONMS01976-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.034 Info: [Scheduler] Engine:LONMS01974-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.064 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.109 Info: [Scheduler] Engine:LONMS01975-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.189 Info: [Scheduler] Engine:LONMS01977-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.200 Info: [Scheduler] Engine:LONMS01974-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.208 Info: [Scheduler] Engine:LONMS02215-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.236 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.252 Info: [Scheduler] Engine:LONMS02002-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.286 Info: [Scheduler] Engine:LONMS02216-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.292 Info: [Scheduler] Engine:LONMS02340-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.316 Info: [Scheduler] Engine:LONMS02338-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.318 Info: [Scheduler] Engine:LONMS02216-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.341 Info: [Scheduler] Engine:LONMS01974-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.343 Info: [Scheduler] Engine:LONMS02000-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.357 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.361 Info: [Scheduler] Engine:LONMS02214-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.393 Info: [Scheduler] Engine:LONMS01975-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.409 Info: [Scheduler] Engine:LONMS02002-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.411 Info: [Scheduler] Engine:LONMS02341-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.417 Info: [Scheduler] Engine:LONMS02000-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.431 Info: [Scheduler] Engine:LONMS01977-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.476 Info: [Scheduler] Engine:LONMS02215-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.503 Info: [Scheduler] Engine:LONMS02215-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.515 Info: [Scheduler] Engine:LONMS02214-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.542 Info: [Scheduler] Engine:LONMS01975-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.545 Info: [Scheduler] Engine:LONMS01974-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.545 Info: [Scheduler] Engine:LONMS01977-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.565 Info: [Scheduler] Engine:LONMS01976-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.609 Info: [Scheduler] Engine:LONMS01975-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.637 Info: [Scheduler] Engine:LONMS02000-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.658 Info: [Scheduler] Engine:LONMS02000-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.686 Info: [Scheduler] Engine:LONMS02339-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.688 Info: [Scheduler] Engine:LONMS02341-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.767 Info: [Scheduler] Engine:LONMS02339-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.807 Info: [Scheduler] Engine:LONMS02216-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.826 Info: [Scheduler] Engine:LONMS02214-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.836 Info: [Scheduler] Engine:LONMS02216-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.900 Info: [Scheduler] Engine:LONMS02340-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.907 Info: [Scheduler] Engine:LONMS02001-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.951 Info: [Scheduler] Engine:LONMS02001-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.980 Info: [Scheduler] Engine:LONMS02338-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:11.996 Info: [Scheduler] Engine:LONMS02215-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.030 Info: [Scheduler] Engine:LONMS02340-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.109 Info: [Scheduler] Engine:LONMS02001-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.177 Info: [Scheduler] Engine:LONMS01976-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.188 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.196 Info: [Scheduler] Engine:LONMS01976-2:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.207 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.226 Info: [Scheduler] Engine:LONMS02214-0:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.289 Info: [Scheduler] Engine:LONMS02338-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.355 Info: [Scheduler] Engine:LONMS02339-1:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-09.27.42.log:10/10/08 09:28:12.372 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:18:52.359 Info: [Scheduler] Engine:LONMS02688-1:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:31.204 Info: [Scheduler] Engine:LONMS02978-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:31.822 Info: [Scheduler] Engine:LONMS02216-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:31.854 Info: [Scheduler] Engine:LONMS02340-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:31.875 Info: [Scheduler] Engine:LONMS02976-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.244 Info: [Scheduler] Engine:LONMS02980-4:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.290 Info: [Scheduler] Engine:LONMS02879-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.351 Info: [Scheduler] Engine:LONMS05191-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.388 Info: [Scheduler] Engine:LONMS02983-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.437 Info: [Scheduler] Engine:LONMS02975-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.440 Info: [Scheduler] Engine:LONMS02877-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:32.545 Info: [Scheduler] Engine:LONMS02987-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.115 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.253 Info: [Scheduler] Engine:LONMS02871-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.333 Info: [Scheduler] Engine:LONMS05187-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.382 Info: [Scheduler] Engine:LONMS05191-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.480 Info: [Scheduler] Engine:LONMS02338-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.544 Info: [Scheduler] Engine:lonms02973-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.547 Info: [Scheduler] Engine:LONMS02981-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.585 Info: [Scheduler] Engine:LONMS01976-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.607 Info: [Scheduler] Engine:LONMS05072-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.636 Info: [Scheduler] Engine:LONMS02982-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.649 Info: [Scheduler] Engine:LONMS01976-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:35.915 Info: [Scheduler] Engine:LONMS02869-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.056 Info: [Scheduler] Engine:LONMS05085-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.160 Info: [Scheduler] Engine:LONMS05190-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.260 Info: [Scheduler] Engine:LONMS02866-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.638 Info: [Scheduler] Engine:LONMS05188-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.773 Info: [Scheduler] Engine:LONMS05082-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:47.898 Info: [Scheduler] Engine:LONMS02870-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:48.048 Info: [Scheduler] Engine:LONMS02865-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:48.254 Info: [Scheduler] Engine:LONMS02867-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:51.791 Info: [Scheduler] Engine:LONMS02216-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:51.889 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:52.420 Info: [Scheduler] Engine:LONMS02987-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:58.660 Info: [Scheduler] Engine:LONMS05079-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:44:59.700 Info: [Scheduler] Engine:LONMS05186-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:13.639 Info: [Scheduler] Engine:LONMS02000-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:49.470 Info: [Scheduler] Engine:LONMS05156-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:50.498 Info: [Scheduler] Engine:LONMS02688-2:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:54.501 Info: [Scheduler] Engine:LONMS02685-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 10:45:54.822 Info: [Scheduler] Engine:LONMS02596-1:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 11:21:51.445 Info: [Scheduler] Engine:LONMS02684-1:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-10.12.42.log:10/10/08 11:23:30.241 Info: [Scheduler] Engine:LONMS02980-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:02.715 Info: [Scheduler] Engine:LONMS05192-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:02.862 Info: [Scheduler] Engine:LONMS02983-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:03.621 Info: [Scheduler] Engine:LONMS02866-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:03.799 Info: [Scheduler] Engine:LONMS05081-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:03.890 Info: [Scheduler] Engine:LONMS05201-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:03.933 Info: [Scheduler] Engine:LONMS02983-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.098 Info: [Scheduler] Engine:LONMS02986-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.122 Info: [Scheduler] Engine:LONMS05082-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.124 Info: [Scheduler] Engine:LONMS02872-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.182 Info: [Scheduler] Engine:LONMS05189-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.192 Info: [Scheduler] Engine:LONMS01975-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.218 Info: [Scheduler] Engine:LONMS05187-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.289 Info: [Scheduler] Engine:LONMS02980-6:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.355 Info: [Scheduler] Engine:LONMS05197-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:04.609 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:06.828 Info: [Scheduler] Engine:lonms02977-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:06.886 Info: [Scheduler] Engine:LONMS05201-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.089 Info: [Scheduler] Engine:LONMS02976-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.159 Info: [Scheduler] Engine:LONMS05193-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.217 Info: [Scheduler] Engine:LONMS05187-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.295 Info: [Scheduler] Engine:LONMS02000-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:07.372 Info: [Scheduler] Engine:LONMS05200-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:15.382 Info: [Scheduler] Engine:LONMS02978-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:15.796 Info: [Scheduler] Engine:LONMS05078-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:16.798 Info: [Scheduler] Engine:LONMS05195-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:17.799 Info: [Scheduler] Engine:LONMS05197-5:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:18.656 Info: [Scheduler] Engine:LONMS05085-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.144 Info: [Scheduler] Engine:LONMS01975-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.211 Info: [Scheduler] Engine:LONMS02976-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.330 Info: [Scheduler] Engine:LONMS02338-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.580 Info: [Scheduler] Engine:LONMS05188-4:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.616 Info: [Scheduler] Engine:LONMS02988-4:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:19.950 Info: [Scheduler] Engine:LONMS02867-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:20.576 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:30.881 Info: [Scheduler] Engine:LONMS05201-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:35.015 Info: [Scheduler] Engine:lonms05194-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:56:51.279 Info: [Scheduler] Engine:LONMS05196-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 13:57:54.366 Info: [Scheduler] Engine:LONMS02685-2:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:14.055 Info: [Scheduler] Engine:LONMS02981-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:14.107 Info: [Scheduler] Engine:LONMS05189-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:14.588 Info: [Scheduler] Engine:LONMS02001-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:15.047 Info: [Scheduler] Engine:LONMS05070-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:16.049 Info: [Scheduler] Engine:LONMS05073-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.342 Info: [Scheduler] Engine:LONMS02872-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.411 Info: [Scheduler] Engine:LONMS02878-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.474 Info: [Scheduler] Engine:LONMS02876-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.708 Info: [Scheduler] Engine:LONMS02979-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.806 Info: [Scheduler] Engine:lonms02977-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:17.839 Info: [Scheduler] Engine:LONMS02988-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.030 Info: [Scheduler] Engine:LONMS05079-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.117 Info: [Scheduler] Engine:LONMS05080-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.313 Info: [Scheduler] Engine:LONMS02870-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.318 Info: [Scheduler] Engine:LONMS05197-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.380 Info: [Scheduler] Engine:LONMS05190-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:18.413 Info: [Scheduler] Engine:LONMS02975-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.658 Info: [Scheduler] Engine:LONMS02979-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.707 Info: [Scheduler] Engine:LONMS05076-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.855 Info: [Scheduler] Engine:LONMS05079-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.857 Info: [Scheduler] Engine:lonms02977-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.860 Info: [Scheduler] Engine:LONMS02984-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.901 Info: [Scheduler] Engine:LONMS02865-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:21.906 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:22.073 Info: [Scheduler] Engine:LONMS05077-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:22.198 Info: [Scheduler] Engine:lonms02973-4:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:33.021 Info: [Scheduler] Engine:LONMS05072-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:33.222 Info: [Scheduler] Engine:lonms02973-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:33.289 Info: [Scheduler] Engine:LONMS02986-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:33.293 Info: [Scheduler] Engine:LONMS05071-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:34.451 Info: [Scheduler] Engine:LONMS02980-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:34.668 Info: [Scheduler] Engine:LONMS02864-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:38.519 Info: [Scheduler] Engine:LONMS05078-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:38.633 Info: [Scheduler] Engine:LONMS05193-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:46.024 Info: [Scheduler] Engine:LONMS05079-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:46.427 Info: [Scheduler] Engine:lonms02977-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:12:59.543 Info: [Scheduler] Engine:LONMS05085-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:13:54.412 Info: [Scheduler] Engine:LONMS01736-2:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:17.248 Info: [Scheduler] Engine:LONMS02878-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:17.590 Info: [Scheduler] Engine:LONMS02979-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.197 Info: [Scheduler] Engine:lonms05194-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.303 Info: [Scheduler] Engine:LONMS02870-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.343 Info: [Scheduler] Engine:LONMS05196-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.456 Info: [Scheduler] Engine:LONMS05187-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.613 Info: [Scheduler] Engine:lonms02977-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.615 Info: [Scheduler] Engine:LONMS02976-5:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.757 Info: [Scheduler] Engine:LONMS05086-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.761 Info: [Scheduler] Engine:LONMS05071-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:18.791 Info: [Scheduler] Engine:LONMS05200-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.106 Info: [Scheduler] Engine:LONMS02876-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.590 Info: [Scheduler] Engine:LONMS05186-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.599 Info: [Scheduler] Engine:LONMS02979-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.604 Info: [Scheduler] Engine:LONMS02871-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.737 Info: [Scheduler] Engine:LONMS05188-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.879 Info: [Scheduler] Engine:LONMS05186-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.939 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:21.940 Info: [Scheduler] Engine:LONMS05087-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.018 Info: [Scheduler] Engine:LONMS02976-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.066 Info: [Scheduler] Engine:lonms05198-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.131 Info: [Scheduler] Engine:lonms05194-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.187 Info: [Scheduler] Engine:lonms05198-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:22.444 Info: [Scheduler] Engine:LONMS02978-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:29.537 Info: [Scheduler] Engine:LONMS05195-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:29.935 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:34.259 Info: [Scheduler] Engine:LONMS02878-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:34.320 Info: [Scheduler] Engine:LONMS05073-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:34.528 Info: [Scheduler] Engine:LONMS05186-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:34.767 Info: [Scheduler] Engine:LONMS02976-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:35.089 Info: [Scheduler] Engine:LONMS05072-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:35.124 Info: [Scheduler] Engine:LONMS05072-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:38.007 Info: [Scheduler] Engine:LONMS02974-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:38.240 Info: [Scheduler] Engine:LONMS02978-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:38.269 Info: [Scheduler] Engine:LONMS02870-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:38.390 Info: [Scheduler] Engine:LONMS05195-5:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:15:55.587 Info: [Scheduler] Engine:LONMS02001-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:35.265 Info: [Scheduler] Engine:LONMS05199-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:38.663 Info: [Scheduler] Engine:LONMS05192-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:38.743 Info: [Scheduler] Engine:LONMS05188-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:38.748 Info: [Scheduler] Engine:LONMS02979-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:38.918 Info: [Scheduler] Engine:LONMS02978-4:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.258 Info: [Scheduler] Engine:LONMS02978-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.391 Info: [Scheduler] Engine:LONMS05199-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.512 Info: [Scheduler] Engine:LONMS02864-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.903 Info: [Scheduler] Engine:LONMS02002-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.969 Info: [Scheduler] Engine:LONMS02985-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:39.985 Info: [Scheduler] Engine:LONMS02985-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:40.142 Info: [Scheduler] Engine:LONMS02981-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:40.202 Info: [Scheduler] Engine:LONMS05195-5:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:40.204 Info: [Scheduler] Engine:LONMS02978-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:40.357 Info: [Scheduler] Engine:LONMS02340-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.543 Info: [Scheduler] Engine:LONMS05081-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.716 Info: [Scheduler] Engine:LONMS02980-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.796 Info: [Scheduler] Engine:LONMS05087-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.883 Info: [Scheduler] Engine:LONMS02867-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:42.888 Info: [Scheduler] Engine:LONMS05193-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.084 Info: [Scheduler] Engine:LONMS01977-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.100 Info: [Scheduler] Engine:LONMS05199-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.104 Info: [Scheduler] Engine:LONMS05188-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.106 Info: [Scheduler] Engine:LONMS02868-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.267 Info: [Scheduler] Engine:LONMS02215-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.270 Info: [Scheduler] Engine:LONMS05071-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.272 Info: [Scheduler] Engine:LONMS02979-5:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.283 Info: [Scheduler] Engine:LONMS05084-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:43.458 Info: [Scheduler] Engine:LONMS02875-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:55.056 Info: [Scheduler] Engine:LONMS02876-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:55.546 Info: [Scheduler] Engine:LONMS02980-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:55.826 Info: [Scheduler] Engine:LONMS02985-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:17:59.877 Info: [Scheduler] Engine:LONMS05201-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-11.38.54.log:10/10/08 14:18:00.102 Info: [Scheduler] Engine:LONMS02976-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:11.270 Info: [Scheduler] Engine:LONMS02875-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:17.035 Info: [Scheduler] Engine:LONMS02339-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:17.118 Info: [Scheduler] Engine:LONMS05070-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:17.646 Info: [Scheduler] Engine:LONMS05040-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:49.767 Info: [Scheduler] Engine:LONMS02683-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:18:52.446 Info: [Scheduler] Engine:LONMS05155-1:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:19:00.897 Info: [Scheduler] Engine:LONMS05040-3:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.483 Info: [Scheduler] Engine:LONMS02864-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.505 Info: [Scheduler] Engine:LONMS05078-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.528 Info: [Scheduler] Engine:LONMS05076-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.601 Info: [Scheduler] Engine:LONMS05195-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:16.993 Info: [Scheduler] Engine:LONMS05193-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:17.152 Info: [Scheduler] Engine:LONMS02974-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:17.295 Info: [Scheduler] Engine:LONMS05199-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:17.307 Info: [Scheduler] Engine:LONMS02978-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:17.416 Info: [Scheduler] Engine:LONMS05190-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:20.513 Info: [Scheduler] Engine:LONMS02980-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:20.716 Info: [Scheduler] Engine:LONMS05201-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:20.760 Info: [Scheduler] Engine:LONMS05083-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:20.993 Info: [Scheduler] Engine:LONMS05080-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.067 Info: [Scheduler] Engine:LONMS05189-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.097 Info: [Scheduler] Engine:LONMS05084-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.178 Info: [Scheduler] Engine:LONMS02874-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.341 Info: [Scheduler] Engine:LONMS05190-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.353 Info: [Scheduler] Engine:LONMS02975-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:21.365 Info: [Scheduler] Engine:LONMS05199-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:28.865 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:28.931 Info: [Scheduler] Engine:LONMS02867-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:29.201 Info: [Scheduler] Engine:LONMS05196-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:29.328 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:29.330 Info: [Scheduler] Engine:LONMS02878-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:29.614 Info: [Scheduler] Engine:LONMS05201-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:32.553 Info: [Scheduler] Engine:LONMS02871-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:32.569 Info: [Scheduler] Engine:LONMS02980-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:37.547 Info: [Scheduler] Engine:LONMS05085-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:37.970 Info: [Scheduler] Engine:lonms02973-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:38.231 Info: [Scheduler] Engine:LONMS02975-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:44.105 Info: [Scheduler] Engine:LONMS05084-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:44.511 Info: [Scheduler] Engine:LONMS02980-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:44.605 Info: [Scheduler] Engine:LONMS02871-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:44.964 Info: [Scheduler] Engine:LONMS05193-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:53.899 Info: [Scheduler] Engine:LONMS02867-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:54.603 Info: [Scheduler] Engine:LONMS02598-3:Logoff:Restarting to load library qfx-gridservice
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:20:55.639 Info: [Scheduler] Engine:LONMS05192-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:21:52.003 Info: [Scheduler] Engine:LONMS05155-3:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:26:11.658 Info: [Scheduler] Engine:LONMS02598-3:Logoff:Did not pick up task assignment within expiration time
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:26:57.579 Info: [Scheduler] Engine:LONMS02687-3:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.101 Info: [Scheduler] Engine:LONMS05188-6:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.112 Info: [Scheduler] Engine:LONMS05189-5:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.124 Info: [Scheduler] Engine:LONMS05190-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.127 Info: [Scheduler] Engine:LONMS02974-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:06.133 Info: [Scheduler] Engine:LONMS02987-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.528 Info: [Scheduler] Engine:LONMS05078-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.653 Info: [Scheduler] Engine:LONMS05188-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.766 Info: [Scheduler] Engine:LONMS01974-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.778 Info: [Scheduler] Engine:LONMS02979-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:15.843 Info: [Scheduler] Engine:LONMS02984-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.094 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.096 Info: [Scheduler] Engine:LONMS02976-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.123 Info: [Scheduler] Engine:LONMS02974-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.151 Info: [Scheduler] Engine:LONMS02982-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.168 Info: [Scheduler] Engine:LONMS02982-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.205 Info: [Scheduler] Engine:LONMS02869-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.321 Info: [Scheduler] Engine:LONMS05196-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.340 Info: [Scheduler] Engine:LONMS05189-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.405 Info: [Scheduler] Engine:LONMS05077-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:16.435 Info: [Scheduler] Engine:LONMS05077-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:19.735 Info: [Scheduler] Engine:LONMS05086-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:19.921 Info: [Scheduler] Engine:LONMS01974-3:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.034 Info: [Scheduler] Engine:LONMS02974-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.079 Info: [Scheduler] Engine:LONMS02988-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.233 Info: [Scheduler] Engine:LONMS05196-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.383 Info: [Scheduler] Engine:LONMS05199-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.401 Info: [Scheduler] Engine:LONMS05190-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.477 Info: [Scheduler] Engine:LONMS05188-6:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.640 Info: [Scheduler] Engine:LONMS05201-6:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:28.730 Info: [Scheduler] Engine:LONMS05188-4:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:31.876 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:32.002 Info: [Scheduler] Engine:LONMS05072-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:32.075 Info: [Scheduler] Engine:lonms05194-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:42.696 Info: [Scheduler] Engine:LONMS05086-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:43.061 Info: [Scheduler] Engine:LONMS02974-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:43.256 Info: [Scheduler] Engine:LONMS05077-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:29:58.857 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:33.180 Info: [Scheduler] Engine:LONMS02878-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:33.449 Info: [Scheduler] Engine:LONMS02980-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:33.505 Info: [Scheduler] Engine:LONMS02877-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:33.519 Info: [Scheduler] Engine:LONMS05078-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:36.752 Info: [Scheduler] Engine:LONMS05192-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:32:37.248 Info: [Scheduler] Engine:LONMS02875-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:24.801 Info: [Scheduler] Engine:lonms02977-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:24.922 Info: [Scheduler] Engine:LONMS02982-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:25.158 Info: [Scheduler] Engine:lonms02973-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:25.164 Info: [Scheduler] Engine:lonms02973-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:25.219 Info: [Scheduler] Engine:LONMS05189-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:46:40.501 Info: [Scheduler] Engine:LONMS05078-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:20.755 Info: [Scheduler] Engine:LONMS01974-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:20.857 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:21.005 Info: [Scheduler] Engine:LONMS02976-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:21.545 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:24.514 Info: [Scheduler] Engine:LONMS05078-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 14:47:39.760 Info: [Scheduler] Engine:LONMS05086-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.308 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.415 Info: [Scheduler] Engine:LONMS05188-5:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.432 Info: [Scheduler] Engine:LONMS05081-2:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.434 Info: [Scheduler] Engine:LONMS02868-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.459 Info: [Scheduler] Engine:LONMS02875-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:10.462 Info: [Scheduler] Engine:LONMS05087-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:22.980 Info: [Scheduler] Engine:LONMS02339-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:23.157 Info: [Scheduler] Engine:LONMS02984-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:23.276 Info: [Scheduler] Engine:LONMS02987-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:23.279 Info: [Scheduler] Engine:LONMS05197-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:26.307 Info: [Scheduler] Engine:LONMS02872-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:28:26.519 Info: [Scheduler] Engine:LONMS02871-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:49.397 Info: [Scheduler] Engine:LONMS05078-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:49.595 Info: [Scheduler] Engine:LONMS05186-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:53.247 Info: [Scheduler] Engine:LONMS05196-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:53.314 Info: [Scheduler] Engine:LONMS05187-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:53.330 Info: [Scheduler] Engine:LONMS05197-5:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:38:53.510 Info: [Scheduler] Engine:LONMS02872-1:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:46.823 Info: [Scheduler] Engine:LONMS02686-2:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:52.012 Info: [Scheduler] Engine:LONMS05039-3:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:52.553 Info: [Scheduler] Engine:LONMS02686-3:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:56.086 Info: [Scheduler] Engine:LONMS01735-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:39:57.069 Info: [Scheduler] Engine:LONMS05038-3:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:04.730 Info: [Scheduler] Engine:LONMS05188-7:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:04.877 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:05.159 Info: [Scheduler] Engine:LONMS05077-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:05.477 Info: [Scheduler] Engine:LONMS05190-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:08.513 Info: [Scheduler] Engine:LONMS05186-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:20.202 Info: [Scheduler] Engine:LONMS02872-1:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:47.240 Info: [Scheduler] Engine:LONMS05187-4:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:47.316 Info: [Scheduler] Engine:LONMS05199-6:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:51.482 Info: [Scheduler] Engine:LONMS02866-3:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:52.153 Info: [Scheduler] Engine:LONMS05073-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:52.310 Info: [Scheduler] Engine:LONMS05188-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-14.18.04.log:10/10/08 15:50:54.064 Info: [Scheduler] Engine:LONMS02987-7:Logoff:Failed daemon notification
+gridserver.log.10.10.2008-15.51.40.log:10/10/08 15:51:50.397 Info: [Scheduler] Engine:LONMS05040-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-15.51.40.log:10/10/08 15:51:54.627 Info: [Scheduler] Engine:LONMS01734-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-15.51.40.log:10/10/08 15:51:57.391 Info: [Scheduler] Engine:LONMS01737-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 18:41:45.649 Info: [Scheduler] Engine:LONMS05154-1:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.269 Info: [Scheduler] Engine:LONMS02214-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.359 Info: [Scheduler] Engine:LONMS02214-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.437 Info: [Scheduler] Engine:LONMS02214-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.499 Info: [Scheduler] Engine:LONMS02214-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.785 Info: [Scheduler] Engine:LONMS02002-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.882 Info: [Scheduler] Engine:LONMS02002-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:23.943 Info: [Scheduler] Engine:LONMS02002-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:24.022 Info: [Scheduler] Engine:LONMS02002-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:24.846 Info: [Scheduler] Engine:LONMS02340-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:24.922 Info: [Scheduler] Engine:LONMS02340-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:24.983 Info: [Scheduler] Engine:LONMS02340-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.048 Info: [Scheduler] Engine:LONMS02340-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.323 Info: [Scheduler] Engine:LONMS02000-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.366 Info: [Scheduler] Engine:LONMS02000-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.461 Info: [Scheduler] Engine:LONMS02000-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.523 Info: [Scheduler] Engine:LONMS02000-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.668 Info: [Scheduler] Engine:LONMS02338-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.760 Info: [Scheduler] Engine:LONMS02338-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.779 Info: [Scheduler] Engine:LONMS01975-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.805 Info: [Scheduler] Engine:LONMS02338-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.862 Info: [Scheduler] Engine:LONMS01975-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:25.867 Info: [Scheduler] Engine:LONMS02338-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.279 Info: [Scheduler] Engine:LONMS01975-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.345 Info: [Scheduler] Engine:LONMS01975-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.431 Info: [Scheduler] Engine:LONMS02339-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.503 Info: [Scheduler] Engine:LONMS02339-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.566 Info: [Scheduler] Engine:LONMS02339-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.629 Info: [Scheduler] Engine:LONMS02339-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.726 Info: [Scheduler] Engine:LONMS02216-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.802 Info: [Scheduler] Engine:LONMS02216-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.868 Info: [Scheduler] Engine:LONMS02216-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.940 Info: [Scheduler] Engine:LONMS02216-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:26.984 Info: [Scheduler] Engine:LONMS02001-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.043 Info: [Scheduler] Engine:LONMS02001-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.121 Info: [Scheduler] Engine:LONMS02001-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.176 Info: [Scheduler] Engine:LONMS01976-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.215 Info: [Scheduler] Engine:LONMS02001-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.481 Info: [Scheduler] Engine:LONMS01977-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.578 Info: [Scheduler] Engine:LONMS01977-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.639 Info: [Scheduler] Engine:LONMS01977-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:27.717 Info: [Scheduler] Engine:LONMS01977-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:28.699 Info: [Scheduler] Engine:LONMS02341-3:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:28.764 Info: [Scheduler] Engine:LONMS02341-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:28.857 Info: [Scheduler] Engine:LONMS02341-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:28.950 Info: [Scheduler] Engine:LONMS02341-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:30.051 Info: [Scheduler] Engine:LONMS01976-2:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:30.134 Info: [Scheduler] Engine:LONMS01976-1:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:06:30.225 Info: [Scheduler] Engine:LONMS01976-0:Logoff:Native daemon shut down the Engine
+gridserver.log.10.10.2008-16.04.13.log:10/10/08 19:19:23.657 Info: [Scheduler] Engine:LONMS02981-0:Logoff:Engine session removed because it re-logged in
+gridserver.log.10.10.2008-20.19.10.log:10/10/08 21:13:45.962 Info: [Scheduler] Engine:LONMS05154-3:Logoff:Rerouted by the Engine Balancer
+gridserver.log.10.10.2008-21.34.37.log:10/10/08 21:37:46.121 Info: [Scheduler] Engine:LONMS02685-3:Logoff:Rerouted by the Engine Balancer

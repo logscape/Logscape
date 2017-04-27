@@ -1,0 +1,1965 @@
+Event[0]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:07:52.062
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Modules Installer service entered the running state.
+
+Event[1]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-General
+  Date: 2010-02-23T08:08:54.285
+  Event ID: 1
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: Time
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The system time has changed to ?2010?-?02?-?23T08:08:54.270000000Z from ?2010?-?02?-?23T08:08:53.235000000Z.
+
+Event[2]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:11:51.568
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Application Experience service entered the running state.
+
+Event[3]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:11:57.428
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Credential Manager service entered the running state.
+
+Event[4]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:17:53.200
+  Event ID: 7040
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The start type of the Windows Modules Installer service was changed from demand start to auto start.
+
+Event[5]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:17:54.028
+  Event ID: 7040
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The start type of the Windows Modules Installer service was changed from auto start to demand start.
+
+Event[6]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:17:54.435
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Modules Installer service entered the stopped state.
+
+Event[7]:
+  Log Name: System
+  Source: USER32
+  Date: 2010-02-23T08:20:49.000
+  Event ID: 1074
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: S-1-5-21-4040463898-1091102219-857213053-1000
+  User Name: WIN-IL55AS54NFG\Neil Avery
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The process Explorer.EXE has initiated the restart of computer WIN-IL55AS54NFG on behalf of user WIN-IL55AS54NFG\Neil Avery for the following reason: Application: Installation (Planned)
+ Reason Code: 0x84040002
+ Shutdown Type: restart
+ Comment: 
+
+Event[8]:
+  Log Name: System
+  Source: USER32
+  Date: 2010-02-23T08:21:08.000
+  Event ID: 1074
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: S-1-5-21-4040463898-1091102219-857213053-1000
+  User Name: WIN-IL55AS54NFG\Neil Avery
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The process C:\Windows\system32\winlogon.exe (WIN-IL55AS54NFG) has initiated the restart of computer WIN-IL55AS54NFG on behalf of user WIN-IL55AS54NFG\Neil Avery for the following reason: No title for this reason could be found
+ Reason Code: 0x500ff
+ Shutdown Type: restart
+ Comment: 
+
+Event[9]:
+  Log Name: System
+  Source: Microsoft-Windows-Winlogon
+  Date: 2010-02-23T08:21:08.609
+  Event ID: 7002
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+User Logoff Notification for Customer Experience Improvement Program
+
+Event[10]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:10.406
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Update service entered the stopped state.
+
+Event[11]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:10.719
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Group Policy Client service entered the stopped state.
+
+Event[12]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:11.094
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Diagnostic Policy Service service entered the stopped state.
+
+Event[13]:
+  Log Name: System
+  Source: Microsoft-Windows-DHCPv6-Client
+  Date: 2010-02-23T08:21:11.094
+  Event ID: 51047
+  Task: Service State Event
+  Level: Information
+  Opcode: ServiceStop
+  Keyword: N/A
+  User: S-1-5-19
+  User Name: NT AUTHORITY\LOCAL SERVICE
+  Computer: WIN-IL55AS54NFG
+  Description: 
+DHCPv6 client service is stopped. ShutDown Flag value is 1
+
+Event[14]:
+  Log Name: System
+  Source: Microsoft-Windows-Dhcp-Client
+  Date: 2010-02-23T08:21:11.094
+  Event ID: 50037
+  Task: Service State Event
+  Level: Information
+  Opcode: ServiceStop
+  Keyword: N/A
+  User: S-1-5-19
+  User Name: NT AUTHORITY\LOCAL SERVICE
+  Computer: WIN-IL55AS54NFG
+  Description: 
+DHCPv4 client service is stopped. ShutDown Flag value is 1
+
+Event[15]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:11.203
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Distributed Transaction Coordinator service entered the stopped state.
+
+Event[16]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:11.203
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The DHCP Client service entered the stopped state.
+
+Event[17]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:11.203
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Power service entered the stopped state.
+
+Event[18]:
+  Log Name: System
+  Source: Microsoft-Windows-UserPnp
+  Date: 2010-02-23T08:21:11.312
+  Event ID: 20010
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+One or more of the Plug and Play service's subsystems has changed state. 
+
+PlugPlay install subsystem enabled: 'false' 
+PlugPlay caching subsystem enabled: 'false' 
+
+
+Event[19]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:11.312
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Plug and Play service entered the stopped state.
+
+Event[20]:
+  Log Name: System
+  Source: EventLog
+  Date: 2010-02-23T08:21:12.000
+  Event ID: 6006
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Event log service was stopped.
+
+Event[21]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:11.766
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The User Profile Service service entered the stopped state.
+
+Event[22]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:12.141
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Credential Manager service entered the stopped state.
+
+Event[23]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:12.531
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Desktop Window Manager Session Manager service entered the stopped state.
+
+Event[24]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:12.625
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Software Protection service entered the stopped state.
+
+Event[25]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:12.625
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Management Instrumentation service entered the stopped state.
+
+Event[26]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:12.625
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Distributed Link Tracking Client service entered the stopped state.
+
+Event[27]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:12.656
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The VMware Tools Service service entered the stopped state.
+
+Event[28]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:12.906
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The SPP Notification Service service entered the stopped state.
+
+Event[29]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:13.000
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Remote Management (WS-Management) service entered the stopped state.
+
+Event[30]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:14.078
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Event Log service entered the stopped state.
+
+Event[31]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:15.078
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The TP AutoConnect Service service entered the stopped state.
+
+Event[32]:
+  Log Name: System
+  Source: EventLog
+  Date: 2010-02-23T08:22:42.000
+  Event ID: 6009
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+Microsoft (R) Windows (R) 6.01. 7600  Multiprocessor Free.
+
+Event[33]:
+  Log Name: System
+  Source: EventLog
+  Date: 2010-02-23T08:22:42.000
+  Event ID: 6005
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Event log service was started.
+
+Event[34]:
+  Log Name: System
+  Source: EventLog
+  Date: 2010-02-23T08:22:42.000
+  Event ID: 6013
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The system uptime is 70 seconds.
+
+Event[35]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-Power
+  Date: 2010-02-23T08:21:16.047
+  Event ID: 109
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The kernel power manager has initiated a shutdown transition.
+
+Event[36]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:21:16.391
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Cryptographic Services service entered the stopped state.
+
+Event[37]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-General
+  Date: 2010-02-23T08:21:19.391
+  Event ID: 13
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The operating system is shutting down at system time ?2010?-?02?-?23T08:21:19.391093800Z.
+
+Event[38]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-General
+  Date: 2010-02-23T08:21:32.078
+  Event ID: 12
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The operating system started at system time ?2010?-?02?-?23T08:21:31.484375000Z.
+
+Event[39]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-Processor-Power
+  Date: 2010-02-23T08:22:08.046
+  Event ID: 26
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+Processor 0 in group 0 exposes the following:
+
+1 idle state(s)
+0 performance state(s)
+8 throttle state(s)
+
+Event[40]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-Processor-Power
+  Date: 2010-02-23T08:22:08.078
+  Event ID: 26
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+Processor 1 in group 0 exposes the following:
+
+1 idle state(s)
+0 performance state(s)
+8 throttle state(s)
+
+Event[41]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:22:36.453
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Plug and Play service entered the running state.
+
+Event[42]:
+  Log Name: System
+  Source: Microsoft-Windows-UserPnp
+  Date: 2010-02-23T08:22:36.453
+  Event ID: 20010
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+One or more of the Plug and Play service's subsystems has changed state. 
+
+PlugPlay install subsystem enabled: 'true' 
+PlugPlay caching subsystem enabled: 'true' 
+
+
+Event[43]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:22:37.828
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Power service entered the running state.
+
+Event[44]:
+  Log Name: System
+  Source: Microsoft-Windows-FilterManager
+  Date: 2010-02-23T08:22:38.625
+  Event ID: 6
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+File System Filter 'luafv' (6.1, ?2009?-?07?-?13T23:26:13.000000000Z) has successfully loaded and registered with Filter Manager.
+
+Event[45]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:22:39.000
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The DCOM Server Process Launcher service entered the running state.
+
+Event[46]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:22:39.328
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The RPC Endpoint Mapper service entered the running state.
+
+Event[47]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:22:39.906
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Remote Procedure Call (RPC) service entered the running state.
+
+Event[48]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:22:42.625
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Event Log service entered the running state.
+
+Event[49]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:22:44.890
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Group Policy Client service entered the running state.
+
+Event[50]:
+  Log Name: System
+  Source: EventLog
+  Date: 2010-02-23T08:23:48.000
+  Event ID: 6009
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+Microsoft (R) Windows (R) 6.01. 7600  Multiprocessor Free.
+
+Event[51]:
+  Log Name: System
+  Source: EventLog
+  Date: 2010-02-23T08:23:48.000
+  Event ID: 6005
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Event log service was started.
+
+Event[52]:
+  Log Name: System
+  Source: EventLog
+  Date: 2010-02-23T08:23:48.000
+  Event ID: 6013
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The system uptime is 23 seconds.
+
+Event[53]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-General
+  Date: 2010-02-23T08:23:24.750
+  Event ID: 12
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The operating system started at system time ?2010?-?02?-?23T08:23:24.453125000Z.
+
+Event[54]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-Power
+  Date: 2010-02-23T08:23:34.015
+  Event ID: 41
+  Task: N/A
+  Level: Critical
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.
+
+Event[55]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-Processor-Power
+  Date: 2010-02-23T08:23:38.421
+  Event ID: 26
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+Processor 0 in group 0 exposes the following:
+
+1 idle state(s)
+0 performance state(s)
+8 throttle state(s)
+
+Event[56]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-Processor-Power
+  Date: 2010-02-23T08:23:38.421
+  Event ID: 26
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+Processor 1 in group 0 exposes the following:
+
+1 idle state(s)
+0 performance state(s)
+8 throttle state(s)
+
+Event[57]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:46.859
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Plug and Play service entered the running state.
+
+Event[58]:
+  Log Name: System
+  Source: Microsoft-Windows-UserPnp
+  Date: 2010-02-23T08:23:46.859
+  Event ID: 20010
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+One or more of the Plug and Play service's subsystems has changed state. 
+
+PlugPlay install subsystem enabled: 'true' 
+PlugPlay caching subsystem enabled: 'true' 
+
+
+Event[59]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:47.171
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Power service entered the running state.
+
+Event[60]:
+  Log Name: System
+  Source: Microsoft-Windows-FilterManager
+  Date: 2010-02-23T08:23:47.406
+  Event ID: 6
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+File System Filter 'luafv' (6.1, ?2009?-?07?-?13T23:26:13.000000000Z) has successfully loaded and registered with Filter Manager.
+
+Event[61]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:47.468
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The DCOM Server Process Launcher service entered the running state.
+
+Event[62]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:47.593
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The RPC Endpoint Mapper service entered the running state.
+
+Event[63]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:47.750
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Remote Procedure Call (RPC) service entered the running state.
+
+Event[64]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:48.187
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Event Log service entered the running state.
+
+Event[65]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.109
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Group Policy Client service entered the running state.
+
+Event[66]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.281
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The User Profile Service service entered the running state.
+
+Event[67]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.359
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The COM+ Event System service entered the running state.
+
+Event[68]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.375
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The System Event Notification Service service entered the running state.
+
+Event[69]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.421
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Desktop Window Manager Session Manager service entered the running state.
+
+Event[70]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.484
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Network Store Interface Service service entered the running state.
+
+Event[71]:
+  Log Name: System
+  Source: Microsoft-Windows-Dhcp-Client
+  Date: 2010-02-23T08:23:49.484
+  Event ID: 50036
+  Task: Service State Event
+  Level: Information
+  Opcode: ServiceStart
+  Keyword: N/A
+  User: S-1-5-19
+  User Name: NT AUTHORITY\LOCAL SERVICE
+  Computer: WIN-IL55AS54NFG
+  Description: 
+DHCPv4 client service is started
+
+Event[72]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.515
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The TCP/IP NetBIOS Helper service entered the running state.
+
+Event[73]:
+  Log Name: System
+  Source: Microsoft-Windows-DHCPv6-Client
+  Date: 2010-02-23T08:23:49.578
+  Event ID: 51046
+  Task: Service State Event
+  Level: Information
+  Opcode: ServiceStart
+  Keyword: N/A
+  User: S-1-5-19
+  User Name: NT AUTHORITY\LOCAL SERVICE
+  Computer: WIN-IL55AS54NFG
+  Description: 
+DHCPv6 client service is started
+
+Event[74]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.593
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The DHCP Client service entered the running state.
+
+Event[75]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.828
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The DNS Client service entered the running state.
+
+Event[76]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:49.890
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Shell Hardware Detection service entered the running state.
+
+Event[77]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:50.843
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Task Scheduler service entered the running state.
+
+Event[78]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:51.343
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Base Filtering Engine service entered the running state.
+
+Event[79]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:51.562
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Firewall service entered the running state.
+
+Event[80]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:51.656
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Workstation service entered the running state.
+
+Event[81]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:51.671
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Security Accounts Manager service entered the running state.
+
+Event[82]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:52.875
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Print Spooler service entered the running state.
+
+Event[83]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:53.421
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Remote Registry service entered the running state.
+
+Event[84]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:53.453
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Distributed Link Tracking Client service entered the running state.
+
+Event[85]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:53.656
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Cryptographic Services service entered the running state.
+
+Event[86]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:54.250
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Network Location Awareness service entered the running state.
+
+Event[87]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:54.656
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The VMware Tools Service service entered the running state.
+
+Event[88]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:54.984
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Management Instrumentation service entered the running state.
+
+Event[89]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:55.484
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The IP Helper service entered the running state.
+
+Event[90]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:55.781
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Server service entered the running state.
+
+Event[91]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:56.015
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Network List Service service entered the running state.
+
+Event[92]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:56.953
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The WinHTTP Web Proxy Auto-Discovery Service service entered the running state.
+
+Event[93]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:57.015
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Portable Device Enumerator Service service entered the running state.
+
+Event[94]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:57.390
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The VMware Snapshot Provider service entered the running state.
+
+Event[95]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:57.656
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The COM+ System Application service entered the running state.
+
+Event[96]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:57.843
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The TP AutoConnect Service service entered the running state.
+
+Event[97]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:23:59.625
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Distributed Transaction Coordinator service entered the running state.
+
+Event[98]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:24:02.406
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Volume Shadow Copy service entered the running state.
+
+Event[99]:
+  Log Name: System
+  Source: Microsoft-Windows-Kernel-General
+  Date: 2010-02-23T08:24:02.401
+  Event ID: 1
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: Time
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The system time has changed to ?2010?-?02?-?23T08:24:02.401000000Z from ?2010?-?02?-?23T08:24:02.640625000Z.
+
+Event[100]:
+  Log Name: System
+  Source: Microsoft-Windows-Iphlpsvc
+  Date: 2010-02-23T08:24:02.869
+  Event ID: 4200
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+Isatap interface isatap.localdomain with address fe80::5efe:192.168.228.131 has been brought up.
+
+Event[101]:
+  Log Name: System
+  Source: Microsoft-Windows-Winlogon
+  Date: 2010-02-23T08:24:04.197
+  Event ID: 7001
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: N/A
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+User Logon Notification for Customer Experience Improvement Program
+
+Event[102]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:24:22.119
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Network Connections service entered the running state.
+
+Event[103]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:24:28.760
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Function Discovery Provider Host service entered the running state.
+
+Event[104]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:24:45.010
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Error Reporting Service service entered the running state.
+
+Event[105]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:24:45.838
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Software Protection service entered the running state.
+
+Event[106]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:24:49.994
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Modules Installer service entered the running state.
+
+Event[107]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:25:37.151
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Installer service entered the running state.
+
+Event[108]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:25:56.791
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Portable Device Enumerator Service service entered the stopped state.
+
+Event[109]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:25:57.947
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Diagnostic Policy Service service entered the running state.
+
+Event[110]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:25:58.041
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Diagnostic System Host service entered the running state.
+
+Event[111]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:26:02.041
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Application Experience service entered the running state.
+
+Event[112]:
+  Log Name: System
+  Source: Microsoft-Windows-WinRM
+  Date: 2010-02-23T08:26:03.000
+  Event ID: 10148
+  Task: N/A
+  Level: Information
+  Opcode: Info
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The WinRM service is listening for WS-Management requests. 
+
+ User Action 
+ Use the following command to see the specific IPs on which WinRM is listening: 
+
+ winrm enumerate winrm/config/listener
+
+Event[113]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:26:03.526
+  Event ID: 7045
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: S-1-5-21-4040463898-1091102219-857213053-1000
+  User Name: WIN-IL55AS54NFG\Neil Avery
+  Computer: WIN-IL55AS54NFG
+  Description: 
+A service was installed in the system.
+
+Service Name:  VScape Lookup
+Service File Name:  C:\logscape\vscape.exe -s C:\logscape\conf\lookup.conf
+Service Type:  user mode service
+Service Start Type:  auto start
+Service Account:  LocalSystem
+
+Event[114]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:26:03.885
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Remote Management (WS-Management) service entered the running state.
+
+Event[115]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:26:04.229
+  Event ID: 7034
+  Task: N/A
+  Level: Error
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The VScape Lookup service terminated unexpectedly.  It has done this 1 time(s).
+
+Event[116]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:26:05.760
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Update service entered the running state.
+
+Event[117]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:26:45.010
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Error Reporting Service service entered the stopped state.
+
+Event[118]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:27:02.197
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The VMware Snapshot Provider service entered the stopped state.
+
+Event[119]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:27:04.135
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Volume Shadow Copy service entered the stopped state.
+
+Event[120]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:29:46.776
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The SPP Notification Service service entered the running state.
+
+Event[121]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:30:48.057
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Application Management service entered the running state.
+
+Event[122]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:34:50.260
+  Event ID: 7040
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The start type of the Windows Modules Installer service was changed from demand start to auto start.
+
+Event[123]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:34:51.088
+  Event ID: 7040
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: S-1-5-18
+  User Name: NT AUTHORITY\SYSTEM
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The start type of the Windows Modules Installer service was changed from auto start to demand start.
+
+Event[124]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:34:51.494
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Modules Installer service entered the stopped state.
+
+Event[125]:
+  Log Name: System
+  Source: Tcpip
+  Date: 2010-02-23T08:35:40.438
+  Event ID: 4227
+  Task: N/A
+  Level: Warning
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+TCP/IP failed to establish an outgoing connection because the selected local endpoint was recently used to connect to the same remote endpoint. This error typically occurs when outgoing connections are opened and closed at a high rate, causing all available local ports to be used and forcing TCP/IP to reuse a local port for an outgoing connection. To minimize the risk of data corruption, the TCP/IP standard requires a minimum time period to elapse between successive connections from a given local endpoint to a given remote endpoint.
+
+Event[126]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:36:06.845
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The Windows Installer service entered the stopped state.
+
+Event[127]:
+  Log Name: System
+  Source: Service Control Manager
+  Date: 2010-02-23T08:40:26.698
+  Event ID: 7036
+  Task: N/A
+  Level: Information
+  Opcode: N/A
+  Keyword: Classic
+  User: N/A
+  User Name: N/A
+  Computer: WIN-IL55AS54NFG
+  Description: 
+The WinHTTP Web Proxy Auto-Discovery Service service entered the stopped state.
+

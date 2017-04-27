@@ -1,0 +1,38 @@
+#type-key,#timestamp,#mline=t/f,#flush a NL after receiving lines,# log-line-match-expression (beware of white space!),,
+MSWinEventLog,"	timestamp=true",mline=false,appendNL=false,,serverGroup=-1,(*)\s+MSWinEventLog\s+*\s+(*)
+ASA-session,"	timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND ASA-session
+ASA-vpn,"		timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND ASA-vpn
+ASA-ip,"			timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND ASA-ip
+ASA-auth,"		timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND ASA-auth
+ASA-ssl,"		timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND ASA-ssl
+ASA-config,"		timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND ASA-config
+ASA-bridge,"		timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND ASA-bridge
+ASA,"		timestamp=false",mline=false,appendNL=false,,serverGroup=1,(*) : %ASA-\d+
+FWSM,"		timestamp=true",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND FWSM-\d+-\d+
+SEC,"		timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+.\d+) AND SEC-(\d+)-(*)
+PIX,"		timestamp=false",mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) AND PIX-(w)
+MARS,"		timestamp=true",mline=false,appendNL=false,,serverGroup=1,"hostId=\""(*)\"" AND app_name=\""(*)\"" AND mars_category="""
+#MSWinWMILog,"	timestamp=false",mline=true,appendNL=\n_EOL_\n,postProcessFileName=.*?ComputerName=(\S+).*Logfile=(\S+).*,serverGroup=1,20[1-9][1-9][0-1][0-9][0-3][0-9][0-2][0-9][0-5][0-9][0-5][0-9]\.[0-9][0-9][0-9][0-9][0-9][0-9].*
+FWALL,          timestamp=false,mline=false,appendNL=false,,serverGroup=1,(\d+\.\d+\.\d+\.\d+) id=firewall
+collectd,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,\"\S+ \S+ (\S+)\.(\S+)\.(\S+)\.\S+ \S+ \S+
+
+#CLD-Basic,,,,,,
+CLD-mem,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.mem\..*
+CLD-diskio,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.diskio\..*
+CLD-cpu,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.cpu\..*
+CLD-processes,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.processes\..*
+CLD-system,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.system\..*
+CLD-swap,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.swap\..*
+CLD-kernel,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.kernel\..*
+CLD-disk,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.disk\.\S*?\.(\S+)\.
+CLD,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\..*
+CLD-Docker,       timestamp=false,mline=false,appendNL=false,,serverGroup=1,CLD\.(\S+)\.docker_container_.*
+
+#splunk-cooked,"	timestamp=false",mline=true,appendNL=false,,splunk-cooked,
+Audit,"			timestamp=true",mline=false,appendNL=false,,serverGroup=-1,Audit:[timestamp=
+SYMANTEC,"			timestamp=false",mline=false,appendNL=false,,serverGroup=1,SymantecServer (*):
+OSSEC-alert,"	timestamp=false",mline=true,appendNL=true,,serverGroup=-1,** Alert
+OSSEC-alert_st,"	timestamp=false",mline=true,appendNL=false,,serverGroup=-1,Server: AND ID:  AND Name: AND IP:
+http,"	timestamp=false",mline=true,appendNL=true,,serverGroup=0,HTTP
+netscreen,"	timestamp=false",mline=false,appendNL=false,,serverGroup=0,(NetScreen OR Netscreen) AND device_id
+SYSLOG,"		timestamp=false",mline=false,appendNL=false,,serverGroup=0,[\d+]:

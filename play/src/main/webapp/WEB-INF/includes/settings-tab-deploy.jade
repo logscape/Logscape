@@ -1,0 +1,46 @@
+.tab-pane#tabs-deploy
+    .titleBlock
+        span.configTitle.headerColor#deploymentTitle(style="display:inline-block;font-size: 31.5px;") Deployment
+        .alert.alert-info.gettingStarted(style="display:inline;")
+            a#deploymentGettingStarted(href="http://logscape.com/redir/deploy.htm" target="_blank") Getting Started
+            a.fa.fa-question-circle.fa-lg.btn-link.play-icon(href="http://logscape.com/redir/deploy.htm" target="_blank")
+        .alert.gettingStarted(style="display:inline;")
+            a#deployDownload(href="http://apps.logscape.com" target="_blank") Download Logscape Apps
+            a.fa.fa-cloud-download.fa-lg.btn-link.play-icon(href="http://apps.logscape.com" target="_blank")
+    .span12.accordion#accordion2(style="margin-left:1px;")
+        .accordion-group.coloredBorder
+            .accordion-heading.coloredBorder
+                a.lead.accordion-toggle#deploymentUpload(data-toggle="collapse" data-parent="#accordion2" href="#collapseOne") Upload
+                /
+                    .fa.fa-cloud-upload.fa-4x.icon-muted.accordion-toggle.inline(data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" style="height:50px;")
+                    ! Upload
+                /
+                    .span1.a.lead.accordion-toggle(data-toggle="collapse" data-parent="#accordion2" href="#collapseOne") Upload
+                    .span1.span.icon-upload.icon-large
+            .accordion-body.collapse#collapseOne
+                .accordion-inner
+                    input#upload_field(type="file" multiple="multiple")
+                        #progress_report
+                            #progress_report_name
+                            #progress_report_status(style="font-style: italic;")
+                            #progress_report_bar_container(style="width: 90%; height: 5px;")
+                                #progress_report_bar(style="background-color: blue; width: 0; height: 100%;")
+    button.btn.btn-info.fa.fa-refresh.refreshFiles#deploymentRefresh(style='float:right' title="Refresh the table") &nbsp; Refresh
+    button.btn.btn-info.fa.fa-cloud-upload#deploymentPush(style='float:right' title="Refresh/Push downloads/*.zip to all hosts where zip was dropped onto Manager file system (or found an incomplete download)") &nbsp; Push Update
+    button.btn.button.btn-danger.fa.fa-power-off.bounceSystem#deploymentBounce(href='#' style='float:right;') &nbsp; Bounce
+    span.lead.text-left#deploymentActiveBundles Active Bundles
+    .alert
+        #status(style='display:block')
+        #downloading(style='display:none')
+            i.fa.fa-spinner.fa-spin
+            #msgDiv(style='display:inline')
+                ! Downloading....
+    table.table.table-hover.table-condensed.table-bordered.coloredTable.coloredBorder#deployTable
+        thead
+            tr
+                th#deploymentFile
+                th#deploymentTime
+                th#deploymentSize
+                th#deploymentDownloaded
+                th#deploymentStatus
+                th#deploymentActions

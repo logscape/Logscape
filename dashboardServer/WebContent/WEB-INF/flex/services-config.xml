@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services-config>
+
+	<services>
+		<service-include file-path="remoting-config.xml" />
+		<service-include file-path="proxy-config.xml" />
+		<service-include file-path="messaging-config.xml" />
+	</services>
+
+	<security>
+	</security>
+
+	<channels>
+        <channel-definition id="my-amf" class="mx.messaging.channels.AMFChannel">
+            <endpoint url="http://{server.name}:{server.port}/dashboard/messagebroker/amf" class="flex.messaging.endpoints.AMFEndpoint"/>
+        </channel-definition>
+		
+        <channel-definition id="my-amf-secure" class="mx.messaging.channels.SecureAMFChannel">
+            <endpoint url="https://{server.name}:{server.port}/dashboard/messagebroker/amfsecure" class="flex.messaging.endpoints.SecureAMFEndpoint"/>
+        </channel-definition>
+ 
+		<channel-definition id="my-streaming-amf" class="mx.messaging.channels.StreamingAMFChannel">
+			<endpoint url="http://{server.name}:{server.port}/dashboard/messagebroker/streamingamf" class="flex.messaging.endpoints.StreamingAMFEndpoint" />
+			<properties>
+				<add-no-cache-headers>false</add-no-cache-headers>
+				<idle-timeout-minutes>120</idle-timeout-minutes>
+				<max-streaming-clients>300</max-streaming-clients>
+				<server-to-client-heartbeat-millis>10000</server-to-client-heartbeat-millis>
+				<user-agent-settings>
+					<user-agent match-on="MSIE" kickstart-bytes="2048" max-streaming-connections-per-session="2" />
+					<user-agent match-on="Firefox" kickstart-bytes="0" max-streaming-connections-per-session="6" />
+					<user-agent match-on="*" kickstart-bytes="0" max-streaming-connections-per-session="2" />
+				</user-agent-settings>
+				<flex-client-outbound-queue-processor class="com.blazeDS.LLOutboundProcessor"></flex-client-outbound-queue-processor>
+			</properties>
+		</channel-definition>
+		<channel-definition id="my-streaming-amf-secure" class="mx.messaging.channels.SecureStreamingAMFChannel">
+			<endpoint url="https://{server.name}:{server.port}/dashboard/messagebroker/streamingamfsecure" class="flex.messaging.endpoints.SecureStreamingAMFEndpoint" />
+			<properties>
+				<add-no-cache-headers>false</add-no-cache-headers>
+				<idle-timeout-minutes>120</idle-timeout-minutes>
+				<max-streaming-clients>300</max-streaming-clients>
+				<server-to-client-heartbeat-millis>10000</server-to-client-heartbeat-millis>
+				<user-agent-settings>
+					<user-agent match-on="MSIE" kickstart-bytes="2048" max-streaming-connections-per-session="2" />
+					<user-agent match-on="Firefox" kickstart-bytes="0" max-streaming-connections-per-session="6" />
+					<user-agent match-on="*" kickstart-bytes="0" max-streaming-connections-per-session="2" />
+				</user-agent-settings>
+				<flex-client-outbound-queue-processor class="com.blazeDS.LLOutboundProcessor"></flex-client-outbound-queue-processor>
+			</properties>
+		</channel-definition>
+
+		<channel-definition id="my-long-polling-amf" class="mx.messaging.channels.AMFChannel">
+			<endpoint url="http://{server.name}:{server.port}/dashboard/messagebroker/amflongpolling" class="flex.messaging.endpoints.AMFEndpoint" />
+			<properties>
+				<add-no-cache-headers>false</add-no-cache-headers>
+				<polling-enabled>true</polling-enabled>
+				<wait-interval-millis>60000</wait-interval-millis>
+				<polling-interval-millis>1000</polling-interval-millis>
+				<max-waiting-poll-requests>50</max-waiting-poll-requests>
+			</properties>
+		</channel-definition>
+		<channel-definition id="my-long-polling-amf-secure" class="mx.messaging.channels.SecureAMFChannel">
+			<endpoint url="https://{server.name}:{server.port}/dashboard/messagebroker/amflongpollingsecure" class="flex.messaging.endpoints.SecureAMFEndpoint" />
+			<properties>
+				<add-no-cache-headers>false</add-no-cache-headers>
+				<polling-enabled>true</polling-enabled>
+				<wait-interval-millis>60000</wait-interval-millis>
+				<polling-interval-millis>1000</polling-interval-millis>
+				<max-waiting-poll-requests>50</max-waiting-poll-requests>
+				<flex-client-outbound-queue-processor class="com.blazeDS.LLOutboundProcessor"></flex-client-outbound-queue-processor>
+			</properties>
+		</channel-definition>
+
+
+		
+
+		<channel-definition id="my-polling-amf" class="mx.messaging.channels.AMFChannel">
+			<endpoint uri="http://{server.name}:{server.port}/dashboard/messagebroker/cfamfpolling" class="flex.messaging.endpoints.AMFEndpoint" />
+			<properties>
+				<add-no-cache-headers>false</add-no-cache-headers>
+				<polling-enabled>true</polling-enabled>
+				<polling-interval-seconds>8</polling-interval-seconds>
+				<serialization>
+					<instantiate-types>false</instantiate-types>
+				</serialization>
+				<flex-client-outbound-queue-processor class="com.blazeDS.LLOutboundProcessor"></flex-client-outbound-queue-processor>
+			</properties>
+		</channel-definition>
+		<channel-definition id="my-polling-amf-secure" class="mx.messaging.channels.SecureAMFChannel">
+			<endpoint uri="https://{server.name}:{server.port}/dashboard/messagebroker/cfamfpollingsecure" class="flex.messaging.endpoints.SecureAMFEndpoint" />
+			<properties>
+				<add-no-cache-headers>false</add-no-cache-headers>
+				<polling-enabled>true</polling-enabled>
+				<polling-interval-seconds>8</polling-interval-seconds>
+				<serialization>
+					<instantiate-types>false</instantiate-types>
+				</serialization>
+				<flex-client-outbound-queue-processor class="com.blazeDS.LLOutboundProcessor"></flex-client-outbound-queue-processor>
+			</properties>
+		</channel-definition>
+	</channels>
+
+	<logging>
+		<target class="com.blazeDS.Log4JLogger" level="Warn">
+			<!--        <target class="flex.messaging.log.ConsoleTarget" level="Info"> -->
+			<properties>
+				<prefix>[BlazeDS] </prefix>
+				<includeDate>true</includeDate>
+				<includeTime>true</includeTime>
+				<includeLevel>true</includeLevel>
+				<includeCategory>true</includeCategory>
+			</properties>
+			<filters>
+				<pattern>Configuration</pattern>
+				<pattern>Resource</pattern>
+				<pattern>Service.*</pattern>
+                <pattern>Endpoint.*</pattern>
+				<!-- 
+					<pattern>Message.*</pattern> -->
+			</filters>
+		</target>
+	</logging>
+
+	<system>
+		<redeploy>
+			<enabled>false</enabled>
+			<!-- 
+            <watch-interval>20</watch-interval>
+            <watch-file>{context.root}/WEB-INF/flex/services-config.xml</watch-file>
+            <watch-file>{context.root}/WEB-INF/flex/proxy-config.xml</watch-file>
+            <watch-file>{context.root}/WEB-INF/flex/remoting-config.xml</watch-file>
+            <watch-file>{context.root}/WEB-INF/flex/messaging-config.xml</watch-file>
+            <watch-file>{context.root}/WEB-INF/flex/data-management-config.xml</watch-file>
+            <touch-file>{context.root}/WEB-INF/web.xml</touch-file>
+             -->
+		</redeploy>
+	</system>
+
+</services-config>

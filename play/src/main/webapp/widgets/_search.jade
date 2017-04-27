@@ -1,0 +1,66 @@
+.editWidget.editBlock
+    .cModalDialog
+        div
+            .cModalDialogHeader
+                .fa.fa-bar-chart-o
+                label.titleLabel.coloredText#searchTitle(style="display:inline;font-size:26px;")
+                hr(style="margin:10px")
+                br
+            .span12
+                .span4.actionBlock.flatBlue2
+                    p#searchOpen(style='margin: 2px 60px;')
+                    a.open.cModalDialogA(href='#')
+                        i.icon-black.fa.fa-folder-open.fa-2x(style="html:true;margin-top:15px;" rel="clickover; width:400; height:300"  data-content="Loading...." data-original-title="Open Search" href="#")
+
+                .span4.actionBlock.flatBlue3
+                    .span12
+                        p#searchLegend(style="margin-top: 2px;") Legend?
+                        .flatCheckboxThree
+                            input.legendControl#legendToggle(type="checkbox" value="1"  name="")
+                            label.legendControlLabel(for="legendToggle" title="Toggle legend visibility")
+                .span4.actionBlock.flatBlue4
+                    .span12
+                        p#filterTitle(style="margin-top: 2px;") Filter reruns search?
+                        .flatCheckboxThree
+                            input.filterRerunControl#filterToggle(type="checkbox" value="1"  name="")
+                            label.filterRerunLabel(for="filterToggle" title="Will re-run the search each time a filter is applied")
+
+
+            .span12
+            .toggleSearch.tabbable.container.span12(style="padding-right:20px;" role="tabpanel")
+                ul.nav.nav-tabs.borderColor(style="margin:0px;")
+                    li.active
+                        a#searchSearch(href="#sSearchTab" data-toggle="tab")
+                    li.tableLinking
+                        a#searchJsonLinking(href="#sTableLinkTab" data-toggle="tab")        Json Table Linking.
+
+                .tab-content.popoutColor.coloredText.coloredBorder
+                    #sSearchTab.tab-pane.active
+                        .row.span12.searchDiv(style="padding-top:1px;")
+                            .firstRow
+                                a#addSearchRow(href="#")
+                                    i.fa.fa-plus-circle.btn.btn-link.play-icon.searchAddRemove(title='Add another search entry')
+                                .input-append.span11(style="margin-left:1px;")
+                                    input.input-xxlarge.span11.searchInput#searchString(style="height:28px; margin-bottom:0px;margin-top:1px;width:95%;" name="xLInput3" size="100" type="text")
+                                    button.btn.chart-button.chart-selector-button#chartStyle(type="button")
+                                        img(width="20" height="20" src="images/chart-types/stacked.png")
+
+                    #sTableLinkTab.tab-pane.tableLinking
+                        .span12(style="padding:0px;")
+                            a#seedJson Populate&nbsp;&nbsp;
+                            a#jsonHelp(href="http://logscape.github.io/workspaces-linking.html" target="_bank") Help
+                            pre#tableNavigation(style="height:110px")
+                            / textarea.span12#tableNavigation(rows="4" title="{ column: '_filename',   url: '?Workspace=Server View&filter=$value&filterAction=_host.equals', filterColumn: '_filename'  }"
+                            /                                                            placeHolder="{ column: '_filename',   url: '?Workspace=Server View&filter=$value&filterAction=_host.equals', filterColumn: '_filename'    }")
+            .cModalDialogClose
+                a.cModalDialogA.closeEdit
+                    i.icon-white.fa.fa-check
+                    ! &nbsp;Okay
+
+.widgetTitle.span12(style='display:inline-block;')
+    .span12.chart_drilldown.drilldown
+        span.searchTitle.searchTitleHover Title
+        / display lightbox popout for now
+        / a.fa.fa-arrows-alt.no-link-uline.popout(href="#" title="Popout" style="float:right;padding:5px;")
+        .span8.drilldownDiv
+            h4#clickToDrilldown(style='margin:2px !important') Click to drilldown

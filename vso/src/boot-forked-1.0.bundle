@@ -1,0 +1,106 @@
+<Bundle name="boot" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@-@timestamp@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <workingDirectory>.</workingDirectory>
+	<services>
+		<Service>
+			<name>LookupSpace</name>
+			<property>ServiceType=System</property>
+			<priority>1000</priority>
+			<resourceSelection>type equalsAny 'Management,Failover' AND id equals '0'</resourceSelection>
+			<fork>true</fork>
+			<background>false</background>
+			<costPerUnit>10</costPerUnit>
+			<instanceCount>2</instanceCount>
+			<script>
+				import com.liquidlabs.vso.lookup.LookupSpaceImpl
+				println "************************** Starting LookupSpace **************************"
+				processMaker.java "-cp:.:lib/*.jar", "com.liquidlabs.vso.lookup.LookupSpaceImpl", com.liquidlabs.vso.VSOProperties.getLookupPort().toString(), "-Xmx64m", "-Dlog4j.debug=false", "-Dlog4j.filename=boot_lu.log";
+		</script>
+		</Service>
+		<Service>
+			<name>ResourceSpace</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+			<fork>true</fork>
+			<background>true</background>
+			<instanceCount>-1</instanceCount>
+			<script>
+			<![CDATA[
+				import com.liquidlabs.vso.resource.ResourceSpaceImpl
+				println "\n************************** Starting ResourceSpace **************************"
+				processMaker.java "-cp:.:lib/*.jar:.", "com.liquidlabs.vso.resource.ResourceSpaceImpl", "-Xmx64m", lookupSpaceAddress, "-Dlog4j.debug=false", "-Dlog4j.filename=work/boot_rs.log";
+			]]>
+		</script>
+		</Service>
+		<Service>
+			<name>WorkAllocator</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+			<fork>true</fork>
+			<background>true</background>
+			<instanceCount>2</instanceCount>
+			<script>
+				import com.liquidlabs.vso.work.WorkAllocatorImpl
+				println "\n************************** Starting WorkAllocator **************************"      
+				processMaker.java "-cp:.:lib/*.jar:.", "com.liquidlabs.vso.work.WorkAllocatorImpl", "-Xmx64m", lookupSpaceAddress, "-Dlog4j.filename=work/boot_wa.log";
+				println "\n************************** Running WorkAllocator **************************"      
+		</script>
+		</Service>
+		<Service>
+			<name>BundleSpace</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<instanceCount>-1</instanceCount>
+			<dependencies>boot-1.0:ResourceSpace,boot-1.0:WorkAllocator</dependencies>
+			<script>
+				import com.liquidlabs.vso.deployment.bundle.BundleSpaceImpl
+				println "\n************************** Starting BundleSpace **************************"      
+				BundleSpaceImpl.boot(lookupSpaceAddress, thisAgent);      
+				println "\n************************** Running BundleSpace **************************"      
+		</script>
+		</Service>
+		<Service>
+			<name>MonitorSpace</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<instanceCount>-1</instanceCount>
+			<script>
+				import com.liquidlabs.vso.monitor.MonitorSpaceImpl
+				println "\n************************** Starting MonitorSpace **************************"      
+				MonitorSpaceImpl.boot(lookupSpaceAddress);      
+				println "\n************************** Running MonitorSpace **************************"      
+		</script>
+		</Service>
+		<Service>
+			<name>DeploymentService</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<dependencies>boot-1.0:BundleSpace</dependencies>
+			<resourceSelection>type equalsAny 'Management'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<instanceCount>-1</instanceCount>
+			<script>
+				import com.liquidlabs.vso.deployment.BundleDeploymentService
+				println "\n************************** Starting DeploymentService **************************"      
+				BundleDeploymentService.boot(lookupSpaceAddress);      
+				println "\n************************** Running DeploymentService **************************"      
+		</script>
+		</Service>
+	</services>
+</Bundle>

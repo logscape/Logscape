@@ -1,0 +1,13 @@
+<project default="dist" name="boot" basedir=".">
+	
+	<property name="artifact" value="boot"/>
+	
+	<import file="../lib/build-common.xml"/>
+	
+	<path id="compile.classpath">
+		<path refid="default.classpath"/>
+	</path>
+
+		  
+</project>
+

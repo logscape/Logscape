@@ -1,0 +1,24 @@
+<Bundle name="vs-util" version="1.0" system="true">
+	<status>UNINSTALLED</status>
+	<releaseDate>@timestamp@</releaseDate>
+	<installDate>@timestamp@</installDate>
+ 	<classification>PROD</classification>
+ 	<businessArea>Accounting</businessArea>
+ 	<businessClassification>BO-Infrastructure</businessClassification>
+ 	<owner>hpcAccounts@mybank.co.uk</owner>
+	<services>
+		<Service>
+			<name>WorkAccount</name>
+			<priority>100</priority>
+			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<instanceCount>-1</instanceCount>
+			<script>
+				import com.liquidlabs.util.WorkAccountantImpl
+				println "\n************************** Starting WorkAccountant **************************"      
+				WorkAccountantImpl.boot(lookupSpaceAddress);      
+			</script>
+		</Service>
+	</services>
+</Bundle>

@@ -1,0 +1,5 @@
+2008-10-15 09:42:07,818 INFO Thread-4 (Worker.java:70)	 - Engine:alteredcarbon.local-12035-3:Logoff:Native daemon shut down the Engine
+2008-10-15 09:42:07,874 INFO Thread-4 (Worker.java:70)	 - Engine:alteredcarbon.local-12025-2:Logoff:Rerouted by the Engine Balancer
+2008-10-15 09:42:07,874 INFO Thread-4 (Worker.java:70)	 - Engine:alteredcarbon.local-12025-2:Logoff:Rerouted by the Engine Balancer
+2008-10-15 09:42:07,874 INFO Thread-4 (Worker.java:70)	 - Engine:alteredcarbon.local-12025-3:Logoff:Rerouted by the Engine Balancer
+2008-10-15 09:42:07,874 INFO Thread-4 (Worker.java:70)	 - Engine:alteredcarbon.local-12025-5:Logoff:Rerouted by the Engine Balancer

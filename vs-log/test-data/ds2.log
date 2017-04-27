@@ -1,0 +1,8 @@
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:39:56.845 Info: [Scheduler] Engine:londr11039-0:Logoff:Native daemon shut down the Engine
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:50.475 Info: [Scheduler] Engine:londr11012-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:50.475 Info: [Scheduler] Engine:londr11012-0:Logoff:Native daemon shut down the Engine
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:39:56.845 Info: [Scheduler] Engine:londr11039-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:50.475 Info: [Scheduler] Engine:londr11040-0:Logoff:Native daemon shut down the Engine
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:39:56.845 Info: [Scheduler] Engine:londr11040-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:39:56.845 Info: [Scheduler] Engine:londr11039-0:Logoff:Native daemon shut down the Engine
+gridserver.log.09.10.2008 Engine:alteredcarbon.local-12035-3:Logoff:Native daemon shut down the Engine

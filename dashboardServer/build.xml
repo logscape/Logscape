@@ -1,0 +1,113 @@
+<project default="dist" name="dashboard" basedir=".">
+
+	<property name="artifact" value="dashboard" />
+	<property name="version" value="1.0"/>
+	<property name="artifact-id" value="${artifact}-${version}"/>
+	<property name="dep1" value="common" />
+	<property name="dep2" value="transport" />
+	<property name="dep3" value="vso" />
+	<property name="dep4" value="vs-log" />
+	<property name="dep5" value="vs-util" />
+	<property name="dep6" value="replicator" />
+	<property name="dep7" value="vspace" />
+	<property name="dep8" value="vs-orm" />
+	<property name="dep9" value="vs-admin" />
+	<property name="dep10" value="vs-log-server" />
+	<property name="dep11" value="vs-syslog-server" />
+	<property name="dep12" value="services" />
+	<property name="dep13" value="saas-meter" />
+
+	<property environment="env"/>
+	<property file="build.properties"/>
+	
+	<import file="../lib/build-common.xml" />
+	<property name="root" value="../"/>
+
+
+	<target name="dist" depends="clean,init,compile">
+		<jar destfile="${dist}/${artifact}.jar" compress="true">
+			<fileset dir="${classes}" includes="**/*.class" />
+			<!--<fileset dir="${classes}" includes="**/ServletServices.class" />-->
+		</jar>
+	</target>
+
+	<path id="project.class.path">
+		<pathelement path="${java.class.path}/" />
+		<pathelement location="src" />
+		
+		<pathelement path="lib/log4j-1.2.8.jar" />
+		<fileset dir="lib/" includes="flex-messaging*.jar"/>
+		<fileset dir="${root}/${dep1}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep2}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep3}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep4}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep5}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep6}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep7}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep8}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep9}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep10}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep11}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep12}/dist" includes="*.jar"/>
+		<fileset dir="${root}/${dep13}/dist" includes="*.jar"/>
+
+		<fileset dir="${root}/lib/lib/jetty-8.1.9" includes="*.jar"/>
+		<fileset dir="${root}/lib/lib" includes="commons*.jar"/>
+	</path>
+	<path id="compile.classpath">
+		<path refid="default.classpath" />
+		<path refid="project.class.path" />
+	</path>
+	
+	<target name="war" depends="compile">
+		<delete file="build/${war}"/>
+		<copy todir="build/classes" file="src/log4j.properties"/>
+		<copy todir="build/classes" file="src/commons-logging.properties"/>
+
+		
+		<!-- copy over flex UI files -->
+		<echo/>
+		<echo/>
+		<!--
+        <unjar src="${root}/${dep9}/dist/dashboard.war" dest="build/content"/>
+        -->
+
+		<copy todir="build/content" filtering="true">
+			<fileset dir="WebContent" includes="**/*"/>
+		</copy>
+		
+		<delete file="build/content/WEB-INF/web.xml"/>
+	</target>
+    <target name="copyToMaster">
+    </target>
+
+
+    <property name="bundleDir" location="${build}/bundle/${artifact-id}"/>
+	<property name="bundle.jars" value="config/bundle.jars"/>
+
+	<target name="bundle" depends="dist, war">
+		<mkdir dir="${build}/bundle"/>
+		<mkdir dir="${bundleDir}"/>
+		<mkdir dir="${bundleDir}/lib"/>
+		<copy todir="${bundleDir}" filtering="true" >
+			<fileset dir="bundle" includes="**/*"/>
+		</copy> 
+		<copy todir="${bundleDir}" file="src/log4j.properties" />
+		<copy tofile="${bundleDir}/.excludeFromCP" file="src/log4j.properties" />
+		<!--<copy todir="${bundleDir}/lib">
+			<fileset dir="${root}/vso-ui/dist" includes="*.jar"/>
+		</copy>-->
+		<copy todir="${bundleDir}/lib">
+			<fileset dir="${root}/lib/lib" includes="commons-http*.jar"/>
+		</copy>
+
+		<copy todir="${bundleDir}/lib" flatten="true">
+					<fileset dir="${lib}" includesfile="${bundle.jars}" />
+		</copy>
+		<copy todir="${bundleDir}/lib" file="${dist}/${artifact}.jar"/>
+		<copy todir="${bundleDir}" file="logo.png"/>
+
+		<zip destfile="${dist}/${artifact-id}.zip" basedir="${bundleDir}" />
+	</target>
+</project>
+

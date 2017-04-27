@@ -1,0 +1,18 @@
+#Software: Microsoft Internet Information Services 5.0
+#Version: 1.0
+#Date: 2005-10-05 00:01:04
+#Fields: date time c-ip cs-username s-sitename s-computername s-ip s-port cs-method cs-uri-stem cs-uri-query sc-status sc-win32-status sc-bytes cs-bytes time-taken cs-version cs-host cs(User-Agent) cs(Cookie) cs(Referer) 
+2005-10-05 00:33:04 203.66.92.168 - W3SVC20 HOST3 147.237.72.37 80 GET /home.asp - 200 0 0 236 63 HTTP/1.1 www.shaham.moag.gov.il Mozilla/5.0+(compatible;+Googlebot/2.1;++http://www.google.com/bot.html) - -
+2005-10-05 00:35:06 64.37.246.2 - W3SVC20 HOST3 147.237.72.37 80 GET /top.asp - 200 0 0 235 0 HTTP/1.1 www.shaham.moag.gov.il Mozilla/5.0+(compatible;+Googlebot/2.1;++http://www.google.com/bot.html) - -
+2005-10-05 00:39:08 222.178.5.234 - W3SVC20 HOST3 147.237.72.37 80 GET /shaham/search/public.asp PublID=1751&publType=%E3%F4%E5%EF 200 0 0 407 32 HTTP/1.1 www.shaham.moag.gov.il FAST+Enterprise+Crawler/6.4+(helpdesk+at+fast.no) - http://www.shaham.moag.gov.il/shaham/search/publSearch.asp?UnitID=13
+2005-10-05 00:41:10 218.248.255.131 - W3SVC20 HOST3 147.237.72.37 80 GET /links.asp - 200 0 0 237 32 HTTP/1.1 www.shaham.moag.gov.il Mozilla/5.0+(compatible;+Googlebot/2.1;++http://www.google.com/bot.html) - -
+2005-10-05 00:43:12 216.187.103.170 - W3SVC20 HOST3 147.237.72.37 80 GET /home.asp - 200 0 0 228 16 HTTP/1.1 www.mrm.gov.il Mozilla/5.0+(compatible;+Googlebot/2.1;++http://www.google.com/bot.html) - -
+2005-10-05 00:47:14 222.89.192.150 - W3SVC20 HOST3 147.237.72.37 80 GET /top.asp - 200 0 0 227 0 HTTP/1.1 www.mrm.gov.il Mozilla/5.0+(compatible;+Googlebot/2.1;++http://www.google.com/bot.html) - -
+2005-10-05 00:49:16 61.129.15.84 - W3SVC20 HOST3 147.237.72.37 80 GET /links.asp - 200 0 0 229 15 HTTP/1.1 www.mrm.gov.il Mozilla/5.0+(compatible;+Googlebot/2.1;++http://www.google.com/bot.html) - -
+2005-10-05 00:51:18 218.73.95.253 - W3SVC20 HOST3 147.237.72.37 80 HEAD /Default.asp - 200 0 291 206 16 HTTP/1.0 www.mrm.gov.il BigBrother/1.9e - -
+2005-10-05 00:53:20 147.237.71.21 - W3SVC20 HOST3 147.237.72.37 80 HEAD /Default.asp - 200 0 291 214 0 HTTP/1.0 www.shaham.moag.gov.il BigBrother/1.9e - -
+2005-10-05 00:55:22 216.187.103.170 - W3SVC20 HOST3 147.237.72.37 80 GET /shaham/search/employee.asp EmplID=171 200 0 0 386 31 HTTP/1.1 www.shaham.moag.gov.il FAST+Enterprise+Crawler/6.4+(helpdesk+at+fast.no) - http://www.shaham.moag.gov.il/shaham/search/publSearch.asp?UnitID=13
+2005-10-05 00:57:24 194.90.9.29 - W3SVC20 HOST3 147.237.72.37 80 HEAD /Default.asp - 200 0 267 73 0 HTTP/1.0 www.mrm.gov.il:80 BigBrother/1.9e - -
+2005-10-05 00:59:26 147.237.73.11 - W3SVC20 HOST3 147.237.72.37 80 HEAD /Default.asp - 200 0 267 81 0 HTTP/1.0 www.shaham.moag.gov.il:80 BigBrother/1.9e - -
+2005-10-05 01:01:28 82.225.44.232 - W3SVC20 HOST3 147.237.72.37 80 GET /shaham/search/public.asp PublID=1742&publType=%E3%F4%E5%EF 200 0 0 407 47 HTTP/1.1 www.shaham.moag.gov.il FAST+Enterprise+Crawler/6.4+(helpdesk+at+fast.no) - http://www.shaham.moag.gov.il/shaham/search/publSearch.asp?UnitID=13
+2005-10-05 01:03:30 69.159.201.47 - W3SVC20 HOST3 147.237.72.37 80 GET /shaham/search/public.asp PublID=1568&publType=%E3%F4%E5%EF 200 0 0 407 63 HTTP/1.1 www.shaham.moag.gov.il FAST+Enterprise+Crawler/6.4+(helpdesk+at+fast.no) - http://www.shaham.moag.gov.il/shaham/search/publSearch.asp?UnitID=13

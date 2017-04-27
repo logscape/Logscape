@@ -1,0 +1,24 @@
+<project default="dist" name="orm" basedir=".">
+
+	<property name="artifact" value="vs-orm"/>
+	<property name="dep1" value="common"/>
+	<property name="dep2" value="transport"/>
+	<property name="dep3" value="vspace"/>
+	
+	<import file="../lib/build-common.xml"/>
+
+ 	<path id="compile.classpath">
+		<path refid="default.classpath"/>
+		<fileset dir="../${dep1}/dist" includes="*.jar"/>
+		<fileset dir="../${dep2}/dist" includes="*.jar"/>
+		<fileset dir="../${dep3}/dist" includes="*.jar"/>
+	</path>
+	
+	<target name="dist" depends="init, compile">
+		<jar destfile="${dist}/${artifact}.jar" compress="true">
+			<fileset dir="${classes}" includes="**/*" />
+		</jar>
+	</target>
+
+</project>
+

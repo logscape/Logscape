@@ -1,0 +1,15 @@
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:39:56.845 Info: [Scheduler] Engine:londr11039-0:Logoff:Native daemon shut down the Engine
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:48:49.625 Info: [Scheduler] Engine:londr17024-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:48:49.812 Info: [Scheduler] Engine:londr01012-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:48:50.418 Info: [Scheduler] Engine:londr01029-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:48:50.859 Info: [Scheduler] Engine:londr03044-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:48:51.055 Info: [Scheduler] Engine:londr01026-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:48:51.198 Info: [Scheduler] Engine:londr11012-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:49.074 Info: [Scheduler] Engine:londr17024-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:49.197 Info: [Scheduler] Engine:londr01012-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:49.255 Info: [Scheduler] Engine:londr01026-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:49.337 Info: [Scheduler] Engine:londr03044-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:49.648 Info: [Scheduler] Engine:londr11039-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:50.334 Info: [Scheduler] Engine:londr01015-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:50.412 Info: [Scheduler] Engine:londr01029-0:Logoff:Rerouted by the Engine Balancer
+gridserver.log.09.10.2008-05.20.23.log:09/11/08 08:55:50.475 Info: [Scheduler] Engine:londr11012-0:Logoff:Rerouted by the Engine Balancer

@@ -1,0 +1,39 @@
+.:
+total 46756
+-rwxr-xr-x+ 1 Neiil None   232245 Jun 27  2013 jackson-core-asl-1.9.12.jar
+-rwxr-xr-x+ 1 Neiil None   780385 Jun 27  2013 jackson-mapper-asl-1.9.12.jar
+-rwxr-xr-x+ 1 Neiil None   103165 Jul 14  2013 Java-WebSocket-1.3.0.jar
+-rwxr-xr-x+ 1 Neiil None   741139 Jun 27  2013 jerkson_2.9.1-0.5.0.jar
+drwxr-xr-x+ 1 Neiil None        0 Feb  1  2013 optional
+-rwxr-xr-x+ 1 Neiil None 11529584 Jun 27  2013 scala-compiler.jar
+-rwxr-xr-x+ 1 Neiil None 11309625 Dec 10  2012 scala-compiler-2.9.1.jar
+-rwxr-xr-x+ 1 Neiil None  9039572 Jun 27  2013 scala-library.jar
+-rwxr-xr-x+ 1 Neiil None  8842990 Dec 10  2012 scala-library-2.9.1.jar
+-rw-r--r--+ 1 Neiil None        0 Apr  2 19:52 scala-libs.txt
+-rwxr-xr-x+ 1 Neiil None  1927000 Feb  1  2013 scalate-core-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None  3053035 May  4  2013 scalatest_2.9.2-1.8.jar
+-rwxr-xr-x+ 1 Neiil None   292895 Mar 15  2013 scalate-util-1.5.3.jar
+drwxr-xr-x+ 1 Neiil None        0 Feb  2  2013 tool
+
+./optional:
+total 1772
+-rwxr-xr-x+ 1 Neiil None  66140 Feb  1  2013 confluence-core-1.2.jar
+-rwxr-xr-x+ 1 Neiil None 871260 Feb  1  2013 js-1.7R2.jar
+-rwxr-xr-x+ 1 Neiil None  83055 Feb  1  2013 scalamd-1.5.jar
+-rwxr-xr-x+ 1 Neiil None  20708 Feb  1  2013 scalate-camel-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None  24450 Feb  1  2013 scalate-guice-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None  96147 Feb  1  2013 scalate-markdownj-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None  96848 Feb  1  2013 scalate-page-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None  23439 Feb  1  2013 scalate-spring-mvc-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None  46470 Feb  1  2013 scalate-test-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None 162099 Feb  1  2013 scalate-wikitext-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None  55091 Feb  1  2013 textile-core-1.2.jar
+-rwxr-xr-x+ 1 Neiil None 242542 Feb  1  2013 wikitext-core-1.2.jar
+
+./tool:
+total 924
+-rwxr-xr-x+ 1 Neiil None 249924 Feb  1  2013 jtidy-r938.jar
+-rwxr-xr-x+ 1 Neiil None 343141 Feb  1  2013 org.apache.karaf.shell.console-2.2.0-fuse-00-43.jar
+-rwxr-xr-x+ 1 Neiil None 153559 Feb  1  2013 scalate-jsp-converter-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None 157111 Feb  1  2013 scalate-tool-1.5.3.jar
+-rwxr-xr-x+ 1 Neiil None  29269 Feb  1  2013 swizzle-confluence-1.4.jar

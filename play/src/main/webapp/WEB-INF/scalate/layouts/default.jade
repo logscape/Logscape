@@ -1,0 +1,95 @@
+-@ val body: String
+-@ val title: String = "Logscape, Search it!"
+-@ val proxied: Boolean = com.liquidlabs.dashboard.server.DashboardProperties.isProxyTailers
+!!!
+html
+    head
+        title= title
+        meta(content="ie=edge" http-equiv="X-UA-Compatible")
+        link(href={uri("/css/bootstrap.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/bootstrap-responsive.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/bootstrap-datetimepicker.min.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/font-awesome.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/nanoscroller.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/ace-editor.css?version=3.1.0_5")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/main.css?version=3.2.0_5")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/explorer.css?version=3.2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/tree-view.css?version=3.2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/main-styles.css?version=3.1.0_2")} media="screen" rel="stylesheet" type="text/css")
+
+        link(href={uri("/css/messenger/messenger.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/messenger/messenger-spinner.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/messenger/messenger-theme-air.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/messenger/messenger-theme-block.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/messenger/messenger-theme-flat.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/messenger/messenger-theme-future.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/messenger/messenger-theme-ice.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+
+
+        link(href={uri("/css/drop/drop-theme-basic.min.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/drop/drop-theme-arrows.min.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/drop/drop-theme-arrows-bounce-dark.min.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/drop/drop-theme-arrows-bounce.min.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/drop/drop-theme-arrows.min.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/drop/drop-theme-hubspot-popovers.min.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/drop/drop-theme-twipsy.min.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+
+
+        link(href={uri("/css/event-popup.css")} media="screen" rel="stylesheet" type="text/css")
+
+
+        / fonts
+        link(href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css')
+
+
+        link(href={uri("/css/rickshaw.css?version=3.1.0_2")} media="screen" rel="stylesheet" type="text/css")
+
+        link(href={uri("/css/jquery.dataTables.css?version=3.0.0_1")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/dataTables.bootstrap.css?version=3.0.0_1")} media="screen" rel="stylesheet" type="text/css")
+
+        / link( rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css")
+        / link( rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.css")
+        / link( rel="stylesheet" type="text/css" href="https://cdn.datatables.net/autofill/2.0.0/css/autoFill.bootstrap.min.css")
+        / link( rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.0.3/css/buttons.bootstrap.css")
+        / link( rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.0.0/css/fixedHeader.bootstrap.css")
+        / link( rel="stylesheet" type="text/css" href="https://cdn.datatables.net/scroller/1.3.0/css/scroller.bootstrap.css")
+        / link( rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.0.1/css/select.bootstrap.css")
+
+
+
+        link(href={uri("/css/jquery.gridster.css?version=2.5.0")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/nv.d3.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/c3.min.css?version=3.0.0_2")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/legend.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/jquery-ui-timepicker-addon.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/css/smoothness/jquery-ui-1.9.2.custom.css")} media="screen" rel="stylesheet" type="text/css")
+        link(href={uri("/images/favicon2.ico")} rel="shortcut icon" type="image/png")
+        link(href={uri("/css/print.css")} media="screen" rel="stylesheet" type="text/css")
+        :css
+            body {
+                padding-bottom: 40px;
+            }
+            .push {height: 5px;}
+            footer {
+                padding: 0 10px 0 10px;
+                border-top: 1px;
+                background-color: white;
+            }
+        = render("/layouts/scripts.jade")
+    body(proxied="#{proxied}")
+        =render("menu.jade")
+        =render("side-menu.jade")
+        .container-fluid.maxWidthDiv.coloredText.coloredBg#containerMain
+            !~~ body
+
+        .notification(style="z-index:1050;")
+        .modal.hide.fade#bounceSystemModal(style="display:none")
+            .modal-header
+                h3 System bounce
+            .modal-body.span12
+                i.icon-spinner.icon-spin.icon-large
+                ! Waiting....
+            .modal-footer
+
+
+

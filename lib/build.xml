@@ -1,0 +1,111 @@
+<project default="dist" name="lib" basedir=".">
+	
+	<property name="artifact" value="lib"/>
+	<property name="version" value="1.0"/>
+	<property name="artifact-id" value="${artifact}-${version}"/>
+	
+	<property name="bundle" value="${dist}/bundle"/>	
+	
+	<import file="../lib/build-common.xml"/>
+	
+	<path id="compile.classpath">
+		<path refid="default.classpath"/>
+	</path>
+	
+	<target name="dist">
+	</target>
+	<!--<target name="bundle" depends="dist, clean"> -->
+    <target name="bundle" depends="bundleServlet" >
+		<mkdir dir="${build}/${artifact-id}" />
+		<mkdir dir="${build}/${artifact-id}/lib" />
+		<mkdir dir="${dist}" />
+		
+		<copy file="${artifact}.bundle" todir="${build}/${artifact-id}" filtering="true" />
+		
+		<mkdir dir="${build}/${artifact-id}/thirdparty"/>
+		
+		<!-- copy dlls .sos to the tp dir -->
+		<copy todir="${build}/${artifact-id}/thirdparty" flatten="true" verbose="true">
+					<fileset dir="${lib}">
+<!--						<include name="*.jar"/>  NOT JARS! -->
+						
+<!-- NOTE: groovy is put in the root-logscape/lib directory - we need it to run config scripts -->						
+						<include name="**/*.dll" />
+                        <include name="**/*.dat" />
+						<include name="**/*.so" />
+						<include name="**/xpp3_min-1.1.4c.jar" />
+						<include name="*snappy*"/>
+						
+					</fileset>
+                    <fileset dir="../lib/lib/elasticsearch-1.1.1" includes="*lucene*"/>
+
+
+		</copy>
+
+        <copy todir="${build}/${artifact-id}/lib" verbose="true">
+            <fileset dir="${lib}" includes="*groovy-all-1.8.7.jar,*jdk7-introspector.jar,jna*"/>
+        </copy>
+
+
+        <jlink outfile="${build}/${artifact-id}/thirdparty/thirdparty-all.jar" compress="true">
+			<mergefiles>
+					<fileset dir="${lib}">
+						<include name="*.jar"/>
+						<include name="**/jmx121/**/*.jar"/>
+						<include name="grizzly/grizzly-framework*.jar"/>
+						<include name="javamail-1.4.3/*.jar"/>
+					<!-- <include name="jboss-ser-1.0.3/*.jar"/> -->
+						<include name="jetty-8.1.9/*.jar"/>
+						<include name="jaf-1.1.1/*.jar"/>
+
+						<include name="cpu_win32/*.jar" />
+						<include name="prevayler-2.3/*.jar" />
+						<include name="**/*.dll" />
+						<include name="**/*.so" />
+						
+						<exclude name="groovy-all-1.8.7.jar"/>
+						<exclude name="*.dll"/>
+                        <exclude name="*.dat"/>
+						<exclude name="junit*.jar"/>
+						<exclude name="jmock*.jar"/>
+						<exclude name="*src*"/>
+						<exclude name="*snappy*"/>
+						<exclude name="jna*"/>
+
+						<exclude name="**/*.java"/>
+					</fileset>
+			</mergefiles>
+		</jlink>
+
+		<delete file="${dist}/${artifact-id}.zip"/>
+		<zip destfile="${dist}/${artifact-id}.zip" basedir="${build}/${artifact-id}" compress="true" />
+	</target>
+
+    <target name="bundleServlet" >
+        <mkdir dir="${build}/${artifact}-servlet-${version}" />
+        <mkdir dir="${build}/${artifact}-servlet-${version}/lib" />
+        <mkdir dir="${dist}" />
+
+        <copy file="${artifact}.bundle" todir="${build}/${artifact}-servlet-${version}" filtering="true" />
+
+
+
+
+        <copy todir="${build}/${artifact}-servlet-${version}/lib" verbose="true">
+            <fileset dir="lib/servlet" includes="*"/>
+        </copy>
+
+
+
+        <delete file="${dist}/${artifact}-servlet-${version}.zip"/>
+        <zip destfile="${dist}/${artifact}-servlet-${version}.zip" basedir="${build}/${artifact}-servlet-${version}" compress="true" />
+    </target>
+
+    <target name="copyToMaster">
+        <copy todir="../master/build/logscape/downloads" verbose="true">
+            <fileset dir="dist" includes="*.zip"/>
+        </copy>
+    </target>
+
+</project>
+

@@ -1,0 +1,19 @@
+<Bundle name="slacontainer-sample" version="0.01">
+  <status>UNINSTALLED</status>
+  <services>
+    <Service>
+      <bundleServiceName>replicator:Publisher</bundleServiceName>
+      <bundleName>replicator</bundleName>
+      <name>Publisher</name>
+      <property>ServiceType=System</property>
+      <resourceSelection>customProperties notContains "ServiceType=System"</resourceSelection>
+      <fork>true</fork>
+      <script>
+      <![CDATA[
+      processMaker.runSlaContainer "com.liquidlabs.vso.sla.Consumer", "sla-2.xml"
+     	]]>
+</script>
+      <instanceCount>1</instanceCount>
+    </Service>
+     </services>
+</Bundle>

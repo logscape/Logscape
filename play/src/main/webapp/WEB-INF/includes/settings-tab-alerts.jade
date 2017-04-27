@@ -1,0 +1,51 @@
+.tab-pane#tabs-alerts
+    .titleBlock
+        span.configTitle.headerColor#alertingTitle Alerting
+        .alert.alert-info.gettingStarted
+            a#alertingGettingStarted(href="http://logscape.com/redir/alerting.htm" target="_blank") Getting Started
+            a.fa.fa-question-circle.fa-lg.btn-link.play-icon(href="http://logscape.com/redir/alerting.htm" target="_blank")
+    br
+    .control-group.u.borderColor(style="width:40%")
+        span.lead#alertingName
+            ! Name:
+        span.lead#alertName(type="text"  title="Click to edit alert name")
+
+    .tabbable
+        ul.nav.nav-tabs.borderColor
+            li.active
+                a.borderColor.textColor#alertGeneral(href="#tab-alert-general" data-toggle="tab") General
+            li
+                a.borderColor.textColor#alertTrigger(href="#tab-alert-triggers" data-toggle="tab") Trigger
+            li
+                a.borderColor.textColor#alertActions(href="#tab-alert-actions" data-toggle="tab") Actions
+            li
+                a.borderColor.textColor#alertStream(href="#tab-alert-stream" data-toggle="tab") Stream
+
+
+
+        .tab-content
+            =render("/includes/alerts/general.jade")
+            =render("/includes/alerts/triggers.jade")
+            =render("/includes/alerts/actions.jade")
+            =render("/includes/alerts/stream.jade")
+
+
+    .control-group
+        .controls
+            button.btn.btn-primary.fa.fa-arrow-circle-right#newAlert(type="submit") &nbsp; New
+            button.btn.btn-primary.fa.fa-check#saveAlert(type="submit") &nbsp; Save
+    .row-fluid
+        .span10
+            table.table.table-hover.table-condensed.table-bordered#alertsTable.coloredBorder.coloredTable
+                thead
+                    tr
+                        th#alertingNamee
+                        th#alertingSchedulee
+                        th#alertingSearchh
+                        th#alertingTrigger
+                        th#alertingLastFired
+                        th#alertingLastRun
+                        th#alertingActions
+
+
+    /   button.btn.btn-primary.fa.fa-arrow-circle-right#listEvents(type="submit") &nbsp; Events

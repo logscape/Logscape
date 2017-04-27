@@ -1,0 +1,25 @@
+<project default="dist" name="vspace" basedir=".">
+	
+	<property name="artifact" value="vspace"/>
+	<property name="dep1" value="common"/>
+	<property name="dep2" value="transport"/>
+	<property name="dir" value="."/>		
+	<import file="../lib/build-common.xml"/>
+	
+	<path id="compile.classpath">
+		<path refid="default.classpath"/>
+		<fileset dir="../${dep1}/dist" includes="*.jar"/>
+		<fileset dir="../${dep2}/dist" includes="*.jar"/>		
+	</path>
+	
+	<target name="dist" depends="clean,init,compile">
+		<jar destfile="${dist}/${artifact}.jar" compress="true"  >
+			<fileset dir="${classes}" includes="**/*" />
+
+		</jar>
+	</target>
+
+
+		  
+</project>
+

@@ -1,0 +1,332 @@
+/* Modify widget popup*/
+.cModalDialog > div {
+color: #888c90 !important;
+    background-color:#131218 !important; /*placeholder*/
+}
+
+.cModalDialog > div > .cModalDialogClose {
+ background: #292933;
+ color: #888c90 !important;
+}
+
+
+/*-----End WIP------*/
+
+/*       agents page sub table always has a scroll, lets tidy it up */
+.dataTables_scroll ::-webkit-scrollbar {
+    background:white;
+}
+
+.dataTables_scroll ::-webkit-scrollbar-track {
+    background: #292933;
+}
+
+.dataTables_scroll ::-webkit-scrollbar-thumb {
+    background: #21417c;
+}
+
+div.sidebar-nav > .tab-content{
+    overflow:auto !important;
+}
+.tab-content{
+    overflow:visible !important;
+}
+.borderColor {
+border-color: #3b4553 !important;
+}
+/*Active workspace*/
+#workspace {
+      background-color:#131218 !important;
+}
+
+td.day.active {
+    background-image:linear-gradient(to bottom,#3d3c4e,#414753) !important;
+}
+/*Captures all widgets*/
+#workspace .widget, #workspace .widget > div[id*="clock_widget"],
+#workspace .widget > div[id*="clock_widget"] > h2, #workspace .widget > div[id*="clock_widget"] > h3{
+    border-color: #3b4553 !important;
+     background: #292933 !important;
+     color: #C8C8C8 !important;
+}
+
+/*override bootstrap buttons*/
+.btn-primary, .btn-success, .btn-info, .btn {
+color:white !important;
+background-color:#131218 ;
+background-image: linear-gradient(to bottom, #4b475d, #1e232d) ;
+}
+.btn-primary:hover, .btn-success:hover, .btn-info:hover, .btn:hover{
+background-color:#373740;
+}
+
+div#eventLayoutStyle .btn.active {
+background-color:#373740;
+}
+
+/*Override main.css colouring on the drilldown box*/
+.chart_drilldown {
+background-color:#363644 !important;
+}
+.navColor{
+    background: #1f1f27;
+}
+
+.navColor:hover{
+    background-color:#484853 !important;
+}
+/*Used to create visual depth on widgets etc*/
+.popoutColor {
+    background: #292933 !important;
+}
+
+#configure .alert, .alert{
+border-color:#3b4553 !important;
+color:#efeae2 !important;
+background-color:#373740;
+text-shadow:none;
+}
+
+#configure a {
+    color:#0087cc;
+}
+
+.headerColor {
+color:#b9b9b9;
+}
+
+.nav.nav-tabs > li.active > a {
+color:white;
+background-color:#131218;
+}
+/*Border formating*/
+.coloredBorder {
+    border: solid 1px #3b4553 !important;
+}
+
+/*Universal color of texr*/
+.coloredText {
+    color: #C8C8C8 !important;
+}
+
+/* blue tint used to draw attention to inputs*/
+.coloredInputBG {
+   background: #1f1f27 !important;
+}
+
+/*Faded placeholder text*/
+input.coloredText::-webkit-input-placeholder, input.coloredText:-ms-input-placeholder, nput.coloredText::-moz-placeholder,  input.coloredText:-moz-placeholder { /* Chrome */
+  color: rgba(200, 200, 200, 0.39) !important;
+}
+
+/* Dark BG, used as BG for the entire admin page */
+.coloredBG {
+    background-color:#131218 !important;
+}
+
+/* Simple catch for inputs and select under tabbables, and the exception to it*/
+.tabbable input {
+    background: #1f1f27;
+    color: #C8C8C8 !important;
+     border-color: #3b4553;
+}
+
+.close, .close:hover {
+color:#f1fff9;
+}
+
+.tabbable select, .tabbable select option, .tabbable textarea, select#group{
+    color: #C8C8C8 !important;
+    border-color: #3b4553;
+    background-color:#1f1f27;
+}
+
+/* Table Highlighting on hover*/
+.coloredTable tr:hover, .coloredTable td:hover , .coloredTable tbody tr:hover td, .coloredTable tbody tr:hover th{
+    background-color:#535257 !important;
+}
+
+/* alternating odd/even colors*/
+.coloredTable .odd td{
+    background-color:#212028 !important;
+    border-color: #3b4553;
+}
+
+.coloredTable .even td {
+    background-color:#2d2c32 !important;
+    border-color: #3b4553;
+}
+
+.coloredTable thead tr{
+    background: #292933;
+}
+
+/*Override color scheme of datatypes page*/
+.syntheticField {
+           background-color:#0059bb !important; /*placeholder*/
+}
+
+.discoveredField{
+           background-color:#3f8202 !important; /*placeholder*/
+}
+
+.systemField {
+ background-color:#b36400 !important; /*placeholder*/
+}
+
+/*Just used to remove image from occasional element which was using main.css or jquery.css image as bg*/
+.noImage {
+background-image:none;
+}
+
+
+/* Problably an easier way to catch these, was done out of frustration... look at the js that generates the tables? */
+
+#dsTable_filter input, #deployTable_filter input, #userTable_filter input, #dGroupTable_filter input, #alertsTable_filter input, #agentsTable_filter input, #kvTable_filter input, #openWorkspaceTable_filter input, #eventTable_filter input, #openDTTable_filter input, #openSearchTable_filter input, #openSearchTable_filter input, div[id*="chartTable"] input  {
+     background: #1f1f27 !important;
+     border: solid 1px #3b4553 !important;
+}
+
+#dsTable_info, #dsTable_filter label, #deployTable_info, #deployTable_filter label, #userTable_info, #userTable_filter label, #dGroupTable_info, #dGroupTable_filter label, #alertsTable_info, #alertsTable_filter label, #agentsTable_info, #agentsTable_filter label, #kvTable_info, #kvTable_filter label, #openWorkspaceTable_info, #openWorkspaceTable_filter label, #eventTable_info, #eventTable_filter label, #openDTTable_info, #openDTTable_filter label, #openSearchTable_info, #openSearchTable_filter label, div[id*="chartTable"] label, div#chart > div.dataTables_wrapper > div.dataTables_info,
+#dsTable_filter input, #deployTable_filter input, #userTable_filter input, #dGroupTable_filter input, #alertsTable_filter input, #agentsTable_filter input, #kvTable_filter input, #openWorkspaceTable_filter input, #eventTable_filter input, #openDTTable_filter input, #openSearchTable_filter input, #openSearchTable_filter input, div[id*="chartTable"] input    {
+    color: #888c90;
+}
+
+/*Bottom of the open workspace modal*/
+.modal-footer, .modal-body, .modal-content, .modal-header {
+color: #888c90 !important;
+                 background-color:#131218 !important;
+                 border-color: #3b4553 !important;
+}
+
+/*Search field text color*/
+.field_disco, .field_sys, .field_synth {
+color: #131218 !important;
+}
+
+
+/*Library generated ui elements*/
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
+    background-color:#131218 !important;
+}
+
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all > li.ui-menu-item > a{
+    color: #C8C8C8 !important;
+    background-color:#006aa3 !important;
+}
+/* Time selector buttons */
+div.fromTime > span, div.toTime > span {
+    background-color:#373740 !important;
+    border-color:#3b4553 !important;
+}
+
+div.fromTime > span > i, div.toTime > span > i {
+color:white;
+}
+
+/*Library generated*/
+div.popover, div.popover-content{
+    background-color:#131218 !important;
+    border: solid 1px #3b4553 !important;
+}
+h3.popover-title{
+background-color:#131218;
+}
+
+
+div.bootstrap-datetimepicker-widget{
+    background-color:#131218 !important;
+    color: #C8C8C8 !important;
+    border: solid 1px #3b4553 !important;
+}
+
+/* Catch All for the BG*/
+body{
+background-color:#131218;
+}
+
+/**** C3/Rickshaw Overrides ****/
+
+/* Unit lines on axis */
+g.tick > line {
+    stroke: #C8C8C8;
+}
+
+/* Caption on the axis */
+g.tick > text > tspan {
+   fill: #C8C8C8;
+}
+
+/* Axis itself */
+path.domain {
+    stroke:#C8C8C8 !important;
+}
+
+/* Chart Legend */
+div#legend li.line > span.label, g.c3-legend-item > text {
+    color: #C8C8C8;
+    fill:#C8C8C8;
+}
+
+/* Pie labels */
+text[class*="segmentMainLabel-outer"] { 
+    fill: #C8C8C8 !important;
+}
+
+/* Rickshaw x axis*/
+div.x_tick.glow > div.title{
+    text-shadow:none !important;
+    color:#C8C8C8 !important;
+}
+
+g.tick > text {
+    stroke:#C8C8C8 !important;
+    stroke-width:1px !important;
+    opacity: 1 !important;
+    text-shadow:none !important;
+}
+
+/* Edit html widget */
+div.editArea div.tab-content.niceTabs {
+    background-color:#131218;
+    border:none;
+}
+
+/* Home styling for dark theme*/
+.appNavStyle1 > .menu > li.coloredText:hover  {
+    color:#FFF;
+    background-color:#046ea4;
+    border-bottom: 1px solid #222225;
+    border-top: 1px solid #222225;
+}
+
+
+.appNavStyle1 > .menu > li.active.coloredText {
+    color:#FFF;
+    background-color:#046ea4;
+    border-bottom: 1px solid #222225;
+    border-top: 1px solid #222225;
+}
+
+.appNavStyle1 > .menu > li.active > a.coloredText  {
+    color:#333;
+    font-weight:600;
+    background-color:#373740;
+}
+
+.appNavStyle1 > .menu > li > a.coloredText:hover  {
+    background-color:#373740;
+}
+
+/* Re-coloring buttons */
+#sysBounce, #deploymentBounce, #agentsBounce { 
+background-image: linear-gradient(to bottom, #750303, #1e232d);
+}
+
+#deploymentRefresh, #datasourcesSearchSource{
+    background-image: linear-gradient(to bottom, #197503, #1e232d);
+}
+
+#deploymentPush, #datasourcesSave, #datasourcesNew, #datasourcesClone{
+    background-image: linear-gradient(to bottom, #034075, #1e232d);
+}

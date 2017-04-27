@@ -1,0 +1,25 @@
+2010-05-13 16:53:56,906 WARN sla-sched-178-3 (proxy.ProxyClient)	Got RetryInvocationException Peer:stcp://10.123.102.86:11001?serviceName=ResourceSpace&host=hal2/_startTime=13-May-10_16-47-02&udp=0 method:getResourceCount
+2010-05-13 16:53:58,640 WARN sla-sched-178-3 (container.SLAContainer)	PercentConsumer1339060191 SLARunError:Listener[ResourceSpace] no endpoints available:[KeepFirstSortRestAddresser currentEP:stcp://10.123.102.86:11001?serviceName=ResourceSpace&host=hal2/_startTime=13-May-10_16-47-02&udp=0 addr:10.123.102.86 EP[] badEP[] replayRequired:true]
+java.lang.RuntimeException: Listener[ResourceSpace] no endpoints available:[KeepFirstSortRestAddresser currentEP:stcp://10.123.102.86:11001?serviceName=ResourceSpace&host=hal2/_startTime=13-May-10_16-47-02&udp=0 addr:10.123.102.86 EP[] badEP[] replayRequired:true]
+	at com.liquidlabs.transport.proxy.ProxyClient.sendWithRetry(ProxyClient.java:351)
+	at com.liquidlabs.transport.proxy.ProxyClient.invoke(ProxyClient.java:217)
+	at $Proxy9.getResourceCount(Unknown Source)
+	at com.liquidlabs.vso.container.SLAContainer.run(SLAContainer.java:304)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:317)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:150)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$101(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.runPeriodic(ScheduledThreadPoolExecutor.java:181)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:205)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+2010-05-13 16:53:58,640 INFO sla-sched-178-3 (container.SLAContainer)	Run <<
+2010-05-13 16:53:59,546 WARN Thread-48 (SpaceService.BundleSpace)	Listener[LookupSpace] no endpoints available:[KeepFirstSortRestAddresser currentEP:stcp://10.123.102.86:11000?serviceName=LookupSpace&host=hal2/_startTime=13-May-10_16-46-58&udp=0 addr:10.123.102.86 EP[] badEP[] replayRequired:true]
+java.lang.RuntimeException: Listener[LookupSpace] no endpoints available:[KeepFirstSortRestAddresser currentEP:stcp://10.123.102.86:11000?serviceName=LookupSpace&host=hal2/_startTime=13-May-10_16-46-58&udp=0 addr:10.123.102.86 EP[] badEP[] replayRequired:true]
+	at com.liquidlabs.transport.proxy.ProxyClient.sendWithRetry(ProxyClient.java:351)
+	at com.liquidlabs.transport.proxy.ProxyClient.invoke(ProxyClient.java:217)
+	at $Proxy5.unregisterService(Unknown Source)
+	at com.liquidlabs.vso.SpaceServiceImpl.stop(SpaceServiceImpl.java:117)
+	at com.liquidlabs.vso.deployment.bundle.BundleSpaceImpl.stop(BundleSpaceImpl.java:159)
+	at com.liquidlabs.vso.deployment.bundle.BundleSpaceImpl$5.run(BundleSpaceImpl.java:144)

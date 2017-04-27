@@ -1,0 +1,29 @@
+<Bundle name="vs-admin" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <workingDirectory>.</workingDirectory>
+	<services>
+		<Service>
+			<name>AdminSpace</name>
+			<priority>100</priority>
+			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<instanceCount>-1</instanceCount>
+			<script>
+				import com.liquidlabs.admin.AdminSpaceImpl
+				println "\n************************** Starting AdminSpace ************************** "
+
+				System.setProperty("ldif.file", "system-bundles/vs-admin-1.0/config/vscape-users.ldif");      
+				
+				AdminSpaceImpl.boot("${LookupSpaceAddress}");      
+			</script>
+		</Service>
+	</services>
+</Bundle>

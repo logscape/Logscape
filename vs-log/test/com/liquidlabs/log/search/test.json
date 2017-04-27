@@ -1,0 +1,19 @@
+{"facets":{
+    "0":{"date_histogram":{
+        "field":"@timestamp","interval":"10m"},"global":true,"facet_filter":{
+        "fquery":{"query":{
+            "filtered":{
+                "query":{
+                    "query_string":{
+                        "query":"ERROR"}},
+                "filter":{
+                    "bool":{"must":[{"range":{"@timestamp":{"from":1403692769205,"to":1403779169205}}}]}}}
+        }
+        }
+    }},"1":{"date_histogram":{
+        "field":"@timestamp","interval":"10m"},"global":true,"facet_filter":{
+        "fquery":{"query":{
+            "filtered":{"query":{"query_string":{"query":"WARN"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1403692769206,"to":1403779169206}}}]}}}}}}},
+    "2":{"date_histogram":{"field":"@timestamp","interval":"10m"},"global":true,"facet_filter":{"fquery":{
+    "query":{"filtered":{"query":{"query_string":{"query":"INFO"}},
+    "filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1403692769206,"to":1403779169206}}}]}}}}}}}},"size":0}

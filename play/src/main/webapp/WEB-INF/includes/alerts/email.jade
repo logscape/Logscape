@@ -1,0 +1,14 @@
+form#emailAlert.form-horizontal
+    .control-group
+        label.control-label#alertingFrom(for="from") From
+        .controls
+            input#from(type="text" placeHolder="From.User <from@user.com>" title="From.User <from@user.com>")
+        label.control-label#alertingTo(for="to") To
+        .controls
+            input#to(type="text" placeHolder="john@doe.com")
+        label.control-label#alertingSubject(for="subject") Subject
+        .controls
+            input#subject(type="text" placeHolder="Oops Something went Wrong")
+        label.control-label#alertingMessage(for="message") Message
+        .controls
+            textarea#message(title="To send RAW events instead - use [RAW] in the message content otherwise events will using HTML-tables by field" Style="width:715px;height:434px")

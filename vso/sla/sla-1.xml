@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sla consumerName="someConsumer" consumerClass="com.stuff.SomeConsumerImpl">
+	<timePeriod start="00:00" end="12:00">
+		<rule maxResources="10" priority="9">
+			<evaluator>
+				<![CDATA[
+					if (queueLength > 10)
+						return new Add("mflops > 100", 5);
+					else
+						return new Remove("mflops > 10", 1) 
+					]]>
+			</evaluator>
+		</rule>
+		<rule maxResources="15" priority="8">
+			<evaluator>
+				<![CDATA[
+					if (queueLength > 15)
+						return new Add("mflops > 100, 1)
+					else
+						return new Remove("mflops > 10", 1) 
+					]]>
+			</evaluator>
+		</rule>
+	</timePeriod>
+	
+	<timePeriod maxResources="50"  start="12:01" end="23:59" priority="7">
+        <rule>
+            <evaluator>
+                <![CDATA[
+               	if (queueLength > 15)
+						return new Add("mflops > 50", 1)
+					else
+						return new Remove("mflops > 10", 1) 
+                    ]]>
+            </evaluator>
+        </rule>
+    </timePeriod>
+</sla>

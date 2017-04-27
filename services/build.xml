@@ -1,0 +1,61 @@
+<project default="dist" name="services" basedir=".">
+	
+	<property name="artifact" value="services"/>
+	<property name="version" value="1.0"/>
+	<property name="dep1" value="common" />
+	<property name="dep2" value="transport" />
+	<property name="dep3" value="vso" />
+	<property name="dep4" value="vs-log" />
+	<property name="dep5" value="vs-util" />
+	<!--<property name="dep6" value="vso-ui" />-->
+	<property name="dep6" value="replicator" />
+	<property name="dep7" value="vspace" />
+	<property name="dep8" value="vs-orm" />
+	<property name="dep9" value="vs-admin" />
+	<property name="dep10" value="vs-log-server" />
+	<property name="dep11" value="vs-syslog-server" />
+	<property name="dep12" value="saas-meter" />
+	<import file="../lib/build-common.xml"/>
+
+	<path id="compile.classpath">
+		<path refid="default.classpath" />
+		<fileset dir="../${dep1}/dist" includes="*.jar"/>
+		<fileset dir="../${dep2}/dist" includes="*.jar"/>
+		<fileset dir="../${dep3}/dist" includes="*.jar"/>
+		<fileset dir="../${dep4}/dist" includes="*.jar"/>
+		<fileset dir="../${dep5}/dist" includes="*.jar"/>
+		<fileset dir="../${dep6}/dist" includes="*.jar"/>
+		<fileset dir="../${dep7}/dist" includes="*.jar"/>
+		<fileset dir="../${dep8}/dist" includes="*.jar"/>
+		<fileset dir="../${dep9}/dist" includes="*.jar"/>
+		<fileset dir="../${dep10}/dist" includes="*.jar"/>
+		<fileset dir="../${dep11}/dist" includes="*.jar"/>
+		<fileset dir="../${dep12}/dist" includes="*.jar"/>
+		<!--<fileset dir="../${dep13}/dist" includes="*.jar"/>-->
+	</path>
+	
+	<target name="dist" depends="init,compile">
+		<jar destfile="${dist}/${artifact}.jar" compress="true">
+			<fileset dir="${classes}" includes="**/*" />
+		</jar>
+	</target>
+
+	<property name="bundleDir" location="${build}/bundle/${artifact}-${version}"/>
+	<property name="bundle.jars" value="config/bundle.jars"/>
+
+	<target name="bundle" depends="dist">
+		<mkdir dir="${build}/bundle"/>
+		<mkdir dir="${bundleDir}"/>
+		<mkdir dir="${bundleDir}/lib"/>
+		<copy todir="${bundleDir}" >
+			<fileset dir="bundle" includes="**/*"/>
+		</copy> 
+		<copy todir="${bundleDir}/lib" flatten="true">
+			<fileset dir="${lib}" includesfile="${bundle.jars}" />
+		</copy>
+		<copy todir="${bundleDir}/lib" file="src/log4j.properties" />
+		<copy todir="${bundleDir}/lib" file="${dist}/${artifact}.jar"/>
+		<zip destfile="${dist}/${artifact}-${version}.zip" basedir="${build}/bundle"/> 
+	</target>
+</project>
+

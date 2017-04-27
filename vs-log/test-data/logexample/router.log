@@ -1,0 +1,14 @@
+Oct  5 2005 00:20:00 192.168.175.111 45984036: Oct  5 00:59:59: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied udp 203.66.92.168(2920) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.81.22(1434), 1 packet
+Oct  5 2005 00:21:00 147.237.73.129 45984037: Oct  5 00:59:59: %SEC-6-IPACCESSLOGDP: list FromInetToTehila denied icmp 64.37.246.2(1214) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.71.11 (8/0), 1 packet
+Oct  5 2005 00:22:22 147.237.73.129 45984038: Oct  5 00:00:00: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied udp 222.178.5.234(1214) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.10.215(1434), 1 packet
+Oct  5 2005 00:23:23 147.237.71.11 45984039: Oct  5 00:00:01: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied udp 218.248.255.131(3730) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.240.159(1434), 1 packet
+Oct  5 2005 00:24:24 147.237.73.129 45984040: Oct  5 00:00:02: %SEC-6-IPACCESSLOGDP: list FromInetToTehila denied icmp 216.187.103.170(1214) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.71.11 (3/10), 1 packet
+Oct  5 2005 00:25:25 147.237.73.129 45984041: Oct  5 00:00:02: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied tcp 222.89.192.150(7000) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.130.81(24710), 1 packet
+Oct  5 2005 00:26:26 85.250.122.61 45984042: Oct  5 00:00:03: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied tcp 61.129.15.84(80) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.137.124(52488), 1 packet
+Oct  5 2005 00:27:27 147.237.73.129 45984043: Oct  5 00:00:03: %SEC-6-IPACCESSLOGDP: list FromInetToTehila denied icmp 218.73.95.253(80) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.170.178 (11/0), 1 packet
+Oct  5 2005 00:28:28 147.237.71.21 45984044: Oct  5 00:00:04: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied tcp 147.237.71.21(6121) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.35.124(445), 1 packet
+Oct  5 2005 00:28:29 147.237.71.11 45984045: Oct  5 00:00:04: %SEC-6-IPACCESSLOGDP: list FromInetToTehila denied icmp 216.187.103.170(80) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.71.11 (3/10), 1 packet
+Oct  5 2005 00:28:30 147.237.73.129 45984046: Oct  5 00:00:05: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied tcp 194.90.9.29(50026) (FastEthernet0/0 000b.be4c.d400) -> 147.237.72.69(25), 1 packet
+Oct  5 2005 00:31:31 147.237.73.11 45984047: Oct  5 00:00:06: %SEC-6-IPACCESSLOGDP: list FromInetToTehila denied icmp 147.237.73.11(80) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.71.11 (3/10), 1 packet
+Oct  5 2005 00:31:32 147.237.73.129 45984048: Oct  5 00:00:06: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied tcp 82.225.44.232(1610) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.170.153(445), 1 packet
+Oct  5 2005 00:33:33 147.237.73.129 45984049: Oct  5 00:00:07: %SEC-6-IPACCESSLOGP: list FromInetToTehila denied tcp 69.159.201.47(4776) (FastEthernet0/0 0012.7f06.e7c0) -> 147.237.28.217(445), 2 packets

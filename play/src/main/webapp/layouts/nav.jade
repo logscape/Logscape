@@ -1,0 +1,15 @@
+.navbar.navbar-inverse.navbar-fixed-top
+    .navbar-inner
+        .container-fluid
+
+            ul#mainTabs.nav.span4.offset1
+                li
+                    a.brand(href="#landing")
+                        img(src={uri("/images/logo-small.png")} style="height: 25px;width: 36px")
+                li
+                    a.workspaceTab(href="#workspace") Workspace
+                li
+                    a.searchTab(href="#search") Search
+            ul#flooble.nav.span2.pull-right
+                li(style="float:right;padding-top:5px;")
+                    a#config.icon-align-justify.icon-white(href='#configure')

@@ -1,0 +1,13 @@
+.tab-content(style="background:white")
+    #workspace.tab-pane.fade.in.active.menu-item(href="?Workspace=" label="Workspace" permission='1' style="background: #FFF;background-size: cover;")
+        = render("/workspace.jade")
+    #search.tab-pane.fade.menu-item.coloredBG.coloredText(href="?Search=" label="Search" permission='1')
+        = render("/search.jade")
+    #explore.tab-pane.fade.menu-item(href="?Explore=" label="Explore" permission='1')
+        = render("/explorer/explore.jade")
+    #user.tab-pane.fade.menu-item.coloredBG.coloredText(href="?User=" label="User" permission='1' style="padding:10px;background:#EEE;")
+        = render("/user.jade")
+    #configure.tab-pane.fade.menu-item.coloredBG.coloredText(href="?Settings=" label="Configure" permission='4')
+        = render("/configure.jade")
+
+

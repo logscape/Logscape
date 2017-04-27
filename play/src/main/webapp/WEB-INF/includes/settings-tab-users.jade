@@ -1,0 +1,19 @@
+.tab-pane#tabs-users
+    .titleBlock
+        span.lead.headerColor#usersTitle
+        .alert.alert-info.gettingStarted
+            a#usersGettingStarted(href="http://logscape.com/redir/users.htm" target="_blank") Getting Started
+            a.fa.fa-question-circle.fa-lg.btn-link.play-icon(href="http://logscape.com/redir/users.htm" target="_blank")
+    .tabbable
+        ul.nav.nav-tabs.borderColor
+            li.active
+                a.borderColor.navColor.textColor#usersConfigLI(href="#tab-user-config" data-toggle="tab")	Users
+            li
+                a.borderColor.navColor.textColor#usersDGroup(href="#tab-user-dgroups" data-toggle="tab")    Team
+            li
+                a.borderColor.navColor.textColor#usersLDAP(href="#tab-user-security" data-toggle="tab")		Directory Services
+            li
+        .tab-content
+            =render("/includes/user/config.jade")
+            =render("/includes/user/dgroups.jade")
+            =render("/includes/user/security.jade")

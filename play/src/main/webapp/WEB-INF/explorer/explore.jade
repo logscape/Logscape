@@ -1,0 +1,13 @@
+.row-fluid#explore
+    .span3.white.exploreSidePanel
+        .sidebar-nav(style="padding-top:0px;")
+            .span12
+                input#hosts.dark-filter.search-query.facet-filter(type="text" placeholder="Select host..")
+            .span12(style="overflow-y:auto;height:calc(100%-43px);")
+                .ex_css-treeview.span12
+                    li#filetree
+
+    .span9.explorerMainPanel(style="margin-left:1px")
+        =render("/explorer/tabs.jade")
+
+

@@ -1,0 +1,39 @@
+.tab-pane#tab-alert-actions.coloredText
+    .accordion.span10#alert-actions
+        .accordion-group.coloredBorder
+            .accordion-heading
+                a.accordion-toggle#alertingEmail(data-toggle="collapse" data-parent="#alert-actions" href="#collapseEmailAlert") Email
+
+            .accordion-body.collapse#collapseEmailAlert
+                .accordion-inner.coloredBorder
+                    =render("/includes/alerts/email.jade")
+
+        .accordion-group.coloredBorder
+            .accordion-heading
+                a.accordion-toggle#alertingReport(data-toggle="collapse" data-parent="#alert-actions" href="#collapseReportAlert") Report
+                .accordion-body.collapse#collapseReportAlert
+                    .accordion-inner.coloredBorder
+                        =render("/includes/alerts/report.jade")
+
+
+        .accordion-group.coloredBorder
+            .accordion-heading
+                a.accordion-toggle#alertingGroovyScript(data-toggle="collapse" data-parent="#alert-actions" href="#collapseScriptAlert") Groovy Script
+
+            .accordion-body.collapse#collapseScriptAlert
+                .accordion-inner.coloredBorder
+                    =render("/includes/alerts/script.jade")
+
+        .accordion-group.coloredBorder
+            .accordion-heading
+                a.accordion-toggle#alertingLogMessage(data-toggle="collapse" data-parent="#alert-actions" href="#collapseLogMessage") Log Message
+            .accordion-body.collapse#collapseLogMessage
+                .accordion-inner.coloredBorder
+                    =render("/includes/alerts/log.jade")
+
+        .accordion-group.coloredBorder
+            .accordion-heading
+                a.accordion-toggle#alertingWriteToFile(data-toggle="collapse" data-parent="#alert-actions" href="#collapseFileMessage") Write To File
+            .accordion-body.collapse#collapseFileMessage
+                .accordion-inner.coloredBorder
+                    =render("/includes/alerts/file.jade")

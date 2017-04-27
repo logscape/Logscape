@@ -1,0 +1,64 @@
+<Bundle name="vs-log-indexer" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@-@timestamp@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <workingDirectory>.</workingDirectory>
+  <services>
+   <Service>
+      	<name>Indexer</name>
+	  	<priority>10</priority>	
+		<resourceSelection>type containsAny 'Management,Native,Agent,Indexer,Failover,Tailer,Server,IndexStore'</resourceSelection>
+      	<fork>false</fork>
+      	<background>true</background>
+		<pauseSeconds>0</pauseSeconds>
+      	<dependencies>vs-log-1.0:LogSpace</dependencies>
+		<instanceCount>-1</instanceCount>
+		<costPerUnit>2</costPerUnit>      	
+      	<script>
+      		<![CDATA[
+				import com.liquidlabs.vso.*
+				import com.liquidlabs.log.*
+				import com.liquidlabs.log.reader.*
+				import com.liquidlabs.log.space.*
+				import com.liquidlabs.log.index.*
+				import com.liquidlabs.log.indexer.*
+				import com.liquidlabs.common.monitor.*
+				import com.liquidlabs.common.concurrent.*
+				import com.liquidlabs.transport.proxy.*
+				import org.joda.time.DateTime;
+				import com.liquidlabs.log.server.*
+
+				int port = VSOProperties.getPort(VSOProperties.ports.AGENT_LOG_SPACE);
+
+				logSpace = LogSpaceImpl.getRemoteService("TailerScript", lookupSpace, proxyFactory);
+
+
+				ProxyFactory aggPf = new ProxyFactoryImpl(port, ExecutorService.newDynamicThreadPool("worker","agg"),"AgentLogService");
+				aggPf.start();
+				aggSpace = AggSpaceImpl.getRemoteService("TailerScript", lookupSpace, aggPf);
+
+				logReaderFactory = new LogReaderFactoryForIngester(aggSpace, proxyFactory);
+
+				int tailerThreads = LogProperties.getTailerThreads();
+				
+				scheduler = ExecutorService.newScheduledThreadPool(tailerThreads, "tailer-young", Thread.NORM_PRIORITY, exceptionHandler)
+
+				indexer = Indexers.get();
+				service = new AgentLogServiceImpl(logSpace, aggSpace, scheduler, proxyFactory, indexer, resourceId, logReaderFactory, exceptionHandler, lookupSpace)
+				serviceManager.registerLifeCycleObject(service)
+				service.start()
+
+				logAgentAdmin = new AgentLogServiceAdminImpl(proxyFactory, indexer, new LoggingEventMonitor());
+                LogHttpServer server = new LogHttpServer(indexer);
+                server.addClientAddress(lookupSpaceAddress)
+
+			]]>
+		</script>
+    </Service>
+  </services>
+</Bundle>

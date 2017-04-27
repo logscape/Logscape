@@ -1,0 +1,647 @@
+[Sat, 14 Nov 2008 02:27:09 GMT] [info] [127.0.0.1:3369/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:29:48 GMT] [info] [127.0.0.1:3412/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:29:48 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:29:48 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:29:48 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:29:48 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:29:48 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:29:48 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:29:58 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:29:58 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:29:58 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:29:58 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:29:58 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:29:58 GMT] [debug] [127.0.0.1:3412/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:30:31 GMT] [info] [127.0.0.1:3412/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:33:08 GMT] [info] [127.0.0.1:3434/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:33:08 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:33:08 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:33:08 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:33:08 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:33:08 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:33:08 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:33:18 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:33:18 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:33:18 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:33:18 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:33:18 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:33:18 GMT] [debug] [127.0.0.1:3434/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:33:49 GMT] [info] [127.0.0.1:3434/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:36:28 GMT] [info] [127.0.0.1:3435/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:36:28 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:36:28 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:36:28 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:36:28 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:36:28 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:36:28 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:36:38 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:36:38 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:36:38 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:36:38 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:36:38 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:36:38 GMT] [debug] [127.0.0.1:3435/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:37:10 GMT] [info] [127.0.0.1:3435/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:39:48 GMT] [info] [127.0.0.1:3436/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:39:48 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:39:48 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:39:48 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:39:48 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:39:48 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:39:48 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:39:58 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:39:58 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:39:58 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:39:58 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:39:58 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:39:58 GMT] [debug] [127.0.0.1:3436/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:40:30 GMT] [info] [127.0.0.1:3436/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:43:08 GMT] [info] [127.0.0.1:3437/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:43:08 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:43:08 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:43:08 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:43:08 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:43:08 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:43:08 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:43:18 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:43:18 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:43:18 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:43:18 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:43:18 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:43:18 GMT] [debug] [127.0.0.1:3437/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:43:51 GMT] [info] [127.0.0.1:3437/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:46:28 GMT] [info] [127.0.0.1:3442/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:46:28 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:46:28 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:46:28 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:46:28 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:46:28 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:46:28 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:46:38 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:46:38 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:46:38 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:46:38 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:46:38 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:46:38 GMT] [debug] [127.0.0.1:3442/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:47:10 GMT] [info] [127.0.0.1:3442/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:49:48 GMT] [info] [127.0.0.1:3484/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:49:48 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:49:48 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:49:48 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:49:48 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:49:48 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:49:48 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:49:58 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:49:58 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:49:58 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:49:58 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:49:58 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:49:58 GMT] [debug] [127.0.0.1:3484/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:50:30 GMT] [info] [127.0.0.1:3484/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:53:08 GMT] [info] [127.0.0.1:3505/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:53:08 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:53:08 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:53:08 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:53:08 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:53:08 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:53:08 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:53:18 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:53:18 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:53:18 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:53:18 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:53:18 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:53:18 GMT] [debug] [127.0.0.1:3505/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:53:49 GMT] [info] [127.0.0.1:3505/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:56:27 GMT] [info] [127.0.0.1:3506/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:56:27 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:56:27 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:56:27 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:56:27 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:56:27 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:56:27 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:56:37 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:56:37 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:56:37 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:56:37 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:56:37 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:56:37 GMT] [debug] [127.0.0.1:3506/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:57:10 GMT] [info] [127.0.0.1:3506/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 02:59:47 GMT] [info] [127.0.0.1:3507/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 02:59:47 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:59:47 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:59:47 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:59:47 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:59:47 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:59:47 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 02:59:57 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 02:59:57 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:59:57 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 02:59:57 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 02:59:57 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 02:59:57 GMT] [debug] [127.0.0.1:3507/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:00:28 GMT] [info] [127.0.0.1:3507/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:03:07 GMT] [info] [127.0.0.1:3510/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:03:07 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:03:07 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:03:07 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:03:07 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:03:07 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:03:07 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:03:17 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:03:17 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:03:17 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:03:17 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:03:17 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:03:17 GMT] [debug] [127.0.0.1:3510/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:03:49 GMT] [info] [127.0.0.1:3510/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:06:27 GMT] [info] [127.0.0.1:3513/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:06:27 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:06:27 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:06:27 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:06:27 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:06:27 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:06:27 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:06:37 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:06:37 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:06:37 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:06:37 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:06:37 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:06:37 GMT] [debug] [127.0.0.1:3513/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:07:09 GMT] [info] [127.0.0.1:3513/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:09:47 GMT] [info] [127.0.0.1:3554/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:09:47 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:09:47 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:09:47 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:09:47 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:09:47 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:09:47 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:09:57 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:09:57 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:09:57 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:09:57 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:09:57 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:09:57 GMT] [debug] [127.0.0.1:3554/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:10:29 GMT] [info] [127.0.0.1:3554/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:13:07 GMT] [info] [127.0.0.1:3576/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:13:07 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:13:07 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:13:07 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:13:07 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:13:07 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:13:07 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:13:17 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:13:17 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:13:17 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:13:17 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:13:17 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:13:17 GMT] [debug] [127.0.0.1:3576/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:13:49 GMT] [info] [127.0.0.1:3576/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:16:27 GMT] [info] [127.0.0.1:3579/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:16:27 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:16:27 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:16:27 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:16:27 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:16:27 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:16:27 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:16:37 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:16:37 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:16:37 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:16:37 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:16:37 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:16:37 GMT] [debug] [127.0.0.1:3579/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:17:08 GMT] [info] [127.0.0.1:3579/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:19:47 GMT] [info] [127.0.0.1:3580/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:19:47 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:19:47 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:19:47 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:19:47 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:19:47 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:19:47 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:19:57 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:19:57 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:19:57 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:19:57 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:19:57 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:19:57 GMT] [debug] [127.0.0.1:3580/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:20:30 GMT] [info] [127.0.0.1:3580/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:23:07 GMT] [info] [127.0.0.1:3581/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:23:07 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:23:07 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:23:07 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:23:07 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:23:07 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:23:07 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:23:17 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:23:17 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:23:17 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:23:17 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:23:17 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:23:17 GMT] [debug] [127.0.0.1:3581/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:23:49 GMT] [info] [127.0.0.1:3581/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:26:27 GMT] [info] [127.0.0.1:3584/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:26:27 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:26:27 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:26:27 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:26:27 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:26:27 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:26:27 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:26:37 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:26:37 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:26:37 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:26:37 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:26:37 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:26:37 GMT] [debug] [127.0.0.1:3584/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:27:09 GMT] [info] [127.0.0.1:3584/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:29:47 GMT] [info] [127.0.0.1:3624/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:29:47 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:29:47 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:29:47 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:29:47 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:29:47 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:29:47 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:29:57 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:29:57 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:29:57 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:29:57 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:29:57 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:29:57 GMT] [debug] [127.0.0.1:3624/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:30:28 GMT] [info] [127.0.0.1:3624/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:33:07 GMT] [info] [127.0.0.1:3649/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:33:07 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:33:07 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:33:07 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:33:07 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:33:07 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:33:07 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:33:17 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:33:17 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:33:17 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:33:17 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:33:17 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:33:17 GMT] [debug] [127.0.0.1:3649/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:33:50 GMT] [info] [127.0.0.1:3649/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:36:27 GMT] [info] [127.0.0.1:3650/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:36:27 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:36:27 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:36:27 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:36:27 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:36:27 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:36:27 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:36:37 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:36:37 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:36:37 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:36:37 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:36:37 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:36:37 GMT] [debug] [127.0.0.1:3650/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:37:09 GMT] [info] [127.0.0.1:3650/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:39:47 GMT] [info] [127.0.0.1:3651/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:39:47 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:39:47 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:39:47 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:39:47 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:39:47 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:39:47 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:39:57 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:39:57 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:39:57 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:39:57 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:39:57 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:39:57 GMT] [debug] [127.0.0.1:3651/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:40:29 GMT] [info] [127.0.0.1:3651/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:41:36 GMT] [info] [127.0.0.1:3652/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:41:36 GMT] [debug] [127.0.0.1:3652/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:41:36 GMT] [debug] [127.0.0.1:3652/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:41:36 GMT] [debug] [127.0.0.1:3652/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:41:36 GMT] [debug] [127.0.0.1:3652/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:41:36 GMT] [debug] [127.0.0.1:3652/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:41:36 GMT] [debug] [127.0.0.1:3652/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:42:09 GMT] [info] [127.0.0.1:3652/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:43:07 GMT] [info] [127.0.0.1:3653/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:43:07 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:43:07 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:43:07 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:43:07 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:43:07 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:43:07 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:43:17 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:43:17 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:43:17 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:43:17 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:43:17 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:43:17 GMT] [debug] [127.0.0.1:3653/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:43:48 GMT] [info] [127.0.0.1:3653/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:46:27 GMT] [info] [127.0.0.1:3658/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:46:27 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:46:27 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:46:27 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:46:27 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:46:27 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:46:27 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:46:37 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:46:37 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:46:37 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:46:37 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:46:37 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:46:37 GMT] [debug] [127.0.0.1:3658/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:47:09 GMT] [info] [127.0.0.1:3658/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:49:46 GMT] [info] [127.0.0.1:3697/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:49:46 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:49:46 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:49:46 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:49:46 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:49:46 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:49:46 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:49:56 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:49:56 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:49:56 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:49:56 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:49:56 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:49:56 GMT] [debug] [127.0.0.1:3697/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:50:30 GMT] [info] [127.0.0.1:3697/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:53:06 GMT] [info] [127.0.0.1:3721/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:53:06 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:53:06 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:53:06 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:53:06 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:53:06 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:53:06 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:53:16 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:53:16 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:53:16 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:53:16 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:53:16 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:53:16 GMT] [debug] [127.0.0.1:3721/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:53:48 GMT] [info] [127.0.0.1:3721/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:56:26 GMT] [info] [127.0.0.1:3722/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:56:26 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:56:26 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:56:26 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:56:26 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:56:26 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:56:26 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:56:36 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:56:36 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:56:36 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:56:36 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:56:36 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:56:36 GMT] [debug] [127.0.0.1:3722/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:57:07 GMT] [info] [127.0.0.1:3722/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 03:59:46 GMT] [info] [127.0.0.1:3723/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 03:59:46 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:59:46 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:59:46 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:59:46 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:59:46 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:59:46 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 03:59:56 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 03:59:56 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:59:56 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 03:59:56 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 03:59:56 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 03:59:56 GMT] [debug] [127.0.0.1:3723/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:00:29 GMT] [info] [127.0.0.1:3723/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:03:06 GMT] [info] [127.0.0.1:3726/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:03:06 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:03:06 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:03:06 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:03:06 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:03:06 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:03:06 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:03:16 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:03:16 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:03:16 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:03:16 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:03:16 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:03:16 GMT] [debug] [127.0.0.1:3726/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:03:49 GMT] [info] [127.0.0.1:3726/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:06:26 GMT] [info] [127.0.0.1:3729/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:06:26 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:06:26 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:06:26 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:06:26 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:06:26 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:06:26 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:06:36 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:06:36 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:06:36 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:06:36 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:06:36 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:06:36 GMT] [debug] [127.0.0.1:3729/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:07:08 GMT] [info] [127.0.0.1:3729/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:09:46 GMT] [info] [127.0.0.1:3776/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:09:46 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:09:46 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:09:46 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:09:46 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:09:46 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:09:46 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:09:56 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:09:56 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:09:56 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:09:56 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:09:56 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:09:56 GMT] [debug] [127.0.0.1:3776/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:10:28 GMT] [info] [127.0.0.1:3776/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:13:06 GMT] [info] [127.0.0.1:3791/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:13:06 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:13:06 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:13:06 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:13:06 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:13:06 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:13:06 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:13:16 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:13:16 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:13:16 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:13:16 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:13:16 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:13:16 GMT] [debug] [127.0.0.1:3791/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:13:49 GMT] [info] [127.0.0.1:3791/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:16:26 GMT] [info] [127.0.0.1:3794/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:16:26 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:16:26 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:16:26 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:16:26 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:16:26 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:16:26 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:16:36 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:16:36 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:16:36 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:16:36 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:16:36 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:16:36 GMT] [debug] [127.0.0.1:3794/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:17:08 GMT] [info] [127.0.0.1:3794/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:19:46 GMT] [info] [127.0.0.1:3795/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:19:46 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:19:46 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:19:46 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:19:46 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:19:46 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:19:46 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:19:56 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:19:56 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:19:56 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:19:56 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:19:56 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:19:56 GMT] [debug] [127.0.0.1:3795/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:20:27 GMT] [info] [127.0.0.1:3795/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:23:06 GMT] [info] [127.0.0.1:3796/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:23:06 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:23:06 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:23:06 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:23:06 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:23:06 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:23:06 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:23:16 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:23:16 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:23:16 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:23:16 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:23:16 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:23:16 GMT] [debug] [127.0.0.1:3796/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:23:48 GMT] [info] [127.0.0.1:3796/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:26:26 GMT] [info] [127.0.0.1:3799/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:26:26 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:26:26 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:26:26 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:26:26 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:26:26 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:26:26 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:26:36 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:26:36 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:26:36 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:26:36 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:26:36 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:26:36 GMT] [debug] [127.0.0.1:3799/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:27:08 GMT] [info] [127.0.0.1:3799/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:29:46 GMT] [info] [127.0.0.1:3845/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:29:46 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:29:46 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:29:46 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:29:46 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:29:46 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:29:46 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:29:56 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:29:56 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:29:56 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:29:56 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:29:56 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:29:56 GMT] [debug] [127.0.0.1:3845/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:30:28 GMT] [info] [127.0.0.1:3845/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:33:06 GMT] [info] [127.0.0.1:3864/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:33:06 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:33:06 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:33:06 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:33:06 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:33:06 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:33:06 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:33:16 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:33:16 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:33:16 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:33:16 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:33:16 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:33:16 GMT] [debug] [127.0.0.1:3864/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:33:48 GMT] [info] [127.0.0.1:3864/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:36:27 GMT] [info] [127.0.0.1:3865/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:36:27 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:36:27 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:36:27 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:36:27 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:36:27 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:36:27 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:36:37 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:36:37 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:36:37 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:36:37 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:36:37 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:36:37 GMT] [debug] [127.0.0.1:3865/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:37:08 GMT] [info] [127.0.0.1:3865/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:39:48 GMT] [info] [127.0.0.1:3866/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:39:48 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:39:48 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:39:48 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:39:48 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:39:48 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:39:48 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:39:58 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:39:58 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:39:58 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:39:58 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:39:58 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:39:58 GMT] [debug] [127.0.0.1:3866/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:40:30 GMT] [info] [127.0.0.1:3866/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:43:08 GMT] [info] [127.0.0.1:3867/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:43:08 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:43:08 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:43:08 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:43:08 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:43:08 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:43:08 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:43:18 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:43:18 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:43:18 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:43:18 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:43:18 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:43:18 GMT] [debug] [127.0.0.1:3867/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:43:49 GMT] [info] [127.0.0.1:3867/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:46:28 GMT] [info] [127.0.0.1:3874/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:46:28 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:46:28 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:46:28 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:46:28 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:46:28 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:46:28 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:46:38 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:46:38 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:46:38 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:46:38 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:46:38 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:46:38 GMT] [debug] [127.0.0.1:3874/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:47:11 GMT] [info] [127.0.0.1:3874/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:49:48 GMT] [info] [127.0.0.1:3919/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:49:48 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:49:48 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:49:48 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:49:48 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:49:48 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:49:48 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:49:58 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:49:58 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:49:58 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:49:58 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:49:58 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:49:58 GMT] [debug] [127.0.0.1:3919/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:50:30 GMT] [info] [127.0.0.1:3919/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:53:08 GMT] [info] [127.0.0.1:3937/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:53:08 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:53:08 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:53:08 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:53:08 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:53:08 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:53:08 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:53:18 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:53:18 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:53:18 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:53:18 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:53:18 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:53:18 GMT] [debug] [127.0.0.1:3937/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:53:49 GMT] [info] [127.0.0.1:3937/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:56:28 GMT] [info] [127.0.0.1:3938/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:56:28 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:56:28 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:56:28 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:56:28 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:56:28 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:56:28 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:56:38 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:56:38 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:56:38 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:56:38 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:56:38 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:56:38 GMT] [debug] [127.0.0.1:3938/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:57:10 GMT] [info] [127.0.0.1:3938/127.0.0.1:9080] Closing connection to client
+[Sat, 14 Nov 2008 04:59:48 GMT] [info] [127.0.0.1:3939/127.0.0.1:9080] Received new connection 
+[Sat, 14 Nov 2008 04:59:48 GMT] [debug] [127.0.0.1:3939/127.0.0.1:9080] Starting to parse the message
+[Sat, 14 Nov 2008 04:59:48 GMT] [debug] [127.0.0.1:3939/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:59:48 GMT] [debug] [127.0.0.1:3939/127.0.0.1:9080] Finished parsing the message
+[Sat, 14 Nov 2008 04:59:48 GMT] [debug] [127.0.0.1:3939/127.0.0.1:9080] Connection persistence updated to true
+[Sat, 14 Nov 2008 04:59:48 GMT] [debug] [127.0.0.1:3939/127.0.0.1:9080] Sending headers to client
+[Sat, 14 Nov 2008 04:59:48 GMT] [debug] [127.0.0.1:3939/127.0.0.1:9080] Reading for another request
+[Sat, 14 Nov 2008 04:59:58 GMT] [debug] [127.0.0.1:3939/127.0.0.1:9080] Starting to parse the message

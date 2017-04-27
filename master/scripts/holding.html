@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Logscape 2.0</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style type="text/css">
+        html, body {
+        }
+        body {
+            padding-top: 40px;
+        }
+        .container {
+            width: 460px;
+        }
+
+        .container > .content {
+            background-color: rgba( 0, 0, 0, .4);
+
+            padding: 20px;
+            margin: 0 -20px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+            box-shadow: 0 1px 2px rgba(0,0,0,.15);
+        }
+
+        .centering {
+            float:none;
+            margin:0 auto;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: "Open Sans", Arial, Helvetica, sans-serif ;
+            font-weight: normal !important;
+        }
+        .desktopGradBlue {
+            background: rgb(30,87,153); /* Old browsers */
+            background-image: linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
+            background-image: -o-linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
+            background-image: -moz-linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
+            background-image: -webkit-linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
+            background-image: -ms-linear-gradient(bottom, rgb(69,132,180) 28%, rgb(31,71,120) 64%);
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+</header>
+
+<body class="desktopGradBlue"  style='height:900px;width:99%;padding-top:100px;overflow:hidden;'>
+<div class="container centering" >
+    <div class="row content"  >
+            <tr>
+                <td><h2 style="color:white">Please wait while Logscape starts.....</h2>
+                <p style="color:white">[this may take up to 2 minutes]</p></td><td></td>
+            </tr>
+    </div>
+    <img style="visibility:hidden" id='check_pic' src="/play/images/logo.png" onabort="alert('interrupted')" onload="success()" onerror="check_available()"/>
+</div>
+<script language="javascript">
+
+    /**
+     * Grab the URL Params
+     * @type {{}}
+     */
+    var params = {};
+
+    if (location.search) {
+        var parts = location.search.substring(1).split('&');
+
+        for (var i = 0; i < parts.length; i++) {
+            var nv = parts[i].split('=');
+            if (!nv[0]) continue;
+            params[nv[0]] = nv[1] || true;
+        }
+    }
+    if (params.redir == null) {
+        params.redir="$WEB_URL"
+        if (params.redir.indexOf("URL") != -1) {
+            params.redir="localhost:8080"
+        }
+    }
+    var url = params.redir
+    console.log("GOT URL:" + url)
+    function success() {
+        console.log("Success")
+        window.location.assign("http://" + params.redir )
+
+    }
+    function check_available() {
+
+        var el=document.getElementById("check_pic");
+        var src = "http://" + params.redir + "/play/images/logo.png?now=" + Math.random()
+        console.log("Loading:" + src)
+        el.src= src;
+
+    }
+
+</script></body>
+
+</body>
+</html>

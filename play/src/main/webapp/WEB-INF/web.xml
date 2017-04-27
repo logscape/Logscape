@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009-2011 the original author or authors.
+    See the notice.md file distributed with this work for additional
+    information regarding copyright ownership.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <display-name>Logscape</display-name>
+
+    <description>
+        Logscape
+    </description>
+
+
+    <listener>
+        <listener-class>com.logscape.play.servlet.TheSessionListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>
+            org.apache.commons.fileupload.servlet.FileCleanerCleanup
+        </listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>com.logscape.play.servlet.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecurityFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <!-- START: Scalate config -->
+    <filter>
+        <filter-name>TemplateEngineFilter</filter-name>
+        <filter-class>org.fusesource.scalate.servlet.TemplateEngineFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>TemplateEngineFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>ConfigServlet</servlet-name>
+        <servlet-class>com.logscape.play.servlet.ConfigServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConfigServlet</servlet-name>
+        <url-pattern>/config/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.logscape.play.servlet.LoginServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/dologin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>com.logscape.play.servlet.Logout</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchieFallback1</servlet-name>
+        <servlet-class>com.logscape.play.servlet.SearchFallbackServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchieFallback1</servlet-name>
+        <url-pattern>/search-ws-fb/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+            <servlet-name>ProxyServlet</servlet-name>
+            <servlet-class>com.logscape.play.servlet.ProxyServlet</servlet-class>
+            <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProxyServlet</servlet-name>
+        <url-pattern>/proxy</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Searchie</servlet-name>
+        <servlet-class>com.logscape.play.servlet.SearchWebSocketServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Searchie</servlet-name>
+        <url-pattern>/search-ws/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProxyWs</servlet-name>
+        <servlet-class>com.logscape.play.servlet.ProxyWebSocketServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>ProxyWs</servlet-name>
+            <url-pattern>/proxy-ws/*</url-pattern>
+        </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Workspace</servlet-name>
+        <servlet-class>com.logscape.play.servlet.WorkspaceWebSocketServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Workspace</servlet-name>
+        <url-pattern>/workspace-ws/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>WebsocketFallbackServlet</servlet-name>
+        <servlet-class>com.logscape.play.servlet.WorkspaceWebsocketFallbackServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WebsocketFallbackServlet</servlet-name>
+        <url-pattern>/workspace-ws-fb/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>com.logscape.play.servlet.AdminWebSocketServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin-ws/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminFallbackServlet</servlet-name>
+        <servlet-class>com.logscape.play.servlet.AdminWebsocketFallbackServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminFallbackServlet</servlet-name>
+        <url-pattern>/admin-ws-fb/*</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.logscape.play.servlet.AdminServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Replay</servlet-name>
+        <servlet-class>com.logscape.play.replay.ReplayServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Replay</servlet-name>
+        <url-pattern>/replay/*</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- File upload servlet -->
+    <servlet>
+        <servlet-name>UploadService</servlet-name>
+        <servlet-class>
+            com.logscape.play.deployment.UploadServlet
+        </servlet-class>
+        <load-on-startup>2</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadService</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>JmxServlet</servlet-name>
+        <servlet-class>com.logscape.play.servlet.JmxServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>JmxServlet</servlet-name>
+        <url-pattern>/jmx/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jade</welcome-file>
+    </welcome-file-list>
+
+
+    <session-config>
+        <session-timeout>60</session-timeout> <!-- in minutes -->
+    </session-config>
+
+    <mime-mapping>
+        <extension>js</extension>
+        <mime-type>application/javascript; charset=UTF-8</mime-type>
+    </mime-mapping>
+
+    <!--
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>login</form-login-page>
+            <form-error-page>error</form-error-page>
+        </form-login-config>
+    </login-config>
+
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/scalate/errors/500.jade</location>
+    </error-page>
+    -->
+</web-app>

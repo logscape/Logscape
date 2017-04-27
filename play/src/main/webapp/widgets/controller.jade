@@ -1,0 +1,11 @@
+#controller_widget.widget_size.span4(style='display:none; padding:0px; margin:0px;'  widget-width='2' widget-height='1' data-minx="1" data-miny="1")
+    .editWidget.editBlock(style='display:none;')
+        i.icon-black.fa.fa-search.go
+        i.icon-black.fa.fa-folder-open.open(style="html:true;" rel="clickover; width:400; height:300"  data-content="Loading...." data-original-title="Open Search" href="#")
+        i.icon-black.fa.fa-remove-sign.closeEdit
+    = render("/includes/controller/time.jade")
+    = render("/includes/controller/buttons.jade")
+    .statusText(style="font-size: 16px;display:none")
+        .spinner(style="display:none")
+            i.fa.fa-spin.fa-refresh.spinner
+        span#text

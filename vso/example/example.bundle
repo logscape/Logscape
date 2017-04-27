@@ -1,0 +1,122 @@
+<Bundle name="flow-ex2" version="1.0">
+	<status>UNINSTALLED</status>
+	<releaseDate>25/10/2008</releaseDate>
+ 	<classification>Dev</classification>
+ 	<businessArea>Credit-Flow</businessArea>
+ 	<businessClassification>FO</businessClassification>
+ 	<owner>neil@logscape.com</owner>
+ 	<otherProperties>downStreamSystems=Tdw,Venture, Feeds=MarkIT</otherProperties>
+	<services>
+		<Service>
+			<name>MasterA</name>
+			<property>ServiceType=Flow-Ex2</property>
+			<resourceSelection>customProperties notContains "ServiceType=System"</resourceSelection>
+			<fork>true</fork>
+			<priority>10</priority>
+			<pauseSeconds>3</pauseSeconds>
+			<instanceCount>1</instanceCount>
+			<script>
+				<![CDATA[
+    	System.out.println("***********************************************************************")
+    	System.out.println("************************ STARTING MASTER A ****************************")
+		Integer port = Integer.parseInt("${ResourceAgentPort}")+1
+		String jmxRemote = "-Dcom.sun.management.jmxremote"
+		String jmxPort = "-Dcom.sun.management.jmxremote.port="+port
+		String jmxAuth = "-Dcom.sun.management.jmxremote.authenticate=false"
+        processMaker.java "-cp:lib/*.jar:." ,jmxRemote, jmxPort, jmxAuth, "com.liquidlabs.flow.master.MasterMain", "-port:20001", "-partition:MasterConsumerA"
+	]]>
+			</script>
+		</Service>
+		<Service>
+			<name>SLAConsumerA</name>
+			<property>ServiceType=Flow-Ex2</property>
+			<resourceSelection>customProperties notContains "ServiceType=System"</resourceSelection>
+			<fork>true</fork>
+			<priority>10</priority>
+			<pauseSeconds>3</pauseSeconds>
+			<instanceCount>1</instanceCount>
+			<script>
+				<![CDATA[
+    	System.out.println("***********************************************************************")
+    	System.out.println("************************ STARTING SLAConsumer A *******************")
+		Integer port = Integer.parseInt("${ResourceAgentPort}")+1
+		String jmxRemote = "-Dcom.sun.management.jmxremote"
+		String jmxPort = "-Dcom.sun.management.jmxremote.port="+port
+		String jmxAuth = "-Dcom.sun.management.jmxremote.authenticate=false"
+        processMaker.runSLAContainer "-cp:.:./lib/*.jar:../lib/*.jar",jmxRemote, jmxPort, jmxAuth, "-sla:sla-consumerA.xml", "-serviceToRun:flow-ex2-1.0:WorkerTemplateA"
+	]]>
+			</script>
+		</Service>
+
+		<Service>
+			<name>WorkerTemplateA</name>
+			<resourceSelection>customProperties notContains "ServiceType=System"</resourceSelection>
+			<fork>true</fork>
+			<instanceCount>0</instanceCount>
+			<pauseSeconds>3</pauseSeconds>
+			<script>
+				<![CDATA[
+      	System.out.println("***********************************************************************")
+    	System.out.println("************************ STARTING WORKER A - ${resourceId} ******************************")
+    	String workerId = "-id:${resourceId}"
+        processMaker.java "-cp:lib/*.jar:.", "-Dlog4j.debug=false", "com.liquidlabs.flow.ex2.WorkerMain", workerId, "-master:udp://localhost:20001/MasterConsumerA"
+]]>
+			</script>
+		</Service>
+<!-- ============================================================
+                             FLOW CONSUMER B
+     ============================================================ -->
+		<Service>
+			<name>MasterB</name>
+			<property>ServiceType=Flow-Ex2</property>
+			<resourceSelection>customProperties notContains "ServiceType=System"</resourceSelection>
+			<fork>true</fork>
+			<priority>10</priority>
+			<pauseSeconds>3</pauseSeconds>
+			<instanceCount>1</instanceCount>
+			<script>
+				<![CDATA[
+    	System.out.println("***********************************************************************")
+    	System.out.println("************************ STARTING MASTER B ****************************")
+		Integer port = Integer.parseInt("${ResourceAgentPort}")+1
+		String jmxRemote = "-Dcom.sun.management.jmxremote"
+		String jmxPort = "-Dcom.sun.management.jmxremote.port="+port
+		String jmxAuth = "-Dcom.sun.management.jmxremote.authenticate=false"
+        processMaker.java "-cp:lib/*.jar:.", "-Dlog4j.debug=false",jmxRemote, jmxPort, jmxAuth,  "com.liquidlabs.flow.master.MasterMain", "-port:21001", "-partition:MasterConsumerB"
+	]]>
+			</script>
+		</Service>
+		<Service>
+			<name>SLAConsumerB</name>
+			<property>ServiceType=Flow-Ex2</property>
+			<resourceSelection>customProperties notContains "ServiceType=System"</resourceSelection>
+			<fork>true</fork>
+			<priority>10</priority>
+			<pauseSeconds>3</pauseSeconds>
+			<instanceCount>1</instanceCount>
+			<script>
+				<![CDATA[
+    	System.out.println("***********************************************************************")
+    	System.out.println("************************ STARTING SLAConsumer B *******************")
+        processMaker.runSLAContainer "-cp:.:./lib/*.jar:../lib/*.jar", "-Dlog4j.debug=false", "-sla:sla-consumerB.xml", "-serviceToRun:flow-ex2-1.0:WorkerTemplateB"
+	]]>
+			</script>
+		</Service>
+
+		<Service>
+			<name>WorkerTemplateB</name>
+			<resourceSelection>customProperties notContains "ServiceType=System"</resourceSelection>
+			<fork>true</fork>
+			<instanceCount>0</instanceCount>
+			<pauseSeconds>3</pauseSeconds>
+			<script>
+				<![CDATA[
+      	System.out.println("***********************************************************************")
+    	System.out.println("************************ STARTING WORKER B - ${resourceId} ******************************")
+    	String workerId = "-id:${resourceId}"
+        processMaker.java "-cp:lib/*.jar:.", "-Dlog4j.debug=false", "com.liquidlabs.flow.ex2.WorkerMain", workerId, "-master:udp://localhost:21001/MasterConsumerB"
+]]>
+			</script>
+		</Service>
+	</services>
+</Bundle>

@@ -1,0 +1,110 @@
+<html>
+<head>
+    <link href="{SOURCE}/play/images/favicon2.ico" rel="shortcut icon" type="image/png">
+    <title>Logscape:{title}</title>
+    <link href="{SOURCE}/play/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+    <!--  <link href="http://{SOURCE}/play/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css"/> -->
+    <!-- <link href="/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css"/>  -->
+    <style>
+        label {
+            color: #EEE;
+            display: inline;
+        }
+
+        body {
+            background: #333
+        }
+
+
+        span.word_split:hover {
+            background-color: #d9edf7;
+        }
+        div.word_split:hover {
+            background-color: #d9edf7;
+        }
+        div.word_split {
+            line-height: 16px;
+        }
+        a#filename{
+            padding-left:25px !important;
+        }
+        #editor {
+            position: absolute;
+            top: 25;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        div.ace_selection.ace_start.ace_br15 {
+            background-color:#018790 !important;
+        }
+        input#searchInput{
+        background-color: #4A4A4A !important;
+        border: #1F1F1F !important;
+        color: white !important;
+        height: 17px !important;
+        }
+
+        #floating_sidebar {
+            background-color: rgba(1, 1, 1, 0.6);
+            position: fixed;
+            left: 0px;
+            width: 100%;
+            top: 0px; /*   change to adjust height from the top of the page */
+        }                          </style>
+    <script src="{SOURCE}/play/javascripts/libs/jquery/jquery.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/jquery/jquery.json-2.3.min.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/jquery/jquery.websocket-0.0.1.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/jquery/jquery.gracefulWebSocket.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/jquery/jquery.mousewheel.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/underscore/underscore-min.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/ace.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/mode-plain_text.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/mode-json.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/mode-abap.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/mode-less.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/worker-json.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/theme-twilight.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/theme-monokia.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/libs/ace/theme-chaos.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/lang.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/logscape.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/websocket.js?v={VERSION}"></script>
+    <script src="{SOURCE}/play/javascripts/tail.js?v={VERSION}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            editor = ace.edit("editor")
+            editor.setTheme("ace/theme/monokai")
+            editor.getSession().setUseWrapMode(true)
+            <!--editor.getSession().setMode("ace/mode/abap");-->
+            <!--//editor.getSession().setMode("ace/mode/json");-->
+            editor.getSession().setMode("ace/mode/MODE");
+            editor.setOption("firstLineNumber", FROM)
+
+            if (window.location.search.indexOf("pos=END") != -1) {
+                setTimeout(function(){
+                    editor.scrollToLine(editor.session.getLength(), false, true,  function () {})
+             }, 500);
+
+            }
+
+        })
+
+    </script>
+</head>
+<body origin='http://{WS_URL}'>
+<div id="floating_sidebar" style="display:inline;height:25px">&nbsp;
+                <a class='skip-control' title='Start' href='{urlStart}' style="color:white">   <span class="icon-step-backward icon-white"></span></a>&nbsp;
+                <a id='prev' class='skip-control' title='Previous' href='{urlPrev}' style="color:white">  <span class="icon-backward icon-white" ></span></a>&nbsp;
+                <a id='next' class='skip-control' title='Next' href='{urlNext}' style="color:white"> <span class="icon-forward icon-white" ></span></a>&nbsp;
+                <a id='end' class='skip-control' title='End' href='{urlEnd}' style="color:white">    <span class="icon-step-forward icon-white" ></span></a>&nbsp;
+                <a id="tail" title="Tail File"   href='{tailFile}' style="color:white;display:none;">&nbsp; Tail &nbsp;</a>&nbsp;&nbsp;
+    <a id="loading" title=""   href='#' style="color:white;">LOADING.... &nbsp;</a>
+    <a id="filename" title=""  href='#' style="color:white;">{FILENAME}</a>
+</div>
+           <pre style="word-wrap: break-word; white-space: pre-wrap;background-color:#FFF;">
+            <div id="editor" ws="ws://{WS_URL}" proxied="{PROXIED}">
+
+
+

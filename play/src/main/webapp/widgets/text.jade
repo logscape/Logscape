@@ -1,0 +1,56 @@
+.content#text_widget.widget_size(style="display: none;"  widget-width="2" widget-height="1" data-minx="1" data-miny="1")
+    .editWidget.editBlock
+        .cModalDialog
+            div
+                .cModalDialogHeader
+                    .fa.fa-file-text-o.coloredText
+                    label.titleLabel.coloredText#htmlTitle(style="display:inline;font-size:26px;") HTML Block Settings
+                    hr(style="margin:10px" class="borderColor")
+                    br
+                .span12
+                    ul.nav.nav-tabs(style="margin:0px;")
+                        li.active
+                            a#htmlEdit(href="#textHtmlTab" data-toggle="tab") Html Editor
+                        li
+                            a#htmlTextSettings(href="#textSettingsTab" data-toggle="tab")        Settings
+                    .tab-content.niceTabs
+                        #textHtmlTab.tab-pane.active
+                            .row.span12(style="padding-top:1px;")
+                                pre#editor
+                        #textSettingsTab.tab-pane
+                            .span12(style="padding:0px;")
+                                .span11.actionBlock.flatBlue2.padActionBlock.popoutColor
+                                    .span6
+                                        p.coloredText.coloredText#htmlTextColor
+                                        i.coloredText.icon-black.fa.fa-th.coloredText
+                                    .span3
+                                        input#textColor.simple_color
+                                br
+                                .span11.actionBlock.flatBlue3.padActionBlock.popoutColor
+                                    .span6
+                                        p.coloredText#htmlTileColor
+                                        i.coloredText.icon-black.fa.fa-th
+                                    .span3
+                                        input#tileColor.simple_color
+                                br
+                                .span11.actionBlock.flatBlue4.padActionBlock.popoutColor
+                                    .span6
+                                        p.coloredText#htmlSideMenu
+                                    .span3
+                                        a#style1(href="" title="Click to inject a template into the text block") [light]
+                                        a#style2(href="" title="Click to inject a template into the text block") [dark]
+                            .span12
+
+
+                .span12
+                    h5
+                        a#htmlBottomText(href="http://logscape.github.io/workspaces-linking.html" target="_bank") Help with linking Workspace content and contextual filters
+
+
+
+                .cModalDialogClose
+                    a.cModalDialogA.closeEdit
+                        p#htmlOkay
+    .content2(style='padding-left:5px;')
+        h4.editable#text_widget_Header(style='width:40%') Title
+        p.editable#text_widget_Body HTML Body

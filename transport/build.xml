@@ -1,0 +1,16 @@
+<project default="dist" name="transport" basedir=".">
+	
+	<property name="artifact" value="transport"/>
+	<property name="dep1" value="common"/>
+
+	
+	<import file="../lib/build-common.xml"/>
+	
+	<path id="compile.classpath">
+		<path refid="default.classpath"/>
+		<fileset dir="../${dep1}/dist" includes="*.jar"/>
+	</path>
+
+		  
+</project>
+

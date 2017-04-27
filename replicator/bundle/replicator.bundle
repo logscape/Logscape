@@ -1,0 +1,103 @@
+<Bundle name="replicator" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <workingDirectory>.</workingDirectory>
+  <services>
+  	<Service>
+		<name>ReplicationService</name>
+		<priority>100</priority>
+		<resourceSelection>type containsAny 'Management'</resourceSelection>
+		<fork>false</fork>
+		<background>true</background>
+      	<instanceCount>-1</instanceCount>
+		<script>
+			<![CDATA[
+    		System.out.println("************************** Starting Replicator  *******************************")
+			
+				import com.liquidlabs.replicator.service.*
+				import com.liquidlabs.vso.*
+				import com.liquidlabs.vso.lookup.*
+				import com.liquidlabs.orm.*
+				
+				ORMapperFactory orm = LookupSpaceImpl.getSharedMapperFactory();
+				if (orm == null) {
+					int port = VSOProperties.getPort(VSOProperties.ports.REPLICATOR);
+					orm = new ORMapperFactory(port, ReplicationService.NAME, port);
+				}
+				
+				replication = new ReplicationServiceImpl(new SpaceServiceImpl(lookupSpace, orm, ReplicationService.NAME, scheduler, false, false, true))
+				replication.start()
+			]]>      
+		</script>
+	</Service>
+ 	<Service>
+      	<name>MgmtUploadService</name>
+	  	<priority>100</priority>
+	  	<dependencies>replicator-1.0:ReplicationService</dependencies>
+		<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+      	<fork>false</fork>
+      	<background>true</background>
+      	<script>
+      		<![CDATA[
+				import com.liquidlabs.vso.*
+				import com.liquidlabs.replicator.*
+				import com.liquidlabs.replicator.service.*
+				import com.liquidlabs.replicator.download.BundleDeployer
+				int port = VSOProperties.getBasePort() + 61 + profileId;					
+				service = UploadService.run(lookupSpace, proxyFactory, ReplicatorProperties.getDownloadsDir(), BundleDeployer.create(thisAgent, lookupSpace, proxyFactory, "deployed-bundles"), port, resourceId);
+				serviceManager.registerLifeCycleObject(service);
+			]]>
+		</script>
+		<instanceCount>-1</instanceCount>
+    </Service>
+    <Service>
+      	<name>UploadService</name>
+	  	<priority>100</priority>
+	  	<dependencies>replicator-1.0:ReplicationService,boot-1.0:MonitorSpace</dependencies>
+
+		<resourceSelection>type contains IndexStore</resourceSelection>
+		<property>RFSUploader=true</property>
+      	<fork>false</fork>
+      	<background>true</background>
+		<overridesService>DownloadService</overridesService>
+        <!-- grow shrink according to total agentCount - use 30% and at least 5 instances (automatically uses PercentConsumer) -->
+		<instanceCount>10</instanceCount>
+      	<script>
+      		<![CDATA[
+				import com.liquidlabs.vso.*
+				import com.liquidlabs.replicator.*
+				import com.liquidlabs.replicator.service.*
+				import com.liquidlabs.replicator.download.BundleDeployer
+				int port = VSOProperties.getBasePort() + 62 + profileId;				
+				service = UploadService.run(lookupSpace, proxyFactory, ReplicatorProperties.getDownloadsDir(), BundleDeployer.create(thisAgent, lookupSpace, proxyFactory, "deployed-bundles"), port, resourceId);
+				serviceManager.registerLifeCycleObject(service);
+			]]>
+		</script>
+    </Service>
+	<Service>
+      	<name>DownloadService</name>
+	  	<priority>10</priority>
+	  	<dependencies>replicator-1.0:MgmtUploadService,replicator-1.0:ReplicationService</dependencies>
+		<resourceSelection>type contains Forwarder OR type notContainsAny 'Management,Failover,IndexStore'</resourceSelection>
+		<property>RFSUploader=false</property>
+      	<fork>false</fork>
+      	<background>true</background>
+      	<script>
+      		<![CDATA[
+				import com.liquidlabs.replicator.service.DownloadService
+				import com.liquidlabs.replicator.download.BundleDeployer
+				
+				service = DownloadService.run(lookupSpace, proxyFactory, "downloads", BundleDeployer.create(thisAgent, lookupSpace, proxyFactory, "deployed-bundles"), resourceId)
+				serviceManager.registerLifeCycleObject(service);
+			]]>
+		</script>
+		<instanceCount>-1</instanceCount>
+    </Service>
+ </services>
+</Bundle>

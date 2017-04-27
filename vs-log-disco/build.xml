@@ -1,0 +1,46 @@
+<project default="dist" name="vs-log-disco" basedir=".">
+	
+	<property name="artifact" value="vs-log-disco"/>
+	<property name="version" value="1.0"/>
+	<property name="artifact-id" value="${artifact}-${version}"/>
+
+	<property name="dep1" value="common"/>
+	<property name="dep2" value="transport"/>
+	<property name="dep3" value="vspace"/>
+	<property name="dep4" value="vs-orm"/>
+	<property name="dep5" value="vso"/>
+	<property name="dep6" value="vs-admin"/>
+	<property name="dir" value="."/>
+
+	
+	<import file="../lib/build-common.xml"/>
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="../lib/lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+	
+	<path id="compile.classpath">
+		<path refid="default.classpath"/>
+        <fileset dir="lib/" includes="**/*.jar"/>
+		<fileset dir="../${dep1}/dist" includes="*.jar"/>
+		<fileset dir="../${dep2}/dist" includes="*.jar"/>
+		<fileset dir="../${dep3}/dist" includes="*.jar"/>
+		<fileset dir="../${dep4}/dist" includes="*.jar"/>
+		<fileset dir="../${dep5}/dist" includes="*.jar"/>
+		<fileset dir="../${dep6}/dist" includes="*.jar"/>
+	</path>
+	
+	<target name="dist" depends="init, compile, compile.tests">
+
+        <jar destfile="${dist}/${artifact}.jar" compress="true">
+			<fileset dir="${classes}" includes="**/*" />
+            <fileset dir="src" includes="*.properties" />
+		</jar>
+        <copy file="kvi.persistit.properties" todir="../master/build/logscape/downloads"/>
+	</target>
+
+
+
+</project>
+

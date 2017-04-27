@@ -1,0 +1,81 @@
+.tab-pane.coloredText#tabs-agents
+    .titleBlock
+        span.configTitle.headerColor#agentsTitle(style="display:inline-block;font-size: 31.5px;") Agents
+        .alert.alert-info.gettingStarted
+            a#agentsGettingStarted(href="http://logscape.com/redir/agents.htm" target="_blank") Getting Started
+            a.fa.fa-question-circle.fa-lg.btn-link.play-icon(href="http://logscape.com/redir/agents.htm" target="_blank")
+    .row.span12
+        form.form-inline.propertyForm.span5
+            label#agentsQuery Query
+            input.coloredText.coloredBorder.coloredInputBG.input-medium.span9#query(type="text" value="id = 0")
+            button.btn.btn-primary.fa.fa-filter#runQuery(type="submit" title="Filter")
+        form.form-inline.propertyForm.span2
+            label#agentsProperty Property
+            input.coloredText.coloredBorder.coloredInputBG.input-small#qProperty(type="text" value="diskFreeSpaceMb")
+        .span4
+            button.btn#agentsBounce Bounce
+            button.btn#agentsLost Lost
+            button.btn#agentsClearLost Clear Lost
+
+    .row.span10
+        form.form-inline
+            label#agentsResourceGroup(title="Use to select a group of hosts based on the property / value Query") ResourceGroup
+            select.coloredText#group
+            button.btn.btn-small#agentsNewGroup New
+            button.btn.btn-small#agentsEditGroup Edit
+            button.btn.btn-small#agentsDeleteGroup Delete
+    .row-fluid.span10
+        table.coloredTable.coloredBorder.table.table-hover.table-condensed.table-bordered#agentsTable.micro(style='width:90%;height:50%;white-space:no-wrap;')
+            thead
+                tr
+                    th#agentsAgentID
+                    th#agentsRole
+                    th#agentsStart
+                    th#agentsIP
+                    th#agentsOs
+                    th#agentsCpuModel
+                    th#agentsCpu
+                    th#agentsCore
+                    th#agentsMem
+                    th#agentsMflops
+                    th#agentsProp
+
+    .row-fluid.span10(style='padding-top:50px;')
+        table.coloredTable.coloredBorder.micro.table.table-hover.table-condensed.table-bordered#kvTable(style='width:90%;height:50%;white-space:no-wrap;')
+            thead
+                tr
+                    th#agentsPropertyy
+                    th#agentsValue
+                    th#agentsPropertyyy
+                    th#agentsValuee
+
+
+    .modal.hide.fade#lostAgents
+        .modal-header
+            .button.close(data-dismiss='modal' aria-hidden='true') &times;
+            h3 Lost Agents
+        .modal-body
+
+        .modal-footer
+            a.btn#close(href='#') Close
+
+
+    .modal.hide.fade#saveGroup
+        .modal-header
+            .button.close(data-dismiss='modal' aria-hidden='true') &times;
+            h3 Save/Create Group
+        .modal-body
+            form.form-horizontal
+                .control-group
+                    label.control-label Query
+                    .controls
+                        input.inputSmall.coloredBorder.coloredInputBG.coloredText#theResourceQuery
+                .control-group
+                    label.control-label Group Name
+                    .controls
+                        input.inputSmall.coloredBorder.coloredInputBG.coloredText#theGroupName
+                .control-group
+                    .controls
+                        button.btn.btn-primary#saveGroup Save
+        .modal-footer
+            a.btn#closeSaveGroup(href='#') Close

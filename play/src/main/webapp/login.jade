@@ -1,0 +1,72 @@
+-@ var error: Boolean = false
+-@ var httpPort: String = com.liquidlabs.dashboard.server.DashboardProperties.getHttpPort
+-@ var httpsPort: String = com.liquidlabs.dashboard.server.DashboardProperties.getHttpsPort
+-@ var eulaAccepted: Boolean = com.liquidlabs.services.ServicesLookup.getInstance(com.liquidlabs.vso.VSOProperties.ports.DASHBOARD).getAdminSpace.hasAcceptedEula
+-@ var meteringEnabled: Boolean = java.lang.Boolean.getBoolean("metering.enabled")
+-@ val buildId: String = com.liquidlabs.dashboard.server.DashboardProperties.getBuildId
+-@ val versionId: String = com.liquidlabs.dashboard.server.DashboardProperties.getVersionId
+- attributes("layout") = "/WEB-INF/scalate/layouts/login.jade"
+.row
+    .span6#logscapeLogo(align="right")
+        h1.white.shadow Logscape #{versionId}
+        h2.white Search without limits....
+        a(href="http://logscape.com")
+            h3.white logscape.com
+        img(src='/play/images/logo.png')
+        div.supportdiv
+            a(href="http://support.logscape.com" target="_blank") 
+                | Need help
+                i.fa.fa-question-circle
+        img(style="height:0;width:0;"  src='http://logscape.com/images/track.png?version=#{buildId}')
+    .span1
+    .span4.login-shadow(style='background-color: rgba( 0, 0, 0, .4 );padding: 40px;margin: 0 -15px;-webkit-border-radius: 10px 10px 10px 10px;-moz-border-radius: 10px 10px 10px 10px;border-radius: 10px 10px 10px 10px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);box-shadow: 0 1px 2px rgba(0,0,0,.15);')
+        .span4.login-form
+            - if(error)
+                b.white#login_error Login failed please try again
+
+            h4.white.shadow#login_login Login
+            form#loginForm(action='dologin' method='post' style="margin:0px;")
+                fieldset(style="padding-bottom:10px;")
+                    .input-prepend
+                        span.add-on.square-corners
+                            i.fa.fa-user
+                        input.span3.square-corners(type='text' name='Username' placeholder='Username')
+                    .input-prepend
+                        span.add-on.square-corners
+                            i.fa.fa-key
+                        input.span3.square-corners(type='password' name='Password' placeholder='Password')
+
+                - if(eulaAccepted)
+                    input#login_signIn.btn.btn-primary.mod_button.square-corners(type='submit' name='Submit' value='Sign In') &nbsp;
+                - else
+                    input#login_signIn.btn.btn-primary.mod_button.square-corners(type='submit' name='Submit' value='Sign In' disabled) &nbsp;
+                    a#httpsLink(http="#{httpPort}" https="#{httpsPort}" href="https://lladhf:#{httpsPort}" title="HTTPS should only be used where you have installed a valid SSL certificate, Invalid certificates will only work with Chrome")
+
+                    label.checkbox.white
+                        input#eula(type="checkbox")
+                            a#login_acceptEULA(href="eula" target="_blank") Accept EULA?
+
+
+
+            .span10
+            a#httpsLink(http="#{httpPort}" https="#{httpsPort}" href="https://lladhf:#{httpsPort}")
+            - if(meteringEnabled)
+                a(href="/saas-portal" style="") Sign up
+
+            div(style="display:inline;float:right;")
+                a(href="login?lang=en") EN
+                a(href="login?lang=ja") JA
+                a(href="login?lang=ko") KO
+                a(href="login?lang=esp") ESP
+
+            
+
+
+
+
+
+#firstLoginDiv.span6.white(style="display:none")
+    h1#loginFirstLogin Please wait...
+    i.fa.fa-square-o.fa-spin.white.fa-3x
+
+

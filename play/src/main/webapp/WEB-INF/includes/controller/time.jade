@@ -1,0 +1,31 @@
+.standardTime(style='display:inline;')
+    select.timeInput.coloredBorder.coloredText.coloredInputBG(name='userTimeSelector' style='width:100px;margin-top:5px;')
+        option(value="300") Last 5m
+        option(value="600") Last 10m
+        option(value="900") Last 15m
+        option(value="1800" selected="selected") Last 30m
+        option(value="3600") Last 60m
+        option(value="7200") Last 2h
+        option(value="14400") Last 4h
+        option(value="43200") Last 12h
+        option(value="86400") Last 24h
+        option(value="172800") Last 2d
+        option(value="432000") Last 5d
+        option(value="604800") Last 7d
+        option(value="1209600") Last 14d
+        option(value="2592000") Last 30d
+        option(value="5184000") Last 60d
+        option(value="7776000") Last 90d
+        option(value="custom") Custom
+.customTime(style='display:none;width:100px')
+    .fromTime.input-append.date(style="display:inline;padding-right:10px;")
+        input.coloredText.coloredInputBG.coloredBorder(data-format="dd/MM/yyyy hh:mm" type="text" style="width:120px;" title="Format - dd/MM/yyyy")
+        span.add-on
+            i.fa.fa-calendar(style="color:black;")
+    .toTime.input-append.date(style="display:inline;")
+        input.coloredText.coloredInputBG.coloredBorder(data-format="dd/MM/yyyy hh:mm" type="text" style="width:120px;" title="Format - dd/MM/yyyy")
+        span.add-on
+            i.fa.fa-calendar(style="color:black;")
+
+
+    i.timeRevert.fa.icon-black.fa-chevron-up(style="vertical-align:bottom;margin-bottom:20px;margin-left:3px;")

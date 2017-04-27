@@ -1,0 +1,28 @@
+<Bundle name="boot-lookup" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <workingDirectory>.</workingDirectory>
+	<services>
+		<Service>
+			<name>LookupSpace</name>
+			<property>ServiceType=System</property>
+			<priority>100</priority>
+			<resourceSelection>mflops &gt; 99</resourceSelection>
+			<fork>false</fork>
+			<background>false</background>
+			<pauseSeconds>5</pauseSeconds>
+			<script>
+				import com.liquidlabs.vso.lookup.LookupSpaceImpl
+				println "\n************************** Starting LookupSpace **************************"
+				LookupSpaceImpl.boot(VSOProperties.getLookupPort(), VSOProperties.getReplicationPort());
+		</script>
+			<instanceCount>1</instanceCount>
+		</Service>
+	</services>
+</Bundle>

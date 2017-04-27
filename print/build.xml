@@ -1,0 +1,97 @@
+<project default="war" name="root" basedir=".">
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="../lib/lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+
+    <property name="root" value="../"/>
+
+    <property name="dep1" value="common" />
+    <property name="dep2" value="transport" />
+    <property name="dep3" value="vso" />
+    <property name="dep4" value="vs-log" />
+    <property name="dep5" value="vs-util" />
+    <!--<property name="dep6" value="vso-ui" />-->
+    <property name="dep6" value="replicator" />
+    <property name="dep7" value="vspace" />
+    <property name="dep8" value="vs-orm" />
+    <property name="dep9" value="vs-admin" />
+    <property name="dep10" value="services" />
+
+    <import file="../lib/build-common.xml"/>
+
+    <property name="war" value="print.war" />
+
+
+
+
+    <target name="dist" depends="war"/>
+
+    <path id="project.class.path">
+        <pathelement path="${java.class.path}/" />
+        <pathelement location="src" />
+
+        <pathelement path="lib/log4j-1.2.8.jar" />
+        <fileset dir="${root}/lib/lib" includes="commons*.jar"/>
+    </path>
+
+    <path id="compile.classpath">
+        <path refid="default.classpath" />
+        <path refid="project.class.path" />
+    </path>
+
+    <target name="dist-perms" >
+        <chmod dir="build/content/phantom" perm="ugo+rx" includes="**/bin/*"/>
+    </target>
+
+
+    <target name="compile" depends="init">
+        <javac srcdir="src" destdir="${classes}" debug="false" target="1.7" source="1.7" fork="true">
+            <classpath>
+
+                <path refid="compile.classpath" />
+                <fileset dir="${root}/${dep1}/dist" includes="*.jar"/>
+                <fileset dir="${root}/${dep2}/dist" includes="*.jar"/>
+                <fileset dir="${root}/${dep3}/dist" includes="*.jar"/>
+                <fileset dir="${root}/${dep4}/dist" includes="*.jar"/>
+                <fileset dir="${root}/${dep5}/dist" includes="*.jar"/>
+                <fileset dir="${root}/${dep6}/dist" includes="*.jar"/>
+                <fileset dir="${root}/${dep7}/dist" includes="*.jar"/>
+                <fileset dir="${root}/${dep8}/dist" includes="*.jar"/>
+                <fileset dir="${root}/${dep10}/dist" includes="*.jar"/>
+                <!--<fileset dir="${root}/${dep11}/dist" includes="*.jar"/>-->
+            </classpath>
+        </javac>
+        <copy file="src/log4j.properties" todir="${classes}" failonerror="false"/>
+    </target>
+
+
+    <target name="copyFiles" depends="">
+
+        <copy todir="build/content/phantom">
+            <fileset dir="phantom" includes="**/*" excludes="**/examples/*"/>
+        </copy>
+        <copy todir="build/content">
+            <fileset dir="." includes="*.js"/>
+        </copy>
+
+    </target>
+
+
+    <target name="war" depends="compile,copyFiles,dist-perms">
+        <delete file="build/${war}"/>
+
+
+
+        <war destfile="build/${war}" webxml="web.xml" includes="src/log4j.properties" >
+            <classes dir="build/classes"/>
+            <fileset dir="build/content"/>
+        </war>
+
+    </target>
+    <target name="copyToMaster">
+        <copy file="build/${war}" tofile="../master/build/logscape/downloads/${war}" />
+    </target>
+
+</project>

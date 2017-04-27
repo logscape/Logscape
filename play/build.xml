@@ -1,0 +1,209 @@
+<project default="dist" name="play" basedir=".">
+
+    <property name="artifact" value="play"/>
+    <property name="version" value="1.0"/>
+    <property name="test.src" location="src/test/java"/>
+
+    <property name="dep1" value="common"/>
+    <property name="dep2" value="transport"/>
+    <property name="dep3" value="replicator"/>
+    <property name="dep4" value="vso"/>
+    <property name="dep5" value="vs-log"/>
+    <property name="dep6" value="vs-log-disco"/>
+    <property name="dep7" value="vs-admin"/>
+    <property name="dep8" value="saas-meter"/>
+    <property name="dep9" value="services"/>
+
+    <property name="root" value="../"/>
+
+    <import file="../lib/build-common.xml"/>
+
+
+
+
+    <property name="scala.home" location="${basedir}/lib"/>
+
+
+    <property
+            name="scala.src.dir"
+            value="${basedir}/src/main/scala"
+            />
+    <property
+            name="build.dir"
+            value="${basedir}/build"
+            />
+
+    <!-- using 2.11.4 -->
+    <property
+            name="scala-library.jar"
+            value="${scala.home}/scala-library.jar"/>
+    <property name="scala-compiler.jar"
+              value="${scala.home}/scala-compiler.jar" />
+    <property name="scala-reflect.jar"
+              value="${scala.home}/scala-reflect.jar"/>
+
+    <path id="project.classpath">
+        <pathelement location="${build.dir}"/>
+        <fileset dir="${scala.home}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="scala-init">
+        <echo message="scala home = ${scala.home} Compiler= ${scala-compiler.jar}"/>
+        <path id="build.classpath">
+            <pathelement location="${scala-library.jar}"/>
+            <!--<pathelement location="${your.path}"   />-->
+            <pathelement location="${build.dir}"/>
+        </path>
+        <taskdef resource="scala/tools/ant/antlib.xml">
+            <classpath>
+                <pathelement location="${scala-compiler.jar}"/>
+                <pathelement location="${scala-library.jar}"/>
+                <pathelement location="${scala-reflect.jar}"/>
+            </classpath>
+        </taskdef>
+    </target>
+
+    <path id="compile.classpath">
+        <path refid="default.classpath"/>
+        <fileset dir="${root}/${dep1}/dist" includes="*.jar"/>
+        <fileset dir="${root}/${dep2}/dist" includes="*.jar"/>
+        <fileset dir="${root}/${dep3}/dist" includes="*.jar"/>
+        <fileset dir="${root}/${dep4}/dist" includes="*.jar"/>
+        <fileset dir="${root}/${dep5}/dist" includes="*.jar"/>
+        <fileset dir="${root}/${dep6}/dist" includes="*.jar"/>
+        <fileset dir="${root}/${dep7}/dist" includes="*.jar"/>
+        <fileset dir="${root}/${dep8}/dist" includes="*.jar"/>
+        <fileset dir="${root}/${dep9}/dist" includes="*.jar"/>
+        <fileset dir="${root}/vspace/dist" includes="*.jar"/>
+        <fileset dir="${root}/vs-orm/dist" includes="*.jar"/>
+        <fileset dir="${root}/dashboardServer/dist" includes="*.jar"/>
+        <fileset dir="${basedir}/lib" includes="*.jar"/>
+        <pathelement location="${scala-library.jar}"/>
+    </path>
+
+    <!--<taskdef name="scalate-precompile-1" classname="org.fusesource.scalate.util.TemplatePrecompiler">-->
+
+        <!--<classpath>-->
+            <!--<path refid="compile.classpath"/>-->
+            <!--<pathelement location="scalate-patch"/>-->
+            <!--<pathelement location="lib\scalate-core_2.10-1.7.0.jar"/>-->
+            <!--<pathelement location="lib\scalate-util_2.10-1.7.0.jar"/>-->
+            <!--<pathelement location="lib\scala-compiler.jar"/>-->
+            <!--<pathelement location="lib\scala-library.jar"/>-->
+            <!--<pathelement location="lib\scala-reflect.jar"/>-->
+
+
+        <!--</classpath>-->
+
+
+    <!--</taskdef>-->
+
+
+    <target name="checkos">
+        <condition property="isWindows">
+            <os family="windows"/>
+        </condition>
+
+        <condition property="isUnix">
+            <os family="unix"/>
+        </condition>
+    </target>
+
+    <target name="scala-compile" depends="scala-init, compile">
+        <scalac srcdir="${scala.src.dir}"
+                destdir="${classes}"
+                force="Yes"
+                addparams="-Ylog-classpath"
+                classpathref="compile.classpath">
+            <include name="**/*.scala"/>
+        </scalac>
+    </target>
+
+    <property name="webapp" location="${basedir}/src/main/webapp"/>
+    <property name="webinf" location="${webapp}/WEB-INF"/>
+    <property name="war" value="play.war"/>
+
+    <target name="compile-scalate">
+        <scalate-precompile-1 sourceDirectory="src/main/webapp/WEB-INF" targetDirectory="build/classes"/>
+
+    </target>
+    <target name="play-war" depends="scala-compile,play-lib">
+        <mkdir dir="${build}/war/lib" />
+        <copy todir="${build}/war/lib" verbose="true">
+            <fileset dir="../saas-meter/dist" includes="*.jar" />
+        </copy>
+
+        <war destfile="build/${war}" webxml="${webinf}/web.xml">
+            <classes dir="build/classes"/>
+            <webinf dir="${webinf}" includes="**/*.*"/>
+            <lib dir="build/war/lib"/>
+            <fileset dir="${webapp}"/>
+        </war>
+
+    </target>
+    <target name="play-lib" >
+        <mkdir dir="${build}/${artifact}-lib-${version}" />
+        <mkdir dir="${build}/${artifact}-lib-${version}/lib" />
+        <mkdir dir="${dist}" />
+
+        <copy file="${artifact}-lib.bundle" todir="${build}/${artifact}-lib-${version}" filtering="true" />
+
+        <copy todir="${build}/${artifact}-lib-${version}/lib" verbose="true">
+            <fileset dir="${basedir}/lib" includes="*.jar" excludes="lib/scalatest_2.9.2-1.8.jar"/>
+        </copy>
+
+        <delete file="${dist}/${artifact}-lib-${version}.zip"/>
+        <zip destfile="${dist}/${artifact}-lib-${version}.zip" basedir="${build}/${artifact}-lib-${version}" compress="true" />
+    </target>
+
+    <target name="dist" depends="clean, init, play-war">
+    </target>
+
+    <!--<target name="testOnly" depends="test.ui"/>-->
+
+    <!--
+    ./ext/js.jar:./ext/jline.jar org.mozilla.javascript.tools.shell.Main -opt -1 envjs.bootstrap.js $@
+    -->
+    <target name="test.ui" depends="">
+        <echo>Running TEST_UI</echo>
+
+        <java classname="org.mozilla.javascript.tools.shell.Main"
+              fork="true"
+              failonerror="true"
+              maxmemory="128m"
+                >
+            <arg value="-opt"/>
+            <arg value="-1"/>
+            <arg value="test/envjs.bootstrap.js"/>
+            <arg value="test/PlaySpecRunner.html"/>
+            <classpath>
+                <pathelement location="test/ext/js.jar"/>
+                <pathelement location="test/ext/jline.jar"/>
+
+            </classpath>
+        </java>
+        <echo>DONE Running TEST_UI</echo>
+
+
+        <junitreport todir="${test.reports}">
+            <fileset dir="${test.reports}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${test.reports}"/>
+        </junitreport>
+    </target>
+
+    <target name="copyToMaster">
+        <!--  target/scala-2.9.2/play_2.9.2-1.0.0.war -->
+        <copy file="build/play.war" tofile="../master/build/logscape/downloads/play.war"/>
+        <copy file="../lib/lib/jetty-8.1.9/etc/webdefault.xml"   todir="../master/build/logscape/apps"/>
+        <copy todir="../master/build/logscape/downloads" verbose="true">
+            <fileset dir="dist" includes="*.zip"/>
+        </copy>
+    </target>
+
+
+</project>
+

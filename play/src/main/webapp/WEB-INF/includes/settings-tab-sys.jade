@@ -1,0 +1,58 @@
+.tab-pane.active#tabs-sys
+    h2.headerColor#sysHeader	System
+    ! &nbsp;
+    .span9.cell-padded.rounded-medium.spacing-wide.popoutColor.coloredBorder
+        span.lead.text-left#sysGeneral General
+
+        form#adminSysInfoForm.form-horizontal
+            .control-group
+                label.control-label#sysUptime(for="inputTag") Uptime
+                .controls
+                    input#sysUptime.widthNinety.coloredInputBG.coloredBorder.coloredText(type="text" placeHolder="7 days 53 mins")
+
+                label.control-label#sysStartTime(for="inputTag") Start Time
+                .controls
+                    input#sysStartTime.widthNinety.coloredInputBG.coloredBorder.coloredText(type="text" placeHolder="")
+
+                label.control-label#sysBuildId(for="inputDirectory") Build Id
+                .controls
+                    input#sysBuildId.widthNinety.coloredInputBG.coloredBorder.coloredText(type="text" placeHolder="EXB4PC-11003-0/boot:Logscape-2.0-09-Apr-13-1555 lscape:Logscape-2.0-09-Apr-13-1556")
+
+                label.control-label#sysAgents(for="inputFileMask") Agents
+                .controls
+                    input#sysAgents.widthNinety.coloredInputBG.coloredBorder.coloredText(type="text" placeHolder="1")
+
+                label.control-label#sysIndexers(for="inputFileMask") Indexers
+                .controls
+                    input#sysIndexers.widthNinety.coloredInputBG.coloredBorder.coloredText(type="text" placeHolder="1")
+
+                label.control-label#sysVolume(for="inputFileMask") Volume (GB)
+                .controls
+                    input#sysVolume.widthNinety.coloredInputBG.coloredBorder.coloredText(type="text" placeHolder="5.43 TB")
+
+
+    .span9.cell-padded.rounded-medium.spacing-wide.popoutColor.coloredBorder
+        span.lead.text-left#sysRestart Restart
+        .alert#sysRestartAlert This will make the system restart and kill all user sessions!
+        .alert-error#bounceAlert(style='visible:none')
+        a.btn.button.btn-large.btn-danger.bounceSystem.System_Administrator_Role#sysBounce(href='#' style='float:right;')
+            i.fa.fa-power-off.fa-lg
+            ! &nbsp; Bounce
+        ! &nbsp;
+        ! &nbsp;
+
+
+    a.span9#sysEULA(href="eula" target="_blank") End User License Agreement
+    .span9.cell-padded.rounded-medium.spacing-wide.popoutColor.coloredBorder
+        .span8
+            span.lead.text-left#sysEmail(style="padding-right:10px;") Email (SMTP)
+        .span10
+            form.span12#emailForm.form-horizontal
+                =render("/layouts/email_form.jade")
+        .span12
+            .span1
+            label.span1.control-label#sysEmailTest(for="inputFileMask") Test
+            input.coloredInputBG.coloredBorder.span3#eTestFrom(type="text" placeHolder="From <from@email.com>" title="From <from@email.com>")
+            input.coloredInputBG.coloredBorder.span3#eTestTo(type="text" placeHolder="to@email.com" title="to@email.com")
+            button.btn.btn-success.fa.fa-envelope#sysEmailSend(style="vertical-align: top;height:30px") &nbsp; Send
+

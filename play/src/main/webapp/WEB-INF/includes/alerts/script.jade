@@ -1,0 +1,22 @@
+form#scriptAlert.form-horizontal
+    .div(style="float:right")
+        label(style="float:left") Example Scripts:  
+        select#premadeGroovy(style="float:right")
+            option
+                p 
+            option
+                p Send Slack Message
+            option
+                p Create Jira Issue
+            option
+                p Create Github Issue
+            option
+                p Create Github Issue With Data
+            option 
+                p Create FreshDesk Ticket
+            option
+                p Hook into IFTTT
+    .control-group
+        label.control-label#alertingGroovyScriptt(for="script") From
+        .controls
+            textarea#message( Style="width:715px;height:434px")

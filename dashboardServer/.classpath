@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vs-log"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vso"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vs-util"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/replicator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vso-ui"/>
+	<classpathentry kind="lib" path="lib/flex-messaging-common.jar" sourcepath="D:/work/apps/blazeds-src-4.0.0.14931/modules/common/src"/>
+	<classpathentry kind="lib" path="lib/flex-messaging-core.jar" sourcepath="/Volumes/Media/dev/BlazeDS/blazeds-src-4.0.1.21287/modules/core/src"/>
+	<classpathentry kind="lib" path="lib/flex-messaging-opt.jar"/>
+	<classpathentry kind="lib" path="lib/flex-messaging-proxy.jar"/>
+	<classpathentry kind="lib" path="lib/flex-messaging-remoting.jar" sourcepath="C:/work/apps/blazeds-src-4.0.0.14931/modules/remoting/src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vs-admin"/>
+	<classpathentry kind="lib" path="/lib/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/lib/lib/commons-io-1.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vs-log-server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vs-syslog-server"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

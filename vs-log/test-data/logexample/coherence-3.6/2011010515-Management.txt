@@ -1,0 +1,19 @@
+Batch Counter	ReportTime	RefreshPolicy	RefreshTime	RefreshExcessCount	RefreshCount	RefreshPredictionCount	RefreshTimeoutCount
+6	Wed Jan 05 15:00:15 GMT 2011	refresh-ahead	Wed Jan 05 15:00:15 GMT 2011	6	11	25	0
+7	Wed Jan 05 15:01:15 GMT 2011	refresh-ahead	Wed Jan 05 15:01:15 GMT 2011	6	12	30	0
+8	Wed Jan 05 15:02:15 GMT 2011	refresh-ahead	Wed Jan 05 15:02:15 GMT 2011	6	13	35	0
+9	Wed Jan 05 15:03:15 GMT 2011	refresh-ahead	Wed Jan 05 15:03:15 GMT 2011	6	14	40	0
+10	Wed Jan 05 15:04:15 GMT 2011	refresh-ahead	Wed Jan 05 15:04:15 GMT 2011	6	15	45	0
+11	Wed Jan 05 15:05:16 GMT 2011	refresh-ahead	Wed Jan 05 15:05:16 GMT 2011	6	16	50	0
+12	Wed Jan 05 15:06:16 GMT 2011	refresh-ahead	Wed Jan 05 15:06:16 GMT 2011	6	17	55	0
+13	Wed Jan 05 15:07:16 GMT 2011	refresh-ahead	Wed Jan 05 15:07:16 GMT 2011	14	26	60	0
+1	Wed Jan 05 15:08:04 GMT 2011	refresh-ahead	Wed Jan 05 15:08:04 GMT 2011	14	14	0	0
+14	Wed Jan 05 15:08:16 GMT 2011	refresh-ahead	Wed Jan 05 15:08:16 GMT 2011	14	28	73	0
+2	Wed Jan 05 15:09:04 GMT 2011	refresh-ahead	Wed Jan 05 15:09:04 GMT 2011	14	16	13	0
+15	Wed Jan 05 15:09:16 GMT 2011	refresh-ahead	Wed Jan 05 15:09:16 GMT 2011	14	30	86	0
+3	Wed Jan 05 15:10:04 GMT 2011	refresh-ahead	Wed Jan 05 15:10:04 GMT 2011	14	18	26	0
+16	Wed Jan 05 15:10:16 GMT 2011	refresh-ahead	Wed Jan 05 15:10:16 GMT 2011	14	32	99	0
+4	Wed Jan 05 15:11:04 GMT 2011	refresh-ahead	Wed Jan 05 15:11:04 GMT 2011	14	20	39	0
+17	Wed Jan 05 15:11:16 GMT 2011	refresh-ahead	Wed Jan 05 15:11:16 GMT 2011	14	34	112	0
+5	Wed Jan 05 15:12:05 GMT 2011	refresh-ahead	Wed Jan 05 15:12:05 GMT 2011	14	22	52	0
+18	Wed Jan 05 15:12:16 GMT 2011	refresh-ahead	Wed Jan 05 15:12:16 GMT 2011	14	36	125	0

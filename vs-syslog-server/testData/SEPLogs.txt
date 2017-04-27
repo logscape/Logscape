@@ -1,0 +1,17 @@
+ASA
+Nov 11 06:54:58 Nov 11 2014 06:47:11 EXCELIAN-F01-LONDON : %ASA-6-305011: Built dynamic TCP translation from EXCELIAN-INSIDE:10.28.0.73/53063 to EXCELIAN-OUTSIDE:217.20.25.200/53063
+
+ASA
+18-Feb-11 00:00:49 Feb 18 00:01:34 192.168.3.1 :Feb 17 23:30:57 EST: %ASA-session-6-302020: Built outbound ICMP connection for faddr 172.16.100.212/0 gaddr 192.168.2.112/5988 laddr 192.168.2.112/5988
+
+Admin logs:
+Sep 17 14:32:30 SymantecServer AUPERZAV1: Site: AUPERZAV1,Server: AUPERZAV1,Domain: RTIO-Prodsys,Admin: admin,Policy has been edited,PCN Application and Device Control policy
+
+Risk Logs:
+Sep 17 14:56:15 SymantecServer AUPERZAV1: Virus found,IP Address: 10.217.49.121,Computer name: AUPERZVINH1,Source: Real Time Scan,Risk name: EICAR Test String,Occurrences: 1,C:\Users\Vinh.tran\Desktop\EICAR_Test.txt,"",Actual action: Cleaned by deletion,Requested action: Cleaned,Secondary action: Quarantined,Event time: 2014-09-17 06:30:17,Inserted: 2014-09-17 06:56:15,End: 2014-09-17 06:30:17,Last update time: 2014-09-17 06:56:15,Domain: RTIO-Prodsys,Group: My Company\Perth OC - Srv,Server: AUPERZAV1,User: Vinh.Tran,Source computer: ,Source IP: ,Disposition: Reputation was not used in this detection.,Download site: ,Web domain: ,Downloaded by: ,Prevalence: Reputation was not used in this detection.,Confidence: Reputation was not used in this detection.,URL Tracking Status: Off,,First Seen: Reputation was not used in this detection.,Sensitivity: ,MDS,Application hash: 8B3F191819931D1F2CEF7289239B5F77C00B079847B9C2636E56854D1E5EFF71,Hash type: SHA2,Company name: ,Application name: EICAR_Test.txt,Application version: ,Application type: 127,File size (bytes): 70
+
+ADC Logs:
+Sep 17 14:16:36 SymantecServer AUPERZAV1: AUPERZTS2,Blocked,- Caller MD5=d74f10ad834fa4a8c597954a84e5988c,File Read,Begin: 2014-09-17 05:39:41,End: 2014-09-17 05:39:45,Rule: Attempted file use - Admin files & MD5 hash | File and Folder Access Attempts,7668,C:/Windows/System32/wscript.exe,0,No Module Name,C:/Windows/System32/PsExec.exe,User: sa-oc-reporting,Domain: PRODSYS,Action Type:
+
+IPS Logs:
+Sep 16 15:52:49 SymantecServer AUPERZAV1: AUDYNNZ572,[SID: 24125] Web Attack: Malicious Cookie Activity attack blocked. Traffic has been blocked for this application: \DEVICE\HARDDISKVOLUME1\PROGRAM FILES (X86)\INTERNET EXPLORER\IEXPLORE.EXE,Local: 10.216.29.122,Local: 000000000000,Remote: ,Remote: 10.249.241.6,Remote: 000000000000,Inbound,TCP,Intrusion ID: 0,Begin: 2014-09-16 15:51:26,End: 2014-09-16 15:51:26,Occurrences: 1,Application: /DEVICE/HARDDISKVOLUME1/PROGRAM FILES (X86)/INTERNET EXPLORER/IEXPLORE.EXE,Location: Default,User: sbsadm,Domain: AUDYNNZ572,Local Port 64196,Remote Port 8080,CIDS Signature ID: 24125,CIDS Signature string: Web Attack: Malicious Cookie Activity,CIDS Signature SubID: 69258,Intrusion URL: www.guilleviniag.com/downloads/Products/Software/Proworx32/Proworx32%20V2.1%20SP2/ProWORX32+V2.1+SP2+ReadMeEng.pdf,Intrusion Payload URL:

@@ -1,0 +1,111 @@
+div(style="height:2000px;")
+    h1#userinfoTitle
+    .tabbable(role="tabpanel")
+        ul.nav.nav-tabs.borderColor(role="tablist" style="margin:0px;")
+            li.active
+                a#userinfoAccountInformation(href="#aInfoTab" data-toggle="tab")    Account Information
+            li
+                a#userinfoAlerts(href="#aAlertingTab" data-toggle="tab" style="display:none")        Alerts
+            li
+                a#userinfoUploadZip(href="#aZipTab" data-toggle="tab")    Upload Zip
+            li
+                a#userinfoECCred(href="#aEC2Tab" data-toggle="tab" style="display:none")    EC2 Credentials
+            li
+                a#userinfoAzureCred(href="#aAzureTab" data-toggle="tab" style="display:none")    Azure Credentials
+            li
+                a#userinfoUpgrade(href="#aUpgradeTab" data-toggle="tab" style="display:none")        User
+
+        .tab-content.popoutColor.borderColor(style="padding:20px;border-style:solid;border-top-style:none;border-width:1px; border-color:#EEE;background:white;")
+            #aInfoTab.tab-pane.active
+                .control-group
+                    label.control-label#userinfoUsername(for="inputTag") Username
+                    .controls
+                        input#eUser.widthNinety(type="text")
+
+                    label.control-label#userinfoSecurityToken(for="inputTag") Security Token
+                    .controls
+                        input#eSecurityToken.widthNinety(type="text")
+
+                    label.control-label#userinfoDataUsed(for="inputTag") Data Used Today (MB)
+                    .controls
+                        input#eDataUsedTodayMb.widthNinety(type="text")
+
+
+                    label.control-label#userinfoCreatedDate(for="inputFileMask") Created Date
+                    .controls
+                        input#eCreated.widthNinety(type="text")
+
+                    label.control-label#userinfoDailyQuota(for="inputFileMask") Daily Quota (MB)
+                    .controls
+                        input#eDailyVolumeMb.widthNinety(type="text")
+
+                    label.control-label#userinfoDataRetention(for="inputFileMask") Data Retention (Days)
+                    .controls
+                        input#eRetentionDays.widthNinety(type="text")
+
+            #aZipTab.tab-pane.fade
+                h4.title#userinfoUploadAZip Upload a ZIP or multiple log files to your account
+
+                h4#userinfoStepOne 1. Choose an upload 'tag' so you can find the data. i.e. App1, Dev, ProdOuttage
+                form.form-horizontal(role="form")
+                    .form-group
+                        label.control-label(for="uploadTag") Upload Tag
+                        input#userUploadTag.form-control(type="text" placeholder="serverXlogs" title="Use a short alphanumeric tag, no spaces or dots!")
+
+                h4#userinfoStepTwo 2. Choose a collection of log/txt files or a .zip archive.
+                #userProgress_report(style="padding:20px;")
+                    input#userUpload_files(type="file" multiple="multiple")
+                    #userProgress_report_name
+                    #userProgress_report_status
+                    #userProgress_report_bar_container(style="width: 90%; height: 5px;")
+                        #userProgress_report_bar(style="background-color: #a7a6a9; width: 0; height: 100%;")
+                h4#userinfoStepThree 3. Search your Uploads
+                div(style="padding:20px;")
+                    h5#userinfoStepThreeExtra The files will be dropped into your account using todays date and the default Host and the Upload Tag ie: 10.28.1.160/14Jan03/tag
+                    h4
+                        a#uploadSearch(href="/play/?Search=My%20Uploads" target="_blank")
+                            span#userinfoClickHereToSearch Click here to Search your data
+                            span.glyphicon.glyphicon-chevron-right
+            #aAlertingTab.tab-pane.fade.in
+                .control-group
+                    label.control-label#userinfoSearchTrigger(for="inputTag") Search Trigger
+                    .controls
+                        input#eUser.widthNinety(type="text" placeHolder="joe.blogs")
+                    label.control-label#userinfoThreshold(for="inputFileMask") Threshold
+                    .controls
+                        input#ePassword.widthNinety(type="password" placeHolder="password")
+                    label.control-label#userinfoEmailReportTo(for="inputFileMask") Email Report To:
+                    .controls
+                        input#eServerURL.widthNinety(type="text" placeHolder="(smtp,smtps)://smtp.provider.com:(25,465)" title="(smtp,smtps)://smtp.provider.com:(25,465)")
+                    label.control-label#userinfoHipChatConfig(for="inputFileMask") HipChat Configuration
+                    .controls
+                        input#eServerURL.widthNinety(type="text" placeHolder="(smtp,smtps)://smtp.provider.com:(25,465)" title="(smtp,smtps)://smtp.provider.com:(25,465)")
+
+
+            #aEC2Tab.tab-pane.fade.in
+                .control-group
+                    label.control-label#userinfoECCredentials(for="inputTag") EC2 Credentials
+                    .controls
+                        input#eUser.widthNinety(type="text" placeHolder="joe.blogs")
+                    label.control-label#userinfoECPass(for="inputFileMask") Password
+                    .controls
+                        input#ePassword.widthNinety(type="password" placeHolder="password")
+                    label.control-label#userinfoECServerURL(for="inputFileMask") Server URL
+                    .controls
+                        input#eServerURL.widthNinety(type="text" placeHolder="(smtp,smtps)://smtp.provider.com:(25,465)" title="(smtp,smtps)://smtp.provider.com:(25,465)")
+            #aAzureTab.tab-pane.fade.in
+                .control-group
+                    label.control-label#userinfoAzureUsername(for="inputTag") Username
+                    .controls
+                        input#eUser.widthNinety(type="text" placeHolder="joe.blogs")
+                    label.control-label#userinfoAzuraPassword(for="inputFileMask") Password
+                    .controls
+                        input#ePassword.widthNinety(type="password" placeHolder="password")
+                    label.control-label#userinfoSecurityKey(for="inputFileMask") SecurityKey
+                    .controls
+                        input#eServerURL.widthNinety(type="text" placeHolder="(smtp,smtps)://smtp.provider.com:(25,465)" title="(smtp,smtps)://smtp.provider.com:(25,465)")
+
+            #aUpgradeTab.tab-pane.fade.in
+                .control-group
+                    label.control-label#userinfoUpgradeText(for="inputTag") Upgrade
+

@@ -1,0 +1,48 @@
+<Bundle name="saas-meter" version="1.0" system="true">
+  <status>UNINSTALLED</status>
+  <releaseDate>@timestamp@</releaseDate>
+  <installDate>@timestamp@</installDate>
+  <buildId>@buildId@</buildId>
+  <classification>PROD</classification>
+  <businessArea>HPC</businessArea>
+  <businessClassification>Admin</businessClassification>
+  <owner>info@logscape.com</owner>
+  <services>
+  	<Service>
+		<name>SAAS-Meter</name>
+		<priority>100</priority>
+		<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+		<fork>true</fork>
+		<background>true</background>
+		<dependencies>vs-log-server-1.0:LogServer</dependencies>
+		<pauseSeconds>0</pauseSeconds>
+      	<instanceCount>-1</instanceCount>
+		<costPerUnit>10</costPerUnit>
+		<script>
+			<![CDATA[
+
+
+
+				println "\n************************** Starting SAAS Meter **************************"
+				try {
+
+
+				if (Boolean.getBoolean("metering.debug")) {
+					String jmxPort = "-Dcom.sun.management.jmxremote.port=" + Integer.getInteger("metering.jmx", VSOProperties.getBasePort() + 21);
+					String rmiHostname = "-Djava.rmi.server.hostname="+System.getProperty("java.rmi.server.hostname","localhost");
+
+					processMaker.java "-cp:system-bundles/saas-meter-1.0/lib/*", "com.logscape.meter.MeterServiceImpl", lookupSpaceAddress, "-Xms32M", "-Xmx256M", "-Dlog4j.debug=true", rmiHostname, jmxPort, "-Dcom.sun.management.jmxremote.ssl=false", "-Dcom.sun.management.jmxremote.authenticate=false", "-Dlog4j.filename=../../work/saas-meter.log","-Xdebug","-Xrunjdwp:transport=dt_socket,address=8993,server=y,suspend=n"
+				} else {
+					processMaker.java "-cp:system-bundles/saas-meter-1.0/lib/*", "com.logscape.meter.MeterServiceImpl", lookupSpaceAddress, "-Xms32M", "-Xmx256M", "-Dlog4j.debug=true", "-Dlog4j.filename=../../work/saas-meter.log"
+				}
+
+
+				} catch (Throwable t) {
+					t.printStackTrace();
+					throw new RuntimeException("Failed to start meterSevice:" + t.getMessage(), t);
+				}
+			]]>
+		</script>
+	</Service>
+  </services>
+</Bundle>

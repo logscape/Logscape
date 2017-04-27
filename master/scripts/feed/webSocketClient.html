@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>  <title>WebSocket Test</title>
+
+<!-- CONFIGURE the WebSocket here -->
+<script language="javascript" type="text/javascript">
+
+var wsUri = "ws://localhost:20000/";
+var output;
+
+
+var added = 0;
+var connected = false
+var handle = null
+
+
+function init() {
+    output = document.getElementById("output");
+    // keep trying to connect
+    handle = setInterval(testWebSocket, 1000);
+
+}
+function testWebSocket() {
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = function (evt) {
+        // stop trying when it works
+        clearInterval(handle)
+        onOpen(evt)
+
+    };
+    websocket.onclose = function (evt) {
+        onClose(evt)
+    };
+    websocket.onmessage = function (evt) {
+        onMessage(evt)
+    };
+    websocket.onerror = function (evt) {
+        onError(evt)
+        connected = false
+    };
+}
+function onOpen(evt) {
+    writeToScreen("CONNECTED");
+    connected = true
+}
+function onClose(evt) {
+    writeToScreen("DISCONNECTED");
+}
+function onMessage(evt) {
+    added++;
+    if (added > 10) {
+        document.getElementById("output").innerHTML = ''
+        added = 0
+    }
+    writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data + '</span>');
+
+    //websocket.close();
+}
+function onError(evt) {
+    document.getElementById("output").innerHTML = ''
+    writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data + " [Retrying]  " + wsUri + " : "  + new Date());
+}
+function doSend(message) {
+    writeToScreen("SENT: " + message);
+    websocket.send(message);
+}
+function writeToScreen(message) {
+    var pre = document.createElement("p");
+    pre.style.wordWrap = "break-word";
+    pre.innerHTML = message;
+    output.appendChild(pre);
+}
+window.addEventListener("load", init, false);  </script>  <h2>WebSocket Test</h2>
+<div id="output"></div>

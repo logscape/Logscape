@@ -1,0 +1,23 @@
+form#correlationTriggerForm.form-horizontal
+    .control-group
+        label.control-label#alertingTimeWindow Time Window(s)
+        .controls
+            input#alertTimeWindow(type="text" placeHolder="Sliding Window Time in Seconds")
+        label.control-label#alertingType Type
+
+        .controls
+            select#correlationType
+                option sequence
+                option average
+
+        label.control-label#alertingEventValues Event Value(s)
+        .controls
+            input#alertEventValues(type="text" placeHolder="Sequence of Events or Average of Field")
+
+        label.control-label#alertingCorrelationField Correlation Field
+        .controls
+            input#alertCorrelationField(type="text" placeHolder="Field to Correlate Against")
+
+        label.control-label#alertingCorrelationKey Correlation Key
+        .controls
+            input#alertCorrelationKey(type="text" placeHolder="Grouping By")

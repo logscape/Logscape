@@ -1,0 +1,30 @@
+<project default="war" name="root" basedir=".">
+
+
+    <property name="war" value="root.war" />
+
+    <target name="dist" depends="war"/>
+
+    <target name="war" depends="">
+        <delete file="build/${war}"/>
+
+
+        <!-- copy over flex UI files -->
+        <echo/>
+        <echo> *** Copying flexDashboard WAR contents to embed within this WAR *** </echo>
+        <echo/>
+        <copy todir="build/content" filtering="true">
+            <fileset dir="src" includes="**/*"/>
+        </copy>
+
+        <war destfile="build/${war}" webxml="web.xml" includes="src/log4j.properties" >
+            <!--<webinf dir="WebContent/WEB-INF" includes="**/*.*"/> -->
+            <fileset dir="build/content"/>
+        </war>
+
+    </target>
+    <target name="copyToMaster">
+        <copy file="build/${war}" tofile="../master/build/logscape/downloads/${war}" />
+    </target>
+
+</project>

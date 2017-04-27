@@ -1,0 +1,9 @@
+#event_widget.widget_size(style='display: none;' widget-width='3' widget-height='2' data-minx="1" data-miny="1")
+    = render("/widgets/_search.jade")
+    #events(style="margin-left: 5px; padding-top: 5px; overflow : auto;" )
+        .btn-group.btn-group-horizontal#eventLayoutStyle(style='float: left;position:relative')
+            button.btn.fa.fa-th.active#structuredMode(type="button" title="Structured View")
+            button.btn.fa.fa-th#fieldsMode(type="button" title="Field View")
+            button.btn.fa.fa-th-list#rawMode(type="button" title="Raw View")
+            a#exportToCSV(href="#" style='height:12px;  ') CSV
+        .eventTableOuter(style='overflow:none;')

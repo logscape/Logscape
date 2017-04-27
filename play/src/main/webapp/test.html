@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+    <script src="javascripts/libs/jquery/jquery.js" type="text/javascript"></script>
+    <script src="javascripts/libs/underscore/underscore-min.js" type="text/javascript"></script>
+<script src="javascripts/libs/jquery/jquery-ui-1.9.2.custom.js" type="text/javascript"></script>
+<script src="javascripts/logscape.js" type="text/javascript"></script>
+<script src="javascripts/searchie.c3.js" type="text/javascript"></script>
+<script src="javascripts/searchie.echarts.js" type="text/javascript"></script>
+<script src="javascripts/searchie.control.js" type="text/javascript"></script>
+<body>
+    <input id='myTxt' type='text'/>
+</body>
+ <script>
+     $(document).ready(function(){
+         var completions = new Logscape.Search.SearchControl(['basic', 'log4j', 'custom']);
+         var input = $('#myTxt');
+         var cursorPosition = new Logscape.Search.CursorPosition(input, completions.availableCompletions);
+
+         input.autocomplete({
+             minLength: 0,
+             source: function (request, response) {
+                 // delegate back to autocomplete, but extract the last term
+                 var availableCompletions = completions.availableCompletions(input.val(), cursorPosition.getCurrentPosition());
+                 response(availableCompletions);
+             },
+             focus: function () {
+                 // prevent value inserted on focus
+                 return false;
+             },
+             select: function (event, ui) {
+                 var terms = split(this.value);
+                 // remove the current input
+                 terms.pop();
+                 // add the selected item
+                 terms.push(ui.item.value);
+                 // add placeholder to get the comma-and-space at the end
+                 terms.push("");
+                 this.value = terms.join(" ");
+                 return false;
+             }
+         });
+     })
+ </script>
+</html>

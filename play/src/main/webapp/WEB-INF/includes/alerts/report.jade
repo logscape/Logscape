@@ -1,0 +1,10 @@
+form#reportAlert.form-horizontal
+    .control-group
+        label.control-label#alertingReportt(for="reportAlert" title="Enter a Workspace or Search Name(s) to attach to email i.e. Home,Exception Report,System Alert") Report
+        .controls
+            input#alertReportName(type="text" placeHolder="WorkspaceName")
+            ! &nbsp;&nbsp;&nbsp;
+            p#alertingTestGeneration  Test Generation:
+            a#alertGenPDF(href="#") PDF
+            a#alertGenPNG(href="#") PNG
+            a#alertGenCSV(href="#") CSV

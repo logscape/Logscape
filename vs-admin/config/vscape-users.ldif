@@ -1,0 +1,86 @@
+# default user accounts configuration
+
+dn: ou=people,dc=logscape,dc=com
+ou: people
+objectclass: organizationalUnit
+objectclass: top
+description: Contains entries which describe persons
+
+dn: ou=role,dc=logscape,dc=com
+ou: role
+objectclass: organizationalUnit
+objectclass: top
+description: Contains entries which describe persons
+
+
+# User Accounts
+
+dn: uid=admin,ou=people,dc=logscape,dc=com
+cn: Administrator
+givenname: Admin
+sn: Admin
+departmentNumber: all
+mail: admin@liquidlabs.co.uk
+userpassword: {SHA}C92UYUx247bwupRU8ZDqrc93Deg=
+objectclass: person
+objectclass: organizationalPerson
+objectclass: top
+objectclass: inetOrgPerson
+
+
+
+dn: uid=guest,ou=people,dc=logscape,dc=com
+cn: Guest
+givenname: Guest
+sn: Guest
+mail: guest@liquidlabs.co.uk
+carLicense: excl:.*.pwd,.*password.* incl:
+departmentNumber: all
+description: <map> <entry><string>fileExcl:</string><string>.*.pwd,.*password.*</string>  </entry><entry><string>fileIncl:</string><string>.*myStuff.*</string>  </entry> </map>
+userpassword: guest
+objectclass: person
+objectclass: organizationalPerson
+objectclass: top
+objectclass: inetOrgPerson
+
+dn: uid=user,ou=people,dc=logscape,dc=com
+cn: User
+givenname: User
+sn: User
+mail: user@liquidlabs.co.uk
+carLicense: excl:.*password.* incl:
+departmentNumber: all
+userpassword: user
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+objectclass: top
+
+# Groups and Roles Accounts
+
+dn: cn=CanDelete,ou=role,dc=logscape,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: CanDelete
+uniquemember: uid=admin,ou=people,dc=logscape,dc=com
+
+dn: cn=CanChangeConfig,ou=role,dc=logscape,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: CanChangeConfig
+uniquemember: uid=admin,ou=people,dc=logscape,dc=com
+
+dn: cn=CanCreateUser,ou=role,dc=logscape,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: CanCreateUser
+uniquemember: uid=admin,ou=people,dc=logscape,dc=com
+
+dn: cn=CanCreateSearch,ou=role,dc=logscape,dc=com
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: CanCreateSearch
+uniquemember: uid=admin,ou=people,dc=logscape,dc=com
+uniquemember: uid=user,ou=people,dc=logscape,dc=com
+
+

@@ -1,0 +1,93 @@
+
+.css-treeview {
+    -webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
+}
+
+.css-treeview ul,
+.css-treeview li {
+    padding: 0  !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+.css-treeview input {
+    position: absolute !important;
+    opacity: 0 !important;
+}
+
+.css-treeview {
+    font: normal 11px "Segoe UI", Arial, Sans-serif !important;
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
+.css-treeview a {
+    color: #00f !important;
+    text-decoration: none !important;
+}
+
+.css-treeview a:hover {
+    text-decoration: underline !important;
+}
+
+.css-treeview input + label + ul {
+    margin: 0 0 0 22px !important;
+}
+
+.XXXcss-treeview input ~ ul {
+    display: none !important;
+}
+.css-treeview input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+
+.css-treeview label,
+.css-treeview label::before {
+    cursor: pointer !important;
+}
+
+.css-treeview input:disabled + label {
+    cursor: default !important;
+    opacity: .6 !important;
+}
+
+.css-treeview input[checked=checked]:not(:disabled) ~ ul {
+    display: block !important;
+}
+
+.css-treeview label.file {
+    background-image: url("");
+}
+
+
+.css-treeview label,
+.css-treeview label::before {
+    background: url("/play/images/tree-icons.png") no-repeat;
+}
+
+.css-treeview label,
+.css-treeview a,
+.css-treeview label::before {
+    display: inline-block !important;
+    height: 16px !important;
+    line-height: 16px !important;
+    vertical-align: middle !important;
+}
+
+.css-treeview label {
+    background-position: 18px 0 !important;
+}
+
+.css-treeview label::before {
+    content: "" !important;
+    width: 16px !important;;
+    margin: 0 22px 0 0 !important;
+    vertical-align: middle !important;
+    background-position: 0 -32px !important;
+}
+
+.css-treeview input:checked + label::before {
+    background-position: 0 -16px !important;
+}

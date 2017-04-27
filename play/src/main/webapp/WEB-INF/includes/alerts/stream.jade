@@ -1,0 +1,32 @@
+
+.tab-pane#tab-alert-stream.coloredText
+    .alert.alert-info.span10
+        span#alertingBlueBar Complete EITHER the WebSocket Port --OR-- the Bespoke Script (priority)
+    .alert.span10(style="margin-left:0px;")
+        a.fa.fa-hand-o-right.fa-lg
+        span#alertingYellowBar Streaming requires that 'real-time' alerting is enabled
+    .accordion.span10#alert-stream(style="margin:0")
+        .accordion-group.coloredBorder
+            .accordion-heading
+                p.accordion-toggle#alertingWebSocket(data-toggle="expand" data-parent="#alert-stream"  title="Executed using scripts/feed/webSocketServer.groovy") WebSocket Streaming
+            .accordion-body
+                .accordion-inner.coloredBorder
+                    form#logAlert.form-horizontal
+                        .control-group
+                            label.control-label#alertingWebSocketPort(for="logMessage" title="Executed using script/feed/webSocketServer.groovy") WebSocket Port
+                            .controls
+                                input#webSocketPort(type="text" placeHolder="25000" style="width:50%")
+                                a#alertingWebSocketPortExample(href="http://logscape.com/redir/streamWebSocketSupport.htm" target="_blank") Example WebSocket Clients
+        .accordion-group.coloredBorder
+            .accordion-heading
+                p.accordion-toggle#alertingBespokeStreaming(data-toggle="expand" data-parent="#alert-stream"  title="Executed using scripts/feed/yourScript.groovy") Bespoke Streaming
+            .accordion-body
+                .accordion-inner.coloredBorder
+                    form#logAlert.form-horizontal
+                        .control-group
+                            label.control-label#alertingScript(for="logMessage" title="Executed using script/feed/yourScript.groovy 1234") Script
+                            .controls
+                                input#feedScript(type="text" placeHolder="scripts/feed/yourScript.groovy 1234" style="width:50%")
+                                a#alertingScriptGuide(href="http://logscape.com/redir/streamScriptingGuide.htm" target="_blank") Scripting Guide
+
+

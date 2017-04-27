@@ -1,0 +1,58 @@
+.tab-pane#tab-user-security
+    .navbar.coloredText.coloredBorder.noImage.coloredBG
+        .navbar-inner.coloredText.coloredBorder.noImage.coloredBG
+            span#usersTitlee Users
+            .inline(style='display:inline;padding-top: 20px;')
+                select#model(name="sometext" style='margin-top:1.2em' title="To refresh the external LDAP list switch back to DEFAULT then EXTERNAL_LDAP")
+                    option DEFAULT
+                    option EXTERNAL_LDAP
+            button.btn#usersChangeConfig(href='#') Apply
+
+            span#usersResync &nbsp;&nbsp;&nbsp; Resync LDAP/ActiveDir Users:&nbsp;
+            button.btn.fa.fa-refresh#syncSecurityUsers(href='#')
+    .alert
+        p Sysadmin and Admin accounts are internally managed. If you are using LDAP you must temporarily swap to Internal to in order to modify these accounts.
+    .alert
+        p LDAP is an Enterprise-only feature
+    .span12.cell-padded.rounded-medium.spacing-wide.borderColor(style='margin-left:0px;')
+        .span6.form#adminSysInfoForm.form-horizontal
+            span#usersExternalConfig External Configuration
+            .control-group
+                label.control-label#usersProviderURL(for="inputFileMask") Provider URL
+                .controls
+                    input.widthNinety#providerURL(type="text" placeHolder="ldap://192.168.70.227:10389")
+                label.control-label#usersSystemUser(for="inputFileMask" title="Full path to the secure system user LDAP: ID=admin,OU=system,DC=Company,DC=com -- OR -- Active Directory CN=admin,OU=system,DC=Company,DC=com Alternatively: user@Company.com") System User
+                .controls
+                    input.widthNinety#sysUser(type="text" placeHolder="id=admin,ou=system,dc=Cpy,db=com" title="Full path to the secure system user, Active Directory may also use user@domain.com")
+                label.control-label#usersSystemCredentials(for="inputFileMask") System Credentials
+                .controls
+                    input.widthNinety#sysCreds(type="password" placeHolder="****")
+
+                label.control-label#usersBaseCommon(for="inputTag") BaseCN
+                .controls
+                    input.widthNinety#baseCN(type="text" title="dc=XXX,dc=com" placeHolder="dc=XXX,dc=com")
+
+                label.control-label#usersUserCN(for="inputDirectory") UserCN
+                .controls
+                    input.widthNinety#userCN(type="text" title="ou=people" placeHolder="ou=people")
+
+                label.control-label#usersUserFilter(for="inputFileMask") User Filter
+                .controls
+                    input.widthNinety#userFilter(type="text" title="Optional: User filter to select specific set of users" placeHolder="(memberOf=CN=XXX,OU=Company,DC=name,DC=local)")
+
+                label.control-label#usersTeamAdminFilter(for="inputFileMask" title="Optional: Users in this filter will have a Team_Administrator role for their DataGroup - Requires LICENSE_KEY") Team_Admin Filter
+                .controls
+                    input.widthNinety#adminFilter(type="text" title="Optional: Users in this filter will have a Team_Administrator role for their DataGroup - Requires LICENSE_KEY" placeHolder="(memberOf=CN=XXX,OU=Company,DC=name,DC=local)")
+
+
+
+        .span6(style='height:100%')
+            span#usersOutput
+                ! Output
+            textarea#testOutput(rows=15 style='width:90%;')
+
+
+        .span12.navbar(style='margin-left:0px;')
+            .navbar-inner.coloredText.coloredBorder.noImage.coloredBG
+                button.btn#usersSaveConfig Save
+                button.btn#usersTestConfig Test

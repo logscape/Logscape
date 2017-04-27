@@ -1,0 +1,54 @@
+<project default="dist" name="saas-meter" basedir=".">
+	
+	<property name="artifact" value="saas-meter"/>
+	<property name="version" value="1.0"/>
+	<property name="artifact-id" value="${artifact}-${version}"/>
+	
+	<property name="dep1" value="common"/>
+	<property name="dep2" value="transport"/>
+	<property name="dep3" value="vspace"/>
+	<property name="dep4" value="vs-orm"/>
+	<property name="dep5" value="vso"/>
+    <property name="dep6" value="vs-log-server"/>
+    <property name="dep7" value="vs-log"/>
+    <property name="dep8" value="vs-admin"/>
+	<property name="dep9" value="vs-log-disco"/>
+	<property name="bundle" value="${dist}/bundle"/>
+	<property name="dir" value="."/>
+
+	
+	<import file="../lib/build-common.xml"/>
+	
+	<path id="compile.classpath">
+		<path refid="default.classpath"/>
+		<fileset dir="../${dep1}/dist" includes="*.jar"/>
+		<fileset dir="../${dep2}/dist" includes="*.jar"/>
+		<fileset dir="../${dep3}/dist" includes="*.jar"/>
+		<fileset dir="../${dep4}/dist" includes="*.jar"/>
+		<fileset dir="../${dep5}/dist" includes="*.jar"/>
+        <fileset dir="../${dep6}/dist" includes="*.jar"/>
+        <fileset dir="../${dep7}/dist" includes="*.jar"/>
+        <fileset dir="../${dep8}/dist" includes="*.jar"/>
+		<fileset dir="../${dep9}/dist" includes="*.jar"/>
+	</path>
+	
+	<target name="dist" depends="init, compile, compile.tests">
+		<jar destfile="${dist}/${artifact}.jar" compress="true">
+			<fileset dir="${classes}" includes="**/*" />
+		</jar>
+		<jar destfile="${dist}/test-${artifact}.jar" compress="true">
+			<fileset dir="${test.classes}" includes="**/*" />
+		</jar>
+	</target>
+	<target name="bundle" depends="dist">
+		<mkdir dir="${build}/${artifact-id}" />
+		<mkdir dir="${build}/${artifact-id}/lib" />
+		<copy file="${artifact}.bundle" todir="${build}/${artifact-id}" filtering="true" />
+        <copy file="src/log4j.properties" todir="${build}/${artifact-id}"/>
+		<copy file="${dist}/${artifact}.jar" todir="${build}/${artifact-id}/lib" />
+		<zip destfile="${dist}/${artifact-id}.zip" basedir="${build}/${artifact-id}" compress="true" />
+	</target>
+
+
+</project>
+

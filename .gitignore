@@ -1,0 +1,7 @@
+
+# This is a comment
+# Ignore target at the top level
+/target/
+build/
+dist/
+# which matches 'target' in any sub folder

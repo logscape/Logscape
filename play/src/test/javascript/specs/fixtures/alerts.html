@@ -1,0 +1,40 @@
+<form id="addAlert" class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label" for="alertName">Name</label>
+        <div class="controls">
+            <input id="alertName" type="text" placeholder="Fire1"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="search">Search</label>
+        <div class="controls">
+            <select id="searchNames"><option></option><option>Demo</option><option>Exception ONLY Report</option><option>Exception Report</option><option>General 1 - Host MEM/CPU</option><option>General 2 - Host MEM</option><option>Generic Search</option><option>Home - CPU Utilization Trending</option><option>Home - Demo</option><option>Johno</option><option>NT2008EventLog App</option><option>NT2008EventLog Sec</option><option>NT2008EventLog Sys</option><option>NTEventLog App</option><option>NTEventLog Sec</option><option>NTEventLog Sys</option><option>New Search</option><option>Sequence Correlation Event Fired</option><option>System Utilization</option><option>System Utilization Template</option><option>Table</option></select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="alertSchedule" title="Cron Scheduling">Schedule</label>
+        <div class="controls">
+            <input id="alertSchedule" type="text" placeholder="* * * * *"/>
+            &nbsp;
+            <a href="http://logscape.com/redir/alert-schedule.htm" target="_blank">Syntax Help</a>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="alertRealTime">Real Time</label>
+        <div class="controls">
+            <input id="alertRealTime" type="checkBox">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="datagroups">Data Group</label>
+        <div class="controls">
+            <select id="datagroups"><option></option><option>sysadmin</option><option>all</option><option>not-pwd</option><option>schedule</option><option>not-logscape-logs</option></select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="alertEnabled">Enabled</label>
+        <div class="controls">
+            <input id="alertEnabled" type="checkBox" checked="checked">
+        </div>
+    </div>
+</form>

@@ -1,5 +1,5 @@
 # Logscape - Large scale log analytics
-[Logscape.com](http://www.logscape.com) | [Logscape Blog](http://blog.logscape.com) | [Logscape Support](http://support.logscape.com) | [Logscape Apps](www.logscape.github.io/apps)
+<a href="http://www.logscape.com" target="_blank">Logscape.com</a> | <a href="http://blog.logscape.com" target="_blank">Logscape Blog</a> | <a href="http://support.logscape.com" target="_blank">Logscape Support | <a href="www.logscape.github.io/apps" target="_blank"> Logscape Apps</a>
 
 Logscape provides real-time visibility of log streams, interactive dashboarding, scalable distributed search, file exploration and alerting. Install and run one agent as a Manager (server + web interface) and ship logs by installing agents as Forwarders; alternatively, send network data via Syslog.
 
@@ -13,29 +13,31 @@ Logscape provides real-time visibility of log streams, interactive dashboarding,
 * Automatic JSON and CSV extraction
 * Centrally manage all shipping rules
 * Log Archive support (.snappy-compress or delete)
-* [Read them all](http://logscape.com/product.html)
+* <a href="http://logscape.com.product.html" target="_blank"> Read all </a>
 
 ## Installation
-Quickstart using a using a [pre-built releases](https://github.com/logscape/Logscape/releases/latest) and read our [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
+Quickstart using a <a href="https://github.com/logscape/Logscape/releases/latest" target="_blank">pre-built binary</a> and read our <a href="http://logscape.github.io/tutorials-walkthrough.html" target="_blank">getting started guide</a>.
 
 Pre-requisites -
 *  JRE 8 or above
 
 Run Logscape by following these steps.
 * Extract the .zip folder
-* Run as Manager (default behaviour) or configure your [agents role](https://logscape.github.io/deploy.html)  via the `configure.sh/bat` located in ```/logscape/scripts/``` to run as a LogFowarder
+* Run as Manager (default behaviour) or configure your <a href="https://logscape.github.io/deploy.html" target="_blank">agents role</a> via the `configure.sh/bat` located in ```/logscape/scripts/``` to run as a LogFowarder
 * Start your agent via `logscape.sh start` or `logscape.bat`
+* Navigate to port `8080` on the target machine
+* Log in with the default credentials `admin/ll4bs`
 
 ## Using Logscape
-View the [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
+View the <a href="http://logscape.github.io/tutorials-walkthrough.html" target="_blank">getting started guide</a>
 
-View different [deployment configurations](http://logscape.github.io/deploy.html)
+View different <a href="http://logscape.github.io/deploy.html" target="_blank">deployment configurations</a>
 
 ## Deployment
-Logscape managers can be used in isolation, however, Logscape is best leveraged around your entire environment with [Forwarders](http://logscape.github.io/deploy-forwarder.html) shipping logs to [dedicated nodes](http://logscape.github.io/deploy-indexstore.html), the [Logscape support site](http://logscape.github.io/) features a [full deployment guide](http://logscape.github.io/deploy.html).
+Logscape managers can be used in isolation, however, Logscape is best leveraged around your entire environment with <a href="http://logscape.github.io/deploy-forwarder.html" target="_blank">forwarders</a> shipping logs to <a href="http://logscape.github.io/deploy-indexstore.html" target="_blank">dedicated nodes</a>, the <a href="http://logscape.github.io/" target="_blank">Logscape support site</a> features a <a href="http://logscape.github.io/deploy.html" target="_blank">full deployment guide</a>.
 
 ## Docker
-You are welcome to build your own docker containers using Logscape, however we also offer pre-built containers on [dockerhub.](https://hub.docker.com/r/logscape/logscape/)
+You are welcome to build your own docker containers using Logscape, however we also offer pre-built containers on <a href="https://hub.docker.com/r/logscape/logscape/" target="_blank">docker hub</a>.
 
 ## Build from Source
 If you are looking to modify the code, or would rather build from the source than download a pre-compiled executable then follow these steps.
@@ -44,7 +46,7 @@ Note: This repo includes IntelliJ project files for your convenience.
 ```
 Pre-requisites -
 * JDK 8 or above
-* [Ant build tool](http://ant.apache.org/)
+* <a href="http://ant.apache.org/" target="_blank">Ant build tool</a>.
 
 Then build from source by following these steps
 * Navigate to your checkout directory
@@ -141,7 +143,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">http://www.apache.org/licenses/LICENSE-2.0</a>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

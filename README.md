@@ -14,6 +14,7 @@ Logscape is a big-data analysis tool which uses your logs to produce clear dashb
 
 ## Installation
 If you are just intending to run Logscape then we reccomend using one of our [pre-built releases](https://github.com/logscape/Logscape/releases/latest) and read our [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
+
 Pre-requisites -
 *  JRE 8 or above
 
@@ -40,6 +41,9 @@ You are welcome to build your own docker containers using Logscape, however we a
 
 ## Build from Source
 If you are looking to modify the code, or would rather build from source than download a pre-compiled executable then follow these steps.
+```
+Note: This repo includes IntelliJ project files for your convenience.
+```
 Pre-requisites -
 * JDK 8 or above
 * [Ant build tool](http://ant.apache.org/)

@@ -1,46 +1,44 @@
-# Logscape
-## An Open-Source log management tool
+# Logscape - Large scale log analytics
 [Logscape.com](http://www.logscape.com) | [Logscape Blog](http://blog.logscape.com) | [Logscape Support](http://support.logscape.com) | [Logscape Apps](www.logscape.github.io/apps)
 
-Logscape is a big-data analysis tool which uses your logs to produce clear dashboards and provide real-time alerts. Once your data is indexed you can search the entire environment for a single term, or use precise functions and filters. Logscape is deployed on your infrastructure and provides a straight forward web interface.
+Logscape provides real-time visibility of log streams, interactive dashboarding, scalable distributed search, file exploration and alerting. Install and run one agent as a Manager (server + web interface) and ship logs by installing agents as Forwarders; alternatively, send network data via Syslog.
 
 ## Features
 * Search log files at scale
-* Tail files in real-time
-* Analyse each event
-* Interactive Search and Discovery
+* Ship using agents as LogForwarders
+* Ship using Syslog
+* Tail data in real-time
+* Application/OS metric instrumentation via APPS
+* Interactive Search and field discovery (extraction)
 * Automatic JSON and CSV extraction
+* Centrally manage all shipping rules
+* Log Archive support (.snappy-compress or delete)
 * [Read them all](http://logscape.com/product.html)
 
 ## Installation
-If you are just intending to run Logscape then we reccomend using one of our [pre-built releases](https://github.com/logscape/Logscape/releases/latest) and read our [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
+Quickstart using a using a [pre-built releases](https://github.com/logscape/Logscape/releases/latest) and read our [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
 
 Pre-requisites -
 *  JRE 8 or above
 
-Then run Logscape by following these steps.
+Run Logscape by following these steps.
 * Extract the .zip folder
-* Configure your [agents role](https://logscape.github.io/deploy.html) (Default: Manager) via the `configure.sh` located in ```/logscape/scripts/```
+* Run as Manager (default behaviour) or configure your [agents role](https://logscape.github.io/deploy.html)  via the `configure.sh/bat` located in ```/logscape/scripts/``` to run as a LogFowarder
 * Start your agent via `logscape.sh start` or `logscape.bat`
 
 ## Using Logscape
-If it's your first time using Logscape, then you can read our [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
-A Logscape deployment consists of atleast one [manager]http://logscape.github.io/deploy-manager.html supported by any number of [indexstores](http://logscape.github.io/deploy-indexstore.html) recieving data from [forwarders](http://logscape.github.io/deploy-forwarder.html).
+View the [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
 
-The management agent will by default include forwarder and indexstore functionality whilst also exposing a web front-end which can be accessed via the `:8080` port.
-
-The sourcing of data within Logscape is controlled by [datasources](http://logscape.github.io/ds.html) which specify file paths, masks and age requirements for Logscape to ingest the data. Once ingested the data will be indexed and become available at search time via the web-front end, for either searching or the creation of [workspaces](http://logscape.github.io/workspaces.html). Users looking to map business logic onto their data can do so by applying [data types](http://logscape.github.io/types.html) onto their datasources, thus enriching the search experience.
-
-Navigation around the application is performed primarily via the left hand menu, with standard functionality such as workspaces, live tailing and searching available to all users. And more technical settings available to team leaders and adminsitrators via the settings interface.
+View different [deployment configurations](http://logscape.github.io/deploy.html)
 
 ## Deployment
-Logscape managers can be used in isolation however Logscape is best leveraged around your entire environment with [Forwarders](http://logscape.github.io/deploy-forwarder.html) shipping logs to [dedicated nodes](http://logscape.github.io/deploy-indexstore.html), the [Logscape support site](http://logscape.github.io/) features a [full deployment guide](http://logscape.github.io/deploy.html).
+Logscape managers can be used in isolation, however, Logscape is best leveraged around your entire environment with [Forwarders](http://logscape.github.io/deploy-forwarder.html) shipping logs to [dedicated nodes](http://logscape.github.io/deploy-indexstore.html), the [Logscape support site](http://logscape.github.io/) features a [full deployment guide](http://logscape.github.io/deploy.html).
 
 ## Docker
 You are welcome to build your own docker containers using Logscape, however we also offer pre-built containers on [dockerhub.](https://hub.docker.com/r/logscape/logscape/)
 
 ## Build from Source
-If you are looking to modify the code, or would rather build from source than download a pre-compiled executable then follow these steps.
+If you are looking to modify the code, or would rather build from the source than download a pre-compiled executable then follow these steps.
 ```
 Note: This repo includes IntelliJ project files for your convenience.
 ```
@@ -48,12 +46,12 @@ Pre-requisites -
 * JDK 8 or above
 * [Ant build tool](http://ant.apache.org/)
 
-Then build from source by follow these steps
+Then build from source by following these steps
 * Navigate to your checkout directory
 * Navigate to the master folder `/LogScape/master`
 * Execute `ant clean dist`
 
-On a succesful build this will generate -
+On a successful build, this will generate -
 * Distributable zip located in `/Logscape/master/dist`
 * Expanded build located in `Logscape/master/build`
 
@@ -93,13 +91,13 @@ The artifacts of this build are as follows -
 ## Module Breakdown
 `Boot` - Responsible for bootstrapping the agent process and managing its life cycle.
 
-`Common` - Contains a series of commonly used low level classes.
+`Common` - Contains a series of commonly used low-level classes.
 
 `DashboardServer` - Responsible for the web front-end.
 
 `Lib` - Contains libraries commonly used throughout the project.
 
-`Master` - Storage of scripts to perform high level operations.
+`Master` - Storage of scripts to perform high-level operations.
 
 `Play` - Main web module.
 
@@ -131,7 +129,7 @@ The artifacts of this build are as follows -
 
 `vs-syslog-server` - Logscape Syslog Server
 
-`vs-util` - Utlity module for chargeback and costing.
+`vs-util` - Utility module for chargeback and costing.
 
 ## Contact
 Please direct any queries to support@logscape.com

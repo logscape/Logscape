@@ -25,7 +25,7 @@ Run Logscape by following these steps.
 * Extract the .zip folder
 * Run as Manager (default behaviour) or configure your <a href="https://logscape.github.io/deploy.html" target="_blank">agents role</a> via the `configure.sh/bat` located in ```/logscape/scripts/``` to run as a LogFowarder
 * Start your agent via `logscape.sh start` or `logscape.bat`
-* Navigate to port `8080` on the target machine
+* Navigate to port `:8080` on the target machine in your browser
 * Log in with the default credentials `admin/ll4bs`
 
 ## Using Logscape
@@ -34,13 +34,13 @@ View the <a href="http://logscape.github.io/tutorials-walkthrough.html" target="
 View different <a href="http://logscape.github.io/deploy.html" target="_blank">deployment configurations</a>
 
 ## Deployment
-Logscape managers can be used in isolation, however, Logscape is best leveraged around your entire environment with <a href="http://logscape.github.io/deploy-forwarder.html" target="_blank">forwarders</a> shipping logs to <a href="http://logscape.github.io/deploy-indexstore.html" target="_blank">dedicated nodes</a>, the <a href="http://logscape.github.io/" target="_blank">Logscape support site</a> features a <a href="http://logscape.github.io/deploy.html" target="_blank">full deployment guide</a>.
+A Logscape manager can be deployed in isolation - or alongside a href="http://logscape.github.io/deploy-forwarder.html" target="_blank">forwarders</a> and <a href="http://logscape.github.io/deploy-indexstore.html" target="_blank">Indexstores</a>.
+For more information read the <a href="http://logscape.github.io/deploy.html" target="_blank">full deployment guide</a>.
 
 ## Docker
-You are welcome to build your own docker containers using Logscape, however we also offer pre-built containers on <a href="https://hub.docker.com/r/logscape/logscape/" target="_blank">docker hub</a>.
+Logscape docker images are available from <a href="https://hub.docker.com/r/logscape/logscape/" target="_blank">docker hub</a>.
 
 ## Build from Source
-If you are looking to modify the code, or would rather build from the source than download a pre-compiled executable then follow these steps.
 ```
 Note: This repo includes IntelliJ project files for your convenience.
 ```

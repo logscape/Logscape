@@ -13,7 +13,7 @@ Logscape is a big-data analysis tool which uses your logs to produce clear dashb
 * [Read them all](http://logscape.com/product.html)
 
 ## Installation
-If you are just intending to run Logscape then we reccomend using one of our [pre-built releases](www.github.com) and read our [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
+If you are just intending to run Logscape then we reccomend using one of our [pre-built releases](https://github.com/logscape/Logscape/releases/latest) and read our [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
 Pre-requisites -
 *  JRE 8 or above
 

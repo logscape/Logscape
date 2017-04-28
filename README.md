@@ -1,5 +1,5 @@
 # Logscape - Large scale log analytics
-<a href="http://www.logscape.com" target="_blank">Logscape.com</a> | <a href="http://blog.logscape.com" target="_blank">Logscape Blog</a> | <a href="http://support.logscape.com" target="_blank">Logscape Support | <a href="logscape.github.io/apps.html" target="_blank">Logscape Apps</a>
+<a href="http://www.logscape.com" target="_blank">Logscape.com</a> | <a href="http://blog.logscape.com" target="_blank">Logscape Blog</a> | <a href="http://support.logscape.com" target="_blank">Logscape Support | <a href="http://logscape.github.io/apps.html" target="_blank">Logscape Apps</a>
 
 Logscape provides real-time visibility of log streams, interactive dashboarding, scalable distributed search, file exploration and alerting. Install and run one agent as a Manager (server + web interface) and ship logs by installing agents as Forwarders; alternatively, send network data via Syslog.
 

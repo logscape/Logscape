@@ -1,8 +1,8 @@
 # Logscape
 ## An Open-Source log management tool
-[Logscape Commercial Website](http://www.logscape.com) | [Logscape Blog](http://blog.logscape.com) | [Logscape Support](http://support.logscape.com)
+[Logscape.com](http://www.logscape.com) | [Logscape Blog](http://blog.logscape.com) | [Logscape Support](http://support.logscape.com) | [Logscape Apps](www.logscape.github.io/apps)
 
-Logscape is a big-data analysis tool. Using your logs and other data, Logscape produces clear dashboards and provides real-time alerts. All data is indexed on your system, whether locally, or using a centralised index store. Once indexed you can search the entire stack for a single term, or use precise functions and filters. Logscape is deployed on your infrastructure and provides a straight forward web interface, with enterprise ready access controls.
+Logscape is a big-data analysis tool which uses your logs to produce clear dashboards and provide real-time alerts. Once your data is indexed you can search the entire environment for a single term, or use precise functions and filters. Logscape is deployed on your infrastructure and provides a straight forward web interface.
 
 ## Features
 * Search log files at scale
@@ -21,9 +21,17 @@ Then run Logscape by following these steps.
 * Extract the .zip folder
 * Configure your [agents role](https://logscape.github.io/deploy.html) (Default: Manager) via the `configure.sh` located in ```/logscape/scripts/```
 * Start your agent via `logscape.sh start` or `logscape.bat`
-## Using Logscape
 
-Logscape is a monitoring tool for both log file analysis and environment wide instrumentation. Using [Logscape Apps](logscape.github.io/apps.html) it is possible to extract data from almost any system. Each installation ships with the Unix App and Windows App installed, and more can be downloaded from the [App page](logscape.github.io/apps.html) or alternatively you can [create your own](http://logscape.github.io/app-develop.html).
+## Using Logscape
+If it's your first time using Logscape, then you can read our [getting started guide](http://logscape.github.io/tutorials-walkthrough.html).
+A Logscape deployment consists of atleast one [manager]http://logscape.github.io/deploy-manager.html supported by any number of [indexstores](http://logscape.github.io/deploy-indexstore.html) recieving data from [forwarders](http://logscape.github.io/deploy-forwarder.html).
+
+The management agent will by default include forwarder and indexstore functionality whilst also exposing a web front-end which can be accessed via the `:8080` port.
+
+The sourcing of data within Logscape is controlled by [datasources](http://logscape.github.io/ds.html) which specify file paths, masks and age requirements for Logscape to ingest the data. Once ingested the data will be indexed and become available at search time via the web-front end, for either searching or the creation of [workspaces](http://logscape.github.io/workspaces.html). Users looking to map business logic onto their data can do so by applying [data types](http://logscape.github.io/types.html) onto their datasources, thus enriching the search experience.
+
+Navigation around the application is performed primarily via the left hand menu, with standard functionality such as workspaces, live tailing and searching available to all users. And more technical settings available to team leaders and adminsitrators via the settings interface.
+
 ## Deployment
 Logscape managers can be used in isolation however Logscape is best leveraged around your entire environment with [Forwarders](http://logscape.github.io/deploy-forwarder.html) shipping logs to [dedicated nodes](http://logscape.github.io/deploy-indexstore.html), the [Logscape support site](http://logscape.github.io/) features a [full deployment guide](http://logscape.github.io/deploy.html).
 

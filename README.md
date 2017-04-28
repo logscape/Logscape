@@ -34,7 +34,7 @@ View the <a href="http://logscape.github.io/tutorials-walkthrough.html" target="
 View different <a href="http://logscape.github.io/deploy.html" target="_blank">deployment configurations</a>
 
 ## Deployment
-A Logscape manager can be deployed in isolation - or alongside a href="http://logscape.github.io/deploy-forwarder.html" target="_blank">forwarders</a> and <a href="http://logscape.github.io/deploy-indexstore.html" target="_blank">Indexstores</a>.
+A Logscape manager can be deployed in isolation - or alongside <a href="http://logscape.github.io/deploy-forwarder.html" target="_blank">forwarders</a> and <a href="http://logscape.github.io/deploy-indexstore.html" target="_blank">Indexstores</a>.
 For more information read the <a href="http://logscape.github.io/deploy.html" target="_blank">full deployment guide</a>.
 
 ## Docker

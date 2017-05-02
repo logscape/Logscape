@@ -89,6 +89,15 @@ The artifacts of this build are as follows -
 |   └── Contains the expanded contents of the `downloads` folder
 └── system-bundles
 ```
+## Running Tests
+Logscape uses the Ant build manager for testing purposes. Each module can run individual tests, or the master module can be used to test the code baswe.
+To test a single module
+* Navigate to the specific module directory
+* Run `ant testSingle`
+
+To test the entire code base
+* Navigate to the `master` directory
+* Run `ant cleanTestAll`
 
 ## Module Breakdown
 `Boot` - Responsible for bootstrapping the agent process and managing its life cycle.

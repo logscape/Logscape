@@ -60,12 +60,12 @@ On a successful build, this will generate -
 The artifacts of this build are as follows -
 ```
 .
-├── logscape.sh // Used for running Logscape on Unix based systems
-├── logscape.bat // Used for running Logscape on Windows
-├── readme.txt // Explains how to run and configure Logscape
+├── logscape.sh // Runs Logscape on Unix based systems
+├── logscape.bat // Runs Logscape on Windows
+├── readme.txt
 ├── agent-log4j.properties // Log4j configuration file
 ├── log4j.properties // Log4j configuration file
-├── boot.properties // Used to configure boot parameters of this agent
+├── boot.properties // Configures boot parameters of this agent
 ├── boot.jar //Used by Logscape scripts
 ├── boot.sh //Used by Logscape scripts
 ├── boot.bat //Used by Logscape scripts
@@ -100,17 +100,17 @@ To test the entire code base
 * Run `ant cleanTestAll`
 
 ## Module Breakdown
-`Boot` - Responsible for bootstrapping the agent process and managing its life cycle.
+`Boot` - bootstraps the agent process and managing its life cycle.
 
-`Common` - Contains a series of commonly used low-level classes.
+`Common` - a series of commonly used low-level classes.
 
 `DashboardServer` - Responsible for the web front-end.
 
-`Lib` - Contains libraries commonly used throughout the project.
-
-`Master` - Storage of scripts to perform high-level operations.
-
 `Play` - Main web module.
+
+`Lib` - commonly used third-party libraries.
+
+`Master` - scripts to perform high-level operations i.e build.
 
 `Print` - Generates reports.
 

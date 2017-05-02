@@ -72,7 +72,7 @@ The artifacts of this build are as follows -
 ├── downloads
 |   └── contains downloaded files which will be distributed across the entire deployment
 ├── apps
-|   └── Jetty configiguration
+|   └── Jetty configuration
 ├── etc
 |   └── Service configuration
 ├── libs
@@ -90,7 +90,7 @@ The artifacts of this build are as follows -
 └── system-bundles
 ```
 ## Running Tests
-Logscape uses the Ant build manager for testing purposes. Each module can run individual tests, or the master module can be used to test the code baswe.
+Logscape uses the Ant build manager for testing purposes. Each module can run individual tests, or the master module can be used to test the code base.
 To test a single module
 * Navigate to the specific module directory
 * Run `ant testSingle`

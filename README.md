@@ -100,47 +100,47 @@ To test the entire code base
 * Run `ant cleanTestAll`
 
 ## Module Breakdown
-`Boot` - bootstraps the agent process and managing its life cycle.
+`Boot` - bootstraps the agent process and managing its life cycle. Generates `boot.jar`.
 
-`Common` - a series of commonly used low-level classes.
+`Common` - a series of commonly used low-level classes. Generates `common.jar`.
 
-`DashboardServer` - Responsible for the web front-end.
+`DashboardServer` - Responsible for the web front-end. Generates `dashboard.jar`.
 
-`Play` - Main web module.
+`Play` - Main web module. Generates `play-lib.zip` and `play.war`
 
 `Lib` - commonly used third-party libraries.
 
-`Master` - scripts to perform high-level operations i.e build.
+`Master` - scripts to perform high-level operations i.e build project.
 
-`Print` - Generates reports.
+`Print` - Generates reports. Generates `print.war`.
 
 `Replicator` - Manages the distribution of the contents of the `download` folder.
 
-`Root` - Displays the Logscape loading page.
+`Root` - Displays the Logscape loading page. Generates `root.war`.
 
-`SaaS-Meter` - Allows for multi-tenanted environments with data quotas.
+`SaaS-Meter` - Allows for multi-tenanted environments with data quotas. Generates `saas-meter.jar` and `test-saas-meter.jar`
 
-`Transport` - Non-blocking socket communication layer and RabbitMQ integration.
+`Transport` - Non-blocking socket communication layer and RabbitMQ integration. Generates `transport.jar`.
 
-`vs-admin` - User administration.
+`vs-admin` - User administration. Generates `vs-admin.jar` and `test-vs-admin.jar`.
 
-`vs-log` - Stores and indexes searches, dashboards, alerts etc
+`vs-log` - Stores and indexes searches, dashboards, alerts etc. Generates `vs-log.jar`, `vs-log-agent.jar` and `test-vslog-log.jar`.
 
-`vs-log-disco` - Extracts fields from data at ingest and search time.
+`vs-log-disco` - Extracts fields from data at ingest and search time. Generates `vs-log-disco.jar`.
 
-`vs-log-server` - Ships logs from Forwarders to Indexers.
+`vs-log-server` - Ships logs from Forwarders to Indexers. Generates `vs-log-server.jar` and `test-vs-log.jar`.
 
-`vso` - VScape orchestration.
+`vso` - VScape orchestration. Generates `vso.jar` and `test-vso.jar`.
 
-`vs-orm` - Maps objects into the VSpace datastore.
+`vs-orm` - Maps objects into the VSpace datastore. Generates `vs-orm.jar`.
 
-`vspace` - Storage of space objects and VScape services.
+`vspace` - Storage of space objects and VScape services. Generates `vspace.jar`.
 
-`vs-socket-server` - Logscape Socket Server
+`vs-socket-server` - Logscape Socket Server. Generates `vs-socket-server.jar` and `test-vs-socket-server.jar`.
 
-`vs-syslog-server` - Logscape Syslog Server
+`vs-syslog-server` - Logscape Syslog Server. Generates `vs-syslog.server` and `test-vs-syslog-server.jar`.
 
-`vs-util` - Utility module for chargeback and costing.
+`vs-util` - Utility module for chargeback and costing. Generates `vs-util.jar` and `test-vs-util.jar`
 
 ## Contact
 Please direct any queries to support@logscape.com

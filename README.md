@@ -18,6 +18,9 @@ Logscape provides real-time visibility of log streams, interactive dashboarding,
 ## Installation
 Quickstart using a <a href="https://github.com/logscape/Logscape/releases/latest" target="_blank">pre-built binary</a> and read our <a href="http://logscape.github.io/tutorials-walkthrough.html" target="_blank">getting started guide</a>.
 
+Alternatively, you can download via curl
+`curl -O http://logscape.com/download/Release-Opensource-Latest/Logscape-Opensource-Latest.zip`
+
 Pre-requisites -
 *  JRE 8 or above
 
@@ -38,7 +41,7 @@ A Logscape manager can be deployed in isolation - or alongside <a href="http://l
 For more information read the <a href="http://logscape.github.io/deploy.html" target="_blank">full deployment guide</a>.
 
 ## Docker
-Logscape docker images are available from <a href="https://hub.docker.com/r/logscape/logscape/" target="_blank">docker hub</a>.
+Logscape docker images are available from <a href="https://hub.docker.com/r/logscape/logscape-opensource/" target="_blank">docker hub</a>.
 
 ## Build from Source
 ```

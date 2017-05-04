@@ -25,7 +25,7 @@ Alternatively, you can download via curl
 
 `curl -O http://logscape.com/download/Release-Opensource-Latest/Logscape-Opensource-Latest.zip`
 
-Or run from docker images available on <a href="https://hub.docker.com/r/logscape/logscape-opensource/" target="_blank">docker hub</a>.
+Or run from docker images available on <a href="https://hub.docker.com/r/logscape/logscape-opensource/" target="_blank">docker hub</a>. Once downloaded `docker run` to start a Logscape manager.
 
 Run Logscape by following these steps.
 * Extract the .zip folder

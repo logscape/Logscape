@@ -23,7 +23,7 @@ Quickstart using a <a href="https://github.com/logscape/Logscape/releases/latest
 
 Alternatively, you can download via curl
 
-`curl -O http://logscape.com/download/Release-Opensource-Latest/Logscape-Opensource-Latest.zip`
+`curl -O http://logscape.net/download/Release-Opensource-Latest/Logscape-Opensource-Latest.zip`
 
 Or run from docker images available on <a href="https://hub.docker.com/r/logscape/logscape-opensource/" target="_blank">docker hub</a>. This image is based upon a ubuntu base, and will run a Logscape manager.
 

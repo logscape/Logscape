@@ -11,7 +11,7 @@ vmargs=-Xms256M -Xmx756M -Xss256k -XX:+HeapDumpOnOutOfMemoryError -Xrs \
 # Verbose GC
 #-verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:work/gc.log
 
-# Roles = dev.Management, dev.Forwarder, dev.IndexStore, dev.Failover
+# Roles = dev.Management, dev.Forwarder, dev.IndexStore
 sysprops=-DLOGSCAPE -Dvso.base.port=11000 -Dagent.role=dev.Management -Dmax.hot.days=14 -Dweb.app.port=8080 -Dfile.encoding=UTF-8 -Djava.io.tmpdir=work/tmp
 
 auto-deploy=WindowsApp,UnixApp

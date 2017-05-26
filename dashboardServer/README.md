@@ -1,7 +1,7 @@
 #Dashboard Server
 
 ##Description
-The Dashboard server is responsible for the Web front-end of Logscape when the agent is running in either the Manager, or Failover roles.
+The Dashboard server is responsible for the Web front-end of Logscape when the agent is running as a Manager.
 
 ##Configuration
 

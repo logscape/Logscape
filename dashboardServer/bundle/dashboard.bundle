@@ -11,7 +11,7 @@
   <services>
 	<Service>
 			<name>Dashboard</name>
-			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<resourceSelection>type containsAny 'Management'</resourceSelection>
 			<priority>10</priority>
 			<fork>true</fork>
 			<instanceCount>-1</instanceCount>

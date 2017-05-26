@@ -12,7 +12,7 @@
 		<name>LogServer</name>
 		<priority>100</priority>
 		<!-- prefer to run on a logServer type first -->
-		<resourceSelection>type containsAny 'IndexStore,LogServer,Management,Failover'</resourceSelection>
+		<resourceSelection>type containsAny 'IndexStore,LogServer,Management'</resourceSelection>
 		<fork>true</fork>
 		<background>true</background>
 		<pauseSeconds>1</pauseSeconds>

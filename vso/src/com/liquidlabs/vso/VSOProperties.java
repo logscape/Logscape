@@ -232,13 +232,13 @@ public class VSOProperties {
 		}
 	}
 	public static boolean isFailoverNode() {
-		return getResourceType().contains(FAILOVER);
+		return false;
 	}
 	public static long getClockSyncMins() {
 		return Integer.getInteger("clock.sync.mins", 5);
 	}
 	public static boolean isManager() {
-		return getResourceType().contains(MANAGEMENT) || getResourceType().contains(FAILOVER);
+		return getResourceType().contains(MANAGEMENT);
 	}
 	public static boolean isManagerOnly() {
 		return getResourceType().contains(MANAGEMENT);

@@ -10,7 +10,7 @@
 		<Service>
 			<name>WorkAccount</name>
 			<priority>100</priority>
-			<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+			<resourceSelection>type containsAny 'Management'</resourceSelection>
 			<fork>false</fork>
 			<background>true</background>
 			<instanceCount>-1</instanceCount>

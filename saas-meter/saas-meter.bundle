@@ -11,7 +11,7 @@
   	<Service>
 		<name>SAAS-Meter</name>
 		<priority>100</priority>
-		<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+		<resourceSelection>type containsAny 'Management'</resourceSelection>
 		<fork>true</fork>
 		<background>true</background>
 		<dependencies>vs-log-server-1.0:LogServer</dependencies>

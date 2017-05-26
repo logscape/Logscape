@@ -13,7 +13,7 @@
 			<name>LookupSpace</name>
 			<property>ServiceType=System</property>
 			<priority>1000</priority>
-			<resourceSelection>type equalsAny 'Management,Failover' AND id equals '0'</resourceSelection>
+			<resourceSelection>type equalsAny 'Management' AND id equals '0'</resourceSelection>
 			<fork>true</fork>
 			<background>false</background>
 			<costPerUnit>10</costPerUnit>
@@ -28,7 +28,7 @@
 			<name>ResourceSpace</name>
 			<property>ServiceType=System</property>
 			<priority>100</priority>
-			<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+			<resourceSelection>type equalsAny 'Management'</resourceSelection>
 			<fork>true</fork>
 			<background>true</background>
 			<instanceCount>-1</instanceCount>
@@ -44,7 +44,7 @@
 			<name>WorkAllocator</name>
 			<property>ServiceType=System</property>
 			<priority>100</priority>
-			<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+			<resourceSelection>type equalsAny 'Management'</resourceSelection>
 			<fork>true</fork>
 			<background>true</background>
 			<instanceCount>2</instanceCount>
@@ -59,7 +59,7 @@
 			<name>BundleSpace</name>
 			<property>ServiceType=System</property>
 			<priority>100</priority>
-			<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+			<resourceSelection>type equalsAny 'Management'</resourceSelection>
 			<fork>false</fork>
 			<background>true</background>
 			<instanceCount>-1</instanceCount>
@@ -75,7 +75,7 @@
 			<name>MonitorSpace</name>
 			<property>ServiceType=System</property>
 			<priority>100</priority>
-			<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+			<resourceSelection>type equalsAny 'Management'</resourceSelection>
 			<fork>false</fork>
 			<background>true</background>
 			<instanceCount>-1</instanceCount>

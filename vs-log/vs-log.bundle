@@ -13,7 +13,7 @@
 		<name>LogSpace</name>
 		<priority>100</priority>
 		<dependencies>vs-log-1.0:AggSpace</dependencies>
-		<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+		<resourceSelection>type containsAny 'Management'</resourceSelection>
 		<fork>true</fork>
 		<background>true</background>
 		<pauseSeconds>1</pauseSeconds>
@@ -44,7 +44,7 @@
       	<dependencies></dependencies>
 
 		<!-- use contains cause could run against LogManagement -->
-		<resourceSelection>type containsAny 'Management,Failover' AND id equals 3</resourceSelection>
+		<resourceSelection>type containsAny 'Management' AND id equals 3</resourceSelection>
 		<fork>true</fork>
 		<background>false</background>
 		<pauseSeconds>0</pauseSeconds>
@@ -76,7 +76,7 @@
 <!-- 	<Service>
       	<name>SLAEventWirer</name>
 	  	<priority>10</priority>
-		<resourceSelection>type equalsAny 'Management,Failover'</resourceSelection>
+		<resourceSelection>type equalsAny 'Management'</resourceSelection>
       	<fork>false</fork>
       	<background>true</background>
 		<pauseSeconds>0</pauseSeconds>

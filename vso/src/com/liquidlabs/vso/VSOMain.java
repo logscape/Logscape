@@ -83,16 +83,6 @@ public class VSOMain {
 				writeToStatus("\r\n\r\n STARTING *MANAGER* 6 profiles\r\n\r\n");
 				profiles = 6;
 				writeToStatus("Wait 30 seconds for the DASHBOARD on PORT:" + System.getProperty("web.app.port"));
-
-			} else if (VSOProperties.isFailoverNode()) {
-                bootManagement = true;
-				writeToStatus("\r\n\r\n STARTING AGENT Role:" + VSOProperties.getResourceType() + " 6 profiles\r\n\r\n");
-				profiles = 6;
-//				LOGGER.warn("Removing:" + VSpaceProperties.baseSpaceDir());
-//				FileUtil.deleteDir(new File(VSpaceProperties.baseSpaceDir()));
-				if (lookupAddress.toString().contains("localhost")){
-					writeToStatus("\r\n\r\n WARNING - AGENT has ManagementHost as 'stcp://localhost' - this Agent will fail unless on the same host!\r\n ** After editing setup.conf ensure you run configure(.sh/bat) **");
-				}
 			} else {
 				writeToStatus("\r\n\r\n STARTING AGENT Role:" + VSOProperties.getResourceType() + " 1 profile\r\n\r\n");
 				profiles = 1;
@@ -145,9 +135,6 @@ public class VSOMain {
 		LookupSpace lookupSpace = null;
 
 		// when the system is bounced we prefer services to start on the Management host
-		if (VSOProperties.isFailoverNode()) {
-			Thread.sleep(2 * 1000);
-		}
 		
 		writeToStatus("BOOT SEQUENCE WAIT");
 		String context = "_HA_VSOAgent";
@@ -256,10 +243,6 @@ public class VSOMain {
 		
 
         if (getManagerAddress() != null) lookupAddress = getManagerAddress();
-        String failoverAddress = getFailoverAddress();
-
-        if (failoverAddress != null) lookupAddress += "," + failoverAddress;
-
 
         LOGGER.info("BOOT Start - Creating BOOT Agent, Address:" + lookupAddress);
 

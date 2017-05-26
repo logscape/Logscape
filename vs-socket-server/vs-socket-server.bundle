@@ -11,7 +11,7 @@
   	<Service>
 		<name>SocketServer</name>
 		<priority>100</priority>
-		<resourceSelection>type containsAny  'SocketServer,Management,Failover,IndexStore'</resourceSelection>
+		<resourceSelection>type containsAny  'SocketServer,Management,IndexStore'</resourceSelection>
 		<fork>true</fork>
 		<background>true</background>
 		<pauseSeconds>0</pauseSeconds>

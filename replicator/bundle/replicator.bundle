@@ -40,7 +40,7 @@
       	<name>MgmtUploadService</name>
 	  	<priority>100</priority>
 	  	<dependencies>replicator-1.0:ReplicationService</dependencies>
-		<resourceSelection>type containsAny 'Management,Failover'</resourceSelection>
+		<resourceSelection>type containsAny 'Management'</resourceSelection>
       	<fork>false</fork>
       	<background>true</background>
       	<script>
@@ -84,7 +84,7 @@
       	<name>DownloadService</name>
 	  	<priority>10</priority>
 	  	<dependencies>replicator-1.0:MgmtUploadService,replicator-1.0:ReplicationService</dependencies>
-		<resourceSelection>type contains Forwarder OR type notContainsAny 'Management,Failover,IndexStore'</resourceSelection>
+		<resourceSelection>type contains Forwarder OR type notContainsAny 'Management,IndexStore'</resourceSelection>
 		<property>RFSUploader=false</property>
       	<fork>false</fork>
       	<background>true</background>

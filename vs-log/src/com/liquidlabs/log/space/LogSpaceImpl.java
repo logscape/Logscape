@@ -109,7 +109,7 @@ public class LogSpaceImpl implements LogSpace {
         boolean firstTime = firstTime();
 
         try {
-            boolean managerOnly = VSOProperties.isManagerOnly() || VSOProperties.isFailoverNode();
+            boolean managerOnly = VSOProperties.isManagerOnly();
             if (managerOnly && firstTime) {
                 LogFilters existingFilters = logDataService.findById(LogFilters.class, LogFilters.key);
                 if (existingFilters == null) {

@@ -12,7 +12,7 @@
    <Service>
       	<name>Indexer</name>
 	  	<priority>10</priority>	
-		<resourceSelection>type containsAny 'Management,Native,Agent,Indexer,Failover,Tailer,Server,IndexStore'</resourceSelection>
+		<resourceSelection>type containsAny 'Management,Native,Agent,Indexer,Tailer,Server,IndexStore'</resourceSelection>
       	<fork>false</fork>
       	<background>true</background>
 		<pauseSeconds>0</pauseSeconds>

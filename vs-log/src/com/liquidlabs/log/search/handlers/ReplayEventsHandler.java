@@ -52,10 +52,8 @@ public class ReplayEventsHandler implements LogScanningHandler {
     public void handle(FieldSet fieldSet, String[] fields, Query query, HistoEvent histo, long bucketTime,
                        int lineNumber, long fileStartTime, long fileEndTime, long eventTime, String lineData, MatchResult matchResult, long requestStartTimeMs, long requestEndTimeMs, long bucketWidth) {
 
-        // We want to send a MAX or N items per host source
         try {
 
-        if (request.getHits(hostHash) < maxEventsPerHost) {
             query.increment(hostHash);
 
 
@@ -69,7 +67,6 @@ public class ReplayEventsHandler implements LogScanningHandler {
             ReplayEvent replayEvent = new ReplayEvent(sourceURI, lineNumber, query.getSourcePos(), query.groupId(), subscriber, eventTime, lineData);
             replayEvent.setDefaultFieldValues(fieldSet.getId(), hostname, filenameOnly, path, tags, agentType, sourceURI, new Integer(lineData.length()).toString());
             aggSpace.write(replayEvent, false, requestHash, logId, eventTime);
-        }
         } finally {
             if (next != null) next.handle(fieldSet, fields, query, histo, bucketTime, lineNumber, fileStartTime, fileEndTime, eventTime, lineData, matchResult, requestStartTimeMs, requestEndTimeMs, bucketWidth);
         }

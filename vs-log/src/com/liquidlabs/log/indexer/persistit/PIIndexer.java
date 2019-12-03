@@ -11,7 +11,6 @@ import com.liquidlabs.log.fields.FieldSets;
 import com.liquidlabs.log.index.*;
 import com.liquidlabs.log.indexer.AbstractIndexer;
 import com.liquidlabs.log.indexer.DelegatingFileStore;
-import com.liquidlabs.log.indexer.LUFileStore;
 import com.liquidlabs.log.indexer.LineStore;
 import com.logscape.disco.indexer.*;
 import com.logscape.disco.indexer.persistit.PersisitDbFactory;
@@ -65,11 +64,11 @@ public class PIIndexer extends AbstractIndexer  {
         try {
 
             fileStore = new DelegatingFileStore();
-            if (System.getProperty("lucene.file.index","true").equals("false")) {
-                fileStore.setDelegate(true, new LUFileStore(environment,  scheduler));
-            } else {
+//            if (System.getProperty("lucene.file.index","true").equals("false")) {
+//                fileStore.setDelegate(true, new LUFileStore(environment,  scheduler));
+//            } else {
                 fileStore.setDelegate(false, new PIFileStore(getStore(environment, "LF", PIFileStore.threadLocal), scheduler));
-            }
+//            }
 
             LOGGER.info("Environment:" + environment);
             FileUtil.mkdir(environment);

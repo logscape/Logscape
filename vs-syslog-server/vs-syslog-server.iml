@@ -13,7 +13,6 @@
     <orderEntry type="module" module-name="common" />
     <orderEntry type="module" module-name="vso" />
     <orderEntry type="module" module-name="vs-socket-server" />
-    <orderEntry type="module" module-name="saas-meter" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -26,8 +25,11 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="transport" />
-    <orderEntry type="module" module-name="saas-meter" />
     <orderEntry type="module" module-name="vs-socket-server" />
+    <orderEntry type="module" module-name="vso" />
+    <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="vs-socket-server" />
+    <orderEntry type="module" module-name="transport" />
     <orderEntry type="module" module-name="vso" />
     <orderEntry type="module" module-name="common" />
   </component>
@@ -225,4 +227,3 @@
     </option>
   </component>
 </module>
-

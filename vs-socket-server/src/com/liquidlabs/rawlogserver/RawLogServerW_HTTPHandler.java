@@ -7,7 +7,7 @@ import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.rawlogserver.handler.*;
 import com.liquidlabs.rawlogserver.handler.fileQueue.DefaultFileQueuerFactory;
-import com.liquidlabs.rawlogserver.handler.fileQueue.SAASFileQueuerFactory;
+//import com.liquidlabs.rawlogserver.handler.fileQueue.SAASFileQueuerFactory;
 //import com.liquidlabs.rawlogserver.http.handler.HttpHandler;
 //import com.liquidlabs.rawlogserver.http.handler.HttpMethod;
 import com.liquidlabs.transport.EndPoint;
@@ -20,8 +20,6 @@ import com.liquidlabs.vso.agent.ResourceProfile;
 import com.liquidlabs.vso.lookup.LookupSpace;
 import com.liquidlabs.vso.lookup.LookupSpaceImpl;
 import com.liquidlabs.vso.lookup.ServiceInfo;
-import com.logscape.meter.MeterService;
-import com.logscape.meter.MeterServiceImpl;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -102,14 +100,14 @@ public class RawLogServerW_HTTPHandler implements Receiver {
         LOGGER.info("Config Property:" + SOCKET_SERVER_HOSTADDR_ONLY + " :" + hostAddressOnly);
 
 //        if (Boolean.getBoolean("metering.enabled")) {
-        if (false) {
-            SAASFileQueuerFactory saasFileQueuerFactory = new SAASFileQueuerFactory(MeterServiceImpl.getRemoteService("mplex", lookupSpace, proxyFactory, true));
-            ContentFilteringLoggingHandler contentWriter = new ContentFilteringLoggingHandler(saasFileQueuerFactory);
-            StandardLoggingHandler logWriter = new StandardLoggingHandler(proxyFactory.getScheduler());
-            logWriter.setTimeStampingEnabled(false);
-            this.handler = new PerAddressHandler(contentWriter);
-
-        } else if (false) {
+//        if (false) {
+//            SAASFileQueuerFactory saasFileQueuerFactory = new SAASFileQueuerFactory(MeterServiceImpl.getRemoteService("mplex", lookupSpace, proxyFactory, true));
+//            ContentFilteringLoggingHandler contentWriter = new ContentFilteringLoggingHandler(saasFileQueuerFactory);
+//            StandardLoggingHandler logWriter = new StandardLoggingHandler(proxyFactory.getScheduler());
+//            logWriter.setTimeStampingEnabled(false);
+//            this.handler = new PerAddressHandler(contentWriter);
+//
+//        } else if (false) {
 //            ScheduledExecutorService scheduler = ExecutorService.newScheduledThreadPool(1, new NamingThreadFactory("SPL-Q"));
 //
 //
@@ -136,13 +134,13 @@ public class RawLogServerW_HTTPHandler implements Receiver {
 //			contentMapper.addHandler("_time", splunkPerAddressStreamer);
 //			contentMapper.addHandler("_linebreaker", splunkPerAddressStreamer);
 //			this.handler = contentMapper;
-
-        } else {
+//
+//        } else {
             ContentFilteringLoggingHandler cfH = new ContentFilteringLoggingHandler(new DefaultFileQueuerFactory());
             CharChunkingHandler nlChunker = new CharChunkingHandler(cfH);
             PerAddressHandler paStreamer = new PerAddressHandler(nlChunker);
             this.handler = paStreamer;
-        }
+//        }
         this.handler.start();
 
         LOGGER.info("Using Handler:" + this.handler);
@@ -221,7 +219,6 @@ public class RawLogServerW_HTTPHandler implements Receiver {
 
     static ProxyFactoryImpl proxyFactory = null;
     static LookupSpace lookupSpace = null;
-    static MeterService meterService = null;
 
     static void setupServiceInfo(int port, String rootDir, String lookupURI, String location, final RawLogServerW_HTTPHandler rawLogServer, URI uri) throws URISyntaxException {
 
@@ -247,7 +244,6 @@ public class RawLogServerW_HTTPHandler implements Receiver {
                     if (transportFactoryImpl != null) transportFactoryImpl.stop();
                 }
             });
-            meterService = MeterServiceImpl.getRemoteService("socketServerClient", lookupSpace, proxyFactory, true);
         } catch (Throwable t) {
             LOGGER.warn("Failed to setup service" , t);
         }

@@ -60,59 +60,59 @@ public class SLAContainerStatusTest extends TestCase {
 	}
 	
 	@SuppressWarnings("unchecked")
-	protected void abomination() throws Exception {
-		System.setProperty("validation.disabled", "true");
-		
-		resourceSpaceMock = context.mock(ResourceSpace.class);
-		monitorSpaceMock = context.mock(MonitorSpace.class);
-		consumerMock = context.mock(Consumer.class);
-		slaMock = context.mock(SLA.class);
-		workAllocatorMock = context.mock(WorkAllocator.class);
-		proxyFactory = context.mock(ProxyFactory.class);
-		resourceAgent = context.mock(ResourceAgent.class);
-		
-		final ArrayList<Variable> variables = new ArrayList<Variable>();
-		variables.add(new Variable("a", "b"));
-		
-		context.checking(new Expectations() {{
-			atLeast(1).of(resourceSpaceMock).registerAllocListener(with(any(AllocListener.class)), with(any(String.class)), with(any(String.class)));
-			atLeast(1).of(resourceSpaceMock).renewAllocLeasesForOwner(with(any(String.class)), with(any(Integer.class)));
-			atLeast(0).of(resourceSpaceMock).unregisterAllocListener(with(any(String.class)));
-			atLeast(0).of(resourceSpaceMock).getResourceCount(with(any(String.class))); will(returnValue(1));
-			atLeast(1).of(monitorSpaceMock).write(with(any(Metrics.class)));
-			one(proxyFactory).makeRemoteable(with(any(Remotable.class))); will(returnValue(null));
-			
-		}});
-		context.checking(new Expectations() {{
-			one(slaMock).setScriptLogger(with(any(Logger.class)));
-			atLeast(1).of(slaMock).getVariables(); will(returnValue(variables));
-			atLeast(1).of(slaMock).currentPriority(with(any(Integer.class))); will(returnValue(10));
-			atLeast(1).of(slaMock).getConsumerClass(); will(returnValue(DumbConsumer.class.getName()));
-			atLeast(1).of(slaMock).getTimePeriods(); will(returnValue(new ArrayList<TimePeriod>()));
-		}}
-		);
-		context.checking(new Expectations() {{
-			one(consumerMock).setVariables(with(any(java.util.Map.class)));
-			one(consumerMock).setInfo(with(any(String.class)), with(any(String.class)), with(any(String.class)));
-			one(consumerMock).getUI(); will(returnValue(null));
-			one(consumerMock).collectMetrics(); will(returnValue(metrics));
-			one(consumerMock).getUsedResourceCount(); will(returnValue(1));
-		}}
-		);
-		context.checking(new Expectations() {{
-			atLeast(1).of(proxyFactory).getScheduler(); will(returnValue(Executors.newScheduledThreadPool(2)));
-			one(proxyFactory).registerMethodReceiver(with(any(String.class)), with(anything()));
-		}}
-		);
-//		proxyFactory.stubs();
-		
-		container = new SLAContainer("resourceId", "serviceToRun", new WorkAssignment(),
-				"consumerName", consumerMock, slaMock,
-				"sla.xml", resourceSpaceMock, workAllocatorMock, monitorSpaceMock, new URI("localhost"),
-				"", "bundleName", null, proxyFactory, resourceAgent, new SLAValidator());
-		
-		System.out.println(" ================================= starting:"  + getName());
-	}
+//	protected void abomination() throws Exception {
+//		System.setProperty("validation.disabled", "true");
+//
+//		resourceSpaceMock = context.mock(ResourceSpace.class);
+//		monitorSpaceMock = context.mock(MonitorSpace.class);
+//		consumerMock = context.mock(Consumer.class);
+//		slaMock = context.mock(SLA.class);
+//		workAllocatorMock = context.mock(WorkAllocator.class);
+//		proxyFactory = context.mock(ProxyFactory.class);
+//		resourceAgent = context.mock(ResourceAgent.class);
+//
+//		final ArrayList<Variable> variables = new ArrayList<Variable>();
+//		variables.add(new Variable("a", "b"));
+//
+//		context.checking(new Expectations() {{
+//			atLeast(1).of(resourceSpaceMock).registerAllocListener(with(any(AllocListener.class)), with(any(String.class)), with(any(String.class)));
+//			atLeast(1).of(resourceSpaceMock).renewAllocLeasesForOwner(with(any(String.class)), with(any(Integer.class)));
+//			atLeast(0).of(resourceSpaceMock).unregisterAllocListener(with(any(String.class)));
+//			atLeast(0).of(resourceSpaceMock).getResourceCount(with(any(String.class))); will(returnValue(1));
+//			atLeast(1).of(monitorSpaceMock).write(with(any(Metrics.class)));
+//			one(proxyFactory).makeRemoteable(with(any(Remotable.class))); will(returnValue(null));
+//
+//		}});
+//		context.checking(new Expectations() {{
+//			one(slaMock).setScriptLogger(with(any(Logger.class)));
+//			atLeast(1).of(slaMock).getVariables(); will(returnValue(variables));
+//			atLeast(1).of(slaMock).currentPriority(with(any(Integer.class))); will(returnValue(10));
+//			atLeast(1).of(slaMock).getConsumerClass(); will(returnValue(DumbConsumer.class.getName()));
+//			atLeast(1).of(slaMock).getTimePeriods(); will(returnValue(new ArrayList<TimePeriod>()));
+//		}}
+//		);
+//		context.checking(new Expectations() {{
+//			one(consumerMock).setVariables(with(any(java.util.Map.class)));
+//			one(consumerMock).setInfo(with(any(String.class)), with(any(String.class)), with(any(String.class)));
+//			one(consumerMock).getUI(); will(returnValue(null));
+//			one(consumerMock).collectMetrics(); will(returnValue(metrics));
+//			one(consumerMock).getUsedResourceCount(); will(returnValue(1));
+//		}}
+//		);
+//		context.checking(new Expectations() {{
+//			atLeast(1).of(proxyFactory).getScheduler(); will(returnValue(Executors.newScheduledThreadPool(2)));
+//			one(proxyFactory).registerMethodReceiver(with(any(String.class)), with(anything()));
+//		}}
+//		);
+////		proxyFactory.stubs();
+//
+//		container = new SLAContainer("resourceId", "serviceToRun", new WorkAssignment(),
+//				"consumerName", consumerMock, slaMock,
+//				"sla.xml", resourceSpaceMock, workAllocatorMock, monitorSpaceMock, new URI("localhost"),
+//				"", "bundleName", null, proxyFactory, resourceAgent, new SLAValidator());
+//
+//		System.out.println(" ================================= starting:"  + getName());
+//	}
     public void testDoesSquatCozThisDoesntWorkOnTeamCity() {}
 
 	public void xtestShouldPerformAddAction() throws Exception {

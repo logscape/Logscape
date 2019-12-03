@@ -13,9 +13,10 @@
     <orderEntry type="module" module-name="transport" />
     <orderEntry type="module" module-name="lib" />
     <orderEntry type="module" module-name="vso" />
-    <orderEntry type="module" module-name="saas-meter" />
     <orderEntry type="module" module-name="transport" />
-    <orderEntry type="module" module-name="saas-meter" />
+    <orderEntry type="module" module-name="vso" />
+    <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="transport" />
     <orderEntry type="module" module-name="vso" />
     <orderEntry type="module" module-name="common" />
   </component>

@@ -9,7 +9,7 @@
 	<property name="dep3" value="vspace"/>
 	<property name="dep4" value="vs-orm"/>
 	<property name="dep5" value="vso"/>
-    <property name="dep6" value="saas-meter"/>
+<!--    <property name="dep6" value="saas-meter"/>-->
 	<property name="dep7" value="vs-admin"/>
 	<property name="dep8" value="vs-log"/>
 	<property name="bundle" value="${dist}/bundle"/>
@@ -25,7 +25,7 @@
 		<fileset dir="../${dep3}/dist" includes="*.jar"/>
 		<fileset dir="../${dep4}/dist" includes="*.jar"/>
 		<fileset dir="../${dep5}/dist" includes="*.jar"/>
-        <fileset dir="../${dep6}/dist" includes="*.jar"/>
+<!--        <fileset dir="../${dep6}/dist" includes="*.jar"/>-->
 		<fileset dir="../${dep7}/dist" includes="*.jar"/>
 		<fileset dir="../${dep8}/dist" includes="*.jar"/>
 	</path>

@@ -9,7 +9,6 @@ import com.liquidlabs.common.regex.SimpleQueryConvertor;
 import com.liquidlabs.rawlogserver.handler.fileQueue.FileQueuer;
 import com.liquidlabs.rawlogserver.handler.fileQueue.FileQueuerFactory;
 import com.liquidlabs.vso.deployment.ServiceTestHarness;
-import com.logscape.meter.Meter;
 import javolution.util.FastMap;
 import jregex.Matcher;
 import jregex.Pattern;

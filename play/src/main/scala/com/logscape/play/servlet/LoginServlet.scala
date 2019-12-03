@@ -8,7 +8,6 @@ import org.fusesource.scalate.util.Logging
 import Stuff._
 import org.apache.log4j.Logger
 import com.liquidlabs.admin.User
-import com.logscape.meter.Meter
 import java.lang.Throwable
 import scala.Throwable
 
@@ -20,7 +19,6 @@ class LoginServlet extends HttpServlet with Logging
    */
   lazy val routes: Map[String, (Request) => Map[String, Any]] = Map("/search" -> search, "/index" -> index, "/play/keep-alive" -> keepAlive)
   lazy val adminSpace = ServicesLookup.getInstance(ports.DASHBOARD).getAdminSpace
-//  lazy val meterService = ServicesLookup.getInstance(ports.DASHBOARD).getMeterService
 
   private def simplePath(path:String) = path match {
     case null => "/index"
@@ -57,14 +55,6 @@ class LoginServlet extends HttpServlet with Logging
       val clientIp = req.getRemoteAddr()
       val clientHost= req.getRemoteHost()
 
-
-
-//      if (meterService != null || adminSpace != null) {
-//        val message: String = "meterService is null:" + (meterService == null) + " OR adminSpace is null: " + (adminSpace == null)
-//        error(message)
-//        auditLogger.info(message);
-//        redirToLogin(req, resp, user, clientIp, clientHost)
-//      } else
       if (authorise(user, pwd)) {
         val user1: User = adminSpace.getUser(user)
         req.getSession.setAttribute("clientIp", clientIp)
@@ -109,12 +99,6 @@ class LoginServlet extends HttpServlet with Logging
   }
 
   def storeUserSession(session:HttpSession, userId:String) = {
-//    var meter = meterService.get(userId)
-//    if (meter == null) {
-//      meter = new Meter(userId, "", 1024)
-//      meter.setLastDailyVolumeBytes(100);
-//    };
-    //var user = new com.logscape.portal.User(userId, meter.getSecurityToken, meter.hostsString, meter.getDailyQuotaMBytes.intValue,  meter.getRetentionDays, meter.getDailyMBytes.intValue, meter.active)
     var user = new com.logscape.portal.User(userId, "0000", "", 9999,  9999, 9999, true)
     session.setAttribute("session", new com.logscape.portal.Session(userId, user))
   }

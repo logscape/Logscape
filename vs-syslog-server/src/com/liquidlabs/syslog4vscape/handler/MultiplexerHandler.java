@@ -2,10 +2,10 @@ package com.liquidlabs.syslog4vscape.handler;
 
 import com.liquidlabs.common.DateUtil;
 import com.liquidlabs.rawlogserver.handler.*;
-import com.liquidlabs.rawlogserver.handler.fileQueue.SAASFileQueuerFactory;
+//import com.liquidlabs.rawlogserver.handler.fileQueue.SAASFileQueuerFactory;
+import com.liquidlabs.rawlogserver.handler.fileQueue.DefaultFileQueuerFactory;
 import com.liquidlabs.transport.proxy.ProxyFactory;
 import com.liquidlabs.vso.lookup.LookupSpace;
-import com.logscape.meter.MeterServiceImpl;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormatter;
@@ -30,7 +30,6 @@ import java.util.Map;
  */
 public class MultiplexerHandler  implements SyslogServerSessionEventHandlerIF {
     private final static Logger LOGGER = Logger.getLogger(MultiplexerHandler.class);
-    private SAASFileQueuerFactory saasFileQueuerFactory;
 
     private StreamHandler handler;
     private ProxyFactory pf;
@@ -41,9 +40,8 @@ public class MultiplexerHandler  implements SyslogServerSessionEventHandlerIF {
     public MultiplexerHandler(ProxyFactory pf, LookupSpace luSpace, String rootDir) {
         this.pf = pf;
         this.rootDir = rootDir;
-        saasFileQueuerFactory = new SAASFileQueuerFactory(MeterServiceImpl.getRemoteService("mplex", luSpace, pf, true));
 
-        ContentFilteringLoggingHandler contentWriter = new ContentFilteringLoggingHandler(saasFileQueuerFactory);
+        ContentFilteringLoggingHandler contentWriter = new ContentFilteringLoggingHandler(new DefaultFileQueuerFactory());
         StandardLoggingHandler logWriter = new StandardLoggingHandler(pf.getScheduler());
         logWriter.setTimeStampingEnabled(false);
         this.handler = new PerAddressHandler(contentWriter);

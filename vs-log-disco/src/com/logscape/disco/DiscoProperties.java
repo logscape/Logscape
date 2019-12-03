@@ -39,9 +39,6 @@ public class DiscoProperties {
     public static String getFunctionSplit() {
         return "!";
     }
-    public static boolean isMeteringEnabled() {
-        return Boolean.getBoolean("metering.enabled");
-    }
 
     public static int getMaxKVDiscoveredFieldValueLength() {
         return Integer.getInteger("kv.max.value.length", 128);

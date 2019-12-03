@@ -37,9 +37,6 @@
 						<include name="*snappy*"/>
 						
 					</fileset>
-                    <fileset dir="../lib/lib/elasticsearch-1.1.1" includes="*lucene*"/>
-
-
 		</copy>
 
         <copy todir="${build}/${artifact-id}/lib" verbose="true">

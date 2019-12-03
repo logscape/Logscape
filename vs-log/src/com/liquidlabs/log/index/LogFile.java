@@ -9,7 +9,6 @@ import com.liquidlabs.common.collection.CompactCharSequence;
 import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.common.file.raf.BreakRule;
 import com.liquidlabs.log.LogProperties;
-import org.apache.lucene.document.*;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 
@@ -371,54 +370,6 @@ public class LogFile implements KryoSerializable {
     public String getFileNameOnly() {
         return FileUtil.getFileNameOnly(fileName.toString());
     }
-    public Document toDocument() {
-        LogFile logFile = this;
-        final Document document = new Document();
-        document.add(new IntField("appendable", logFile.isAppendable() ? 1 : 0, Field.Store.YES));
-        document.add(new LongField("endMs", logFile.getEndTime(), Field.Store.YES));
-        document.add(new StringField("fieldSetId", logFile.getFieldSetId(), Field.Store.YES));
-        document.add(new StringField("filename", logFile.getFileName(), Field.Store.YES));
-        document.add(new StringField("firstLine", logFile.firstLine(), Field.Store.YES));
-        document.add(new IntField("id", logFile.getId(), Field.Store.YES));
-        document.add(new IntField("lineCount", logFile.getLineCount(), Field.Store.YES));
-        document.add(new StringField("newLineRule", logFile.getNewLineRule(), Field.Store.YES));
-        document.add(new LongField("pos", logFile.getPos(), Field.Store.YES));
-        document.add(new IntField("minLineLength", logFile.getMinLineLength(), Field.Store.YES));
-        document.add(new LongField("startMs", logFile.getStartTime(), Field.Store.YES));
-        document.add(new StringField("tags", logFile.getTags(), Field.Store.YES));
-        document.add(new StringField("timeFormat", logFile.getTimeFormat(), Field.Store.YES));
-
-        return document;
-
-    }
-    public LogFile(Document doc) {
-        this.appendable = doc.getField("appendable").numericValue().intValue() == 1;
-        this.endTime = doc.getField("endMs").numericValue().longValue();
-        this.fieldSetId = getStringField(doc, "fieldSetId");
-        this.fileName = getStringField(doc, "filename");
-        this.firstLine = getStringField(doc, "firstLine");
-        this.logId = doc.getField("id").numericValue().intValue();
-        this.lineCount = doc.getField("lineCount").numericValue().intValue();
-        this.newLineRule = getStringField(doc, "newLineRule");
-        this.pos = doc.getField("pos").numericValue().longValue();
-        this.minLineLength = (short) doc.getField("minLineLength").numericValue().intValue();
-        this.startTime = doc.getField("startMs").numericValue().longValue();
-        this.tags = getStringField(doc, "tags");
-        this.timeFormat = getStringField(doc, "timeFormat");
-
-        String[] hostPath = getHostnameFromPath(fileName.toString());
-        if (hostPath != null) {
-            hostname = new CompactCharSequence(hostPath[0]);
-            fwdPath = new CompactCharSequence(hostPath[1]);
-        }
-    }
-
-    private CompactCharSequence getStringField(Document doc, String name) {
-        return  new CompactCharSequence(doc.getField(name).stringValue());
-    }
-
-
-
     public static void dedup(List<LogFile> results) {
         HashMap<CompactCharSequence, CompactCharSequence> cached = new HashMap<CompactCharSequence, CompactCharSequence>();
         for (LogFile result : results) {

@@ -11,7 +11,6 @@
     <property name="dep5" value="vs-log"/>
     <property name="dep6" value="vs-log-disco"/>
     <property name="dep7" value="vs-admin"/>
-    <property name="dep8" value="saas-meter"/>
     <property name="dep9" value="services"/>
 
     <property name="root" value="../"/>
@@ -74,7 +73,6 @@
         <fileset dir="${root}/${dep5}/dist" includes="*.jar"/>
         <fileset dir="${root}/${dep6}/dist" includes="*.jar"/>
         <fileset dir="${root}/${dep7}/dist" includes="*.jar"/>
-        <fileset dir="${root}/${dep8}/dist" includes="*.jar"/>
         <fileset dir="${root}/${dep9}/dist" includes="*.jar"/>
         <fileset dir="${root}/vspace/dist" includes="*.jar"/>
         <fileset dir="${root}/vs-orm/dist" includes="*.jar"/>
@@ -131,9 +129,6 @@
     </target>
     <target name="play-war" depends="scala-compile,play-lib">
         <mkdir dir="${build}/war/lib" />
-        <copy todir="${build}/war/lib" verbose="true">
-            <fileset dir="../saas-meter/dist" includes="*.jar" />
-        </copy>
 
         <war destfile="build/${war}" webxml="${webinf}/web.xml">
             <classes dir="build/classes"/>

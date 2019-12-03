@@ -9,7 +9,7 @@
 	<property name="dep2" value="transport"/>
 	<property name="dep3" value="vspace"/>
 	<property name="dep4" value="vso"/>
-    <property name="dep5" value="saas-meter"/>
+<!--    <property name="dep5" value="saas-meter"/>-->
     <property name="dep6" value="vs-socket-server"/>
 
 	<property name="bundle" value="${dist}/bundle"/>	
@@ -22,7 +22,7 @@
 		<fileset dir="../${dep2}/dist" includes="*.jar"/>
 		<fileset dir="../${dep3}/dist" includes="*.jar"/>
         <fileset dir="../${dep4}/dist" includes="*.jar"/>
-		<fileset dir="../${dep5}/dist" includes="*.jar"/>
+<!--		<fileset dir="../${dep5}/dist" includes="*.jar"/>-->
         <fileset dir="../${dep6}/dist" includes="*.jar"/>
 		<fileset dir="lib" includes="*.jar"/>
 	</path>

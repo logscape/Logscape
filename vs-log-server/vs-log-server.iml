@@ -16,10 +16,14 @@
     <orderEntry type="module" module-name="vspace" />
     <orderEntry type="module" module-name="vs-log-disco" />
     <orderEntry type="module" module-name="transport" />
-    <orderEntry type="module" module-name="test" />
     <orderEntry type="module" module-name="vs-log-disco" />
     <orderEntry type="module" module-name="vso" />
     <orderEntry type="module" module-name="vs-log" />
+    <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="vs-log" />
+    <orderEntry type="module" module-name="transport" />
+    <orderEntry type="module" module-name="vs-log-disco" />
+    <orderEntry type="module" module-name="vso" />
     <orderEntry type="module" module-name="common" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">

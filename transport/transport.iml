@@ -12,6 +12,8 @@
     <orderEntry type="module" module-name="common" exported="" />
     <orderEntry type="module" module-name="vso" />
     <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="vso" />
+    <orderEntry type="module" module-name="common" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
@@ -207,4 +209,3 @@
     </option>
   </component>
 </module>
-

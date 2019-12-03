@@ -47,7 +47,7 @@
 
 
     <target name="compile" depends="init">
-        <javac srcdir="src" destdir="${classes}" debug="false" target="1.7" source="1.7" fork="true">
+        <javac srcdir="src" destdir="${classes}" debug="false" fork="true">
             <classpath>
 
                 <path refid="compile.classpath" />

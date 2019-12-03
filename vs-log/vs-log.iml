@@ -32,6 +32,13 @@
     <orderEntry type="module" module-name="vso" />
     <orderEntry type="module" module-name="common" />
     <orderEntry type="module" module-name="LicenseServer" />
+    <orderEntry type="module" module-name="transport" />
+    <orderEntry type="module" module-name="vs-log-disco" />
+    <orderEntry type="module" module-name="vs-orm" />
+    <orderEntry type="module" module-name="vso" />
+    <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="vspace" />
+    <orderEntry type="module" module-name="vs-admin" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">

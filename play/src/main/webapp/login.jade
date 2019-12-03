@@ -2,7 +2,6 @@
 -@ var httpPort: String = com.liquidlabs.dashboard.server.DashboardProperties.getHttpPort
 -@ var httpsPort: String = com.liquidlabs.dashboard.server.DashboardProperties.getHttpsPort
 -@ var eulaAccepted: Boolean = com.liquidlabs.services.ServicesLookup.getInstance(com.liquidlabs.vso.VSOProperties.ports.DASHBOARD).getAdminSpace.hasAcceptedEula
--@ var meteringEnabled: Boolean = java.lang.Boolean.getBoolean("metering.enabled")
 -@ val buildId: String = com.liquidlabs.dashboard.server.DashboardProperties.getBuildId
 -@ val versionId: String = com.liquidlabs.dashboard.server.DashboardProperties.getVersionId
 - attributes("layout") = "/WEB-INF/scalate/layouts/login.jade"
@@ -50,8 +49,6 @@
 
             .span10
             a#httpsLink(http="#{httpPort}" https="#{httpsPort}" href="https://lladhf:#{httpsPort}")
-            - if(meteringEnabled)
-                a(href="/saas-portal" style="") Sign up
 
             div(style="display:inline;float:right;")
                 a(href="login?lang=en") EN

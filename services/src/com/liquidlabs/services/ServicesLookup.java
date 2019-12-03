@@ -27,8 +27,6 @@ import com.liquidlabs.vso.lookup.LookupSpace;
 import com.liquidlabs.vso.lookup.LookupSpaceImpl;
 import com.liquidlabs.vso.resource.ResourceSpace;
 import com.liquidlabs.vso.resource.ResourceSpaceImpl;
-import com.logscape.meter.MeterService;
-import com.logscape.meter.MeterServiceImpl;
 import org.apache.log4j.Logger;
 import org.eclipse.jetty.deploy.DeploymentManager;
 import org.eclipse.jetty.webapp.WebAppContext;
@@ -60,10 +58,6 @@ public class ServicesLookup {
     private ReplicationService replicationService;
     private DeploymentService deploymentService;
     private Uploader uploader;
-    private MeterService meterService;
-
-    public static boolean isLicensed = false;
-
 
     private ServicesLookup(VSOProperties.ports port) throws UnknownHostException, URISyntaxException {
         if (Boolean.getBoolean("test.mode") == true) return;
@@ -105,22 +99,7 @@ public class ServicesLookup {
         LOGGER.info("Loading Uploader");
         uploader = proxyFactory.getRemoteService(Uploader.NAME, Uploader.class, System.getProperty("vs.agent.address", "stcp://localhost:11003"));
 
-        proxyFactory.getScheduler().execute(new Runnable() {
-            @Override
-            public void run() {
-                LOGGER.info("Loading MeterService");
-                meterService = MeterServiceImpl.getRemoteService("Dashboard", lookupSpace, proxyFactory, true);
-            }
-        });
-
     }
-    public static boolean isLicensed() {
-        ServicesLookup.getInstance(VSOProperties.ports.DASHBOARD);
-        return isLicensed;
-    }
-
-
-
     public synchronized static ServicesLookup getInstance(VSOProperties.ports port) {
 
 
@@ -135,7 +114,6 @@ public class ServicesLookup {
                 e.printStackTrace();
             }
         }
-        isLicensed = INSTANCE.getAdminSpace().getLLC(true) != -1;
         return INSTANCE;
     }
 
@@ -191,10 +169,6 @@ public class ServicesLookup {
 
     public Uploader getUploader() {
         return uploader;
-    }
-
-    public MeterService getMeterService() {
-        return meterService;
     }
 
     public DeploymentService getDeploymentService() { return deploymentService;  }

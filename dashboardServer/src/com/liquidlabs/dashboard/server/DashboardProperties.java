@@ -15,7 +15,6 @@ public class DashboardProperties {
     private static final int randomBuildId = new Random().nextInt(10000000);
     private static final String buildId = System.getProperty("version.id","unknown");
     private static final String versionId = System.getProperty("version.id","unknown");
-    public static boolean isLicensed = false;
 
     public static String getBuildId() {
         return buildId;

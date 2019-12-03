@@ -17,7 +17,7 @@
         <format property="timestamp1" pattern="MMdd" />
     </tstamp>
 
-    <property name="version.id" value="community-3.41"/>
+    <property name="version.id" value="OS-3.5"/>
     <property name="build.id" value="Logscape-${version.id}_b${timestamp1}"/>
 
 
@@ -76,7 +76,7 @@
 
     <target name="compile" depends="init">
         <mkdir dir="lib"></mkdir>
-        <javac srcdir="src" destdir="${classes}" debug="true" target="1.7" source="1.7" fork="true">
+        <javac srcdir="src" destdir="${classes}" debug="true" target="1.8" source="1.8" fork="true">
             <classpath>
                 <path refid="compile.classpath" />
             </classpath>
@@ -86,7 +86,7 @@
 
     <target name="compile.tests">
         <mkdir dir="test"></mkdir>
-        <javac srcdir="${test.src}" destdir="${test.classes}" target="1.7" source="1.7" debug="false" fork="true">
+        <javac srcdir="${test.src}" destdir="${test.classes}" target="1.8" source="1.8" debug="false" fork="true">
             <classpath>
                 <path refid="compile.classpath" />
                 <path refid="run.classpath" />

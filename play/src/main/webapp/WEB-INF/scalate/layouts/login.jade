@@ -1,6 +1,6 @@
 -@ val body: String
 -@ val title: String = "Logscape, Search it! "
--@ val isLicensed: Boolean = com.liquidlabs.services.ServicesLookup.isLicensed
+
 !!!
 html
     head
@@ -29,13 +29,6 @@ html
             }
 
     body.headLine
-        - if(!isLicensed)
-            .span12.ontop
-                center
-                    a#loginlicenseMessage(href="http://logscape.com/index.html#pricing" style="color:grey" target="_blank") Visit logscape.com for the enterprise edition
-            .row.loginbanner
-            
-
         .container.maxWidthDiv.fade.in.span12(style='height:900px;width:99%;padding-top:100px;overflow:hidden;')
             !~~ body
 

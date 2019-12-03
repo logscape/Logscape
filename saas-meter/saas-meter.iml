@@ -14,6 +14,13 @@
     <orderEntry type="module" module-name="vs-log-server" exported="" />
     <orderEntry type="module" module-name="vs-admin" exported="" />
     <orderEntry type="module" module-name="vs-log" exported="" />
+    <orderEntry type="module" module-name="vs-log" />
+    <orderEntry type="module" module-name="vs-log-server" />
+    <orderEntry type="module" module-name="transport" />
+    <orderEntry type="module" module-name="vs-orm" />
+    <orderEntry type="module" module-name="vso" />
+    <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="vs-admin" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
@@ -212,4 +219,3 @@
     </option>
   </component>
 </module>
-

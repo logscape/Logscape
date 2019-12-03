@@ -5,7 +5,6 @@ import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.rawlogserver.handler.ContentFilteringLoggingHandler.TypeMatcher;
 import com.liquidlabs.rawlogserver.handler.fileQueue.FileQueuer;
 import com.liquidlabs.rawlogserver.handler.fileQueue.FileQueuerFactory;
-import com.logscape.meter.Meter;
 import javolution.util.FastMap;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTimeUtils;

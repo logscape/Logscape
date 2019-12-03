@@ -14,7 +14,6 @@
 	<property name="dep9" value="vs-admin" />
 	<property name="dep10" value="vs-log-server" />
 	<property name="dep11" value="vs-syslog-server" />
-	<property name="dep12" value="saas-meter" />
 	<import file="../lib/build-common.xml"/>
 
 	<path id="compile.classpath">
@@ -30,8 +29,6 @@
 		<fileset dir="../${dep9}/dist" includes="*.jar"/>
 		<fileset dir="../${dep10}/dist" includes="*.jar"/>
 		<fileset dir="../${dep11}/dist" includes="*.jar"/>
-		<fileset dir="../${dep12}/dist" includes="*.jar"/>
-		<!--<fileset dir="../${dep13}/dist" includes="*.jar"/>-->
 	</path>
 	
 	<target name="dist" depends="init,compile">

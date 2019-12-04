@@ -28,6 +28,7 @@ import java.util.zip.GZIPOutputStream;
 public class FileUtil {
 
     private static final Logger LOGGER = Logger.getLogger(FileUtil.class);
+    public static final String SERVER_DIR_SEPARATOR = "_SERVER_";
 
     public static int MEGABYTES = 1024 * 1024;
     public static int GB = MEGABYTES * 1024;
@@ -639,61 +640,62 @@ public class FileUtil {
      * @return
      */
     private static ConcurrentLRUCache<String, PathPattern> pathPatterns = new ConcurrentLRUCache<String, PathPattern>(50, 10);
-    public static boolean isPathMatch(boolean makeNative, String path, String directory) {
-        if (path.equalsIgnoreCase(directory)) return true;
+    public static boolean isPathMatch(boolean makeNative, String givenPathExpr, String givenRealPath) {
+        if (givenPathExpr.equalsIgnoreCase(givenRealPath)) return true;
+        String pathExpr = givenPathExpr;
+        String realPath = givenRealPath;
         if (makeNative) {
-            path = FileUtil.cleanupPathAndMakeNative(path);
+            pathExpr = FileUtil.cleanupPathAndMakeNative(pathExpr);
             String cwd = new File("").getAbsolutePath();
-            // only replace ./ stuff instances on the path
-            path = path.replace("." + File.separator, cwd + File.separator);
+            // only replace ./ stuff instances on the pathExpr
+            pathExpr = pathExpr.replace("." + File.separator, cwd + File.separator);
             // double check
-            path = FileUtil.cleanupPathAndMakeNative(path);
-            directory = FileUtil.cleanupPathAndMakeNative(directory);
-            if (directory.startsWith(".")) directory = directory.replace("." + File.separator, cwd + File.separator);
+            pathExpr = FileUtil.cleanupPathAndMakeNative(pathExpr);
+            realPath = FileUtil.cleanupPathAndMakeNative(realPath);
+            if (realPath.startsWith(".")) realPath = realPath.replace("." + File.separator, cwd + File.separator);
         }
-        if (path.equalsIgnoreCase(directory)) return true;
 
-        String[] pathParts = StringUtil.splitFast(path, ',');
+        String[] pathExprParts = StringUtil.splitFast(pathExpr, ',');
         boolean matched = false;
         boolean excluded = false;
-        if (directory.startsWith(".")) directory = directory.substring(1);
-        for (String pathPart : pathParts) {
-            if (pathPart.length() == 0 || pathPart.startsWith(".")) continue;
-            boolean isExcludeExpr = pathPart.startsWith("!");
+        if (realPath.startsWith(".")) realPath = realPath.substring(1);
+        for (String pathExprPart : pathExprParts) {
+            if (pathExprPart.length() == 0 || pathExprPart.startsWith(".")) continue;
+            boolean isExcludeExpr = pathExprPart.startsWith("!");
             if (isExcludeExpr) {
-                pathPart = pathPart.substring(1);
-                if (directory.contains(pathPart)) excluded = true;
+                pathExprPart = pathExprPart.substring(1);
+                if (realPath.contains(pathExprPart)) excluded = true;
             }
-            // relative path
-//            if (pathPart.startsWith(".")) {
-//                pathPart = new File("").getAbsolutePath() + pathPart.substring(1);
+            // relative pathExpr with wildcard later - need to prepend with wildcard
+//            if (pathExprPart.startsWith(".") && pathExprPart.contains("*")) {
+//                pathExprPart = "**" + pathExprPart.substring(1);// new File("").getAbsolutePath() + pathExprPart.substring(1);
 //            }
             boolean thisMatch = false;
-//            if (pathPart.contains("_SERVER_")) {
-//                pathPart = trimServer(pathPart);
-//                // if we are looking for a directory match with in _SERVER_ path then we need to drop the windows drive seperator
-//                if (directory.contains(":")) {
-//                    directory = directory.replace(":","");
-//                    directory = File.separator + directory;
-//                }
-//            }
-            if (pathPart.contains("*")) {
-                PathPattern pathPattern = pathPatterns.get(pathPart);
+            if (pathExprPart.contains(SERVER_DIR_SEPARATOR)) {
+                pathExprPart = trimServer(pathExprPart);
+                // if we are looking for a realPath match with in _SERVER_ pathExpr then we need to drop the windows drive seperator
+                if (realPath.contains(":")) {
+                    realPath = realPath.replace(":","");
+                    realPath = File.separator + realPath;
+                }
+            }
+            if (pathExprPart.contains("*")) {
+                PathPattern pathPattern = pathPatterns.get(pathExprPart);
                 if (pathPattern == null) {
-                    pathPattern = new PathPattern(pathPart, WildcardPattern.IGNORE_CASE);
-                    pathPatterns.put(pathPart, pathPattern);
+                    pathPattern = new PathPattern(pathExprPart, WildcardPattern.IGNORE_CASE);
+                    pathPatterns.put(pathExprPart, pathPattern);
                 }
                 synchronized (pathPattern) {
-                    thisMatch = pathPattern.matches(directory);
+                    thisMatch = pathPattern.matches(realPath);
                 }
             } else {
-                thisMatch = path.endsWith(directory) || directory.endsWith(pathPart) || directory.endsWith(pathPart + File.separator);
-                if (!thisMatch && directory.contains(":")) {
-                    String dirNoCol = directory.replace(":","");
-                    thisMatch =  path.endsWith(dirNoCol) || dirNoCol.endsWith(pathPart) || dirNoCol.endsWith(pathPart + File.separator);
+                thisMatch = pathExpr.endsWith(realPath) || realPath.endsWith(pathExprPart) || realPath.endsWith(pathExprPart + File.separator);
+                if (!thisMatch && realPath.contains(":")) {
+                    String dirNoCol = realPath.replace(":","");
+                    thisMatch =  pathExpr.endsWith(dirNoCol) || dirNoCol.endsWith(pathExprPart) || dirNoCol.endsWith(pathExprPart + File.separator);
                 }
-                //StringUtil.containsIgnoreCase(directory, pathPart);
-                //thisMatch = pathPart.equalsIgnoreCase(directory);
+                //StringUtil.containsIgnoreCase(realPath, pathExprPart);
+                //thisMatch = pathExprPart.equalsIgnoreCase(realPath);
             }
             if (thisMatch) {
                 // if we matched on an exclude then bail out
@@ -708,13 +710,13 @@ public class FileUtil {
 
     private static String trimServer(String pathPart) {
         String result = null;
-        int serverIndex = pathPart.indexOf("_SERVER_") + "_SERVER_".length()+1;
+        int serverIndex = pathPart.indexOf(SERVER_DIR_SEPARATOR) + SERVER_DIR_SEPARATOR.length()+1;
 
         // CRAP xxx - _SERVER_/host/path - strip the header
         if (pathPart.contains("/")){
-            result = pathPart.substring(pathPart.indexOf("/",pathPart.indexOf("/", serverIndex)));
+            result = pathPart.substring(pathPart.indexOf("/",pathPart.indexOf("/", serverIndex))+1);
         } else {
-            result = pathPart.substring(pathPart.indexOf("\\",pathPart.indexOf("\\", serverIndex)));
+            result = pathPart.substring(pathPart.indexOf("\\",pathPart.indexOf("\\", serverIndex))+1);
 
         }
         return result;
@@ -765,7 +767,7 @@ public class FileUtil {
         if (path.contains("//")) path = path.replace("//","/");
         if (path.contains("/./")) path =  path.replace("/./", "/");
         if (path.contains("\\.\\")) path =  path.replace("\\.\\", "\\");
-        if (!path.contains("..") && path.startsWith("./")) path = path.replace("./", "");
+        if (!path.contains("..") && path.startsWith("./") && !path.contains("*")) path = path.replace("./", "");
         if (path.length() > 1 && path.endsWith(".")) path = path.substring(0, path.length()-1);
         return path;
     }

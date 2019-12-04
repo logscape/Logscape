@@ -39,6 +39,7 @@ public class URISetTest {
 	    }
 	  private static Kryo getKryo() {
 			Kryo kryo = new Kryo();
+		  	kryo.register(URI.class);
 	    	kryo.setReferences(false);
 	    	kryo.setInstantiatorStrategy(new StdInstantiatorStrategy());
 			return kryo;

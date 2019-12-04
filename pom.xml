@@ -1,0 +1,353 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.logscape</groupId>
+    <artifactId>parent</artifactId>
+    <name>Logscape</name>
+    <version>3.5.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <apache.directory.server.version>2.0.0-M22</apache.directory.server.version>
+        <apache.directory.api.version>1.0.0-M33</apache.directory.api.version>
+        <apache.httpcomponents.version>4.5.9</apache.httpcomponents.version>
+        <exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
+        <podam.version>6.0.2.RELEASE</podam.version>
+        <airlift.version>0.29</airlift.version>
+        <airline.version>2.6.0</airline.version>
+        <antlr.version>4.7</antlr.version>
+        <csv.version>1.4</csv.version>
+        <lang3.version>3.3.1</lang3.version>
+        <guava.version>24.1.1-jre</guava.version>
+        <retrying.version>2.0.0</retrying.version>
+        <inject.version>1</inject.version>
+        <janino.version>3.0.7</janino.version>
+        <javax-validation.version>2.0.1.Final</javax-validation.version>
+        <jline.version>3.13.1</jline.version>
+        <jna.version>4.4.0</jna.version>
+        <jsr305.version>3.0.2</jsr305.version>
+        <maven.plugins.version>3.0.0-M1</maven.plugins.version>
+        <really.executable.jar.version>1.5.0</really.executable.jar.version>
+        <generext.version>1.0.2</generext.version>
+        <avro.random.generator.version>0.2.2</avro.random.generator.version>
+        <apache.curator.version>2.9.0</apache.curator.version>
+        <wiremock.version>2.24.0</wiremock.version>
+        <skip.docker.build>true</skip.docker.build>
+        <skip.docker.test>true</skip.docker.test>
+        <junit.version>4.4</junit.version>
+        <spotbugs.maven.plugin.version>3.1.12</spotbugs.maven.plugin.version>
+    </properties>
+
+<!--    <ant inheritAll="false" dir="${common}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${boot}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${transport}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vspace}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vs-orm}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vso}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vs-log}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vs-log-disco}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vs-log-server}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vs-socket-server}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vs-syslog-server}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vs-util}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${vs-admin}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${services}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${dashboardServer}" target="clean" />-->
+<!--    <ant inheritAll="false" dir="${replicator}" target="clean" />-->
+    <modules>
+        <module>common</module>
+        <module>boot</module>
+
+    </modules>
+
+
+    <dependencies>
+
+        <!-- module deps -->
+<!--        <dependency>-->
+<!--            <groupId>logscape.com</groupId>-->
+<!--            <artifactId>boot</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
+
+        <!-- libs -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>${csv.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.jpountz.lz4</groupId>
+            <artifactId>lz4</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.jregex</groupId>
+            <artifactId>jregex</artifactId>
+            <version>1.2_01</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.10.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>oro</groupId>
+            <artifactId>oro</artifactId>
+            <version>2.0.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>com.carrotsearch</groupId>
+            <artifactId>hppc</artifactId>
+            <version>0.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.trove4j</groupId>
+            <artifactId>trove4j</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>kryo</artifactId>
+            <version>5.0.0-RC4</version>
+        </dependency>
+        <dependency>
+            <groupId>javolution</groupId>
+            <artifactId>javolution</artifactId>
+            <version>5.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.eaio.uuid</groupId>
+            <artifactId>uuid</artifactId>
+            <version>3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.directory.studio</groupId>
+            <artifactId>org.apache.commons.io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>janino</artifactId>
+            <version>${janino.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax-validation.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>1.1.7.3</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sna-projects.krati</groupId>
+            <artifactId>krati</artifactId>
+            <version>0.4.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jdmk</groupId>
+            <artifactId>jmxtools</artifactId>
+            <version>1.2.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../lib/maven-libs/jmx121/jmxtools.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jdmk</groupId>
+            <artifactId>jmxri</artifactId>
+            <version>1.2.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../lib/maven-libs/jmx121/jmxri.jar</systemPath>
+        </dependency>
+
+
+        <!-- Required for running tests -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.hamcrest</groupId>-->
+<!--                    <artifactId>hamcrest-core</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava-testlib</artifactId>
+            <version>${guava.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.tomakehurst</groupId>
+            <artifactId>wiremock-jre8</artifactId>
+            <version>${wiremock.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <configuration>
+                        <tarLongFileMode>posix</tarLongFileMode>
+                        <descriptors>
+                            <descriptor>src/assembly/package.xml</descriptor>
+                        </descriptors>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>${exec-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-Xlint:all,-serial</arg>
+<!--                        <arg>-Werror</arg>-->
+                    </compilerArgs>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                    <compilerVersion>1.8</compilerVersion>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <configuration>
+                    <propertiesLocation>checkstyle/checkstyle.properties</propertiesLocation>
+                    <suppressionsLocation>checkstyle/suppressions.xml</suppressionsLocation>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <systemPropertyVariables>
+                        <log4j.configuration>file:${project.basedir}/common/log4j.properties</log4j.configuration>
+                    </systemPropertyVariables>
+                    <argLine>-verbose:gc -Xloggc:"${project.build.directory}/gc.log"</argLine>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+<!--  TODO IN V4.0           <plugin>-->
+<!--                <groupId>com.github.spotbugs</groupId>-->
+<!--                <artifactId>spotbugs-maven-plugin</artifactId>-->
+<!--                <version>${spotbugs.maven.plugin.version}</version>-->
+<!--                <configuration>-->
+<!--                    <xmlOutput>true</xmlOutput>-->
+<!--                    <excludeFilterFile>./findbugs-exclude.xml</excludeFilterFile>-->
+<!--                    <effort>Max</effort>-->
+<!--                    <threshold>Max</threshold>-->
+<!--                    <failOnError>true</failOnError>-->
+<!--                    <includeTests>true</includeTests>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    &lt;!&ndash;-->
+<!--                    Ensures that FindBugs inspects source code when project is compiled.-->
+<!--                &ndash;&gt;-->
+<!--                    <execution>-->
+<!--                        <id>analyze-compile</id>-->
+<!--                        <phase>compile</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+        </plugins>
+    </build>
+    <reporting>
+        <plugins>
+
+        </plugins>
+    </reporting>
+</project>

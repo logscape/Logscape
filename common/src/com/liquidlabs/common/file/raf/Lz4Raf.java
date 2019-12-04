@@ -3,7 +3,6 @@ package com.liquidlabs.common.file.raf;
 import net.jpountz.lz4.LZ4BlockInputStream;
 import net.jpountz.lz4.LZ4BlockOutputStream;
 import net.jpountz.lz4.LZ4Factory;
-import org.apache.tools.bzip2.CBZip2InputStream;
 
 import java.io.*;
 

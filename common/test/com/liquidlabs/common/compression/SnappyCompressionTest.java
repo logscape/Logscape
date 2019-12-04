@@ -24,7 +24,7 @@ public class SnappyCompressionTest {
 
     @Test
     public void shouldAppendCompressedData() throws Exception {
-        String testFile = "test.snap";
+        String testFile = "build/test.snap";
         new File(testFile).delete();
 
         OutputStream sos = new SnappyFramedOutputStream(new FileOutputStream(testFile, true));

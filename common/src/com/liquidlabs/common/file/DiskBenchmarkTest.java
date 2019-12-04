@@ -1,9 +1,6 @@
 package com.liquidlabs.common.file;
 
 import com.liquidlabs.common.file.raf.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 
 import java.io.*;
 import java.lang.management.ManagementFactory;
@@ -59,7 +56,6 @@ public class DiskBenchmarkTest {
     private long lastCpuTime;
     private int lines;
 
-    @Before
     public void setup() {
 
         writeTestFile(lineSizeInBytes, testFile);
@@ -69,7 +65,6 @@ public class DiskBenchmarkTest {
         start = System.currentTimeMillis();
     }
 
-	@After
 	public void tearDown() {
 		long end = System.currentTimeMillis();
 		System.out.println(testName + "\t Elapsed:" + (end - start) + "\t ");
@@ -208,11 +203,9 @@ public class DiskBenchmarkTest {
         void parse(String line);
     }
 
-	@Test
 	public void shouldScanWithBBRAF() throws Exception {
         runRAFTest("Single",new ByteBufferRAF(testFile));
     }
-	@Test
 	public void shouldScanWithMLBBRAF() throws Exception {
 //		System.setProperty("raf.bb.direct", "false");
 		runRAFTest("MLine", new MLineByteBufferRAF(testFile));
@@ -252,7 +245,6 @@ public class DiskBenchmarkTest {
         allTimes.get(testName).add(elapsed);
     }
 
-    @Test
 	public void shouldDirectBBScan() throws Exception {
 		start = System.currentTimeMillis();
 		testName = "DIRECT-ByteBufferScan";
@@ -275,7 +267,6 @@ public class DiskBenchmarkTest {
         addTestTime(testName, start);
 		tearDown();
 	}
-    @Test
     public void shouldNIOUTF() throws Exception {
         start = System.currentTimeMillis();
         testName = "NIO-UTF-fileChannel";
@@ -295,7 +286,6 @@ public class DiskBenchmarkTest {
         tearDown();
     }
 
-	@Test
 	public void shouldScanByteBufferBits() throws Exception {
 		start = System.currentTimeMillis();
 		testName = "ByteBuffer-BYTES-Scan";
@@ -323,7 +313,6 @@ public class DiskBenchmarkTest {
 	}
 	
 	
-	@Test
 	public void shouldGoFastBBWrap() throws Exception {
 		start = System.currentTimeMillis();
 		testName = "ByteBufferArrayWrapScan";
@@ -369,7 +358,6 @@ public class DiskBenchmarkTest {
 		}
 	}
 	
-	@Test
 	public void printTimes() throws Exception {
 		
 		System.out.println("\n\nELAPSED TIMES\n==================");

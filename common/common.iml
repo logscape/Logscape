@@ -9,6 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module" module-name="lib" />
+    <orderEntry type="library" scope="PROVIDED" name="all-libs" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
@@ -204,4 +205,3 @@
     </option>
   </component>
 </module>
-

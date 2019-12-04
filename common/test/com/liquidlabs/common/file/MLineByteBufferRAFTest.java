@@ -112,7 +112,7 @@ public class MLineByteBufferRAFTest {
                     System.out.println("ERROR Seek:" + long1);
                 }
 
-                assertEquals("EXPECTED FAIL FOR Line1.1. (bug!)Got The wrong line: " + pair.line + " - " + actual, pair.line, actual);
+                assertEquals("EXPECTED FAIL FOR Line1.1. (bug!)Got The wrong line: " + pair.line + " POS:" + pair.pos + " - " + actual, pair.line, actual);
             }
 
             raf.close();

@@ -30,13 +30,14 @@
         <antlr.version>4.7</antlr.version>
         <csv.version>1.4</csv.version>
         <lang3.version>3.3.1</lang3.version>
-        <guava.version>24.1.1-jre</guava.version>
+        <guava.version>28.1-jre</guava.version>
         <retrying.version>2.0.0</retrying.version>
         <inject.version>1</inject.version>
         <janino.version>3.0.7</janino.version>
         <javax-validation.version>2.0.1.Final</javax-validation.version>
         <jline.version>3.13.1</jline.version>
         <jna.version>4.4.0</jna.version>
+        <qpid-broker.version>7.1.5</qpid-broker.version>
         <jsr305.version>3.0.2</jsr305.version>
         <maven.plugins.version>3.0.0-M1</maven.plugins.version>
         <really.executable.jar.version>1.5.0</really.executable.jar.version>
@@ -46,7 +47,7 @@
         <wiremock.version>2.24.0</wiremock.version>
         <skip.docker.build>true</skip.docker.build>
         <skip.docker.test>true</skip.docker.test>
-        <junit.version>4.4</junit.version>
+        <junit.version>4.12</junit.version>
         <spotbugs.maven.plugin.version>3.1.12</spotbugs.maven.plugin.version>
     </properties>
 
@@ -67,20 +68,30 @@
 <!--    <ant inheritAll="false" dir="${dashboardServer}" target="clean" />-->
 <!--    <ant inheritAll="false" dir="${replicator}" target="clean" />-->
     <modules>
-        <module>common</module>
         <module>boot</module>
+        <module>common</module>
+        <module>transport</module>
+
 
     </modules>
 
 
     <dependencies>
 
-        <!-- module deps -->
+        <!-- Cross-submodule dependencies -->
 <!--        <dependency>-->
 <!--            <groupId>logscape.com</groupId>-->
 <!--            <artifactId>boot</artifactId>-->
 <!--            <version>${project.version}</version>-->
 <!--        </dependency>-->
+
+
+<!--        <dependency>-->
+<!--            <groupId>com.logscape</groupId>-->
+<!--            <artifactId>common</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
+
 
         <!-- libs -->
         <dependency>
@@ -132,6 +143,11 @@
             <version>28.1-jre</version>
         </dependency>
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>failureaccess</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.carrotsearch</groupId>
             <artifactId>hppc</artifactId>
             <version>0.8.1</version>
@@ -141,12 +157,18 @@
             <artifactId>trove4j</artifactId>
             <version>3.0.3</version>
         </dependency>
+            <dependency>
+                <groupId>com.esotericsoftware.kryo</groupId>
+                <artifactId>kryo</artifactId>
+                <version>2.20</version>
+            </dependency>
         <dependency>
-            <groupId>com.esotericsoftware</groupId>
-            <artifactId>kryo</artifactId>
-            <version>5.0.0-RC4</version>
-        </dependency>
-        <dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.esotericsoftware</groupId>-->
+<!--            <artifactId>kryo</artifactId>-->
+<!--            <version>5.0.0-RC4</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
             <groupId>javolution</groupId>
             <artifactId>javolution</artifactId>
             <version>5.5.1</version>
@@ -210,6 +232,47 @@
             <systemPath>${project.basedir}/../lib/maven-libs/jmx121/jmxri.jar</systemPath>
         </dependency>
 
+        <!-- transport deps -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty</artifactId>
+            <version>3.10.6.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.13</version>
+        </dependency>
+
+        <!-- Rabbit test broker - QPID -->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.7.3</version>
+        </dependency>
+
+<!--        &lt;!&ndash; spin up rabbit container in integration test &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.rnorth.duct-tape</groupId>-->
+<!--            <artifactId>duct-tape</artifactId>-->
+<!--            <version>1.0.8</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.testcontainers</groupId>-->
+<!--            <artifactId>testcontainers</artifactId>-->
+<!--            <version>1.12.4</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.rnorth.visible-assertions</groupId>-->
+<!--            <artifactId>visible-assertions</artifactId>-->
+<!--            <version>2.1.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.testcontainers</groupId>-->
+<!--            <artifactId>rabbitmq</artifactId>-->
+<!--            <version>1.12.4</version>-->
+<!--        </dependency>-->
 
         <!-- Required for running tests -->
         <dependency>
@@ -245,6 +308,29 @@
             <version>${wiremock.version}</version>
             <scope>test</scope>
         </dependency>
+
+
+        <dependency>
+            <!-- remove and upgrade tests -->
+            <groupId>jmock</groupId>
+            <artifactId>jmock</artifactId>
+            <version>1.2.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jmock</groupId>
+            <artifactId>jmock</artifactId>
+            <version>2.5.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--        <dependency>-->
+<!--            <groupId>org.jmock</groupId>-->
+<!--            <artifactId>jmock</artifactId>-->
+<!--            <version>2.12.0</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+        
     </dependencies>
 
 

@@ -420,8 +420,8 @@ public class NettySenderImpl implements Sender {
 				close();
 				try {
 					//System.out.println(getClass().getSimpleName() + " Closing:" + channel);
-					boolean cancel = writeFuture.cancel();
-					boolean cancel2 = channelFuture.cancel();
+					if (writeFuture != null) writeFuture.cancel();
+					if (channelFuture != null) channelFuture.cancel();
 					ChannelFuture close = channel.close();
 					close.await();
 				} catch (Throwable t){

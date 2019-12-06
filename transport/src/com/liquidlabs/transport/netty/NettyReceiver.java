@@ -52,7 +52,7 @@ public class NettyReceiver extends SimpleChannelUpstreamHandler implements Recei
     private static int serverHandshakeTimeOut = Integer.getInteger("socket.handshake.timeout.s", 30) * 1000;
     private SslContext sslCtx = null;
 
-    public NettyReceiver(final URI endPoint, ServerSocketChannelFactory factory, ProtocolParser protocolParser, final boolean isHandshake) throws IOException {
+    public NettyReceiver(final URI endPoint, ServerSocketChannelFactory factory, ProtocolParser protocolParser, final boolean isSecureHandshake) throws IOException {
 
         isString = endPoint.toString().startsWith("raw");
         this.endPoint = endPoint;
@@ -74,7 +74,7 @@ public class NettyReceiver extends SimpleChannelUpstreamHandler implements Recei
                             new HttpServerCodec(),
                             NettyReceiver.this
                     );
-                } else if (isHandshake) {
+                } else if (isSecureHandshake) {
                     return Channels.pipeline(
                             new ServerHandshakeHandler("server", allChannels, serverHandshakeTimeOut),
                             NettyReceiver.this

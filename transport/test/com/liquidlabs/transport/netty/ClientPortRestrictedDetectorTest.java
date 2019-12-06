@@ -26,10 +26,10 @@ public class ClientPortRestrictedDetectorTest {
 	
 	@Test
 	public void shouldFindPropertyIsSet() throws Exception {
-		boolean result = detector.isPropertyExisting("-DLOGSCAPE",".;../boot", "boot.properties");
+		boolean result = detector.isPropertyExisting("-DLOGSCAPE",".;./boot/resources", "boot.properties");
 		assertTrue(result);
 		
-		boolean result2 = detector.isPropertyExisting("-DLFFFOGSCAPE",".;../boot", "boot.properties");
+		boolean result2 = detector.isPropertyExisting("-DLFFFOGSCAPE",".;./boot/resources", "boot.properties");
 		assertFalse(result2);
 	}
 	

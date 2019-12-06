@@ -8,7 +8,7 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module" module-name="lib" />
+    <orderEntry type="module" module-name="lib" exported="" />
     <orderEntry type="library" scope="PROVIDED" name="all-libs" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">

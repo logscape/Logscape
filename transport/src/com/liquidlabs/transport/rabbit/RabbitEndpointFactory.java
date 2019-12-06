@@ -16,27 +16,19 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.concurrent.TimeoutException;
 
-/**
- * Created by neil on 29/06/16.
- */
 public class RabbitEndpointFactory implements EndPointFactory {
 
-    private static final Logger LOGGER = Logger.getLogger(RabbitEndpointFactory.class);
+     static final Logger LOGGER = Logger.getLogger(RabbitEndpointFactory.class);
 
-    private Connection connection;
     private java.util.Map<URI, Consumer> consumers = new java.util.concurrent.ConcurrentHashMap<>();
-    private String broker;
     boolean started = false;
 
-//    Consumer receiveConsumer;
     private MultiResponseConsumer multiResponseConsumer;
-    private Channel channel;
+    private RConfig rConfig;
 
-
-    public RabbitEndpointFactory(String broker) {
+    public RabbitEndpointFactory(String brokerUrl) {
         LOGGER.info("CREATED");
-
-        this.broker = broker;
+        this.rConfig = new RConfig(brokerUrl);
     }
     @Override
     public EndPoint getEndPoint(final URI uri1, final Receiver receiver) {
@@ -49,36 +41,46 @@ public class RabbitEndpointFactory implements EndPointFactory {
             buildConsumerChannel(uri, receiver);
 
             return new DefaultEndPoint(uri, receiver) {
-
+                private Channel channel;
                 @Override
                 public void start() {
                 }
 
                 @Override
                 public void stop() {
+                    if (channel != null) {
+                        try {
+                            channel.close();
+                            channel = null;
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
 
                 @Override
                 public byte[] send(String protocol, URI endPoint1, byte[] bytes, Type type, boolean isReplyExpected, long timeoutSeconds, String listenerId, boolean allowlocalRoute) throws InterruptedException, RetryInvocationException {
+
                     try {
-
                         final URI endPoint = cleanURI(endPoint1);
-                        String remoteURI = endPoint.toString().replace("//?", "/?");
+                        String remoteAddressAsQueueName = addressAsQueueName(endPoint);
 
-                        if (isReplyExpected) {
-                            //synchronized (channel) {
-                                AMQP.BasicProperties basicProperties = new AMQP.BasicProperties.Builder().replyTo(multiResponseConsumer.getResponseChannel()).correlationId(UID.getUUID()).build();
-                                if (LOGGER.isDebugEnabled()) LOGGER.debug("============ SEND:" + remoteURI);
-
-                            channel.basicPublish("", remoteURI, basicProperties, bytes);
-
-                                return multiResponseConsumer.getResults(remoteURI, basicProperties.getCorrelationId());
-                            //}
-                        } else {
-                            if (LOGGER.isDebugEnabled()) LOGGER.debug("============ SEND:" + remoteURI);
-                            channel.basicPublish("", remoteURI, null, bytes);
+                        if (channel == null) {
+                            channel = rConfig.getChannel(remoteAddressAsQueueName);
                         }
 
+                        if (isReplyExpected) {
+                            synchronized (channel) {
+                                AMQP.BasicProperties basicProperties = new AMQP.BasicProperties.Builder().replyTo(multiResponseConsumer.getResponseChannel()).correlationId(UID.getUUID()).build();
+                                if (LOGGER.isDebugEnabled()) LOGGER.debug("============ SEND:" + remoteAddressAsQueueName);
+
+                                channel.basicPublish("", remoteAddressAsQueueName, basicProperties, bytes);
+                                return multiResponseConsumer.getResults(remoteAddressAsQueueName, basicProperties.getCorrelationId());
+                            }
+                        } else {
+                            if (LOGGER.isDebugEnabled()) LOGGER.debug("============ SEND:" + remoteAddressAsQueueName);
+                            channel.basicPublish("", remoteAddressAsQueueName, null, bytes);
+                        }
 
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -103,37 +105,24 @@ public class RabbitEndpointFactory implements EndPointFactory {
     }
 
     private void buildConsumerChannel(final URI uri, final Receiver receiver) {
-//        if (receiveConsumer == null) {
+        final URI endPoint = cleanURI(uri);
+        String addressAsQueueName = addressAsQueueName(endPoint);
+
         Consumer consumer = consumers.get(uri);
         if (consumer == null) {
 
         try {
-                if (LOGGER.isDebugEnabled()) LOGGER.debug("============ CREATED QQQQQQQQQQ:\n\t" + uri.toString() + " Recv: " + receiver);
+                if (LOGGER.isDebugEnabled()) LOGGER.debug("============ RECEIVER CREATED QQQQQQQQQQ: " + addressAsQueueName + " Recv: " + receiver);
 
-                channel.queueDeclare(uri.toString(), false, false, false, null);
+                Channel channel = rConfig.getChannel(addressAsQueueName);
 
                 multiResponseConsumer = new MultiResponseConsumer(channel);
 
-                consumer = new DefaultConsumer(channel) {
-                    @Override
-                    public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
-                        try {
-                            if (LOGGER.isDebugEnabled()) LOGGER.debug("============ INCOMING QQQQQQQQQQ:\n\t" + uri.toString());
-                            byte[] response = receiver.receive(body, "unknown", "unknown");
-                            if (response != null && response.length > 0) {
-                                AMQP.BasicProperties.Builder builder = new AMQP.BasicProperties.Builder().correlationId(properties.getCorrelationId());
-                                if (LOGGER.isDebugEnabled()) LOGGER.debug("============  SVR REPLYING:" + uri.toString() + "\n\t Reply:" + properties.getReplyTo() + ":" + properties.getCorrelationId() + " bytes[]" + response.length);
-                                channel.basicPublish("", properties.getReplyTo(), builder.build(), response);
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                };
+                consumer = new ClosableConsumer(addressAsQueueName, channel, receiver);
+                channel.basicConsume(addressAsQueueName, true, consumer);
 
-                channel.basicConsume(uri.toString(), true, consumer);
                 consumers.put(uri, consumer);
-            } catch (IOException e1) {
+            } catch (IOException | URISyntaxException e1) {
                 e1.printStackTrace();
                 throw new RuntimeException("Cannot create: " + uri, e1);
             }
@@ -141,35 +130,27 @@ public class RabbitEndpointFactory implements EndPointFactory {
             if (LOGGER.isDebugEnabled()) LOGGER.debug("============ WARN ALREADY CREATED QQQQQQQQQQ:\n\t" + uri.toString() + " Recv: " + receiver);
         }
     }
-
+    private String addressAsQueueName(URI endPoint) {
+        return endPoint.toString().replace("//?", "/?");
+    }
     @Override
     public void start() {
         started = true;
-        ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost(broker);
+
         try {
-            factory.setUsername(System.getProperty("rabbit.user", "guest"));
-            factory.setPassword(System.getProperty("rabbit.pwd", "guest"));
-            connection = factory.newConnection();
-            channel = connection.createChannel();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (TimeoutException e) {
+            rConfig.connect();
+        } catch (Exception e) {
+            LOGGER.error("Failed to connect to broker:" + e, e);
             e.printStackTrace();
         }
+        LOGGER.info("CREATED CONNECTION:" + rConfig.getConnection());
     }
 
     @Override
     public void stop() {
+        consumers.values().stream().forEach(consumer -> ((ClosableConsumer) consumer).close());
         try {
-            channel.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (TimeoutException e) {
-            e.printStackTrace();
-        }
-        try {
-            connection.close();
+            rConfig.getConnection().close(10 * 1000);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -185,3 +166,43 @@ public class RabbitEndpointFactory implements EndPointFactory {
         }
     }
 }
+class ClosableConsumer extends DefaultConsumer {
+
+    private final String addressAsQueueName;
+    private final Receiver receiver;
+
+    public ClosableConsumer(String addressAsQueueName, Channel channel, Receiver receiver) {
+            super(channel);
+
+        this.addressAsQueueName = addressAsQueueName;
+        this.receiver = receiver;
+    }
+    @Override
+    public void handleDelivery (String consumerTag, Envelope envelope, AMQP.BasicProperties properties,  byte[] body)
+            throws IOException {
+            try {
+                if (RabbitEndpointFactory.LOGGER.isDebugEnabled())
+                    RabbitEndpointFactory.LOGGER.debug("============ RECEIVER INCOMING QQQQQQQQQQ:" + addressAsQueueName.toString());
+                byte[] response = receiver.receive(body, "unknown", "unknown");
+                if (response != null && response.length > 0) {
+                    AMQP.BasicProperties.Builder builder = new AMQP.BasicProperties.Builder().correlationId(properties.getCorrelationId());
+                    if (RabbitEndpointFactory.LOGGER.isDebugEnabled())
+                        RabbitEndpointFactory.LOGGER.debug("============ RECEIVER SVR REPLYING:" + addressAsQueueName.toString() + "\n\t Reply:" + properties.getReplyTo() + ":" + properties.getCorrelationId() + " bytes[]" + response.length);
+                    getChannel().basicPublish("", properties.getReplyTo(), builder.build(), response);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    public void close ()  {
+        try {
+            getChannel().close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        }
+    }
+}
+

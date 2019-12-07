@@ -1,8 +1,8 @@
 package com.liquidlabs.boot;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
-import static org.junit.matchers.StringContains.*;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,7 +19,6 @@ import java.util.regex.Pattern;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.matchers.StringContains;
 
 public class BootStrapperTest {
 

@@ -1,8 +1,8 @@
-Wed Dec 04 12:05:21 GMT 2019 BOOTSTRAPPER SETUP
-Wed Dec 04 12:05:21 GMT 2019 DiskLeft (mb): Home:1000 Work:1000
-Wed Dec 04 12:05:21 GMT 2019 Ignoring: Jolokia Agent not configured in boot.properties
-Wed Dec 04 12:05:21 GMT 2019 Exec:[stcp://localhost:11000, 6]
-Wed Dec 04 12:05:21 GMT 2019 BOOTSTRAPPER LOADING AGENT
-Wed Dec 04 12:05:21 GMT 2019 BOOTSTRAPPER RUNNING
-Wed Dec 04 12:05:21 GMT 2019 Exited, exitCode:1
-Wed Dec 04 12:05:23 GMT 2019 BOOTSTRAPPER EXIT
+Fri Dec 06 18:19:29 GMT 2019 BOOTSTRAPPER SETUP
+Fri Dec 06 18:19:29 GMT 2019 DiskLeft (mb): Home:1000 Work:1000
+Fri Dec 06 18:19:29 GMT 2019 Ignoring: Jolokia Agent not configured in boot.properties
+Fri Dec 06 18:19:29 GMT 2019 Exec:[stcp://localhost:11000, 6]
+Fri Dec 06 18:19:29 GMT 2019 BOOTSTRAPPER LOADING AGENT
+Fri Dec 06 18:19:29 GMT 2019 BOOTSTRAPPER RUNNING
+Fri Dec 06 18:19:29 GMT 2019 Exited, exitCode:1
+Fri Dec 06 18:19:30 GMT 2019 BOOTSTRAPPER EXIT

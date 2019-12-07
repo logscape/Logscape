@@ -55,7 +55,7 @@ public class TransportFactoryImpl implements TransportFactory {
 			epFactory = new NettyEndPointFactory(scheduler, serviceName);
 		}
 		if (chosenTransport == TRANSPORT.RABBIT) {
-			epFactory = new RabbitEndpointFactory(System.getProperty("rabbit.broker", "localhost"));
+			epFactory = new RabbitEndpointFactory(RabbitEndpointFactory.getURL());
 		}
 
 		protocolEPFactoryMap.put("stcp", epFactory);

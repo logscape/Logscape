@@ -30,12 +30,15 @@ public class RabbitEndpointFactory implements EndPointFactory {
         LOGGER.info("CREATED");
         this.rConfig = new RConfig(brokerUrl);
     }
+
+    public static String getURL() {
+        return System.getProperty("rabbit.broker.url", "amqp://guest:guest@192.168.99.100:5672");
+    }
+
     @Override
-    public EndPoint getEndPoint(final URI uri1, final Receiver receiver) {
+    public EndPoint getEndPoint(final URI uri, final Receiver receiver) {
 
         try {
-
-            final URI uri = cleanURI(uri1);
 
             if (!started) start();
             buildConsumerChannel(uri, receiver);
@@ -48,7 +51,7 @@ public class RabbitEndpointFactory implements EndPointFactory {
 
                 @Override
                 public void stop() {
-                    if (channel != null) {
+                    if (channel != null && channel.isOpen()) {
                         try {
                             channel.close();
                             channel = null;
@@ -63,7 +66,7 @@ public class RabbitEndpointFactory implements EndPointFactory {
 
                     try {
                         final URI endPoint = cleanURI(endPoint1);
-                        String remoteAddressAsQueueName = addressAsQueueName(endPoint);
+                        String remoteAddressAsQueueName = addressAsQueueName(endPoint, endPoint1.getPort(), endPoint1.getQuery());
 
                         if (channel == null) {
                             channel = rConfig.getChannel(remoteAddressAsQueueName);
@@ -106,7 +109,7 @@ public class RabbitEndpointFactory implements EndPointFactory {
 
     private void buildConsumerChannel(final URI uri, final Receiver receiver) {
         final URI endPoint = cleanURI(uri);
-        String addressAsQueueName = addressAsQueueName(endPoint);
+        String addressAsQueueName = addressAsQueueName(endPoint, uri.getPort(), uri.getQuery());
 
         Consumer consumer = consumers.get(uri);
         if (consumer == null) {
@@ -130,8 +133,8 @@ public class RabbitEndpointFactory implements EndPointFactory {
             if (LOGGER.isDebugEnabled()) LOGGER.debug("============ WARN ALREADY CREATED QQQQQQQQQQ:\n\t" + uri.toString() + " Recv: " + receiver);
         }
     }
-    private String addressAsQueueName(URI endPoint) {
-        return endPoint.toString().replace("//?", "/?");
+    private String addressAsQueueName(URI endPoint, int port, String query) {
+        return endPoint.toString().replace("//?", "/?")+query+"-"+port;
     }
     @Override
     public void start() {

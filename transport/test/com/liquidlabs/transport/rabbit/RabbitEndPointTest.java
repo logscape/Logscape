@@ -27,7 +27,6 @@ public class RabbitEndPointTest {
 	private EndPoint secondEP;
 
 	private boolean allowLocalRoute;
-	private EmbeddedInMemoryQpidBroker broker;
 
 //	public static Server myServer= new Server();
 
@@ -52,14 +51,16 @@ public class RabbitEndPointTest {
 	@After
 	public void tearDown() throws Exception {
 		System.out.println("Stopping.....");
-		epFactory.stop();
-		secondEP.stop();
-		firstEP.stop();
+		if (epFactory != null) {
+			epFactory.stop();
+			secondEP.stop();
+			firstEP.stop();
+		}
 	}
 
 	@Test
 	public void testRabbitWorks() throws Exception {
-		if (true) return;
+//		if (true) return;
 	    
         RConfig config = new RConfig("192.168.99.100", 5672, "guest", "guest");
         RSender sender = new RSender(config, "myQueue");
@@ -76,7 +77,7 @@ public class RabbitEndPointTest {
 	@Test
 	public void testEndpointWorks() throws Exception {
 
-		if (true) return;
+//		if (true) return;
 
 		epFactory = new RabbitEndpointFactory("amqp://guest:guest@192.168.99.100:5672");
 
@@ -107,7 +108,7 @@ public class RabbitEndPointTest {
 			callCount++;
 			System.out.println(Thread.currentThread().getName() + " " + callCount + "****************** A Received:" + new String(payload));
 			try {
-				Thread.sleep(100);
+				Thread.sleep(10);
 				if (callCount == 2) {
 					System.out.println(Thread.currentThread().getName() + " " + callCount + "****************** A Sending listenerID:" + new String(payload));
 					firstEP.send("tcp", secondEP.getAddress(), "returning - someListenerId".getBytes(), Type.REQUEST, false, 10, "methodName", allowLocalRoute);

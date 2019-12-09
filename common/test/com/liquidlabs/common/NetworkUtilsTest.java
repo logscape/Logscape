@@ -38,15 +38,6 @@ public class NetworkUtilsTest {
 			"  None\n";
 
 	@Test
-	public void shouldGetCorrectIFace() throws Exception {
-		String readLine = NetworkUtils.readLine("0.0.0.0", new BufferedReader(new StringReader(file)));
-		System.out.println(readLine);
-		String[] split = readLine.split("\\s+");
-		System.out.println("Ret:" +  split[4]);
-		InetAddress.getByName("123a");
-
-	}
-	@Test
 	public void shouldCachehostnameLookup() throws Exception {
 		InetSocketAddress addr = new InetSocketAddress(8811);
 		NetworkUtils.remoteAddrToHostname.clear();

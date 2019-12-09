@@ -1,0 +1,21 @@
+<!-- Findbugs filtering.
+
+Findbugs is a static code analysis tool run as part of the "check" phase of the build.
+This file dictates which categories of bugs and individual false positives that we supress.
+
+For a detailed description of findbugs bug categories, see http://findbugs.sourceforge.net/bugDescriptions.html
+-->
+<FindBugsFilter>
+    <!-- exclude generated code -->
+
+    <!-- false positive in Java 11, see https://github.com/spotbugs/spotbugs/issues/756 -->
+    <Match>
+        <Bug pattern="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE"/>
+    </Match>
+
+    <!--
+      DO NOT USE THIS EXCLUSION FILE FOR NON-GENERATED CODE
+
+      If you really MUST suppress an error warning, do so using the @SuppressFBWarnings annotation.
+  -->
+</FindBugsFilter>

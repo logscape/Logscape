@@ -138,6 +138,7 @@ public class LineReader {
     }
     private String readLineUsingBreaker2(short minLength) throws IOException {
         this.linesRead = 0;
+        
         try {
 
             // if there was a seek then ditch the previously cached line
@@ -208,6 +209,7 @@ public class LineReader {
             }
             return sb.toString();
         } finally {
+            if (this.newLineLength == 0) newLineLength = raf.getNewLineLength();
             lastRafPos = raf.getFilePointerRAF();
             if (readAheadLine != null) {
                 lastRafPos -= (readAheadLine.length() + newLineLength);
@@ -228,6 +230,7 @@ public class LineReader {
 
     private String readLineUsingBreaker1(short minLength) throws IOException {
         this.linesRead = 0;
+
         try {
 
             // if there was a seek then ditch the previously cached line
@@ -330,6 +333,7 @@ public class LineReader {
             return sb.toString();
         } finally {
             lastRafPos = raf.getFilePointerRAF();
+            if (this.newLineLength == 0) newLineLength = raf.getNewLineLength();
             if (readAheadLine != null) {
                 lastRafPos -= (readAheadLine.length() + newLineLength);
 //                System.err.println("Rewind:" + readAheadLine.length());

@@ -22,7 +22,7 @@ import com.liquidlabs.transport.proxy.events.Event.Type;
 
 public class DummyServiceImpl implements DummyService {
 	
-	TransportFactory transportFactory = new TransportFactoryImpl(Executors.newFixedThreadPool(5), "dummy");
+	TransportFactory transportFactory;
 	private static final Logger LOGGER = Logger.getLogger(DummyServiceImpl.class);
 
 	public static int callCount = 0;
@@ -46,6 +46,10 @@ public class DummyServiceImpl implements DummyService {
     public DummyServiceImpl(List list) {
         callList = list;
     }
+
+    public void stop() {
+    	  if (transportFactory != null) transportFactory.stop();
+	}
 	
 	public void udpCall(String stuff) {
         count();
@@ -131,24 +135,22 @@ public class DummyServiceImpl implements DummyService {
 		
 		
 		LOGGER.info("\t\t -- Server Received:" + new DateTime());
-		Thread thread = new Thread(){
-			@Override
-			public void run() {
-				
-				try {
-					ProxyFactoryImpl proxyFactory = new ProxyFactoryImpl(transportFactory, TransportFactoryImpl.getDefaultProtocolURI("", "localhost", Config.TEST_PORT + 100, "dummy"), Executors.newCachedThreadPool(), "ds");
-					proxyFactory.start();
-					NotifyInterface remoteService = proxyFactory.getRemoteService("notifyId", NotifyInterface.class, new String[] { endPoint });
-					for (int i = 0; i < 10; i++) {
-						System.out.println(">>>Calling notify:" + i);
-						remoteService.notify("payloadFromRemote");
-						System.out.println("<<<done:" + i);
-					}
-				} catch (Throwable t) {
-					t.printStackTrace();
+		Thread thread = new Thread(() -> {
+
+			try {
+				transportFactory = new TransportFactoryImpl(Executors.newFixedThreadPool(5), "dummy");
+				ProxyFactoryImpl proxyFactory = new ProxyFactoryImpl(transportFactory, TransportFactoryImpl.getDefaultProtocolURI("", "localhost", Config.TEST_PORT + 100, "dummy"), Executors.newCachedThreadPool(), "ds");
+				proxyFactory.start();
+				NotifyInterface remoteService = proxyFactory.getRemoteService("notifyId", NotifyInterface.class, new String[] { endPoint });
+				for (int i = 0; i < 10; i++) {
+					System.out.println(">>>Calling notify:" + i);
+					remoteService.notify("payloadFromRemote");
+					System.out.println("<<<done:" + i);
 				}
+			} catch (Throwable t) {
+				t.printStackTrace();
 			}
-		};
+		});
 		count();
 		thread.start();
 		try {

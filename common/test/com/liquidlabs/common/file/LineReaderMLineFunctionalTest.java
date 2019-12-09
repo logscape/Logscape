@@ -1,4 +1,4 @@
-package com.liquidlabs.common.file.raf;
+package com.liquidlabs.common.file;
 
 import static org.junit.Assert.*;
 
@@ -7,7 +7,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import com.liquidlabs.common.file.raf.BreakRule;
+import com.liquidlabs.common.file.raf.MLineByteBufferRAF;
+import com.liquidlabs.common.file.raf.RAF;
 import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -61,7 +65,7 @@ public class LineReaderMLineFunctionalTest {
 
     @Test
     public void shouldReadEXPLICIT_TIME_() throws Exception {
-        File file = new File("build.ML-AS_TEST.log");
+        File file = new File("build/ML-AS_TEST.log");
         file.delete();
         FileOutputStream fos = new FileOutputStream(file);
         int events = 100;
@@ -86,7 +90,7 @@ public class LineReaderMLineFunctionalTest {
     }
     @Test
     public void shouldReadEXPLICIT_AS_() throws Exception {
-        File file = new File("build.ML-AS_TEST.log");
+        File file = new File("build/ML-AS_TEST.log");
         file.delete();
         FileOutputStream fos = new FileOutputStream(file);
         int events = 100;

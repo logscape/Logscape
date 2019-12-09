@@ -41,14 +41,14 @@ public class NettyEndPoint implements EndPoint, LifeCycle {
 			if (address.toString().startsWith("stcp") || address.toString().startsWith("tcp")) {
 				protocolParser = new LLProtocolParser(receiver);
 
-                boolean isSecured = address.getPort() == TransportProperties.getSecureEndpointPort() && TransportProperties.isEndPointSecurityEnabled();
+                boolean isSecured = address.getPort() == TransportProperties.getSecureEndpointPort();
                 if (isSecured) {
                     logger.info("SecureClientHandshake Against:" + address);
                 }
 
-                this.receiver = new NettyReceiver(address, socketFactory, protocolParser, isSecured);
+                this.receiver = new NettyReceiver(address, socketFactory, protocolParser);
 			} else if (address.toString().startsWith("raw")) {
-				this.receiver = new NettyReceiver(address, socketFactory, new StringProtocolParser(receiver), false);
+				this.receiver = new NettyReceiver(address, socketFactory, new StringProtocolParser(receiver));
 			} else {
 				RuntimeException ex = new RuntimeException("Unknown protocol:" + address);
 				logger.warn(ex.toString(), ex);

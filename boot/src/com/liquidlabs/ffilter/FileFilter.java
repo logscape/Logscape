@@ -230,6 +230,7 @@ public class FileFilter {
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println(e.toString());
 			return false;
 		} finally {
 			if (fos != null)

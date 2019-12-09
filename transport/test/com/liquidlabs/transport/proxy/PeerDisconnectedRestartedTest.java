@@ -35,10 +35,11 @@ public class PeerDisconnectedRestartedTest extends TestCase {
 		transportFactoryA.stop();
 		proxyFactoryA.stop();
 		killB();
-		super.tearDown();
+		dummyServiceB.stop();
 	}
 
 	private void killB() {
+
 		transportFactoryB.stop();
 		proxyFactoryB.stop();
 	}

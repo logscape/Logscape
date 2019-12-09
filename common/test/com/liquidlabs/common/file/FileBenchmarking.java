@@ -8,7 +8,6 @@ import com.liquidlabs.common.file.raf.ByteBufferRAF;
 import com.liquidlabs.common.file.raf.MLineByteBufferRAF;
 import com.liquidlabs.common.file.raf.RAF;
 import org.junit.Test;
-import org.mozilla.intl.chardet.*;
 
 public class FileBenchmarking {
 
@@ -25,19 +24,19 @@ public class FileBenchmarking {
 
 
 
-            nsDetector det = new nsDetector() ;
-            det.Init(new nsICharsetDetectionObserver() {
-                public void Notify(String charset) {
-                    System.out.println("CHARSET = " + charset);
-                }
-            });
+//            nsDetector det = new nsDetector() ;
+//            det.Init(new nsICharsetDetectionObserver() {
+//                public void Notify(String charset) {
+//                    System.out.println("CHARSET = " + charset);
+//                }
+//            });
 
 
 
             FileInputStream fis = new FileInputStream(filename);
             byte[] dd = new byte[1024];
             fis.read(dd);
-            det.DoIt(dd,dd.length, false);
+//            det.DoIt(dd,dd.length, false);
 
             MLineByteBufferRAF raf = new MLineByteBufferRAF(filename);
         for (int i = 0; i < 100; i++) {

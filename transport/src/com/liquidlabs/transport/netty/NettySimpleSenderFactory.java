@@ -12,48 +12,39 @@ import org.jboss.netty.channel.DefaultChannelFuture;
 import org.jboss.netty.channel.socket.ClientSocketChannelFactory;
 
 import java.io.IOException;
-import java.net.InetAddress;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class NettySimpleSenderFactory implements SenderFactory {
 	
 	private static final Logger LOGGER = Logger.getLogger(NettySimpleSenderFactory.class);
-	
+	private final ScheduledFuture<?> schedule;
+
 	private ChannelFactory factory;
 	AtomicInteger given = new AtomicInteger();
 	
 	LifeCycle.State state = LifeCycle.State.STARTED;
 	
 	// return Queue
-	LinkedBlockingQueue<NettySenderImpl> returnSenders = new LinkedBlockingQueue<NettySenderImpl>();
+	LinkedBlockingQueue<NettySenderImpl> returnSenders = new LinkedBlockingQueue<>();
 
-	private Thread returnThread;
-
-	private boolean restrictClientPorts  = TransportProperties.isClientPortsRestricted();
-	
-
-	public NettySimpleSenderFactory(ClientSocketChannelFactory factory) {
+	public NettySimpleSenderFactory(ClientSocketChannelFactory factory, ScheduledExecutorService scheduler) {
 		DefaultChannelFuture.setUseDeadLockChecker(false);
 		this.factory = factory;
 		
 		LOGGER.info("Using ConnectionOutstandingLimit:" + TransportProperties.getConnectionOutstandingLimit());
 
-		returnThread = new Thread("NettySimplePoolReturn") {
+		schedule = scheduler.schedule(new Runnable() {
+			@Override
 			public void run() {
-				while (true) {
-					try {
-						NettySenderImpl take  = returnSenders.take();
-						take.stop();
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-				
+				NettySenderImpl take = null;
+				take = returnSenders.poll();
+				if (take != null) take.stop();
 			}
-		};
-		returnThread.setDaemon(true);
-		returnThread.start();
+		}, 1, TimeUnit.SECONDS);
 	}
 	public int getGivenConnections() {
 		return given.get();
@@ -62,7 +53,7 @@ public class NettySimpleSenderFactory implements SenderFactory {
 	public Sender getSender(URI uri, boolean logIt, boolean remoteOnly, String context) throws IOException, InterruptedException {
 			if (this.state == State.STOPPED) throw new RuntimeException("Factory is shutdown");
 
-			NettySenderImpl newSender = new NettySenderImpl(uri, factory, restrictClientPorts  = TransportProperties.isClientPortsRestricted(), false);
+			NettySenderImpl newSender = new NettySenderImpl(uri, factory, false);
 			newSender.start();
 			if (LOGGER.isDebugEnabled()) LOGGER.debug("Using NewSender:" + newSender);
 			given.incrementAndGet();
@@ -94,7 +85,8 @@ public class NettySimpleSenderFactory implements SenderFactory {
 	public void stop() {
 		if (this.state == State.STOPPED) return;
 		this.state = State.STOPPED;
-		
+		schedule.cancel(true);
+
 	}
 	public String dumpStats() {
 		return toString();
@@ -102,13 +94,4 @@ public class NettySimpleSenderFactory implements SenderFactory {
 	public String toString() {
 		return getClass().getSimpleName() + " returnSenders:" + this.returnSenders.size(); 
 	}
-	private String getHostName() {
-		try {
-			InetAddress localHost = InetAddress.getLocalHost();
-			return localHost.getCanonicalHostName();
-		} catch (Throwable t) {
-			return "localhost";
-		}
-	}
-
 }

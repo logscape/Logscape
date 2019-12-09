@@ -9,9 +9,7 @@ import com.liquidlabs.transport.proxy.DummyServiceImpl.UserType;
 import com.liquidlabs.transport.proxy.ProxyFactoryImpl;
 import com.liquidlabs.transport.proxy.Remotable;
 import com.liquidlabs.transport.serialization.Convertor;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,18 +25,18 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class Rabbit_ProxyRemoteInvocationTest {
-	private ProxyFactoryImpl proxyFactoryA;
+	private static ProxyFactoryImpl proxyFactoryA;
 	boolean enableOutput = false;
-	private ProxyFactoryImpl proxyFactoryB;
-	private URI proxyBAddress;
-	private DummyService remoteService;
-	TransportFactory transportFactory ;
-	ExecutorService executor = Executors.newFixedThreadPool(5);
+	private static ProxyFactoryImpl proxyFactoryB;
+	private static URI proxyBAddress;
+	private static DummyService remoteService;
+	static TransportFactory transportFactory ;
+	static ExecutorService executor = Executors.newFixedThreadPool(5);
 	Convertor c = new Convertor();
 
 
-	@Before
-	public void setUp() throws Exception {
+	@BeforeClass
+	public static void setUp() throws Exception {
 
 		System.setProperty("transport", TransportFactory.TRANSPORT.RABBIT.name());
 
@@ -62,18 +60,29 @@ public class Rabbit_ProxyRemoteInvocationTest {
 
 		DummyServiceImpl.callCount = 0;
 	}
-	@After
-	public void tearDown() throws Exception {
+	@AfterClass
+	public static void tearDownClass() throws Exception {
 		transportFactory.stop();
 		proxyFactoryA.stop();
 		proxyFactoryB.stop();
 		Thread.sleep(50);
 	}
 
+	@Before
+	public void setup() throws Exception {
+		DummyServiceImpl.callCount = 0;
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(100);
+	}
+
+
 	@Test
 	public void testNumberParamShouldWork() throws Exception {
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100; i++) {
             Number passANumber = remoteService.passANumber(100 + i);
             assertNotNull(passANumber);
             assertEquals(100 + i, passANumber.intValue());
@@ -104,41 +113,6 @@ public class Rabbit_ProxyRemoteInvocationTest {
 		assertTrue(mapString.toString().contains("stuff1"));
 		assertTrue(mapString.toString().contains("stuff2"));
 	}
-
-	@Test
-	public void testShouldStopAProxy() throws Exception {
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("stuff1", "stuff2");
-
-		remoteService.passAMap(map);
-
-
-		assertTrue("Didnt find ProxyClient to stop!", proxyFactoryA.stopProxy(remoteService));
-	}
-
-	@Test
-	public void testShouldStopAProxyUsingGetId() throws Exception {
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("stuff1", "stuff2");
-
-		remoteService.passAMap(map);
-
-
-		TestRemote testRemote = new TestRemote(remoteService.getId());
-
-		assertTrue("Didnt find ProxyClient to stop!", proxyFactoryA.stopProxy(testRemote));
-	}
-	public static class TestRemote implements Remotable {
-		private final String id;
-		public TestRemote(String id) {
-			this.id = id;
-		}
-		public String getId() {
-			return id;
-		}
-
-	}
-
 
 	@Test
 	public void testShouldReturnZeroArray() throws Exception {

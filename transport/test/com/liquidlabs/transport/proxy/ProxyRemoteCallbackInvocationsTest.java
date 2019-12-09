@@ -31,11 +31,12 @@ public class ProxyRemoteCallbackInvocationsTest {
 	TransportFactory transportFactory ;
 	ExecutorService executor = Executors.newFixedThreadPool(5);
 	Convertor c = new Convertor();
-	
+	private DummyServiceImpl dummyService;
+
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("tcp.use.oio.server", "true");
-		System.setProperty("tcp.use.oio.client", "true");
+		System.setProperty("tcp.use.oio.server", "false");
+		System.setProperty("tcp.use.oio.client", "false");
 		System.out.println("PID:" + PIDGetter.getPID());
 		transportFactory = new TransportFactoryImpl(Executors.newFixedThreadPool(5), "test");
 		proxyFactoryA = new ProxyFactoryImpl(transportFactory,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", 9999, "testServiceA"), executor, "");
@@ -45,7 +46,8 @@ public class ProxyRemoteCallbackInvocationsTest {
 		
 		TransportFactoryImpl transportFactory2 = new TransportFactoryImpl(Executors.newFixedThreadPool(5), "test");
 		proxyFactoryB = new ProxyFactoryImpl(transportFactory2,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", 22222, "testServiceB"), executor, "");
-		proxyFactoryB.registerMethodReceiver("methodReceiver", new DummyServiceImpl());
+		dummyService = new DummyServiceImpl();
+		proxyFactoryB.registerMethodReceiver("methodReceiver", dummyService);
 		proxyFactoryB.start();
 		
 
@@ -62,6 +64,7 @@ public class ProxyRemoteCallbackInvocationsTest {
 		transportFactory.stop();
 		proxyFactoryA.stop();
 		proxyFactoryB.stop();
+		dummyService.stop();
 		Thread.sleep(50);
 	}
 	

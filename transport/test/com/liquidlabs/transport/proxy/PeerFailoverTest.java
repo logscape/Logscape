@@ -52,6 +52,8 @@ public class PeerFailoverTest {
         proxyFactoryA.stop();
         proxyFactoryB.stop();
         proxyFactoryC.stop();
+        dummyServiceB.stop();
+        dummyServiceC.stop();
     }
 
     @Before
@@ -267,5 +269,16 @@ public class PeerFailoverTest {
         assertThat(dummyServiceB.instanceLatch.await(5, TimeUnit.SECONDS), is(true));
         assertThat(dummyServiceC.instanceLatch.await(10, TimeUnit.SECONDS), is(true));
     }
+
+//    @Test
+//    public void testShouldWaitWhileDebugging() {
+//        while (true) {
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
 }

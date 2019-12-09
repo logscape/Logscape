@@ -14,8 +14,14 @@ import com.liquidlabs.transport.netty.NettyReceiver.ReplySender;
  * 
  */
 public class StringProtocolParser implements ProtocolParser {
+
 	private final Receiver receiver;
-	
+
+	@Override
+	public String protocol() {
+		return "raw";
+	}
+
 	// Use different pools for receiver (remote invocations) versus (reply invocations) responses to our own invocations
 	public StringProtocolParser(Receiver receiver) {
 		this.receiver = receiver;

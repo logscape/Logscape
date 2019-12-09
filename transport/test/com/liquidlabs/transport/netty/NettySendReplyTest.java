@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 import static org.junit.Assert.*;
 
@@ -32,28 +33,34 @@ public class NettySendReplyTest {
 	private NioClientSocketChannelFactory factory1;
 	private NioServerSocketChannelFactory factory2;
     private CountDownLatch countDownLatch;
+	private ScheduledExecutorService scheduler;
 
-    @Before
+	@Before
 	public void setUp() throws Exception {
+
+		System.setProperty("port.scan.debug","true");
 		
-		System.setProperty("vso.client.port.restrict", "true");
+		System.setProperty("vso.client.port.restrict", "false");
 		
 		exec1 = Executors.newCachedThreadPool(new NamingThreadFactory("JB-Sender", true, Thread.NORM_PRIORITY + 1));
 		exec2 = Executors.newCachedThreadPool(new NamingThreadFactory("WRPLY-Sender", true, Thread.NORM_PRIORITY + 1));
 		factory1 = new NioClientSocketChannelFactory(exec1, exec2);
 		factory2 = new NioServerSocketChannelFactory(exec1, exec2);
 
-		
-		sender = new NettySenderFactoryProxy(new URI("tcp://localhost:" + new NetworkUtils().determinePort(9000)), new NettySimpleSenderFactory(factory1));
+		scheduler = Executors.newScheduledThreadPool(2);
+
+
+		sender = new NettySenderFactoryProxy(new URI("tcp://localhost:" + new NetworkUtils().determinePort(9000)), new NettySimpleSenderFactory(factory1, scheduler));
 
 		sender.start();
 		receiverAddress = new URI("tcp://localhost:" + new NetworkUtils().determinePort(10000));
         countDownLatch = new CountDownLatch(4);
-        receiver = new NettyReceiver(receiverAddress, factory2, new LLProtocolParser(new MyReceiver()), false);
+        receiver = new NettyReceiver(receiverAddress, factory2, new LLProtocolParser(new MyReceiver()));
 		receiver.start();
 	}
 	@After
 	public void tearDown() throws Exception {
+		scheduler.shutdown();
 		sender.stop();
 		receiver.stop();
 	}

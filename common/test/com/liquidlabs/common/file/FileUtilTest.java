@@ -23,7 +23,6 @@ public class FileUtilTest {
         String path = "**,!App-";
         new File("FileUtilTest/isIncludes/file.log").mkdirs();
         new File("FileUtilTest/isExcludedApp-1.0/file.log").mkdirs();
-
 //        assertTrue(FileUtil.isPathMatch(false, path, "FileUtilTest/isIncludes"));
         assertFalse(FileUtil.isPathMatch(false, path, "FileUtilTest/isExcludedApp-1.0"));
     }
@@ -32,7 +31,6 @@ public class FileUtilTest {
     public void testShouldMatchPathP() throws Exception {
         String cleanMyPath = "D:\\work\\LOGSCAPE\\Logscape_250\\master\\build-FWD\\logscape\\work\\LogServer_SERVER_/*/**/logscape/work,D:\\work\\LOGSCAPE\\Logscape_250\\master\\build-FWD\\logscape\\work\\LogServer_SERVER_/*/**/logscape/work/*,D:\\work\\LOGSCAPE\\Logscape_250\\master\\build-FWD\\logscape\\work\\LogServer_SERVER_/*/D:\\work\\LOGSCAPE\\Logscape_250\\master\\build-FWD\\logscape,D:\\work\\LOGSCAPE\\Logscape_250\\master\\build-FWD\\logscape\\work\\LogServer_SERVER_/*/D:\\work\\LOGSCAPE\\Logscape_250\\master\\build-FWD\\logscape\\work,D:\\work\\LOGSCAPE\\Logscape_250\\master\\build-FWD\\logscape\\work\\LogServer_SERVER_/*/D:\\work\\LOGSCAPE\\Logscape_250\\master\\build-FWD\\logscape\\work\\*,";
         String replace = FileUtil.cleanPath(cleanMyPath).replace(",", ",\n");
-        System.out.println("R:" + replace);
     }
 
     @Test
@@ -77,10 +75,8 @@ public class FileUtilTest {
 
     @Test
     public void testShouldWorkwithWindows() throws Exception {
-//        String path = "./work/WindowsApp-1.0/*";
-        String path = "./work/LogServer_Server/**/UnixApp-1.0/*";
-//        String dir = new File("").getAbsolutePath() +  "\\work\\WindowsApp-1.0\\13Aug24";
-        String dir = "./work/LogServer_Server/host/opt/logscape/work/UnixApp-1.0/13July12";
+        String path = "./work/WindowsApp-1.0/*";
+        String dir = new File("").getAbsolutePath() +  "\\work\\WindowsApp-1.0\\13Aug24";
         assertTrue(FileUtil.isPathMatch(true, path, dir));
     }
 
@@ -129,8 +125,8 @@ public class FileUtilTest {
     }
     @Test
     public void testShouldMatchMixedFwddPathWildWIN() throws Exception {
-        String path = "/home/logscape/logscape/work/LogServer_SERVER_/vm-1/c/opt/logs/stuff/2014*";
-        assertTrue(FileUtil.isPathMatch(true, path, "c:\\opt\\logs\\stuff\\2014-ME"));
+        String path = "/home/logscape/logscape/work/LogServer_SERVER_/vm-1/c/opt/logs/stuff/2019*";
+        assertTrue(FileUtil.isPathMatch(true, path, "c:\\opt\\logs\\stuff\\2019-ME"));
     }
 
     @Test

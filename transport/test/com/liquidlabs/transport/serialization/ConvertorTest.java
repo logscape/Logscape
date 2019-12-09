@@ -1,33 +1,15 @@
 package com.liquidlabs.transport.serialization;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
-import java.util.concurrent.ConcurrentHashMap;
-
-import com.clearspring.analytics.stream.StreamSummary;
-import com.clearspring.analytics.stream.cardinality.HyperLogLog;
 import com.google.common.hash.BloomFilter;
-import com.google.common.hash.Funnel;
 import com.google.common.hash.Funnels;
+import com.liquidlabs.transport.proxy.events.Event;
+import com.liquidlabs.transport.proxy.events.Event.Type;
 import gnu.trove.map.hash.TObjectIntHashMap;
 import junit.framework.TestCase;
 
-import com.liquidlabs.transport.proxy.events.Event;
-import com.liquidlabs.transport.proxy.events.Event.Type;
-import org.junit.Test;
-
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
+import java.nio.charset.Charset;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ConvertorTest extends TestCase {
 

@@ -30,6 +30,21 @@ public class RawSweeperTest {
         long sweepable2 = sweeper.isSweepable(bb2, (short) 0);
         Assert.assertEquals(-1, sweepable2);
     }
+
+
+    @Test
+    public void shouldReadMultiLineByteBuffer() throws Exception {
+        RafSweeper sweeper = new RafSweeper(new char[]{'\n'});
+        ByteBuffer bb = ByteBuffer.wrap("0123456789\n1234".getBytes());
+        long sweepable = sweeper.isSweepable(bb, (short) 0);
+        Assert.assertEquals(10, sweepable);
+
+        ByteBuffer bb2 = ByteBuffer.wrap("0123456789".getBytes());
+        long sweepable2 = sweeper.isSweepable(bb2, (short) 0);
+        Assert.assertEquals(-1, sweepable2);
+    }
+
+
 //    @Test    Errors out with unsupported operation exception
     public void shouldReadMemByteBuffer() throws Exception {
         if (isWindows()) return;

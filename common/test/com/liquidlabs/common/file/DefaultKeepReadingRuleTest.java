@@ -47,9 +47,9 @@ public class DefaultKeepReadingRuleTest {
         DefaultKeepReadingRule rule = new DefaultKeepReadingRule();
         rule.setYearBased();
 
-        assertFalse(rule.isKeepReading("2014 stuff"));
-        assertFalse(rule.isKeepReading("2013 stuff"));
-        assertFalse(rule.isKeepReading("2012 stuff"));
+        assertFalse(rule.isKeepReading("2019 stuff"));
+        assertFalse(rule.isKeepReading("2018 stuff"));
+        assertFalse(rule.isKeepReading("2017 stuff"));
 
         assertTrue(rule.isKeepReading("2007 stuff"));
         assertTrue(rule.isKeepReading("stuff"));

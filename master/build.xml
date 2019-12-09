@@ -159,8 +159,8 @@
 
 
         <copy file="${vso}/cpu.vbs" todir="${vscape-tmp}/scripts" />
-        <copy file="${boot}/renice.vbs" todir="${vscape-tmp}/scripts" />
-        <copy file="${boot}/renice.sh" todir="${vscape-tmp}/scripts" />
+        <copy file="${boot}/resources/renice.vbs" todir="${vscape-tmp}/scripts" />
+        <copy file="${boot}/resources/renice.sh" todir="${vscape-tmp}/scripts" />
 
 
         <copy todir="${vscape-tmp}/lib" verbose="true">
@@ -170,7 +170,7 @@
         <copy todir="${vscape-tmp}/etc">
             <fileset dir="ntWrapperJSL"/>
         </copy>
-        <copy file="${boot}/boot.properties.template" tofile="${vscape-tmp}/boot.properties" overwrite="true"/>
+        <copy file="${boot}/resources/boot.properties.template" tofile="${vscape-tmp}/boot.properties" overwrite="true"/>
         <copy file="${vs-log-disco}/grokit.properties" todir="${vscape-tmp}/downloads" overwrite="true"/>
 
         <copy todir="${vscape-tmp}/etc" verbose="true">
@@ -325,7 +325,7 @@
     <target name="copyRootFiles">
         <copy file="${boot}/dist/boot.jar" todir="${vscape-tmp}" />
         <copy file="scripts/boot.sh" todir="${vscape-tmp}" />
-        <copy file="${boot}/boot.properties" todir="${vscape-tmp}"/>
+        <copy file="${boot}/resources/boot.properties" todir="${vscape-tmp}"/>
 
         <copy file="readme.txt" todir="${vscape-tmp}"/>
         <copy file="license.txt" todir="${vscape-tmp}" />

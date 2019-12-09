@@ -145,10 +145,6 @@ public class TransportProperties {
         return secureEndpointPort;
     }
 
-    public static boolean isEndPointSecurityEnabled() {
-        return Boolean.getBoolean("endpoint.security.enabled");
-    }
-
 	public static String getSSLDomain() {
 		return System.getProperty("ssl.selfsign.domain","logscape.com");
 	}

@@ -98,7 +98,8 @@ public class ProxyFactoryImpl implements ProxyFactory {
 			
 			if (proxyClient == null) {
 				LOGGER.warn(String.format("ProxyClient[%s] NotFound%s", id, clients.keySet()));
-				return false;
+				// if it was unregistered then the value can be null
+				return unregistered;
 			} else {
 				LOGGER.debug("Stopping:" + id);
 				proxyClient.stop();
@@ -153,7 +154,7 @@ public class ProxyFactoryImpl implements ProxyFactory {
 		scheduler = com.liquidlabs.common.concurrent.ExecutorService.newScheduledThreadPool(TransportProperties.getProxySchedulerPoolSize(), "PF-" + serviceName);
 		initEndPointServer(uri, serviceName);
 		
-		admin = new ProxyFactoryAdminImpl(this);
+		admin = null;// new ProxyFactoryAdminImpl(this);
 		
 	}
 
@@ -168,7 +169,7 @@ public class ProxyFactoryImpl implements ProxyFactory {
 				lastException = null;
 				this.address = new URI(address.getScheme(), address.getUserInfo(), address.getHost(), port, address.getPath(), address.getQuery() + "&host=" +NetworkUtils.getHostname(), address.getFragment());
 				
-				LOGGER.info("Starting Service:" + this.address);
+				LOGGER.info("Starting EPService:" + this.address);
 				//new RuntimeException(this.address.toString()).printStackTrace();
 				
 				if (address.getHost().contains("127.0.0.1")) {
@@ -364,7 +365,15 @@ public class ProxyFactoryImpl implements ProxyFactory {
 		clients = null;
 		peerHandler.stop();
 		peerHandler = null;
-		endPointServer = null;
+		if (endPointServer != null) {
+			endPointServer.stop();
+			endPointServer = null;
+		}
+		// dont shutdown injected deps
+//		if (transportFactory != null) {
+//			transportFactory.stop();
+//			transportFactory = null;
+//		}
 		
 		if (executor != null && !executor.isShutdown()) executor.shutdownNow();
 		if (scheduler != null && !scheduler.isShutdown()) scheduler.shutdownNow();

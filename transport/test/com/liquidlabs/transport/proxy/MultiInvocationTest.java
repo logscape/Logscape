@@ -9,8 +9,15 @@ import junit.framework.TestCase;
 import com.liquidlabs.transport.Config;
 import com.liquidlabs.transport.TransportFactory;
 import com.liquidlabs.transport.TransportFactoryImpl;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
-public class MultiInvocationTest extends TestCase {
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+public class MultiInvocationTest  {
 	private ProxyFactoryImpl proxyFactoryA;
 	boolean enableOutput = false;
 	private ProxyFactoryImpl proxyFactoryB;
@@ -20,37 +27,40 @@ public class MultiInvocationTest extends TestCase {
 	long callCount;
 	private ExecutorService executor;
 	private TransportFactory transportFactory;
-	
-	
-	@Override
-	protected void tearDown() throws Exception {
-		proxyFactoryA.stop();
-		proxyFactoryB.stop();
-		super.tearDown();
-	}
-	@Override
-	protected void setUp() throws Exception {
+	private DummyServiceImpl dummyService;
+
+	@Before
+	public void setUp() throws Exception {
 		executor = Executors.newFixedThreadPool(5);
 		transportFactory = new TransportFactoryImpl(executor, "test");
-		super.setUp();
 		proxyFactoryA = new ProxyFactoryImpl(transportFactory,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", Config.TEST_PORT, "multiITestA"), executor, "");
 		proxyFactoryA.start();
 		
 		Thread.sleep(100);
 		
 		proxyFactoryB = new ProxyFactoryImpl(transportFactory,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", Config.TEST_PORT+10000, "multiITestB"), executor, "");
-		
-		proxyFactoryB.registerMethodReceiver("methodReceiver", new DummyServiceImpl());
+
+		dummyService = new DummyServiceImpl();
+		proxyFactoryB.registerMethodReceiver("methodReceiver", dummyService);
 		proxyFactoryB.start();
 		proxyBAddress = proxyFactoryB.getAddress();
 		DummyServiceImpl.callCount = 0;
 		remoteService = proxyFactoryA.getRemoteService("methodReceiver", DummyService.class, new String[] { proxyBAddress.toString() });
 	}
-	
+	@After
+	public void tearDown() throws Exception {
+		proxyFactoryA.stop();
+		proxyFactoryB.stop();
+		dummyService.stop();
+		transportFactory.stop();
+	}
+
+
 	synchronized public void  incrementCallCount(){
 		callCount++;
 	}
-	
+
+	@Test
 	public void testMultiInvocationIsHandledSafely() throws Exception {
 		
 		Thread firstInvocationThread = new Thread(){

@@ -74,7 +74,7 @@ public class RafSweeper {
             int bbEnd = getEndLimit(bb);
 
             // need to check for windows EOL on the first 5 calls
-            for (int i = bbStart; i < bbEnd-1; i++) {
+            for (int i = bbStart; i < bbEnd; i++) {
                 byte byteValue = bb.get();
                 if (byteValue == split[0]) {
                     return i;

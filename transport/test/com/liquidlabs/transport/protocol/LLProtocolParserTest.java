@@ -1,4 +1,4 @@
-package com.liquidlabs.transport;
+package com.liquidlabs.transport.protocol;
 
 import static com.liquidlabs.transport.protocol.NetworkConfig.*;
 
@@ -6,14 +6,15 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.liquidlabs.transport.netty.LLProtocolParser;
+import com.liquidlabs.transport.netty.StreamState;
 import junit.framework.TestCase;
 
+import org.jboss.netty.buffer.ByteBufferBackedChannelBuffer;
+import org.jboss.netty.buffer.ChannelBuffer;
 import org.jmock.Mockery;
 
-import com.liquidlabs.transport.LLProtocolParser;
 import com.liquidlabs.transport.Receiver;
-import com.liquidlabs.transport.StreamState;
-import com.liquidlabs.transport.LLProtocolParser.State;
 
 public class LLProtocolParserTest extends TestCase {
 	Mockery mockery = new Mockery();
@@ -43,7 +44,7 @@ public class LLProtocolParserTest extends TestCase {
 		StreamState state = new StreamState();
 		state.parseState = State.SIZE;
 		
-		StreamState state1 = parser.process(allocate, state);
+		StreamState state1 = parser.process(new ByteBufferBackedChannelBuffer(allocate), state, null, null);
 		
 		assertEquals(State.SIZE, state1.parseState);
 		
@@ -52,7 +53,7 @@ public class LLProtocolParserTest extends TestCase {
 	
 	public void testShouldCorrectInputStream() throws Exception {
 		byte[] bytesForHeader = "LL_TCX".getBytes();
-		ByteBuffer byteBuffer = getBB("rubbish_" + HEADER);
+		ChannelBuffer byteBuffer = getBB("rubbish_" + HEADER);
 		
 		boolean foundIt = new StreamState().correctInputStream(byteBuffer, bytesForHeader);
 		
@@ -62,18 +63,18 @@ public class LLProtocolParserTest extends TestCase {
 	}
 	
 	public void testShouldHandleRubbishAndFindHeader() throws Exception {
-		ByteBuffer byteBuffer = getBB("RUBBISH" + HEADER);
+		ChannelBuffer byteBuffer = getBB("RUBBISH" + HEADER);
 		
 		StreamState state = new StreamState();
 		
-		StreamState endState = parser.process(byteBuffer, state);
+		StreamState endState = parser.process(byteBuffer, state, null, null);
 		
-		assertEquals(LLProtocolParser.State.TYPE, endState.parseState);
+		assertEquals(State.TYPE, endState.parseState);
 		
 	}
 	
 	public void testShouldReadBodyPartialCompleteAndCallReader() throws Exception {
-		ByteBuffer byteBuffer = getBB("load");
+		ChannelBuffer byteBuffer = getBB("load");
 		
 		StreamState state = new StreamState();
 		state.bodyRemaining = "load".length();
@@ -84,15 +85,15 @@ public class LLProtocolParserTest extends TestCase {
 		state.parts.write("pay".getBytes());
 		state.parseState = State.BODY;
 		
-		StreamState endState = parser.process(byteBuffer, state);
+		StreamState endState = parser.process(byteBuffer, state, null, null);
 		
-		assertEquals(LLProtocolParser.State.HEADER, endState.parseState);
+		assertEquals(State.HEADER, endState.parseState);
 		assertTrue(stuff.toString(), stuff.size() == 1);
 	}
 	
 	public void testShouldReadBodyAndCallReader() throws Exception {
-		
-		ByteBuffer byteBuffer = getBB("payload");
+
+		ChannelBuffer byteBuffer = getBB("payload");
 		
 		StreamState state = new StreamState();
 		state.bodyRemaining = "payload".length();
@@ -103,9 +104,9 @@ public class LLProtocolParserTest extends TestCase {
 		state.parseState = State.BODY;
 		
 		
-		StreamState endState = parser.process(byteBuffer, state);
+		StreamState endState = parser.process(byteBuffer, state, null, null);
 		
-		assertEquals(LLProtocolParser.State.HEADER, endState.parseState);
+		assertEquals(State.HEADER, endState.parseState);
 		
 		assertTrue(stuff.size() == 1);
 	}
@@ -120,9 +121,10 @@ public class LLProtocolParserTest extends TestCase {
 		state.parts.write(HEADER.getBytes());
 		state.parseState = State.SIZE;
 		
-		StreamState endState = parser.process(headerBuffer, state);
+		StreamState endState = parser.process(
+				new ByteBufferBackedChannelBuffer(headerBuffer), state, null, null);
 		
-		assertEquals(LLProtocolParser.State.BODY, endState.parseState);
+		assertEquals(State.BODY, endState.parseState);
 		assertEquals(128, endState.bodySize);
 	}
 	
@@ -134,34 +136,35 @@ public class LLProtocolParserTest extends TestCase {
 		
 		StreamState state = new StreamState();
 		
-		StreamState endState = parser.process(headerBuffer, state);
+		StreamState endState = parser.process(
+				new ByteBufferBackedChannelBuffer(headerBuffer), state, null ,null );
 		
-		assertEquals(LLProtocolParser.State.TYPE, endState.parseState);
+		assertEquals(State.TYPE, endState.parseState);
 	}
 	
 	
 	public void testShouldHandlePartialHeader() throws Exception {
-		
-		ByteBuffer headerBuffer = getBB("LL_");
+
+		ChannelBuffer headerBuffer = getBB("LL_");
 		
 		StreamState state = new StreamState();
 		
-		StreamState endState = parser.process(headerBuffer, state);
+		StreamState endState = parser.process(headerBuffer, state, null, null);
 		
-		assertEquals(LLProtocolParser.State.HEADER, endState.parseState);
+		assertEquals(State.HEADER, endState.parseState);
+
+		ChannelBuffer headerBuffer1 = getBB("TCP");
+		StreamState endState1 = parser.process(headerBuffer1, state, null, null);
 		
-		ByteBuffer headerBuffer1 = getBB("TCP");
-		StreamState endState1 = parser.process(headerBuffer1, state);
-		
-		assertEquals(LLProtocolParser.State.TYPE, endState1.parseState);
+		assertEquals(State.TYPE, endState1.parseState);
 		
 		
 	}
-	private ByteBuffer getBB(String contents) {
+	private ChannelBuffer getBB(String contents) {
 		ByteBuffer headerBuffer = ByteBuffer.allocate(contents.length());
 		headerBuffer.put(contents.getBytes());
 		headerBuffer.flip();
-		return headerBuffer;
+		return new ByteBufferBackedChannelBuffer(headerBuffer);
 	}
 	
 	public class MyReceiver implements Receiver {

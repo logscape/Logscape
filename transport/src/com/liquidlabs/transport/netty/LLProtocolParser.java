@@ -22,6 +22,11 @@ public class LLProtocolParser implements ProtocolParser {
 	static final Logger LOGGER = Logger.getLogger(LLProtocolParser.class);
 	private final Receiver receiver;
 
+	@Override
+	public String protocol() {
+		return "tcp";
+	}
+
 	// Use different pools for receiver (remote invocations) versus (reply
 	// invocations) responses to our own invocations
 	volatile int recvdMsgs;

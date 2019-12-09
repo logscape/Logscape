@@ -5,24 +5,28 @@ import com.liquidlabs.common.concurrent.NamingThreadFactory;
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.transport.Receiver;
 import com.liquidlabs.transport.protocol.Type;
-import junit.framework.TestCase;
 import org.hamcrest.collection.IsCollectionContaining;
 import org.jboss.netty.channel.socket.ClientSocketChannelFactory;
 import org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import static java.util.concurrent.Executors.newCachedThreadPool;
+import static java.util.concurrent.Executors.newScheduledThreadPool;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class NettySendRecHandshakeTest extends TestCase {
+public class NettySendRecSecuredTest {
 	
 	private NettySenderFactoryProxy sender;
 	private NettyReceiver receiver;
@@ -36,43 +40,50 @@ public class NettySendRecHandshakeTest extends TestCase {
 	private boolean allowLocalRoute = false;
     private CountDownLatch countDownLatch;
 
-    private boolean isHandshake = true;
+    private boolean isHandshake = false;
+	private ScheduledExecutorService scheduler;
 
-    @Override
-	protected void setUp() throws Exception {
-		super.setUp();
-		
+	@Before
+	public void setUp() throws Exception {
+		//if (true) return;
+//		System.setProperty("cert.keystore.file","resources/ssl/.keystore");
+		System.setProperty("endpoint.security.port","10000");
+
 		System.setProperty("vso.client.port.restrict", "false");
-        System.setProperty("endpoint.security.enabled", "true");
+        System.setProperty("endpoint.security.enabled", "false");
 
-
-        System.setProperty("cert.keystore.file","../dashboardServer/ssl/.keystore");
-        System.setProperty("endpoint.security.port","10000");
-		
-		exec1 = Executors.newCachedThreadPool(new NamingThreadFactory("JB-Sender", true, Thread.NORM_PRIORITY + 1));
-		exec2 = Executors.newCachedThreadPool(new NamingThreadFactory("WRPLY-Sender", true, Thread.NORM_PRIORITY + 1));
+		exec1 = newCachedThreadPool(new NamingThreadFactory("JB-Sender", true, Thread.NORM_PRIORITY + 1));
+		exec2 = newCachedThreadPool(new NamingThreadFactory("WRPLY-Sender", true, Thread.NORM_PRIORITY + 1));
 		factory1 = new NioClientSocketChannelFactory(exec1, exec2, 2);
 		factory2 = new NioServerSocketChannelFactory(exec1, exec2);
 
 		String address = NetworkUtils.getIPAddress();
 		System.out.println("addr:" + address);
-		
-		sender = new NettySenderFactoryProxy(new URI("tcp://" + address + ":" + new NetworkUtils().determinePort(9000)), new NettyPoolingSenderFactory(factory1, isHandshake));
+
+		scheduler = newScheduledThreadPool(1);
+		sender = new NettySenderFactoryProxy(new URI("stcp://" + address + ":" + new NetworkUtils().determinePort(9000)), new NettyPoolingSenderFactory(factory1, scheduler));
 		sender.start();
-		receiverAddress = new URI("tcp://" + address + ":" +  new NetworkUtils().determinePort(10000));
+		receiverAddress = new URI("stcp://" + address + ":" +  new NetworkUtils().determinePort(10000));
 		System.out.println("Rec Address:" + receiverAddress);
         countDownLatch = new CountDownLatch(4);
-        receiver = new NettyReceiver(receiverAddress, factory2, new LLProtocolParser(new MyReceiver(countDownLatch)), isHandshake );
+        receiver = new NettyReceiver(receiverAddress, factory2, new LLProtocolParser(new MyReceiver(countDownLatch)));
 		receiver.start();
 	}
 	
-	@Override
-	protected void tearDown() throws Exception {
+	@After
+	public void tearDown() throws Exception {
+		scheduler.shutdown();
 		sender.stop();
 		receiver.stop();
+
+		System.setProperty("vso.client.port.restrict", "false");
+		System.setProperty("endpoint.security.enabled", "false");
 	}
-	
+
+	// TODO: FIX TEST IN THE BUILD
+	@Test
 	public void testShouldSendAMessage() throws Exception {
+//    	if (true) return;
 
         String absolutePath = new File(".").getAbsolutePath();
         String got = new File(".").getAbsolutePath().replace(".", "");
@@ -81,16 +92,16 @@ public class NettySendRecHandshakeTest extends TestCase {
         boolean isReplyExpected = false;
 		long timeoutSeconds = 10;
         System.err.println("1-------------");
-        sender.send("tcp", receiverAddress, "1 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
+        sender.send("stcp", receiverAddress, "1 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
 
         System.err.println("2-------------");
-		sender.send("tcp", receiverAddress, "2 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
+		sender.send("stcp", receiverAddress, "2 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
 
         System.err.println("3-------------");
-		sender.send("tcp", receiverAddress, "3 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
+		sender.send("stcp", receiverAddress, "3 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
 
         System.err.println("4-------------");
-		sender.send("tcp", receiverAddress, "4 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
+		sender.send("stcp", receiverAddress, "4 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
 
         assertThat("Expected to receive 4 messages but didn't", countDownLatch.await(10L, TimeUnit.SECONDS), is(true));
         assertThat(results, IsCollectionContaining.hasItem("1 stuff"));

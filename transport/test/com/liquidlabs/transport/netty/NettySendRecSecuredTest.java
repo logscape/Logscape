@@ -61,7 +61,7 @@ public class NettySendRecSecuredTest {
 		System.out.println("addr:" + address);
 
 		scheduler = newScheduledThreadPool(1);
-		sender = new NettySenderFactoryProxy(new URI("stcp://" + address + ":" + new NetworkUtils().determinePort(9000)), new NettyPoolingSenderFactory(factory1, isHandshake, scheduler));
+		sender = new NettySenderFactoryProxy(new URI("stcp://" + address + ":" + new NetworkUtils().determinePort(9000)), new NettyPoolingSenderFactory(factory1, scheduler));
 		sender.start();
 		receiverAddress = new URI("stcp://" + address + ":" +  new NetworkUtils().determinePort(10000));
 		System.out.println("Rec Address:" + receiverAddress);

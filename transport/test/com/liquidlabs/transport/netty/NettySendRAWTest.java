@@ -37,7 +37,7 @@ public class NettySendRAWTest extends TestCase {
 		factory2 = new NioServerSocketChannelFactory(exec1, exec2);
 
 		
-		sender = new NettySenderFactoryProxy(new URI("raw://localhost:" + new NetworkUtils().determinePort(9000)), new NettyPoolingSenderFactory(factory1, false, scheduler));
+		sender = new NettySenderFactoryProxy(new URI("raw://localhost:" + new NetworkUtils().determinePort(9000)), new NettyPoolingSenderFactory(factory1, scheduler));
 		sender.start();
 		receiverAddress = new URI("raw://localhost:" +  new NetworkUtils().determinePort(10000));
 		receiver = new NettyReceiver(receiverAddress, factory2, new StringProtocolParser(new MyReceiver()));

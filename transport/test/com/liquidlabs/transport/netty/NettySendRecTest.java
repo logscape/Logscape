@@ -47,7 +47,7 @@ public class NettySendRecTest {
 
 		String address = NetworkUtils.getIPAddress();
 
-		sender = new NettySenderFactoryProxy(new URI("tcp://" + address + ":" + new NetworkUtils().determinePort(11111)), new NettyPoolingSenderFactory(factory1, false, scheduler));
+		sender = new NettySenderFactoryProxy(new URI("tcp://" + address + ":" + new NetworkUtils().determinePort(11111)), new NettyPoolingSenderFactory(factory1, scheduler));
 		sender.start();
 
 		receiverAddress = new URI("tcp://" + address + ":" +  new NetworkUtils().determinePort(22222));

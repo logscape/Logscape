@@ -66,7 +66,7 @@ public class NettySendBurstTest extends TestCase {
 			nettyClientFactory = new OioClientSocketChannelFactory(exec3);
 		}
 		
-		nettySenderFactory = new NettyPoolingSenderFactory(nettyClientFactory, false, scheduler);
+		nettySenderFactory = new NettyPoolingSenderFactory(nettyClientFactory, scheduler);
 		nettySenderFactory.start();
 		
 		receiverAddress = new URI("tcp://localhost:" + new NetworkUtils().determinePort(STARTING_PORT));

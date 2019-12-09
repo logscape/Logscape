@@ -56,7 +56,7 @@ public class NettyEndPointFactory implements EndPointFactory {
 				senderFactory = new NettySimpleSenderFactory(nettyClientFactory, scheduler);
 			} else {
 				LOGGER.info("Using NettyMultiPool");
-				senderFactory = new NettyPoolingSenderFactory(nettyClientFactory, false, scheduler);
+				senderFactory = new NettyPoolingSenderFactory(nettyClientFactory, scheduler);
 			}
 		}
 	}

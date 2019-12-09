@@ -32,10 +32,8 @@ public class NettyPoolingSenderFactory implements SenderFactory {
 	LifeCycle.State state = LifeCycle.State.STARTED;
 	
 	private boolean restrictClientPorts = new ClientPortRestrictedDetector().isBootPropertiesSetValueToTrue();
-    private boolean handshake;
 
-    public NettyPoolingSenderFactory(ClientSocketChannelFactory factory, boolean handshake, ScheduledExecutorService scheduler) {
-        this.handshake = handshake;
+    public NettyPoolingSenderFactory(ClientSocketChannelFactory factory, ScheduledExecutorService scheduler) {
         allSenders.shared();
 		this.factory = factory;
 		DefaultChannelFuture.setUseDeadLockChecker(false);

@@ -386,9 +386,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <systemPropertyVariables>
-                        <log4j.configuration>file:${project.basedir}/common/log4j.properties</log4j.configuration>
+                        <log4j.configuration>file:${project.basedir}/../common/log4j.properties</log4j.configuration>
                     </systemPropertyVariables>
-                    <argLine>-verbose:gc -Xloggc:"${project.build.directory}/gc.log"</argLine>
+                    <argLine>-Dlog4j.debug -verbose:gc -Xloggc:"${project.build.directory}/gc.log"</argLine>
                 </configuration>
             </plugin>
 

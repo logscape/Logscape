@@ -23,16 +23,7 @@ public class ClientPortRestrictedDetectorTest {
 		detector = new ClientPortRestrictedDetector();
 
 	}
-	
-	@Test
-	public void shouldFindPropertyIsSet() throws Exception {
-		boolean result = detector.isPropertyExisting("-DLOGSCAPE",".;./boot/resources", "boot.properties");
-		assertTrue(result);
-		
-		boolean result2 = detector.isPropertyExisting("-DLFFFOGSCAPE",".;./boot/resources", "boot.properties");
-		assertFalse(result2);
-	}
-	
+
 	@Test
 	public void shouldReturnListOfExistingFiles() throws Exception {
 		File file1 = new File("build", "file.props");

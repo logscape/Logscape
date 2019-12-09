@@ -36,8 +36,9 @@ public class ProxyRemoteInvocationTest {
 	TransportFactory transportFactory ;
 	ExecutorService executor = Executors.newFixedThreadPool(5);
 	Convertor c = new Convertor();
+	private DummyServiceImpl dummyService;
 
-	
+
 	@Before
 	public void setUp() throws Exception {
 		com.liquidlabs.common.concurrent.ExecutorService.setTestMode();
@@ -50,7 +51,8 @@ public class ProxyRemoteInvocationTest {
 		
 		TransportFactoryImpl transportFactory2 = new TransportFactoryImpl(Executors.newFixedThreadPool(5), "test");
 		proxyFactoryB = new ProxyFactoryImpl(transportFactory2,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", 22222, "testServiceB"), executor, "");
-		proxyFactoryB.registerMethodReceiver("methodReceiver", new DummyServiceImpl());
+		dummyService = new DummyServiceImpl();
+		proxyFactoryB.registerMethodReceiver("methodReceiver", dummyService);
 		proxyFactoryB.start();
 		
 		Thread.sleep(100);
@@ -62,10 +64,21 @@ public class ProxyRemoteInvocationTest {
 	}
 	@After
 	public void tearDown() throws Exception {
+
+		System.out.println(">>>>>>>>>>>> BEFORE_ALLTHREADS::: " + Thread.activeCount());
 		transportFactory.stop();
 		proxyFactoryA.stop();
 		proxyFactoryB.stop();
+		dummyService.stop();
 		Thread.sleep(50);
+		System.out.println(">>>>>>>>>>>> AFTER_ALLTHREADS::: " + Thread.activeCount());
+		Map<Thread, StackTraceElement[]> allStackTraces = Thread.getAllStackTraces();
+//
+//		while (Thread.activeCount() > 150) {
+//			Thread.sleep(1000);
+//		}
+		Thread.sleep(300);
+
 	}
 	
 	@Test

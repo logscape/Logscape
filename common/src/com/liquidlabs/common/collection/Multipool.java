@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 public class Multipool<K, V extends LifeCycle> {
@@ -17,6 +18,7 @@ public class Multipool<K, V extends LifeCycle> {
 	private static final int TIMEOUT = Integer.getInteger("llabs.mpool.timeout", 120);
 	private static final int SIZE_LIMIT = Integer.getInteger("llabs.mpool.size", 100);
 	private static final Logger LOGGER = Logger.getLogger(Multipool.class);
+	private final ScheduledFuture<?> mainFuture;
 
 	Map<K, Pool<K, V>> map = new ConcurrentHashMap<K, Pool<K, V>>();
 	private final ScheduledExecutorService scheduler;
@@ -25,7 +27,7 @@ public class Multipool<K, V extends LifeCycle> {
 	public Multipool(ScheduledExecutorService scheduler) {
 
 		this.scheduler = scheduler;
-		scheduler.scheduleAtFixedRate(new Runnable() {
+		mainFuture = scheduler.scheduleAtFixedRate(new Runnable() {
 			public void run() {
 
 				long now = System.currentTimeMillis();
@@ -33,12 +35,12 @@ public class Multipool<K, V extends LifeCycle> {
 					Set<Long> itemsTimesMs = pool.poolObjects.keySet();
 					for (Long itemPutTime : itemsTimesMs) {
 						try {
-						if (map.values().size() > 1) {
-							pool.cleanup(now, itemPutTime, TIMEOUT, listener);
-						} else {
-							pool.cleanup(now, itemPutTime, LONG_TIMEOUT, listener);
-						}
-						
+							if (map.values().size() > 1) {
+								pool.cleanup(now, itemPutTime, TIMEOUT, listener);
+							} else {
+								pool.cleanup(now, itemPutTime, LONG_TIMEOUT, listener);
+							}
+
 						} catch (Throwable t) {
 							System.err.println("MPool Cleanup failed" + t.getMessage());
 						}
@@ -184,7 +186,7 @@ public class Multipool<K, V extends LifeCycle> {
 		
 	}
 	public void stop() {
-		scheduler.shutdownNow();
+		mainFuture.cancel(true);
 	}
 	public void registerListener(CleanupListener listener) {
 		this.listener = listener;

@@ -8,7 +8,6 @@ import com.liquidlabs.common.UID;
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.transport.Sender;
 import com.liquidlabs.transport.TransportProperties;
-import com.liquidlabs.transport.netty.handshake.ClientHandshakeHandler;
 import com.liquidlabs.transport.protocol.Type;
 import com.liquidlabs.transport.proxy.RetryInvocationException;
 import org.apache.log4j.Logger;
@@ -25,6 +24,7 @@ import javax.net.ssl.SSLException;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.net.BindException;
+import java.net.ConnectException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.concurrent.TimeUnit;
@@ -58,7 +58,7 @@ public class NettySenderImpl implements Sender {
 	private ChannelFuture writeFuture;
 	
 	private boolean restrictClientPorts;
-	private boolean portScanDebug = Boolean.getBoolean("port.scan.debug");
+	private boolean portScanDebug = true;//Boolean.getBoolean("port.scan.debug");
 
 	LifeCycle.State state = LifeCycle.State.UNASSIGNED;
 	
@@ -66,10 +66,10 @@ public class NettySenderImpl implements Sender {
 
 	private String context;
 	String id = UID.getUUID();
-    private boolean isHandshake;
-    private static volatile boolean isLogged = false;
 
-    public NettySenderImpl(URI uri, ChannelFactory factory, boolean restrictClientPorts, boolean handshake) {
+    private int msgsSent;
+
+    public NettySenderImpl(URI uri, ChannelFactory factory, boolean restrictClientPorts) {
 		this.uri = uri;
         if (uri.getPort() == -1) {
             throw new RuntimeException("Given Invalid URI:" + uri);
@@ -80,12 +80,6 @@ public class NettySenderImpl implements Sender {
 
 		nettyClientFactory = factory;
 		this.restrictClientPorts = restrictClientPorts;
-        isHandshake = handshake;
-
-        if (isHandshake && !isLogged) {
-            LOGGER.info("SecureClientHandshake Against:" + uri);
-            isLogged = true;
-        }
     }
 
 	public Throwable getException() {
@@ -100,6 +94,8 @@ public class NettySenderImpl implements Sender {
 	}
 
 	synchronized public byte[] send(String protocol, URI endPoint, byte[] bytes, Type type, boolean isReplyExpected, long timeoutSeconds, String info, boolean allowlocalRoute) throws InterruptedException, RetryInvocationException {
+
+		msgsSent++;
         if (isReplyExpected) {
 			handler.setExpectsReply();
 			type = Type.SEND_REPLY;
@@ -113,8 +109,9 @@ public class NettySenderImpl implements Sender {
         	LOGGER.info(String.format(" Send %s => %s INFO[%s]", channel.getLocalAddress(), channel.getRemoteAddress(), info));
         }
 
-		if (protocol.startsWith(RAW)) writeStringMessageToChannel(bytes, type, handler.getChannelBuffer(), channel);
-		else  {
+		if (protocol.startsWith(RAW)) {
+			writeStringMessageToChannel(bytes, type, handler.getChannelBuffer(), channel);
+		} else  {
 			try {
 				writeFuture = writeLLMessageToChannel(bytes, type, handler.getChannelBuffer(), channel);
 			} catch (Exception e) {
@@ -227,12 +224,12 @@ public class NettySenderImpl implements Sender {
 			boolean connected = false;
 			int attempts = 0;
 			int increment = 1;
-			if (portScanDebug) LOGGER.warn("> GET PORT:");
+			if (portScanDebug) System.out.println("> GET PORT:");
 
 			while (!connected && attempts++ < TransportProperties.getClientMaxPorts()*3 && !isStopped()) {
 				int portBeingUsed = TransportProperties.getClientBasePort();
 				try {
-					if (portScanDebug) LOGGER.warn("  -- try:" + portBeingUsed);
+					if (portScanDebug) System.out.println("  -- try:" + portBeingUsed + " attempts:" + attempts);
 
 					localAddress = new InetSocketAddress(portBeingUsed);
 					TransportProperties.updateBasePort(localAddress.getPort()+increment);
@@ -263,10 +260,10 @@ public class NettySenderImpl implements Sender {
                     }
 			    	
 			    	
-			    	if (portScanDebug) LOGGER.error(String.format(" -- checking:%d  BOUND[%b %b %b]", attempts, channel.isBound(), channel.isConnected(), channel.isOpen()));
+			    	if (portScanDebug) System.out.println(String.format(" -- checking:%d  BOUND[%b %b %b]", attempts, channel.isBound(), channel.isConnected(), channel.isOpen()));
 			    	
 			    	if (channelFuture.isDone() && channelFuture.isSuccess() && channel.isBound()) {
-			    		if (portScanDebug) LOGGER.error("  -- connected ClientPORT:" + portBeingUsed);
+			    		if (portScanDebug) System.out.println("  -- connected ClientPORT:" + portBeingUsed);
 			    		connected = true;
 			    		continue;
 			    	}
@@ -279,8 +276,18 @@ public class NettySenderImpl implements Sender {
 					//LOGGER.warn(attempts + " XXXXXXXXXXX 2 BAD connection again:" + portBeingUsed + " ->" + remoteAddress);
 				} catch (InterruptedException t) {
 					throw new RuntimeException(t);
+				} catch (ConnectException t) {
+					throw t;
 				} catch (Throwable t) {
-//					System.err.println("tttt:" + t);
+					if (attempts > 100) {
+						LOGGER.error("Too many failed scans:" + t.toString(), t);
+						throw t;
+					}
+
+					if (portScanDebug) {
+						System.out.println("Scan throw:" + t);
+						t.printStackTrace();
+					}
 //					throw new RuntimeException(t.getMessage(), t);
 					Thread.sleep((long) (300 * Math.random()));
 					bootstrap = getBootstrap(uri.getHost(), uri.getPort());
@@ -302,33 +309,38 @@ public class NettySenderImpl implements Sender {
 	private boolean isStopped() {
 		// YUCK - this is crap - but when its port scanning it will keep retrying for ages before giving up - we want to interrupt the 
 		// scanForPort which gets stuck on a channel.connect(timeout) etc
-		return (NettyPoolingSenderFactory.IS_STOPPED == true || state == State.STOPPING || state == State.STOPPED || state == State.SUSPENDED);
+		return (state == State.STOPPING || state == State.STOPPED || state == State.SUSPENDED);
 	}
 
 	private ClientBootstrap getBootstrap(String host, int port) {
 		ClientBootstrap bootstrap = new ClientBootstrap(nettyClientFactory);
 
-		SslContext sslCtx = null;
-		try {
-			sslCtx = new File(TransportProperties.SSL_CERT).exists() ? SslContext.newClientContext(SimpleSSLTrustManagerFactory.INSTANCE) : null;
-		} catch (SSLException e) {
-			e.printStackTrace();
-		}
 		handler = new NettyClientHandler(uri);
-        ChannelPipeline pipeline = bootstrap.getPipeline();
+		ChannelPipeline pipeline = bootstrap.getPipeline();
 
-        if (sslCtx != null) {
-            pipeline.addLast("ssl", sslCtx.newHandler(host, port));
-        }
 
-        if (isHandshake && TransportProperties.isEndPointSecurityEnabled()) {
-            ClientHandshakeHandler handshakeHandler =new ClientHandshakeHandler(id, "serverId", 20 * 1000);
+		if (uri.getScheme().equals("stcp")) {
+			LOGGER.info("NettySender Running SSL connection because secure-tcp/stcp was requested");
+			SslContext sslCtx = null;
+			try {
+				if (new File(TransportProperties.SSL_CERT).exists()) {
+					sslCtx = SslContext.newClientContext(SimpleSSLTrustManagerFactory.INSTANCE);
+				} else {
+					LOGGER.error("Failed to load SSL certs from: " + new File(TransportProperties.SSL_CERT).getAbsolutePath());
+				}
+			} catch (SSLException e) {
+				e.printStackTrace();
+				LOGGER.warn("Failed to load SSL configuration" + e, e);
+			}
 
-            pipeline.addFirst("handshaker", handshakeHandler);
-//            pipeline.addFirst("stringdec", new StringDecoder());
-//            pipeline.addFirst("stringenc",new StringEncoder());
+			if (sslCtx != null) {
+				LOGGER.warn("NettySender Loading SSL CONTEXT");
+			  	pipeline.addLast("ssl", sslCtx.newHandler(host, port));
+			} else {
+				System.out.println("Failed to find SSL certificates");
+			}
+		}
 
-        }
         pipeline.addLast(HANDLER, handler);
 
         bootstrap.setOption(TCP_NO_DELAY, true);
@@ -419,7 +431,6 @@ public class NettySenderImpl implements Sender {
 				flush();
 				close();
 				try {
-					//System.out.println(getClass().getSimpleName() + " Closing:" + channel);
 					if (writeFuture != null) writeFuture.cancel();
 					if (channelFuture != null) channelFuture.cancel();
 					ChannelFuture close = channel.close();
@@ -444,7 +455,7 @@ public class NettySenderImpl implements Sender {
 			}
 	}
 	public String toString() {
-		String connectionInfo = " :" + uri + " c:" + handler;
+		String connectionInfo = " :" + uri + " c:" + handler + " msgs:" + msgsSent;
 		try {
 			Channel channel2 = channelFuture.getChannel();
 			DefaultSocketChannelConfig config = (DefaultSocketChannelConfig) channel2.getConfig();

@@ -1,12 +1,10 @@
 package com.liquidlabs.transport.netty;
 
 import com.liquidlabs.common.NetworkUtils;
-import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.transport.ProtocolParser;
 import com.liquidlabs.transport.Receiver;
 import com.liquidlabs.transport.TransportProperties;
-import com.liquidlabs.transport.netty.handshake.ServerHandshakeHandler;
 import com.liquidlabs.transport.protocol.Type;
 import com.liquidlabs.transport.proxy.RetryInvocationException;
 import org.apache.log4j.Logger;
@@ -19,16 +17,14 @@ import org.jboss.netty.channel.socket.ServerSocketChannelFactory;
 import org.jboss.netty.handler.codec.frame.DelimiterBasedFrameDecoder;
 import org.jboss.netty.handler.codec.frame.Delimiters;
 import org.jboss.netty.handler.codec.http.HttpServerCodec;
-import org.jboss.netty.handler.codec.string.StringDecoder;
 import org.jboss.netty.handler.ssl.SslContext;
-import org.jboss.netty.util.CharsetUtil;
 import org.joda.time.DateTime;
 
 import javax.net.ssl.SSLException;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-
+import java.util.concurrent.TimeUnit;
 
 import static org.jboss.netty.buffer.ChannelBuffers.dynamicBuffer;
 
@@ -52,12 +48,18 @@ public class NettyReceiver extends SimpleChannelUpstreamHandler implements Recei
     private static int serverHandshakeTimeOut = Integer.getInteger("socket.handshake.timeout.s", 30) * 1000;
     private SslContext sslCtx = null;
 
-    public NettyReceiver(final URI endPoint, ServerSocketChannelFactory factory, ProtocolParser protocolParser, final boolean isSecureHandshake) throws IOException {
+    public NettyReceiver(final URI endPoint, ServerSocketChannelFactory factory, ProtocolParser protocolParser) throws IOException {
 
+        if (!protocolParser.protocol().contains(endPoint.getScheme())){
+            LOGGER.error("Check protocol config, expecting:" + protocolParser.protocol() + " EndPointURL:" + endPoint.getScheme());
+        }
         isString = endPoint.toString().startsWith("raw");
         this.endPoint = endPoint;
 		this.factory = factory;
-        sslCtx = buildSSLCtx();
+		if (endPoint.getScheme().equals("stcp")) {
+            sslCtx = buildSSLCtx();
+        }
+
 
         bootstrap = new ServerBootstrap(factory);
 
@@ -74,12 +76,6 @@ public class NettyReceiver extends SimpleChannelUpstreamHandler implements Recei
                             new HttpServerCodec(),
                             NettyReceiver.this
                     );
-                } else if (isSecureHandshake) {
-                    return Channels.pipeline(
-                            new ServerHandshakeHandler("server", allChannels, serverHandshakeTimeOut),
-                            NettyReceiver.this
-                    );
-
                 } else {
                     // Add SSL handler first to encrypt and decrypt everything.
                     // In this example, we use a self-signed certificate in the server side
@@ -111,8 +107,15 @@ public class NettyReceiver extends SimpleChannelUpstreamHandler implements Recei
 
     private SslContext buildSSLCtx(){
         try {
-            return new File(TransportProperties.SSL_CERT).exists() ? SslContext.newServerContext(new File(TransportProperties.SSL_CERT), new File(TransportProperties.SSL_KEY)) : null;
+            System.out.println("NettyReceiver Loading SSL Context from:" + new File(TransportProperties.SSL_CERT).getAbsolutePath());
+            if (new File(TransportProperties.SSL_CERT).exists()) {
+                return SslContext.newServerContext(new File(TransportProperties.SSL_CERT), new File(TransportProperties.SSL_KEY));
+            } else {
+                LOGGER.error("Failed to load SSL certs from: " + TransportProperties.SSL_CERT);
+            }
+
         } catch (SSLException e) {
+            LOGGER.error("Failed to load SSL Certs:" + e, e);
             e.printStackTrace();
         }
         if(LOGGER.isDebugEnabled()) LOGGER.debug("SSL Comms disabled, missing cert files:" + TransportProperties.SSL_CERT + " CWD:" + new File(".").getAbsolutePath());
@@ -237,15 +240,20 @@ public class NettyReceiver extends SimpleChannelUpstreamHandler implements Recei
         state = State.STARTED;
     }
 
+    /**
+     * stop and wait for ll channels to close
+     */
     public void stop() {
         if (state == State.STOPPED) return;
         state = State.STOPPED;
 		System.out.println(">> NettyReceiver ******* ClosingServer:" + allChannels);
+		allChannels.disconnect();
+        allChannels.unbind();
         ChannelGroupFuture future = allChannels.close();
         
         try {
-			future.await();
-		} catch (InterruptedException e) {
+            boolean b = future.await(1, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
 			e.printStackTrace();
 		}
         System.out.println("<< NettyReceiver ******* ClosingServer:" + allChannels);

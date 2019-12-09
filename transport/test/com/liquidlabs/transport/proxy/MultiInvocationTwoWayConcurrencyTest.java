@@ -24,13 +24,15 @@ public class MultiInvocationTwoWayConcurrencyTest extends TestCase {
 	AtomicInteger callCount = new AtomicInteger();
 	private ExecutorService executor;
 	private TransportFactory transportFactory;
-	
-	
+	private DummyServiceImpl dummyService;
+
+
 	@Override
 	protected void tearDown() throws Exception {
 		proxyFactoryA.stop();
 		proxyFactoryB.stop();
-		super.tearDown();
+		dummyService.stop();
+		transportFactory.stop();
 	}
 	@Override
 	protected void setUp() throws Exception {
@@ -43,8 +45,9 @@ public class MultiInvocationTwoWayConcurrencyTest extends TestCase {
 		Thread.sleep(100);
 		
 		proxyFactoryB = new ProxyFactoryImpl(transportFactory,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", Config.TEST_PORT+10000, "multiITestB"), executor, "");
-		
-		proxyFactoryB.registerMethodReceiver("methodReceiver", new DummyServiceImpl());
+
+		dummyService = new DummyServiceImpl();
+		proxyFactoryB.registerMethodReceiver("methodReceiver", dummyService);
 		proxyFactoryB.start();
 		proxyBAddress = proxyFactoryB.getAddress();
 		DummyServiceImpl.callCount = 0;

@@ -19,7 +19,8 @@ public class ProxyRemoteBigSendReceiveTest extends TestCase {
 	TransportFactory transportFactory = new TransportFactoryImpl(Executors.newFixedThreadPool(5), "test");
 	ExecutorService executor = Executors.newFixedThreadPool(5);
 	Convertor c = new Convertor();
-	
+	private DummyServiceImpl dummyService;
+
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -31,7 +32,8 @@ public class ProxyRemoteBigSendReceiveTest extends TestCase {
 		Thread.sleep(100);
 		
 		proxyFactoryB = new ProxyFactoryImpl(transportFactory,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", 22222, "testServiceB"), executor, "");
-		proxyFactoryB.registerMethodReceiver("methodReceiver", new DummyServiceImpl());
+		dummyService = new DummyServiceImpl();
+		proxyFactoryB.registerMethodReceiver("methodReceiver", dummyService);
 		proxyFactoryB.start();
 		
 		Thread.sleep(100);
@@ -44,6 +46,8 @@ public class ProxyRemoteBigSendReceiveTest extends TestCase {
 		transportFactory.stop();
 		proxyFactoryA.stop();
 		proxyFactoryB.stop();
+		dummyService.stop();
+
 		Thread.sleep(50);
 	}
 	

@@ -4,10 +4,8 @@ import com.liquidlabs.common.NetworkUtils;
 import com.liquidlabs.common.concurrent.NamingThreadFactory;
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.transport.Receiver;
-import com.liquidlabs.transport.Sender;
 import com.liquidlabs.transport.SenderFactory;
 import com.liquidlabs.transport.TransportProperties;
-import com.liquidlabs.transport.protocol.Type;
 import junit.framework.TestCase;
 import org.jboss.netty.channel.socket.ClientSocketChannelFactory;
 import org.jboss.netty.channel.socket.ServerSocketChannelFactory;
@@ -18,10 +16,7 @@ import org.jboss.netty.channel.socket.oio.OioServerSocketChannelFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class NettySendBurstTest extends TestCase {
@@ -47,6 +42,7 @@ public class NettySendBurstTest extends TestCase {
 	int msgCountToSend = 1000;
 	int concurrentSenders = 2;
 	final boolean isReplyExpected = true;
+	private ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
 	@Override
 	protected void setUp() throws Exception {
@@ -70,16 +66,17 @@ public class NettySendBurstTest extends TestCase {
 			nettyClientFactory = new OioClientSocketChannelFactory(exec3);
 		}
 		
-		nettySenderFactory = new NettyPoolingSenderFactory(nettyClientFactory, false);
+		nettySenderFactory = new NettyPoolingSenderFactory(nettyClientFactory, false, scheduler);
 		nettySenderFactory.start();
 		
 		receiverAddress = new URI("tcp://localhost:" + new NetworkUtils().determinePort(STARTING_PORT));
-		receiver = new NettyReceiver(receiverAddress, factory2, new LLProtocolParser(new MyReceiver()), false);
+		receiver = new NettyReceiver(receiverAddress, factory2, new LLProtocolParser(new MyReceiver()));
 		receiver.start();
 	}
 	
 	@Override
 	protected void tearDown() throws Exception {
+		scheduler.shutdown();
 		receiver.stop();
 		nettySenderFactory.stop();
 	}

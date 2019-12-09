@@ -95,11 +95,14 @@ public class TransportFactoryImpl implements TransportFactory {
 			endPointFactory.start();
 			
 			if (reuseEndpoint) {
-				LOGGER.info("Sharing PORTS:" + cleanURI + " /" + receiverURI);
+				LOGGER.info(this.hashCode() + "Sharing PORTS:" + cleanURI + " /" + receiverURI);
 				MultiReceiver mr = new MultiReceiver(cleanURI.toString());
 				mr.addReceiver(receiver);
 				EndPoint endPoint = endPointFactory.getEndPoint(receiverURI, mr);
-				endpoints.put(cleanURI, endPoint);
+				EndPoint endPoint1 = endpoints.putIfAbsent(cleanURI, endPoint);
+				if (endPoint1 != null) {
+					LOGGER.error("Replaced EP:" + endPoint1);
+				}
 				return endPoint;
 			} else {
 				return endPointFactory.getEndPoint(receiverURI, receiver);
@@ -124,16 +127,16 @@ public class TransportFactoryImpl implements TransportFactory {
 		state = State.STARTED;
 		
 		
-		Runtime.getRuntime().addShutdownHook(new Thread() {
-			public void run() {
-				try {
-					LOGGER.info(TransportFactoryImpl.this.toString() + " Shutdown hook called");
-					TransportFactoryImpl.this.stop();
-				} catch (Throwable t) {
-					LOGGER.error(t);
-				}
-			}
-		});
+//		Runtime.getRuntime().addShutdownHook(new Thread() {
+//			public void run() {
+//				try {
+//					LOGGER.info(TransportFactoryImpl.this.toString() + " Shutdown hook called");
+//					TransportFactoryImpl.this.stop();
+//				} catch (Throwable t) {
+//					LOGGER.error(t);
+//				}
+//			}
+//		});
 	}
 
 	public void stop() {
@@ -141,7 +144,7 @@ public class TransportFactoryImpl implements TransportFactory {
 		synchronized (this) {
 			state = State.STOPPED;
 		}
-		LOGGER.info("Shutting down now...");
+		LOGGER.info("STOPPING");
 		scheduler.shutdownNow();
 		Collection<EndPointFactory> epFactories = this.protocolEPFactoryMap.values();
 		for (EndPointFactory endPointFactory : epFactories) {
@@ -151,6 +154,10 @@ public class TransportFactoryImpl implements TransportFactory {
 				LOGGER.error(t);
 			}
 		}
+		endpoints.values().stream().forEach(ep -> {
+			ep.stop();
+		});
+
 		LOGGER.info("EPs killed:" + epFactories.size());
 	}
 	static public URI getDefaultProtocolURI(String path, String ipAddress, int port, String serviceName) throws URISyntaxException {

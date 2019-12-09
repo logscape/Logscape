@@ -12,41 +12,53 @@ import junit.framework.TestCase;
 import com.liquidlabs.transport.Config;
 import com.liquidlabs.transport.TransportFactory;
 import com.liquidlabs.transport.TransportFactoryImpl;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
-public class PeerStreamingTest extends TestCase {
+import static org.junit.Assert.*;
+
+public class PeerStreamingTest {
 	private ProxyFactoryImpl proxyFactoryA;
 	boolean enableOutput = false;
 	private ProxyFactoryImpl proxyFactoryB;
 	private URI proxyBAddress;
 	private DummyService remoteService;
-	TransportFactory transportFactory = new TransportFactoryImpl(Executors.newFixedThreadPool(5), "test");
+	TransportFactory transportFactory;
 	ExecutorService executor = Executors.newFixedThreadPool(5);
 	private static final Logger LOGGER = Logger.getLogger(PeerStreamingTest.class);
+	private DummyService dummyService;
 
-	
-	@Override
-	protected void tearDown() throws Exception {
-		proxyFactoryA.stop();
-		proxyFactoryB.stop();
-		super.tearDown();
-	}
-	@Override
-	protected void setUp() throws Exception {
-		super.setUp();
+	@Before
+	public void setUp() throws Exception {
+		transportFactory = new TransportFactoryImpl(Executors.newFixedThreadPool(5), "test");
+		
 		proxyFactoryA = new ProxyFactoryImpl(transportFactory,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", Config.TEST_PORT, "testServiceA"), executor, "");
 		proxyFactoryA.start();
 		
 		Thread.sleep(100);
 		
 		proxyFactoryB = new ProxyFactoryImpl(transportFactory,  TransportFactoryImpl.getDefaultProtocolURI("", "localhost", Config.TEST_PORT+10000, "testServiceB"), executor, "");
-		
-		proxyFactoryB.registerMethodReceiver("methodReceiver", new DummyServiceImpl());
+
+		dummyService = new DummyServiceImpl();
+		proxyFactoryB.registerMethodReceiver("methodReceiver", dummyService);
 		proxyFactoryB.start();
 		proxyBAddress = proxyFactoryB.getAddress();
 		DummyServiceImpl.callCount = 0;
 		remoteService = proxyFactoryA.getRemoteService("methodReceiver", DummyService.class, new String[] { proxyBAddress.toString() });
 	}
-	
+	@After
+	public void tearDown() throws Exception {
+		proxyFactoryA.stop();
+		proxyFactoryB.stop();
+		transportFactory.stop();
+		dummyService.stop();
+		
+	}
+
+
+	@Test
 	public void testStreamInvocationsWork() throws Exception {
 		
 		// prime the sockets

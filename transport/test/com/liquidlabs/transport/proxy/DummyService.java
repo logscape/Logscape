@@ -64,5 +64,5 @@ public interface DummyService extends Remotable {
 	void callback();
 
 
-
+    void stop();
 }

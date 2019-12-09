@@ -10,6 +10,8 @@ import com.liquidlabs.transport.netty.NettyReceiver.ReplySender;
 
 public interface ProtocolParser {
 
+	String protocol();
+
 	StreamState process(ChannelBuffer byteBuffer, StreamState state, ReplySender replySender, CMDProcessor processor) throws IOException;
 
 }

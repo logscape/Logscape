@@ -142,7 +142,7 @@ public class StreamState {
 		buffer.append("]");
 		return buffer.toString();
 	}
-	boolean correctInputStream(ChannelBuffer inputStream, byte[] headerBuffer) {
+	public boolean correctInputStream(ChannelBuffer inputStream, byte[] headerBuffer) {
 
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		int byteThrowCount = 0;

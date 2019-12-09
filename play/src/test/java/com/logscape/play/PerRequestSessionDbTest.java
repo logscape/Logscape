@@ -1,16 +1,7 @@
 package com.logscape.play;
 
-import com.liquidlabs.common.concurrent.ExecutorService;
 //import com.liquidlabs.log.search.ReplayEvent;
 //import com.logscape.play.replay.PerRequestSessionDb;
-import junit.framework.Assert;
-import org.junit.Test;
-import org.mapdb.DB;
-import org.mapdb.DBMaker;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * Created by Neiil on 10/28/2015.

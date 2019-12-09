@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 public class NettySendRAWTest extends TestCase {
 	
@@ -25,6 +26,7 @@ public class NettySendRAWTest extends TestCase {
 	private ExecutorService exec2;
 	private NioClientSocketChannelFactory factory1;
 	private NioServerSocketChannelFactory factory2;
+	private ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
 	protected void xxxsetUp() throws Exception {
 		super.setUp();
@@ -35,18 +37,20 @@ public class NettySendRAWTest extends TestCase {
 		factory2 = new NioServerSocketChannelFactory(exec1, exec2);
 
 		
-		sender = new NettySenderFactoryProxy(new URI("raw://localhost:" + new NetworkUtils().determinePort(9000)), new NettyPoolingSenderFactory(factory1, false));
+		sender = new NettySenderFactoryProxy(new URI("raw://localhost:" + new NetworkUtils().determinePort(9000)), new NettyPoolingSenderFactory(factory1, false, scheduler));
 		sender.start();
 		receiverAddress = new URI("raw://localhost:" +  new NetworkUtils().determinePort(10000));
-		receiver = new NettyReceiver(receiverAddress, factory2, new StringProtocolParser(new MyReceiver()), false);
+		receiver = new NettyReceiver(receiverAddress, factory2, new StringProtocolParser(new MyReceiver()));
 		receiver.start();
 	}
 	
 	protected void xxxtearDown() throws Exception {
+		scheduler.shutdown();
 		sender.stop();
 		receiver.stop();
 	}
 
+	// TODO: fix test
     public void testShould() {
                      // place holder
     }

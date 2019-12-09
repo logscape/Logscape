@@ -38,14 +38,7 @@ public class RabbitEndPointTest {
 
 	@Before
 	public void setUp() throws Exception {
-
-		System.out.println("ROOT:" + new File(".").getAbsolutePath());
-
-		System.out.println("CP:" + System.getProperty("java.class.path").replace(":","\n"));
-
-		System.out.println();
-
-		Thread.sleep(500);
+		Thread.sleep(200);
 	}
 
 	@After

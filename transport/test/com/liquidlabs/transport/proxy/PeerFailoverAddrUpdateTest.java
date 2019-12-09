@@ -54,6 +54,8 @@ public class PeerFailoverAddrUpdateTest {
         proxyFactoryA.stop();
         proxyFactoryB.stop();
         proxyFactoryC.stop();
+        dummyServiceB.stop();
+        dummyServiceC.stop();
     }
 
     @Before
@@ -115,6 +117,8 @@ public class PeerFailoverAddrUpdateTest {
 
     @Test
     public void testShouldFailoverWhenConnectionRefused() throws Exception {
+
+
     	
     	for (int i = 0; i < 5; i++) {
     		System.out.println("LOOP:" + i);

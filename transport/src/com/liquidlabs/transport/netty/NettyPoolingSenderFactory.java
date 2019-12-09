@@ -3,7 +3,6 @@ package com.liquidlabs.transport.netty;
 
 import com.liquidlabs.common.LifeCycle;
 import com.liquidlabs.common.collection.Multipool;
-import com.liquidlabs.common.concurrent.ExecutorService;
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.transport.Sender;
 import com.liquidlabs.transport.SenderFactory;
@@ -16,6 +15,7 @@ import org.jboss.netty.channel.socket.ClientSocketChannelFactory;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class NettyPoolingSenderFactory implements SenderFactory {
@@ -25,7 +25,7 @@ public class NettyPoolingSenderFactory implements SenderFactory {
 	private ChannelFactory factory;
 	AtomicInteger given = new AtomicInteger();
 	AtomicInteger getters = new AtomicInteger();
-	public static boolean IS_STOPPED = false;
+	public boolean IS_STOPPED = false;
 	
 	Multipool<URI, NettySenderImpl> senders;
 	FastMap<String, NettySenderImpl> allSenders = new FastMap<String, NettySenderImpl>();
@@ -34,7 +34,7 @@ public class NettyPoolingSenderFactory implements SenderFactory {
 	private boolean restrictClientPorts = new ClientPortRestrictedDetector().isBootPropertiesSetValueToTrue();
     private boolean handshake;
 
-    public NettyPoolingSenderFactory(ClientSocketChannelFactory factory, boolean handshake) {
+    public NettyPoolingSenderFactory(ClientSocketChannelFactory factory, boolean handshake, ScheduledExecutorService scheduler) {
         this.handshake = handshake;
         allSenders.shared();
 		this.factory = factory;
@@ -45,7 +45,7 @@ public class NettyPoolingSenderFactory implements SenderFactory {
 			LOGGER.info("NON-Restricted CLIENT Port allocation / Using OS-Ephemeral Client-PORTS");			
 		}
 
-		senders = new Multipool<URI, NettySenderImpl>(ExecutorService.newScheduledThreadPool("services"));
+		senders = new Multipool<>(scheduler);
 		
 		senders.registerListener(new Multipool.CleanupListener<NettySenderImpl>() {
 			public void stopping(NettySenderImpl object) {
@@ -55,7 +55,7 @@ public class NettyPoolingSenderFactory implements SenderFactory {
 		
 		LOGGER.info("Using ConnectionOutstandingLimit:" + TransportProperties.getConnectionOutstandingLimit());
 
-        new NettyPoolingSenderFactoryJMX(this);
+        //new NettyPoolingSenderFactoryJMX(this);
 	}
 
 	public int getGivenConnections() {
@@ -70,7 +70,6 @@ public class NettyPoolingSenderFactory implements SenderFactory {
 			
 			NettySenderImpl sender = null;
             try {
-//			if (!remoteOnly) sender =  senders.get(uri);
                 sender =  senders.get(uri);
             } catch (Throwable t) {
                 LOGGER.warn("Senders.getFailed:" + uri);
@@ -103,9 +102,7 @@ public class NettyPoolingSenderFactory implements SenderFactory {
                 }
             }
 
-
-
-            NettySenderImpl newSender = new NettySenderImpl(uri, factory, restrictClientPorts, uri.getPort() == TransportProperties.getSecureEndpointPort() && TransportProperties.isEndPointSecurityEnabled());
+            NettySenderImpl newSender = new NettySenderImpl(uri, factory, restrictClientPorts);
             newSender.setContext(context);
             newSender.start();
             if (LOGGER.isDebugEnabled()) LOGGER.debug("Using NewSender:" + newSender);
@@ -158,12 +155,13 @@ public class NettyPoolingSenderFactory implements SenderFactory {
 			nettySenderImpl.stop();
 		}
 		senders.stop();
+		senders = null;
 	}
 	public String dumpStats() {
 		return this.toString();
 	}
 	public String toString() {
-		return "NettySendFactory senderPool:" + senders.size() + " live:" + this.getGivenConnections() + " allSenders:" + allSenders.size();
+		return "NettySendFactory senderPool:" + senders.size() + " live:" + this.getGivenConnections() + " allSenders:" + allSenders;
 	}
 
 

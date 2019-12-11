@@ -25,6 +25,8 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class Rabbit_ProxyRemoteInvocationTest {
+	boolean rabbitEnabled = false;
+	
 	private static ProxyFactoryImpl proxyFactoryA;
 	boolean enableOutput = false;
 	private static ProxyFactoryImpl proxyFactoryB;
@@ -35,9 +37,9 @@ public class Rabbit_ProxyRemoteInvocationTest {
 	Convertor c = new Convertor();
 
 
-	@BeforeClass
-	public static void setUp() throws Exception {
-
+	@Before
+	public void setUp() throws Exception {
+		if (!rabbitEnabled) return;
 		System.setProperty("transport", TransportFactory.TRANSPORT.RABBIT.name());
 
 		com.liquidlabs.common.concurrent.ExecutorService.setTestMode();
@@ -61,7 +63,8 @@ public class Rabbit_ProxyRemoteInvocationTest {
 		DummyServiceImpl.callCount = 0;
 	}
 	@AfterClass
-	public static void tearDownClass() throws Exception {
+	public void tearDownClass() throws Exception {
+		if (!rabbitEnabled) return;
 		transportFactory.stop();
 		proxyFactoryA.stop();
 		proxyFactoryB.stop();
@@ -70,11 +73,13 @@ public class Rabbit_ProxyRemoteInvocationTest {
 
 	@Before
 	public void setup() throws Exception {
+		if (!rabbitEnabled) return;
 		DummyServiceImpl.callCount = 0;
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		if (!rabbitEnabled) return;
 		Thread.sleep(100);
 	}
 

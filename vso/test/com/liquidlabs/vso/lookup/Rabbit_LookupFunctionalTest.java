@@ -14,15 +14,20 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Executors;
 
-public class RABBIT_LookupFunctionalTest {
+public class Rabbit_LookupFunctionalTest {
+    boolean rabbitEnabled = Boolean.getBoolean("rabbit.enabled");
+    
 	String HOST = NetworkUtils.getIPAddress();
 	private LookupSpaceImpl lookupSpaceA;
 	private String location = "";
 	private String agentType = "Management";
     private int port;
 
+
     @Before
 	public void setUp() throws Exception {
+
+    	if (!rabbitEnabled) return;
 		System.setProperty("transport", TransportFactory.TRANSPORT.RABBIT.name());
 
 		com.liquidlabs.common.concurrent.ExecutorService.setTestMode();
@@ -34,12 +39,14 @@ public class RABBIT_LookupFunctionalTest {
 	
 	@After
 	public void tearDown() throws Exception {
+		if (!rabbitEnabled) return;
 		lookupSpaceA.stop();
 		System.setProperty("transport", TransportFactory.TRANSPORT.NETTY.name());
 	}
 	
 // TODO - fix tests	@Test
 	public void testLookitUpLots() throws Exception {
+		if (!rabbitEnabled) return;
 		ServiceInfo serviceInfo = new ServiceInfo("myServiceName", "location", JmxHtmlServerImpl.locateHttpUrL(), location, agentType );
 		lookupSpaceA.registerService(serviceInfo, 60);
 		
@@ -59,6 +66,7 @@ public class RABBIT_LookupFunctionalTest {
 	
 	@Test
 	public void testRegisterAndRenewAndThereIsCorrectNumberOfKeys() throws Exception {
+		if (!rabbitEnabled) return;
 		ServiceInfo serviceInfo = new ServiceInfo("myServiceName", "location", JmxHtmlServerImpl.locateHttpUrL(), location, agentType);
 		String registerService = lookupSpaceA.registerService(serviceInfo, 60);
 		
@@ -66,6 +74,7 @@ public class RABBIT_LookupFunctionalTest {
 
 	@Test
 	public void testShouldNotHaveMultipleRegistrationsRegisterAndLookupInSameInstance() throws Exception {
+		if (!rabbitEnabled) return;
 		ORMapperClient mapperClient = lookupSpaceA.mapperFactory.getORMapperClient();
 		Set<String> keySet = mapperClient.keySet();
 		Set<String> leaseKeySet = mapperClient.leaseKeySet();

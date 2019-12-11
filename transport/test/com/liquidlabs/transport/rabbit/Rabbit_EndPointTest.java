@@ -16,12 +16,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 //import java.net.URI;
 
-public class RabbitEndPointTest {
+public class Rabbit_EndPointTest {
 	private int callCount;
 	private RabbitEndpointFactory epFactory;
 	private EndPoint firstEP;
 	private EndPoint secondEP;
-	boolean rabbitEnabled = false;
+	boolean rabbitEnabled = Boolean.getBoolean("rabbit.enabled");
 
 
 //	public static Server myServer= new Server();

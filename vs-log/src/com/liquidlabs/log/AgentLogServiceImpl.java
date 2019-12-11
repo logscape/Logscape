@@ -140,9 +140,6 @@ public class AgentLogServiceImpl implements AgentLogService, LifeCycle, SearchLo
         tailerAggSpace = new TailerEmbeddedAggSpace(aggSpace, searchRunner, proxyFactory.getScheduler(), hostname, eventMonitor);
         searchRunner.setAggSpace(tailerAggSpace);
 
-        AdminSpace adminSpace = AdminSpaceImpl.getRemoteService("Agent", lookupSpace, proxyFactory);
-        long llc = adminSpace.getLLC(true);
-
         this.watchManager = new WatchManager(new WatchManager.Callback() {
             public void deleteLogFile(List<LogFile> logFiles, boolean forceRemove) {
                 AgentLogServiceImpl.this.deleteLogFile(logFiles, forceRemove);
@@ -156,7 +153,7 @@ public class AgentLogServiceImpl implements AgentLogService, LifeCycle, SearchLo
             public List<Tailer> tailers() {
                 return new ArrayList<Tailer>(AgentLogServiceImpl.this.tailers.values());
             }
-        }, indexer, llc == -1 ? 2: 10 * 1000);
+        }, indexer, 60 * 1000);
 
         this.watchVisitor = new WatchVisitor(
                 new WatchVisitor.Callback() {

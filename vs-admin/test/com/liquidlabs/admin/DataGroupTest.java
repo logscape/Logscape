@@ -117,14 +117,14 @@ public class DataGroupTest {
         assertEquals("[user1]", results.toString());
     }
 
-    @Test
-    public void shouldListAllUserWhenIAmAdmin() throws Exception {
-        userSpace.addUser(new User("user1","email", "pwd", "pwd".hashCode(), "Admin", -1, "future","includeMe","", "dept1", new HashMap<String,Object>(), "apps", "logo.png", role), true);
-        userSpace.addUser(new User("user2","email", "pwd", "pwd".hashCode(), "Admin", -1, "future","includeMe","", "dept2", new HashMap<String,Object>(), "apps", "logo.png", role), true);
-        userSpace.addUser(new User("user3","email", "pwd", "pwd".hashCode(), "Admin", -1, "future","includeMe","", "all", new HashMap<String,Object>(), "apps", "logo.png", role), true);
-        Set<String> results = userSpace.getUserIdsFromDataGroup("admin", "all");
-        assertEquals("[user2, admin, user1, user3, guest, sysadmin, user]", results.toString());
-    }
+//    @Test
+//    public void shouldListAllUserWhenIAmAdmin() throws Exception {
+//        userSpace.addUser(new User("user1","email", "pwd", "pwd".hashCode(), "Admin", -1, "future","includeMe","", "dept1", new HashMap<String,Object>(), "apps", "logo.png", role), true);
+//        userSpace.addUser(new User("user2","email", "pwd", "pwd".hashCode(), "Admin", -1, "future","includeMe","", "dept2", new HashMap<String,Object>(), "apps", "logo.png", role), true);
+//        userSpace.addUser(new User("user3","email", "pwd", "pwd".hashCode(), "Admin", -1, "future","includeMe","", "all", new HashMap<String,Object>(), "apps", "logo.png", role), true);
+//        Set<String> results = userSpace.getUserIdsFromDataGroup("admin", "all");
+//        assertEquals("[user2, admin, user1, user3, guest, sysadmin, user]", results.toString());
+//    }
     @Test
     public void shouldListUserInDepartmentPlusAll() throws Exception {
         userSpace.addUser(new User("user1","email", "pwd", "pwd".hashCode(), "Admin", -1, "future","includeMe","", "dept1", new HashMap<String,Object>(), "apps", "logo.png", role), true);

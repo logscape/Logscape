@@ -58,7 +58,6 @@ public class LogSpaceTest extends MockObjectTestCase {
         SpaceServiceImpl spaceServiceImpl1 = new SpaceServiceImpl((LookupSpace) lookupSpace.proxy(), mapperFactory, LogSpace.NAME, (ScheduledExecutorService) scheduler.proxy(), false, false, false);
         SpaceServiceImpl spaceServiceImpl2 = new SpaceServiceImpl((LookupSpace) lookupSpace.proxy(), mapperFactory, LogSpace.NAME, (ScheduledExecutorService) scheduler.proxy(), false, false, true);
         logSpace = new LogSpaceImpl(spaceServiceImpl1, spaceServiceImpl2, null, null, null, null, null, (ResourceSpace) resourceSpace.proxy(), (LookupSpace) lookupSpace.proxy());
-        logSpace.llc = true;
     }
 
     public void testShouldListMyDataSource() throws Exception {

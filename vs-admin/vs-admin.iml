@@ -67,6 +67,7 @@
     <orderEntry type="module" module-name="vs-orm" />
     <orderEntry type="module" module-name="vso" />
     <orderEntry type="module" module-name="common" />
+    <orderEntry type="library" scope="PROVIDED" name="all-libs" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">

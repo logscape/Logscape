@@ -5,7 +5,7 @@ import java.util.Hashtable;
 
 import javax.naming.Context;
 
-import org.apache.directory.server.constants.ServerDNConstants;
+//import org.apache.directory.server.constants.ServerDNConstants;
 
 import com.liquidlabs.orm.Id;
 
@@ -27,7 +27,7 @@ public class AdminConfig {
     public String internalLdapContext = "dc=logscape,dc=com";
     public String internalLdapUser = "ou=people";
     public String internalLdapRole = "ou=role";
-    public String internalLdapSystemUser=ServerDNConstants.ADMIN_SYSTEM_DN;
+    public String internalLdapSystemUser="admin";//ServerDNConstants.ADMIN_SYSTEM_DN;
     public String internalLdapSystemCredential="secret";
     public String internalLdapAuthentication="simple";
 
@@ -37,7 +37,7 @@ public class AdminConfig {
     public String externalLdapUser = "ou=people";
     public String externalLdapRole = "ou=role";
     public String externalLdapFilter = "";
-    public String externalLdapSystemUser=ServerDNConstants.ADMIN_SYSTEM_DN;
+    public String externalLdapSystemUser="admin";//ServerDNConstants.ADMIN_SYSTEM_DN;
     public String externalLdapSystemCredential="secret";
     public String externalLdapAuthentication="simple";
     public String externalLdapAdminFilter = "";      // ADDED to Schema

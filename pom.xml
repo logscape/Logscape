@@ -54,22 +54,6 @@
 
     </properties>
 
-<!--    <ant inheritAll="false" dir="${common}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${boot}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${transport}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vspace}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vs-orm}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vso}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vs-log}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vs-log-disco}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vs-log-server}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vs-socket-server}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vs-syslog-server}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vs-util}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${vs-admin}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${services}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${dashboardServer}" target="clean" />-->
-<!--    <ant inheritAll="false" dir="${replicator}" target="clean" />-->
     <modules>
         <module>boot</module>
         <module>common</module>
@@ -77,36 +61,24 @@
         <module>vspace</module>
         <module>vs-orm</module>
         <module>vso</module>
+        <module>vs-log-disco</module>
+        <module>vs-log</module>
+        <!-- mavenise remaining projects -->
+        <!--    <ant inheritAll="false" dir="${vs-log-disco}" target="clean" />-->
+        <!--    <ant inheritAll="false" dir="${vs-log-server}" target="clean" />-->
+        <!--    <ant inheritAll="false" dir="${vs-socket-server}" target="clean" />-->
+        <!--    <ant inheritAll="false" dir="${vs-syslog-server}" target="clean" />-->
+        <!--    <ant inheritAll="false" dir="${vs-util}" target="clean" />-->
+        <!--    <ant inheritAll="false" dir="${vs-admin}" target="clean" />-->
+        <!--    <ant inheritAll="false" dir="${services}" target="clean" />-->
+        <!--    <ant inheritAll="false" dir="${dashboardServer}" target="clean" />-->
+        <!--    <ant inheritAll="false" dir="${replicator}" target="clean" />-->
 
 
     </modules>
 
 
     <dependencies>
-
-        <!-- Cross-submodule dependencies -->
-<!--        <dependency>-->
-<!--            <groupId>com.logscape</groupId>-->
-<!--            <artifactId>common</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.logscape</groupId>-->
-<!--            <artifactId>transport</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--        </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.logscape</groupId>-->
-<!--                <artifactId>common</artifactId>-->
-<!--                <version>3.5.0-SNAPSHOT</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.logscape</groupId>-->
-<!--                <artifactId>transport</artifactId>-->
-<!--                <version>3.5.0-SNAPSHOT</version>-->
-<!--            </dependency>-->
-
-
 
         <!-- libs -->
         <dependency>
@@ -309,6 +281,137 @@
             <artifactId>winp</artifactId>
             <version>1.28</version>
         </dependency>
+
+        <!-- vs-log -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapdb</groupId>
+            <artifactId>mapdb</artifactId>
+            <version>1.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.akiban</groupId>
+            <artifactId>akiban-persistit</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.clerezza.ext</groupId>
+            <artifactId>org.json.simple</artifactId>
+            <version>0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.openhft</groupId>
+            <artifactId>lang</artifactId>
+            <version>6.8.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>it.sauronsoftware.cron4j</groupId>
+            <artifactId>cron4j</artifactId>
+            <version>2.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-websocket</artifactId>
+            <version>8.1.9.v20130131</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>8.1.9.v20130131</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jfinal</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>8.1.8</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.openhft</groupId>
+            <artifactId>chronicle</artifactId>
+            <version>3.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mvel</groupId>
+            <artifactId>mvel2</artifactId>
+            <version>2.2.8.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.clearspring.analytics</groupId>
+            <artifactId>stream</artifactId>
+            <version>2.9.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.cheffo</groupId>
+            <artifactId>jeplite</artifactId>
+            <version>0.8.7a</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.scireum</groupId>
+            <artifactId>parsii</artifactId>
+            <version>1.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.openhft</groupId>
+            <artifactId>chronicle-map</artifactId>
+            <version>2.4.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.maxmind.geoip</groupId>
+            <artifactId>geoip-api</artifactId>
+            <version>1.2.15</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.jeval</groupId>
+            <artifactId>jeval</artifactId>
+            <version>0.9.4</version>
+        </dependency>
+
+
 
 
 

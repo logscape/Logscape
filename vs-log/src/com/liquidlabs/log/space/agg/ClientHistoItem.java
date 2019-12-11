@@ -3,18 +3,14 @@ package com.liquidlabs.log.space.agg;
 import com.liquidlabs.common.DateUtil;
 import com.liquidlabs.common.StringUtil;
 import com.liquidlabs.log.LogProperties;
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.collections.Predicate;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormatter;
 
 import java.io.Serializable;
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.*;
-import java.util.concurrent.ScheduledExecutorService;
 
 public class ClientHistoItem {
 	private final static Logger LOGGER = Logger.getLogger(ClientHistoItem.class);

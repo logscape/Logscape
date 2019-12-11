@@ -1,7 +1,7 @@
 package com.liquidlabs.admin;
 
 import com.liquidlabs.common.collection.Arrays;
-import com.sun.mail.smtp.SMTPAddressFailedException;
+//import com.sun.mail.smtp.SMTPAddressFailedException;
 import org.apache.log4j.Logger;
 
 import javax.activation.CommandMap;
@@ -9,10 +9,7 @@ import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 import javax.activation.MailcapCommandMap;
 import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
+import javax.mail.internet.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -162,7 +159,7 @@ public class Emailer {
 
         try {
         	transport.sendMessage(msg, addressTo);
-        } catch (SMTPAddressFailedException ex) {
+        } catch (Exception ex) {
         	// 
         	for (InternetAddress internetAddress : addressTo) {
         		try {

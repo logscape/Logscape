@@ -1,8 +1,6 @@
 package com.liquidlabs.log.space.agg;
 
 import com.liquidlabs.common.concurrent.ExecutorService;
-import com.liquidlabs.log.LogProperties;
-import com.liquidlabs.log.search.Bucket;
 import com.liquidlabs.log.search.ReplayEvent;
 import com.liquidlabs.log.search.TimeUID;
 import com.liquidlabs.log.space.LogReplayHandler;

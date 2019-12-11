@@ -1,7 +1,5 @@
 package com.liquidlabs.log.space.agg;
 
-import net.openhft.chronicle.map.ChronicleMap;
-
 import java.util.*;
 import java.util.concurrent.ConcurrentSkipListSet;
 

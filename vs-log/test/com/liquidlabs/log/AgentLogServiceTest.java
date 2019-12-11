@@ -1,5 +1,6 @@
 package com.liquidlabs.log;
 
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.log.fields.FieldSets;
 import com.liquidlabs.log.index.Indexer;
@@ -81,6 +82,9 @@ public class AgentLogServiceTest {
 
     @Before
     public void setUp() throws Exception {
+
+        TestModeSetter.setTestMode();
+        
         DB_DIR = "build/" + this.getClass().getSimpleName() + System.currentTimeMillis();
         com.liquidlabs.common.concurrent.ExecutorService.setTestMode();
         setupSoLogSpaceCanRunProperly();

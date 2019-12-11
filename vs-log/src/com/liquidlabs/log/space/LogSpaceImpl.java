@@ -87,7 +87,6 @@ public class LogSpaceImpl implements LogSpace {
     FieldSet fieldSet = FieldSets.get();
     private final LookupSpace lookupSpace;
     State state = State.STOPPED;
-    boolean llc = false;
 
     public LogSpaceImpl(SpaceService dataSpaceService, SpaceService logEventSpace, AdminSpace adminSpace, AggSpace aggSpace, AggSpaceManager aggSpaceManager, String[] liveIncludeFilters, String[] liveExcludeFilters, ResourceSpace resourceSpace, LookupSpace lookupSpace) {
         this.logDataService = dataSpaceService;
@@ -171,14 +170,6 @@ public class LogSpaceImpl implements LogSpace {
                 LOGGER.warn("ResouceSpace is null");
             }
 
-            this.llc = adminSpace.getLLC(true) != -1;
-
-            scheduler.scheduleAtFixedRate(new Runnable() {
-                @Override
-                public void run() {
-                    LogSpaceImpl.this.llc = adminSpace.getLLC(true) != -1;
-                }
-            }, 1, 1, TimeUnit.MINUTES);
         } catch (Throwable t) {
             LOGGER.fatal("Start LogSpace Failed", t);
         } finally {
@@ -1209,12 +1200,12 @@ public class LogSpaceImpl implements LogSpace {
         Set<String> ids = new HashSet<String>(getIds(Search.class, user));
         if (ids.contains(name)) return logDataService.findById(Search.class, name);
 
-        if (llc && user != null) name = user.getGroupId(name);
+        if (user != null) name = user.getGroupId(name);
         return logDataService.findById(Search.class, name);
     }
 
     public String saveSearch(Search report, User user) throws Exception {
-        if (llc && user != null) report.name = user.getGroupId(report.name);
+        if (user != null) report.name = user.getGroupId(report.name);
         LOGGER.info("LS_EVENT:SaveSearch:" + report.name);
 
         logDataService.store(report, -1);
@@ -1222,7 +1213,7 @@ public class LogSpaceImpl implements LogSpace {
     }
 
     public void deleteSearch(String name, User user) throws Exception {
-        if (llc && user != null) name = user.getGroupId(name);
+        if (user != null) name = user.getGroupId(name);
         Search removed = logDataService.remove(Search.class, name);
         if (removed == null) LOGGER.info("Failed to remove/find search:" + name);
         else LOGGER.info("Removed Search:" + name);
@@ -1250,7 +1241,7 @@ public class LogSpaceImpl implements LogSpace {
         } else {
             // not found -= check for a user. group alias
             // scope it to this users version of the Workspace
-            if (llc && user != null) {
+            if (user != null) {
                 if (name.startsWith("user.")) {
                     // replace the user. with this users group
                     name = user.getGroupId(name).replace("user.","");
@@ -1279,7 +1270,7 @@ public class LogSpaceImpl implements LogSpace {
     public String saveWorkspace(String name, String workspace, User user) {
         LOGGER.info("Save Workspace:" + name);
         name = name.trim();
-        if (llc && user != null) name = user.getGroupId(name);
+        if (user != null) name = user.getGroupId(name);
         Workspace workspace1 = new Workspace(name, workspace);
         logDataService.store(workspace1, -1);
         return workspace1.name;
@@ -1309,7 +1300,7 @@ public class LogSpaceImpl implements LogSpace {
      * Generic Accessors
      */
     private String getWatchGroupFilter(User user) {
-        return llc && user != null ? user.getGroupFilter("tags") : "";
+        return user != null ? user.getGroupFilter("tags") : "";
     }
 
 
@@ -1332,7 +1323,7 @@ public class LogSpaceImpl implements LogSpace {
      * Generic Accessors
      */
     private String getGroupFilter(User user) {
-        return llc && user != null ? user.getGroupFilter("name") : "";
+        return user != null ? user.getGroupFilter("name") : "";
     }
 
 

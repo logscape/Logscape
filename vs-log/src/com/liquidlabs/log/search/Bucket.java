@@ -20,12 +20,12 @@ import javolution.util.FastMap;
 import net.openhft.lang.io.Bytes;
 import net.openhft.lang.model.constraints.NotNull;
 import org.apache.log4j.Logger;
-import org.eclipse.jetty.util.ConcurrentHashSet;
 import org.joda.time.format.DateTimeFormatter;
 
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 
 @SuppressWarnings("unchecked")
@@ -43,7 +43,7 @@ public class Bucket implements KryoSerializable,  net.openhft.lang.io.serializat
 	private long end;
 	private transient String filePath;
 
-	private Set<String> fieldSetId = new ConcurrentHashSet<>();
+	private Set<String> fieldSetId = new CopyOnWriteArraySet<>();
 	
 	
 	private int hits=0;
@@ -113,7 +113,7 @@ public class Bucket implements KryoSerializable,  net.openhft.lang.io.serializat
 	}
 	
 	public Set<String> getAggregateResultKeys(){
-		if (functionResults == null) return new ConcurrentHashSet<>();
+		if (functionResults == null) return new CopyOnWriteArraySet<>();
 		return functionResults.keySet();
 	}
 	public Map<String, Map> getAggregateResults(){

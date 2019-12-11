@@ -1,6 +1,7 @@
 package com.liquidlabs.common.file;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.util.zip.GZIPOutputStream;
@@ -22,6 +23,7 @@ public class GzipMLineRafTest {
 	public void setup() {
 		
 		try {
+			new File("build").mkdir();
 			GZIPOutputStream fos = new GZIPOutputStream(new FileOutputStream(gzipFilename));
 			fos.write("aaa\nbbb\n ccc\nddd\n eee\nfff\neee".getBytes());
 			fos.close();

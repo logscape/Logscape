@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.prevayler.Prevayler;
 import org.prevayler.PrevaylerFactory;
 
+import java.io.File;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -24,6 +25,7 @@ public class PrevalentProxyTest {
     @Test
     public void shouldWork() throws Exception {
 
+        new File("build").mkdir();
         PrevaylerFactory factory = new PrevaylerFactory();
         factory.configurePrevalenceDirectory("build/prevalent");
         factory.configureSnapshotSerializer(new MyXStreamSerializer());

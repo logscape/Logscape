@@ -62,6 +62,7 @@
         <module>vs-orm</module>
         <module>vso</module>
         <module>vs-log-disco</module>
+        <module>vs-admin</module>
         <module>vs-log</module>
         <!-- mavenise remaining projects -->
         <!--    <ant inheritAll="false" dir="${vs-log-disco}" target="clean" />-->

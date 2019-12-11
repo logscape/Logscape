@@ -43,6 +43,19 @@ View different <a href="http://logscape.github.io/deploy.html" target="_blank">d
 A Logscape manager can be deployed in isolation - or alongside <a href="http://logscape.github.io/deploy-forwarder.html" target="_blank">forwarders</a> and <a href="http://logscape.github.io/deploy-indexstore.html" target="_blank">Indexstores</a>.
 For more information read the <a href="http://logscape.github.io/deploy.html" target="_blank">full deployment guide</a>.
 
+## Circle CI
+This github project uses CircleCI for the CI environment. Unfortunately - it uses the maven 
+so you will find pom.xml's that express dependencies. To see how module dependencies are constructed
+take a look in .circleci/config.yaml
+
+Maven is used to validate tests etc for most of the project. See below for complete ant instructions
+
+Maven build: install module dependencies first then run tests.
+1. mvn package install -Dmaven.test.skip=true
+2. mvn test
+ 
+Artifact assemble is still done via ANT.
+
 ## Build from Source
 ```
 Note: This repo includes IntelliJ project files for your convenience.
@@ -56,7 +69,7 @@ Then build from source by following these steps
 * Navigate to the master folder `/LogScape/master`
 * Execute `ant clean dist`
 
-On a successful build, this will generate -
+On a successful build, there will exist -
 * Distributable zip located in `/Logscape/master/dist`
 * Expanded build located in `Logscape/master/build`
 

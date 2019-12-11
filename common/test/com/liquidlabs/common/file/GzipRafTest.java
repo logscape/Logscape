@@ -2,6 +2,7 @@ package com.liquidlabs.common.file;
 
 import static junit.framework.Assert.assertEquals;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.zip.GZIPInputStream;
@@ -18,6 +19,7 @@ public class GzipRafTest {
 	public void setup() {
 		
 		try {
+			new File("build").mkdir();
 			GZIPOutputStream fos = new GZIPOutputStream(new FileOutputStream(gzipFilename));
 			fos.write("aaa\nbbb\nccc\nddd".getBytes());
 			fos.close();

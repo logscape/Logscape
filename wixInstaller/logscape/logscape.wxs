@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix
+        xmlns="http://schemas.microsoft.com/wix/2006/wi"
+        xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+        >
+
+
+    <!---
+            VERSION info - REPLACE UIDS -
+            2013-1209-0200
+            YYYY-MMdd-Version"
+
+
+    64bit
+    http://blogs.msdn.com/astebner/archive/2007/08/09/4317654.aspx
+    -->
+
+    <!-- Product name as you want it to appear in Add/Remove Programs-->
+    <?if $(var.Platform) = x64 ?>
+    <?define ProductName = "Logscape 3.x (64 bit)" ?>
+    <?define PlatformProgramFilesFolder = "ProgramFiles64Folder" ?>
+    <?define msiProductId = "4bf1a617-2015-1201-0240-539f926c8862" ?>
+
+    <?define win64Flag = "yes" ?>
+    <?define jvmType = "server" ?>
+    <?else ?>
+    <?define msiProductId = "4bf1a617-2015-1201-0240-539f926c8862" ?>
+    <?define ProductName = "Logscape 3.x (32 bit)" ?>
+    <?define PlatformProgramFilesFolder = "ProgramFilesFolder" ?>
+    <?define win64Flag = "no" ?>
+    <?define jvmType = "client" ?>
+    <?endif ?>
+
+    <Product Id="$(var.msiProductId)" UpgradeCode="4bf1a617-1102-2002-0030-539f926c8862" Name="$(var.ProductName)" Language="1033" Version="3.03" Manufacturer="Logscape Ltd">
+
+        <Package InstallerVersion="200" Compressed="yes" InstallPrivileges="elevated" InstallScope="perMachine"  Description="$(var.ProductName)" Platform="$(var.Platform)"  />
+        <Property Id="MSIUSEREALADMINDETECTION" Value="1"/>
+        <Condition Message="You need to be Administator to install this product.">Privileged</Condition>
+
+        <!-- Check some requirements ONLY on "install", but not on modify or uninstall. -->
+        <Property Id="JAVA_CURRENT_VERSION">
+            <RegistrySearch Id="JRE_CURRENT_VERSION_REGSEARCH" Root="HKLM" Key="SOFTWARE\JavaSoft\Java Runtime Environment" Name="CurrentVersion" Type="raw" Win64="$(var.win64Flag)" />
+        </Property>
+        <Condition Message="Java Runtime Environment  is not installed or incompatible. Note: Please install Oracle JRE 1.6 or later. Note 2: Use the 64 bit MSI with 64 bit JRE">
+            <![CDATA[Installed OR (JAVA_CURRENT_VERSION >= "1.6")]]>
+        </Condition>
+
+
+        <Media Id="1" Cabinet="logscape.cab" EmbedCab="yes" />
+
+        <Directory Id="TARGETDIR" Name="SourceDir" FileSource=".">
+            <Directory Id="$(var.PlatformProgramFilesFolder)">
+                <Directory Id='INSTALLDIR' Name='Logscape 3.x'/>
+
+                <Component Id="ProgramComponent" Guid="4bf1a617-2611-2012-2002-539f926c8863" Win64="$(var.win64Flag)">
+                    <util:XmlFile Id="xml1" Action="setValue"
+                                  ElementPath='/configuration/appSettings/add[\[]@key=&quot;vso.resource.type&quot;[\]]/@value'
+                                  File="[TARGETDIR]\[ROOTDIR]\etc\setup.conf" Value="[NODETYPE]"/>
+
+                    <util:XmlFile Id="xml2" Action="setValue"
+                                  ElementPath='/configuration/appSettings/add[\[]@key=&quot;agent.role&quot;[\]]/@value'
+                                  File="[TARGETDIR]\[ROOTDIR]\etc\setup.conf" Value="[NODETYPE]"/>
+
+
+                    <util:XmlFile Id="xml3" Action="setValue"
+                                  ElementPath='/configuration/appSettings/add[\[]@key=&quot;JavaHome&quot;[\]]/@value'
+                                  File="[TARGETDIR]\[ROOTDIR]\etc\setup.conf" Value="[JAVAHOME]"/>
+
+                    <util:XmlFile Id="xml4" Action="setValue"
+                                  ElementPath='/configuration/appSettings/add[\[]@key=&quot;MANAGEMENT_HOST&quot;[\]]/@value'
+                                  File="[TARGETDIR]\[ROOTDIR]\etc\setup.conf" Value="[MANAGEMENT_HOST]"/>
+
+                    <util:XmlFile Id="xml5" Action="setValue"
+                                  ElementPath='/configuration/appSettings/add[\[]@key=&quot;MANAGEMENT_PORT&quot;[\]]/@value'
+                                  File="[TARGETDIR]\[ROOTDIR]\etc\setup.conf" Value="[MANAGEMENT_PORT]"/>
+
+                    <util:XmlFile Id="xml6" Action="setValue"
+                                  ElementPath='/configuration/appSettings/add[\[]@key=&quot;web.app.port&quot;[\]]/@value'
+                                  File="[TARGETDIR]\[ROOTDIR]\etc\setup.conf" Value="[WEBPORT]"/>
+
+
+                    <CreateFolder>
+                        <!--
+                                        <util:PermissionEx 	GenericAll="yes"  Read="yes" ReadAttributes="yes"
+                                                        CreateChild="yes" Delete="yes"
+                                                        DeleteChild="yes" WriteAttributes="yes" />
+                        -->
+                    </CreateFolder>
+                </Component>
+
+
+
+            </Directory>
+
+
+            <Directory Id="ProgramMenuFolder" Name="Programs">
+                <Directory Id="ProgramMenuDir" Name="Logscape 3.0">
+                    <Component Id="ProgramMenuDir" Guid="4bf1a617-2611-2012-2002-539f926c8864">
+                        <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+                        <!-- this gets filtered out -->
+                        <util:InternetShortcut Id="WebClientTest" Name="Logscape Dashboard" Target="[TARGETDIR]\[ROOTDIR]\scripts\holding.html"/>
+                        <!--<util:InternetShortcut Id="WebClient" Name="Logscape Dashboard" Target="http://[MANAGEMENT_HOST]:[WEBPORT]"/> -->
+                        <util:InternetShortcut Id="SupportShortCut" Name="Support Documentation" Target="http://support.logscape.com"/>
+                        <util:InternetShortcut Id="CommunityShortCut" Name="Forums" Target="http://forums.logscape.com"/>
+                        <util:InternetShortcut Id="ReadmeShortcut" Name="readme.txt" Target="[TARGETDIR]\[ROOTDIR]\readme.txt"/>
+                        <Shortcut Id="UninstallProduct"
+                                  Name="Uninstall Logscape"
+                                  Target="[SystemFolder]msiexec.exe"
+                                  Arguments="/x [ProductCode]"
+                                  Directory="ProgramMenuDir"
+                                  Description="Uninstalls My Application" />
+
+                        <RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+                    </Component>
+                    <Component Id="ProgramMenuDir_AGENT" Guid="4bf1a617-2611-2012-2002-539f926c8865">
+                        <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+                        <Shortcut Id="StartAgent"
+                                  Name="Start Agent"
+                                  Target="[SystemFolder]sc.exe"
+                                  Arguments="start &quot;Logscape Agent&quot;"
+                                  Directory="ProgramMenuDir"
+                                  Description="Start Logscape Agent" />
+                        <Shortcut Id="StopAgent"
+                                  Name="Stop Agent"
+                                  Target="[SystemFolder]sc.exe"
+                                  Arguments="stop &quot;Logscape Agent&quot;"
+                                  Directory="ProgramMenuDir"
+                                  Description="Stop Logscape Agent" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="DesktopFolder" Name="Desktop" />
+        </Directory>
+
+
+        <Feature Id="Complete" Title="Standard Install" Level="1" Description="Standard Install" Display='expand' ConfigurableDirectory="INSTALLDIR">
+            <ComponentGroupRef Id="Logscape" />
+            <ComponentRef Id='ProgramMenuDir' />
+            <ComponentRef Id='ProgramMenuDir_AGENT' />
+            <ComponentRef Id='ProgramComponent' />
+        </Feature>
+
+        <Binary Id='CA' SourceFile='customActions.vbs' />
+        <CustomAction Id='CheckJavaVersion' BinaryKey='CA' VBScriptCall='CheckJavaVersion' Return='check'/>
+
+
+        <UIRef Id="WixUI_Common" />
+        <!-- image size 493x58 -->
+        <WixVariable Id="WixUIBannerBmp" Value="images\topBanner.bmp" />
+        <!-- image size 493x312 -->
+        <WixVariable Id="WixUIDialogBmp" Value="images\bigBanner.bmp" />
+
+        <Property Id="JAVA_VERSION">
+            <RegistrySearch Id="FindJavaVersion"
+                            Root="HKLM"
+                            Key="SOFTWARE\JavaSoft\Java Runtime Environment"
+                            Name="CurrentVersion"
+                            Type="raw"
+                            Win64="$(var.win64Flag)"/>
+        </Property>
+
+        <Property Id="JAVAHOME">
+            <RegistrySearch Id="FindJavaHome"
+                            Root="HKLM"
+                            Key="SOFTWARE\JavaSoft\Java Runtime Environment\[JAVA_VERSION]"
+                            Name="JavaHome"
+                            Type="raw"
+                            Win64="$(var.win64Flag)"/>
+        </Property>
+
+
+
+        <UI>
+
+            <Property Id="ROOTDIR" Value="logscape" />
+            <Property Id="IS_Win64Flag" Value="$(var.win64Flag)" />
+            <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch Dashboard" />
+            <Property Id="JVM_TYPE" Value="$(var.jvmType)" />
+
+
+            <!-- UI Properties on the LogScape config page -->
+            <Property Id="MANAGEMENT_HOST" Value="localhost" />
+            <Property Id="MANAGEMENT_PORT" Value="11000" />
+            <Property Id="NODETYPE" Value="dev.Management" />
+            <Property Id="WEBPORT" Value="8080" />
+
+
+            <Property Id="WIXUI_INSTALLDIR" Value="TARGETDIR" />
+            <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+
+
+            <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+            <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+            <TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+            <Property Id="ARPNOMODIFY" Value="1" />
+
+            <DialogRef Id="BrowseDlg" />
+            <DialogRef Id="DiskCostDlg" />
+            <DialogRef Id="ErrorDlg" />
+            <DialogRef Id="FatalError" />
+            <DialogRef Id="FilesInUse" />
+            <DialogRef Id="MsiRMFilesInUse" />
+            <DialogRef Id="PrepareDlg" />
+            <DialogRef Id="ProgressDlg" />
+            <DialogRef Id="ResumeDlg" />
+            <DialogRef Id="UserExit" />
+
+            <!--<Publish Dialog="MyExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish> -->
+            <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+            <Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+
+
+            <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="SettingsDlg">LicenseAccepted = "1"</Publish>
+
+            <Publish Dialog="SettingsDlg" Control="Back" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+            <Publish Dialog="SettingsDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg">1</Publish>
+
+
+            <Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="SettingsDlg">1</Publish>
+            <Publish Dialog="InstallDirDlg" Control="Next" Event="SetTargetPath" Value="[WIXUI_INSTALLDIR]" Order="1">1</Publish>
+            <Publish Dialog="InstallDirDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg" Order="2">1</Publish>
+            <Publish Dialog="InstallDirDlg" Control="ChangeFolder" Property="_BrowseProperty" Value="[WIXUI_INSTALLDIR]" Order="1">1</Publish>
+            <Publish Dialog="InstallDirDlg" Control="ChangeFolder" Event="SpawnDialog" Value="BrowseDlg" Order="2">1</Publish>
+
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="InstallDirDlg" Order="1">NOT Installed</Publish>
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg" Order="2">Installed</Publish>
+
+            <Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+            <Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+            <Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+            <Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+
+
+            <Publish Dialog="MyExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+            <Publish Dialog="MyExitDialog" Control="Finish" Event="DoAction" Value="SetUrl">LAUNCHAPPONEXIT</Publish>
+            <Publish Dialog="MyExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">LAUNCHAPPONEXIT</Publish>
+
+
+            <Dialog Id="SettingsDlg" Width="370" Height="260" Title="[ProductName] Setup">
+                <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Setup Information" />
+                <Control Id="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Transparent="yes" NoPrefix="yes" Text="Enter the following information to configure your installation" />
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.InstallDirDlgBannerBitmap)" />
+                <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+
+                <Control Id="MgmtHostLabel" Type="Text" 		X="20" Y="50" Width="150" Height="13" Text="*Manager Host: 192.167.100.11" />
+                <Control Id="MgmtHost"      Type="Edit" 		X="20" Y="65" Width="150" Height="18" Property="MANAGEMENT_HOST" Text="[ComputerName]" />
+
+                <Control Id="MgmtPortLabel" Type="Text" 		X="175" Y="50" Width="150" Height="13" Text="*Manager Port: 11000" />
+                <Control Id="MgmtPort"      Type="Edit" 		X="175" Y="65" Width="150" Height="18" Property="MANAGEMENT_PORT" Text="11000" />
+
+
+
+                <Control Id="NodeTypeLabel"  Type="Text" 		X="20" Y="85" Width="150" Height="13" Text="*Agent Type:" />
+
+                <Control Id="NodeType"       Type="ComboBox" X="175" Y="85" Width="150" Height="18" Property="NODETYPE">
+                    <ComboBox Property="NODETYPE">
+                        <ListItem Value="dev.Management" 	Text="dev.Management"/>
+                        <ListItem Value="dev.Forwarder" 	Text="dev.Forwarder"></ListItem>
+                        <ListItem Value="dev.Indexer" 		Text="dev.Indexer"></ListItem>
+                        <ListItem Value="dev.IndexStore" 	Text="dev.IndexStore"></ListItem>
+                        <ListItem Value="dev.Failover" 	Text="dev.Failover"></ListItem>
+                    </ComboBox>
+                </Control>
+
+
+                <Control Id="WebPortLabel"	Type="Text" 		X="20" Y="105" Width="120" Height="13" Text="Optional: Dashboard Port" />
+
+                <Control Id="WebPort"		Type="Edit" 		X="175" Y="105" Width="150" Height="18" Property="WEBPORT" />
+
+
+                <Control Id="JAVA_LABE"	Type="Text" 		X="20" Y="125" Width="300" Height="13" Text="Java 6/7 Home *Required*" />
+                <Control Id="JAVA"		Type="Edit" 		X="20" Y="140" Width="310" Height="18" Property="JAVAHOME" />
+
+                <Control Id="BottomLine" 	Type="Line" 	 	X="0" Y="225" Width="370" Height="0" />
+                <Control Id="Next" 			Type="PushButton" 	X="236" Y="228" Width="56" Height="17" Default="yes" Text="Next" />
+                <Control Id="Back" 			Type="PushButton" 	X="180" Y="228" Width="56" Height="17" Text="Back" />
+
+                <Control Id="Cancel" Type="PushButton" X="304" Y="228" Width="56" Height="17" Cancel="yes" Text="Cancel">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+            </Dialog>
+
+            <Dialog Id="MyExitDialog" Width="370" Height="270" Title="!(loc.ExitDialog_Title)">
+                <Control Id="Finish" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Cancel="yes" Text="!(loc.WixUIFinish)" />
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Disabled="yes" Text="!(loc.WixUICancel)" />
+                <Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="234" TabSkip="no" Text="!(loc.ExitDialogBitmap)" />
+                <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Disabled="yes" Text="!(loc.WixUIBack)" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+                <Control Id="Description" Type="Text" X="135" Y="70" Width="220" Height="20" Transparent="yes" NoPrefix="yes" Text="!(loc.ExitDialogDescription)" />
+                <Control Id="Title" Type="Text" X="135" Y="20" Width="220" Height="60" Transparent="yes" NoPrefix="yes" Text="!(loc.ExitDialogTitle)" />
+                <Control Id="OptionalText" Type="Text" X="135" Y="100" Width="220" Height="80" Transparent="yes" NoPrefix="yes" Hidden="yes" Text="[WIXUI_EXITDIALOGOPTIONALTEXT]">
+                    <Condition Action="show">WIXUI_EXITDIALOGOPTIONALTEXT AND NOT Installed</Condition>
+                </Control>
+                <Control Id="LaunchCheckBox" Type="CheckBox" X="10" Y="243" Width="170" Height="17" Property="LAUNCHAPPONEXIT" Hidden="yes" CheckBoxValue="1" Text="Launch Dashboard when setup exits. Credentials: admin / ll4bs ">
+                    <Condition Action="show">NOT Installed</Condition>
+                </Control>
+            </Dialog>
+
+
+
+
+
+        </UI>
+        <InstallUISequence>
+            <Custom Action="DIRCA_TARGETDIR" Sequence="1">TARGETDIR=""</Custom>
+
+            <!-- Try and figure out java home - set it from JAVA_HOME env it its available -->
+            <Custom Action='JH_JH' After="AppSearch" >NOT(%JAVA_HOME="")</Custom>
+            <Show Dialog="MyExitDialog" OnExit="success" />
+
+        </InstallUISequence>
+
+        <CustomAction Id="JH_JH" Property="JAVAHOME" Value="[%JAVA_HOME]"/>
+
+
+        <InstallExecuteSequence>
+
+
+            <Custom Action="DIRCA_TARGETDIR" Sequence="1">TARGETDIR=""</Custom>
+
+            <!-- CLEANUP SCRIPTS run cleanup scripts always - they dont fail - but will cleanup from previous installs -->
+
+
+            <!-- STOP and REMOVE AGENT Service -->
+            <Custom Action='stopAgentService.cmd' After="InstallInitialize" >(NOT Installed) OR (NOT UPGRADINGPRODUCTCODE) AND (REMOVE="ALL")</Custom>
+            <Custom Action='stopAgentService' After="stopAgentService.cmd">(NOT Installed) OR (NOT UPGRADINGPRODUCTCODE) AND (REMOVE="ALL")</Custom>
+
+            <Custom Action='uninstallAgentService.cmd' After="stopAgentService.cmd" >(NOT Installed) OR (NOT UPGRADINGPRODUCTCODE) AND (REMOVE="ALL")</Custom>
+            <Custom Action='uninstallAgentService' After="uninstallAgentService.cmd">(NOT Installed) OR (NOT UPGRADINGPRODUCTCODE) AND (REMOVE="ALL")</Custom>
+
+
+            <!-- INSTALL Actions
+                http://wix.mindcapers.com/wiki/WiX_InstallExecuteSequence
+                http://wix.tramontana.co.hu/tutorial/events-and-actions/queueing-up
+            -->
+
+            <Custom Action="CheckJavaVersion" Before="InstallFiles">NOT Installed</Custom>
+
+            <!-- Run the scripts/configure.bat -->
+            <Custom Action="runConfigure.cmd" After="StartServices">NOT Installed</Custom>
+            <Custom Action="runConfigure" After="runConfigure.cmd">NOT Installed</Custom>
+
+            <!-- INSTALL and Start AGENT Service -->
+
+            <!-- X86 -->
+            <Custom Action="installAgentService.cmd" After="runConfigure">NOT Installed AND (IS_Win64Flag = "no")</Custom>
+            <Custom Action="installAgentService" After="installAgentService.cmd">NOT Installed AND (IS_Win64Flag = "no")</Custom>
+
+            <Custom Action="serviceRecoveryConfigure.cmd" After="installAgentService">NOT Installed AND (IS_Win64Flag = "no")</Custom>
+            <Custom Action="serviceRecoveryConfigure" After="serviceRecoveryConfigure.cmd">NOT Installed AND (IS_Win64Flag = "no")</Custom>
+
+            <Custom Action="startAgentService.cmd" After="serviceRecoveryConfigure">NOT Installed AND (IS_Win64Flag = "no")</Custom>
+            <Custom Action="startAgentService" After="startAgentService.cmd">NOT Installed AND (IS_Win64Flag = "no")</Custom>
+
+            <!-- X64 -->
+
+            <Custom Action="installAgentService64.cmd" After="runConfigure">NOT Installed AND (IS_Win64Flag = "yes")</Custom>
+            <Custom Action="installAgentService64" After="installAgentService64.cmd">NOT Installed AND (IS_Win64Flag = "yes")</Custom>
+
+            <Custom Action="serviceRecoveryConfigure64.cmd" After="installAgentService64">NOT Installed AND (IS_Win64Flag = "yes")</Custom>
+            <Custom Action="serviceRecoveryConfigure64" After="serviceRecoveryConfigure64.cmd">NOT Installed AND (IS_Win64Flag = "yes")</Custom>
+
+
+            <Custom Action="startAgentService64.cmd" After="serviceRecoveryConfigure64">NOT Installed AND (IS_Win64Flag = "yes")</Custom>
+            <Custom Action="startAgentService64" After="startAgentService64.cmd">NOT Installed AND (IS_Win64Flag = "yes")</Custom>
+
+
+            <!-- setup windows reg query dll registration -->
+            <Custom Action="register32CMDService.cmd" Before="StartServices">NOT Installed</Custom>
+            <Custom Action="register32CMDService" After="register32CMDService.cmd">NOT Installed</Custom>
+
+
+
+        </InstallExecuteSequence>
+        <AdminExecuteSequence>
+            <Custom Action="DIRCA_TARGETDIR" Sequence="1">TARGETDIR=""</Custom>
+        </AdminExecuteSequence>
+        <AdminUISequence>
+            <Custom Action="DIRCA_TARGETDIR" Sequence="1">TARGETDIR=""</Custom>
+            <Show Dialog="MyExitDialog" OnExit="success" />
+        </AdminUISequence>
+        <!--
+                http://blogs.technet.com/alexshev/archive/2008/02/21/from-msi-to-wix-part-5-custom-actions.aspx
+        -->
+
+        <CustomAction Id="DIRCA_TARGETDIR" Property="TARGETDIR" Value="C:\[ProductName]" Execute="firstSequence"/>
+
+
+        <CustomAction Id="SetUrl" Property="WixShellExecTarget" Value="[TARGETDIR]\[ROOTDIR]\scripts\holding.html"/>
+        <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes"/>
+
+        <!-- Run ApplyConfig.bat-->
+        <CustomAction Id="runConfigure.cmd" Property="runConfigure" Value="&quot;[SystemFolder]cmd.exe&quot; /D /E:ON /V:ON /C &quot;&quot;[TARGETDIR]\[ROOTDIR]\scripts\applyConfig.bat&quot; &quot;[JAVAHOME]&quot;&quot;" />
+        <CustomAction Id="runConfigure" BinaryKey="WixCA" DllEntry="CAQuietExec" Return="check" Execute="deferred" Impersonate="yes"/>
+
+
+        <!-- Register32 regsvr32 cmdlib.wsc Service -->
+        <CustomAction Id="register32CMDService.cmd" Property="register32CMDService" Value="&quot;[SystemFolder]regsvr32.exe&quot; &quot;[SystemFolder]cmdlib.wsc&quot; /s" />
+        <CustomAction Id="register32CMDService" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Impersonate="yes" Return="ignore"/>
+
+
+        <!-- INSTALL the AGENT service -->
+        <CustomAction Id="installAgentService.cmd" Property="installAgentService" Value="&quot;[SystemFolder]cmd.exe&quot; /D /E:ON /V:ON /C &quot;&quot;[TARGETDIR]\[ROOTDIR]\etc\logscape-service-x86.exe&quot; -install&quot;"  />
+        <CustomAction Id="installAgentService" BinaryKey="WixCA" DllEntry="CAQuietExec" Return="check" Execute="deferred" Impersonate="yes"/>
+
+        <CustomAction Id="installAgentService64.cmd" Property="installAgentService64" Value="&quot;[SystemFolder]cmd.exe&quot; /D /E:ON /V:ON /C &quot;&quot;[TARGETDIR]\[ROOTDIR]\etc\logscape-service-x64.exe&quot; -install&quot;" />
+        <CustomAction Id="installAgentService64" BinaryKey="WixCA" DllEntry="CAQuietExec" Return="check" Execute="deferred" Impersonate="yes"/>
+
+        <!-- COnfigure the Service-Recovery options x86 x64 -->
+        <CustomAction Id="serviceRecoveryConfigure.cmd" Property="serviceRecoveryConfigure" Value="&quot;[SystemFolder]sc.exe&quot; failure &quot;Logscape Agent&quot; reset= 600 actions= restart/600000/none/1000/none/1000 " />
+        <CustomAction Id="serviceRecoveryConfigure" BinaryKey="WixCA" DllEntry="CAQuietExec" Return="check" Execute="deferred" Impersonate="yes"/>
+
+        <CustomAction Id="serviceRecoveryConfigure64.cmd" Property="serviceRecoveryConfigure64" Value="&quot;[SystemFolder]sc.exe&quot; failure &quot;Logscape Agent&quot; reset= 600 actions= restart/600000/none/1000/none/1000 " />
+        <CustomAction Id="serviceRecoveryConfigure64" BinaryKey="WixCA" DllEntry="CAQuietExec" Return="check" Execute="deferred" Impersonate="yes"/>
+
+
+        <!-- START the AGENT Service -->
+        <CustomAction Id="startAgentService.cmd" Property="startAgentService" Value="&quot;[SystemFolder]sc.exe&quot; start &quot;Logscape Agent&quot;" />
+        <CustomAction Id="startAgentService" BinaryKey="WixCA" DllEntry="CAQuietExec" Return="check" Execute="deferred" Impersonate="yes"/>
+
+        <CustomAction Id="startAgentService64.cmd" Property="startAgentService64" Value="&quot;[SystemFolder]sc.exe&quot; start &quot;Logscape Agent&quot;" />
+        <CustomAction Id="startAgentService64" BinaryKey="WixCA" DllEntry="CAQuietExec" Return="check" Execute="deferred" Impersonate="yes"/>
+
+        <!-- STOP the AGENT Service -->
+        <CustomAction Id="stopAgentService.cmd" Property="stopAgentService" Value="&quot;[SystemFolder]sc.exe&quot; stop &quot;Logscape Agent&quot;"/>
+        <CustomAction Id="stopAgentService" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Impersonate="yes"  Return="ignore"/>
+
+        <!-- UNINSTALL the AGENT Service -->
+        <CustomAction Id="uninstallAgentService.cmd" Property="uninstallAgentService" Value="&quot;[SystemFolder]sc.exe&quot; delete &quot;Logscape Agent&quot;"/>
+        <CustomAction Id="uninstallAgentService" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="deferred" Impersonate="yes" Return="ignore"/>
+
+    </Product>
+</Wix>

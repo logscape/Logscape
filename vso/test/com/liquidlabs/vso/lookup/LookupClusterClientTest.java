@@ -1,8 +1,11 @@
 package com.liquidlabs.vso.lookup;
 
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import com.liquidlabs.common.LifeCycle;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -20,6 +23,7 @@ public class LookupClusterClientTest {
     private URI lu2 = getURI("stcp://localhost:22222");
     private URI lu2_REP = getURI("stcp://localhost:25222");
 	private String location = "DEFAULT";
+	List<LifeCycle> stoppabled = new ArrayList<>();
 	
 	@Before
 	public void setup() {
@@ -28,6 +32,7 @@ public class LookupClusterClientTest {
 	
 	@After
 	public void after() {
+	    stoppabled.stream().forEach(item -> item.stop());
 	}
 
 	@Test
@@ -37,6 +42,8 @@ public class LookupClusterClientTest {
 		
 		ORMapperFactory mapperFactory = new ORMapperFactory(VSOProperties.getLookupPort() + 1234, "CLIENT", 10 * 1024, 999);
         mapperFactory.start();
+        stoppabled.add(mapperFactory);
+
 
         LookupSpace lookupClient1 = LookupSpaceImpl.getRemoteService(lu1.toString(), mapperFactory.getProxyFactory(), "CONTEXT-1");
 
@@ -55,20 +62,20 @@ public class LookupClusterClientTest {
 		System.out.println("\n\n>>>>>>>> 2 >>" + lookupClient2.toString());
 		Assert.assertTrue(lookupClient2.toString().contains("11111"));
 		Assert.assertTrue(lookupClient2.toString().contains("22222"));
-		mapperFactory.stop();
-		
 	}
 	
     public void startLookupOne() throws Exception {
         LookupSpaceImpl lu1 = new LookupSpaceImpl(this.lu1.getPort(), lu1_REP.getPort());
         lu1.start();
         lu1.addLookupPeer(lu2_REP);
+        stoppabled.add(lu1);
     }
 
     public void startLookupTwo() throws Exception {
         LookupSpaceImpl lu2 = new LookupSpaceImpl(this.lu2.getPort(), lu2_REP.getPort());
         lu2.start();
         lu2.addLookupPeer(lu1_REP);
+        stoppabled.add(lu2);
     }
 
  //   @Test

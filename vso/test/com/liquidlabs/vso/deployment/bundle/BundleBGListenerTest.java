@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
 
 import org.jmock.Expectations;
 import org.jmock.Mockery;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -51,7 +52,7 @@ public class BundleBGListenerTest {
 		
 		
 		Map<String, String> variables = new HashMap<String, String>();
-		bundleBGListener = new BackgroundServiceAllocator(workToAllocate , variables, workAllocator, new URI("tcp://localhost"), new ServiceFinder() {
+		bundleBGListener = new BackgroundServiceAllocator(workToAllocate , variables, workAllocator, new URI("stcp://localhost"), new ServiceFinder() {
 
 			public boolean isServiceRunning(String serviceId) {
 				return true;
@@ -61,6 +62,11 @@ public class BundleBGListenerTest {
 				return false;
 			}}, Executors.newScheduledThreadPool(5));
 		
+	}
+	@After
+	public void after() {
+		ormFactory.stop();
+		workToAllocate.stop();
 	}
 	
 	@Test

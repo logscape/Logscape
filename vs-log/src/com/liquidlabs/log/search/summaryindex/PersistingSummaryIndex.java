@@ -191,7 +191,7 @@ public class PersistingSummaryIndex {
                 removeOldJournals(prevalenceDirectory);
 
 
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

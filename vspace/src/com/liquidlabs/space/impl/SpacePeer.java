@@ -1,26 +1,22 @@
 package com.liquidlabs.space.impl;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ScheduledExecutorService;
-
-import org.apache.log4j.Logger;
-import org.joda.time.format.DateTimeFormat;
-
 import com.liquidlabs.common.LifeCycle;
 import com.liquidlabs.common.NetworkUtils;
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.concurrent.NamingThreadFactory;
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.space.Space;
 import com.liquidlabs.space.VSpaceProperties;
-import com.liquidlabs.transport.EndPoint;
-import com.liquidlabs.transport.Receiver;
-import com.liquidlabs.transport.TransportFactory;
-import com.liquidlabs.transport.TransportFactoryImpl;
-import com.liquidlabs.transport.TransportProperties;
+import com.liquidlabs.transport.*;
 import com.liquidlabs.transport.proxy.ProxyFactory;
 import com.liquidlabs.transport.proxy.ProxyFactoryImpl;
+import org.apache.log4j.Logger;
+import org.joda.time.format.DateTimeFormat;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ScheduledExecutorService;
 
 public class SpacePeer implements LifeCycle {
 	
@@ -159,7 +155,7 @@ public class SpacePeer implements LifeCycle {
 		spaceFactory.stop();
 		transportFactory.stop();
 		proxyFactory.stop();
-		if (!Boolean.getBoolean("test.mode") && !generalExecutor.isShutdown()) generalExecutor.shutdownNow();
+		if (!TestModeSetter.isTestMode() && !generalExecutor.isShutdown()) generalExecutor.shutdownNow();
 		if (!scheduler.isShutdown()) scheduler.shutdownNow();
 	}
 	public URI getClientAddress(){

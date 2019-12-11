@@ -1,5 +1,6 @@
 package com.liquidlabs.log;
 
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.collection.Arrays;
 import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.log.index.Indexer;
@@ -76,7 +77,7 @@ public class AgentLogServiceSEARCHTest {
 
     @Before
     public void setUp() throws Exception {
-        System.setProperty("test.mode", "true");
+        TestModeSetter.setTestMode();
         LogProperties.setAddWatchFileDelay(1);
         System.setProperty("log.sync.data.delay.secs", "1");
 

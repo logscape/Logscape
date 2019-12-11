@@ -196,68 +196,7 @@ public class ResourceAgentImpl implements ResourceAgent, ProcessListener {
 
             }, 60 - now.getSecondOfMinute(), 60, TimeUnit.SECONDS);
 
-            outtageDetector = new DetectorsBuilder(lookupSpaceAddress, proxyFactory,
-                    new Runnable() {
-                        public void run() {
-                            LOGGER.warn("Bouncing the agent");
-                            ResourceAgentImpl.this.bounce(true);
-                        }
-                    },
-
-                    new Runnable() {
-                            int panicCount;
-                            public void run() {
-                                if (resources[0].isPanic()) {
-                                    panicCount++;
-                                    if (panicCount > 5) {
-                                        auditLogger.emit("Panic", Integer.toString(panicCount));
-                                        LOGGER.warn("Detected Agent Panic");
-                                        dumpThreads();
-                                        throw new RuntimeException("NicPanic");
-                                    }
-                                } else {
-                                    panicCount = 0;
-                                }
-                            }
-                            private void dumpThreads() {
-                                try {
-                                    System.err.println(new DateTime() + " Agent Dumping threads");
-                                    FileOutputStream fos = new FileOutputStream("panic-threads.txt");
-                                    String threadDump = ThreadUtil.threadDump("", "");
-                                    fos.write((new DateTime().toString() + "\n").getBytes());
-                                    fos.write(threadDump.getBytes());
-                                    fos.close();
-                                } catch (Throwable t) {
-                                    t.printStackTrace();
-                                }
-                            }
-
-                            @Override
-                            public String toString() {
-                                return "Panic-Detector count:" + panicCount;
-                            }
-            },
-                        new Runnable() {
-                            private void exitWhenNoDisk(int availMb) {
-                                if (availMb > 0 && availMb <= Integer.getInteger("disk.left.mb.exit", 500)) {
-                                    LOGGER.fatal("Out of DiskSpace, process exiting...MB:" + availMb);
-                                    System.err.println("Out of DiskSpace, process exiting...");
-                                    stop();
-                                    System.exit(1);
-                                }
-                            }
-
-                            public void run() {
-                                exitWhenNoDisk(resources[0].profile().getDiskUsableMb());
-                                exitWhenNoDisk((int) (new File(VSOProperties.getWorkingDir()).getUsableSpace() / (1024 * 1024)));
-                            }
-
-                            @Override
-                            public String toString() {
-                                return "Low-Disk";
-                            }
-                        }
-            );
+            buildOutageDetectors();
 
 
             localScheduler.scheduleAtFixedRate(new Runnable() {
@@ -353,6 +292,71 @@ public class ResourceAgentImpl implements ResourceAgent, ProcessListener {
             LOGGER.error(t);
         }
     }
+
+    private void buildOutageDetectors() {
+        if (TestModeSetter.isTestMode()) return;
+        outtageDetector = new DetectorsBuilder(lookupSpaceAddress, proxyFactory,
+                () -> {
+                    LOGGER.warn("Bouncing the agent");
+                    ResourceAgentImpl.this.bounce(true);
+                },
+
+                new Runnable() {
+                        int panicCount;
+                        public void run() {
+                            if (resources[0].isPanic()) {
+                                panicCount++;
+                                if (panicCount > 5) {
+                                    auditLogger.emit("Panic", Integer.toString(panicCount));
+                                    LOGGER.warn("Detected Agent Panic");
+                                    dumpThreads();
+                                    throw new RuntimeException("NicPanic");
+                                }
+                            } else {
+                                panicCount = 0;
+                            }
+                        }
+                        private void dumpThreads() {
+                            try {
+                                System.err.println(new DateTime() + " Agent Dumping threads");
+                                FileOutputStream fos = new FileOutputStream("panic-threads.txt");
+                                String threadDump = ThreadUtil.threadDump("", "");
+                                fos.write((new DateTime().toString() + "\n").getBytes());
+                                fos.write(threadDump.getBytes());
+                                fos.close();
+                            } catch (Throwable t) {
+                                t.printStackTrace();
+                            }
+                        }
+
+                        @Override
+                        public String toString() {
+                            return "Panic-Detector count:" + panicCount;
+                        }
+        },
+                    new Runnable() {
+                        private void exitWhenNoDisk(int availMb) {
+                            if (availMb > 0 && availMb <= Integer.getInteger("disk.left.mb.exit", 500)) {
+                                LOGGER.fatal("Out of DiskSpace, process exiting...MB:" + availMb);
+                                System.err.println("Out of DiskSpace, process exiting...");
+                                stop();
+                                System.exit(1);
+                            }
+                        }
+
+                        public void run() {
+                            exitWhenNoDisk(resources[0].profile().getDiskUsableMb());
+                            exitWhenNoDisk((int) (new File(VSOProperties.getWorkingDir()).getUsableSpace() / (1024 * 1024)));
+                        }
+
+                        @Override
+                        public String toString() {
+                            return "Low-Disk";
+                        }
+                    }
+        );
+    }
+
     public boolean acceptForDelete(File file) {
         String filename = file.getName();
         if (file.getAbsolutePath().toUpperCase().contains("_SERVER_")) return false;
@@ -456,7 +460,7 @@ public class ResourceAgentImpl implements ResourceAgent, ProcessListener {
         }
         // for some reason didn't make contact with the resource space - make
         // reboot
-        System.err.println("Failed resourceSpace.getSystemResourceId();, rebooting agent");
+        System.err.println("Failed resourceSpace.getSystemResourceId();, rebooting agent EXIT:10");
         System.exit(10);
         return 0;
     }
@@ -1207,7 +1211,7 @@ public class ResourceAgentImpl implements ResourceAgent, ProcessListener {
             notify();
         }
         LOGGER.info(String.format("AGENT %s  - EXITED", getId()));
-        System.out.println("The AGENT HAS EXITED");
+        System.out.println("The AGENT HAS EXITED EXIT:10");
         System.exit(10);
     }
 
@@ -1306,7 +1310,7 @@ public class ResourceAgentImpl implements ResourceAgent, ProcessListener {
             }
         }
         if (reboot) {
-            LOGGER.warn("Rebooting: rebootFlag:" + reboot);
+            LOGGER.warn("Rebooting: rebootFlag:" + reboot + " EXIT:10");
             System.exit(10);
         }
         LOGGER.warn("Exiting: rebootFlag:" + reboot);

@@ -7,6 +7,9 @@ import com.liquidlabs.vso.deployment.bundle.Bundle.Status;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertEquals;
+
 public class BundleHandlerPropertyTest extends FunctionalTestBase {
 	static int callCount = 0;
 	

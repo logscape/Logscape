@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
 
+import com.liquidlabs.common.LifeCycle;
 import org.apache.log4j.Logger;
 
 import com.liquidlabs.common.NetworkUtils;
@@ -21,7 +22,7 @@ import com.liquidlabs.transport.TransportFactory;
 import com.liquidlabs.transport.TransportFactoryImpl;
 import com.liquidlabs.transport.proxy.ProxyFactoryImpl;
 
-public class ORMapperFactory {
+public class ORMapperFactory implements LifeCycle {
 	
 	private static final int MAX_SPACE_SIZE = VSpaceProperties.getMaxSpaceSize();
 	Integer threadPoolSize = VSpaceProperties.getCorePoolSize();

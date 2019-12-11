@@ -1,9 +1,6 @@
 package com.liquidlabs.vso.agent;
 
-import com.liquidlabs.common.DateUtil;
-import com.liquidlabs.common.HashGenerator;
-import com.liquidlabs.common.NetworkUtils;
-import com.liquidlabs.common.Time;
+import com.liquidlabs.common.*;
 import com.liquidlabs.common.collection.Arrays;
 import com.liquidlabs.common.collection.PropertyMap;
 import com.liquidlabs.common.file.FileUtil;
@@ -362,7 +359,7 @@ public class ResourceProfile implements ResourceProfileMBean {
 
         if (scheduler == null) return;
 
-        if (!Boolean.getBoolean("test.mode")) {
+        if (!TestModeSetter.isTestMode()) {
             Runnable run = new Runnable() {
                 public void run() {
                     OSGetter osGetter = OSGetters.get(scheduler);

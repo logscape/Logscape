@@ -1,6 +1,7 @@
 package com.liquidlabs.vso.agent.outtage;
 
 import com.liquidlabs.common.Logging;
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.transport.proxy.ProxyFactory;
 import com.liquidlabs.vso.VSOProperties;
 import com.liquidlabs.vso.lookup.LookupSpace;
@@ -27,6 +28,7 @@ public class ManagerFailDetector implements  Runnable {
     @Override
     public void run() {
         try {
+            if (TestModeSetter.isTestMode()) return;
             if (LOGGER.isDebugEnabled()) LOGGER.debug("Ping:" + managerLookup);
             String ping = managerLookup.ping(VSOProperties.getResourceType(), System.currentTimeMillis());
             if (startPing == null) {
@@ -36,6 +38,7 @@ public class ManagerFailDetector implements  Runnable {
             }
         } catch (Throwable t) {
             if (LOGGER.isDebugEnabled()) LOGGER.debug("PingFailed:" + managerLookup + " ex:" + t.toString());
+            t.printStackTrace();
             auditLogger.emit("PingFailed", t.getMessage());
             throw new RuntimeException(t);
         }

@@ -1,12 +1,15 @@
 package com.liquidlabs.vso.lookup;
 
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.liquidlabs.common.LifeCycle;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -26,6 +29,8 @@ public class LookupClusterTest {
     private URI lu2_REP = getURI("stcp://localhost:15005");
 	private String location = "DEFAULT";
 	ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(10);
+
+    List<LifeCycle> stoppable = new ArrayList<>();
 	
 	@Before
 	public void setup() {
@@ -47,7 +52,9 @@ public class LookupClusterTest {
 	
 	@After
 	public void after() {
+	    stoppable.stream().forEach(LifeCycle::stop);
 		scheduler.shutdownNow();
+
 	}
 
 	@Test
@@ -58,7 +65,9 @@ public class LookupClusterTest {
 		
 		// now look it up in the other instance
 		ORMapperFactory mapperFactory = new ORMapperFactory(VSOProperties.getLookupPort() + 5678, "DAMIAN", 10 * 1024, lu2_REP.getPort());
+		stoppable.add(mapperFactory);
         LookupSpace lookup2 = LookupSpaceImpl.getRemoteService(lu2.toString(), mapperFactory.getProxyFactory(),"ctx");
+        stoppable.add(lookup2);
         String[] serviceAddresses = lookup2.getServiceAddresses("JOHNO", "", false);
         Assert.assertTrue("Should have > 0 addresses, got:" + serviceAddresses.length, serviceAddresses.length > 0);
 	}
@@ -67,12 +76,14 @@ public class LookupClusterTest {
         LookupSpaceImpl lu1 = new LookupSpaceImpl(this.lu1.getPort(), lu1_REP.getPort());
         lu1.start();
         lu1.addLookupPeer(lu2_REP);
+        stoppable.add(lu1);
     }
 
     public void shouldStartLookupTwo() throws Exception {
         LookupSpaceImpl lu2 = new LookupSpaceImpl(this.lu2.getPort(), lu2_REP.getPort());
         lu2.start();
         lu2.addLookupPeer(lu1_REP);
+        stoppable.add(lu2);
     }
 
     public void shouldStartServiceOne() throws Exception {
@@ -80,6 +91,8 @@ public class LookupClusterTest {
         SpaceServiceImpl spaceService = createSpaceService(mapperFactory);
         spaceService.store(new Thing("One", "Hi There Two!"), Integer.MAX_VALUE);
         spinServiceLookup(spaceService, "Two");
+        stoppable.add(mapperFactory);
+        stoppable.add(spaceService);
     }
 
  
@@ -90,6 +103,8 @@ public class LookupClusterTest {
         SpaceServiceImpl spaceService = createSpaceService(mapperFactory);
         spaceService.store(new Thing("Two", "Hi There One!"), Integer.MAX_VALUE);
         spinServiceLookup(spaceService, "One");
+        stoppable.add(mapperFactory);
+        stoppable.add(spaceService);
 
     }
 
@@ -98,6 +113,7 @@ public class LookupClusterTest {
 
         SpaceServiceImpl spaceServiceImpl = new SpaceServiceImpl(lookup, mapperFactory, "TestSPACE", Executors.newScheduledThreadPool(5), true, false, false);
         spaceServiceImpl.start(this, "myBundle-1.0");
+        stoppable.add(spaceServiceImpl);
         return spaceServiceImpl;
     }
 
@@ -122,6 +138,7 @@ public class LookupClusterTest {
         LookupSpace lookup = LookupSpaceImpl.getRemoteService(lu1.toString(), mapperFactory.getProxyFactory(),"ctx");
         System.out.println(new Date() + " RegisteringService");
         lookup.registerService(new ServiceInfo("JOHNO", "http://localhost:8080", null, location, ""), Long.MAX_VALUE);
+        stoppable.add(mapperFactory);
     }
     
     private void spinLookup(final LookupSpaceImpl lu1, final String name) throws InterruptedException {

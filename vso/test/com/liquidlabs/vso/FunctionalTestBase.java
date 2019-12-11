@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.jmock.integration.junit3.MockObjectTestCase;
-
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.concurrent.ExecutorService;
 import com.liquidlabs.transport.Config;
 import com.liquidlabs.transport.TransportFactoryImpl;
@@ -29,7 +28,7 @@ import com.liquidlabs.vso.resource.ResourceSpaceImpl;
 import com.liquidlabs.vso.work.WorkAllocator;
 import com.liquidlabs.vso.work.WorkAllocatorImpl;
 
-public class FunctionalTestBase extends MockObjectTestCase {
+public class FunctionalTestBase  {
 	static int callCount = 0;
 	
 	protected BundleHandler bundleHandler;
@@ -58,18 +57,15 @@ public class FunctionalTestBase extends MockObjectTestCase {
 	static int count = 0;
 
 	protected void setUp() throws Exception {
-		com.liquidlabs.common.concurrent.ExecutorService.setTestMode();
+		TestModeSetter.setTestMode();
 		
 		VSOProperties.setBasePort(10000 + count++);
 		TransportProperties.setInvocationTimeoutSecs(5);
 		TransportProperties.setMCastEnabled(Boolean.FALSE);
 		
-		if (getName().equals("testSquat")) return;
+		System.out.println(new Date().toString() + " ================================== Setup =================================");
 		
-		System.out.println(new Date().toString() + " ================================== Setup " + getName() + "=================================");
-		
-		super.setUp();
-		System.setProperty("test.mode", "true");
+
 		
 		executor = ExecutorService.newDynamicThreadPool("worker", ResourceSpace.NAME);
 		transportFactory = new TransportFactoryImpl(executor, "test");
@@ -104,7 +100,7 @@ public class FunctionalTestBase extends MockObjectTestCase {
 		
 		bundleHandler = new BundleHandlerImpl(bundleSpaceProxy);
 		Thread.sleep(3000);
-		System.out.println(new Date().toString() + " ================================== Running " + getName() + "=================================\n\n");
+		System.out.println(new Date().toString() + " ================================== Running =================================\n\n");
 	}
 	
 	protected int agentCount = 10;
@@ -136,12 +132,11 @@ public class FunctionalTestBase extends MockObjectTestCase {
 	}
 	
 	protected void tearDown() throws Exception {
-		if (getName().equals("testSquat")) return;
-		System.out.println(new Date().toString() +" ================================== TEARDOWN " + getName() + "=================================:count:" + agents.size());
+		System.out.println(new Date().toString() +" ================================== TEARDOWN =================================:count:" + agents.size());
 
 		
 	
-		System.out.println(new Date().toString() +" ================================== STOPPING AGENTS xxxxxxxxxxxx  " + getName() + "=================================:count:" + agents.size());
+		System.out.println(new Date().toString() +" ================================== STOPPING AGENTS xxxxxxxxxxxx =================================:count:" + agents.size());
 		for (ResourceAgent agent : agents) {
 			System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Stopping:" + agent.getId());
 			agent.stop();
@@ -176,7 +171,7 @@ public class FunctionalTestBase extends MockObjectTestCase {
 			proxyFactory.stop();
 		}
 		transportFactory.stop();
-		System.out.println(new Date().toString() + " ================================== TEADOWN - DONE " + getName() + "=================================");
+		System.out.println(new Date().toString() + " ================================== TEADOWN - DONE =================================");
 		
 		monitorSpace = null;
 		bundleSpace = null;

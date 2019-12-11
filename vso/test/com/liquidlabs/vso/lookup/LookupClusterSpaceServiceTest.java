@@ -1,11 +1,14 @@
 package com.liquidlabs.vso.lookup;
 
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
+import com.liquidlabs.common.LifeCycle;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -31,6 +34,7 @@ public class LookupClusterSpaceServiceTest {
 	private String location;
 	ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(10);
 	private LookupSpaceImpl lu12;
+	List<LifeCycle> stoppable = new ArrayList<>();
 	
 	@Before
 	public void setup() {
@@ -48,7 +52,7 @@ public class LookupClusterSpaceServiceTest {
 	
 	@After
 	public void after() {
-		lu12.stop();
+		stoppable.stream().forEach(LifeCycle::stop);
 		scheduler.shutdownNow();
 	}
 
@@ -62,19 +66,24 @@ public class LookupClusterSpaceServiceTest {
 		
 		System.out.println("============================================START TWO");
 		SpaceServiceImpl spaceServiceTwo = shouldStartService(VSOProperties.getLookupPort() + 222, "Two", false);
-		
-		Thread.sleep(1000);
-		System.out.println("============================================WRITE DATA");
-		
-		writeDataToSpaceService(10, "Two", spaceServiceTwo);
+		try {
 
-		Thread.sleep(100);
+			Thread.sleep(1000);
+			System.out.println("============================================WRITE DATA");
 
-		// test Two worked and replicated Thing-One
-		Thing item = spaceServiceOne.findById(Thing.class, "Two0");
-		Assert.assertNotNull("SpaceONE failed to pick up SpaceONE data", item);
-		Set<String> keySet = spaceServiceOne.keySet(Thing.class);
-		Assert.assertEquals(10, keySet.size());
+			writeDataToSpaceService(10, "Two", spaceServiceTwo);
+
+			Thread.sleep(100);
+
+			// test Two worked and replicated Thing-One
+			Thing item = spaceServiceOne.findById(Thing.class, "Two0");
+			Assert.assertNotNull("SpaceONE failed to pick up SpaceONE data", item);
+			Set<String> keySet = spaceServiceOne.keySet(Thing.class);
+			Assert.assertEquals(10, keySet.size());
+		} finally {
+			spaceServiceOne.stop();
+			spaceServiceTwo.stop();
+		}
 	}
 	
 	@Test
@@ -83,18 +92,24 @@ public class LookupClusterSpaceServiceTest {
 		SpaceServiceImpl spaceServiceOne = shouldStartService(VSOProperties.getLookupPort() + 1111, "One", false);
 		
 		SpaceServiceImpl spaceServiceTwo = shouldStartService(VSOProperties.getLookupPort() + 2222, "Two", false);
-		
-		Thread.sleep(1000);
-		
-		writeDataToSpaceService(10, "One", spaceServiceOne);
-		
-		Thread.sleep(1000);
-		
-		// test Two worked and replicated Thing-One
-		Thing item2 = spaceServiceTwo.findById(Thing.class, "One0");
-		
-		Assert.assertNotNull("SpaceTWO failed to pick up SpaceONE data", item2);
-		System.out.printf("Space ONE - found item %s\n", item2.message);
+
+		try {
+
+			Thread.sleep(1000);
+
+			writeDataToSpaceService(10, "One", spaceServiceOne);
+
+			Thread.sleep(1000);
+
+			// test Two worked and replicated Thing-One
+			Thing item2 = spaceServiceTwo.findById(Thing.class, "One0");
+
+			Assert.assertNotNull("SpaceTWO failed to pick up SpaceONE data", item2);
+			System.out.printf("Space ONE - found item %s\n", item2.message);
+		} finally {
+			spaceServiceOne.stop();
+			spaceServiceTwo.stop();
+		}
 		
 	}
 	
@@ -104,15 +119,15 @@ public class LookupClusterSpaceServiceTest {
 		SpaceServiceImpl spaceServiceOne = shouldStartService(VSOProperties.getLookupPort() + 3333, "One", true);
 		
 		SpaceServiceImpl spaceServiceTwo = shouldStartService(VSOProperties.getLookupPort() + 4444, "Two", true);
-		
+
 		Thread.sleep(2000);
-		
+
 		// test Two worked and replicated Thing-One
 		Thing item2 = spaceServiceTwo.findById(Thing.class, "One0");
 		Assert.assertNotNull("SpaceTWO failed to pick up SpaceONE data", item2);
 		System.out.printf("Space ONE - found item %s\n", item2.message);
-		
-		
+
+
 		// test One worked and replicated Thing-Two
 		Thing item1 = spaceServiceOne.findById(Thing.class, "Two0");
 		Assert.assertNotNull("SpaceONE failed to pick up SpaceTwo data", item1);
@@ -122,12 +137,15 @@ public class LookupClusterSpaceServiceTest {
     public void shouldStartLookupOne() throws Exception {
         lu12 = new LookupSpaceImpl(this.lu1.getPort(), lu1_REP.getPort());
         lu12.start();
+        stoppable.add(lu12);
     }
 
     public SpaceServiceImpl shouldStartService(int port, String name, boolean writeThing) throws Exception {
         ORMapperFactory mapperFactory = new ORMapperFactory(port, SERVICE_NAME, 10, port);
+        stoppable.add(mapperFactory);
         SpaceServiceImpl spaceService = createSpaceService(mapperFactory);
         if (writeThing) writeDataToSpaceService(10, name, spaceService);
+        stoppable.add(spaceService);
         return spaceService;
     }
 
@@ -142,6 +160,7 @@ public class LookupClusterSpaceServiceTest {
 
         SpaceServiceImpl spaceServiceImpl = new SpaceServiceImpl(lookup, mapperFactory, "TEST-SPACE", Executors.newScheduledThreadPool(5), true, false, false);
         spaceServiceImpl.start(this, "myBundle-1.0");
+        stoppable.add(spaceServiceImpl);
         return spaceServiceImpl;
     }
 
@@ -153,6 +172,7 @@ public class LookupClusterSpaceServiceTest {
         LookupSpace lookup = LookupSpaceImpl.getRemoteService(lu1.toString(), mapperFactory.getProxyFactory(),"ctx");
         System.out.println(new Date() + " RegisteringService");
         lookup.registerService(new ServiceInfo("JOHNO", "http://localhost:8080", null, location, ""), Long.MAX_VALUE);
+		stoppable.add(mapperFactory);
     }
     
     private URI getURI(String uri) {

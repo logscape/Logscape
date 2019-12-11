@@ -1,6 +1,7 @@
 package com.liquidlabs.log.search;
 
 import com.clearspring.analytics.stream.cardinality.HyperLogLog;
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.collection.Arrays;
 import com.liquidlabs.common.concurrent.NamingThreadFactory;
 import com.liquidlabs.common.file.FileUtil;
@@ -47,7 +48,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class LogFileSearchIntegrationTest {
 	{
-        System.setProperty("test.mode","true");
+        TestModeSetter.setTestMode();
         System.setProperty("search.cache.enabled","false");
 
 	}

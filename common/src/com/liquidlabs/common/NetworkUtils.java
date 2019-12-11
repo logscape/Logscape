@@ -247,7 +247,7 @@ public class NetworkUtils {
 
 	public static boolean isNicDown(String usedNic) {
 		try {
-			if (Boolean.getBoolean("test.mode")) return false;
+			if (TestModeSetter.isTestMode()) return false;
 			Map<String, NetPair> interfaceMap = getInterfaceMap(false);
 			Collection<NetPair> values = interfaceMap.values();
 			for (NetPair netPair : values) {

@@ -162,7 +162,7 @@ public class NettyEndPoint implements EndPoint, LifeCycle {
 		
 		try {
 			System.out.println("Starting ep on port:" + args[0]);
-			EndPoint endPoint = nettyEndPointFactory.getEndPoint(new URI("tcp://localhost:" + args[0]), r);
+			EndPoint endPoint = nettyEndPointFactory.getEndPoint(new URI("stcp://localhost:" + args[0]), r);
 			Thread.sleep(Integer.parseInt(args[1]) * 1000);
 		} catch (Exception e) {
 			e.printStackTrace();

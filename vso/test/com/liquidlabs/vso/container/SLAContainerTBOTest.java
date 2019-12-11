@@ -1,6 +1,7 @@
 package com.liquidlabs.vso.container;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 import java.util.concurrent.CountDownLatch;
@@ -46,6 +47,10 @@ public class SLAContainerTBOTest extends FunctionalTestBase {
 		super.setUp();
 	
 		System.out.println("================= SETUP:" + getName() + "==============================================");
+	}
+
+	private String getName() {
+		return getClass().getSimpleName();
 	}
 
 	@Override

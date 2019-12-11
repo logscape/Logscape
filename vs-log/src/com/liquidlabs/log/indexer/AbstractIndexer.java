@@ -1,5 +1,6 @@
 package com.liquidlabs.log.indexer;
 
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.log.index.Bucket;
 import com.liquidlabs.log.index.BucketKey;
@@ -72,7 +73,7 @@ public abstract class AbstractIndexer implements Indexer {
         }
     }
     static {
-        if (Boolean.getBoolean("test.mode")) {
+        if ( TestModeSetter.isTestMode()) {
             System.setProperty("index.page.size.k","4");
             System.setProperty("index.buffers","1M,1G,4M,0.02");
         }
@@ -93,7 +94,7 @@ public abstract class AbstractIndexer implements Indexer {
 
 
     static public boolean isSchemaRebuildRequired(String environment)  {
-        if (Boolean.getBoolean("test.mode")) return false;
+        if (TestModeSetter.isTestMode()) return false;
         String existingSchemaVersion = getExistingSchemaVersion(environment);
         LOGGER.info(String.format("Validate Schema [%s] existing[%s] env[%s]", SCHEMA_VERSION, existingSchemaVersion, environment));
         if (!new File(environment).exists()) {

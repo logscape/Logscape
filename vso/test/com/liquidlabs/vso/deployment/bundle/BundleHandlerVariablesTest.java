@@ -5,9 +5,12 @@ import com.liquidlabs.vso.agent.ResourceAgent;
 import com.liquidlabs.vso.deployment.bundle.Bundle;
 import com.liquidlabs.vso.deployment.bundle.Service;
 import com.liquidlabs.vso.deployment.bundle.Bundle.Status;
+import org.junit.Assert;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+
+import static junit.framework.TestCase.assertTrue;
 
 public class BundleHandlerVariablesTest extends FunctionalTestBase {
 	static int callCount = 0;
@@ -67,6 +70,6 @@ public class BundleHandlerVariablesTest extends FunctionalTestBase {
         assertTrue("ORMLatch Timed Out", ormLatch.await(20, TimeUnit.SECONDS));
         assertTrue(callCountLatch.await(5, TimeUnit.SECONDS));
 		Bundle bundle2 = bundleSpace.getBundle(bundle.getId());
-		assertEquals(Status.ACTIVE, bundle2.getStatus());
+		Assert.assertEquals(Status.ACTIVE, bundle2.getStatus());
 	}
 }

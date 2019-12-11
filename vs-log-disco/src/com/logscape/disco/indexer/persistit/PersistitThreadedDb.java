@@ -1,5 +1,6 @@
 package com.logscape.disco.indexer.persistit;
 
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.collection.cache.ConcurrentLRUCache;
 import com.liquidlabs.common.concurrent.ExecutorService;
 import com.logscape.disco.indexer.Db;
@@ -118,7 +119,7 @@ public class PersistitThreadedDb<K, V> implements Db<K, V> {
             }
         };
 
-        if (!ExecutorService.isTestMode()) {
+        if (!TestModeSetter.isTestMode()) {
             task.setDaemon(true);
 
         }

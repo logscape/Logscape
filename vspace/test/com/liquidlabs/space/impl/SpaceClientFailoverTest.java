@@ -43,6 +43,7 @@ public class SpaceClientFailoverTest extends SpaceBaseFunctionalTest {
 	
 	@After
 	public void tearDown() throws Exception {
+		proxyFactoryA.stop();
 		super.tearDown();
 	}
 	

@@ -6,12 +6,12 @@ import org.joda.time.DateTime;
 public class VSOProperties {
 	public static final String MANAGEMENT = "Management";
     public static final String FAILOVER = "Failover";
-	
+
 	private static final String VSO_NOISY_LOOKUP = "vso.verbose.lookup";
 	public static final String VSCAPE_DEPLOYED_BUNDLES_DIR = "vscape.deployed.bundles.dir";
 	public static final String VSCAPE_SYSTEM_BUNDLES_DIR = "vscape.system.bundles.dir";
 	public static final String HA_TAG = "_HA_";
-    private static long taskNoiseSecs = Long.getLong("vso.task.noice.secs",3);
+	private static long taskNoiseSecs = Long.getLong("vso.task.noice.secs",3);
     private static long agentCountAuditSchedule;
     public static final DateTime startTime = new DateTime();
 
@@ -263,9 +263,19 @@ public class VSOProperties {
 		return Integer.getInteger("agent.sched.threads", 25);
 	}
 
+	public static final String SS_MAX_NOTIFY_FAILS = "ss.max.notify.fails";
+	public static final int SS_MAX_NOTIFY_FAILS_DEFAULT = 100;
+
 	public static int getMaxNotifyFailures() {
-		return Integer.getInteger("ss.max.notify.fails", 100);
+		return Integer.getInteger(SS_MAX_NOTIFY_FAILS, SS_MAX_NOTIFY_FAILS_DEFAULT);
 	}
+	public static void setMaxNotifyFailures(int count) {
+		System.setProperty(SS_MAX_NOTIFY_FAILS, ""+count);
+	}
+	public static void resetMaxNotifyFailures() {
+		System.setProperty(SS_MAX_NOTIFY_FAILS, ""+SS_MAX_NOTIFY_FAILS_DEFAULT);
+	}
+
 
 	public static String getManagerReplicationPort() {
 		return System.getProperty("manager.replication.port", "15000");

@@ -17,8 +17,10 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.vso.deployment.ScriptForker;
 import org.jmock.Mockery;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -52,7 +54,8 @@ public class ResourceAgentTest  {
 
     @Before
 	public void setUp() throws Exception {
-    	System.setProperty("test.mode","true");
+		TestModeSetter.setTestMode();
+		System.out.println("RUNNING_TEST FROM::::::::::::::::::::" + new File(".").getAbsolutePath());
 	
 		workAllocator = mock(WorkAllocator.class);
 		resourceSpace = mock(ResourceSpace.class);
@@ -62,19 +65,24 @@ public class ResourceAgentTest  {
         scriptForker = mock(ScriptForker.class);
         processHandler = mock(ProcessHandler.class);
 
-        when(proxyFactory.getAddress()).thenReturn(new URI("tcp://stuff:8000"));
+        when(proxyFactory.getAddress()).thenReturn(new URI("stcp://stuff:8000"));
         when(proxyFactory.getScheduler()).thenReturn(scheduler);
         when(proxyFactory.getExecutor()).thenReturn(scheduler);
         when(resourceSpace.getSystemResourceId()).thenReturn(100);
 
-		resourceAgent = new ResourceAgentImpl(workAllocator, resourceSpace, deploymentService, lookupSpace, proxyFactory, "tcp://localhost:11000", "http://stuff", 2);
+		resourceAgent = new ResourceAgentImpl(workAllocator, resourceSpace, deploymentService, lookupSpace, proxyFactory, "stcp://localhost:11000", "http://stuff", 2);
 		resourceAgent.setScriptForker(scriptForker);
         resourceAgent.setProcessHandler(processHandler);
 
-		System.setProperty("test.mode", "true");
+
 		
 		resourceAgent.start();
 		
+	}
+
+	@After
+	public void after() {
+    	resourceAgent.stop();
 	}
 
 
@@ -83,7 +91,7 @@ public class ResourceAgentTest  {
         boolean deleteMe = resourceAgent.acceptForDelete(new File("/opt/logscape/work/CRAP_SERVER_/yay.log"));
         assertFalse(deleteMe);
         deleteMe = resourceAgent.acceptForDelete(new File("/opt/logscape/work/CRAP/yay.log"));
-        assertTrue(deleteMe);
+        assertTrue("Should have deleted file", deleteMe);
 
 
     }
@@ -187,7 +195,7 @@ public class ResourceAgentTest  {
 		String deployedBundles = resourceProfile.getDeployedBundles();
 		System.err.println(deployedBundles);
 		assertFalse("Should have removed someAppA:" + deployedBundles, deployedBundles.contains("someAppA-1.0"));
-		assertTrue("DeployedBundles was:" + deployedBundles, deployedBundles.contains("someAppB-1.0"));
+		assertTrue("DeployedBundles was:" + deployedBundles + " wanted to contain someAppB", deployedBundles.contains("someAppB-1.0"));
 	}
 	@Test
 	public void testShouldScanOnStartup() throws Exception {
@@ -202,7 +210,7 @@ public class ResourceAgentTest  {
 	
 	@Test
 	public void testShouldHaveMoreThanOneProfile() throws Exception {
-//		resourceAgent = new ResourceAgentImpl((WorkAllocator)workAllocator.proxy(), (ResourceSpace)resourceSpace.proxy(), (LookupSpace)lookupSpace.proxy(), (ProxyFactory) proxyFactory.proxy(), "tcp://localhost:11000", "http://stuff", 2);
+//		resourceAgent = new ResourceAgentImpl((WorkAllocator)workAllocator.proxy(), (ResourceSpace)resourceSpace.proxy(), (LookupSpace)lookupSpace.proxy(), (ProxyFactory) proxyFactory.proxy(), "stcp://localhost:11000", "http://stuff", 2);
 		List<ResourceProfile> profiles = resourceAgent.getProfiles();
 		assertEquals(2, profiles.size());
 		assertEquals(0, profiles.get(0).getId());

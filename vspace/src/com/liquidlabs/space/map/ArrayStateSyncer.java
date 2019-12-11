@@ -80,6 +80,9 @@ public class ArrayStateSyncer {
 				if (!sender.getPeerNames().contains(new URI(otherSrcID))) {
 					LOGGER.warn(this.srcUID + " >>>>>>>>>>>>>> DIDnt GET:" + otherSrcID + " PEERS:" + sender.getPeerNames());
 					Thread.sleep(1000);
+					LOGGER.warn("SENDER PEERNAMES:" + sender.getPeerNames());
+					LOGGER.warn("\t\tNEEDS: " + new URI(otherSrcID));
+
 				}
 			} catch (URISyntaxException e) {
 			}

@@ -310,7 +310,7 @@ public class AgentLogServiceJMX implements AgentLogServiceJMXMBean, InvokableUI 
     }
     public void registerServiceWithLookup(LookupSpace lookupSpace, ProxyFactory proxyFactory) {
         makeRemotable(proxyFactory);
-        final ServiceInfo serviceInfo = new ServiceInfo(getId(), proxyFactory.getAddress().toString(), AgentLogServiceJMX.class.getName(), JmxHtmlServerImpl.locateHttpUrL(), "Tailer:" + VSOProperties.getResourceType(), getId(), VSOProperties.getZone(), VSOProperties.getResourceType());
+        final ServiceInfo serviceInfo = new ServiceInfo(getId(), proxyFactory.getAddress().toString(), AgentLogServiceJMX.class.getName(), "not-set", "Tailer:" + VSOProperties.getResourceType(), getId(), VSOProperties.getZone(), VSOProperties.getResourceType());
         lookupSpace.registerService(serviceInfo, -1);
     }
     public String pauseVisitor(boolean pauseTrueOfFalse) {

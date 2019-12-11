@@ -1,5 +1,6 @@
 package com.liquidlabs.transport.proxy;
 
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.transport.TransportFactory;
 import com.liquidlabs.transport.TransportFactoryImpl;
 import org.junit.After;
@@ -35,7 +36,7 @@ public class PeerHashableParamTest {
 	
 	@Before
 	public void setUp() throws Exception {
-        System.setProperty("test.mode","true");
+		TestModeSetter.setTestMode();
 
 		transportFactory.start();
 		

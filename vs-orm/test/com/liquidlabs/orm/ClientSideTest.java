@@ -1,6 +1,7 @@
 package com.liquidlabs.orm;
 
 import com.liquidlabs.common.NetworkUtils;
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.transport.proxy.events.Event.Type;
 import org.junit.After;
 import org.junit.Before;
@@ -18,7 +19,7 @@ public class ClientSideTest  {
 
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("test.mode", "true");
+		TestModeSetter.setTestMode();
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SETUP");
 		System.setProperty("allow.read.events","true");
 		mapperFactory = new ORMapperFactory(NetworkUtils.determinePort(ppp++));

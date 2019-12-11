@@ -6,6 +6,8 @@ import com.liquidlabs.vso.FunctionalTestBase;
 import com.liquidlabs.vso.agent.ResourceAgent;
 import com.liquidlabs.vso.deployment.bundle.Bundle.Status;
 
+import static org.junit.Assert.*;
+
 public class BundleHandlerTest extends FunctionalTestBase {
 	static int callCount = 0;
 	

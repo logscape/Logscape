@@ -1,22 +1,20 @@
 package com.liquidlabs.vso.lookup;
 
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.Executors;
-
 import com.liquidlabs.common.NetworkUtils;
+import com.liquidlabs.common.jmx.JmxHtmlServerImpl;
+import com.liquidlabs.orm.ORMapperClient;
 import com.liquidlabs.transport.TransportFactory;
+import com.liquidlabs.transport.proxy.ProxyFactoryImpl;
 import junit.framework.Assert;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.liquidlabs.common.jmx.JmxHtmlServerImpl;
-import com.liquidlabs.orm.ORMapperClient;
-import com.liquidlabs.transport.proxy.ProxyFactoryImpl;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.Executors;
 
-public class LookupFunctionalTest {
+public class RABBIT_LookupFunctionalTest {
 	String HOST = NetworkUtils.getIPAddress();
 	private LookupSpaceImpl lookupSpaceA;
 	private String location = "";
@@ -25,6 +23,8 @@ public class LookupFunctionalTest {
 
     @Before
 	public void setUp() throws Exception {
+		System.setProperty("transport", TransportFactory.TRANSPORT.RABBIT.name());
+
 		com.liquidlabs.common.concurrent.ExecutorService.setTestMode();
         port = NetworkUtils.determinePort(15000);
         lookupSpaceA = new LookupSpaceImpl(port, port);
@@ -35,6 +35,7 @@ public class LookupFunctionalTest {
 	@After
 	public void tearDown() throws Exception {
 		lookupSpaceA.stop();
+		System.setProperty("transport", TransportFactory.TRANSPORT.NETTY.name());
 	}
 	
 	@Test

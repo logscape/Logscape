@@ -18,6 +18,9 @@ import com.liquidlabs.vso.deployment.bundle.Service;
 import com.liquidlabs.vso.resource.AllocListener;
 import com.liquidlabs.vso.work.WorkAssignment;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class SLAContainerResourceReleaseRequestTest extends FunctionalTestBase {
 	
 	private static final String MY_BUNDLE_0_01 = "myBundle-0.01";
@@ -42,6 +45,10 @@ public class SLAContainerResourceReleaseRequestTest extends FunctionalTestBase {
 		bundleHandler.deploy(bundle.getId(), ".");
 		
 		System.out.println(getName() + "=======SETUP DONE=================================\n\n");
+	}
+
+	private String getName() {
+		return getClass().getSimpleName();
 	}
 
 	@Override

@@ -131,7 +131,7 @@ public class DetectorsBuilder {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                LOGGER.warn("System.exit(10)");
+                LOGGER.warn("System. EXIT:10");
                 auditLogger.emit("Running","SysExit(10)");
                 System.exit(10);
 

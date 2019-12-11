@@ -148,7 +148,9 @@ public class SpaceServiceImpl implements SpaceService {
 		LOGGER.info("Stopped:" + name + " hash:" + this.hashCode());
 		try {
 			leaseManager.stop();
-			if (lookup != null && serviceInfo != null) lookup.unregisterService(serviceInfo);
+			if (lookup != null && serviceInfo != null) {
+				lookup.unregisterService(serviceInfo);
+			}
 			
 		} catch (Throwable t) {
 			LOGGER.warn(t.toString(), t);
@@ -452,7 +454,7 @@ public class SpaceServiceImpl implements SpaceService {
                 if (lookupSpace == null) {
                     auditLogger.emit("LookupSpace is NULL, Forcing Bounce","");
                     SS_LOGGER.info("LookupSpace is NULL, Forcing Bounce");
-                    System.out.println(new Date() + " LookupSpace is NULL, Forcing Bounce");
+                    System.out.println(new Date() + " LookupSpace is NULL, Forcing Bounce EXIT:10");
                     System.exit(10);
                 }
 				auditLogger.emit("RefreshingEndpoints", serviceName);
@@ -525,4 +527,8 @@ public class SpaceServiceImpl implements SpaceService {
         Map<String, Object> fromXML = (Map<String, Object>) new XStream().fromXML(config);
         importData2(fromXML, merge, overwrite);
     }
+
+	public ORMapperFactory getMapperFactory() {
+		return mapperFactory;
+	}
 }

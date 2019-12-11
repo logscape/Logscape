@@ -88,6 +88,8 @@ public class SpaceServicesShareProxyFactoryPortsTest {
 	@After
 	public void tearDown() throws Exception {
 		try {
+			mapperFactory.stop();
+			mapperFactory2.stop();
 			spaceAOne.stop();
 			spaceBOne.stop();
 			spaceATwo.stop();

@@ -7,7 +7,6 @@ import com.logscape.disco.indexer.flatfile.FFIndexFeed;
 import com.logscape.disco.kv.RulesKeyValueExtractor;
 import org.junit.Assert;
 import org.junit.Test;
-import static org.junit.matchers.StringContains.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -15,6 +14,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import static org.hamcrest.CoreMatchers.containsString;
 
 /**
  * Created with IntelliJ IDEA.

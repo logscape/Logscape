@@ -20,7 +20,7 @@ import com.liquidlabs.vso.VSOProperties;
  * @author neil
  *
  */
-public class LookupClusterServiceClientTest {
+public class FIX_LookupClusterServiceClientTest {
 
 
     private URI lu1 = getURI("stcp://localhost:11000");

@@ -7,17 +7,12 @@ import com.liquidlabs.space.map.Put;
 import org.junit.Test;
 import org.prevayler.Prevayler;
 import org.prevayler.PrevaylerFactory;
-import org.prevayler.Transaction;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.spy;
 
 public class PrevalentProxyTest {
@@ -26,8 +21,9 @@ public class PrevalentProxyTest {
     public void shouldNotBeDodgy() {
 
     }
-//    @Test DodgyTest
-    public void should() throws ClassNotFoundException, IOException {
+    @Test
+    public void shouldWork() throws Exception {
+
         PrevaylerFactory factory = new PrevaylerFactory();
         factory.configurePrevalenceDirectory("build/prevalent");
         factory.configureSnapshotSerializer(new MyXStreamSerializer());
@@ -41,14 +37,18 @@ public class PrevalentProxyTest {
 
         proxy.execute(new Put("abc", "def", false));
 
-        doThrow(new RuntimeException("FUCK!")).when(spy).execute(any(Transaction.class));
+      //  doThrow(new RuntimeException("FUCK!")).when(spy).execute(any(Transaction.class));
 
         proxy.execute(new Put("key", "value", false));
 
         proxy.execute(new Put("key2", "value2", false));
 
+        Thread.sleep(100);
+
 
         final Map map = (Map) proxy.prevalentSystem();
+
+        System.out.println("Map:" + map);
 
         assertThat(map.get("abc"), is("def"));
         assertThat(map.get("key"), is("value"));

@@ -70,18 +70,18 @@ public class LookupClientTest extends LookupBaseFunctionalTest {
 			}
 		};
 		
-		LookupSpace lookupSpace = proxyClientFactory.getRemoteService(LookupSpaceImpl.NAME, LookupSpace.class, new String[] {  "tcp://localhost:11000/space/client" }, addressListener);
+		LookupSpace lookupSpace = proxyClientFactory.getRemoteService(LookupSpaceImpl.NAME, LookupSpace.class, new String[] {  "stcp://localhost:11000/space/client" }, addressListener);
 
 		System.out.println("----------- REGISTER SERVICE -----------");
-		lookupSpace.registerService(new ServiceInfo("myServiceName", "tcp://local.host:11000/LookupSpace", JmxHtmlServerImpl.locateHttpUrL(), location, agentType), -1);
+		lookupSpace.registerService(new ServiceInfo("myServiceName", "stcp://local.host:11000/LookupSpace", JmxHtmlServerImpl.locateHttpUrL(), location, agentType), -1);
 		System.out.println("----------- REGISTER LISTENER -----------");
 		lookupSpace.registerUpdateListener(addressListener.getId() , addressListener, "myServiceName", "resourceId", "who", location, isStrictLocationMatch);
 		pause();
 		System.out.println("----------- REGISTER -----------");
-		lookupSpace.registerService(new ServiceInfo("myServiceName", "tcp://local.host:12000/LookupSpace", JmxHtmlServerImpl.locateHttpUrL(), location, agentType), -1);
+		lookupSpace.registerService(new ServiceInfo("myServiceName", "stcp://local.host:12000/LookupSpace", JmxHtmlServerImpl.locateHttpUrL(), location, agentType), -1);
 		pause();
 		System.out.println("----------- UNREGISTER -----------");
-		lookupSpace.unregisterService(new ServiceInfo("myServiceName", "tcp://local.host:12000/LookupSpace", JmxHtmlServerImpl.locateHttpUrL(), location, agentType));
+		lookupSpace.unregisterService(new ServiceInfo("myServiceName", "stcp://local.host:12000/LookupSpace", JmxHtmlServerImpl.locateHttpUrL(), location, agentType));
 		pause();
 		
 		assertEquals(1, callCount);
@@ -90,7 +90,7 @@ public class LookupClientTest extends LookupBaseFunctionalTest {
 
     @Test
 	public void testClientCanRegisterService() throws Exception {
-		LookupSpace lookupSpace = LookupSpaceImpl.getRemoteService("tcp://localhost:11000/space/client", proxyClientFactory, true, "ctx");
+		LookupSpace lookupSpace = LookupSpaceImpl.getRemoteService("stcp://localhost:11000/space/client", proxyClientFactory, true, "ctx");
 		lookupSpace.registerService(new ServiceInfo("myServiceName", "location", JmxHtmlServerImpl.locateHttpUrL(), location, agentType), -1);
 		pause();
 		assertEquals(1, lookupSpaceA.getServiceAddresses("myServiceName", location, true).length);

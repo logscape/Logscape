@@ -337,6 +337,7 @@ public class NettySenderImpl implements Sender {
 				LOGGER.warn("NettySender Loading SSL CONTEXT");
 			  	pipeline.addLast("ssl", sslCtx.newHandler(host, port));
 			} else {
+				LOGGER.warn("NettySender Failed to loading SSL CONTEXT");
 				System.out.println("Failed to find SSL certificates");
 			}
 		}

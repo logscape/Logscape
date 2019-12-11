@@ -56,9 +56,15 @@ public class PrevaylerManager {
 	        	public void run() {
 	                try {
 
+						LOGGER.info("Taking Snapshot:");
 
-	                	prevayler.takeSnapshot();
-	                	File [] snapshots = persistentDir.listFiles(new FileFilter() {
+						try {
+							prevayler.takeSnapshot();
+						} catch (Exception e) {
+							e.printStackTrace();
+							LOGGER.info("Snapshot failed:" + e, e);
+						}
+						File [] snapshots = persistentDir.listFiles(new FileFilter() {
 							public boolean accept(File pathname) {
 								return pathname.getName().endsWith("snapshot");
 							}});
@@ -83,7 +89,7 @@ public class PrevaylerManager {
                             snapshots[i].delete();
                         }
 
-                        if(snapshots[snapshots.length].length() == 0) {
+                        if(snapshots[snapshots.length-1].length() == 0) {
                             LOGGER.warn("Generated a 0kb snapshot. Will delete and use journal");
                             snapshots[snapshots.length].delete();
                         } else {
@@ -94,7 +100,8 @@ public class PrevaylerManager {
                         }
 
 
-	                } catch (IOException e) {
+	                } catch (Exception e) {
+	                	e.printStackTrace();
 	                    LOGGER.warn(e);
 	                }
 	

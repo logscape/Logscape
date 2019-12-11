@@ -1,6 +1,7 @@
 package com.liquidlabs.log.roll;
 
 import com.liquidlabs.common.DateUtil;
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.log.LogReader;
 import com.liquidlabs.log.NullAggSpace;
@@ -60,7 +61,7 @@ public class RollingFunctionalTest  {
     @Before
     public void setUp() throws Exception {
 
-        System.setProperty("test.mode", "true");
+        TestModeSetter.setTestMode();
         FileUtil.deleteDir(new File(dbDir));
         FileUtil.deleteDir(new File(fileDir));
         FileUtil.mkdir(dbDir);

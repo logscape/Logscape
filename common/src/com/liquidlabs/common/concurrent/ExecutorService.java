@@ -1,5 +1,6 @@
 package com.liquidlabs.common.concurrent;
 
+import com.liquidlabs.common.TestModeSetter;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -16,9 +17,10 @@ import java.util.concurrent.*;
 public class ExecutorService {
 
 	private static final Logger LOGGER = Logger.getLogger(ExecutorService.class);
-	static String TEST_MODE = "test.mode";
 
-
+	public static void setTestMode() {
+		pools.clear();
+	}
 	/**
 	 * Same as regular jdk version except this will log pool state. Use when limiting concurrent activity
 	 * 
@@ -46,20 +48,17 @@ public class ExecutorService {
 
 	public static ScheduledThreadPoolExecutor newScheduledThreadPool(int tCount, final NamingThreadFactory threadFactory) {
 
-		if (!Boolean.getBoolean(TEST_MODE) && pools.containsKey(threadFactory.getNamePrefix())) return (ScheduledThreadPoolExecutor) pools.get(threadFactory.getNamePrefix());
+		if (!TestModeSetter.isTestMode() && pools.containsKey(threadFactory.getNamePrefix())) return (ScheduledThreadPoolExecutor) pools.get(threadFactory.getNamePrefix());
 
 		ScheduledThreadPoolExecutor scheduler = new ScheduledThreadPoolExecutor(tCount, threadFactory);
-        scheduler.setRejectedExecutionHandler(new RejectedExecutionHandler() {
-            @Override
-            public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
-                try {
-                    executor.shutdownNow();
-                } catch (Throwable t) {
-                    t.printStackTrace();
-                }
-                LOGGER.warn("Execution was rejected!)");
-            }
-        });
+        scheduler.setRejectedExecutionHandler((r, executor) -> {
+			try {
+				executor.shutdownNow();
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+			LOGGER.warn("Execution was rejected! - if this is a TEST check that test.mode=true to prevent static threadpool use)");
+		});
 		scheduler.setContinueExistingPeriodicTasksAfterShutdownPolicy(false);
 		scheduler.setExecuteExistingDelayedTasksAfterShutdownPolicy(false);
 		pools.put(threadFactory.getNamePrefix(), scheduler);
@@ -102,7 +101,7 @@ public class ExecutorService {
     
     static Map<String,java.util.concurrent.ExecutorService> pools = new ConcurrentHashMap<String, java.util.concurrent.ExecutorService>();
 	synchronized private static java.util.concurrent.ExecutorService newDynamicThreadPool(String category, final NamingThreadFactory threadFactory) {
-		if (pools.containsKey(category) && !Boolean.getBoolean(TEST_MODE)) return pools.get(category);
+		if (pools.containsKey(category) && !TestModeSetter.isTestMode()) return pools.get(category);
 		NamingThreadFactory myFactory = new NamingThreadFactory(category);
 
         if (category.equals("manager")) {
@@ -113,13 +112,6 @@ public class ExecutorService {
         }
 		return pools.get(category);
 	}
-
-	public static void setTestMode() {
-		System.out.println("Setting TEST_MODE");
-		pools.clear();
-		System.setProperty(TEST_MODE, "true");
-	}
-
 
     public static ThreadPoolExecutor newSizedThreadPool(int min, int max, NamingThreadFactory threadFactory) {
 
@@ -138,8 +130,4 @@ public class ExecutorService {
 			}
 		});
     }
-
-	public static boolean isTestMode() {
-		return Boolean.getBoolean(TEST_MODE);
-	}
 }

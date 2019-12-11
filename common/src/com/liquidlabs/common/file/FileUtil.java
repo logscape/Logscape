@@ -481,8 +481,8 @@ public class FileUtil {
         } catch (Exception e) {
             String absolutePath = new File(file).getAbsolutePath();
             System.out.println(e.toString() + " FILE:" + absolutePath);
+            throw new RuntimeException(("File Not Found from:" + new File(".").getAbsolutePath() + " file:" + file), e);
         }
-        return null;
     }
     public static void copyDir(String srcDirName, String destDirName) {
         copyDir(srcDirName, destDirName, new FileFilter(){

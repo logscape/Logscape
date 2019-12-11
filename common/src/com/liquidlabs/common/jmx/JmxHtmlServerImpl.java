@@ -1,25 +1,17 @@
 package com.liquidlabs.common.jmx;
 
-import java.io.File;
-import java.io.IOException;
-import java.lang.management.ManagementFactory;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
-import javax.management.*;
-
-import com.sun.jdmk.comm.AuthInfo;
-import org.apache.log4j.Logger;
-
 import com.liquidlabs.common.LifeCycle;
 import com.liquidlabs.common.NetworkUtils;
+import org.apache.log4j.Logger;
+
+import javax.management.*;
+import java.lang.management.ManagementFactory;
 
 public class JmxHtmlServerImpl implements JmxHtmlServer {
 	
 	private static final Logger LOGGER = Logger.getLogger(JmxHtmlServer.class);
 	
 	private static final String MBEAN_NAME = "adaptor:type=html";
-	private com.sun.jdmk.comm.HtmlAdaptorServer htmlAdaptor;
 	private int port;
 	
 
@@ -64,19 +56,20 @@ public class JmxHtmlServerImpl implements JmxHtmlServer {
         LOGGER.info("Http Management on JMXPort:" + getURL() );
 	}
 	public void start() {
-		htmlAdaptor.start();
+//		htmlAdaptor.start();
 		status = LifeCycle.State.RUNNING;
 	}
 	public void stop() {
 		if (status == LifeCycle.State.RUNNING) {
 			status = LifeCycle.State.STOPPED;
-			htmlAdaptor.stop();
+//			htmlAdaptor.stop();
 		}
 	}
 	public String getURL(){
 		return "http://" + hostname + ":" + port;
 	}
-	public com.sun.jdmk.comm.HtmlAdaptorServer create(final int htmlAdaptorPort, final String adaptorMBeanName) {
+//	public com.sun.jdmk.comm.HtmlAdaptorServer create(final int htmlAdaptorPort, final String adaptorMBeanName) {
+		public void create(final int htmlAdaptorPort, final String adaptorMBeanName) {
 
         // see if we need to
         String property = System.getProperty("com.sun.management.jmxremote.port");
@@ -85,11 +78,12 @@ public class JmxHtmlServerImpl implements JmxHtmlServer {
         }
 
         final MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
-		htmlAdaptor = new com.sun.jdmk.comm.HtmlAdaptorServer(htmlAdaptorPort);
-        htmlAdaptor.addUserAuthenticationInfo(new AuthInfo(System.getProperty("jmx.user","sysadmin"), System.getProperty("jmx.pwd","ll4bs")));
-		registerProvidedMBean(htmlAdaptor, adaptorMBeanName);
-        new MBeanServerInfoJMX();
-		return htmlAdaptor;
+//		htmlAdaptor = new com.sun.jdmk.comm.HtmlAdaptorServer(htmlAdaptorPort);
+//        htmlAdaptor.addUserAuthenticationInfo(new AuthInfo(System.getProperty("jmx.user","sysadmin"), System.getProperty("jmx.pwd","ll4bs")));
+//		registerProvidedMBean(htmlAdaptor, adaptorMBeanName);
+//        new MBeanServerInfoJMX();
+//		return htmlAdaptor;
+//			return null;
 	}
 
     //        System.setProperty("com.sun.management.jmxremote.port", Integer.toString(htmlAdaptorPort +1));

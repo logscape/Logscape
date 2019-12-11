@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.jmock.Expectations;
 import org.jmock.Mockery;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -44,6 +45,10 @@ public class BGServiceAllocTest {
 
         
         
+	}
+	@After
+	public void after() {
+		ormFactory.stop();
 	}
 
     @Test

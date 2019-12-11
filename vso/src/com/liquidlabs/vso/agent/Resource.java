@@ -3,15 +3,6 @@
  */
 package com.liquidlabs.vso.agent;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadMXBean;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.zip.CRC32;
-
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.space.ClientLeaseManager;
 import com.liquidlabs.space.lease.Registrator;
@@ -20,7 +11,14 @@ import com.liquidlabs.transport.serialization.ObjectTranslator;
 import com.liquidlabs.vso.VSOProperties;
 import com.liquidlabs.vso.resource.ResourceSpace;
 import com.liquidlabs.vso.work.WorkAssignment;
-import org.eclipse.jetty.util.ConcurrentHashSet;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
+import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadMXBean;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
+import java.util.zip.CRC32;
 
 public class Resource implements Registrator {
     public static final String MEM_FORMAT = "%s %s MEM MB MAX:%d COMMITED:%d USED:%d AVAIL:%d SysMemFree:%d TimeDelta:%d Cores:%d";
@@ -28,7 +26,7 @@ public class Resource implements Registrator {
     private int id;
     private String resourceLease;
     private long lastCrc;
-    private Set<String> startedWork = new ConcurrentHashSet<String>();
+    private Set<String> startedWork = new CopyOnWriteArraySet<>();
     private final ClientLeaseManager leaseManager;
     private final URI endPoint;
     private final ObjectTranslator query = new ObjectTranslator();

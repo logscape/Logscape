@@ -9,6 +9,8 @@ import com.liquidlabs.vso.FunctionalTestBase;
 import com.liquidlabs.vso.agent.ResourceAgent;
 import com.liquidlabs.vso.agent.ResourceAgentImpl;
 
+import static org.junit.Assert.assertEquals;
+
 public class BundleBackgroundServicesTest extends FunctionalTestBase {
 	static AtomicInteger callCount = new AtomicInteger(0);
 	static AtomicInteger fooCount = new AtomicInteger(0);

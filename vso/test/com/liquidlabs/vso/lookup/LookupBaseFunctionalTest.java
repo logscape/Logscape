@@ -13,20 +13,21 @@ public class LookupBaseFunctionalTest extends TestCase {
 		com.liquidlabs.common.concurrent.ExecutorService.setTestMode();
 		super.setUp();
 		System.out.println("=======================SETUP===================" + getName() + "=============================");
-		if (getName().equals("testSweetFA")) return;
-//		lookupSpaceA = new LookupSpaceImpl(11000, 15000);
-//		lookupSpaceB = new LookupSpaceImpl(12000, 25000);
-//		lookupSpaceA.start();
-//		lookupSpaceB.start();
-//		lookupSpaceA.addLookupPeer(new URI("stcp://localhost:25000"));
-//		lookupSpaceB.addLookupPeer(new URI("stcp://localhost:15000"));
+		lookupSpaceA = new LookupSpaceImpl(11000, 15000);
+		lookupSpaceB = new LookupSpaceImpl(12000, 25000);
+		lookupSpaceA.start();
+		lookupSpaceB.start();
+		lookupSpaceA.addLookupPeer(new URI("stcp://localhost:25000"));
+		lookupSpaceB.addLookupPeer(new URI("stcp://localhost:15000"));
 		System.out.println("=======================STARTING===================" + getName() + "=============================");
 		Thread.sleep(3 * 1000);
 	}
 	
 	protected void tearDown() throws Exception {
 		System.out.println("=======================TEARDOWN===================" + getName() + "=============================");
-		if (getName().equals("testSweetFA")) return;
+		lookupSpaceA.stop();
+		lookupSpaceB.stop();
+		Thread.sleep(500);
 	}
 	public void pause(){
 		try {

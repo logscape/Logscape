@@ -1,5 +1,6 @@
 package com.liquidlabs.vso;
 
+import com.liquidlabs.common.concurrent.ExecutorService;
 import com.liquidlabs.orm.Id;
 import com.liquidlabs.orm.ORMapperFactory;
 import com.liquidlabs.transport.Config;
@@ -16,6 +17,8 @@ import org.junit.Test;
 
 import java.util.concurrent.Executors;
 
+import static junit.framework.Assert.*;
+
 public class SpaceServiceTest  {
 
     Mockery mockery = new Mockery();
@@ -25,7 +28,9 @@ public class SpaceServiceTest  {
 
     @Before
     public void setUp() throws Exception {
-
+        VSOProperties.setMaxNotifyFailures(1);
+        ExecutorService.setTestMode();
+        
         lookup = mockery.mock(LookupSpace.class);
 
         mockery.checking(new Expectations() {
@@ -34,11 +39,11 @@ public class SpaceServiceTest  {
                 one(lookup).registerService(with(any(ServiceInfo.class)), with(any(Long.class)));
             }
         });
-        System.setProperty("ss.max.notify.fails","1");
+
 
         this.mapperFactory = new ORMapperFactory(10204, "SERVICE", 10204);
 
-        space = new SpaceServiceImpl(lookup, mapperFactory, "SERVICE", Executors.newScheduledThreadPool(10), false, false, true);
+        space = new SpaceServiceImpl(lookup, mapperFactory, "SERVICE", mapperFactory.getScheduler(), false, false, true);
         space.start();
         space.start(this, "test-1.0");
         count = 0;
@@ -47,12 +52,12 @@ public class SpaceServiceTest  {
     @After
     public void tearDown() throws Exception {
         space.stop();
+        mapperFactory.stop();
+        VSOProperties.resetMaxNotifyFailures();
     }
     
     @Test
     public void testShouldNotifyThenUnRegOnError() throws Exception {
-    	
-    	
         Type[] types = new Type[]{Type.WRITE, Type.UPDATE};
         space.registerListener(Stuff.class, "", new Notifier<Stuff>() {
 
@@ -141,9 +146,8 @@ public class SpaceServiceTest  {
 
         Thread.sleep(100);
         Stuff got = space.findById(Stuff.class, id);
-        junit.framework.Assert.assertNotNull(got);
-        junit.framework.Assert.assertEquals(id, got.id);
-
+        assertNotNull(got);
+        assertEquals(id, got.id);
     }
 
 

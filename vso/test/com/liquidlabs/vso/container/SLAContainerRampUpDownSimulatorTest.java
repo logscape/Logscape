@@ -12,9 +12,13 @@ import com.liquidlabs.vso.deployment.bundle.Bundle;
 import com.liquidlabs.vso.deployment.bundle.Service;
 import com.liquidlabs.vso.work.WorkAssignment;
 
+import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+
+import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class SLAContainerRampUpDownSimulatorTest extends FunctionalTestBase {
 
@@ -70,6 +74,10 @@ public class SLAContainerRampUpDownSimulatorTest extends FunctionalTestBase {
         bundleSpace.registerBundle(bundle);
         bundleSpace.registerBundleService(service);
         workAssignment = bundleHandler.getWorkAssignmentForService(service.getId());
+    }
+
+    private String getName() {
+        return getClass().getSimpleName();
     }
 
     @Override

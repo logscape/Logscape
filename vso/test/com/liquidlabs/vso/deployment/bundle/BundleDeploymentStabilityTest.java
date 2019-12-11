@@ -8,6 +8,8 @@ import java.net.URISyntaxException;
 import java.net.UnknownHostException;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Done to test deployent reliability/stability under different scenarios
  * See ticket:77

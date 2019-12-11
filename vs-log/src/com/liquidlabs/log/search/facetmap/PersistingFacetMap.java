@@ -108,7 +108,7 @@ public class PersistingFacetMap {
                 prevayler.takeSnapshot();
                 removeOldJournals();
 
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

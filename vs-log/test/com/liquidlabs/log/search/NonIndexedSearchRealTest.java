@@ -1,6 +1,7 @@
 package com.liquidlabs.log.search;
 
 import com.liquidlabs.common.DateUtil;
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.UID;
 import com.liquidlabs.common.collection.Arrays;
 import com.liquidlabs.log.*;
@@ -60,8 +61,8 @@ public class NonIndexedSearchRealTest {
 
     @Before
     public void setUp() throws Exception {
+        TestModeSetter.setTestMode();
         reentrantLock.lock();
-        System.setProperty("test.mode","true");
 
         try {
             logSpace = new NullLogSpace();

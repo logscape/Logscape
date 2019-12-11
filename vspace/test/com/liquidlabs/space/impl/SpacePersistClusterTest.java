@@ -17,8 +17,6 @@ import com.liquidlabs.space.lease.Lease;
 public class SpacePersistClusterTest extends SpaceBaseFunctionalTest {
 
     long timeout = 300;
-    private SpacePeer spacePeer;
-    private Space space;
 
     @Before
 	public void setUp() throws Exception {
@@ -26,7 +24,6 @@ public class SpacePersistClusterTest extends SpaceBaseFunctionalTest {
 		System.setProperty(Lease.PROPERTY, "1");
 		System.setProperty("vspace.snapshot.interval.secs", "3");
 		System.setProperty("base.space.dir","./test-data/LogSpace-Persist");
-        spacePeer = new SpacePeer(new URI("stcp://localhost:17010"));
 		super.persistent = true;
 		super.setUp();
 	}
@@ -34,22 +31,26 @@ public class SpacePersistClusterTest extends SpaceBaseFunctionalTest {
 
 	@After
 	public void tearDown() throws Exception {
-        try {
-            spacePeer.stop();
-        } catch (Exception e) {
-
-        }
         super.tearDown();
 	}
 	
-	@Test
-	public void shouldLoadFromDisk() throws Exception {
-		space = spacePeer.createSpace("LogSpace-SPACE", 20 * 1024, true, persistent, reuseClusterPort);
-		spacePeer.start();
-		Set<String> keySet = space.keySet();
-		System.out.println("Keys:" + keySet);
-		
-	}
+//	@Test
+//	public void shouldLoadFromDisk() throws Exception {
+//		SpacePeer spacePeer = new SpacePeer(new URI("stcp://localhost:17010"));
+//		Space space = spacePeer.createSpace("LogSpace-SPACE", 20 * 1024, true, persistent, reuseClusterPort);
+//		spacePeer.start();
+//		try {
+//			Set<String> keySet = space.keySet();
+//			System.out.println("Keys:" + keySet);
+//		} finally {
+//			try {
+//				space.stop();
+//				spacePeer.stop();
+//			} catch (Exception e) {
+//
+//			}
+//		}
+//	}
 	
 	@Test
 	public void testListRead() throws Exception {

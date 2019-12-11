@@ -15,7 +15,7 @@ import com.liquidlabs.transport.proxy.AddressUpdater;
 import com.liquidlabs.transport.proxy.ProxyClient;
 import com.liquidlabs.transport.proxy.ProxyFactoryImpl;
 
-public class LookupClientAddrListenerTest extends LookupBaseFunctionalTest {
+public class FIX_LookupClientAddrListenerTest extends LookupBaseFunctionalTest {
 	
 	private List<ProxyFactoryImpl> pcfs = new ArrayList<ProxyFactoryImpl>();
 	private List<TransportFactoryImpl> tfs = new ArrayList<TransportFactoryImpl>();

@@ -17,6 +17,9 @@ import com.liquidlabs.vso.FunctionalTestBase;
 import com.liquidlabs.vso.SpaceServiceImpl;
 import com.liquidlabs.vso.container.SLAContainerAdminMBean;
 import com.liquidlabs.vso.lookup.ServiceInfo;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class SLAEventFunctionalTest extends FunctionalTestBase{
@@ -98,7 +101,8 @@ public class SLAEventFunctionalTest extends FunctionalTestBase{
 		schedule.shutdown();
 		super.tearDown();
 	}
-	
+
+	@Test
 	public void testShouldReceiveMessages() throws Exception {
 		logSpace.start();
 		schedule.scheduleWithFixedDelay(new SLAEventWirer(lookupSpace, logSpace, proxyFactories.get(0), aggSpace), 0, 1, TimeUnit.SECONDS);
@@ -115,7 +119,8 @@ public class SLAEventFunctionalTest extends FunctionalTestBase{
 		assertEquals(4, admin.messages.size());
 					
 	}
-	
+
+	@Test
 	public void testShouldStopReceivingMessagesWhenFilterSetToNull() throws Exception {
 		logSpace.start();
 		schedule.scheduleWithFixedDelay(new SLAEventWirer(lookupSpace, logSpace, proxyFactories.get(0), aggSpace), 0, 1, TimeUnit.SECONDS);

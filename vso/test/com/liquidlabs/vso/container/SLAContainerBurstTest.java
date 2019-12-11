@@ -15,6 +15,9 @@ import com.liquidlabs.vso.container.sla.TimePeriod;
 import com.liquidlabs.vso.deployment.bundle.Bundle;
 import com.liquidlabs.vso.deployment.bundle.Service;
 import com.liquidlabs.vso.work.WorkAssignment;
+import org.junit.Assert;
+
+import static org.junit.Assert.*;
 
 public class SLAContainerBurstTest extends FunctionalTestBase {
 	
@@ -36,7 +39,7 @@ public class SLAContainerBurstTest extends FunctionalTestBase {
 	protected void setUp() throws Exception {
 		super.setUp();
 		
-		System.out.println(getName() + "==============================================");
+		System.out.println("==============================================");
 		for (ResourceAgent agent : agents) {
 				agent.addDeployedBundle("myBundle-0.01", "releaseDate");
 		}

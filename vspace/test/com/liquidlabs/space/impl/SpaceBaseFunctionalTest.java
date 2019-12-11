@@ -2,6 +2,7 @@ package com.liquidlabs.space.impl;
 
 import java.io.File;
 
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.concurrent.ExecutorService;
 import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.common.net.URI;
@@ -25,11 +26,10 @@ public abstract class SpaceBaseFunctionalTest {
 
 	protected void setUp() throws Exception {
 		System.gc();
-		System.setProperty("test.mode", "true");
+		TestModeSetter.setTestMode();
 		System.setProperty("allow.read.events","true");
 		System.setProperty(Lease.PROPERTY, "1");
 
-		ExecutorService.setTestMode();
 		FileUtil.deleteDir(new File("./build/spaceFunc"));
 		
 		System.out.println("================================== setup:" + getName());

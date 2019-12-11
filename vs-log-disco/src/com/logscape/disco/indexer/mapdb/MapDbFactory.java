@@ -1,6 +1,7 @@
 package com.logscape.disco.indexer.mapdb;
 
 import com.liquidlabs.common.DirectMemoryUtils;
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.file.FileUtil;
 import com.liquidlabs.common.monitor.LoggingEventMonitor;
 import com.liquidlabs.vso.agent.MyOperatingSystemMXBean;
@@ -83,7 +84,7 @@ public class MapDbFactory {
     }
 
     private static DBMaker getDb(String environmentDir, String name) {
-        if (Boolean.getBoolean("test.mode")) {
+        if (TestModeSetter.isTestMode()) {
             return DBMaker.newHeapDB();
         }
 

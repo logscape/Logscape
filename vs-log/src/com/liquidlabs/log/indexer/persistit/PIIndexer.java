@@ -160,7 +160,7 @@ public class PIIndexer extends AbstractIndexer  {
         } catch (InterruptedException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-        LOGGER.warn("Forcing agent restart");
+        LOGGER.warn("Forcing agent restart EXIT:10");
 
         System.exit(10);
     }

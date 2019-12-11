@@ -1,5 +1,4 @@
 /**
- * Copyright LiquidLabs 2009
  */
 package com.liquidlabs.space.map;
 
@@ -13,6 +12,7 @@ import org.prevayler.SureTransactionWithQuery;
 import org.prevayler.Transaction;
 import org.prevayler.TransactionWithQuery;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
@@ -49,8 +49,8 @@ public class PersistentMapTest {
             return null;  //To change body of implemented methods use File | Settings | File Templates.
         }
 
-        public void takeSnapshot() throws IOException {
-            //To change body of implemented methods use File | Settings | File Templates.
+        public File takeSnapshot() throws IOException {
+            return null;
         }
 
         public void close() throws IOException {

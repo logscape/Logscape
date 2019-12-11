@@ -48,6 +48,11 @@ public class Lookup_ZONES_Test {
 		infos.add(serviceInfo6);
 
     }
+	@After
+	public void tearDown() throws Exception {
+		lookupSpaceA.stop();
+	}
+
 
 	@Test
 	public void pruneUseCase() throws Exception {
@@ -107,12 +112,4 @@ public class Lookup_ZONES_Test {
 		assertEquals(1, serviceAddresses.length);
 
 	}
-
-
-
-	@After
-	public void tearDown() throws Exception {
-		lookupSpaceA.stop();
-	}
-	
 }

@@ -12,10 +12,14 @@ import com.liquidlabs.vso.container.sla.TimePeriod;
 import com.liquidlabs.vso.deployment.bundle.Bundle;
 import com.liquidlabs.vso.deployment.bundle.Service;
 import com.liquidlabs.vso.work.WorkAssignment;
+import org.junit.Assert;
 
 import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+
+import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.*;
 
 public class SLAContainerFunctionalTest extends FunctionalTestBase {
 
@@ -68,6 +72,10 @@ public class SLAContainerFunctionalTest extends FunctionalTestBase {
         pause();
         System.out.println(new Date() + " SETUP DDDDDDDDDDDDDDDDDDDDDDDDDD ");
         System.out.println(new Date() + "================= SETUP:" + getName() + "==============================================");
+    }
+
+    private String getName() {
+        return getClass().getSimpleName();
     }
 
     protected void tearDown() throws Exception {

@@ -26,7 +26,7 @@ public class NettySendRecTest {
 	private NettyReceiver receiver;
 	private URI receiverAddress;
 	int callCount;
-	List<String> results = new ArrayList<String>();
+	List<String> results = new CopyOnWriteArrayList<>();
 	private ExecutorService exec1;
 	private ExecutorService exec2;
 	private ClientSocketChannelFactory factory1;
@@ -69,7 +69,7 @@ public class NettySendRecTest {
 	public void testShouldSendAMessage() throws Exception {
 
 		boolean isReplyExpected = false;
-		long timeoutSeconds = 10;
+		long timeoutSeconds = 20;
 
 		sender.send("tcp", receiverAddress, "1 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);
 		sender.send("tcp", receiverAddress, "2 stuff".getBytes(), Type.REQUEST, isReplyExpected, timeoutSeconds, "methodName", allowLocalRoute);

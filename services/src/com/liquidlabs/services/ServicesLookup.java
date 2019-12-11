@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import com.liquidlabs.admin.AdminSpace;
 import com.liquidlabs.admin.AdminSpaceImpl;
 import com.liquidlabs.common.NetworkUtils;
+import com.liquidlabs.common.TestModeSetter;
 import com.liquidlabs.common.concurrent.ExecutorService;
 import com.liquidlabs.log.space.AggSpace;
 import com.liquidlabs.log.space.AggSpaceImpl;
@@ -60,7 +61,7 @@ public class ServicesLookup {
     private Uploader uploader;
 
     private ServicesLookup(VSOProperties.ports port) throws UnknownHostException, URISyntaxException {
-        if (Boolean.getBoolean("test.mode") == true) return;
+        if (TestModeSetter.isTestMode()) return;
 
 
         Integer dashboardVScapePort = Integer.getInteger("dashboard.vscape.port", NetworkUtils.determinePort(VSOProperties.getPort(port)));
@@ -118,14 +119,14 @@ public class ServicesLookup {
     }
 
     public void init(WebAppContext wac) {
-        if (Boolean.getBoolean("test.mode") == true) return;
+        if (TestModeSetter.isTestMode()) return;
         wac.setAttribute(LogSpace.NAME, logSpace);
         wac.setAttribute(LookupSpace.NAME, lookupSpace);
         wac.setAttribute("ProxyFactory", proxyFactory);
     }
 
     public void init(DeploymentManager dm) {
-        if (Boolean.getBoolean("test.mode") == true) return;
+        if (TestModeSetter.isTestMode()) return;
         dm.setContextAttribute(LogSpace.NAME, logSpace);
         dm.setContextAttribute(LookupSpace.NAME, lookupSpace);
         dm.setContextAttribute(AggSpace.NAME, aggSpace);

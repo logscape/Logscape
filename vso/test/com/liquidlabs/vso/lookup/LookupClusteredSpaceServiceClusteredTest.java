@@ -3,18 +3,18 @@ package com.liquidlabs.vso.lookup;
 import static org.junit.Assert.*;
 
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
+import com.liquidlabs.common.LifeCycle;
 import org.junit.After;
-import org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.liquidlabs.common.concurrent.ExecutorService;
 import com.liquidlabs.common.net.URI;
 import com.liquidlabs.orm.ORMapperFactory;
 import com.liquidlabs.vso.SpaceServiceImpl;
@@ -38,7 +38,7 @@ public class LookupClusteredSpaceServiceClusteredTest {
 	ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(10);
 	private LookupSpaceImpl luSpace1;
 	private LookupSpaceImpl luSpace2;
-	
+	List<LifeCycle> stoppable = new ArrayList<>();
 	@Before
 	public void setup() {
 		try {
@@ -55,8 +55,7 @@ public class LookupClusteredSpaceServiceClusteredTest {
 	
 	@After
 	public void after() {
-		luSpace1.stop();
-		if (luSpace2 != null) luSpace2.stop();
+		stoppable.stream().forEach(LifeCycle::stop);
 		scheduler.shutdownNow();
 	}
 	
@@ -65,20 +64,19 @@ public class LookupClusteredSpaceServiceClusteredTest {
 		SpaceServiceImpl spaceServiceOne = shouldStartSharedService(VSOProperties.getLookupPort() + 5555, "", false, lu1, "SERVICE");
 		
 		SpaceServiceImpl BADspaceServiceTwo = shouldStartSharedService(VSOProperties.getLookupPort() + 6666, "", false, lu2, "BAD-SERVICE");
-		
+
 		Thread.sleep(1000);
-		
+
 		spaceServiceOne.store(new Thing("id1", "Hi There Im:0"), 10);
-		
+
 		Thread.sleep(1000);
-		
+
 		Thing i01 = spaceServiceOne.findById(Thing.class, "id1");
 		Thing i02 = BADspaceServiceTwo.findById(Thing.class, "id1");
-		
-		BADspaceServiceTwo.stop();
+
+
 		assertNotNull(i01);
 		assertNull("Bad service should not have stuff", i02);
-		
 	}
 	
 //	@Test DodgyTest? Probably should make these work!
@@ -97,15 +95,14 @@ public class LookupClusteredSpaceServiceClusteredTest {
 		SpaceServiceImpl spaceServiceTwo = shouldStartService(VSOProperties.getLookupPort() + 222, "dataTwo", false, lu2);
 		
 		Thread.sleep(1000);
-		
-		
+
 		String leaseKey = spaceServiceOne.store(new Thing("id1", "Hi There Im:0"), 10);
 		Thread.sleep(5000);
 		Thing i01 = spaceServiceOne.findById(Thing.class, "id1");
 		Thing i02 = spaceServiceTwo.findById(Thing.class, "id1");
 		assertNotNull(i01);
 		assertNotNull(i02);
-		
+
 		spaceServiceOne.renewLease(leaseKey, 5);
 		Thread.sleep(5000);
 		spaceServiceOne.renewLease(leaseKey, 5);
@@ -113,10 +110,10 @@ public class LookupClusteredSpaceServiceClusteredTest {
 		spaceServiceOne.renewLease(leaseKey, 5);
 		Thread.sleep(5000);
 		spaceServiceOne.renewLease(leaseKey, 5);
-		
+
 		// the data should still be available in both nodes
 		Thing i11 = spaceServiceOne.findById(Thing.class, "id1");
-		
+
 		Thing i12 = spaceServiceTwo.findById(Thing.class, "id1");
 		assertNotNull(i11);
 		assertNotNull(i12);
@@ -164,17 +161,15 @@ public class LookupClusteredSpaceServiceClusteredTest {
 		SpaceServiceImpl spaceServiceOne = shouldStartService(VSOProperties.getLookupPort() + 3333, "One", false, lu1);
 		
 		SpaceServiceImpl spaceServiceTwo = shouldStartService(VSOProperties.getLookupPort() + 4444, "Two", false, lu2);
-		
+
 		Thread.sleep(2000);
-		
+
 		writeDataToSpaceService("One", spaceServiceOne);
-		
+
 		Thread.sleep(500);
-		
+
 		// test Two worked and replicated Thing-One
 		Thing item2 = spaceServiceTwo.findById(Thing.class, "One");
-		spaceServiceOne.stop();
-		spaceServiceTwo.stop();
 		Assert.assertNotNull("SpaceTWO failed to pick up SpaceONE data", item2);
 		System.out.printf("Space ONE - found item %s\n", item2.message);
 	}
@@ -196,9 +191,6 @@ public class LookupClusteredSpaceServiceClusteredTest {
 		Thing item1 = spaceServiceOne.findById(Thing.class, "Two");
 		Assert.assertNotNull("SpaceONE failed to pick up SpaceTwo data", item1);
 		
-		spaceServiceOne.stop();
-		spaceServiceTwo.stop();
-		
 		System.out.printf("Space TWO - found item %s\n", SERVICE_NAME, item1.message);
 	}
 	
@@ -206,17 +198,21 @@ public class LookupClusteredSpaceServiceClusteredTest {
         luSpace1 = new LookupSpaceImpl(this.lu1.getPort(), lu1_REP.getPort());
         luSpace1.start();
         luSpace1.addLookupPeer(lu2_REP);
+		stoppable.add(luSpace1);
     }
     public void shouldStartLookupTwo() throws Exception {
     	luSpace2 = new LookupSpaceImpl(this.lu2.getPort(), lu2_REP.getPort());
     	luSpace2.start();
     	luSpace2.addLookupPeer(lu1_REP);
+    	stoppable.add(luSpace2);
     }
 
     public SpaceServiceImpl shouldStartService(int port, String dataId, boolean writeThing, URI lu) throws Exception {
         ORMapperFactory mapperFactory = new ORMapperFactory(port, SERVICE_NAME, 100, port);
         SpaceServiceImpl spaceService = createSpaceService(mapperFactory, lu);
         if (writeThing) writeDataToSpaceService(dataId, spaceService);
+        stoppable.add(mapperFactory);
+        stoppable.add(spaceService);
         return spaceService;
     }
     
@@ -227,6 +223,8 @@ public class LookupClusteredSpaceServiceClusteredTest {
         SpaceServiceImpl spaceService = new SpaceServiceImpl(lookup, mapperFactory, serviceName, Executors.newScheduledThreadPool(5), true, false, false);
         spaceService.start(this, "myBundle-1.0");
         if (writeThing) writeDataToSpaceService(dataId, spaceService);
+        stoppable.add(mapperFactory);
+        stoppable.add(spaceService);
         return spaceService;
     }
 

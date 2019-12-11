@@ -28,6 +28,8 @@ public class RedirectingOutputStreamTest {
 		
 		assertFalse(new File(outFile).exists());
 		assertFalse(new File(outFile2).exists());
+
+		new File("build").mkdir();
 		
 		RedirectingFileOutputStream os = new RedirectingFileOutputStream(getter);
 

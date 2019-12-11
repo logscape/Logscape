@@ -17,6 +17,7 @@ public class RedirectingOutputStreamTest {
 
 	@Test
 	public void shouldWriteStuffOut() throws Exception {
+		new File("build").mkdir();
 		FilenameGetter getter = new FilenameGetter() {
 			public String getFilename() {
 				return theFile;

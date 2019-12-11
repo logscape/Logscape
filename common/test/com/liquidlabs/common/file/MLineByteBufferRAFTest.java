@@ -31,6 +31,7 @@ public class MLineByteBufferRAFTest {
 
         file = new File("build","MLineBBRafTest.txt");
         if (file.exists()) file.delete();
+        new File("build").mkdir();
 
         printWriter = new PrintWriter(file);
         printWriter.print("line 0.0a" + extra);

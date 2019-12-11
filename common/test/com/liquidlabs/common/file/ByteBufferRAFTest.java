@@ -18,6 +18,7 @@ public class ByteBufferRAFTest {
 	
 	@Before
 	public void setUp() throws Exception {
+		new File("build").mkdir();
 		OutputStream fos = new BufferedOutputStream(new FileOutputStream(TEST_FILE));
 		for (int i = 1; i <= rows; i++) {
 			for (int j = 0; j < lineLength-1; j++) {

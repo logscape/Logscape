@@ -20,6 +20,7 @@ public class RAFCharSplittingTest {
 	
 	@Before
 	public void setUp() throws Exception {
+		new File("build").mkdir();
 		OutputStream fos = new BufferedOutputStream( new FileOutputStream(TEST_FILE));
 		for (int i = 1; i <= rows; i++) {
 //            fos.write((i +"|A|B|C|D|\n").getBytes());

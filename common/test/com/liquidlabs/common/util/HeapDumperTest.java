@@ -13,6 +13,8 @@ public class HeapDumperTest {
 	public void shouldDumpHeap() throws Exception {
 		String testFilename = "build/test-dump.hprof";
 		new File(testFilename).delete();
+		new File("build").mkdir();
+
 		new HeapDumper().dumpHeap(testFilename, true);
 		assertTrue(new File(testFilename).exists());
 		

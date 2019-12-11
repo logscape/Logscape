@@ -33,8 +33,8 @@ public class UserSpaceImpl implements UserSpace {
     private void setupPreregisteredData() {
         String expiresString = formatter.print(new DateTime().plusYears(1));
         if (VSOProperties.isManagerOnly() || VSOProperties.isFailoverNode()) {
-            addUser(new User("sysadmin", "admin@logscape.com", "ll4bs", "ll4bs".hashCode(),"CanDelete,CanChangeConfig,CanCreateUser,CanCreateSearch",-1, expiresString,"", "", "sysadmin", new HashMap<String,Object>(), "*", LOGO, User.ROLE.System_Administrator), false);
-            addUser(new User("admin", "admin@logscape.com", "ll4bs", "ll4bs".hashCode(),"CanDelete,CanChangeConfig,CanCreateUser,CanCreateSearch",-1, expiresString, "", "", "admin", new HashMap<String,Object>(), "*", LOGO, User.ROLE.System_Administrator), false);
+            addUser(new User("sysadmin", "admin@logscape.com", "sysadmin", "sysadmin".hashCode(),"CanDelete,CanChangeConfig,CanCreateUser,CanCreateSearch",-1, expiresString,"", "", "sysadmin", new HashMap<String,Object>(), "*", LOGO, User.ROLE.System_Administrator), false);
+            addUser(new User("admin", "admin@logscape.com", "admin", "admin".hashCode(),"CanDelete,CanChangeConfig,CanCreateUser,CanCreateSearch",-1, expiresString, "", "", "admin", new HashMap<String,Object>(), "*", LOGO, User.ROLE.System_Administrator), false);
             addUser(new User("user", "user@logscape.com", "user", "user".hashCode(),"CanCreateSearch",-1, expiresString,"", "", "all", new HashMap<String,Object>(), "Logscape,DemoApp-1.0", LOGO, User.ROLE.Read_Write_User), false);
             addUser(new User("guest", "guest@logscape.com", "guest", "guest".hashCode(),"",-1, expiresString,"", "", "guest", new HashMap<String,Object>(), "DemoApp-1.0", LOGO, User.ROLE.Read_Only_User), false);
 

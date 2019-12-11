@@ -208,7 +208,9 @@ public class FieldSet implements Serializable {
     private Extractor getExtractor(String expression) {
         if (extractor != null) return extractor;
         if (expression.startsWith("split(")) {
-            String filename = ((LiteralField)getField(DEF_FIELDS._filename.name())).getValue();
+            FieldI field = getField(DEF_FIELDS._filename.name());
+
+            String filename = field != null ? ((LiteralField) field).getValue() : "";
             if(filename.endsWith(".csv")) {
                 extractor = new CsvSplitUtil();
             }   else {

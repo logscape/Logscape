@@ -78,6 +78,7 @@ start() {
 	fi
 
 	echo "STARTING Logscape boot:"  $BOOT;
+	echo "The browser will start on port:8080 with user admin/admin"
 
     mv boot.log boot.log.1 > /dev/null 2>&1
 

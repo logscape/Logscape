@@ -9,7 +9,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,14 +18,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RabbitEndPointTest {
 	private int callCount;
-	
 	private RabbitEndpointFactory epFactory;
-
 	private EndPoint firstEP;
-
 	private EndPoint secondEP;
+	boolean rabbitEnabled = false;
 
-	private boolean allowLocalRoute;
 
 //	public static Server myServer= new Server();
 
@@ -53,7 +49,7 @@ public class RabbitEndPointTest {
 
 	@Test
 	public void testRabbitWorks() throws Exception {
-//		if (true) return;
+		if (!rabbitEnabled) return;
 	    
         RConfig config = new RConfig("192.168.99.100", 5672, "guest", "guest");
         RSender sender = new RSender(config, "myQueue");
@@ -69,8 +65,7 @@ public class RabbitEndPointTest {
 
 	@Test
 	public void testEndpointWorks() throws Exception {
-
-//		if (true) return;
+		if (!rabbitEnabled) return;
 
 		epFactory = new RabbitEndpointFactory("amqp://guest:guest@192.168.99.100:5672");
 
@@ -80,18 +75,15 @@ public class RabbitEndPointTest {
 		secondEP = epFactory.getEndPoint(new URI("tcp://localhost:22223/stuff"), new MyReceiverB());
 		secondEP.start();
 
-
-
-
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Sending message");
 			callCount = 0;
-			firstEP.send("tcp", secondEP.getAddress(), (i + "-notify").getBytes(), Type.REQUEST, false, 10, "methodName", allowLocalRoute);
+			firstEP.send("tcp", secondEP.getAddress(), (i + "-notify").getBytes(), Type.REQUEST, false, 10, "methodName", false);
 			Thread.sleep(500);
 			assertThat("CallCount was:" + callCount, callCount == 3);
 		}
 
-		Thread.sleep(1000);
+		Thread.sleep(500);
 	}
 
 	
@@ -104,7 +96,7 @@ public class RabbitEndPointTest {
 				Thread.sleep(10);
 				if (callCount == 2) {
 					System.out.println(Thread.currentThread().getName() + " " + callCount + "****************** A Sending listenerID:" + new String(payload));
-					firstEP.send("tcp", secondEP.getAddress(), "returning - someListenerId".getBytes(), Type.REQUEST, false, 10, "methodName", allowLocalRoute);
+					firstEP.send("tcp", secondEP.getAddress(), "returning - someListenerId".getBytes(), Type.REQUEST, false, 10, "methodName", false);
 				} else {
 					System.out.println("A Nothing doing: " + callCount);
 				}
@@ -140,7 +132,7 @@ public class RabbitEndPointTest {
 				Thread.sleep(100);
 				if (callCount == 1) {
 					System.out.println(Thread.currentThread().getName() + " " + callCount + "*************** B Asking A for ListenerId");
-					secondEP.send("tcp", firstEP.getAddress(), "getListenerId".getBytes(), Type.REQUEST, false, 10, "methodName", allowLocalRoute);
+					secondEP.send("tcp", firstEP.getAddress(), "getListenerId".getBytes(), Type.REQUEST, false, 10, "methodName", false);
 				} else {
 					System.out.println("B Nothing doing: " + callCount);
 				}

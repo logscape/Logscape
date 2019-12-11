@@ -33,7 +33,7 @@ public class LookupSpaceTest extends MockObjectTestCase {
 		
 		ServiceInfo[] results = new ServiceInfo[] { serviceInfo };
 		orMapperClient.expects(once()).method("findObjects").withAnyArguments().will(returnValue(Arrays.asList(results)));
-		String[] resourceAddress = lookupSpace.getServiceAddresses("serviceName equals \"resourceSpace\"", location, false);
+		String[] resourceAddress = lookupSpace.getServiceAddresses("someName", location, false);
 		assertEquals(1, resourceAddress.length);
 	}
 	

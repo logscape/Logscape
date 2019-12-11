@@ -85,18 +85,6 @@ public class ResourceAgentTest  {
     	resourceAgent.stop();
 	}
 
-
-    @Test
-    public void testShouldGetCorrectFilesForDelete() throws Exception {
-        boolean deleteMe = resourceAgent.acceptForDelete(new File("/opt/logscape/work/CRAP_SERVER_/yay.log"));
-        assertFalse(deleteMe);
-        deleteMe = resourceAgent.acceptForDelete(new File("/opt/logscape/work/CRAP/yay.log"));
-        assertTrue("Should have deleted file", deleteMe);
-
-
-    }
-
-	
 	@Test
 	public void testShouldGetGoodReleaseDate() throws Exception {
 		String result = resourceAgent.removeReleaseDateTags(" <buildId>28-Oct-10 17:53:29</buildId>");

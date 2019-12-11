@@ -28,8 +28,6 @@
             <ComponentRef Id="cmp6B2CBC84B39F30390BC24CC809B77593" />
             <ComponentRef Id="cmp15ADBE279B838CDD552D6B610F7FC59B" />
             <ComponentRef Id="cmp49465F39644C5D87E5602F97FD1EB676" />
-            <ComponentRef Id="cmpB0046BD0A737BFE064ECE3D79268C93F" />
-            <ComponentRef Id="cmpD34D9BA97FB54D2504B1DCE04B6B24B8" />
             <ComponentRef Id="cmp21B6E986D461B3D761E85CDA93579D94" />
             <ComponentRef Id="cmpB055CBCFA84C8E69002F44AB7637D45E" />
             <ComponentRef Id="cmp908EC5BC66A17242F2C8E1039BCBAAAE" />
@@ -95,281 +93,275 @@
     <Fragment>
         <DirectoryRef Id="TARGETDIR">
             <Directory Id="dirAFC3147C0C43AB21D85416C082CE113A" Name="logscape">
-                <Component Id="cmpC9D706D08F839972707FE0E7E84E7896" Guid="{762384BA-2218-4425-8854-9740701BFB54}">
+                <Component Id="cmpC9D706D08F839972707FE0E7E84E7896" Guid="{C3A1DE7A-4374-4081-ACE1-E554E97A2B26}">
                     <File Id="fil63E236C50080147A3E8A084F84C0DFBE" KeyPath="yes" Source="SourceDir\agent-log4j.properties" />
                 </Component>
-                <Component Id="cmp4AA1771134CADF39295F30E3F9071105" Guid="{B35ADD72-0749-450C-B6A6-771E3EE5D6CC}">
+                <Component Id="cmp4AA1771134CADF39295F30E3F9071105" Guid="{87080193-AF0B-4B9F-94A8-06F438FE6EB7}">
                     <File Id="filE2C27DD5A78EB0D1E48B757623017C81" KeyPath="yes" Source="SourceDir\boot.bat" />
                 </Component>
-                <Component Id="cmp5CFF084761634914CD96ED2E022907E7" Guid="{304E6506-A366-478B-903B-01B57E1454BB}">
+                <Component Id="cmp5CFF084761634914CD96ED2E022907E7" Guid="{FD843AC9-6ECC-43AE-AD54-0ABCF39C1CFF}">
                     <File Id="fil26A33B25B903A48B57CBB0D447F494EF" KeyPath="yes" Source="SourceDir\boot.jar" />
                 </Component>
-                <Component Id="cmpF88E714B30415495B9D4C3510C33BC22" Guid="{4020A1C8-B77E-4D9E-A53C-7275620C1C2C}">
+                <Component Id="cmpF88E714B30415495B9D4C3510C33BC22" Guid="{BCE9454C-DD6F-406C-A792-D53311F1D653}">
                     <File Id="fil10D076CE185572E28097D809763C0481" KeyPath="yes" Source="SourceDir\boot.properties" />
                 </Component>
-                <Component Id="cmp14D438FA541B5CF380108EBF1FFB400F" Guid="{C59E1E44-E7C6-4325-8C24-1403D0629174}">
+                <Component Id="cmp14D438FA541B5CF380108EBF1FFB400F" Guid="{AEB426E1-91A2-4A39-9878-BDB363CDDA11}">
                     <File Id="fil44329338921137B62B30797D244A9EE3" KeyPath="yes" Source="SourceDir\boot.sh" />
                 </Component>
-                <Component Id="cmpD929FF3659A4AB8F006083CC026CD8B8" Guid="{E8335C93-9322-4A6A-8B22-BA29FD751D09}">
+                <Component Id="cmpD929FF3659A4AB8F006083CC026CD8B8" Guid="{51425C4E-DB21-4CCC-A419-171F33B5FED7}">
                     <File Id="filDC634347EAA78995983A556A3B39FABF" KeyPath="yes" Source="SourceDir\license.txt" />
                 </Component>
-                <Component Id="cmp337096CFF5224FFD97518BD35E37200A" Guid="{F0C062AD-F93B-47C8-BF8B-4F3A4839D332}">
+                <Component Id="cmp337096CFF5224FFD97518BD35E37200A" Guid="{61FC0C0A-5B9D-43EB-800A-8E3066FDDA1A}">
                     <File Id="fil0B5544FEE07854323DCD7FD184137E77" KeyPath="yes" Source="SourceDir\log4j.properties" />
                 </Component>
-                <Component Id="cmpABF7B758AA82C238E3A3B7D88FE22948" Guid="{2A522886-4CF2-4CFC-94F9-9DADE9988D77}">
+                <Component Id="cmpABF7B758AA82C238E3A3B7D88FE22948" Guid="{9F8CD3A5-FA11-462A-9942-F5FEDF2B21ED}">
                     <File Id="fil12488701F76FEA45A2B99652E4881910" KeyPath="yes" Source="SourceDir\logscape.bat" />
                 </Component>
-                <Component Id="cmp1D062405344FCEB7DA540BD6B1CBFE8C" Guid="{E1D54DF6-EE13-4372-B1AF-D92B5F298BA8}">
+                <Component Id="cmp1D062405344FCEB7DA540BD6B1CBFE8C" Guid="{B74FC8F6-958B-49B1-B59F-F77C1906230C}">
                     <File Id="filB173D12EBEE97AE2126581BB76C47612" KeyPath="yes" Source="SourceDir\logscape.sh" />
                 </Component>
-                <Component Id="cmpDE446D13BBE3CBC330926BD9CF3ECB44" Guid="{C77FC88A-4E56-4C99-83DC-05FB7C98628C}">
+                <Component Id="cmpDE446D13BBE3CBC330926BD9CF3ECB44" Guid="{3475611B-6308-403C-A698-75149255D16D}">
                     <File Id="fil552FCEADB77B0F75B15EF4D7CCF2BEA2" KeyPath="yes" Source="SourceDir\readme.txt" />
                 </Component>
                 <Directory Id="dirE11DFDF3F75C7E577905BFBBC90EEE8C" Name="apps">
-                    <Component Id="cmp758938A7C35D4AD6F7E83F4DBE8F31AA" Guid="{D7E65CBD-1786-4A64-9CAE-E426D04EDD7D}">
+                    <Component Id="cmp758938A7C35D4AD6F7E83F4DBE8F31AA" Guid="{F9B8D77A-3004-4745-8353-1A38B081714B}">
                         <File Id="filF64F6AAAA5CAEB5D611DE9CAC8DD4C77" KeyPath="yes" Source="SourceDir\apps\webdefault.xml" />
                     </Component>
                 </Directory>
                 <Directory Id="dir9EEC67B713D42F08374A9871A5535FBB" Name="downloads">
-                    <Component Id="cmpD3C45801C2F5B2512FBF433BD289D739" Guid="{E5EC868D-73A3-4BB7-9901-45C30C2ED2F3}">
+                    <Component Id="cmpD3C45801C2F5B2512FBF433BD289D739" Guid="{BD4FD883-1300-44B8-B859-274518D00644}">
                         <File Id="fil043EB9C3B91E46A42C8357AFD6510D9B" KeyPath="yes" Source="SourceDir\downloads\boot.zip" />
                     </Component>
-                    <Component Id="cmp7C6C2C768817D0DD3FB4B52FF5750036" Guid="{B221A297-9E3E-478A-A2C6-48867B50DB6B}">
+                    <Component Id="cmp7C6C2C768817D0DD3FB4B52FF5750036" Guid="{541F939F-BFA0-4B9F-B4A8-1BFA4069DA92}">
                         <File Id="fil942A3253F372A9CC7E38134419BF4EF8" KeyPath="yes" Source="SourceDir\downloads\dashboard-1.0.zip" />
                     </Component>
-                    <Component Id="cmp029503084C734C9C5B39D3ED7340F94B" Guid="{08E060E3-621D-47AE-8CAC-EC1DFFEEB0B6}">
+                    <Component Id="cmp029503084C734C9C5B39D3ED7340F94B" Guid="{8056F9D0-FF12-4A1E-9B38-02E6BDC0C164}">
                         <File Id="fil43CC4FCB975E9026609D4A40A51720BD" KeyPath="yes" Source="SourceDir\downloads\grokit.properties" />
                     </Component>
-                    <Component Id="cmp023C6A7F6A8EB0A251F31AB12983C2DA" Guid="{EEB34BEA-3A10-45AA-9298-F967775875EC}">
+                    <Component Id="cmp023C6A7F6A8EB0A251F31AB12983C2DA" Guid="{D305E08E-4762-475E-A10A-3A24D9D341B9}">
                         <File Id="fil943D38D8D23DAAE836F05FB687375650" KeyPath="yes" Source="SourceDir\downloads\jolokia-agent.jar" />
                     </Component>
-                    <Component Id="cmpC2BE310484E2FB280074F8707279E8C7" Guid="{EFA8A06B-BFEF-4D02-8FCD-021A673E191D}">
+                    <Component Id="cmpC2BE310484E2FB280074F8707279E8C7" Guid="{AA1AC704-2383-4B5F-B3ED-9C3E7BFD6951}">
                         <File Id="filBF54653D25DA3081F389B0281CBB6634" KeyPath="yes" Source="SourceDir\downloads\kvi.persistit.properties" />
                     </Component>
-                    <Component Id="cmp796DE0565FEE58B533FC43AB68EA585A" Guid="{8EF940AD-890D-4EBD-9ACC-58E5AFA93122}">
+                    <Component Id="cmp796DE0565FEE58B533FC43AB68EA585A" Guid="{705DC099-D2B8-4611-990B-F98E24E1F927}">
                         <File Id="filDCB71D08301EF03A379C9A20200F27B5" KeyPath="yes" Source="SourceDir\downloads\lib-1.0.zip" />
                     </Component>
-                    <Component Id="cmp55A40E51D01DCB48535DB9B980F0BCFE" Guid="{82FEC81E-08CB-48CB-80DC-DF23730F9D18}">
+                    <Component Id="cmp55A40E51D01DCB48535DB9B980F0BCFE" Guid="{886FCF08-5F26-4903-9C16-9B42DED511F6}">
                         <File Id="fil9352A020C8958F5222A4DBC4E4314A53" KeyPath="yes" Source="SourceDir\downloads\lib-servlet-1.0.zip" />
                     </Component>
-                    <Component Id="cmp9B797781ED148F411B065AAA188E938A" Guid="{07CB0792-7675-4E02-B861-3BDBF2F570E1}">
+                    <Component Id="cmp9B797781ED148F411B065AAA188E938A" Guid="{628D70F2-A80D-4D16-B5EB-A9C40670D50E}">
                         <File Id="filD5E94BC6318FF3BCA997982B8C3B2BD0" KeyPath="yes" Source="SourceDir\downloads\logscape-home.config" />
                     </Component>
-                    <Component Id="cmp7794E4839F1E2E0F85AAE9CBECB1A678" Guid="{A3A2390C-5BBE-4551-8A1C-F9529239D1A5}">
+                    <Component Id="cmp7794E4839F1E2E0F85AAE9CBECB1A678" Guid="{74B60ED0-B650-4628-9A8E-B9579A381B57}">
                         <File Id="fil258516C424191E56A8897D4A1F42DD87" KeyPath="yes" Source="SourceDir\downloads\logscape-monitor.config" />
                     </Component>
-                    <Component Id="cmp5D44E259DD5AB8B806ED59034D952B2F" Guid="{2EAE473B-E3CA-4460-85C2-CCE1AE690745}">
+                    <Component Id="cmp5D44E259DD5AB8B806ED59034D952B2F" Guid="{34E2C842-E577-4063-AF87-E267729128DD}">
                         <File Id="filBB287CC42FC84A26DA2F1DED8068214D" KeyPath="yes" Source="SourceDir\downloads\logscape-sources.config" />
                     </Component>
-                    <Component Id="cmpD48A251DBFD50906744EF98683AC9DE2" Guid="{984DCCA8-6FDF-40B5-AC47-17E886434DE1}">
+                    <Component Id="cmpD48A251DBFD50906744EF98683AC9DE2" Guid="{9868AC53-9DD6-45DB-AF45-9F76009C34A7}">
                         <File Id="filD213F7E4889337AAB8EEE12F70A82587" KeyPath="yes" Source="SourceDir\downloads\play-lib-1.0.zip" />
                     </Component>
-                    <Component Id="cmpF013EE14C291B30CFF63F06B966BAAD7" Guid="{508DEE98-B12D-4380-8DE4-13916CE65448}">
+                    <Component Id="cmpF013EE14C291B30CFF63F06B966BAAD7" Guid="{2D0C20D3-8BEE-4704-A07F-34BFA140BA16}">
                         <File Id="filD2381092D0F880A4645251D5DD864186" KeyPath="yes" Source="SourceDir\downloads\play.war" />
                     </Component>
-                    <Component Id="cmp6B2CBC84B39F30390BC24CC809B77593" Guid="{2187E345-F2AB-4BCA-B844-17D7AA0D24C4}">
+                    <Component Id="cmp6B2CBC84B39F30390BC24CC809B77593" Guid="{305E7D05-8246-46D2-9664-371DE9E9A578}">
                         <File Id="fil6C4F1F8B8895F82A292C9D9CF5673F0E" KeyPath="yes" Source="SourceDir\downloads\print.war" />
                     </Component>
-                    <Component Id="cmp15ADBE279B838CDD552D6B610F7FC59B" Guid="{5ECA1093-2C1C-45CD-9368-E3DC3AB281A3}">
+                    <Component Id="cmp15ADBE279B838CDD552D6B610F7FC59B" Guid="{81397930-7A9B-4B3D-B312-DAC320F89C55}">
                         <File Id="fil3A34DB2CC4E8959A120ABE09A38C17E3" KeyPath="yes" Source="SourceDir\downloads\replicator-1.0.zip" />
                     </Component>
-                    <Component Id="cmp49465F39644C5D87E5602F97FD1EB676" Guid="{5D388D1A-C53B-4291-9FE6-51A6F031BC05}">
+                    <Component Id="cmp49465F39644C5D87E5602F97FD1EB676" Guid="{549B1D9A-80E9-4256-B7DB-F62730CF310E}">
                         <File Id="fil29D60F3B71B8EE906B87101DD6A0976C" KeyPath="yes" Source="SourceDir\downloads\root.war" />
                     </Component>
-                    <Component Id="cmpB0046BD0A737BFE064ECE3D79268C93F" Guid="{759EB96E-9159-4191-98D6-85EA22A63C90}">
-                        <File Id="fil6FD2E915A91F25BEA7D61411A1B537A7" KeyPath="yes" Source="SourceDir\downloads\saas-meter-1.0.zip" />
-                    </Component>
-                    <Component Id="cmpD34D9BA97FB54D2504B1DCE04B6B24B8" Guid="{1410C3B9-4656-4FC4-8CB8-81CDB9F269DA}">
-                        <File Id="fil86DA10AA133794511167F9343C1221C1" KeyPath="yes" Source="SourceDir\downloads\saas-portal.war" />
-                    </Component>
-                    <Component Id="cmp21B6E986D461B3D761E85CDA93579D94" Guid="{F8247369-0B43-40F9-ADEE-DDD0776EDE66}">
+                    <Component Id="cmp21B6E986D461B3D761E85CDA93579D94" Guid="{6FA68822-7975-4FEE-9EBC-772E8DC169D5}">
                         <File Id="filCBCBC99E17EAA62E025B2F9419034BF2" KeyPath="yes" Source="SourceDir\downloads\UnixApp-1.6.zip" />
                     </Component>
-                    <Component Id="cmpB055CBCFA84C8E69002F44AB7637D45E" Guid="{48A6A055-6126-4AC2-9EBE-378A89E6DF8C}">
+                    <Component Id="cmpB055CBCFA84C8E69002F44AB7637D45E" Guid="{15EA2AB4-4592-44FB-967C-EC7DDBD63F8B}">
                         <File Id="fil1A2F2FD3E68E89AA2AD52A17BC8144E2" KeyPath="yes" Source="SourceDir\downloads\vs-admin-1.0.zip" />
                     </Component>
-                    <Component Id="cmp908EC5BC66A17242F2C8E1039BCBAAAE" Guid="{C7A79127-EA8F-4750-99F6-865096177B9F}">
+                    <Component Id="cmp908EC5BC66A17242F2C8E1039BCBAAAE" Guid="{3E461D24-A251-48B0-8FAD-6A8BCDB7F030}">
                         <File Id="fil2A01A3F1A6527F6D9BFC0F1B99F7B143" KeyPath="yes" Source="SourceDir\downloads\vs-log-1.0.zip" />
                     </Component>
-                    <Component Id="cmp60FC6AF8C9D6CE634AFDE8D5CECCF805" Guid="{9A56E8B8-F305-4402-A447-2FB04B86C898}">
+                    <Component Id="cmp60FC6AF8C9D6CE634AFDE8D5CECCF805" Guid="{00E61982-0823-480C-AD53-0D253A3F1A78}">
                         <File Id="fil78D54191D7FF81F820507178CA0798B2" KeyPath="yes" Source="SourceDir\downloads\vs-log-indexer-1.0.zip" />
                     </Component>
-                    <Component Id="cmpD20350BE4B3ECCADF7000E517AEDE429" Guid="{A4CE49C0-7712-4D39-8699-5A2C3FE645E8}">
+                    <Component Id="cmpD20350BE4B3ECCADF7000E517AEDE429" Guid="{C03C0E38-ADC5-4E82-8984-4F9CE687A4CF}">
                         <File Id="fil9DBBC5EC22A63984069739A879C2096E" KeyPath="yes" Source="SourceDir\downloads\vs-log-server-1.0.zip" />
                     </Component>
-                    <Component Id="cmp7BAD9902F7A224D9052BE0EDF79DC3DA" Guid="{16839957-63A1-4785-878E-58E6E5C6D99F}">
+                    <Component Id="cmp7BAD9902F7A224D9052BE0EDF79DC3DA" Guid="{EED780B3-3078-40A7-8664-E7898C23AA61}">
                         <File Id="fil109DD42545A4B38FFBCF3DE1953156A4" KeyPath="yes" Source="SourceDir\downloads\vs-socket-server-1.0.zip" />
                     </Component>
-                    <Component Id="cmpB0DA981CFC79F153EAF23CEC426D377A" Guid="{FD965CA5-DCD7-4872-88B1-6F68975A69E0}">
+                    <Component Id="cmpB0DA981CFC79F153EAF23CEC426D377A" Guid="{EE81AA88-B2D1-48D0-859B-54CB0C3CB8F1}">
                         <File Id="filDC906D4EA0B0A71881202533288C9AB0" KeyPath="yes" Source="SourceDir\downloads\vs-syslog-server-1.0.zip" />
                     </Component>
-                    <Component Id="cmpF4F85FB9229851FA78B26D81438F0D8D" Guid="{5282A545-09BE-48C2-B043-9DD59F0E6C5E}">
+                    <Component Id="cmpF4F85FB9229851FA78B26D81438F0D8D" Guid="{CDFB0D7F-EEDE-41B6-BFF2-24A3F9B9F7FB}">
                         <File Id="filC0983920A264854AAC26385BB469A2D5" KeyPath="yes" Source="SourceDir\downloads\vs-util-1.0.zip" />
                     </Component>
-                    <Component Id="cmp48BC3506860B4003DF5E9BB21A04DF7D" Guid="{290DB463-F056-449D-A5AA-04FC091C4A0E}">
+                    <Component Id="cmp48BC3506860B4003DF5E9BB21A04DF7D" Guid="{1483FE1A-0F00-4285-9082-68A0F4E7678A}">
                         <File Id="fil5DD951005D9484B422849F880FFA14EC" KeyPath="yes" Source="SourceDir\downloads\WindowsApp-1.6.zip" />
                     </Component>
                 </Directory>
                 <Directory Id="dir6B5850B7DACFBFC1BC38093A6DA31772" Name="etc">
-                    <Component Id="cmpBB4CC9B87A82B6DDBFE07C702F532A0E" Guid="{47F9AC32-382E-40EB-A694-DDE6AE016E12}">
+                    <Component Id="cmpBB4CC9B87A82B6DDBFE07C702F532A0E" Guid="{B008550D-2D97-4A4A-81F9-D3199C79B948}">
                         <File Id="filB24C1AF32E9B2F3DF218959EA2C322C2" KeyPath="yes" Source="SourceDir\etc\logscape-service-x64.exe" />
                     </Component>
-                    <Component Id="cmpDDFD1AA9942C3BE349EEBEAC1FFA85EC" Guid="{DDAE2D83-8111-46E4-B351-876FE3A9B0F9}">
+                    <Component Id="cmpDDFD1AA9942C3BE349EEBEAC1FFA85EC" Guid="{222B1C66-649A-4450-BA0C-AB3A34126D96}">
                         <File Id="filB417B058A59E7FB32875F4C55B583D42" KeyPath="yes" Source="SourceDir\etc\logscape-service-x64.ini" />
                     </Component>
-                    <Component Id="cmpAB0090104E61EFE54A93A33EA11893F4" Guid="{AB0210E3-0B1E-4805-A1B0-9B891B633ABD}">
+                    <Component Id="cmpAB0090104E61EFE54A93A33EA11893F4" Guid="{1C80F4BC-2DF6-4A5E-B589-F0272C667AD4}">
                         <File Id="fil1A58B4A7B1F8DB74A35406D30A565DC4" KeyPath="yes" Source="SourceDir\etc\logscape-service-x86.exe" />
                     </Component>
-                    <Component Id="cmp065DBB5207AD3FCA3107B65980C4A07F" Guid="{7EB08C14-068B-424B-A291-18B4FAEFD912}">
+                    <Component Id="cmp065DBB5207AD3FCA3107B65980C4A07F" Guid="{6558402F-E760-4335-8134-9E39BE424AAE}">
                         <File Id="filC4A52E20F8C43B34C934119A8AB132F3" KeyPath="yes" Source="SourceDir\etc\logscape-service-x86.ini" />
                     </Component>
-                    <Component Id="cmpB6156830C2D4F1EF842250B0A9F3CE6E" Guid="{D8C3CB0E-E39D-4BA4-9CBB-48B43A8A0B0E}">
+                    <Component Id="cmpB6156830C2D4F1EF842250B0A9F3CE6E" Guid="{E6E4C552-5505-41B7-A6CE-9E6444C4DB96}">
                         <File Id="fil80373B075AA31DC71FE94A225ABFF445" KeyPath="yes" Source="SourceDir\etc\persistit-apache2.txt" />
                     </Component>
-                    <Component Id="cmp5D6481DFE6626B0898929492CE867C96" Guid="{69DDD72F-7E7F-49CD-AE69-7E62732D25D0}">
+                    <Component Id="cmp5D6481DFE6626B0898929492CE867C96" Guid="{F6020C1E-5F09-441B-A31A-5973D65A00EC}">
                         <File Id="fil85AFA70D812BFA0F3A55D11C35C61D58" KeyPath="yes" Source="SourceDir\etc\setup.conf" />
                     </Component>
                 </Directory>
                 <Directory Id="dir98A28ABA470BFD81130EAEA3C0DD886B" Name="lib">
-                    <Component Id="cmp20F680169A6FC3CAC5E2709D50762016" Guid="{39A092DE-0996-452B-BD63-7E8E00D5C6AC}">
+                    <Component Id="cmp20F680169A6FC3CAC5E2709D50762016" Guid="{A170732E-80F6-4BF5-A885-65F3B34AB48D}">
                         <File Id="fil52FDC325923D3695CF48AD0CCB7711DC" KeyPath="yes" Source="SourceDir\lib\groovy-all-1.8.7.jar" />
                     </Component>
-                    <Component Id="cmpF4219DB9F751EFF30CD91DAC6AA0B517" Guid="{B4318ACE-62CA-4360-B226-517898582AF9}">
+                    <Component Id="cmpF4219DB9F751EFF30CD91DAC6AA0B517" Guid="{E1E4B300-9803-4B9B-909D-0C3097C6244D}">
                         <File Id="filE00F8268C2CF4A729D51D3F301F00040" KeyPath="yes" Source="SourceDir\lib\jdk7-introspector.jar" />
                     </Component>
                 </Directory>
                 <Directory Id="dirFF07051F0E6964C6955057071829BFD0" Name="scripts">
-                    <Component Id="cmp058A1D2BF53B9CB7C6BA175C57B56419" Guid="{C208C0EC-894B-4A18-A3CB-79A7A2DFB9A4}">
+                    <Component Id="cmp058A1D2BF53B9CB7C6BA175C57B56419" Guid="{4F619A97-556D-401A-B4EF-6D20021CEE06}">
                         <File Id="filDC334CE0CAF0473FF3EB9210479E1892" KeyPath="yes" Source="SourceDir\scripts\applyConfig.bat" />
                     </Component>
-                    <Component Id="cmp36943BA5317BE94704C458EC3C9AE63D" Guid="{1029A396-6D6C-4171-9D8D-BFA3D2BCA1EB}">
+                    <Component Id="cmp36943BA5317BE94704C458EC3C9AE63D" Guid="{6914473A-87B8-4CED-BBF9-C8E2E7314D33}">
                         <File Id="fil95780B6FEA5DAA072A8F60F68BED0152" KeyPath="yes" Source="SourceDir\scripts\applyConfig.sh" />
                     </Component>
-                    <Component Id="cmp6973EFAF1960D546B14F5051348FC52A" Guid="{31384AA6-52F6-46EF-8AE7-547DD12EB391}">
+                    <Component Id="cmp6973EFAF1960D546B14F5051348FC52A" Guid="{0EEA3DE0-E37F-414A-9F05-11DBDC63BE62}">
                         <File Id="fil29B7F73467BC13D2C3A71D32E17B54DB" KeyPath="yes" Source="SourceDir\scripts\configure.bat" />
                     </Component>
-                    <Component Id="cmpB2CB61321E08FBEC687DD14059B22DA2" Guid="{9FDF8B77-8844-4180-AB4B-BC3F6378FD9D}">
+                    <Component Id="cmpB2CB61321E08FBEC687DD14059B22DA2" Guid="{D160D378-DEC3-4BE6-9019-2E3A59CE37AF}">
                         <File Id="filF63193B91C1A044CCF107D66B2FD828F" KeyPath="yes" Source="SourceDir\scripts\configure.groovy" />
                     </Component>
-                    <Component Id="cmp70E0907714D782A864F74AF75205383F" Guid="{848D72C2-9B0D-4262-994D-D173A37D9782}">
+                    <Component Id="cmp70E0907714D782A864F74AF75205383F" Guid="{7299F459-4819-4156-ACD6-71E54833AB41}">
                         <File Id="filC47D7848428A65FE37CA000115CFFAF0" KeyPath="yes" Source="SourceDir\scripts\configure.sh" />
                     </Component>
-                    <Component Id="cmp2F2999CD48597A65303E6035166B7778" Guid="{027B1E25-1E50-4A45-93A7-864362BCEE73}">
+                    <Component Id="cmp2F2999CD48597A65303E6035166B7778" Guid="{DF925F3A-F0F7-434C-A6E8-9B144CA90291}">
                         <File Id="fil8293E6990AA5E4E0658A5E1231A0D4FD" KeyPath="yes" Source="SourceDir\scripts\cpu.vbs" />
                     </Component>
-                    <Component Id="cmpD1202B0A6DED862FC41BF89C067A9DF0" Guid="{260F447E-4EFC-47CB-BB4E-B609C6CFEB52}">
+                    <Component Id="cmpD1202B0A6DED862FC41BF89C067A9DF0" Guid="{2E6C5057-B251-4FFD-9C74-2DFC4923292E}">
                         <File Id="filC43F2D516D3D1286BF17D4A85E27E381" KeyPath="yes" Source="SourceDir\scripts\dbDump.bat" />
                     </Component>
-                    <Component Id="cmpE1B53EA615F23011350B96EA35A17F2D" Guid="{4FBB44AC-0FC0-4156-92D6-A9CFBC41C07C}">
+                    <Component Id="cmpE1B53EA615F23011350B96EA35A17F2D" Guid="{24E22E72-ACC7-4F5E-A420-CA3482A3733A}">
                         <File Id="fil8F6920506774D986B41EFE530FAA5A46" KeyPath="yes" Source="SourceDir\scripts\dbDump.sh" />
                     </Component>
-                    <Component Id="cmpCBB5662B1B3C7366A2DE1B4CEFA7C575" Guid="{784C5CF1-3B6E-4655-848F-9F1F7AE18CF5}">
+                    <Component Id="cmpCBB5662B1B3C7366A2DE1B4CEFA7C575" Guid="{55C809DB-567F-42E3-9A84-C3F7447E7896}">
                         <File Id="filFB9962B38670F0C95632988F30006EE9" KeyPath="yes" Source="SourceDir\scripts\diskBench.bat" />
                     </Component>
-                    <Component Id="cmpE122AB1C3A29C7E0E63413FDA73C71B2" Guid="{973945AC-9F76-4009-B6CE-77FDA59E6280}">
+                    <Component Id="cmpE122AB1C3A29C7E0E63413FDA73C71B2" Guid="{C2ACAE8D-1163-4D59-A359-CC90E0AE9C4C}">
                         <File Id="filCD7F335A33F71C7BE2D329B9C371CD24" KeyPath="yes" Source="SourceDir\scripts\diskBench.sh" />
                     </Component>
-                    <Component Id="cmp0752CDBAD5F105E2097C4D274254AE0D" Guid="{FF0B1C22-FDD8-41BA-94E3-0B749A23D1CC}">
+                    <Component Id="cmp0752CDBAD5F105E2097C4D274254AE0D" Guid="{A5EA358D-4F7B-4295-8C69-80ABC64DDC29}">
                         <File Id="filAF0FEDEB02D90AC698D3F1919908DB7A" KeyPath="yes" Source="SourceDir\scripts\holding.html" />
                     </Component>
-                    <Component Id="cmp40E60F3419D8C6BDAACA88364D878E0F" Guid="{40B5BDA2-FF13-4B60-A791-C053DF1AEF99}">
+                    <Component Id="cmp40E60F3419D8C6BDAACA88364D878E0F" Guid="{9171CD20-8A3A-4EE0-864E-6FEDE8302107}">
                         <File Id="filA11A7032FA52D713BFEF4F5637643BF3" KeyPath="yes" Source="SourceDir\scripts\lz4Compress.bat" />
                     </Component>
-                    <Component Id="cmpF6E0798EAA9D1DAEE9F034CB2CE84FAC" Guid="{2CE97A82-5571-4F7C-9B83-A3CCBD23591C}">
+                    <Component Id="cmpF6E0798EAA9D1DAEE9F034CB2CE84FAC" Guid="{C284AC16-FF49-48F6-AD49-8A287812EA01}">
                         <File Id="fil3D0B27CDD5BCE4F4BB5FD7719375D1A1" KeyPath="yes" Source="SourceDir\scripts\lz4Compress.sh" />
                     </Component>
-                    <Component Id="cmp0A7C7A38F898A185EE35F5D58BB6FE88" Guid="{37D80305-B7A2-4F1B-8761-5282DF669133}">
+                    <Component Id="cmp0A7C7A38F898A185EE35F5D58BB6FE88" Guid="{74E16262-05FB-4D28-8D69-D2C26BBF8919}">
                         <File Id="fil59FF99D713FF30FF021A51B17E5B883A" KeyPath="yes" Source="SourceDir\scripts\lz4Expand.bat" />
                     </Component>
-                    <Component Id="cmpED84820424E1AC79F320295995BCFBE8" Guid="{F034B18C-0243-451E-AAE5-64CBA3A1B35D}">
+                    <Component Id="cmpED84820424E1AC79F320295995BCFBE8" Guid="{C4969275-A5DF-488F-A1D0-D0751F6D8A58}">
                         <File Id="filC013209DB6DD392D1F6B71E0087A088C" KeyPath="yes" Source="SourceDir\scripts\lz4Expand.sh" />
                     </Component>
-                    <Component Id="cmp5D6AD3EF729299AEB3ECF949126805B5" Guid="{C1ACD312-3EDD-4E13-B8C7-25D430AC817B}">
+                    <Component Id="cmp5D6AD3EF729299AEB3ECF949126805B5" Guid="{CCC3A150-800E-4C80-8306-0FCDB45DD973}">
                         <File Id="fil86841F8F54328311E5461ACD55D95AE4" KeyPath="yes" Source="SourceDir\scripts\networkCheck.bat" />
                     </Component>
-                    <Component Id="cmp48C316B22C401D5D041FB81567C3F943" Guid="{F7C47C64-C4EF-4C03-B04F-74869E9F17EC}">
+                    <Component Id="cmp48C316B22C401D5D041FB81567C3F943" Guid="{8536166B-E18C-44AD-864A-140986D684C1}">
                         <File Id="filCD13B9FA9CC833AEB307EF23890C2745" KeyPath="yes" Source="SourceDir\scripts\networkCheck.groovy" />
                     </Component>
-                    <Component Id="cmp4F5FCAC9DB457448EFC8FC1178EE15E1" Guid="{F76C61AB-3740-4F92-9CF7-89A921082876}">
+                    <Component Id="cmp4F5FCAC9DB457448EFC8FC1178EE15E1" Guid="{6C0FF7D3-9B21-4A16-9A62-5D2E4F1F25FD}">
                         <File Id="fil3BFD555F8145388D6AB650FF1E6AC1CE" KeyPath="yes" Source="SourceDir\scripts\networkCheck.sh" />
                     </Component>
-                    <Component Id="cmp9E9300B3A24325491031272F3CAE94CE" Guid="{F83AC470-55E4-4DFD-BF4C-F5EF58E582F2}">
+                    <Component Id="cmp9E9300B3A24325491031272F3CAE94CE" Guid="{BA5BA5C5-5CD0-4874-B42C-1E915FE82A4A}">
                         <File Id="fil6CBEBA73C50EA512CB8E1A10121D59BF" KeyPath="yes" Source="SourceDir\scripts\networkList.bat" />
                     </Component>
-                    <Component Id="cmpE350734D5682FCB9097438FD27D0DC0A" Guid="{3B271D03-20A3-4DFF-8B9F-081C3D1C57D9}">
+                    <Component Id="cmpE350734D5682FCB9097438FD27D0DC0A" Guid="{F0178D67-C993-4173-B4B8-4F1647C8EB23}">
                         <File Id="filE6EE66571A66DDE88F56DC8ECBB6255A" KeyPath="yes" Source="SourceDir\scripts\networkList.groovy" />
                     </Component>
-                    <Component Id="cmpCD736D18E9F4B3D07C599078D1B735F1" Guid="{EC55654C-063F-4569-9F94-B60E5CE28DD8}">
+                    <Component Id="cmpCD736D18E9F4B3D07C599078D1B735F1" Guid="{3E1585CB-BC58-4592-9941-E292CECDCE7C}">
                         <File Id="fil5342BDE3A1EA8F40DFEB581635D1FB4F" KeyPath="yes" Source="SourceDir\scripts\networkList.sh" />
                     </Component>
-                    <Component Id="cmp5E6C6EDCBFC20CD563F7024AEAA77901" Guid="{DDEEC51B-5B79-485D-9809-DBE660BAA559}">
+                    <Component Id="cmp5E6C6EDCBFC20CD563F7024AEAA77901" Guid="{3BD7F145-703D-44A8-A055-10C01E059610}">
                         <File Id="filDBF5F663921D144AC0063F938C2FB0B7" KeyPath="yes" Source="SourceDir\scripts\recoverBundles.bat" />
                     </Component>
-                    <Component Id="cmpE5C551F6325A4476826B19D11EEE55AF" Guid="{BE700A60-9EA5-4AE7-B7E7-F333491A9A1B}">
+                    <Component Id="cmpE5C551F6325A4476826B19D11EEE55AF" Guid="{351E1170-064A-4AC9-AAF2-09EF4177B2F8}">
                         <File Id="filB0B4D284104F882833E42721B1D42E94" KeyPath="yes" Source="SourceDir\scripts\recoverBundles.groovy" />
                     </Component>
-                    <Component Id="cmpA6324D0885463E980F1F76059027D776" Guid="{4A2EB56E-49D1-412D-8547-230467E85788}">
+                    <Component Id="cmpA6324D0885463E980F1F76059027D776" Guid="{6419304B-2FA5-4EF5-8AC8-25DBF9937E59}">
                         <File Id="filA0FDDA6A25E1AD053F2D8C64C33063F8" KeyPath="yes" Source="SourceDir\scripts\recoverBundles.sh" />
                     </Component>
-                    <Component Id="cmp84316B62A928A3BDC58ABF6C0193DFE6" Guid="{2AD23098-4A41-4899-87F2-1D091EA4CC5F}">
+                    <Component Id="cmp84316B62A928A3BDC58ABF6C0193DFE6" Guid="{4FBDF0D2-F508-4DB4-BA49-49506B686D9E}">
                         <File Id="filBF29B6C6E4CBA3CB945CA85D10A31311" KeyPath="yes" Source="SourceDir\scripts\renice.sh" />
                     </Component>
-                    <Component Id="cmpB1FB7141F53D6B42C1C64327187B84F7" Guid="{E37E4E6B-C2EB-4B41-B4AC-3146099A3958}">
+                    <Component Id="cmpB1FB7141F53D6B42C1C64327187B84F7" Guid="{0FE836DC-39CA-4BE1-A713-2D3E17A748F7}">
                         <File Id="fil447F4C20A374AB2AB077C0ED96118351" KeyPath="yes" Source="SourceDir\scripts\renice.vbs" />
                     </Component>
-                    <Component Id="cmpEBE8E2548A10E0FC128185E67A44A172" Guid="{86A70441-5A12-4226-92A3-509BE6809B1F}">
+                    <Component Id="cmpEBE8E2548A10E0FC128185E67A44A172" Guid="{461B46D8-088D-4AD7-BB35-B48EDEBF3B8F}">
                         <File Id="fil14B34C2C6E8926FA152E62166CB88EF0" KeyPath="yes" Source="SourceDir\scripts\serviceRunner.sh" />
                     </Component>
-                    <Component Id="cmp46D38E176A3D20D03670AB444C5D07A5" Guid="{FA365460-66C0-4E17-9463-45C6D161CBA9}">
+                    <Component Id="cmp46D38E176A3D20D03670AB444C5D07A5" Guid="{AA3128C7-9393-4BFE-9A90-72CBEFA3F5FD}">
                         <File Id="fil11E04CC642049B123B5DF529F4C83933" KeyPath="yes" Source="SourceDir\scripts\snappyCompress.bat" />
                     </Component>
-                    <Component Id="cmp8B264087AC10DE193B13EED9F7E2CBB0" Guid="{04B4B412-B00A-45A9-813D-DF6B3794B384}">
+                    <Component Id="cmp8B264087AC10DE193B13EED9F7E2CBB0" Guid="{84582828-C692-4243-B96B-0F303CDB788B}">
                         <File Id="fil03116EA52D65A24EE1DB4384D1A127A5" KeyPath="yes" Source="SourceDir\scripts\snappyCompress.sh" />
                     </Component>
-                    <Component Id="cmp214CB82573E6C8C434A2648530024277" Guid="{06DAD2C0-60CB-4E3F-9ABD-2B0C9B888114}">
+                    <Component Id="cmp214CB82573E6C8C434A2648530024277" Guid="{439A1A19-E9AA-4428-8A30-FAAD5154423A}">
                         <File Id="fil3BF29EFDDA207EA9049DE86645825E31" KeyPath="yes" Source="SourceDir\scripts\snappyExpand.bat" />
                     </Component>
-                    <Component Id="cmp7BBDACD38E64C65F1110E6FF7F399B6C" Guid="{3CD69DBF-8D6A-4E7B-AFF5-B00DB687FBFC}">
+                    <Component Id="cmp7BBDACD38E64C65F1110E6FF7F399B6C" Guid="{B0BA4169-83ED-43D9-90E7-916C512D08A7}">
                         <File Id="fil201A75F6A8315A8722A48BC56B2B4DCD" KeyPath="yes" Source="SourceDir\scripts\snappyExpand.sh" />
                     </Component>
-                    <Component Id="cmpBB48CF636CEC4593C211F00C2DBC9C16" Guid="{99463205-9F08-4C90-8B57-E9E168B45709}">
+                    <Component Id="cmpBB48CF636CEC4593C211F00C2DBC9C16" Guid="{FAF4DBE0-788D-4C3C-84E0-A862972FC4C5}">
                         <File Id="filDFC0DB6FFA9508CFC4553048C191EC80" KeyPath="yes" Source="SourceDir\scripts\unix_kill.sh" />
                     </Component>
                     <Directory Id="dir1B1EE8E90663FE66F165677D00764DD6" Name="feed">
-                        <Component Id="cmpEB4EF07D28C01A5BAFA70522BA3EB160" Guid="{0E9D0B6B-C1A7-4402-B055-3F49C2CA3B4F}">
+                        <Component Id="cmpEB4EF07D28C01A5BAFA70522BA3EB160" Guid="{0919E229-EBA2-44D0-AF86-37F225F1017A}">
                             <File Id="filF9DC416C21AB6965AB1820A4CDA1453E" KeyPath="yes" Source="SourceDir\scripts\feed\sample.groovy" />
                         </Component>
-                        <Component Id="cmp929D9C3EE7CC63A0BA522C61F7B9F352" Guid="{70E7D6BD-D33F-4912-9F14-C180A7E83250}">
+                        <Component Id="cmp929D9C3EE7CC63A0BA522C61F7B9F352" Guid="{B3747A50-2F15-4029-8F2E-D7EFBFB88572}">
                             <File Id="fil79B36EE6D5FFD0A7C94A9EA60D9D06C8" KeyPath="yes" Source="SourceDir\scripts\feed\webSocketClient.html" />
                         </Component>
-                        <Component Id="cmpB351DB8EA32DE23EA11CEA9074ABF708" Guid="{6A05F1C2-00E2-4478-AC37-452951F429DF}">
+                        <Component Id="cmpB351DB8EA32DE23EA11CEA9074ABF708" Guid="{9D901E2F-F4D1-40E9-BA9E-F950BF68739E}">
                             <File Id="fil18984C5B8975FA4B2E6BAC445C31A98E" KeyPath="yes" Source="SourceDir\scripts\feed\webSocketServer.groovy" />
                         </Component>
-                        <Component Id="cmp29F7273328851E5D1631C7743DF4DB99" Guid="{9EBF905D-3DE4-4AD7-ABC4-E540BD8A6D0D}">
+                        <Component Id="cmp29F7273328851E5D1631C7743DF4DB99" Guid="{9C90B999-011E-4DF7-8995-BF864B5E7880}">
                             <File Id="filC36863C3367A3524E42890B690ECBA16" KeyPath="yes" Source="SourceDir\scripts\feed\webSocketServer.sh" />
                         </Component>
                     </Directory>
                 </Directory>
                 <Directory Id="dirF6BEBCF3386CB8707B7918096A5B3981" Name="ssl">
-                    <Component Id="cmpDAD79E837AA3BFA98B732DBA47CDD83B" Guid="{571F6B56-F319-40DA-B90B-FB4E3824FB51}">
+                    <Component Id="cmpDAD79E837AA3BFA98B732DBA47CDD83B" Guid="{A4BEAC95-A9DF-478A-AF53-4DC62E8BA81B}">
                         <File Id="filCCBBC1EA68273C53CB14B6DDDD3A1B52" KeyPath="yes" Source="SourceDir\ssl\.keystore" />
                     </Component>
-                    <Component Id="cmp69AE8AA36071509623103B50C0B1A677" Guid="{78CBE258-7A64-4477-8F12-276A58AAEB38}">
+                    <Component Id="cmp69AE8AA36071509623103B50C0B1A677" Guid="{2D711766-8D01-436A-BE76-E1F9AA5A90FF}">
                         <File Id="fil0BABE3F364B03D16E85B8E94F21573F5" KeyPath="yes" Source="SourceDir\ssl\p2p.crt" />
                     </Component>
-                    <Component Id="cmp689E42B6E1C2748E5109EE6C037B6EE3" Guid="{4793D365-256C-4501-85EE-D398AF985D75}">
+                    <Component Id="cmp689E42B6E1C2748E5109EE6C037B6EE3" Guid="{F77CD3A8-209E-4F64-879F-B78D0BA21B81}">
                         <File Id="fil84DCAEFE4FEE9A059FFE8E0EF0802A3D" KeyPath="yes" Source="SourceDir\ssl\p2p.key" />
                     </Component>
-                    <Component Id="cmp64C551EFCC39E41714C3BA69506E707D" Guid="{D9D6AE2F-CC03-40C6-A1CA-E8B6AA85D4FD}">
+                    <Component Id="cmp64C551EFCC39E41714C3BA69506E707D" Guid="{D3076AFE-6E88-413B-A96E-CF579463B3C3}">
                         <File Id="fil0D6EE465A63ABCE7D53BE9DB1D3A785A" KeyPath="yes" Source="SourceDir\ssl\private.der" />
                     </Component>
-                    <Component Id="cmpCA3FBE97F1F66D0EA00A8230B6F69AFA" Guid="{FF96C84B-7CDF-4090-A04F-7FF1A6A3E9CD}">
+                    <Component Id="cmpCA3FBE97F1F66D0EA00A8230B6F69AFA" Guid="{AC3B5C42-DC3B-4241-9511-48BD7CF5AE62}">
                         <File Id="fil2A6ECF70371B36F2997F4F5AA06B5784" KeyPath="yes" Source="SourceDir\ssl\private.pem" />
                     </Component>
-                    <Component Id="cmp70D2DCBB726B3D9A6FA7DB0EC075A62A" Guid="{5DD37781-1C5C-47FF-B63A-C6481C4CC61B}">
+                    <Component Id="cmp70D2DCBB726B3D9A6FA7DB0EC075A62A" Guid="{73390127-F9D9-45FC-9DE4-7913C1CD7F7B}">
                         <File Id="fil0466A19A13E424570B33946B5C9C9C60" KeyPath="yes" Source="SourceDir\ssl\public.key" />
                     </Component>
-                    <Component Id="cmp68C3A663F3C33DF00EE465104EB1DAB1" Guid="{744DC708-E617-4E4C-B575-6913B790A116}">
+                    <Component Id="cmp68C3A663F3C33DF00EE465104EB1DAB1" Guid="{68355083-E91F-4C8A-882F-855DA5251AB5}">
                         <File Id="filC055C22FDDEE21CC5BA31152B3879303" KeyPath="yes" Source="SourceDir\ssl\ssl.properties" />
                     </Component>
                 </Directory>

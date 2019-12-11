@@ -63,8 +63,8 @@ public class TcpThroughputTest extends TestCase {
 		tcpReceiver.stop();
 		tcpSender.stop();
 		DateTime end = new DateTime();
-		long elapse = end.getMillis() - start.getMillis();
-		double throughput = amount/(elapse/1000);
+		long elapse = 1 + end.getMillis() - start.getMillis();
+		double throughput = amount/(elapse/1000.01);
 		System.err.println("Throughput:" + throughput + " elapse:" + elapse);
 		assertTrue("nothing was received", receiveCount > 0);
 		assertEquals("Expected:" + amount + " but got:" + receiveCount, amount, receiveCount);

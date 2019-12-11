@@ -3,7 +3,7 @@ set WIX=C:\Program Files\Windows Installer XML v3.5
 set PATH=%WIX%\bin;%PATH%
 set WORK=c:\temp\vscape-e
 set ROOTDIR=logscape
-set VERSION=3.5_b0615
+set VERSION=OS-3.5_b1211
 rmdir /s /q %WORK%
 mkdir %WORK%
 unzip %DIST%\LogScape-%VERSION%.zip -d %WORK%

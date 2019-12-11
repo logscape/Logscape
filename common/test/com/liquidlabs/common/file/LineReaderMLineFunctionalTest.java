@@ -23,7 +23,9 @@ public class LineReaderMLineFunctionalTest {
 
     @Before
     public void setup() {
+
         new File(TEST_FILE).delete();
+        new File("build").mkdir();
     }
 
     @After

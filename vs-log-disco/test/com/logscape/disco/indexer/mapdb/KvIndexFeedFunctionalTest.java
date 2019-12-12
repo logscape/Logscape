@@ -12,6 +12,8 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
+import static junit.framework.Assert.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: neil
@@ -23,7 +25,10 @@ public class KvIndexFeedFunctionalTest {
 
     @Before
     public void setUp() throws Exception {
-        FileUtil.deleteDir(new File("work/DB"));
+        File dir = new File("build/work/DB");
+        FileUtil.deleteDir(dir);
+        dir.mkdirs();
+
     }
 
     @Test
@@ -35,10 +40,10 @@ public class KvIndexFeedFunctionalTest {
         feed.store(1, 1, crap);
         Map<String,String> asMap = feed.getAsMap(1, 1, System.currentTimeMillis());
 
-        Assert.assertTrue(asMap.size() > 1);
+        assertTrue(asMap.size() > 1);
         System.out.println("Fields:" + asMap.toString().replace(", ", "\n"));
-        Assert.assertEquals("99", asMap.get("CPU"));
-        Assert.assertEquals("Download", asMap.get("Action"));
+        assertEquals("99", asMap.get("CPU"));
+        assertEquals("Download", asMap.get("Action"));
 
     }
 
@@ -54,11 +59,11 @@ public class KvIndexFeedFunctionalTest {
         feed.store(logId, 1, crap);
         Map<String,String> asMap = feed.getAsMap(logId, 1, time);
 
-        Assert.assertTrue(asMap.containsKey("CPU"));
+        assertTrue(asMap.containsKey("CPU"));
 
         feed.remove(logId);
         Map<String,String> asMap2 = feed.getAsMap(logId, 1, time);
-        Assert.assertTrue(asMap2.size() == 0);
+        assertTrue(asMap2.size() == 0);
 
     }
 

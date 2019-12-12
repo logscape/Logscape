@@ -208,7 +208,7 @@ public class FileUtilTest {
     @Test
     public void shouldDetectDirecoryUsingDOT() throws Exception {
         File file = new File("build/TEST-DIR");
-        file.mkdir();
+        file.mkdirs();
         File file2 = new File(file,"isFile.log");
         file2.createNewFile();
         assertTrue(FileUtil.isDirectory(file));

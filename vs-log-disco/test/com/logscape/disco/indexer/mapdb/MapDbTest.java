@@ -38,6 +38,7 @@ public class MapDbTest {
 
     private DB makeDb(File file) {
         file.delete();
+        new File("build").mkdirs();
         DBMaker dbMaker = DBMaker.newFileDB(file);
         return dbMaker.transactionDisable().make();
     }

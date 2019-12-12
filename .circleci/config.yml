@@ -30,6 +30,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
+      - store_test_results:
+          path: test-results
+
       - run: mvn package install -Dmaven.test.skip=true
       - run: mvn dependency:go-offline
 

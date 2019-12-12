@@ -23,6 +23,7 @@ import static junit.framework.Assert.*;
  */
 public class KvIndexFeedFunctionalTest {
 
+    
     @Before
     public void setUp() throws Exception {
         File dir = new File("build/work/DB");

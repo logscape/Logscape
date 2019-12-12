@@ -25,7 +25,7 @@ public class PrevalentProxyTest {
     @Test
     public void shouldWork() throws Exception {
 
-        new File("build").mkdir();
+        new File("build/prevalent").mkdirs();
         PrevaylerFactory factory = new PrevaylerFactory();
         factory.configurePrevalenceDirectory("build/prevalent");
         factory.configureSnapshotSerializer(new MyXStreamSerializer());

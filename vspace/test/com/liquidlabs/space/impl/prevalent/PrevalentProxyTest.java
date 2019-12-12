@@ -45,10 +45,12 @@ public class PrevalentProxyTest {
 
         proxy.execute(new Put("key2", "value2", false));
 
-        Thread.sleep(200);
+        Thread.sleep(500);
 
 
         final Map map = (Map) proxy.prevalentSystem();
+
+        Thread.sleep(500);
 
         System.out.println("Map:" + map);
 

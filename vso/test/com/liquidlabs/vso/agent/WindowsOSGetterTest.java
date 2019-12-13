@@ -1,10 +1,10 @@
 package com.liquidlabs.vso.agent;
 
-import java.util.concurrent.Executors;
-
+import com.liquidlabs.common.NetworkUtils;
 import com.liquidlabs.vso.agent.metrics.WindowsOSGetter;
-
 import junit.framework.TestCase;
+
+import java.util.concurrent.Executors;
 
 public class WindowsOSGetterTest extends TestCase {
 	
@@ -14,6 +14,7 @@ public class WindowsOSGetterTest extends TestCase {
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
+		if (!NetworkUtils.isWindows()) return;
 		getter = new WindowsOSGetter(Executors.newScheduledThreadPool(1));
 	}
 	@Override
@@ -22,6 +23,7 @@ public class WindowsOSGetterTest extends TestCase {
 	}
 	
 	public void testCPUUtilisationStuff() throws Exception {
+		if (!NetworkUtils.isWindows()) return;
 		System.out.println("CPU:" + getter.getCPULoadPercentage());
 		System.out.println("maxMem:" + getter.getTotalMemoryMb());
 		System.out.println("Model:" + getter.getCPUModel());
@@ -32,6 +34,7 @@ public class WindowsOSGetterTest extends TestCase {
 	}
 	
 	public void testShouldGetNewCPUMethod() throws Exception {
+		if (!NetworkUtils.isWindows()) return;
 		Thread.sleep(1000);
 		double loadPercentage = 0.0;
 		for (int i = 0; i < 1000; i++){

@@ -46,5 +46,6 @@ jobs:
       #- run: mvn -pl common test
       #- run: mvn -pl transport test
       - run: mvn -pl vspace -Dtest=SpaceFunctionalTest.java test
-      #- run: mvn -pl vso test
-      - run: mvn -pl vs-log test
+      - run: mvn -pl vso -Dtest=SpaceServiceTest.java test
+      - run: mvn -pl vso -Dtest=ResourceAgentTest.java test
+      - run: mvn -pl vs-log -Dtest=com.liquidlabs.log.*Test.java test

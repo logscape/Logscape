@@ -77,6 +77,7 @@ public class AgentLogServiceSEARCHTest {
 
     @Before
     public void setUp() throws Exception {
+        new File("build").mkdirs();
         TestModeSetter.setTestMode();
         LogProperties.setAddWatchFileDelay(1);
         System.setProperty("log.sync.data.delay.secs", "1");

@@ -47,7 +47,7 @@
         <wiremock.version>2.24.0</wiremock.version>
         <skip.docker.build>true</skip.docker.build>
         <skip.docker.test>true</skip.docker.test>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <spotbugs.maven.plugin.version>3.1.12</spotbugs.maven.plugin.version>
     </properties>
 
